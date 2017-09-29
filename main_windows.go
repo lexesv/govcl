@@ -6,8 +6,9 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/api"
+
 	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/types"
 	"gitee.com/ying32/govcl/vcl/win"
 )
 
@@ -51,22 +52,22 @@ func main() {
 	fmt.Println("MainForm ClientRect: ", mainForm.ClientRect())
 
 	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose uintptr) {
-		rtl.SetFormCanClose(CanClose, vcl.MessageDlg("是否退出?", api.MtInformation, api.MbYes, api.MbNo) == vcl.MrYes)
+		rtl.SetFormCanClose(CanClose, vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes)
 		fmt.Println("OnCloseQuery")
 	})
 
 	mainForm.SetCaption(vcl.Application.Title())
 	mainForm.EnabledMaximize(false)
 	mainForm.SetDoubleBuffered(true)
-	mainForm.SetPosition(api.PoScreenCenter)
+	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.SetKeyPreview(true)
 	mainForm.SetOnKeyDown(func(Sender vcl.IObject, Key uintptr, Shift int32) {
-		fmt.Println(rtl.InSets(uint32(Shift), api.SsCtrl))
+		fmt.Println(rtl.InSets(uint32(Shift), types.SsCtrl))
 		fmt.Println(rtl.GetKey(Key))
 	})
 
 	mainForm.SetOnMouseDown(func(sender vcl.IObject, button, shift, x, y int32) {
-		fmt.Println("Button:", button == api.MbLeft, ", X:", x, ", y:", y)
+		fmt.Println("Button:", button == types.MbLeft, ", X:", x, ", y:", y)
 		fmt.Println("OnMouseDown")
 	})
 
@@ -117,7 +118,7 @@ func main() {
 
 	// linklabel
 	linklbl := vcl.NewLinkLabel(mainForm)
-	linklbl.SetAlign(api.AlBottom)
+	linklbl.SetAlign(types.AlBottom)
 	linklbl.SetCaption("<a href=\"https://github.com/ying32/govcl\">govcl测试链接</a>")
 	linklbl.SetParent(mainForm)
 	linklbl.SetOnLinkClick(func(sender vcl.IObject, link string, linktype int32) {
@@ -167,7 +168,7 @@ func main() {
 	})
 	button.SetLeft(50)
 	button.SetTop(50)
-	button.SetAlign(api.AlRight)
+	button.SetAlign(types.AlRight)
 
 	edit := vcl.NewEdit(mainForm)
 	edit.SetParent(mainForm)
@@ -189,10 +190,10 @@ func main() {
 		edit.SetText("Hello!")
 		fmt.Println("ScreenWidth:", vcl.Screen.Width(), ", ScreenHeight:", vcl.Screen.Height())
 	})
-	button2.SetAlign(api.AlTop)
+	button2.SetAlign(types.AlTop)
 
 	combo := vcl.NewComboBox(mainForm)
-	combo.SetAlign(api.AlBottom)
+	combo.SetAlign(types.AlBottom)
 	combo.SetParent(mainForm)
 	combo.SetText("ffff")
 	combo.Items().Add("1")
@@ -207,17 +208,17 @@ func main() {
 
 	page := vcl.NewPageControl(mainForm)
 	page.SetParent(mainForm)
-	page.SetAlign(api.AlBottom)
+	page.SetAlign(types.AlBottom)
 	sheet := vcl.NewTabSheet(mainForm)
 	sheet.SetPageControl(page)
 	sheet.SetCaption("第一页")
 
 	// 需要先将TabSheet设置了父窗口，TListView才可用，不然就会报错
 	lv1 := vcl.NewListView(mainForm)
-	lv1.SetAlign(api.AlClient)
+	lv1.SetAlign(types.AlClient)
 	lv1.SetParent(sheet)
 
-	lv1.SetViewStyle(api.VsReport)
+	lv1.SetViewStyle(types.VsReport)
 	lv1.SetRowSelect(true)
 	lv1.SetReadOnly(true)
 	lv1.SetGridLines(true)
@@ -255,7 +256,7 @@ func main() {
 	tv1 := vcl.NewTreeView(mainForm)
 	tv1.SetAutoExpand(true)
 	tv1.SetParent(sheet)
-	tv1.SetAlign(api.AlClient)
+	tv1.SetAlign(types.AlClient)
 	tv1.SetOnClick(func(vcl.IObject) {
 		if tv1.SelectionCount() > 0 {
 			node := tv1.Selected()

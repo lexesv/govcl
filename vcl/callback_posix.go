@@ -1,3 +1,5 @@
+// +build linux,darwin cgo
+
 package vcl
 
 // extern void* doCallbackProc(void* f, void* args, long argcount);

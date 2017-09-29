@@ -5,6 +5,5 @@ import (
 )
 
 func SetClipboard(newClipboard IObject) *TClipboard {
-	defer exceptionProc()
 	return ClipboardFromInst(Clipboard_SetClipboard(CheckPtr(newClipboard)))
 }

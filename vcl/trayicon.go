@@ -52,167 +52,134 @@ func (t *TTrayIcon) IsValid() bool {
 }
 
 func (t *TTrayIcon) Refresh() {
-    defer exceptionProc()
     TrayIcon_Refresh(t.instance)
 }
 
 func (t *TTrayIcon) SetDefaultIcon() {
-    defer exceptionProc()
     TrayIcon_SetDefaultIcon(t.instance)
 }
 
 func (t *TTrayIcon) ShowBalloonHint() {
-    defer exceptionProc()
     TrayIcon_ShowBalloonHint(t.instance)
 }
 
 func (t *TTrayIcon) FindComponent(AName string) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(TrayIcon_FindComponent(t.instance, AName ))
 }
 
 func (t *TTrayIcon) GetNamePath() string {
-    defer exceptionProc()
     return TrayIcon_GetNamePath(t.instance)
 }
 
 func (t *TTrayIcon) HasParent() bool {
-    defer exceptionProc()
     return TrayIcon_HasParent(t.instance)
 }
 
 func (t *TTrayIcon) Assign(Source IObject) {
-    defer exceptionProc()
     TrayIcon_Assign(t.instance, CheckPtr(Source))
 }
 
 func (t *TTrayIcon) ClassName() string {
-    defer exceptionProc()
     return TrayIcon_ClassName(t.instance)
 }
 
 func (t *TTrayIcon) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return TrayIcon_Equals(t.instance, CheckPtr(Obj))
 }
 
 func (t *TTrayIcon) GetHashCode() int32 {
-    defer exceptionProc()
     return TrayIcon_GetHashCode(t.instance)
 }
 
 func (t *TTrayIcon) ToString() string {
-    defer exceptionProc()
     return TrayIcon_ToString(t.instance)
 }
 
 func (t *TTrayIcon) Animate() bool {
-    defer exceptionProc()
     return TrayIcon_GetAnimate(t.instance)
 }
 
 func (t *TTrayIcon) SetAnimate(value bool) {
-    defer exceptionProc()
     TrayIcon_SetAnimate(t.instance, value)
 }
 
 func (t *TTrayIcon) AnimateInterval() uint32 {
-    defer exceptionProc()
     return TrayIcon_GetAnimateInterval(t.instance)
 }
 
 func (t *TTrayIcon) SetAnimateInterval(value uint32) {
-    defer exceptionProc()
     TrayIcon_SetAnimateInterval(t.instance, value)
 }
 
 func (t *TTrayIcon) Hint() string {
-    defer exceptionProc()
     return TrayIcon_GetHint(t.instance)
 }
 
 func (t *TTrayIcon) SetHint(value string) {
-    defer exceptionProc()
     TrayIcon_SetHint(t.instance, value)
 }
 
 func (t *TTrayIcon) BalloonHint() string {
-    defer exceptionProc()
     return TrayIcon_GetBalloonHint(t.instance)
 }
 
 func (t *TTrayIcon) SetBalloonHint(value string) {
-    defer exceptionProc()
     TrayIcon_SetBalloonHint(t.instance, value)
 }
 
 func (t *TTrayIcon) BalloonTitle() string {
-    defer exceptionProc()
     return TrayIcon_GetBalloonTitle(t.instance)
 }
 
 func (t *TTrayIcon) SetBalloonTitle(value string) {
-    defer exceptionProc()
     TrayIcon_SetBalloonTitle(t.instance, value)
 }
 
 func (t *TTrayIcon) BalloonTimeout() int32 {
-    defer exceptionProc()
     return TrayIcon_GetBalloonTimeout(t.instance)
 }
 
 func (t *TTrayIcon) SetBalloonTimeout(value int32) {
-    defer exceptionProc()
     TrayIcon_SetBalloonTimeout(t.instance, value)
 }
 
 func (t *TTrayIcon) BalloonFlags() TBalloonFlags {
-    defer exceptionProc()
     return TrayIcon_GetBalloonFlags(t.instance)
 }
 
 func (t *TTrayIcon) SetBalloonFlags(value TBalloonFlags) {
-    defer exceptionProc()
     TrayIcon_SetBalloonFlags(t.instance, value)
 }
 
 func (t *TTrayIcon) Icon() *TIcon {
-    defer exceptionProc()
     return IconFromInst(TrayIcon_GetIcon(t.instance))
 }
 
 func (t *TTrayIcon) SetIcon(value *TIcon) {
-    defer exceptionProc()
     TrayIcon_SetIcon(t.instance, CheckPtr(value))
 }
 
 func (t *TTrayIcon) IconIndex() int32 {
-    defer exceptionProc()
     return TrayIcon_GetIconIndex(t.instance)
 }
 
 func (t *TTrayIcon) SetIconIndex(value int32) {
-    defer exceptionProc()
     TrayIcon_SetIconIndex(t.instance, value)
 }
 
 func (t *TTrayIcon) PopupMenu() *TPopupMenu {
-    defer exceptionProc()
     return PopupMenuFromInst(TrayIcon_GetPopupMenu(t.instance))
 }
 
 func (t *TTrayIcon) SetPopupMenu(value IComponent) {
-    defer exceptionProc()
     TrayIcon_SetPopupMenu(t.instance, CheckPtr(value))
 }
 
 func (t *TTrayIcon) Visible() bool {
-    defer exceptionProc()
     return TrayIcon_GetVisible(t.instance)
 }
 
 func (t *TTrayIcon) SetVisible(value bool) {
-    defer exceptionProc()
     TrayIcon_SetVisible(t.instance, value)
 }
 
@@ -241,47 +208,38 @@ func (t *TTrayIcon) SetOnMouseDown(fn TMouseEvent) {
 }
 
 func (t *TTrayIcon) ComponentCount() int32 {
-    defer exceptionProc()
     return TrayIcon_GetComponentCount(t.instance)
 }
 
 func (t *TTrayIcon) ComponentIndex() int32 {
-    defer exceptionProc()
     return TrayIcon_GetComponentIndex(t.instance)
 }
 
 func (t *TTrayIcon) SetComponentIndex(value int32) {
-    defer exceptionProc()
     TrayIcon_SetComponentIndex(t.instance, value)
 }
 
 func (t *TTrayIcon) Owner() *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(TrayIcon_GetOwner(t.instance))
 }
 
 func (t *TTrayIcon) Name() string {
-    defer exceptionProc()
     return TrayIcon_GetName(t.instance)
 }
 
 func (t *TTrayIcon) SetName(value string) {
-    defer exceptionProc()
     TrayIcon_SetName(t.instance, value)
 }
 
 func (t *TTrayIcon) Tag() int {
-    defer exceptionProc()
     return TrayIcon_GetTag(t.instance)
 }
 
 func (t *TTrayIcon) SetTag(value int) {
-    defer exceptionProc()
     TrayIcon_SetTag(t.instance, value)
 }
 
 func (t *TTrayIcon) Components(AIndex int32) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(TrayIcon_GetComponents(t.instance, AIndex))
 }
 

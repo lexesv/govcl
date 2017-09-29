@@ -52,62 +52,50 @@ func (l *TListGroup) IsValid() bool {
 }
 
 func (l *TListGroup) Assign(Source IObject) {
-    defer exceptionProc()
     ListGroup_Assign(l.instance, CheckPtr(Source))
 }
 
 func (l *TListGroup) GetNamePath() string {
-    defer exceptionProc()
     return ListGroup_GetNamePath(l.instance)
 }
 
 func (l *TListGroup) ClassName() string {
-    defer exceptionProc()
     return ListGroup_ClassName(l.instance)
 }
 
 func (l *TListGroup) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return ListGroup_Equals(l.instance, CheckPtr(Obj))
 }
 
 func (l *TListGroup) GetHashCode() int32 {
-    defer exceptionProc()
     return ListGroup_GetHashCode(l.instance)
 }
 
 func (l *TListGroup) ToString() string {
-    defer exceptionProc()
     return ListGroup_ToString(l.instance)
 }
 
 func (l *TListGroup) GroupID() int32 {
-    defer exceptionProc()
     return ListGroup_GetGroupID(l.instance)
 }
 
 func (l *TListGroup) SetGroupID(value int32) {
-    defer exceptionProc()
     ListGroup_SetGroupID(l.instance, value)
 }
 
 func (l *TListGroup) State() TListGroupStateSet {
-    defer exceptionProc()
     return ListGroup_GetState(l.instance)
 }
 
 func (l *TListGroup) SetState(value TListGroupStateSet) {
-    defer exceptionProc()
     ListGroup_SetState(l.instance, value)
 }
 
 func (l *TListGroup) Index() int32 {
-    defer exceptionProc()
     return ListGroup_GetIndex(l.instance)
 }
 
 func (l *TListGroup) SetIndex(value int32) {
-    defer exceptionProc()
     ListGroup_SetIndex(l.instance, value)
 }
 

@@ -52,132 +52,106 @@ func (a *TAction) IsValid() bool {
 }
 
 func (a *TAction) Execute() bool {
-    defer exceptionProc()
     return Action_Execute(a.instance)
 }
 
 func (a *TAction) Update() bool {
-    defer exceptionProc()
     return Action_Update(a.instance)
 }
 
 func (a *TAction) HasParent() bool {
-    defer exceptionProc()
     return Action_HasParent(a.instance)
 }
 
 func (a *TAction) FindComponent(AName string) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(Action_FindComponent(a.instance, AName ))
 }
 
 func (a *TAction) GetNamePath() string {
-    defer exceptionProc()
     return Action_GetNamePath(a.instance)
 }
 
 func (a *TAction) Assign(Source IObject) {
-    defer exceptionProc()
     Action_Assign(a.instance, CheckPtr(Source))
 }
 
 func (a *TAction) ClassName() string {
-    defer exceptionProc()
     return Action_ClassName(a.instance)
 }
 
 func (a *TAction) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return Action_Equals(a.instance, CheckPtr(Obj))
 }
 
 func (a *TAction) GetHashCode() int32 {
-    defer exceptionProc()
     return Action_GetHashCode(a.instance)
 }
 
 func (a *TAction) ToString() string {
-    defer exceptionProc()
     return Action_ToString(a.instance)
 }
 
 func (a *TAction) Caption() string {
-    defer exceptionProc()
     return Action_GetCaption(a.instance)
 }
 
 func (a *TAction) SetCaption(value string) {
-    defer exceptionProc()
     Action_SetCaption(a.instance, value)
 }
 
 func (a *TAction) Checked() bool {
-    defer exceptionProc()
     return Action_GetChecked(a.instance)
 }
 
 func (a *TAction) SetChecked(value bool) {
-    defer exceptionProc()
     Action_SetChecked(a.instance, value)
 }
 
 func (a *TAction) Enabled() bool {
-    defer exceptionProc()
     return Action_GetEnabled(a.instance)
 }
 
 func (a *TAction) SetEnabled(value bool) {
-    defer exceptionProc()
     Action_SetEnabled(a.instance, value)
 }
 
 func (a *TAction) GroupIndex() int32 {
-    defer exceptionProc()
     return Action_GetGroupIndex(a.instance)
 }
 
 func (a *TAction) SetGroupIndex(value int32) {
-    defer exceptionProc()
     Action_SetGroupIndex(a.instance, value)
 }
 
 func (a *TAction) Hint() string {
-    defer exceptionProc()
     return Action_GetHint(a.instance)
 }
 
 func (a *TAction) SetHint(value string) {
-    defer exceptionProc()
     Action_SetHint(a.instance, value)
 }
 
 func (a *TAction) ImageIndex() int32 {
-    defer exceptionProc()
     return Action_GetImageIndex(a.instance)
 }
 
 func (a *TAction) SetImageIndex(value int32) {
-    defer exceptionProc()
     Action_SetImageIndex(a.instance, value)
 }
 
 func (a *TAction) ShortCut() TShortCut {
-    defer exceptionProc()
     return Action_GetShortCut(a.instance)
 }
 
 func (a *TAction) SetShortCut(value TShortCut) {
-    defer exceptionProc()
     Action_SetShortCut(a.instance, value)
 }
 
 func (a *TAction) Visible() bool {
-    defer exceptionProc()
     return Action_GetVisible(a.instance)
 }
 
 func (a *TAction) SetVisible(value bool) {
-    defer exceptionProc()
     Action_SetVisible(a.instance, value)
 }
 
@@ -190,62 +164,50 @@ func (a *TAction) SetOnUpdate(fn TNotifyEvent) {
 }
 
 func (a *TAction) Images() *TImageList {
-    defer exceptionProc()
     return ImageListFromInst(Action_GetImages(a.instance))
 }
 
 func (a *TAction) Index() int32 {
-    defer exceptionProc()
     return Action_GetIndex(a.instance)
 }
 
 func (a *TAction) SetIndex(value int32) {
-    defer exceptionProc()
     Action_SetIndex(a.instance, value)
 }
 
 func (a *TAction) ComponentCount() int32 {
-    defer exceptionProc()
     return Action_GetComponentCount(a.instance)
 }
 
 func (a *TAction) ComponentIndex() int32 {
-    defer exceptionProc()
     return Action_GetComponentIndex(a.instance)
 }
 
 func (a *TAction) SetComponentIndex(value int32) {
-    defer exceptionProc()
     Action_SetComponentIndex(a.instance, value)
 }
 
 func (a *TAction) Owner() *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(Action_GetOwner(a.instance))
 }
 
 func (a *TAction) Name() string {
-    defer exceptionProc()
     return Action_GetName(a.instance)
 }
 
 func (a *TAction) SetName(value string) {
-    defer exceptionProc()
     Action_SetName(a.instance, value)
 }
 
 func (a *TAction) Tag() int {
-    defer exceptionProc()
     return Action_GetTag(a.instance)
 }
 
 func (a *TAction) SetTag(value int) {
-    defer exceptionProc()
     Action_SetTag(a.instance, value)
 }
 
 func (a *TAction) Components(AIndex int32) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(Action_GetComponents(a.instance, AIndex))
 }
 

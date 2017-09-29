@@ -5,6 +5,5 @@ import (
 )
 
 func (a *TApplication) CreateForm() *TForm {
-	defer exceptionProc()
 	return FormFromInst(Application_CreateForm(a.instance))
 }

@@ -52,92 +52,74 @@ func (l *TListItems) IsValid() bool {
 }
 
 func (l *TListItems) Add() *TListItem {
-    defer exceptionProc()
     return ListItemFromInst(ListItems_Add(l.instance))
 }
 
 func (l *TListItems) AddItem(Item *TListItem, Index int32) *TListItem {
-    defer exceptionProc()
     return ListItemFromInst(ListItems_AddItem(l.instance, CheckPtr(Item), Index ))
 }
 
 func (l *TListItems) Assign(Source IObject) {
-    defer exceptionProc()
     ListItems_Assign(l.instance, CheckPtr(Source))
 }
 
 func (l *TListItems) BeginUpdate() {
-    defer exceptionProc()
     ListItems_BeginUpdate(l.instance)
 }
 
 func (l *TListItems) Clear() {
-    defer exceptionProc()
     ListItems_Clear(l.instance)
 }
 
 func (l *TListItems) Delete(Index int32) {
-    defer exceptionProc()
     ListItems_Delete(l.instance, Index )
 }
 
 func (l *TListItems) EndUpdate() {
-    defer exceptionProc()
     ListItems_EndUpdate(l.instance)
 }
 
 func (l *TListItems) IndexOf(Value *TListItem) int32 {
-    defer exceptionProc()
     return ListItems_IndexOf(l.instance, CheckPtr(Value))
 }
 
 func (l *TListItems) Insert(Index int32) *TListItem {
-    defer exceptionProc()
     return ListItemFromInst(ListItems_Insert(l.instance, Index ))
 }
 
 func (l *TListItems) GetNamePath() string {
-    defer exceptionProc()
     return ListItems_GetNamePath(l.instance)
 }
 
 func (l *TListItems) ClassName() string {
-    defer exceptionProc()
     return ListItems_ClassName(l.instance)
 }
 
 func (l *TListItems) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return ListItems_Equals(l.instance, CheckPtr(Obj))
 }
 
 func (l *TListItems) GetHashCode() int32 {
-    defer exceptionProc()
     return ListItems_GetHashCode(l.instance)
 }
 
 func (l *TListItems) ToString() string {
-    defer exceptionProc()
     return ListItems_ToString(l.instance)
 }
 
 func (l *TListItems) Handle() HWND {
-    defer exceptionProc()
     return ListItems_GetHandle(l.instance)
 }
 
 func (l *TListItems) Owner() *TControl {
-    defer exceptionProc()
     return ControlFromInst(ListItems_GetOwner(l.instance))
 }
 
 func (l *TListItems) Item(Index int32) *TListItem {
-    defer exceptionProc()
     return ListItemFromInst(ListItems_GetItem(l.instance, Index))
 }
 
 func (l *TListItems) SetItem(Index int32, value *TListItem) {
-    defer exceptionProc()
     ListItems_SetItem(l.instance, Index, CheckPtr(value))
 }
 

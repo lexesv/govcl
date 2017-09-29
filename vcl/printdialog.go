@@ -52,142 +52,114 @@ func (p *TPrintDialog) IsValid() bool {
 }
 
 func (p *TPrintDialog) Execute(ParentWnd HWND) bool {
-    defer exceptionProc()
     return PrintDialog_Execute(p.instance, ParentWnd )
 }
 
 func (p *TPrintDialog) FindComponent(AName string) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(PrintDialog_FindComponent(p.instance, AName ))
 }
 
 func (p *TPrintDialog) GetNamePath() string {
-    defer exceptionProc()
     return PrintDialog_GetNamePath(p.instance)
 }
 
 func (p *TPrintDialog) HasParent() bool {
-    defer exceptionProc()
     return PrintDialog_HasParent(p.instance)
 }
 
 func (p *TPrintDialog) Assign(Source IObject) {
-    defer exceptionProc()
     PrintDialog_Assign(p.instance, CheckPtr(Source))
 }
 
 func (p *TPrintDialog) ClassName() string {
-    defer exceptionProc()
     return PrintDialog_ClassName(p.instance)
 }
 
 func (p *TPrintDialog) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return PrintDialog_Equals(p.instance, CheckPtr(Obj))
 }
 
 func (p *TPrintDialog) GetHashCode() int32 {
-    defer exceptionProc()
     return PrintDialog_GetHashCode(p.instance)
 }
 
 func (p *TPrintDialog) ToString() string {
-    defer exceptionProc()
     return PrintDialog_ToString(p.instance)
 }
 
 func (p *TPrintDialog) Collate() bool {
-    defer exceptionProc()
     return PrintDialog_GetCollate(p.instance)
 }
 
 func (p *TPrintDialog) SetCollate(value bool) {
-    defer exceptionProc()
     PrintDialog_SetCollate(p.instance, value)
 }
 
 func (p *TPrintDialog) Copies() int32 {
-    defer exceptionProc()
     return PrintDialog_GetCopies(p.instance)
 }
 
 func (p *TPrintDialog) SetCopies(value int32) {
-    defer exceptionProc()
     PrintDialog_SetCopies(p.instance, value)
 }
 
 func (p *TPrintDialog) FromPage() int32 {
-    defer exceptionProc()
     return PrintDialog_GetFromPage(p.instance)
 }
 
 func (p *TPrintDialog) SetFromPage(value int32) {
-    defer exceptionProc()
     PrintDialog_SetFromPage(p.instance, value)
 }
 
 func (p *TPrintDialog) MinPage() int32 {
-    defer exceptionProc()
     return PrintDialog_GetMinPage(p.instance)
 }
 
 func (p *TPrintDialog) SetMinPage(value int32) {
-    defer exceptionProc()
     PrintDialog_SetMinPage(p.instance, value)
 }
 
 func (p *TPrintDialog) MaxPage() int32 {
-    defer exceptionProc()
     return PrintDialog_GetMaxPage(p.instance)
 }
 
 func (p *TPrintDialog) SetMaxPage(value int32) {
-    defer exceptionProc()
     PrintDialog_SetMaxPage(p.instance, value)
 }
 
 func (p *TPrintDialog) Options() TPrintDialogOptions {
-    defer exceptionProc()
     return PrintDialog_GetOptions(p.instance)
 }
 
 func (p *TPrintDialog) SetOptions(value TPrintDialogOptions) {
-    defer exceptionProc()
     PrintDialog_SetOptions(p.instance, value)
 }
 
 func (p *TPrintDialog) PrintToFile() bool {
-    defer exceptionProc()
     return PrintDialog_GetPrintToFile(p.instance)
 }
 
 func (p *TPrintDialog) SetPrintToFile(value bool) {
-    defer exceptionProc()
     PrintDialog_SetPrintToFile(p.instance, value)
 }
 
 func (p *TPrintDialog) PrintRange() TPrintRange {
-    defer exceptionProc()
     return PrintDialog_GetPrintRange(p.instance)
 }
 
 func (p *TPrintDialog) SetPrintRange(value TPrintRange) {
-    defer exceptionProc()
     PrintDialog_SetPrintRange(p.instance, value)
 }
 
 func (p *TPrintDialog) ToPage() int32 {
-    defer exceptionProc()
     return PrintDialog_GetToPage(p.instance)
 }
 
 func (p *TPrintDialog) SetToPage(value int32) {
-    defer exceptionProc()
     PrintDialog_SetToPage(p.instance, value)
 }
 
 func (p *TPrintDialog) Handle() HWND {
-    defer exceptionProc()
     return PrintDialog_GetHandle(p.instance)
 }
 
@@ -200,47 +172,38 @@ func (p *TPrintDialog) SetOnShow(fn TNotifyEvent) {
 }
 
 func (p *TPrintDialog) ComponentCount() int32 {
-    defer exceptionProc()
     return PrintDialog_GetComponentCount(p.instance)
 }
 
 func (p *TPrintDialog) ComponentIndex() int32 {
-    defer exceptionProc()
     return PrintDialog_GetComponentIndex(p.instance)
 }
 
 func (p *TPrintDialog) SetComponentIndex(value int32) {
-    defer exceptionProc()
     PrintDialog_SetComponentIndex(p.instance, value)
 }
 
 func (p *TPrintDialog) Owner() *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(PrintDialog_GetOwner(p.instance))
 }
 
 func (p *TPrintDialog) Name() string {
-    defer exceptionProc()
     return PrintDialog_GetName(p.instance)
 }
 
 func (p *TPrintDialog) SetName(value string) {
-    defer exceptionProc()
     PrintDialog_SetName(p.instance, value)
 }
 
 func (p *TPrintDialog) Tag() int {
-    defer exceptionProc()
     return PrintDialog_GetTag(p.instance)
 }
 
 func (p *TPrintDialog) SetTag(value int) {
-    defer exceptionProc()
     PrintDialog_SetTag(p.instance, value)
 }
 
 func (p *TPrintDialog) Components(AIndex int32) *TComponent {
-    defer exceptionProc()
     return ComponentFromInst(PrintDialog_GetComponents(p.instance, AIndex))
 }
 

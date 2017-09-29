@@ -51,77 +51,62 @@ func (l *TListGroups) IsValid() bool {
 }
 
 func (l *TListGroups) Add() *TListGroup {
-    defer exceptionProc()
     return ListGroupFromInst(ListGroups_Add(l.instance))
 }
 
 func (l *TListGroups) Owner() *TControl {
-    defer exceptionProc()
     return ControlFromInst(ListGroups_Owner(l.instance))
 }
 
 func (l *TListGroups) Assign(Source IObject) {
-    defer exceptionProc()
     ListGroups_Assign(l.instance, CheckPtr(Source))
 }
 
 func (l *TListGroups) BeginUpdate() {
-    defer exceptionProc()
     ListGroups_BeginUpdate(l.instance)
 }
 
 func (l *TListGroups) Clear() {
-    defer exceptionProc()
     ListGroups_Clear(l.instance)
 }
 
 func (l *TListGroups) Delete(Index int32) {
-    defer exceptionProc()
     ListGroups_Delete(l.instance, Index )
 }
 
 func (l *TListGroups) EndUpdate() {
-    defer exceptionProc()
     ListGroups_EndUpdate(l.instance)
 }
 
 func (l *TListGroups) GetNamePath() string {
-    defer exceptionProc()
     return ListGroups_GetNamePath(l.instance)
 }
 
 func (l *TListGroups) Insert(Index int32) *TCollectionItem {
-    defer exceptionProc()
     return CollectionItemFromInst(ListGroups_Insert(l.instance, Index ))
 }
 
 func (l *TListGroups) ClassName() string {
-    defer exceptionProc()
     return ListGroups_ClassName(l.instance)
 }
 
 func (l *TListGroups) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return ListGroups_Equals(l.instance, CheckPtr(Obj))
 }
 
 func (l *TListGroups) GetHashCode() int32 {
-    defer exceptionProc()
     return ListGroups_GetHashCode(l.instance)
 }
 
 func (l *TListGroups) ToString() string {
-    defer exceptionProc()
     return ListGroups_ToString(l.instance)
 }
 
 func (l *TListGroups) Items(Index int32) *TListGroup {
-    defer exceptionProc()
     return ListGroupFromInst(ListGroups_GetItems(l.instance, Index))
 }
 
 func (l *TListGroups) SetItems(Index int32, value *TListGroup) {
-    defer exceptionProc()
     ListGroups_SetItems(l.instance, Index, CheckPtr(value))
 }
 

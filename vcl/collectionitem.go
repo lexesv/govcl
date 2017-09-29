@@ -51,42 +51,34 @@ func (c *TCollectionItem) IsValid() bool {
 }
 
 func (c *TCollectionItem) GetNamePath() string {
-    defer exceptionProc()
     return CollectionItem_GetNamePath(c.instance)
 }
 
 func (c *TCollectionItem) Assign(Source IObject) {
-    defer exceptionProc()
     CollectionItem_Assign(c.instance, CheckPtr(Source))
 }
 
 func (c *TCollectionItem) ClassName() string {
-    defer exceptionProc()
     return CollectionItem_ClassName(c.instance)
 }
 
 func (c *TCollectionItem) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return CollectionItem_Equals(c.instance, CheckPtr(Obj))
 }
 
 func (c *TCollectionItem) GetHashCode() int32 {
-    defer exceptionProc()
     return CollectionItem_GetHashCode(c.instance)
 }
 
 func (c *TCollectionItem) ToString() string {
-    defer exceptionProc()
     return CollectionItem_ToString(c.instance)
 }
 
 func (c *TCollectionItem) Index() int32 {
-    defer exceptionProc()
     return CollectionItem_GetIndex(c.instance)
 }
 
 func (c *TCollectionItem) SetIndex(value int32) {
-    defer exceptionProc()
     CollectionItem_SetIndex(c.instance, value)
 }
 

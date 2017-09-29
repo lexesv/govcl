@@ -25,8 +25,8 @@ func CheckPtr(value IObject) uintptr {
 }
 
 // exceptionProc 公共的异常处理过程
-func exceptionProc() {
-	if err := recover(); err != nil {
-		ShowMessage(err.(error).Error())
-	}
-}
+//func exceptionProc() {
+//	if err := recover(); err != nil {
+//		ShowMessage(err.(error).Error())
+//	}
+//}

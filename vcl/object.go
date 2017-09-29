@@ -51,22 +51,18 @@ func (o *TObject) IsValid() bool {
 }
 
 func (o *TObject) ClassName() string {
-    defer exceptionProc()
     return Object_ClassName(o.instance)
 }
 
 func (o *TObject) Equals(Obj IObject) bool {
-    defer exceptionProc()
     return Object_Equals(o.instance, CheckPtr(Obj))
 }
 
 func (o *TObject) GetHashCode() int32 {
-    defer exceptionProc()
     return Object_GetHashCode(o.instance)
 }
 
 func (o *TObject) ToString() string {
-    defer exceptionProc()
     return Object_ToString(o.instance)
 }
 

@@ -123,6 +123,14 @@ func (g *TGIFImage) BitsPerPixel() int32 {
     return GIFImage_GetBitsPerPixel(g.instance)
 }
 
+func (g *TGIFImage) BackgroundColor() TColor {
+    return GIFImage_GetBackgroundColor(g.instance)
+}
+
+func (g *TGIFImage) SetBackgroundColor(value TColor) {
+    GIFImage_SetBackgroundColor(g.instance, value)
+}
+
 func (g *TGIFImage) AspectRatio() uint8 {
     return GIFImage_GetAspectRatio(g.instance)
 }

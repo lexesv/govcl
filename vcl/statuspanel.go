@@ -83,6 +83,14 @@ func (s *TStatusPanel) SetAlignment(value TAlignment) {
     StatusPanel_SetAlignment(s.instance, value)
 }
 
+func (s *TStatusPanel) BiDiMode() TBiDiMode {
+    return StatusPanel_GetBiDiMode(s.instance)
+}
+
+func (s *TStatusPanel) SetBiDiMode(value TBiDiMode) {
+    StatusPanel_SetBiDiMode(s.instance, value)
+}
+
 func (s *TStatusPanel) Style() TStatusPanelStyle {
     return StatusPanel_GetStyle(s.instance)
 }

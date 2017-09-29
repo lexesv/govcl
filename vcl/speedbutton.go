@@ -163,6 +163,14 @@ func (s *TSpeedButton) SetAnchors(value TAnchors) {
     SpeedButton_SetAnchors(s.instance, value)
 }
 
+func (s *TSpeedButton) BiDiMode() TBiDiMode {
+    return SpeedButton_GetBiDiMode(s.instance)
+}
+
+func (s *TSpeedButton) SetBiDiMode(value TBiDiMode) {
+    SpeedButton_SetBiDiMode(s.instance, value)
+}
+
 func (s *TSpeedButton) GroupIndex() int32 {
     return SpeedButton_GetGroupIndex(s.instance)
 }
@@ -265,6 +273,14 @@ func (s *TSpeedButton) Visible() bool {
 
 func (s *TSpeedButton) SetVisible(value bool) {
     SpeedButton_SetVisible(s.instance, value)
+}
+
+func (s *TSpeedButton) StyleElements() TStyleElements {
+    return SpeedButton_GetStyleElements(s.instance)
+}
+
+func (s *TSpeedButton) SetStyleElements(value TStyleElements) {
+    SpeedButton_SetStyleElements(s.instance, value)
 }
 
 func (s *TSpeedButton) SetOnClick(fn TNotifyEvent) {

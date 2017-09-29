@@ -219,6 +219,46 @@ func (e *TEdit) SetAutoSize(value bool) {
     Edit_SetAutoSize(e.instance, value)
 }
 
+func (e *TEdit) BevelEdges() TBevelEdges {
+    return Edit_GetBevelEdges(e.instance)
+}
+
+func (e *TEdit) SetBevelEdges(value TBevelEdges) {
+    Edit_SetBevelEdges(e.instance, value)
+}
+
+func (e *TEdit) BevelInner() TBevelCut {
+    return Edit_GetBevelInner(e.instance)
+}
+
+func (e *TEdit) SetBevelInner(value TBevelCut) {
+    Edit_SetBevelInner(e.instance, value)
+}
+
+func (e *TEdit) BevelKind() TBevelKind {
+    return Edit_GetBevelKind(e.instance)
+}
+
+func (e *TEdit) SetBevelKind(value TBevelKind) {
+    Edit_SetBevelKind(e.instance, value)
+}
+
+func (e *TEdit) BevelOuter() TBevelCut {
+    return Edit_GetBevelOuter(e.instance)
+}
+
+func (e *TEdit) SetBevelOuter(value TBevelCut) {
+    Edit_SetBevelOuter(e.instance, value)
+}
+
+func (e *TEdit) BiDiMode() TBiDiMode {
+    return Edit_GetBiDiMode(e.instance)
+}
+
+func (e *TEdit) SetBiDiMode(value TBiDiMode) {
+    Edit_SetBiDiMode(e.instance, value)
+}
+
 func (e *TEdit) BorderStyle() TBorderStyle {
     return Edit_GetBorderStyle(e.instance)
 }
@@ -297,6 +337,14 @@ func (e *TEdit) ParentCtl3D() bool {
 
 func (e *TEdit) SetParentCtl3D(value bool) {
     Edit_SetParentCtl3D(e.instance, value)
+}
+
+func (e *TEdit) ParentDoubleBuffered() bool {
+    return Edit_GetParentDoubleBuffered(e.instance)
+}
+
+func (e *TEdit) SetParentDoubleBuffered(value bool) {
+    Edit_SetParentDoubleBuffered(e.instance, value)
 }
 
 func (e *TEdit) ParentFont() bool {
@@ -385,6 +433,14 @@ func (e *TEdit) Visible() bool {
 
 func (e *TEdit) SetVisible(value bool) {
     Edit_SetVisible(e.instance, value)
+}
+
+func (e *TEdit) StyleElements() TStyleElements {
+    return Edit_GetStyleElements(e.instance)
+}
+
+func (e *TEdit) SetStyleElements(value TStyleElements) {
+    Edit_SetStyleElements(e.instance, value)
 }
 
 func (e *TEdit) SetOnChange(fn TNotifyEvent) {

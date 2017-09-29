@@ -171,6 +171,46 @@ func (c *TCategoryPanelGroup) SetAnchors(value TAnchors) {
     CategoryPanelGroup_SetAnchors(c.instance, value)
 }
 
+func (c *TCategoryPanelGroup) BevelEdges() TBevelEdges {
+    return CategoryPanelGroup_GetBevelEdges(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetBevelEdges(value TBevelEdges) {
+    CategoryPanelGroup_SetBevelEdges(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) BevelInner() TBevelCut {
+    return CategoryPanelGroup_GetBevelInner(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetBevelInner(value TBevelCut) {
+    CategoryPanelGroup_SetBevelInner(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) BevelOuter() TBevelCut {
+    return CategoryPanelGroup_GetBevelOuter(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetBevelOuter(value TBevelCut) {
+    CategoryPanelGroup_SetBevelOuter(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) BevelKind() TBevelKind {
+    return CategoryPanelGroup_GetBevelKind(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetBevelKind(value TBevelKind) {
+    CategoryPanelGroup_SetBevelKind(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) BiDiMode() TBiDiMode {
+    return CategoryPanelGroup_GetBiDiMode(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetBiDiMode(value TBiDiMode) {
+    CategoryPanelGroup_SetBiDiMode(c.instance, value)
+}
+
 func (c *TCategoryPanelGroup) DoubleBuffered() bool {
     return CategoryPanelGroup_GetDoubleBuffered(c.instance)
 }
@@ -243,6 +283,14 @@ func (c *TCategoryPanelGroup) SetParentCtl3D(value bool) {
     CategoryPanelGroup_SetParentCtl3D(c.instance, value)
 }
 
+func (c *TCategoryPanelGroup) ParentDoubleBuffered() bool {
+    return CategoryPanelGroup_GetParentDoubleBuffered(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetParentDoubleBuffered(value bool) {
+    CategoryPanelGroup_SetParentDoubleBuffered(c.instance, value)
+}
+
 func (c *TCategoryPanelGroup) ParentFont() bool {
     return CategoryPanelGroup_GetParentFont(c.instance)
 }
@@ -297,6 +345,14 @@ func (c *TCategoryPanelGroup) Visible() bool {
 
 func (c *TCategoryPanelGroup) SetVisible(value bool) {
     CategoryPanelGroup_SetVisible(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) StyleElements() TStyleElements {
+    return CategoryPanelGroup_GetStyleElements(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetStyleElements(value TStyleElements) {
+    CategoryPanelGroup_SetStyleElements(c.instance, value)
 }
 
 func (c *TCategoryPanelGroup) Width() int32 {

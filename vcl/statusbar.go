@@ -187,6 +187,14 @@ func (s *TStatusBar) SetAnchors(value TAnchors) {
     StatusBar_SetAnchors(s.instance, value)
 }
 
+func (s *TStatusBar) BiDiMode() TBiDiMode {
+    return StatusBar_GetBiDiMode(s.instance)
+}
+
+func (s *TStatusBar) SetBiDiMode(value TBiDiMode) {
+    StatusBar_SetBiDiMode(s.instance, value)
+}
+
 func (s *TStatusBar) BorderWidth() int32 {
     return StatusBar_GetBorderWidth(s.instance)
 }
@@ -241,6 +249,14 @@ func (s *TStatusBar) ParentColor() bool {
 
 func (s *TStatusBar) SetParentColor(value bool) {
     StatusBar_SetParentColor(s.instance, value)
+}
+
+func (s *TStatusBar) ParentDoubleBuffered() bool {
+    return StatusBar_GetParentDoubleBuffered(s.instance)
+}
+
+func (s *TStatusBar) SetParentDoubleBuffered(value bool) {
+    StatusBar_SetParentDoubleBuffered(s.instance, value)
 }
 
 func (s *TStatusBar) ParentFont() bool {
@@ -313,6 +329,14 @@ func (s *TStatusBar) Visible() bool {
 
 func (s *TStatusBar) SetVisible(value bool) {
     StatusBar_SetVisible(s.instance, value)
+}
+
+func (s *TStatusBar) StyleElements() TStyleElements {
+    return StatusBar_GetStyleElements(s.instance)
+}
+
+func (s *TStatusBar) SetStyleElements(value TStyleElements) {
+    StatusBar_SetStyleElements(s.instance, value)
 }
 
 func (s *TStatusBar) SetOnClick(fn TNotifyEvent) {

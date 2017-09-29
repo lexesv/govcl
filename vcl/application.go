@@ -235,6 +235,14 @@ func (a *TApplication) SetMainFormOnTaskBar(value bool) {
     Application_SetMainFormOnTaskBar(a.instance, value)
 }
 
+func (a *TApplication) BiDiMode() TBiDiMode {
+    return Application_GetBiDiMode(a.instance)
+}
+
+func (a *TApplication) SetBiDiMode(value TBiDiMode) {
+    Application_SetBiDiMode(a.instance, value)
+}
+
 func (a *TApplication) ShowHint() bool {
     return Application_GetShowHint(a.instance)
 }

@@ -179,6 +179,14 @@ func (s *TSplitter) SetWidth(value int32) {
     Splitter_SetWidth(s.instance, value)
 }
 
+func (s *TSplitter) StyleElements() TStyleElements {
+    return Splitter_GetStyleElements(s.instance)
+}
+
+func (s *TSplitter) SetStyleElements(value TStyleElements) {
+    Splitter_SetStyleElements(s.instance, value)
+}
+
 func (s *TSplitter) SetOnPaint(fn TNotifyEvent) {
     Splitter_SetOnPaint(s.instance, fn)
 }
@@ -205,6 +213,14 @@ func (s *TSplitter) Anchors() TAnchors {
 
 func (s *TSplitter) SetAnchors(value TAnchors) {
     Splitter_SetAnchors(s.instance, value)
+}
+
+func (s *TSplitter) BiDiMode() TBiDiMode {
+    return Splitter_GetBiDiMode(s.instance)
+}
+
+func (s *TSplitter) SetBiDiMode(value TBiDiMode) {
+    Splitter_SetBiDiMode(s.instance, value)
 }
 
 func (s *TSplitter) BoundsRect() TRect {

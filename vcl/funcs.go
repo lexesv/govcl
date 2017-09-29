@@ -8,15 +8,17 @@ import (
 	. "gitee.com/ying32/govcl/vcl/types"
 )
 
+// ShowMessage 显示一个消息框
 func ShowMessage(msg string) {
 	api.DShowMessage(msg)
 }
 
-// MessageDlg   api.TMsgDlgButtons
+// MessageDlg 消息框，Buttons为按钮样式，祥见types.TMsgDlgButtons
 func MessageDlg(Msg string, DlgType TMsgDlgType, Buttons ...uint8) int32 {
 	return api.DMessageDlg(Msg, DlgType, TMsgDlgButtons(rtl.Include(0, Buttons...)), 0)
 }
 
+// CheckPtr 检测接口是否被实例化，如果已经实例化则返回实例指针
 func CheckPtr(value IObject) uintptr {
 	if reflect.ValueOf(value).Pointer() == 0 {
 		return 0

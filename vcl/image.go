@@ -279,6 +279,14 @@ func (i *TImage) SetAction(value IComponent) {
     Image_SetAction(i.instance, CheckPtr(value))
 }
 
+func (i *TImage) BiDiMode() TBiDiMode {
+    return Image_GetBiDiMode(i.instance)
+}
+
+func (i *TImage) SetBiDiMode(value TBiDiMode) {
+    Image_SetBiDiMode(i.instance, value)
+}
+
 func (i *TImage) BoundsRect() TRect {
     return Image_GetBoundsRect(i.instance)
 }
@@ -329,6 +337,14 @@ func (i *TImage) Parent() *TControl {
 
 func (i *TImage) SetParent(value IControl) {
     Image_SetParent(i.instance, CheckPtr(value))
+}
+
+func (i *TImage) StyleElements() TStyleElements {
+    return Image_GetStyleElements(i.instance)
+}
+
+func (i *TImage) SetStyleElements(value TStyleElements) {
+    Image_SetStyleElements(i.instance, value)
 }
 
 func (i *TImage) AlignWithMargins() bool {

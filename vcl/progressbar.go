@@ -51,6 +51,14 @@ func (p *TProgressBar) IsValid() bool {
     return p.instance != 0
 }
 
+func (p *TProgressBar) StepIt() {
+    ProgressBar_StepIt(p.instance)
+}
+
+func (p *TProgressBar) StepBy(Delta int32) {
+    ProgressBar_StepBy(p.instance, Delta )
+}
+
 func (p *TProgressBar) CanFocus() bool {
     return ProgressBar_CanFocus(p.instance)
 }
@@ -203,12 +211,36 @@ func (p *TProgressBar) SetHint(value string) {
     ProgressBar_SetHint(p.instance, value)
 }
 
+func (p *TProgressBar) Min() int32 {
+    return ProgressBar_GetMin(p.instance)
+}
+
+func (p *TProgressBar) SetMin(value int32) {
+    ProgressBar_SetMin(p.instance, value)
+}
+
+func (p *TProgressBar) Max() int32 {
+    return ProgressBar_GetMax(p.instance)
+}
+
+func (p *TProgressBar) SetMax(value int32) {
+    ProgressBar_SetMax(p.instance, value)
+}
+
 func (p *TProgressBar) Orientation() TProgressBarOrientation {
     return ProgressBar_GetOrientation(p.instance)
 }
 
 func (p *TProgressBar) SetOrientation(value TProgressBarOrientation) {
     ProgressBar_SetOrientation(p.instance, value)
+}
+
+func (p *TProgressBar) ParentDoubleBuffered() bool {
+    return ProgressBar_GetParentDoubleBuffered(p.instance)
+}
+
+func (p *TProgressBar) SetParentDoubleBuffered(value bool) {
+    ProgressBar_SetParentDoubleBuffered(p.instance, value)
 }
 
 func (p *TProgressBar) ParentShowHint() bool {
@@ -235,12 +267,60 @@ func (p *TProgressBar) SetPosition(value int32) {
     ProgressBar_SetPosition(p.instance, value)
 }
 
+func (p *TProgressBar) Smooth() bool {
+    return ProgressBar_GetSmooth(p.instance)
+}
+
+func (p *TProgressBar) SetSmooth(value bool) {
+    ProgressBar_SetSmooth(p.instance, value)
+}
+
 func (p *TProgressBar) Style() TProgressBarStyle {
     return ProgressBar_GetStyle(p.instance)
 }
 
 func (p *TProgressBar) SetStyle(value TProgressBarStyle) {
     ProgressBar_SetStyle(p.instance, value)
+}
+
+func (p *TProgressBar) MarqueeInterval() int32 {
+    return ProgressBar_GetMarqueeInterval(p.instance)
+}
+
+func (p *TProgressBar) SetMarqueeInterval(value int32) {
+    ProgressBar_SetMarqueeInterval(p.instance, value)
+}
+
+func (p *TProgressBar) BarColor() TColor {
+    return ProgressBar_GetBarColor(p.instance)
+}
+
+func (p *TProgressBar) SetBarColor(value TColor) {
+    ProgressBar_SetBarColor(p.instance, value)
+}
+
+func (p *TProgressBar) BackgroundColor() TColor {
+    return ProgressBar_GetBackgroundColor(p.instance)
+}
+
+func (p *TProgressBar) SetBackgroundColor(value TColor) {
+    ProgressBar_SetBackgroundColor(p.instance, value)
+}
+
+func (p *TProgressBar) SmoothReverse() bool {
+    return ProgressBar_GetSmoothReverse(p.instance)
+}
+
+func (p *TProgressBar) SetSmoothReverse(value bool) {
+    ProgressBar_SetSmoothReverse(p.instance, value)
+}
+
+func (p *TProgressBar) Step() int32 {
+    return ProgressBar_GetStep(p.instance)
+}
+
+func (p *TProgressBar) SetStep(value int32) {
+    ProgressBar_SetStep(p.instance, value)
 }
 
 func (p *TProgressBar) State() TProgressBarState {
@@ -281,6 +361,14 @@ func (p *TProgressBar) Visible() bool {
 
 func (p *TProgressBar) SetVisible(value bool) {
     ProgressBar_SetVisible(p.instance, value)
+}
+
+func (p *TProgressBar) StyleElements() TStyleElements {
+    return ProgressBar_GetStyleElements(p.instance)
+}
+
+func (p *TProgressBar) SetStyleElements(value TStyleElements) {
+    ProgressBar_SetStyleElements(p.instance, value)
 }
 
 func (p *TProgressBar) SetOnEnter(fn TNotifyEvent) {
@@ -329,6 +417,14 @@ func (p *TProgressBar) Action() *TAction {
 
 func (p *TProgressBar) SetAction(value IComponent) {
     ProgressBar_SetAction(p.instance, CheckPtr(value))
+}
+
+func (p *TProgressBar) BiDiMode() TBiDiMode {
+    return ProgressBar_GetBiDiMode(p.instance)
+}
+
+func (p *TProgressBar) SetBiDiMode(value TBiDiMode) {
+    ProgressBar_SetBiDiMode(p.instance, value)
 }
 
 func (p *TProgressBar) BoundsRect() TRect {

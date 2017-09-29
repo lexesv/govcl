@@ -46,6 +46,10 @@ type TFontCharset uint8
 
 type TDateTime float64
 
+type TDate float64
+
+type TTime float64
+
 type HKEY uintptr
 
 type HMONITOR uintptr

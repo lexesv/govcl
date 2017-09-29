@@ -187,6 +187,46 @@ func (p *TPanel) SetAutoSize(value bool) {
     Panel_SetAutoSize(p.instance, value)
 }
 
+func (p *TPanel) BevelEdges() TBevelEdges {
+    return Panel_GetBevelEdges(p.instance)
+}
+
+func (p *TPanel) SetBevelEdges(value TBevelEdges) {
+    Panel_SetBevelEdges(p.instance, value)
+}
+
+func (p *TPanel) BevelInner() TBevelCut {
+    return Panel_GetBevelInner(p.instance)
+}
+
+func (p *TPanel) SetBevelInner(value TBevelCut) {
+    Panel_SetBevelInner(p.instance, value)
+}
+
+func (p *TPanel) BevelKind() TBevelKind {
+    return Panel_GetBevelKind(p.instance)
+}
+
+func (p *TPanel) SetBevelKind(value TBevelKind) {
+    Panel_SetBevelKind(p.instance, value)
+}
+
+func (p *TPanel) BevelOuter() TBevelCut {
+    return Panel_GetBevelOuter(p.instance)
+}
+
+func (p *TPanel) SetBevelOuter(value TBevelCut) {
+    Panel_SetBevelOuter(p.instance, value)
+}
+
+func (p *TPanel) BiDiMode() TBiDiMode {
+    return Panel_GetBiDiMode(p.instance)
+}
+
+func (p *TPanel) SetBiDiMode(value TBiDiMode) {
+    Panel_SetBiDiMode(p.instance, value)
+}
+
 func (p *TPanel) BorderWidth() int32 {
     return Panel_GetBorderWidth(p.instance)
 }
@@ -259,6 +299,14 @@ func (p *TPanel) SetParentCtl3D(value bool) {
     Panel_SetParentCtl3D(p.instance, value)
 }
 
+func (p *TPanel) ParentDoubleBuffered() bool {
+    return Panel_GetParentDoubleBuffered(p.instance)
+}
+
+func (p *TPanel) SetParentDoubleBuffered(value bool) {
+    Panel_SetParentDoubleBuffered(p.instance, value)
+}
+
 func (p *TPanel) ParentFont() bool {
     return Panel_GetParentFont(p.instance)
 }
@@ -321,6 +369,14 @@ func (p *TPanel) Visible() bool {
 
 func (p *TPanel) SetVisible(value bool) {
     Panel_SetVisible(p.instance, value)
+}
+
+func (p *TPanel) StyleElements() TStyleElements {
+    return Panel_GetStyleElements(p.instance)
+}
+
+func (p *TPanel) SetStyleElements(value TStyleElements) {
+    Panel_SetStyleElements(p.instance, value)
 }
 
 func (p *TPanel) SetOnClick(fn TNotifyEvent) {

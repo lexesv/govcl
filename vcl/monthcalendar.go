@@ -187,12 +187,36 @@ func (m *TMonthCalendar) SetBorderWidth(value int32) {
     MonthCalendar_SetBorderWidth(m.instance, value)
 }
 
+func (m *TMonthCalendar) BiDiMode() TBiDiMode {
+    return MonthCalendar_GetBiDiMode(m.instance)
+}
+
+func (m *TMonthCalendar) SetBiDiMode(value TBiDiMode) {
+    MonthCalendar_SetBiDiMode(m.instance, value)
+}
+
+func (m *TMonthCalendar) CalColors() *TMonthCalColors {
+    return MonthCalColorsFromInst(MonthCalendar_GetCalColors(m.instance))
+}
+
+func (m *TMonthCalendar) SetCalColors(value *TMonthCalColors) {
+    MonthCalendar_SetCalColors(m.instance, CheckPtr(value))
+}
+
 func (m *TMonthCalendar) MultiSelect() bool {
     return MonthCalendar_GetMultiSelect(m.instance)
 }
 
 func (m *TMonthCalendar) SetMultiSelect(value bool) {
     MonthCalendar_SetMultiSelect(m.instance, value)
+}
+
+func (m *TMonthCalendar) Date() TDate {
+    return MonthCalendar_GetDate(m.instance)
+}
+
+func (m *TMonthCalendar) SetDate(value TDate) {
+    MonthCalendar_SetDate(m.instance, value)
 }
 
 func (m *TMonthCalendar) DoubleBuffered() bool {
@@ -211,12 +235,44 @@ func (m *TMonthCalendar) SetEnabled(value bool) {
     MonthCalendar_SetEnabled(m.instance, value)
 }
 
+func (m *TMonthCalendar) FirstDayOfWeek() TCalDayOfWeek {
+    return MonthCalendar_GetFirstDayOfWeek(m.instance)
+}
+
+func (m *TMonthCalendar) SetFirstDayOfWeek(value TCalDayOfWeek) {
+    MonthCalendar_SetFirstDayOfWeek(m.instance, value)
+}
+
 func (m *TMonthCalendar) Font() *TFont {
     return FontFromInst(MonthCalendar_GetFont(m.instance))
 }
 
 func (m *TMonthCalendar) SetFont(value *TFont) {
     MonthCalendar_SetFont(m.instance, CheckPtr(value))
+}
+
+func (m *TMonthCalendar) MaxDate() TDate {
+    return MonthCalendar_GetMaxDate(m.instance)
+}
+
+func (m *TMonthCalendar) SetMaxDate(value TDate) {
+    MonthCalendar_SetMaxDate(m.instance, value)
+}
+
+func (m *TMonthCalendar) MinDate() TDate {
+    return MonthCalendar_GetMinDate(m.instance)
+}
+
+func (m *TMonthCalendar) SetMinDate(value TDate) {
+    MonthCalendar_SetMinDate(m.instance, value)
+}
+
+func (m *TMonthCalendar) ParentDoubleBuffered() bool {
+    return MonthCalendar_GetParentDoubleBuffered(m.instance)
+}
+
+func (m *TMonthCalendar) SetParentDoubleBuffered(value bool) {
+    MonthCalendar_SetParentDoubleBuffered(m.instance, value)
 }
 
 func (m *TMonthCalendar) ParentFont() bool {
@@ -251,6 +307,22 @@ func (m *TMonthCalendar) SetShowHint(value bool) {
     MonthCalendar_SetShowHint(m.instance, value)
 }
 
+func (m *TMonthCalendar) ShowToday() bool {
+    return MonthCalendar_GetShowToday(m.instance)
+}
+
+func (m *TMonthCalendar) SetShowToday(value bool) {
+    MonthCalendar_SetShowToday(m.instance, value)
+}
+
+func (m *TMonthCalendar) ShowTodayCircle() bool {
+    return MonthCalendar_GetShowTodayCircle(m.instance)
+}
+
+func (m *TMonthCalendar) SetShowTodayCircle(value bool) {
+    MonthCalendar_SetShowTodayCircle(m.instance, value)
+}
+
 func (m *TMonthCalendar) TabOrder() int16 {
     return MonthCalendar_GetTabOrder(m.instance)
 }
@@ -273,6 +345,14 @@ func (m *TMonthCalendar) Visible() bool {
 
 func (m *TMonthCalendar) SetVisible(value bool) {
     MonthCalendar_SetVisible(m.instance, value)
+}
+
+func (m *TMonthCalendar) WeekNumbers() bool {
+    return MonthCalendar_GetWeekNumbers(m.instance)
+}
+
+func (m *TMonthCalendar) SetWeekNumbers(value bool) {
+    MonthCalendar_SetWeekNumbers(m.instance, value)
 }
 
 func (m *TMonthCalendar) SetOnClick(fn TNotifyEvent) {
@@ -381,6 +461,14 @@ func (m *TMonthCalendar) Parent() *TControl {
 
 func (m *TMonthCalendar) SetParent(value IControl) {
     MonthCalendar_SetParent(m.instance, CheckPtr(value))
+}
+
+func (m *TMonthCalendar) StyleElements() TStyleElements {
+    return MonthCalendar_GetStyleElements(m.instance)
+}
+
+func (m *TMonthCalendar) SetStyleElements(value TStyleElements) {
+    MonthCalendar_SetStyleElements(m.instance, value)
 }
 
 func (m *TMonthCalendar) AlignWithMargins() bool {

@@ -383,6 +383,14 @@ func (t *TToolBar) SetParentColor(value bool) {
     ToolBar_SetParentColor(t.instance, value)
 }
 
+func (t *TToolBar) ParentDoubleBuffered() bool {
+    return ToolBar_GetParentDoubleBuffered(t.instance)
+}
+
+func (t *TToolBar) SetParentDoubleBuffered(value bool) {
+    ToolBar_SetParentDoubleBuffered(t.instance, value)
+}
+
 func (t *TToolBar) ParentFont() bool {
     return ToolBar_GetParentFont(t.instance)
 }
@@ -455,6 +463,14 @@ func (t *TToolBar) SetVisible(value bool) {
     ToolBar_SetVisible(t.instance, value)
 }
 
+func (t *TToolBar) StyleElements() TStyleElements {
+    return ToolBar_GetStyleElements(t.instance)
+}
+
+func (t *TToolBar) SetStyleElements(value TStyleElements) {
+    ToolBar_SetStyleElements(t.instance, value)
+}
+
 func (t *TToolBar) Wrapable() bool {
     return ToolBar_GetWrapable(t.instance)
 }
@@ -521,6 +537,14 @@ func (t *TToolBar) Action() *TAction {
 
 func (t *TToolBar) SetAction(value IComponent) {
     ToolBar_SetAction(t.instance, CheckPtr(value))
+}
+
+func (t *TToolBar) BiDiMode() TBiDiMode {
+    return ToolBar_GetBiDiMode(t.instance)
+}
+
+func (t *TToolBar) SetBiDiMode(value TBiDiMode) {
+    ToolBar_SetBiDiMode(t.instance, value)
 }
 
 func (t *TToolBar) BoundsRect() TRect {

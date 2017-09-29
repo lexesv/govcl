@@ -223,6 +223,46 @@ func (l *TListView) SetAnchors(value TAnchors) {
     ListView_SetAnchors(l.instance, value)
 }
 
+func (l *TListView) BevelEdges() TBevelEdges {
+    return ListView_GetBevelEdges(l.instance)
+}
+
+func (l *TListView) SetBevelEdges(value TBevelEdges) {
+    ListView_SetBevelEdges(l.instance, value)
+}
+
+func (l *TListView) BevelInner() TBevelCut {
+    return ListView_GetBevelInner(l.instance)
+}
+
+func (l *TListView) SetBevelInner(value TBevelCut) {
+    ListView_SetBevelInner(l.instance, value)
+}
+
+func (l *TListView) BevelOuter() TBevelCut {
+    return ListView_GetBevelOuter(l.instance)
+}
+
+func (l *TListView) SetBevelOuter(value TBevelCut) {
+    ListView_SetBevelOuter(l.instance, value)
+}
+
+func (l *TListView) BevelKind() TBevelKind {
+    return ListView_GetBevelKind(l.instance)
+}
+
+func (l *TListView) SetBevelKind(value TBevelKind) {
+    ListView_SetBevelKind(l.instance, value)
+}
+
+func (l *TListView) BiDiMode() TBiDiMode {
+    return ListView_GetBiDiMode(l.instance)
+}
+
+func (l *TListView) SetBiDiMode(value TBiDiMode) {
+    ListView_SetBiDiMode(l.instance, value)
+}
+
 func (l *TListView) BorderStyle() TBorderStyle {
     return ListView_GetBorderStyle(l.instance)
 }
@@ -375,6 +415,14 @@ func (l *TListView) SetMultiSelect(value bool) {
     ListView_SetMultiSelect(l.instance, value)
 }
 
+func (l *TListView) StyleElements() TStyleElements {
+    return ListView_GetStyleElements(l.instance)
+}
+
+func (l *TListView) SetStyleElements(value TStyleElements) {
+    ListView_SetStyleElements(l.instance, value)
+}
+
 func (l *TListView) GroupHeaderImages() *TImageList {
     return ImageListFromInst(ListView_GetGroupHeaderImages(l.instance))
 }
@@ -405,6 +453,14 @@ func (l *TListView) ParentColor() bool {
 
 func (l *TListView) SetParentColor(value bool) {
     ListView_SetParentColor(l.instance, value)
+}
+
+func (l *TListView) ParentDoubleBuffered() bool {
+    return ListView_GetParentDoubleBuffered(l.instance)
+}
+
+func (l *TListView) SetParentDoubleBuffered(value bool) {
+    ListView_SetParentDoubleBuffered(l.instance, value)
 }
 
 func (l *TListView) ParentFont() bool {

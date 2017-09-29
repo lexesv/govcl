@@ -171,6 +171,14 @@ func (h *THotKey) SetAutoSize(value bool) {
     HotKey_SetAutoSize(h.instance, value)
 }
 
+func (h *THotKey) BiDiMode() TBiDiMode {
+    return HotKey_GetBiDiMode(h.instance)
+}
+
+func (h *THotKey) SetBiDiMode(value TBiDiMode) {
+    HotKey_SetBiDiMode(h.instance, value)
+}
+
 func (h *THotKey) Enabled() bool {
     return HotKey_GetEnabled(h.instance)
 }
@@ -235,6 +243,14 @@ func (h *THotKey) SetVisible(value bool) {
     HotKey_SetVisible(h.instance, value)
 }
 
+func (h *THotKey) StyleElements() TStyleElements {
+    return HotKey_GetStyleElements(h.instance)
+}
+
+func (h *THotKey) SetStyleElements(value TStyleElements) {
+    HotKey_SetStyleElements(h.instance, value)
+}
+
 func (h *THotKey) SetOnChange(fn TNotifyEvent) {
     HotKey_SetOnChange(h.instance, fn)
 }
@@ -285,6 +301,14 @@ func (h *THotKey) ControlCount() int32 {
 
 func (h *THotKey) Handle() HWND {
     return HotKey_GetHandle(h.instance)
+}
+
+func (h *THotKey) ParentDoubleBuffered() bool {
+    return HotKey_GetParentDoubleBuffered(h.instance)
+}
+
+func (h *THotKey) SetParentDoubleBuffered(value bool) {
+    HotKey_SetParentDoubleBuffered(h.instance, value)
 }
 
 func (h *THotKey) Action() *TAction {

@@ -211,6 +211,14 @@ func (f *TForm) SetAutoSize(value bool) {
     Form_SetAutoSize(f.instance, value)
 }
 
+func (f *TForm) BiDiMode() TBiDiMode {
+    return Form_GetBiDiMode(f.instance)
+}
+
+func (f *TForm) SetBiDiMode(value TBiDiMode) {
+    Form_SetBiDiMode(f.instance, value)
+}
+
 func (f *TForm) BorderIcons() TBorderIcons {
     return Form_GetBorderIcons(f.instance)
 }
@@ -419,6 +427,14 @@ func (f *TForm) SetWindowState(value TWindowState) {
     Form_SetWindowState(f.instance, value)
 }
 
+func (f *TForm) StyleElements() TStyleElements {
+    return Form_GetStyleElements(f.instance)
+}
+
+func (f *TForm) SetStyleElements(value TStyleElements) {
+    Form_SetStyleElements(f.instance, value)
+}
+
 func (f *TForm) SetOnClick(fn TNotifyEvent) {
     Form_SetOnClick(f.instance, fn)
 }
@@ -533,6 +549,14 @@ func (f *TForm) ControlCount() int32 {
 
 func (f *TForm) Handle() HWND {
     return Form_GetHandle(f.instance)
+}
+
+func (f *TForm) ParentDoubleBuffered() bool {
+    return Form_GetParentDoubleBuffered(f.instance)
+}
+
+func (f *TForm) SetParentDoubleBuffered(value bool) {
+    Form_SetParentDoubleBuffered(f.instance, value)
 }
 
 func (f *TForm) TabOrder() int16 {

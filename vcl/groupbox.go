@@ -171,6 +171,14 @@ func (g *TGroupBox) SetAnchors(value TAnchors) {
     GroupBox_SetAnchors(g.instance, value)
 }
 
+func (g *TGroupBox) BiDiMode() TBiDiMode {
+    return GroupBox_GetBiDiMode(g.instance)
+}
+
+func (g *TGroupBox) SetBiDiMode(value TBiDiMode) {
+    GroupBox_SetBiDiMode(g.instance, value)
+}
+
 func (g *TGroupBox) Caption() string {
     return GroupBox_GetCaption(g.instance)
 }
@@ -227,6 +235,14 @@ func (g *TGroupBox) SetParentCtl3D(value bool) {
     GroupBox_SetParentCtl3D(g.instance, value)
 }
 
+func (g *TGroupBox) ParentDoubleBuffered() bool {
+    return GroupBox_GetParentDoubleBuffered(g.instance)
+}
+
+func (g *TGroupBox) SetParentDoubleBuffered(value bool) {
+    GroupBox_SetParentDoubleBuffered(g.instance, value)
+}
+
 func (g *TGroupBox) ParentFont() bool {
     return GroupBox_GetParentFont(g.instance)
 }
@@ -281,6 +297,14 @@ func (g *TGroupBox) Visible() bool {
 
 func (g *TGroupBox) SetVisible(value bool) {
     GroupBox_SetVisible(g.instance, value)
+}
+
+func (g *TGroupBox) StyleElements() TStyleElements {
+    return GroupBox_GetStyleElements(g.instance)
+}
+
+func (g *TGroupBox) SetStyleElements(value TStyleElements) {
+    GroupBox_SetStyleElements(g.instance, value)
 }
 
 func (g *TGroupBox) SetOnClick(fn TNotifyEvent) {

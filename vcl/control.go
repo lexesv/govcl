@@ -159,6 +159,14 @@ func (c *TControl) SetAnchors(value TAnchors) {
     Control_SetAnchors(c.instance, value)
 }
 
+func (c *TControl) BiDiMode() TBiDiMode {
+    return Control_GetBiDiMode(c.instance)
+}
+
+func (c *TControl) SetBiDiMode(value TBiDiMode) {
+    Control_SetBiDiMode(c.instance, value)
+}
+
 func (c *TControl) BoundsRect() TRect {
     return Control_GetBoundsRect(c.instance)
 }
@@ -225,6 +233,14 @@ func (c *TControl) Parent() *TControl {
 
 func (c *TControl) SetParent(value IControl) {
     Control_SetParent(c.instance, CheckPtr(value))
+}
+
+func (c *TControl) StyleElements() TStyleElements {
+    return Control_GetStyleElements(c.instance)
+}
+
+func (c *TControl) SetStyleElements(value TStyleElements) {
+    Control_SetStyleElements(c.instance, value)
 }
 
 func (c *TControl) AlignWithMargins() bool {

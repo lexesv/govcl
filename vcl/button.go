@@ -183,6 +183,14 @@ func (b *TButton) SetAnchors(value TAnchors) {
     Button_SetAnchors(b.instance, value)
 }
 
+func (b *TButton) BiDiMode() TBiDiMode {
+    return Button_GetBiDiMode(b.instance)
+}
+
+func (b *TButton) SetBiDiMode(value TBiDiMode) {
+    Button_SetBiDiMode(b.instance, value)
+}
+
 func (b *TButton) Cancel() bool {
     return Button_GetCancel(b.instance)
 }
@@ -255,6 +263,14 @@ func (b *TButton) SetModalResult(value TModalResult) {
     Button_SetModalResult(b.instance, value)
 }
 
+func (b *TButton) ParentDoubleBuffered() bool {
+    return Button_GetParentDoubleBuffered(b.instance)
+}
+
+func (b *TButton) SetParentDoubleBuffered(value bool) {
+    Button_SetParentDoubleBuffered(b.instance, value)
+}
+
 func (b *TButton) ParentFont() bool {
     return Button_GetParentFont(b.instance)
 }
@@ -325,6 +341,14 @@ func (b *TButton) WordWrap() bool {
 
 func (b *TButton) SetWordWrap(value bool) {
     Button_SetWordWrap(b.instance, value)
+}
+
+func (b *TButton) StyleElements() TStyleElements {
+    return Button_GetStyleElements(b.instance)
+}
+
+func (b *TButton) SetStyleElements(value TStyleElements) {
+    Button_SetStyleElements(b.instance, value)
 }
 
 func (b *TButton) SetOnClick(fn TNotifyEvent) {

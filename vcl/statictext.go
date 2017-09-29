@@ -187,6 +187,46 @@ func (s *TStaticText) SetAutoSize(value bool) {
     StaticText_SetAutoSize(s.instance, value)
 }
 
+func (s *TStaticText) BevelEdges() TBevelEdges {
+    return StaticText_GetBevelEdges(s.instance)
+}
+
+func (s *TStaticText) SetBevelEdges(value TBevelEdges) {
+    StaticText_SetBevelEdges(s.instance, value)
+}
+
+func (s *TStaticText) BevelInner() TBevelCut {
+    return StaticText_GetBevelInner(s.instance)
+}
+
+func (s *TStaticText) SetBevelInner(value TBevelCut) {
+    StaticText_SetBevelInner(s.instance, value)
+}
+
+func (s *TStaticText) BevelKind() TBevelKind {
+    return StaticText_GetBevelKind(s.instance)
+}
+
+func (s *TStaticText) SetBevelKind(value TBevelKind) {
+    StaticText_SetBevelKind(s.instance, value)
+}
+
+func (s *TStaticText) BevelOuter() TBevelCut {
+    return StaticText_GetBevelOuter(s.instance)
+}
+
+func (s *TStaticText) SetBevelOuter(value TBevelCut) {
+    StaticText_SetBevelOuter(s.instance, value)
+}
+
+func (s *TStaticText) BiDiMode() TBiDiMode {
+    return StaticText_GetBiDiMode(s.instance)
+}
+
+func (s *TStaticText) SetBiDiMode(value TBiDiMode) {
+    StaticText_SetBiDiMode(s.instance, value)
+}
+
 func (s *TStaticText) BorderStyle() TStaticBorderStyle {
     return StaticText_GetBorderStyle(s.instance)
 }
@@ -241,6 +281,14 @@ func (s *TStaticText) ParentColor() bool {
 
 func (s *TStaticText) SetParentColor(value bool) {
     StaticText_SetParentColor(s.instance, value)
+}
+
+func (s *TStaticText) ParentDoubleBuffered() bool {
+    return StaticText_GetParentDoubleBuffered(s.instance)
+}
+
+func (s *TStaticText) SetParentDoubleBuffered(value bool) {
+    StaticText_SetParentDoubleBuffered(s.instance, value)
 }
 
 func (s *TStaticText) ParentFont() bool {
@@ -313,6 +361,14 @@ func (s *TStaticText) Visible() bool {
 
 func (s *TStaticText) SetVisible(value bool) {
     StaticText_SetVisible(s.instance, value)
+}
+
+func (s *TStaticText) StyleElements() TStyleElements {
+    return StaticText_GetStyleElements(s.instance)
+}
+
+func (s *TStaticText) SetStyleElements(value TStyleElements) {
+    StaticText_SetStyleElements(s.instance, value)
 }
 
 func (s *TStaticText) SetOnClick(fn TNotifyEvent) {

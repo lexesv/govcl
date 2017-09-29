@@ -155,6 +155,18 @@ func (d *TDateTimePicker) ToString() string {
     return DateTimePicker_ToString(d.instance)
 }
 
+func (d *TDateTimePicker) DateTime() TDateTime {
+    return DateTimePicker_GetDateTime(d.instance)
+}
+
+func (d *TDateTimePicker) SetDateTime(value TDateTime) {
+    DateTimePicker_SetDateTime(d.instance, value)
+}
+
+func (d *TDateTimePicker) DroppedDown() bool {
+    return DateTimePicker_GetDroppedDown(d.instance)
+}
+
 func (d *TDateTimePicker) Align() TAlign {
     return DateTimePicker_GetAlign(d.instance)
 }
@@ -171,6 +183,78 @@ func (d *TDateTimePicker) SetAnchors(value TAnchors) {
     DateTimePicker_SetAnchors(d.instance, value)
 }
 
+func (d *TDateTimePicker) BevelEdges() TBevelEdges {
+    return DateTimePicker_GetBevelEdges(d.instance)
+}
+
+func (d *TDateTimePicker) SetBevelEdges(value TBevelEdges) {
+    DateTimePicker_SetBevelEdges(d.instance, value)
+}
+
+func (d *TDateTimePicker) BevelInner() TBevelCut {
+    return DateTimePicker_GetBevelInner(d.instance)
+}
+
+func (d *TDateTimePicker) SetBevelInner(value TBevelCut) {
+    DateTimePicker_SetBevelInner(d.instance, value)
+}
+
+func (d *TDateTimePicker) BevelOuter() TBevelCut {
+    return DateTimePicker_GetBevelOuter(d.instance)
+}
+
+func (d *TDateTimePicker) SetBevelOuter(value TBevelCut) {
+    DateTimePicker_SetBevelOuter(d.instance, value)
+}
+
+func (d *TDateTimePicker) BevelKind() TBevelKind {
+    return DateTimePicker_GetBevelKind(d.instance)
+}
+
+func (d *TDateTimePicker) SetBevelKind(value TBevelKind) {
+    DateTimePicker_SetBevelKind(d.instance, value)
+}
+
+func (d *TDateTimePicker) BiDiMode() TBiDiMode {
+    return DateTimePicker_GetBiDiMode(d.instance)
+}
+
+func (d *TDateTimePicker) SetBiDiMode(value TBiDiMode) {
+    DateTimePicker_SetBiDiMode(d.instance, value)
+}
+
+func (d *TDateTimePicker) CalAlignment() TDTCalAlignment {
+    return DateTimePicker_GetCalAlignment(d.instance)
+}
+
+func (d *TDateTimePicker) SetCalAlignment(value TDTCalAlignment) {
+    DateTimePicker_SetCalAlignment(d.instance, value)
+}
+
+func (d *TDateTimePicker) CalColors() *TMonthCalColors {
+    return MonthCalColorsFromInst(DateTimePicker_GetCalColors(d.instance))
+}
+
+func (d *TDateTimePicker) SetCalColors(value *TMonthCalColors) {
+    DateTimePicker_SetCalColors(d.instance, CheckPtr(value))
+}
+
+func (d *TDateTimePicker) Date() TDate {
+    return DateTimePicker_GetDate(d.instance)
+}
+
+func (d *TDateTimePicker) SetDate(value TDate) {
+    DateTimePicker_SetDate(d.instance, value)
+}
+
+func (d *TDateTimePicker) Time() TTime {
+    return DateTimePicker_GetTime(d.instance)
+}
+
+func (d *TDateTimePicker) SetTime(value TTime) {
+    DateTimePicker_SetTime(d.instance, value)
+}
+
 func (d *TDateTimePicker) Checked() bool {
     return DateTimePicker_GetChecked(d.instance)
 }
@@ -185,6 +269,22 @@ func (d *TDateTimePicker) Color() TColor {
 
 func (d *TDateTimePicker) SetColor(value TColor) {
     DateTimePicker_SetColor(d.instance, value)
+}
+
+func (d *TDateTimePicker) DateFormat() TDTDateFormat {
+    return DateTimePicker_GetDateFormat(d.instance)
+}
+
+func (d *TDateTimePicker) SetDateFormat(value TDTDateFormat) {
+    DateTimePicker_SetDateFormat(d.instance, value)
+}
+
+func (d *TDateTimePicker) DateMode() TDTDateMode {
+    return DateTimePicker_GetDateMode(d.instance)
+}
+
+func (d *TDateTimePicker) SetDateMode(value TDTDateMode) {
+    DateTimePicker_SetDateMode(d.instance, value)
 }
 
 func (d *TDateTimePicker) DoubleBuffered() bool {
@@ -211,12 +311,52 @@ func (d *TDateTimePicker) SetFont(value *TFont) {
     DateTimePicker_SetFont(d.instance, CheckPtr(value))
 }
 
+func (d *TDateTimePicker) Kind() TDateTimeKind {
+    return DateTimePicker_GetKind(d.instance)
+}
+
+func (d *TDateTimePicker) SetKind(value TDateTimeKind) {
+    DateTimePicker_SetKind(d.instance, value)
+}
+
+func (d *TDateTimePicker) MaxDate() TDate {
+    return DateTimePicker_GetMaxDate(d.instance)
+}
+
+func (d *TDateTimePicker) SetMaxDate(value TDate) {
+    DateTimePicker_SetMaxDate(d.instance, value)
+}
+
+func (d *TDateTimePicker) MinDate() TDate {
+    return DateTimePicker_GetMinDate(d.instance)
+}
+
+func (d *TDateTimePicker) SetMinDate(value TDate) {
+    DateTimePicker_SetMinDate(d.instance, value)
+}
+
+func (d *TDateTimePicker) ParseInput() bool {
+    return DateTimePicker_GetParseInput(d.instance)
+}
+
+func (d *TDateTimePicker) SetParseInput(value bool) {
+    DateTimePicker_SetParseInput(d.instance, value)
+}
+
 func (d *TDateTimePicker) ParentColor() bool {
     return DateTimePicker_GetParentColor(d.instance)
 }
 
 func (d *TDateTimePicker) SetParentColor(value bool) {
     DateTimePicker_SetParentColor(d.instance, value)
+}
+
+func (d *TDateTimePicker) ParentDoubleBuffered() bool {
+    return DateTimePicker_GetParentDoubleBuffered(d.instance)
+}
+
+func (d *TDateTimePicker) SetParentDoubleBuffered(value bool) {
+    DateTimePicker_SetParentDoubleBuffered(d.instance, value)
 }
 
 func (d *TDateTimePicker) ParentFont() bool {
@@ -273,6 +413,14 @@ func (d *TDateTimePicker) Visible() bool {
 
 func (d *TDateTimePicker) SetVisible(value bool) {
     DateTimePicker_SetVisible(d.instance, value)
+}
+
+func (d *TDateTimePicker) StyleElements() TStyleElements {
+    return DateTimePicker_GetStyleElements(d.instance)
+}
+
+func (d *TDateTimePicker) SetStyleElements(value TStyleElements) {
+    DateTimePicker_SetStyleElements(d.instance, value)
 }
 
 func (d *TDateTimePicker) SetOnClick(fn TNotifyEvent) {

@@ -339,6 +339,14 @@ func (t *TToolButton) SetAnchors(value TAnchors) {
     ToolButton_SetAnchors(t.instance, value)
 }
 
+func (t *TToolButton) BiDiMode() TBiDiMode {
+    return ToolButton_GetBiDiMode(t.instance)
+}
+
+func (t *TToolButton) SetBiDiMode(value TBiDiMode) {
+    ToolButton_SetBiDiMode(t.instance, value)
+}
+
 func (t *TToolButton) BoundsRect() TRect {
     return ToolButton_GetBoundsRect(t.instance)
 }
@@ -389,6 +397,14 @@ func (t *TToolButton) Parent() *TControl {
 
 func (t *TToolButton) SetParent(value IControl) {
     ToolButton_SetParent(t.instance, CheckPtr(value))
+}
+
+func (t *TToolButton) StyleElements() TStyleElements {
+    return ToolButton_GetStyleElements(t.instance)
+}
+
+func (t *TToolButton) SetStyleElements(value TStyleElements) {
+    ToolButton_SetStyleElements(t.instance, value)
 }
 
 func (t *TToolButton) AlignWithMargins() bool {

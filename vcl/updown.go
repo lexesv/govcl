@@ -187,12 +187,36 @@ func (u *TUpDown) SetHint(value string) {
     UpDown_SetHint(u.instance, value)
 }
 
+func (u *TUpDown) Min() int32 {
+    return UpDown_GetMin(u.instance)
+}
+
+func (u *TUpDown) SetMin(value int32) {
+    UpDown_SetMin(u.instance, value)
+}
+
+func (u *TUpDown) Max() int32 {
+    return UpDown_GetMax(u.instance)
+}
+
+func (u *TUpDown) SetMax(value int32) {
+    UpDown_SetMax(u.instance, value)
+}
+
 func (u *TUpDown) Orientation() TUDOrientation {
     return UpDown_GetOrientation(u.instance)
 }
 
 func (u *TUpDown) SetOrientation(value TUDOrientation) {
     UpDown_SetOrientation(u.instance, value)
+}
+
+func (u *TUpDown) ParentDoubleBuffered() bool {
+    return UpDown_GetParentDoubleBuffered(u.instance)
+}
+
+func (u *TUpDown) SetParentDoubleBuffered(value bool) {
+    UpDown_SetParentDoubleBuffered(u.instance, value)
 }
 
 func (u *TUpDown) ParentShowHint() bool {
@@ -259,6 +283,14 @@ func (u *TUpDown) SetWrap(value bool) {
     UpDown_SetWrap(u.instance, value)
 }
 
+func (u *TUpDown) StyleElements() TStyleElements {
+    return UpDown_GetStyleElements(u.instance)
+}
+
+func (u *TUpDown) SetStyleElements(value TStyleElements) {
+    UpDown_SetStyleElements(u.instance, value)
+}
+
 func (u *TUpDown) SetOnClick(fn TUDClickEvent) {
     UpDown_SetOnClick(u.instance, fn)
 }
@@ -317,6 +349,14 @@ func (u *TUpDown) Align() TAlign {
 
 func (u *TUpDown) SetAlign(value TAlign) {
     UpDown_SetAlign(u.instance, value)
+}
+
+func (u *TUpDown) BiDiMode() TBiDiMode {
+    return UpDown_GetBiDiMode(u.instance)
+}
+
+func (u *TUpDown) SetBiDiMode(value TBiDiMode) {
+    UpDown_SetBiDiMode(u.instance, value)
 }
 
 func (u *TUpDown) BoundsRect() TRect {

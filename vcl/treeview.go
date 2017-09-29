@@ -231,6 +231,46 @@ func (t *TTreeView) SetAutoExpand(value bool) {
     TreeView_SetAutoExpand(t.instance, value)
 }
 
+func (t *TTreeView) BevelEdges() TBevelEdges {
+    return TreeView_GetBevelEdges(t.instance)
+}
+
+func (t *TTreeView) SetBevelEdges(value TBevelEdges) {
+    TreeView_SetBevelEdges(t.instance, value)
+}
+
+func (t *TTreeView) BevelInner() TBevelCut {
+    return TreeView_GetBevelInner(t.instance)
+}
+
+func (t *TTreeView) SetBevelInner(value TBevelCut) {
+    TreeView_SetBevelInner(t.instance, value)
+}
+
+func (t *TTreeView) BevelOuter() TBevelCut {
+    return TreeView_GetBevelOuter(t.instance)
+}
+
+func (t *TTreeView) SetBevelOuter(value TBevelCut) {
+    TreeView_SetBevelOuter(t.instance, value)
+}
+
+func (t *TTreeView) BevelKind() TBevelKind {
+    return TreeView_GetBevelKind(t.instance)
+}
+
+func (t *TTreeView) SetBevelKind(value TBevelKind) {
+    TreeView_SetBevelKind(t.instance, value)
+}
+
+func (t *TTreeView) BiDiMode() TBiDiMode {
+    return TreeView_GetBiDiMode(t.instance)
+}
+
+func (t *TTreeView) SetBiDiMode(value TBiDiMode) {
+    TreeView_SetBiDiMode(t.instance, value)
+}
+
 func (t *TTreeView) BorderStyle() TBorderStyle {
     return TreeView_GetBorderStyle(t.instance)
 }
@@ -349,6 +389,14 @@ func (t *TTreeView) ParentCtl3D() bool {
 
 func (t *TTreeView) SetParentCtl3D(value bool) {
     TreeView_SetParentCtl3D(t.instance, value)
+}
+
+func (t *TTreeView) ParentDoubleBuffered() bool {
+    return TreeView_GetParentDoubleBuffered(t.instance)
+}
+
+func (t *TTreeView) SetParentDoubleBuffered(value bool) {
+    TreeView_SetParentDoubleBuffered(t.instance, value)
 }
 
 func (t *TTreeView) ParentFont() bool {
@@ -477,6 +525,14 @@ func (t *TTreeView) Visible() bool {
 
 func (t *TTreeView) SetVisible(value bool) {
     TreeView_SetVisible(t.instance, value)
+}
+
+func (t *TTreeView) StyleElements() TStyleElements {
+    return TreeView_GetStyleElements(t.instance)
+}
+
+func (t *TTreeView) SetStyleElements(value TStyleElements) {
+    TreeView_SetStyleElements(t.instance, value)
 }
 
 func (t *TTreeView) SetOnChange(fn TTVChangedEvent) {

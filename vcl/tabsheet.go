@@ -247,6 +247,14 @@ func (t *TTabSheet) SetPageIndex(value int32) {
     TabSheet_SetPageIndex(t.instance, value)
 }
 
+func (t *TTabSheet) ParentDoubleBuffered() bool {
+    return TabSheet_GetParentDoubleBuffered(t.instance)
+}
+
+func (t *TTabSheet) SetParentDoubleBuffered(value bool) {
+    TabSheet_SetParentDoubleBuffered(t.instance, value)
+}
+
 func (t *TTabSheet) ParentFont() bool {
     return TabSheet_GetParentFont(t.instance)
 }
@@ -403,6 +411,14 @@ func (t *TTabSheet) SetAnchors(value TAnchors) {
     TabSheet_SetAnchors(t.instance, value)
 }
 
+func (t *TTabSheet) BiDiMode() TBiDiMode {
+    return TabSheet_GetBiDiMode(t.instance)
+}
+
+func (t *TTabSheet) SetBiDiMode(value TBiDiMode) {
+    TabSheet_SetBiDiMode(t.instance, value)
+}
+
 func (t *TTabSheet) BoundsRect() TRect {
     return TabSheet_GetBoundsRect(t.instance)
 }
@@ -453,6 +469,14 @@ func (t *TTabSheet) Parent() *TControl {
 
 func (t *TTabSheet) SetParent(value IControl) {
     TabSheet_SetParent(t.instance, CheckPtr(value))
+}
+
+func (t *TTabSheet) StyleElements() TStyleElements {
+    return TabSheet_GetStyleElements(t.instance)
+}
+
+func (t *TTabSheet) SetStyleElements(value TStyleElements) {
+    TabSheet_SetStyleElements(t.instance, value)
 }
 
 func (t *TTabSheet) AlignWithMargins() bool {

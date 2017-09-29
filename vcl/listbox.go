@@ -215,6 +215,46 @@ func (l *TListBox) SetAnchors(value TAnchors) {
     ListBox_SetAnchors(l.instance, value)
 }
 
+func (l *TListBox) BevelEdges() TBevelEdges {
+    return ListBox_GetBevelEdges(l.instance)
+}
+
+func (l *TListBox) SetBevelEdges(value TBevelEdges) {
+    ListBox_SetBevelEdges(l.instance, value)
+}
+
+func (l *TListBox) BevelInner() TBevelCut {
+    return ListBox_GetBevelInner(l.instance)
+}
+
+func (l *TListBox) SetBevelInner(value TBevelCut) {
+    ListBox_SetBevelInner(l.instance, value)
+}
+
+func (l *TListBox) BevelKind() TBevelKind {
+    return ListBox_GetBevelKind(l.instance)
+}
+
+func (l *TListBox) SetBevelKind(value TBevelKind) {
+    ListBox_SetBevelKind(l.instance, value)
+}
+
+func (l *TListBox) BevelOuter() TBevelCut {
+    return ListBox_GetBevelOuter(l.instance)
+}
+
+func (l *TListBox) SetBevelOuter(value TBevelCut) {
+    ListBox_SetBevelOuter(l.instance, value)
+}
+
+func (l *TListBox) BiDiMode() TBiDiMode {
+    return ListBox_GetBiDiMode(l.instance)
+}
+
+func (l *TListBox) SetBiDiMode(value TBiDiMode) {
+    ListBox_SetBiDiMode(l.instance, value)
+}
+
 func (l *TListBox) BorderStyle() TBorderStyle {
     return ListBox_GetBorderStyle(l.instance)
 }
@@ -303,6 +343,14 @@ func (l *TListBox) SetParentCtl3D(value bool) {
     ListBox_SetParentCtl3D(l.instance, value)
 }
 
+func (l *TListBox) ParentDoubleBuffered() bool {
+    return ListBox_GetParentDoubleBuffered(l.instance)
+}
+
+func (l *TListBox) SetParentDoubleBuffered(value bool) {
+    ListBox_SetParentDoubleBuffered(l.instance, value)
+}
+
 func (l *TListBox) ParentFont() bool {
     return ListBox_GetParentFont(l.instance)
 }
@@ -373,6 +421,14 @@ func (l *TListBox) Visible() bool {
 
 func (l *TListBox) SetVisible(value bool) {
     ListBox_SetVisible(l.instance, value)
+}
+
+func (l *TListBox) StyleElements() TStyleElements {
+    return ListBox_GetStyleElements(l.instance)
+}
+
+func (l *TListBox) SetStyleElements(value TStyleElements) {
+    ListBox_SetStyleElements(l.instance, value)
 }
 
 func (l *TListBox) SetOnClick(fn TNotifyEvent) {

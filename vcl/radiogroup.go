@@ -171,6 +171,14 @@ func (r *TRadioGroup) SetAnchors(value TAnchors) {
     RadioGroup_SetAnchors(r.instance, value)
 }
 
+func (r *TRadioGroup) BiDiMode() TBiDiMode {
+    return RadioGroup_GetBiDiMode(r.instance)
+}
+
+func (r *TRadioGroup) SetBiDiMode(value TBiDiMode) {
+    RadioGroup_SetBiDiMode(r.instance, value)
+}
+
 func (r *TRadioGroup) Caption() string {
     return RadioGroup_GetCaption(r.instance)
 }
@@ -251,6 +259,14 @@ func (r *TRadioGroup) SetParentCtl3D(value bool) {
     RadioGroup_SetParentCtl3D(r.instance, value)
 }
 
+func (r *TRadioGroup) ParentDoubleBuffered() bool {
+    return RadioGroup_GetParentDoubleBuffered(r.instance)
+}
+
+func (r *TRadioGroup) SetParentDoubleBuffered(value bool) {
+    RadioGroup_SetParentDoubleBuffered(r.instance, value)
+}
+
 func (r *TRadioGroup) ParentFont() bool {
     return RadioGroup_GetParentFont(r.instance)
 }
@@ -305,6 +321,14 @@ func (r *TRadioGroup) Visible() bool {
 
 func (r *TRadioGroup) SetVisible(value bool) {
     RadioGroup_SetVisible(r.instance, value)
+}
+
+func (r *TRadioGroup) StyleElements() TStyleElements {
+    return RadioGroup_GetStyleElements(r.instance)
+}
+
+func (r *TRadioGroup) SetStyleElements(value TStyleElements) {
+    RadioGroup_SetStyleElements(r.instance, value)
 }
 
 func (r *TRadioGroup) WordWrap() bool {

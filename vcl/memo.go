@@ -203,6 +203,46 @@ func (m *TMemo) SetAnchors(value TAnchors) {
     Memo_SetAnchors(m.instance, value)
 }
 
+func (m *TMemo) BevelEdges() TBevelEdges {
+    return Memo_GetBevelEdges(m.instance)
+}
+
+func (m *TMemo) SetBevelEdges(value TBevelEdges) {
+    Memo_SetBevelEdges(m.instance, value)
+}
+
+func (m *TMemo) BevelInner() TBevelCut {
+    return Memo_GetBevelInner(m.instance)
+}
+
+func (m *TMemo) SetBevelInner(value TBevelCut) {
+    Memo_SetBevelInner(m.instance, value)
+}
+
+func (m *TMemo) BevelKind() TBevelKind {
+    return Memo_GetBevelKind(m.instance)
+}
+
+func (m *TMemo) SetBevelKind(value TBevelKind) {
+    Memo_SetBevelKind(m.instance, value)
+}
+
+func (m *TMemo) BevelOuter() TBevelCut {
+    return Memo_GetBevelOuter(m.instance)
+}
+
+func (m *TMemo) SetBevelOuter(value TBevelCut) {
+    Memo_SetBevelOuter(m.instance, value)
+}
+
+func (m *TMemo) BiDiMode() TBiDiMode {
+    return Memo_GetBiDiMode(m.instance)
+}
+
+func (m *TMemo) SetBiDiMode(value TBiDiMode) {
+    Memo_SetBiDiMode(m.instance, value)
+}
+
 func (m *TMemo) BorderStyle() TBorderStyle {
     return Memo_GetBorderStyle(m.instance)
 }
@@ -281,6 +321,14 @@ func (m *TMemo) ParentCtl3D() bool {
 
 func (m *TMemo) SetParentCtl3D(value bool) {
     Memo_SetParentCtl3D(m.instance, value)
+}
+
+func (m *TMemo) ParentDoubleBuffered() bool {
+    return Memo_GetParentDoubleBuffered(m.instance)
+}
+
+func (m *TMemo) SetParentDoubleBuffered(value bool) {
+    Memo_SetParentDoubleBuffered(m.instance, value)
 }
 
 func (m *TMemo) ParentFont() bool {
@@ -379,6 +427,14 @@ func (m *TMemo) SetWordWrap(value bool) {
     Memo_SetWordWrap(m.instance, value)
 }
 
+func (m *TMemo) StyleElements() TStyleElements {
+    return Memo_GetStyleElements(m.instance)
+}
+
+func (m *TMemo) SetStyleElements(value TStyleElements) {
+    Memo_SetStyleElements(m.instance, value)
+}
+
 func (m *TMemo) SetOnChange(fn TNotifyEvent) {
     Memo_SetOnChange(m.instance, fn)
 }
@@ -429,6 +485,14 @@ func (m *TMemo) SetOnMouseMove(fn TMouseMoveEvent) {
 
 func (m *TMemo) SetOnMouseUp(fn TMouseEvent) {
     Memo_SetOnMouseUp(m.instance, fn)
+}
+
+func (m *TMemo) CaretPos() TPoint {
+    return Memo_GetCaretPos(m.instance)
+}
+
+func (m *TMemo) SetCaretPos(value TPoint) {
+    Memo_SetCaretPos(m.instance, value)
 }
 
 func (m *TMemo) Modified() bool {

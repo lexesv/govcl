@@ -51,6 +51,10 @@ func (t *TTrackBar) IsValid() bool {
     return t.instance != 0
 }
 
+func (t *TTrackBar) SetTick(Value int32) {
+    TrackBar_SetTick(t.instance, Value )
+}
+
 func (t *TTrackBar) CanFocus() bool {
     return TrackBar_CanFocus(t.instance)
 }
@@ -195,6 +199,30 @@ func (t *TTrackBar) SetEnabled(value bool) {
     TrackBar_SetEnabled(t.instance, value)
 }
 
+func (t *TTrackBar) LineSize() int32 {
+    return TrackBar_GetLineSize(t.instance)
+}
+
+func (t *TTrackBar) SetLineSize(value int32) {
+    TrackBar_SetLineSize(t.instance, value)
+}
+
+func (t *TTrackBar) Max() int32 {
+    return TrackBar_GetMax(t.instance)
+}
+
+func (t *TTrackBar) SetMax(value int32) {
+    TrackBar_SetMax(t.instance, value)
+}
+
+func (t *TTrackBar) Min() int32 {
+    return TrackBar_GetMin(t.instance)
+}
+
+func (t *TTrackBar) SetMin(value int32) {
+    TrackBar_SetMin(t.instance, value)
+}
+
 func (t *TTrackBar) Orientation() TTrackBarOrientation {
     return TrackBar_GetOrientation(t.instance)
 }
@@ -211,12 +239,28 @@ func (t *TTrackBar) SetParentCtl3D(value bool) {
     TrackBar_SetParentCtl3D(t.instance, value)
 }
 
+func (t *TTrackBar) ParentDoubleBuffered() bool {
+    return TrackBar_GetParentDoubleBuffered(t.instance)
+}
+
+func (t *TTrackBar) SetParentDoubleBuffered(value bool) {
+    TrackBar_SetParentDoubleBuffered(t.instance, value)
+}
+
 func (t *TTrackBar) ParentShowHint() bool {
     return TrackBar_GetParentShowHint(t.instance)
 }
 
 func (t *TTrackBar) SetParentShowHint(value bool) {
     TrackBar_SetParentShowHint(t.instance, value)
+}
+
+func (t *TTrackBar) PageSize() int32 {
+    return TrackBar_GetPageSize(t.instance)
+}
+
+func (t *TTrackBar) SetPageSize(value int32) {
+    TrackBar_SetPageSize(t.instance, value)
 }
 
 func (t *TTrackBar) PopupMenu() *TPopupMenu {
@@ -227,12 +271,44 @@ func (t *TTrackBar) SetPopupMenu(value IComponent) {
     TrackBar_SetPopupMenu(t.instance, CheckPtr(value))
 }
 
+func (t *TTrackBar) Frequency() int32 {
+    return TrackBar_GetFrequency(t.instance)
+}
+
+func (t *TTrackBar) SetFrequency(value int32) {
+    TrackBar_SetFrequency(t.instance, value)
+}
+
 func (t *TTrackBar) Position() int32 {
     return TrackBar_GetPosition(t.instance)
 }
 
 func (t *TTrackBar) SetPosition(value int32) {
     TrackBar_SetPosition(t.instance, value)
+}
+
+func (t *TTrackBar) PositionToolTip() TPositionToolTip {
+    return TrackBar_GetPositionToolTip(t.instance)
+}
+
+func (t *TTrackBar) SetPositionToolTip(value TPositionToolTip) {
+    TrackBar_SetPositionToolTip(t.instance, value)
+}
+
+func (t *TTrackBar) SliderVisible() bool {
+    return TrackBar_GetSliderVisible(t.instance)
+}
+
+func (t *TTrackBar) SetSliderVisible(value bool) {
+    TrackBar_SetSliderVisible(t.instance, value)
+}
+
+func (t *TTrackBar) SelEnd() int32 {
+    return TrackBar_GetSelEnd(t.instance)
+}
+
+func (t *TTrackBar) SetSelEnd(value int32) {
+    TrackBar_SetSelEnd(t.instance, value)
 }
 
 func (t *TTrackBar) SelStart() int32 {
@@ -251,6 +327,14 @@ func (t *TTrackBar) SetShowHint(value bool) {
     TrackBar_SetShowHint(t.instance, value)
 }
 
+func (t *TTrackBar) ShowSelRange() bool {
+    return TrackBar_GetShowSelRange(t.instance)
+}
+
+func (t *TTrackBar) SetShowSelRange(value bool) {
+    TrackBar_SetShowSelRange(t.instance, value)
+}
+
 func (t *TTrackBar) TabOrder() int16 {
     return TrackBar_GetTabOrder(t.instance)
 }
@@ -267,12 +351,44 @@ func (t *TTrackBar) SetTabStop(value bool) {
     TrackBar_SetTabStop(t.instance, value)
 }
 
+func (t *TTrackBar) ThumbLength() int32 {
+    return TrackBar_GetThumbLength(t.instance)
+}
+
+func (t *TTrackBar) SetThumbLength(value int32) {
+    TrackBar_SetThumbLength(t.instance, value)
+}
+
+func (t *TTrackBar) TickMarks() TTickMark {
+    return TrackBar_GetTickMarks(t.instance)
+}
+
+func (t *TTrackBar) SetTickMarks(value TTickMark) {
+    TrackBar_SetTickMarks(t.instance, value)
+}
+
+func (t *TTrackBar) TickStyle() TTickStyle {
+    return TrackBar_GetTickStyle(t.instance)
+}
+
+func (t *TTrackBar) SetTickStyle(value TTickStyle) {
+    TrackBar_SetTickStyle(t.instance, value)
+}
+
 func (t *TTrackBar) Visible() bool {
     return TrackBar_GetVisible(t.instance)
 }
 
 func (t *TTrackBar) SetVisible(value bool) {
     TrackBar_SetVisible(t.instance, value)
+}
+
+func (t *TTrackBar) StyleElements() TStyleElements {
+    return TrackBar_GetStyleElements(t.instance)
+}
+
+func (t *TTrackBar) SetStyleElements(value TStyleElements) {
+    TrackBar_SetStyleElements(t.instance, value)
 }
 
 func (t *TTrackBar) SetOnChange(fn TNotifyEvent) {
@@ -317,6 +433,14 @@ func (t *TTrackBar) Action() *TAction {
 
 func (t *TTrackBar) SetAction(value IComponent) {
     TrackBar_SetAction(t.instance, CheckPtr(value))
+}
+
+func (t *TTrackBar) BiDiMode() TBiDiMode {
+    return TrackBar_GetBiDiMode(t.instance)
+}
+
+func (t *TTrackBar) SetBiDiMode(value TBiDiMode) {
+    TrackBar_SetBiDiMode(t.instance, value)
 }
 
 func (t *TTrackBar) BoundsRect() TRect {

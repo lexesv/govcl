@@ -191,6 +191,14 @@ func (p *TPageControl) SetAnchors(value TAnchors) {
     PageControl_SetAnchors(p.instance, value)
 }
 
+func (p *TPageControl) BiDiMode() TBiDiMode {
+    return PageControl_GetBiDiMode(p.instance)
+}
+
+func (p *TPageControl) SetBiDiMode(value TBiDiMode) {
+    PageControl_SetBiDiMode(p.instance, value)
+}
+
 func (p *TPageControl) DoubleBuffered() bool {
     return PageControl_GetDoubleBuffered(p.instance)
 }
@@ -237,6 +245,14 @@ func (p *TPageControl) MultiLine() bool {
 
 func (p *TPageControl) SetMultiLine(value bool) {
     PageControl_SetMultiLine(p.instance, value)
+}
+
+func (p *TPageControl) ParentDoubleBuffered() bool {
+    return PageControl_GetParentDoubleBuffered(p.instance)
+}
+
+func (p *TPageControl) SetParentDoubleBuffered(value bool) {
+    PageControl_SetParentDoubleBuffered(p.instance, value)
 }
 
 func (p *TPageControl) ParentFont() bool {
@@ -333,6 +349,14 @@ func (p *TPageControl) Visible() bool {
 
 func (p *TPageControl) SetVisible(value bool) {
     PageControl_SetVisible(p.instance, value)
+}
+
+func (p *TPageControl) StyleElements() TStyleElements {
+    return PageControl_GetStyleElements(p.instance)
+}
+
+func (p *TPageControl) SetStyleElements(value TStyleElements) {
+    PageControl_SetStyleElements(p.instance, value)
 }
 
 func (p *TPageControl) SetOnChange(fn TNotifyEvent) {

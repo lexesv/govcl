@@ -215,6 +215,38 @@ func (c *TComboBox) SetAutoCloseUp(value bool) {
     ComboBox_SetAutoCloseUp(c.instance, value)
 }
 
+func (c *TComboBox) BevelEdges() TBevelEdges {
+    return ComboBox_GetBevelEdges(c.instance)
+}
+
+func (c *TComboBox) SetBevelEdges(value TBevelEdges) {
+    ComboBox_SetBevelEdges(c.instance, value)
+}
+
+func (c *TComboBox) BevelInner() TBevelCut {
+    return ComboBox_GetBevelInner(c.instance)
+}
+
+func (c *TComboBox) SetBevelInner(value TBevelCut) {
+    ComboBox_SetBevelInner(c.instance, value)
+}
+
+func (c *TComboBox) BevelKind() TBevelKind {
+    return ComboBox_GetBevelKind(c.instance)
+}
+
+func (c *TComboBox) SetBevelKind(value TBevelKind) {
+    ComboBox_SetBevelKind(c.instance, value)
+}
+
+func (c *TComboBox) BevelOuter() TBevelCut {
+    return ComboBox_GetBevelOuter(c.instance)
+}
+
+func (c *TComboBox) SetBevelOuter(value TBevelCut) {
+    ComboBox_SetBevelOuter(c.instance, value)
+}
+
 func (c *TComboBox) Style() TComboBoxStyle {
     return ComboBox_GetStyle(c.instance)
 }
@@ -229,6 +261,14 @@ func (c *TComboBox) Anchors() TAnchors {
 
 func (c *TComboBox) SetAnchors(value TAnchors) {
     ComboBox_SetAnchors(c.instance, value)
+}
+
+func (c *TComboBox) BiDiMode() TBiDiMode {
+    return ComboBox_GetBiDiMode(c.instance)
+}
+
+func (c *TComboBox) SetBiDiMode(value TBiDiMode) {
+    ComboBox_SetBiDiMode(c.instance, value)
 }
 
 func (c *TComboBox) Color() TColor {
@@ -311,6 +351,14 @@ func (c *TComboBox) SetParentCtl3D(value bool) {
     ComboBox_SetParentCtl3D(c.instance, value)
 }
 
+func (c *TComboBox) ParentDoubleBuffered() bool {
+    return ComboBox_GetParentDoubleBuffered(c.instance)
+}
+
+func (c *TComboBox) SetParentDoubleBuffered(value bool) {
+    ComboBox_SetParentDoubleBuffered(c.instance, value)
+}
+
 func (c *TComboBox) ParentFont() bool {
     return ComboBox_GetParentFont(c.instance)
 }
@@ -391,6 +439,14 @@ func (c *TComboBox) SetVisible(value bool) {
     ComboBox_SetVisible(c.instance, value)
 }
 
+func (c *TComboBox) StyleElements() TStyleElements {
+    return ComboBox_GetStyleElements(c.instance)
+}
+
+func (c *TComboBox) SetStyleElements(value TStyleElements) {
+    ComboBox_SetStyleElements(c.instance, value)
+}
+
 func (c *TComboBox) SetOnChange(fn TNotifyEvent) {
     ComboBox_SetOnChange(c.instance, fn)
 }
@@ -449,6 +505,14 @@ func (c *TComboBox) SetSelText(value string) {
 
 func (c *TComboBox) Canvas() *TCanvas {
     return CanvasFromInst(ComboBox_GetCanvas(c.instance))
+}
+
+func (c *TComboBox) DroppedDown() bool {
+    return ComboBox_GetDroppedDown(c.instance)
+}
+
+func (c *TComboBox) SetDroppedDown(value bool) {
+    ComboBox_SetDroppedDown(c.instance, value)
 }
 
 func (c *TComboBox) SelLength() int32 {

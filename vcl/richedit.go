@@ -203,6 +203,46 @@ func (r *TRichEdit) SetAnchors(value TAnchors) {
     RichEdit_SetAnchors(r.instance, value)
 }
 
+func (r *TRichEdit) BevelEdges() TBevelEdges {
+    return RichEdit_GetBevelEdges(r.instance)
+}
+
+func (r *TRichEdit) SetBevelEdges(value TBevelEdges) {
+    RichEdit_SetBevelEdges(r.instance, value)
+}
+
+func (r *TRichEdit) BevelInner() TBevelCut {
+    return RichEdit_GetBevelInner(r.instance)
+}
+
+func (r *TRichEdit) SetBevelInner(value TBevelCut) {
+    RichEdit_SetBevelInner(r.instance, value)
+}
+
+func (r *TRichEdit) BevelOuter() TBevelCut {
+    return RichEdit_GetBevelOuter(r.instance)
+}
+
+func (r *TRichEdit) SetBevelOuter(value TBevelCut) {
+    RichEdit_SetBevelOuter(r.instance, value)
+}
+
+func (r *TRichEdit) BevelKind() TBevelKind {
+    return RichEdit_GetBevelKind(r.instance)
+}
+
+func (r *TRichEdit) SetBevelKind(value TBevelKind) {
+    RichEdit_SetBevelKind(r.instance, value)
+}
+
+func (r *TRichEdit) BiDiMode() TBiDiMode {
+    return RichEdit_GetBiDiMode(r.instance)
+}
+
+func (r *TRichEdit) SetBiDiMode(value TBiDiMode) {
+    RichEdit_SetBiDiMode(r.instance, value)
+}
+
 func (r *TRichEdit) BorderStyle() TBorderStyle {
     return RichEdit_GetBorderStyle(r.instance)
 }
@@ -379,6 +419,14 @@ func (r *TRichEdit) SetWordWrap(value bool) {
     RichEdit_SetWordWrap(r.instance, value)
 }
 
+func (r *TRichEdit) StyleElements() TStyleElements {
+    return RichEdit_GetStyleElements(r.instance)
+}
+
+func (r *TRichEdit) SetStyleElements(value TStyleElements) {
+    RichEdit_SetStyleElements(r.instance, value)
+}
+
 func (r *TRichEdit) SetOnChange(fn TNotifyEvent) {
     RichEdit_SetOnChange(r.instance, fn)
 }
@@ -433,6 +481,14 @@ func (r *TRichEdit) SetOnMouseUp(fn TMouseEvent) {
 
 func (r *TRichEdit) SetOnMouseWheel(fn TMouseWheelEvent) {
     RichEdit_SetOnMouseWheel(r.instance, fn)
+}
+
+func (r *TRichEdit) CaretPos() TPoint {
+    return RichEdit_GetCaretPos(r.instance)
+}
+
+func (r *TRichEdit) SetCaretPos(value TPoint) {
+    RichEdit_SetCaretPos(r.instance, value)
 }
 
 func (r *TRichEdit) Modified() bool {
@@ -501,6 +557,14 @@ func (r *TRichEdit) ControlCount() int32 {
 
 func (r *TRichEdit) Handle() HWND {
     return RichEdit_GetHandle(r.instance)
+}
+
+func (r *TRichEdit) ParentDoubleBuffered() bool {
+    return RichEdit_GetParentDoubleBuffered(r.instance)
+}
+
+func (r *TRichEdit) SetParentDoubleBuffered(value bool) {
+    RichEdit_SetParentDoubleBuffered(r.instance, value)
 }
 
 func (r *TRichEdit) Action() *TAction {

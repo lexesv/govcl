@@ -91,6 +91,14 @@ func (m *TMainMenu) SetAutoHotkeys(value TMenuAutoFlag) {
     MainMenu_SetAutoHotkeys(m.instance, value)
 }
 
+func (m *TMainMenu) BiDiMode() TBiDiMode {
+    return MainMenu_GetBiDiMode(m.instance)
+}
+
+func (m *TMainMenu) SetBiDiMode(value TBiDiMode) {
+    MainMenu_SetBiDiMode(m.instance, value)
+}
+
 func (m *TMainMenu) Images() *TImageList {
     return ImageListFromInst(MainMenu_GetImages(m.instance))
 }

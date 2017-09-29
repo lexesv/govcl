@@ -222,6 +222,15 @@ func Application_SetMainFormOnTaskBar(obj uintptr, value bool) {
    application_SetMainFormOnTaskBar.Call(obj, GoBoolToDBool(value))
 }
 
+func Application_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := application_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Application_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   application_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Application_GetShowHint(obj uintptr) bool {
     ret, _, _ := application_GetShowHint.Call(obj)
     return DBoolToGoBool(ret)
@@ -503,6 +512,15 @@ func Form_SetAutoSize(obj uintptr, value bool) {
    form_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func Form_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := form_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Form_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   form_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Form_GetBorderIcons(obj uintptr) TBorderIcons {
     ret, _, _ := form_GetBorderIcons.Call(obj)
     return TBorderIcons(ret)
@@ -737,6 +755,15 @@ func Form_SetWindowState(obj uintptr, value TWindowState) {
    form_SetWindowState.Call(obj, uintptr(value))
 }
 
+func Form_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := form_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Form_SetStyleElements(obj uintptr, value TStyleElements) {
+   form_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func Form_SetOnClick(obj uintptr, fn interface{}) {
     form_SetOnClick.Call(obj, addEventToMap(fn))
 }
@@ -859,6 +886,15 @@ func Form_GetControlCount(obj uintptr) int32 {
 func Form_GetHandle(obj uintptr) HWND {
     ret, _, _ := form_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func Form_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := form_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Form_SetParentDoubleBuffered(obj uintptr, value bool) {
+   form_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func Form_GetTabOrder(obj uintptr) int16 {
@@ -1166,6 +1202,15 @@ func Button_SetAnchors(obj uintptr, value TAnchors) {
    button_SetAnchors.Call(obj, uintptr(value))
 }
 
+func Button_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := button_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Button_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   button_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Button_GetCancel(obj uintptr) bool {
     ret, _, _ := button_GetCancel.Call(obj)
     return DBoolToGoBool(ret)
@@ -1247,6 +1292,15 @@ func Button_SetModalResult(obj uintptr, value TModalResult) {
    button_SetModalResult.Call(obj, uintptr(value))
 }
 
+func Button_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := button_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Button_SetParentDoubleBuffered(obj uintptr, value bool) {
+   button_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func Button_GetParentFont(obj uintptr) bool {
     ret, _, _ := button_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -1326,6 +1380,15 @@ func Button_GetWordWrap(obj uintptr) bool {
 
 func Button_SetWordWrap(obj uintptr, value bool) {
    button_SetWordWrap.Call(obj, GoBoolToDBool(value))
+}
+
+func Button_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := button_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Button_SetStyleElements(obj uintptr, value TStyleElements) {
+   button_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Button_SetOnClick(obj uintptr, fn interface{}) {
@@ -1766,6 +1829,51 @@ func Edit_SetAutoSize(obj uintptr, value bool) {
    edit_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func Edit_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := edit_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func Edit_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   edit_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func Edit_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := edit_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Edit_SetBevelInner(obj uintptr, value TBevelCut) {
+   edit_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func Edit_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := edit_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func Edit_SetBevelKind(obj uintptr, value TBevelKind) {
+   edit_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func Edit_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := edit_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Edit_SetBevelOuter(obj uintptr, value TBevelCut) {
+   edit_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func Edit_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := edit_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Edit_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   edit_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Edit_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := edit_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -1854,6 +1962,15 @@ func Edit_GetParentCtl3D(obj uintptr) bool {
 
 func Edit_SetParentCtl3D(obj uintptr, value bool) {
    edit_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func Edit_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := edit_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Edit_SetParentDoubleBuffered(obj uintptr, value bool) {
+   edit_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func Edit_GetParentFont(obj uintptr) bool {
@@ -1953,6 +2070,15 @@ func Edit_GetVisible(obj uintptr) bool {
 
 func Edit_SetVisible(obj uintptr, value bool) {
    edit_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func Edit_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := edit_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Edit_SetStyleElements(obj uintptr, value TStyleElements) {
+   edit_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Edit_SetOnChange(obj uintptr, fn interface{}) {
@@ -2309,6 +2435,15 @@ func MainMenu_SetAutoHotkeys(obj uintptr, value TMenuAutoFlag) {
    mainMenu_SetAutoHotkeys.Call(obj, uintptr(value))
 }
 
+func MainMenu_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := mainMenu_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func MainMenu_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   mainMenu_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func MainMenu_GetImages(obj uintptr) uintptr {
     ret, _, _ := mainMenu_GetImages.Call(obj)
     return ret
@@ -2458,6 +2593,15 @@ func PopupMenu_GetAutoHotkeys(obj uintptr) TMenuAutoFlag {
 
 func PopupMenu_SetAutoHotkeys(obj uintptr, value TMenuAutoFlag) {
    popupMenu_SetAutoHotkeys.Call(obj, uintptr(value))
+}
+
+func PopupMenu_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := popupMenu_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func PopupMenu_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   popupMenu_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func PopupMenu_GetImages(obj uintptr) uintptr {
@@ -2717,6 +2861,51 @@ func Memo_SetAnchors(obj uintptr, value TAnchors) {
    memo_SetAnchors.Call(obj, uintptr(value))
 }
 
+func Memo_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := memo_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func Memo_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   memo_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func Memo_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := memo_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Memo_SetBevelInner(obj uintptr, value TBevelCut) {
+   memo_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func Memo_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := memo_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func Memo_SetBevelKind(obj uintptr, value TBevelKind) {
+   memo_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func Memo_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := memo_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Memo_SetBevelOuter(obj uintptr, value TBevelCut) {
+   memo_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func Memo_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := memo_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Memo_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   memo_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Memo_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := memo_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -2805,6 +2994,15 @@ func Memo_GetParentCtl3D(obj uintptr) bool {
 
 func Memo_SetParentCtl3D(obj uintptr, value bool) {
    memo_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func Memo_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := memo_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Memo_SetParentDoubleBuffered(obj uintptr, value bool) {
+   memo_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func Memo_GetParentFont(obj uintptr) bool {
@@ -2915,6 +3113,15 @@ func Memo_SetWordWrap(obj uintptr, value bool) {
    memo_SetWordWrap.Call(obj, GoBoolToDBool(value))
 }
 
+func Memo_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := memo_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Memo_SetStyleElements(obj uintptr, value TStyleElements) {
+   memo_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func Memo_SetOnChange(obj uintptr, fn interface{}) {
     memo_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -2965,6 +3172,16 @@ func Memo_SetOnMouseMove(obj uintptr, fn interface{}) {
 
 func Memo_SetOnMouseUp(obj uintptr, fn interface{}) {
     memo_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func Memo_GetCaretPos(obj uintptr) TPoint {
+    var ret TPoint
+    memo_GetCaretPos.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Memo_SetCaretPos(obj uintptr, value TPoint) {
+   memo_SetCaretPos.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func Memo_GetModified(obj uintptr) bool {
@@ -3391,6 +3608,15 @@ func CheckBox_SetAnchors(obj uintptr, value TAnchors) {
    checkBox_SetAnchors.Call(obj, uintptr(value))
 }
 
+func CheckBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := checkBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func CheckBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   checkBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func CheckBox_GetCaption(obj uintptr) string {
     ret, _, _ := checkBox_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -3461,6 +3687,15 @@ func CheckBox_GetParentCtl3D(obj uintptr) bool {
 
 func CheckBox_SetParentCtl3D(obj uintptr, value bool) {
    checkBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := checkBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   checkBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetParentFont(obj uintptr) bool {
@@ -3542,6 +3777,15 @@ func CheckBox_GetWordWrap(obj uintptr) bool {
 
 func CheckBox_SetWordWrap(obj uintptr, value bool) {
    checkBox_SetWordWrap.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := checkBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func CheckBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   checkBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func CheckBox_SetOnClick(obj uintptr, fn interface{}) {
@@ -3949,6 +4193,15 @@ func RadioButton_SetAnchors(obj uintptr, value TAnchors) {
    radioButton_SetAnchors.Call(obj, uintptr(value))
 }
 
+func RadioButton_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := radioButton_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func RadioButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   radioButton_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func RadioButton_GetCaption(obj uintptr) string {
     ret, _, _ := radioButton_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -4021,6 +4274,15 @@ func RadioButton_SetParentCtl3D(obj uintptr, value bool) {
    radioButton_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func RadioButton_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := radioButton_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RadioButton_SetParentDoubleBuffered(obj uintptr, value bool) {
+   radioButton_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func RadioButton_GetParentFont(obj uintptr) bool {
     ret, _, _ := radioButton_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -4091,6 +4353,15 @@ func RadioButton_GetWordWrap(obj uintptr) bool {
 
 func RadioButton_SetWordWrap(obj uintptr, value bool) {
    radioButton_SetWordWrap.Call(obj, GoBoolToDBool(value))
+}
+
+func RadioButton_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := radioButton_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func RadioButton_SetStyleElements(obj uintptr, value TStyleElements) {
+   radioButton_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func RadioButton_SetOnClick(obj uintptr, fn interface{}) {
@@ -4484,6 +4755,15 @@ func GroupBox_SetAnchors(obj uintptr, value TAnchors) {
    groupBox_SetAnchors.Call(obj, uintptr(value))
 }
 
+func GroupBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := groupBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func GroupBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   groupBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func GroupBox_GetCaption(obj uintptr) string {
     ret, _, _ := groupBox_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -4547,6 +4827,15 @@ func GroupBox_SetParentCtl3D(obj uintptr, value bool) {
    groupBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func GroupBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := groupBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func GroupBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   groupBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func GroupBox_GetParentFont(obj uintptr) bool {
     ret, _, _ := groupBox_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -4608,6 +4897,15 @@ func GroupBox_GetVisible(obj uintptr) bool {
 
 func GroupBox_SetVisible(obj uintptr, value bool) {
    groupBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func GroupBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := groupBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func GroupBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   groupBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func GroupBox_SetOnClick(obj uintptr, fn interface{}) {
@@ -4985,6 +5283,15 @@ func Label_SetAutoSize(obj uintptr, value bool) {
    label_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func Label_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := label_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Label_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   label_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Label_GetCaption(obj uintptr) string {
     ret, _, _ := label_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -5127,6 +5434,15 @@ func Label_GetWordWrap(obj uintptr) bool {
 
 func Label_SetWordWrap(obj uintptr, value bool) {
    label_SetWordWrap.Call(obj, GoBoolToDBool(value))
+}
+
+func Label_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := label_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Label_SetStyleElements(obj uintptr, value TStyleElements) {
+   label_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Label_SetOnClick(obj uintptr, fn interface{}) {
@@ -5541,6 +5857,51 @@ func ListBox_SetAnchors(obj uintptr, value TAnchors) {
    listBox_SetAnchors.Call(obj, uintptr(value))
 }
 
+func ListBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := listBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ListBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   listBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ListBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := listBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ListBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   listBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ListBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := listBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ListBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   listBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ListBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := listBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ListBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   listBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func ListBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := listBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ListBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   listBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func ListBox_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := listBox_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -5640,6 +6001,15 @@ func ListBox_SetParentCtl3D(obj uintptr, value bool) {
    listBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func ListBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := listBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ListBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   listBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func ListBox_GetParentFont(obj uintptr) bool {
     ret, _, _ := listBox_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -5719,6 +6089,15 @@ func ListBox_GetVisible(obj uintptr) bool {
 
 func ListBox_SetVisible(obj uintptr, value bool) {
    listBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ListBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := listBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ListBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   listBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func ListBox_SetOnClick(obj uintptr, fn interface{}) {
@@ -6196,6 +6575,42 @@ func ComboBox_SetAutoCloseUp(obj uintptr, value bool) {
    comboBox_SetAutoCloseUp.Call(obj, GoBoolToDBool(value))
 }
 
+func ComboBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := comboBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ComboBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   comboBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ComboBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := comboBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ComboBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   comboBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ComboBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := comboBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ComboBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   comboBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ComboBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := comboBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ComboBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   comboBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
 func ComboBox_GetStyle(obj uintptr) TComboBoxStyle {
     ret, _, _ := comboBox_GetStyle.Call(obj)
     return TComboBoxStyle(ret)
@@ -6212,6 +6627,15 @@ func ComboBox_GetAnchors(obj uintptr) TAnchors {
 
 func ComboBox_SetAnchors(obj uintptr, value TAnchors) {
    comboBox_SetAnchors.Call(obj, uintptr(value))
+}
+
+func ComboBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := comboBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ComboBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   comboBox_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func ComboBox_GetColor(obj uintptr) TColor {
@@ -6304,6 +6728,15 @@ func ComboBox_SetParentCtl3D(obj uintptr, value bool) {
    comboBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func ComboBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := comboBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ComboBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   comboBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func ComboBox_GetParentFont(obj uintptr) bool {
     ret, _, _ := comboBox_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -6394,6 +6827,15 @@ func ComboBox_SetVisible(obj uintptr, value bool) {
    comboBox_SetVisible.Call(obj, GoBoolToDBool(value))
 }
 
+func ComboBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := comboBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ComboBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   comboBox_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func ComboBox_SetOnChange(obj uintptr, fn interface{}) {
     comboBox_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -6455,6 +6897,15 @@ func ComboBox_SetSelText(obj uintptr, value string) {
 func ComboBox_GetCanvas(obj uintptr) uintptr {
     ret, _, _ := comboBox_GetCanvas.Call(obj)
     return ret
+}
+
+func ComboBox_GetDroppedDown(obj uintptr) bool {
+    ret, _, _ := comboBox_GetDroppedDown.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ComboBox_SetDroppedDown(obj uintptr, value bool) {
+   comboBox_SetDroppedDown.Call(obj, GoBoolToDBool(value))
 }
 
 func ComboBox_GetSelLength(obj uintptr) int32 {
@@ -6845,6 +7296,51 @@ func Panel_SetAutoSize(obj uintptr, value bool) {
    panel_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func Panel_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := panel_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func Panel_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   panel_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func Panel_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := panel_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Panel_SetBevelInner(obj uintptr, value TBevelCut) {
+   panel_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func Panel_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := panel_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func Panel_SetBevelKind(obj uintptr, value TBevelKind) {
+   panel_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func Panel_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := panel_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func Panel_SetBevelOuter(obj uintptr, value TBevelCut) {
+   panel_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func Panel_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := panel_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Panel_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   panel_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Panel_GetBorderWidth(obj uintptr) int32 {
     ret, _, _ := panel_GetBorderWidth.Call(obj)
     return int32(ret)
@@ -6926,6 +7422,15 @@ func Panel_SetParentCtl3D(obj uintptr, value bool) {
    panel_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func Panel_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := panel_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Panel_SetParentDoubleBuffered(obj uintptr, value bool) {
+   panel_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func Panel_GetParentFont(obj uintptr) bool {
     ret, _, _ := panel_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -6996,6 +7501,15 @@ func Panel_GetVisible(obj uintptr) bool {
 
 func Panel_SetVisible(obj uintptr, value bool) {
    panel_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func Panel_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := panel_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Panel_SetStyleElements(obj uintptr, value TStyleElements) {
+   panel_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Panel_SetOnClick(obj uintptr, fn interface{}) {
@@ -7509,6 +8023,15 @@ func Image_SetAction(obj uintptr, value uintptr) {
    image_SetAction.Call(obj, value)
 }
 
+func Image_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := image_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Image_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   image_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Image_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     image_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -7570,6 +8093,15 @@ func Image_GetParent(obj uintptr) uintptr {
 
 func Image_SetParent(obj uintptr, value uintptr) {
    image_SetParent.Call(obj, value)
+}
+
+func Image_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := image_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Image_SetStyleElements(obj uintptr, value TStyleElements) {
+   image_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Image_GetAlignWithMargins(obj uintptr) bool {
@@ -7850,6 +8382,42 @@ func LinkLabel_SetAutoSize(obj uintptr, value bool) {
    linkLabel_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func LinkLabel_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := linkLabel_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func LinkLabel_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   linkLabel_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func LinkLabel_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := linkLabel_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func LinkLabel_SetBevelInner(obj uintptr, value TBevelCut) {
+   linkLabel_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func LinkLabel_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := linkLabel_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func LinkLabel_SetBevelKind(obj uintptr, value TBevelKind) {
+   linkLabel_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func LinkLabel_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := linkLabel_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func LinkLabel_SetBevelOuter(obj uintptr, value TBevelCut) {
+   linkLabel_SetBevelOuter.Call(obj, uintptr(value))
+}
+
 func LinkLabel_GetCaption(obj uintptr) string {
     ret, _, _ := linkLabel_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -8023,6 +8591,15 @@ func LinkLabel_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func LinkLabel_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := linkLabel_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func LinkLabel_SetParentDoubleBuffered(obj uintptr, value bool) {
+   linkLabel_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func LinkLabel_GetAction(obj uintptr) uintptr {
     ret, _, _ := linkLabel_GetAction.Call(obj)
     return ret
@@ -8030,6 +8607,15 @@ func LinkLabel_GetAction(obj uintptr) uintptr {
 
 func LinkLabel_SetAction(obj uintptr, value uintptr) {
    linkLabel_SetAction.Call(obj, value)
+}
+
+func LinkLabel_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := linkLabel_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func LinkLabel_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   linkLabel_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func LinkLabel_GetBoundsRect(obj uintptr) TRect {
@@ -8093,6 +8679,15 @@ func LinkLabel_GetParent(obj uintptr) uintptr {
 
 func LinkLabel_SetParent(obj uintptr, value uintptr) {
    linkLabel_SetParent.Call(obj, value)
+}
+
+func LinkLabel_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := linkLabel_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func LinkLabel_SetStyleElements(obj uintptr, value TStyleElements) {
+   linkLabel_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func LinkLabel_GetAlignWithMargins(obj uintptr) bool {
@@ -8351,6 +8946,15 @@ func SpeedButton_SetAnchors(obj uintptr, value TAnchors) {
    speedButton_SetAnchors.Call(obj, uintptr(value))
 }
 
+func SpeedButton_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := speedButton_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func SpeedButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   speedButton_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func SpeedButton_GetGroupIndex(obj uintptr) int32 {
     ret, _, _ := speedButton_GetGroupIndex.Call(obj)
     return int32(ret)
@@ -8466,6 +9070,15 @@ func SpeedButton_GetVisible(obj uintptr) bool {
 
 func SpeedButton_SetVisible(obj uintptr, value bool) {
    speedButton_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func SpeedButton_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := speedButton_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func SpeedButton_SetStyleElements(obj uintptr, value TStyleElements) {
+   speedButton_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func SpeedButton_SetOnClick(obj uintptr, fn interface{}) {
@@ -8829,6 +9442,15 @@ func Splitter_SetWidth(obj uintptr, value int32) {
    splitter_SetWidth.Call(obj, uintptr(value))
 }
 
+func Splitter_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := splitter_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Splitter_SetStyleElements(obj uintptr, value TStyleElements) {
+   splitter_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func Splitter_SetOnPaint(obj uintptr, fn interface{}) {
     splitter_SetOnPaint.Call(obj, addEventToMap(fn))
 }
@@ -8858,6 +9480,15 @@ func Splitter_GetAnchors(obj uintptr) TAnchors {
 
 func Splitter_SetAnchors(obj uintptr, value TAnchors) {
    splitter_SetAnchors.Call(obj, uintptr(value))
+}
+
+func Splitter_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := splitter_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Splitter_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   splitter_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func Splitter_GetBoundsRect(obj uintptr) TRect {
@@ -9174,6 +9805,15 @@ func RadioGroup_SetAnchors(obj uintptr, value TAnchors) {
    radioGroup_SetAnchors.Call(obj, uintptr(value))
 }
 
+func RadioGroup_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := radioGroup_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func RadioGroup_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   radioGroup_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func RadioGroup_GetCaption(obj uintptr) string {
     ret, _, _ := radioGroup_GetCaption.Call(obj)
     return DStrToGoStr(ret)
@@ -9264,6 +9904,15 @@ func RadioGroup_SetParentCtl3D(obj uintptr, value bool) {
    radioGroup_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func RadioGroup_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := radioGroup_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RadioGroup_SetParentDoubleBuffered(obj uintptr, value bool) {
+   radioGroup_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func RadioGroup_GetParentFont(obj uintptr) bool {
     ret, _, _ := radioGroup_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -9325,6 +9974,15 @@ func RadioGroup_GetVisible(obj uintptr) bool {
 
 func RadioGroup_SetVisible(obj uintptr, value bool) {
    radioGroup_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func RadioGroup_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := radioGroup_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func RadioGroup_SetStyleElements(obj uintptr, value TStyleElements) {
+   radioGroup_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func RadioGroup_GetWordWrap(obj uintptr) bool {
@@ -9723,6 +10381,51 @@ func StaticText_SetAutoSize(obj uintptr, value bool) {
    staticText_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func StaticText_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := staticText_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func StaticText_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   staticText_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func StaticText_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := staticText_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func StaticText_SetBevelInner(obj uintptr, value TBevelCut) {
+   staticText_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func StaticText_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := staticText_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func StaticText_SetBevelKind(obj uintptr, value TBevelKind) {
+   staticText_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func StaticText_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := staticText_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func StaticText_SetBevelOuter(obj uintptr, value TBevelCut) {
+   staticText_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func StaticText_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := staticText_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func StaticText_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   staticText_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func StaticText_GetBorderStyle(obj uintptr) TStaticBorderStyle {
     ret, _, _ := staticText_GetBorderStyle.Call(obj)
     return TStaticBorderStyle(ret)
@@ -9784,6 +10487,15 @@ func StaticText_GetParentColor(obj uintptr) bool {
 
 func StaticText_SetParentColor(obj uintptr, value bool) {
    staticText_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func StaticText_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := staticText_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func StaticText_SetParentDoubleBuffered(obj uintptr, value bool) {
+   staticText_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func StaticText_GetParentFont(obj uintptr) bool {
@@ -9865,6 +10577,15 @@ func StaticText_GetVisible(obj uintptr) bool {
 
 func StaticText_SetVisible(obj uintptr, value bool) {
    staticText_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func StaticText_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := staticText_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func StaticText_SetStyleElements(obj uintptr, value TStyleElements) {
+   staticText_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func StaticText_SetOnClick(obj uintptr, fn interface{}) {
@@ -10321,6 +11042,51 @@ func ColorBox_SetAnchors(obj uintptr, value TAnchors) {
    colorBox_SetAnchors.Call(obj, uintptr(value))
 }
 
+func ColorBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := colorBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ColorBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   colorBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ColorBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := colorBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ColorBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   colorBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ColorBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := colorBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ColorBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   colorBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ColorBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := colorBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ColorBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   colorBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func ColorBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := colorBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ColorBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   colorBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func ColorBox_GetColor(obj uintptr) TColor {
     ret, _, _ := colorBox_GetColor.Call(obj)
     return TColor(ret)
@@ -10393,6 +11159,15 @@ func ColorBox_SetParentCtl3D(obj uintptr, value bool) {
    colorBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func ColorBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := colorBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ColorBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   colorBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func ColorBox_GetParentFont(obj uintptr) bool {
     ret, _, _ := colorBox_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -10454,6 +11229,15 @@ func ColorBox_GetVisible(obj uintptr) bool {
 
 func ColorBox_SetVisible(obj uintptr, value bool) {
    colorBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ColorBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := colorBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ColorBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   colorBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func ColorBox_SetOnChange(obj uintptr, fn interface{}) {
@@ -10531,6 +11315,15 @@ func ColorBox_SetTextHint(obj uintptr, value string) {
 func ColorBox_GetCanvas(obj uintptr) uintptr {
     ret, _, _ := colorBox_GetCanvas.Call(obj)
     return ret
+}
+
+func ColorBox_GetDroppedDown(obj uintptr) bool {
+    ret, _, _ := colorBox_GetDroppedDown.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ColorBox_SetDroppedDown(obj uintptr, value bool) {
+   colorBox_SetDroppedDown.Call(obj, GoBoolToDBool(value))
 }
 
 func ColorBox_GetItems(obj uintptr) uintptr {
@@ -10996,6 +11789,51 @@ func ColorListBox_SetAnchors(obj uintptr, value TAnchors) {
    colorListBox_SetAnchors.Call(obj, uintptr(value))
 }
 
+func ColorListBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := colorListBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ColorListBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   colorListBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ColorListBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := colorListBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ColorListBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   colorListBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ColorListBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := colorListBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ColorListBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   colorListBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ColorListBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := colorListBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ColorListBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   colorListBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func ColorListBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := colorListBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ColorListBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   colorListBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func ColorListBox_GetColor(obj uintptr) TColor {
     ret, _, _ := colorListBox_GetColor.Call(obj)
     return TColor(ret)
@@ -11059,6 +11897,15 @@ func ColorListBox_SetParentCtl3D(obj uintptr, value bool) {
    colorListBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func ColorListBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := colorListBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ColorListBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   colorListBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func ColorListBox_GetParentFont(obj uintptr) bool {
     ret, _, _ := colorListBox_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -11120,6 +11967,15 @@ func ColorListBox_GetVisible(obj uintptr) bool {
 
 func ColorListBox_SetVisible(obj uintptr, value bool) {
    colorListBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ColorListBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := colorListBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ColorListBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   colorListBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func ColorListBox_SetOnClick(obj uintptr, fn interface{}) {
@@ -11970,6 +12826,51 @@ func CategoryPanelGroup_SetAnchors(obj uintptr, value TAnchors) {
    categoryPanelGroup_SetAnchors.Call(obj, uintptr(value))
 }
 
+func CategoryPanelGroup_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := categoryPanelGroup_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func CategoryPanelGroup_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   categoryPanelGroup_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := categoryPanelGroup_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func CategoryPanelGroup_SetBevelInner(obj uintptr, value TBevelCut) {
+   categoryPanelGroup_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := categoryPanelGroup_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func CategoryPanelGroup_SetBevelOuter(obj uintptr, value TBevelCut) {
+   categoryPanelGroup_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := categoryPanelGroup_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func CategoryPanelGroup_SetBevelKind(obj uintptr, value TBevelKind) {
+   categoryPanelGroup_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := categoryPanelGroup_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func CategoryPanelGroup_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   categoryPanelGroup_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func CategoryPanelGroup_GetDoubleBuffered(obj uintptr) bool {
     ret, _, _ := categoryPanelGroup_GetDoubleBuffered.Call(obj)
     return DBoolToGoBool(ret)
@@ -12051,6 +12952,15 @@ func CategoryPanelGroup_SetParentCtl3D(obj uintptr, value bool) {
    categoryPanelGroup_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func CategoryPanelGroup_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := categoryPanelGroup_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanelGroup_SetParentDoubleBuffered(obj uintptr, value bool) {
+   categoryPanelGroup_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func CategoryPanelGroup_GetParentFont(obj uintptr) bool {
     ret, _, _ := categoryPanelGroup_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -12112,6 +13022,15 @@ func CategoryPanelGroup_GetVisible(obj uintptr) bool {
 
 func CategoryPanelGroup_SetVisible(obj uintptr, value bool) {
    categoryPanelGroup_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanelGroup_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := categoryPanelGroup_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func CategoryPanelGroup_SetStyleElements(obj uintptr, value TStyleElements) {
+   categoryPanelGroup_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func CategoryPanelGroup_GetWidth(obj uintptr) int32 {
@@ -14117,6 +15036,51 @@ func RichEdit_SetAnchors(obj uintptr, value TAnchors) {
    richEdit_SetAnchors.Call(obj, uintptr(value))
 }
 
+func RichEdit_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := richEdit_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func RichEdit_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   richEdit_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func RichEdit_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := richEdit_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func RichEdit_SetBevelInner(obj uintptr, value TBevelCut) {
+   richEdit_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func RichEdit_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := richEdit_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func RichEdit_SetBevelOuter(obj uintptr, value TBevelCut) {
+   richEdit_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func RichEdit_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := richEdit_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func RichEdit_SetBevelKind(obj uintptr, value TBevelKind) {
+   richEdit_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func RichEdit_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := richEdit_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func RichEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   richEdit_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func RichEdit_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := richEdit_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -14315,6 +15279,15 @@ func RichEdit_SetWordWrap(obj uintptr, value bool) {
    richEdit_SetWordWrap.Call(obj, GoBoolToDBool(value))
 }
 
+func RichEdit_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := richEdit_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func RichEdit_SetStyleElements(obj uintptr, value TStyleElements) {
+   richEdit_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func RichEdit_SetOnChange(obj uintptr, fn interface{}) {
     richEdit_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -14369,6 +15342,16 @@ func RichEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
 
 func RichEdit_SetOnMouseWheel(obj uintptr, fn interface{}) {
     richEdit_SetOnMouseWheel.Call(obj, addEventToMap(fn))
+}
+
+func RichEdit_GetCaretPos(obj uintptr) TPoint {
+    var ret TPoint
+    richEdit_GetCaretPos.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func RichEdit_SetCaretPos(obj uintptr, value TPoint) {
+   richEdit_SetCaretPos.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func RichEdit_GetModified(obj uintptr) bool {
@@ -14447,6 +15430,15 @@ func RichEdit_GetControlCount(obj uintptr) int32 {
 func RichEdit_GetHandle(obj uintptr) HWND {
     ret, _, _ := richEdit_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func RichEdit_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := richEdit_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RichEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
+   richEdit_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetAction(obj uintptr) uintptr {
@@ -14652,6 +15644,10 @@ func TrackBar_Free(obj uintptr) {
     trackBar_Free.Call(obj)
 }
 
+func TrackBar_SetTick(obj uintptr, Value int32)  {
+    trackBar_SetTick.Call(obj, uintptr(Value) )
+}
+
 func TrackBar_CanFocus(obj uintptr) bool {
     ret, _, _ := trackBar_CanFocus.Call(obj)
     return DBoolToGoBool(ret)
@@ -14813,6 +15809,33 @@ func TrackBar_SetEnabled(obj uintptr, value bool) {
    trackBar_SetEnabled.Call(obj, GoBoolToDBool(value))
 }
 
+func TrackBar_GetLineSize(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetLineSize.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetLineSize(obj uintptr, value int32) {
+   trackBar_SetLineSize.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetMax(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetMax.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetMax(obj uintptr, value int32) {
+   trackBar_SetMax.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetMin(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetMin.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetMin(obj uintptr, value int32) {
+   trackBar_SetMin.Call(obj, uintptr(value))
+}
+
 func TrackBar_GetOrientation(obj uintptr) TTrackBarOrientation {
     ret, _, _ := trackBar_GetOrientation.Call(obj)
     return TTrackBarOrientation(ret)
@@ -14831,6 +15854,15 @@ func TrackBar_SetParentCtl3D(obj uintptr, value bool) {
    trackBar_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
 }
 
+func TrackBar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := trackBar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TrackBar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   trackBar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func TrackBar_GetParentShowHint(obj uintptr) bool {
     ret, _, _ := trackBar_GetParentShowHint.Call(obj)
     return DBoolToGoBool(ret)
@@ -14838,6 +15870,15 @@ func TrackBar_GetParentShowHint(obj uintptr) bool {
 
 func TrackBar_SetParentShowHint(obj uintptr, value bool) {
    trackBar_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func TrackBar_GetPageSize(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetPageSize.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetPageSize(obj uintptr, value int32) {
+   trackBar_SetPageSize.Call(obj, uintptr(value))
 }
 
 func TrackBar_GetPopupMenu(obj uintptr) uintptr {
@@ -14849,6 +15890,15 @@ func TrackBar_SetPopupMenu(obj uintptr, value uintptr) {
    trackBar_SetPopupMenu.Call(obj, value)
 }
 
+func TrackBar_GetFrequency(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetFrequency.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetFrequency(obj uintptr, value int32) {
+   trackBar_SetFrequency.Call(obj, uintptr(value))
+}
+
 func TrackBar_GetPosition(obj uintptr) int32 {
     ret, _, _ := trackBar_GetPosition.Call(obj)
     return int32(ret)
@@ -14856,6 +15906,33 @@ func TrackBar_GetPosition(obj uintptr) int32 {
 
 func TrackBar_SetPosition(obj uintptr, value int32) {
    trackBar_SetPosition.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetPositionToolTip(obj uintptr) TPositionToolTip {
+    ret, _, _ := trackBar_GetPositionToolTip.Call(obj)
+    return TPositionToolTip(ret)
+}
+
+func TrackBar_SetPositionToolTip(obj uintptr, value TPositionToolTip) {
+   trackBar_SetPositionToolTip.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetSliderVisible(obj uintptr) bool {
+    ret, _, _ := trackBar_GetSliderVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TrackBar_SetSliderVisible(obj uintptr, value bool) {
+   trackBar_SetSliderVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func TrackBar_GetSelEnd(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetSelEnd.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetSelEnd(obj uintptr, value int32) {
+   trackBar_SetSelEnd.Call(obj, uintptr(value))
 }
 
 func TrackBar_GetSelStart(obj uintptr) int32 {
@@ -14876,6 +15953,15 @@ func TrackBar_SetShowHint(obj uintptr, value bool) {
    trackBar_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
+func TrackBar_GetShowSelRange(obj uintptr) bool {
+    ret, _, _ := trackBar_GetShowSelRange.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TrackBar_SetShowSelRange(obj uintptr, value bool) {
+   trackBar_SetShowSelRange.Call(obj, GoBoolToDBool(value))
+}
+
 func TrackBar_GetTabOrder(obj uintptr) int16 {
     ret, _, _ := trackBar_GetTabOrder.Call(obj)
     return int16(ret)
@@ -14894,6 +15980,33 @@ func TrackBar_SetTabStop(obj uintptr, value bool) {
    trackBar_SetTabStop.Call(obj, GoBoolToDBool(value))
 }
 
+func TrackBar_GetThumbLength(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetThumbLength.Call(obj)
+    return int32(ret)
+}
+
+func TrackBar_SetThumbLength(obj uintptr, value int32) {
+   trackBar_SetThumbLength.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetTickMarks(obj uintptr) TTickMark {
+    ret, _, _ := trackBar_GetTickMarks.Call(obj)
+    return TTickMark(ret)
+}
+
+func TrackBar_SetTickMarks(obj uintptr, value TTickMark) {
+   trackBar_SetTickMarks.Call(obj, uintptr(value))
+}
+
+func TrackBar_GetTickStyle(obj uintptr) TTickStyle {
+    ret, _, _ := trackBar_GetTickStyle.Call(obj)
+    return TTickStyle(ret)
+}
+
+func TrackBar_SetTickStyle(obj uintptr, value TTickStyle) {
+   trackBar_SetTickStyle.Call(obj, uintptr(value))
+}
+
 func TrackBar_GetVisible(obj uintptr) bool {
     ret, _, _ := trackBar_GetVisible.Call(obj)
     return DBoolToGoBool(ret)
@@ -14901,6 +16014,15 @@ func TrackBar_GetVisible(obj uintptr) bool {
 
 func TrackBar_SetVisible(obj uintptr, value bool) {
    trackBar_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func TrackBar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := trackBar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func TrackBar_SetStyleElements(obj uintptr, value TStyleElements) {
+   trackBar_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func TrackBar_SetOnChange(obj uintptr, fn interface{}) {
@@ -14949,6 +16071,15 @@ func TrackBar_GetAction(obj uintptr) uintptr {
 
 func TrackBar_SetAction(obj uintptr, value uintptr) {
    trackBar_SetAction.Call(obj, value)
+}
+
+func TrackBar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := trackBar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func TrackBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   trackBar_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func TrackBar_GetBoundsRect(obj uintptr) TRect {
@@ -15625,6 +16756,24 @@ func UpDown_SetHint(obj uintptr, value string) {
    upDown_SetHint.Call(obj, GoStrToDStr(value))
 }
 
+func UpDown_GetMin(obj uintptr) int32 {
+    ret, _, _ := upDown_GetMin.Call(obj)
+    return int32(ret)
+}
+
+func UpDown_SetMin(obj uintptr, value int32) {
+   upDown_SetMin.Call(obj, uintptr(value))
+}
+
+func UpDown_GetMax(obj uintptr) int32 {
+    ret, _, _ := upDown_GetMax.Call(obj)
+    return int32(ret)
+}
+
+func UpDown_SetMax(obj uintptr, value int32) {
+   upDown_SetMax.Call(obj, uintptr(value))
+}
+
 func UpDown_GetOrientation(obj uintptr) TUDOrientation {
     ret, _, _ := upDown_GetOrientation.Call(obj)
     return TUDOrientation(ret)
@@ -15632,6 +16781,15 @@ func UpDown_GetOrientation(obj uintptr) TUDOrientation {
 
 func UpDown_SetOrientation(obj uintptr, value TUDOrientation) {
    upDown_SetOrientation.Call(obj, uintptr(value))
+}
+
+func UpDown_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := upDown_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func UpDown_SetParentDoubleBuffered(obj uintptr, value bool) {
+   upDown_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func UpDown_GetParentShowHint(obj uintptr) bool {
@@ -15706,6 +16864,15 @@ func UpDown_SetWrap(obj uintptr, value bool) {
    upDown_SetWrap.Call(obj, GoBoolToDBool(value))
 }
 
+func UpDown_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := upDown_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func UpDown_SetStyleElements(obj uintptr, value TStyleElements) {
+   upDown_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func UpDown_SetOnClick(obj uintptr, fn interface{}) {
     upDown_SetOnClick.Call(obj, addEventToMap(fn))
 }
@@ -15769,6 +16936,15 @@ func UpDown_GetAlign(obj uintptr) TAlign {
 
 func UpDown_SetAlign(obj uintptr, value TAlign) {
    upDown_SetAlign.Call(obj, uintptr(value))
+}
+
+func UpDown_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := upDown_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func UpDown_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   upDown_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func UpDown_GetBoundsRect(obj uintptr) TRect {
@@ -15956,6 +17132,14 @@ func ProgressBar_Free(obj uintptr) {
     progressBar_Free.Call(obj)
 }
 
+func ProgressBar_StepIt(obj uintptr)  {
+    progressBar_StepIt.Call(obj)
+}
+
+func ProgressBar_StepBy(obj uintptr, Delta int32)  {
+    progressBar_StepBy.Call(obj, uintptr(Delta) )
+}
+
 func ProgressBar_CanFocus(obj uintptr) bool {
     ret, _, _ := progressBar_CanFocus.Call(obj)
     return DBoolToGoBool(ret)
@@ -16126,6 +17310,24 @@ func ProgressBar_SetHint(obj uintptr, value string) {
    progressBar_SetHint.Call(obj, GoStrToDStr(value))
 }
 
+func ProgressBar_GetMin(obj uintptr) int32 {
+    ret, _, _ := progressBar_GetMin.Call(obj)
+    return int32(ret)
+}
+
+func ProgressBar_SetMin(obj uintptr, value int32) {
+   progressBar_SetMin.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetMax(obj uintptr) int32 {
+    ret, _, _ := progressBar_GetMax.Call(obj)
+    return int32(ret)
+}
+
+func ProgressBar_SetMax(obj uintptr, value int32) {
+   progressBar_SetMax.Call(obj, uintptr(value))
+}
+
 func ProgressBar_GetOrientation(obj uintptr) TProgressBarOrientation {
     ret, _, _ := progressBar_GetOrientation.Call(obj)
     return TProgressBarOrientation(ret)
@@ -16133,6 +17335,15 @@ func ProgressBar_GetOrientation(obj uintptr) TProgressBarOrientation {
 
 func ProgressBar_SetOrientation(obj uintptr, value TProgressBarOrientation) {
    progressBar_SetOrientation.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := progressBar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ProgressBar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   progressBar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func ProgressBar_GetParentShowHint(obj uintptr) bool {
@@ -16162,6 +17373,15 @@ func ProgressBar_SetPosition(obj uintptr, value int32) {
    progressBar_SetPosition.Call(obj, uintptr(value))
 }
 
+func ProgressBar_GetSmooth(obj uintptr) bool {
+    ret, _, _ := progressBar_GetSmooth.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ProgressBar_SetSmooth(obj uintptr, value bool) {
+   progressBar_SetSmooth.Call(obj, GoBoolToDBool(value))
+}
+
 func ProgressBar_GetStyle(obj uintptr) TProgressBarStyle {
     ret, _, _ := progressBar_GetStyle.Call(obj)
     return TProgressBarStyle(ret)
@@ -16169,6 +17389,51 @@ func ProgressBar_GetStyle(obj uintptr) TProgressBarStyle {
 
 func ProgressBar_SetStyle(obj uintptr, value TProgressBarStyle) {
    progressBar_SetStyle.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetMarqueeInterval(obj uintptr) int32 {
+    ret, _, _ := progressBar_GetMarqueeInterval.Call(obj)
+    return int32(ret)
+}
+
+func ProgressBar_SetMarqueeInterval(obj uintptr, value int32) {
+   progressBar_SetMarqueeInterval.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetBarColor(obj uintptr) TColor {
+    ret, _, _ := progressBar_GetBarColor.Call(obj)
+    return TColor(ret)
+}
+
+func ProgressBar_SetBarColor(obj uintptr, value TColor) {
+   progressBar_SetBarColor.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetBackgroundColor(obj uintptr) TColor {
+    ret, _, _ := progressBar_GetBackgroundColor.Call(obj)
+    return TColor(ret)
+}
+
+func ProgressBar_SetBackgroundColor(obj uintptr, value TColor) {
+   progressBar_SetBackgroundColor.Call(obj, uintptr(value))
+}
+
+func ProgressBar_GetSmoothReverse(obj uintptr) bool {
+    ret, _, _ := progressBar_GetSmoothReverse.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ProgressBar_SetSmoothReverse(obj uintptr, value bool) {
+   progressBar_SetSmoothReverse.Call(obj, GoBoolToDBool(value))
+}
+
+func ProgressBar_GetStep(obj uintptr) int32 {
+    ret, _, _ := progressBar_GetStep.Call(obj)
+    return int32(ret)
+}
+
+func ProgressBar_SetStep(obj uintptr, value int32) {
+   progressBar_SetStep.Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetState(obj uintptr) TProgressBarState {
@@ -16214,6 +17479,15 @@ func ProgressBar_GetVisible(obj uintptr) bool {
 
 func ProgressBar_SetVisible(obj uintptr, value bool) {
    progressBar_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ProgressBar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := progressBar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ProgressBar_SetStyleElements(obj uintptr, value TStyleElements) {
+   progressBar_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func ProgressBar_SetOnEnter(obj uintptr, fn interface{}) {
@@ -16266,6 +17540,15 @@ func ProgressBar_GetAction(obj uintptr) uintptr {
 
 func ProgressBar_SetAction(obj uintptr, value uintptr) {
    progressBar_SetAction.Call(obj, value)
+}
+
+func ProgressBar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := progressBar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ProgressBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   progressBar_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func ProgressBar_GetBoundsRect(obj uintptr) TRect {
@@ -16587,6 +17870,15 @@ func HotKey_SetAutoSize(obj uintptr, value bool) {
    hotKey_SetAutoSize.Call(obj, GoBoolToDBool(value))
 }
 
+func HotKey_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := hotKey_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func HotKey_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   hotKey_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func HotKey_GetEnabled(obj uintptr) bool {
     ret, _, _ := hotKey_GetEnabled.Call(obj)
     return DBoolToGoBool(ret)
@@ -16659,6 +17951,15 @@ func HotKey_SetVisible(obj uintptr, value bool) {
    hotKey_SetVisible.Call(obj, GoBoolToDBool(value))
 }
 
+func HotKey_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := hotKey_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func HotKey_SetStyleElements(obj uintptr, value TStyleElements) {
+   hotKey_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func HotKey_SetOnChange(obj uintptr, fn interface{}) {
     hotKey_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -16713,6 +18014,15 @@ func HotKey_GetControlCount(obj uintptr) int32 {
 func HotKey_GetHandle(obj uintptr) HWND {
     ret, _, _ := hotKey_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func HotKey_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := hotKey_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func HotKey_SetParentDoubleBuffered(obj uintptr, value bool) {
+   hotKey_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func HotKey_GetAction(obj uintptr) uintptr {
@@ -17034,6 +18344,21 @@ func DateTimePicker_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func DateTimePicker_GetDateTime(obj uintptr) TDateTime {
+    var ret TDateTime
+    dateTimePicker_GetDateTime.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func DateTimePicker_SetDateTime(obj uintptr, value TDateTime) {
+   dateTimePicker_SetDateTime.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func DateTimePicker_GetDroppedDown(obj uintptr) bool {
+    ret, _, _ := dateTimePicker_GetDroppedDown.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
 func DateTimePicker_GetAlign(obj uintptr) TAlign {
     ret, _, _ := dateTimePicker_GetAlign.Call(obj)
     return TAlign(ret)
@@ -17052,6 +18377,89 @@ func DateTimePicker_SetAnchors(obj uintptr, value TAnchors) {
    dateTimePicker_SetAnchors.Call(obj, uintptr(value))
 }
 
+func DateTimePicker_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := dateTimePicker_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func DateTimePicker_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   dateTimePicker_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := dateTimePicker_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func DateTimePicker_SetBevelInner(obj uintptr, value TBevelCut) {
+   dateTimePicker_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := dateTimePicker_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func DateTimePicker_SetBevelOuter(obj uintptr, value TBevelCut) {
+   dateTimePicker_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := dateTimePicker_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func DateTimePicker_SetBevelKind(obj uintptr, value TBevelKind) {
+   dateTimePicker_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := dateTimePicker_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func DateTimePicker_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   dateTimePicker_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetCalAlignment(obj uintptr) TDTCalAlignment {
+    ret, _, _ := dateTimePicker_GetCalAlignment.Call(obj)
+    return TDTCalAlignment(ret)
+}
+
+func DateTimePicker_SetCalAlignment(obj uintptr, value TDTCalAlignment) {
+   dateTimePicker_SetCalAlignment.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetCalColors(obj uintptr) uintptr {
+    ret, _, _ := dateTimePicker_GetCalColors.Call(obj)
+    return ret
+}
+
+func DateTimePicker_SetCalColors(obj uintptr, value uintptr) {
+   dateTimePicker_SetCalColors.Call(obj, value)
+}
+
+func DateTimePicker_GetDate(obj uintptr) TDate {
+    var ret TDate
+    dateTimePicker_GetDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func DateTimePicker_SetDate(obj uintptr, value TDate) {
+   dateTimePicker_SetDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func DateTimePicker_GetTime(obj uintptr) TTime {
+    var ret TTime
+    dateTimePicker_GetTime.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func DateTimePicker_SetTime(obj uintptr, value TTime) {
+   dateTimePicker_SetTime.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
 func DateTimePicker_GetChecked(obj uintptr) bool {
     ret, _, _ := dateTimePicker_GetChecked.Call(obj)
     return DBoolToGoBool(ret)
@@ -17068,6 +18476,24 @@ func DateTimePicker_GetColor(obj uintptr) TColor {
 
 func DateTimePicker_SetColor(obj uintptr, value TColor) {
    dateTimePicker_SetColor.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetDateFormat(obj uintptr) TDTDateFormat {
+    ret, _, _ := dateTimePicker_GetDateFormat.Call(obj)
+    return TDTDateFormat(ret)
+}
+
+func DateTimePicker_SetDateFormat(obj uintptr, value TDTDateFormat) {
+   dateTimePicker_SetDateFormat.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetDateMode(obj uintptr) TDTDateMode {
+    ret, _, _ := dateTimePicker_GetDateMode.Call(obj)
+    return TDTDateMode(ret)
+}
+
+func DateTimePicker_SetDateMode(obj uintptr, value TDTDateMode) {
+   dateTimePicker_SetDateMode.Call(obj, uintptr(value))
 }
 
 func DateTimePicker_GetDoubleBuffered(obj uintptr) bool {
@@ -17097,6 +18523,44 @@ func DateTimePicker_SetFont(obj uintptr, value uintptr) {
    dateTimePicker_SetFont.Call(obj, value)
 }
 
+func DateTimePicker_GetKind(obj uintptr) TDateTimeKind {
+    ret, _, _ := dateTimePicker_GetKind.Call(obj)
+    return TDateTimeKind(ret)
+}
+
+func DateTimePicker_SetKind(obj uintptr, value TDateTimeKind) {
+   dateTimePicker_SetKind.Call(obj, uintptr(value))
+}
+
+func DateTimePicker_GetMaxDate(obj uintptr) TDate {
+    var ret TDate
+    dateTimePicker_GetMaxDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func DateTimePicker_SetMaxDate(obj uintptr, value TDate) {
+   dateTimePicker_SetMaxDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func DateTimePicker_GetMinDate(obj uintptr) TDate {
+    var ret TDate
+    dateTimePicker_GetMinDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func DateTimePicker_SetMinDate(obj uintptr, value TDate) {
+   dateTimePicker_SetMinDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func DateTimePicker_GetParseInput(obj uintptr) bool {
+    ret, _, _ := dateTimePicker_GetParseInput.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func DateTimePicker_SetParseInput(obj uintptr, value bool) {
+   dateTimePicker_SetParseInput.Call(obj, GoBoolToDBool(value))
+}
+
 func DateTimePicker_GetParentColor(obj uintptr) bool {
     ret, _, _ := dateTimePicker_GetParentColor.Call(obj)
     return DBoolToGoBool(ret)
@@ -17104,6 +18568,15 @@ func DateTimePicker_GetParentColor(obj uintptr) bool {
 
 func DateTimePicker_SetParentColor(obj uintptr, value bool) {
    dateTimePicker_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func DateTimePicker_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := dateTimePicker_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func DateTimePicker_SetParentDoubleBuffered(obj uintptr, value bool) {
+   dateTimePicker_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func DateTimePicker_GetParentFont(obj uintptr) bool {
@@ -17167,6 +18640,15 @@ func DateTimePicker_GetVisible(obj uintptr) bool {
 
 func DateTimePicker_SetVisible(obj uintptr, value bool) {
    dateTimePicker_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func DateTimePicker_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := dateTimePicker_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func DateTimePicker_SetStyleElements(obj uintptr, value TStyleElements) {
+   dateTimePicker_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func DateTimePicker_SetOnClick(obj uintptr, fn interface{}) {
@@ -17575,6 +19057,24 @@ func MonthCalendar_SetBorderWidth(obj uintptr, value int32) {
    monthCalendar_SetBorderWidth.Call(obj, uintptr(value))
 }
 
+func MonthCalendar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := monthCalendar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func MonthCalendar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   monthCalendar_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func MonthCalendar_GetCalColors(obj uintptr) uintptr {
+    ret, _, _ := monthCalendar_GetCalColors.Call(obj)
+    return ret
+}
+
+func MonthCalendar_SetCalColors(obj uintptr, value uintptr) {
+   monthCalendar_SetCalColors.Call(obj, value)
+}
+
 func MonthCalendar_GetMultiSelect(obj uintptr) bool {
     ret, _, _ := monthCalendar_GetMultiSelect.Call(obj)
     return DBoolToGoBool(ret)
@@ -17582,6 +19082,16 @@ func MonthCalendar_GetMultiSelect(obj uintptr) bool {
 
 func MonthCalendar_SetMultiSelect(obj uintptr, value bool) {
    monthCalendar_SetMultiSelect.Call(obj, GoBoolToDBool(value))
+}
+
+func MonthCalendar_GetDate(obj uintptr) TDate {
+    var ret TDate
+    monthCalendar_GetDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func MonthCalendar_SetDate(obj uintptr, value TDate) {
+   monthCalendar_SetDate.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MonthCalendar_GetDoubleBuffered(obj uintptr) bool {
@@ -17602,6 +19112,15 @@ func MonthCalendar_SetEnabled(obj uintptr, value bool) {
    monthCalendar_SetEnabled.Call(obj, GoBoolToDBool(value))
 }
 
+func MonthCalendar_GetFirstDayOfWeek(obj uintptr) TCalDayOfWeek {
+    ret, _, _ := monthCalendar_GetFirstDayOfWeek.Call(obj)
+    return TCalDayOfWeek(ret)
+}
+
+func MonthCalendar_SetFirstDayOfWeek(obj uintptr, value TCalDayOfWeek) {
+   monthCalendar_SetFirstDayOfWeek.Call(obj, uintptr(value))
+}
+
 func MonthCalendar_GetFont(obj uintptr) uintptr {
     ret, _, _ := monthCalendar_GetFont.Call(obj)
     return ret
@@ -17609,6 +19128,35 @@ func MonthCalendar_GetFont(obj uintptr) uintptr {
 
 func MonthCalendar_SetFont(obj uintptr, value uintptr) {
    monthCalendar_SetFont.Call(obj, value)
+}
+
+func MonthCalendar_GetMaxDate(obj uintptr) TDate {
+    var ret TDate
+    monthCalendar_GetMaxDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func MonthCalendar_SetMaxDate(obj uintptr, value TDate) {
+   monthCalendar_SetMaxDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func MonthCalendar_GetMinDate(obj uintptr) TDate {
+    var ret TDate
+    monthCalendar_GetMinDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func MonthCalendar_SetMinDate(obj uintptr, value TDate) {
+   monthCalendar_SetMinDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func MonthCalendar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := monthCalendar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MonthCalendar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   monthCalendar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func MonthCalendar_GetParentFont(obj uintptr) bool {
@@ -17647,6 +19195,24 @@ func MonthCalendar_SetShowHint(obj uintptr, value bool) {
    monthCalendar_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
+func MonthCalendar_GetShowToday(obj uintptr) bool {
+    ret, _, _ := monthCalendar_GetShowToday.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MonthCalendar_SetShowToday(obj uintptr, value bool) {
+   monthCalendar_SetShowToday.Call(obj, GoBoolToDBool(value))
+}
+
+func MonthCalendar_GetShowTodayCircle(obj uintptr) bool {
+    ret, _, _ := monthCalendar_GetShowTodayCircle.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MonthCalendar_SetShowTodayCircle(obj uintptr, value bool) {
+   monthCalendar_SetShowTodayCircle.Call(obj, GoBoolToDBool(value))
+}
+
 func MonthCalendar_GetTabOrder(obj uintptr) int16 {
     ret, _, _ := monthCalendar_GetTabOrder.Call(obj)
     return int16(ret)
@@ -17672,6 +19238,15 @@ func MonthCalendar_GetVisible(obj uintptr) bool {
 
 func MonthCalendar_SetVisible(obj uintptr, value bool) {
    monthCalendar_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func MonthCalendar_GetWeekNumbers(obj uintptr) bool {
+    ret, _, _ := monthCalendar_GetWeekNumbers.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MonthCalendar_SetWeekNumbers(obj uintptr, value bool) {
+   monthCalendar_SetWeekNumbers.Call(obj, GoBoolToDBool(value))
 }
 
 func MonthCalendar_SetOnClick(obj uintptr, fn interface{}) {
@@ -17795,6 +19370,15 @@ func MonthCalendar_GetParent(obj uintptr) uintptr {
 
 func MonthCalendar_SetParent(obj uintptr, value uintptr) {
    monthCalendar_SetParent.Call(obj, value)
+}
+
+func MonthCalendar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := monthCalendar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func MonthCalendar_SetStyleElements(obj uintptr, value TStyleElements) {
+   monthCalendar_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func MonthCalendar_GetAlignWithMargins(obj uintptr) bool {
@@ -18119,6 +19703,51 @@ func ListView_SetAnchors(obj uintptr, value TAnchors) {
    listView_SetAnchors.Call(obj, uintptr(value))
 }
 
+func ListView_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := listView_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ListView_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   listView_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ListView_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := listView_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ListView_SetBevelInner(obj uintptr, value TBevelCut) {
+   listView_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ListView_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := listView_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ListView_SetBevelOuter(obj uintptr, value TBevelCut) {
+   listView_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func ListView_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := listView_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ListView_SetBevelKind(obj uintptr, value TBevelKind) {
+   listView_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ListView_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := listView_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ListView_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   listView_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func ListView_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := listView_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -18290,6 +19919,15 @@ func ListView_SetMultiSelect(obj uintptr, value bool) {
    listView_SetMultiSelect.Call(obj, GoBoolToDBool(value))
 }
 
+func ListView_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := listView_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ListView_SetStyleElements(obj uintptr, value TStyleElements) {
+   listView_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func ListView_GetGroupHeaderImages(obj uintptr) uintptr {
     ret, _, _ := listView_GetGroupHeaderImages.Call(obj)
     return ret
@@ -18324,6 +19962,15 @@ func ListView_GetParentColor(obj uintptr) bool {
 
 func ListView_SetParentColor(obj uintptr, value bool) {
    listView_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func ListView_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := listView_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ListView_SetParentDoubleBuffered(obj uintptr, value bool) {
+   listView_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetParentFont(obj uintptr) bool {
@@ -18968,6 +20615,51 @@ func TreeView_SetAutoExpand(obj uintptr, value bool) {
    treeView_SetAutoExpand.Call(obj, GoBoolToDBool(value))
 }
 
+func TreeView_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := treeView_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func TreeView_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   treeView_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func TreeView_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := treeView_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func TreeView_SetBevelInner(obj uintptr, value TBevelCut) {
+   treeView_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func TreeView_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := treeView_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func TreeView_SetBevelOuter(obj uintptr, value TBevelCut) {
+   treeView_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func TreeView_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := treeView_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func TreeView_SetBevelKind(obj uintptr, value TBevelKind) {
+   treeView_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func TreeView_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := treeView_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func TreeView_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   treeView_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func TreeView_GetBorderStyle(obj uintptr) TBorderStyle {
     ret, _, _ := treeView_GetBorderStyle.Call(obj)
     return TBorderStyle(ret)
@@ -19101,6 +20793,15 @@ func TreeView_GetParentCtl3D(obj uintptr) bool {
 
 func TreeView_SetParentCtl3D(obj uintptr, value bool) {
    treeView_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func TreeView_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := treeView_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TreeView_SetParentDoubleBuffered(obj uintptr, value bool) {
+   treeView_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func TreeView_GetParentFont(obj uintptr) bool {
@@ -19245,6 +20946,15 @@ func TreeView_GetVisible(obj uintptr) bool {
 
 func TreeView_SetVisible(obj uintptr, value bool) {
    treeView_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func TreeView_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := treeView_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func TreeView_SetStyleElements(obj uintptr, value TStyleElements) {
+   treeView_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func TreeView_SetOnChange(obj uintptr, fn interface{}) {
@@ -19720,6 +21430,15 @@ func StatusBar_SetAnchors(obj uintptr, value TAnchors) {
    statusBar_SetAnchors.Call(obj, uintptr(value))
 }
 
+func StatusBar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := statusBar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func StatusBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   statusBar_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func StatusBar_GetBorderWidth(obj uintptr) int32 {
     ret, _, _ := statusBar_GetBorderWidth.Call(obj)
     return int32(ret)
@@ -19781,6 +21500,15 @@ func StatusBar_GetParentColor(obj uintptr) bool {
 
 func StatusBar_SetParentColor(obj uintptr, value bool) {
    statusBar_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func StatusBar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := statusBar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func StatusBar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   statusBar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func StatusBar_GetParentFont(obj uintptr) bool {
@@ -19862,6 +21590,15 @@ func StatusBar_GetVisible(obj uintptr) bool {
 
 func StatusBar_SetVisible(obj uintptr, value bool) {
    statusBar_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func StatusBar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := statusBar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func StatusBar_SetStyleElements(obj uintptr, value TStyleElements) {
+   statusBar_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func StatusBar_SetOnClick(obj uintptr, fn interface{}) {
@@ -20502,6 +22239,15 @@ func ToolBar_SetParentColor(obj uintptr, value bool) {
    toolBar_SetParentColor.Call(obj, GoBoolToDBool(value))
 }
 
+func ToolBar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := toolBar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ToolBar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   toolBar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func ToolBar_GetParentFont(obj uintptr) bool {
     ret, _, _ := toolBar_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -20583,6 +22329,15 @@ func ToolBar_SetVisible(obj uintptr, value bool) {
    toolBar_SetVisible.Call(obj, GoBoolToDBool(value))
 }
 
+func ToolBar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := toolBar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ToolBar_SetStyleElements(obj uintptr, value TStyleElements) {
+   toolBar_SetStyleElements.Call(obj, uintptr(value))
+}
+
 func ToolBar_GetWrapable(obj uintptr) bool {
     ret, _, _ := toolBar_GetWrapable.Call(obj)
     return DBoolToGoBool(ret)
@@ -20654,6 +22409,15 @@ func ToolBar_GetAction(obj uintptr) uintptr {
 
 func ToolBar_SetAction(obj uintptr, value uintptr) {
    toolBar_SetAction.Call(obj, value)
+}
+
+func ToolBar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := toolBar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ToolBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   toolBar_SetBiDiMode.Call(obj, uintptr(value))
 }
 
 func ToolBar_GetBoundsRect(obj uintptr) TRect {
@@ -23332,6 +25096,15 @@ func PageControl_SetAnchors(obj uintptr, value TAnchors) {
    pageControl_SetAnchors.Call(obj, uintptr(value))
 }
 
+func PageControl_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := pageControl_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func PageControl_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   pageControl_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func PageControl_GetDoubleBuffered(obj uintptr) bool {
     ret, _, _ := pageControl_GetDoubleBuffered.Call(obj)
     return DBoolToGoBool(ret)
@@ -23384,6 +25157,15 @@ func PageControl_GetMultiLine(obj uintptr) bool {
 
 func PageControl_SetMultiLine(obj uintptr, value bool) {
    pageControl_SetMultiLine.Call(obj, GoBoolToDBool(value))
+}
+
+func PageControl_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := pageControl_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func PageControl_SetParentDoubleBuffered(obj uintptr, value bool) {
+   pageControl_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
 func PageControl_GetParentFont(obj uintptr) bool {
@@ -23492,6 +25274,15 @@ func PageControl_GetVisible(obj uintptr) bool {
 
 func PageControl_SetVisible(obj uintptr, value bool) {
    pageControl_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func PageControl_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := pageControl_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func PageControl_SetStyleElements(obj uintptr, value TStyleElements) {
+   pageControl_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func PageControl_SetOnChange(obj uintptr, fn interface{}) {
@@ -23978,6 +25769,15 @@ func TabSheet_SetPageIndex(obj uintptr, value int32) {
    tabSheet_SetPageIndex.Call(obj, uintptr(value))
 }
 
+func TabSheet_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := tabSheet_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TabSheet_SetParentDoubleBuffered(obj uintptr, value bool) {
+   tabSheet_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
 func TabSheet_GetParentFont(obj uintptr) bool {
     ret, _, _ := tabSheet_GetParentFont.Call(obj)
     return DBoolToGoBool(ret)
@@ -24150,6 +25950,15 @@ func TabSheet_SetAnchors(obj uintptr, value TAnchors) {
    tabSheet_SetAnchors.Call(obj, uintptr(value))
 }
 
+func TabSheet_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := tabSheet_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func TabSheet_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   tabSheet_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func TabSheet_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     tabSheet_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -24211,6 +26020,15 @@ func TabSheet_GetParent(obj uintptr) uintptr {
 
 func TabSheet_SetParent(obj uintptr, value uintptr) {
    tabSheet_SetParent.Call(obj, value)
+}
+
+func TabSheet_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := tabSheet_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func TabSheet_SetStyleElements(obj uintptr, value TStyleElements) {
+   tabSheet_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func TabSheet_GetAlignWithMargins(obj uintptr) bool {
@@ -24429,6 +26247,15 @@ func Control_SetAnchors(obj uintptr, value TAnchors) {
    control_SetAnchors.Call(obj, uintptr(value))
 }
 
+func Control_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := control_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Control_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   control_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func Control_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     control_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -24508,6 +26335,15 @@ func Control_GetParent(obj uintptr) uintptr {
 
 func Control_SetParent(obj uintptr, value uintptr) {
    control_SetParent.Call(obj, value)
+}
+
+func Control_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := control_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Control_SetStyleElements(obj uintptr, value TStyleElements) {
+   control_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func Control_GetAlignWithMargins(obj uintptr) bool {
@@ -25294,6 +27130,15 @@ func StatusPanel_SetAlignment(obj uintptr, value TAlignment) {
    statusPanel_SetAlignment.Call(obj, uintptr(value))
 }
 
+func StatusPanel_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := statusPanel_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func StatusPanel_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   statusPanel_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func StatusPanel_GetStyle(obj uintptr) TStatusPanelStyle {
     ret, _, _ := statusPanel_GetStyle.Call(obj)
     return TStatusPanelStyle(ret)
@@ -25926,6 +27771,15 @@ func GIFImage_GetVersion(obj uintptr) TGIFVersion {
 func GIFImage_GetBitsPerPixel(obj uintptr) int32 {
     ret, _, _ := gIFImage_GetBitsPerPixel.Call(obj)
     return int32(ret)
+}
+
+func GIFImage_GetBackgroundColor(obj uintptr) TColor {
+    ret, _, _ := gIFImage_GetBackgroundColor.Call(obj)
+    return TColor(ret)
+}
+
+func GIFImage_SetBackgroundColor(obj uintptr, value TColor) {
+   gIFImage_SetBackgroundColor.Call(obj, uintptr(value))
 }
 
 func GIFImage_GetAspectRatio(obj uintptr) uint8 {
@@ -26843,6 +28697,15 @@ func ToolButton_SetAnchors(obj uintptr, value TAnchors) {
    toolButton_SetAnchors.Call(obj, uintptr(value))
 }
 
+func ToolButton_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := toolButton_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ToolButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   toolButton_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func ToolButton_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     toolButton_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -26904,6 +28767,15 @@ func ToolButton_GetParent(obj uintptr) uintptr {
 
 func ToolButton_SetParent(obj uintptr, value uintptr) {
    toolButton_SetParent.Call(obj, value)
+}
+
+func ToolButton_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := toolButton_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ToolButton_SetStyleElements(obj uintptr, value TStyleElements) {
+   toolButton_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func ToolButton_GetAlignWithMargins(obj uintptr) bool {
@@ -27919,6 +29791,15 @@ func PaintBox_SetAction(obj uintptr, value uintptr) {
    paintBox_SetAction.Call(obj, value)
 }
 
+func PaintBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := paintBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func PaintBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   paintBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
 func PaintBox_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     paintBox_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -27980,6 +29861,15 @@ func PaintBox_GetParent(obj uintptr) uintptr {
 
 func PaintBox_SetParent(obj uintptr, value uintptr) {
    paintBox_SetParent.Call(obj, value)
+}
+
+func PaintBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := paintBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func PaintBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   paintBox_SetStyleElements.Call(obj, uintptr(value))
 }
 
 func PaintBox_GetAlignWithMargins(obj uintptr) bool {
@@ -28489,5 +30379,46 @@ func Component_SetTag(obj uintptr, value int) {
 func Component_GetComponents(obj uintptr, AIndex int32) uintptr {
     ret, _, _ := component_GetComponents.Call(obj, uintptr(AIndex))
     return ret
+}
+
+
+//--------------------------- TMonthCalColors ---------------------------
+
+func MonthCalColors_Create() uintptr {
+    ret, _, _ := monthCalColors_Create.Call()
+    return ret
+}
+
+func MonthCalColors_Free(obj uintptr) {
+    monthCalColors_Free.Call(obj)
+}
+
+func MonthCalColors_Assign(obj uintptr, Source uintptr)  {
+    monthCalColors_Assign.Call(obj, Source )
+}
+
+func MonthCalColors_GetNamePath(obj uintptr) string {
+    ret, _, _ := monthCalColors_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MonthCalColors_ClassName(obj uintptr) string {
+    ret, _, _ := monthCalColors_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MonthCalColors_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := monthCalColors_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func MonthCalColors_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := monthCalColors_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func MonthCalColors_ToString(obj uintptr) string {
+    ret, _, _ := monthCalColors_ToString.Call(obj)
+    return DStrToGoStr(ret)
 }
 

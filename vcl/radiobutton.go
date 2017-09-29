@@ -187,6 +187,14 @@ func (r *TRadioButton) SetAnchors(value TAnchors) {
     RadioButton_SetAnchors(r.instance, value)
 }
 
+func (r *TRadioButton) BiDiMode() TBiDiMode {
+    return RadioButton_GetBiDiMode(r.instance)
+}
+
+func (r *TRadioButton) SetBiDiMode(value TBiDiMode) {
+    RadioButton_SetBiDiMode(r.instance, value)
+}
+
 func (r *TRadioButton) Caption() string {
     return RadioButton_GetCaption(r.instance)
 }
@@ -251,6 +259,14 @@ func (r *TRadioButton) SetParentCtl3D(value bool) {
     RadioButton_SetParentCtl3D(r.instance, value)
 }
 
+func (r *TRadioButton) ParentDoubleBuffered() bool {
+    return RadioButton_GetParentDoubleBuffered(r.instance)
+}
+
+func (r *TRadioButton) SetParentDoubleBuffered(value bool) {
+    RadioButton_SetParentDoubleBuffered(r.instance, value)
+}
+
 func (r *TRadioButton) ParentFont() bool {
     return RadioButton_GetParentFont(r.instance)
 }
@@ -313,6 +329,14 @@ func (r *TRadioButton) WordWrap() bool {
 
 func (r *TRadioButton) SetWordWrap(value bool) {
     RadioButton_SetWordWrap(r.instance, value)
+}
+
+func (r *TRadioButton) StyleElements() TStyleElements {
+    return RadioButton_GetStyleElements(r.instance)
+}
+
+func (r *TRadioButton) SetStyleElements(value TStyleElements) {
+    RadioButton_SetStyleElements(r.instance, value)
 }
 
 func (r *TRadioButton) SetOnClick(fn TNotifyEvent) {

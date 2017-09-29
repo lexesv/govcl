@@ -187,6 +187,38 @@ func (l *TLinkLabel) SetAutoSize(value bool) {
     LinkLabel_SetAutoSize(l.instance, value)
 }
 
+func (l *TLinkLabel) BevelEdges() TBevelEdges {
+    return LinkLabel_GetBevelEdges(l.instance)
+}
+
+func (l *TLinkLabel) SetBevelEdges(value TBevelEdges) {
+    LinkLabel_SetBevelEdges(l.instance, value)
+}
+
+func (l *TLinkLabel) BevelInner() TBevelCut {
+    return LinkLabel_GetBevelInner(l.instance)
+}
+
+func (l *TLinkLabel) SetBevelInner(value TBevelCut) {
+    LinkLabel_SetBevelInner(l.instance, value)
+}
+
+func (l *TLinkLabel) BevelKind() TBevelKind {
+    return LinkLabel_GetBevelKind(l.instance)
+}
+
+func (l *TLinkLabel) SetBevelKind(value TBevelKind) {
+    LinkLabel_SetBevelKind(l.instance, value)
+}
+
+func (l *TLinkLabel) BevelOuter() TBevelCut {
+    return LinkLabel_GetBevelOuter(l.instance)
+}
+
+func (l *TLinkLabel) SetBevelOuter(value TBevelCut) {
+    LinkLabel_SetBevelOuter(l.instance, value)
+}
+
 func (l *TLinkLabel) Caption() string {
     return LinkLabel_GetCaption(l.instance)
 }
@@ -343,12 +375,28 @@ func (l *TLinkLabel) Handle() HWND {
     return LinkLabel_GetHandle(l.instance)
 }
 
+func (l *TLinkLabel) ParentDoubleBuffered() bool {
+    return LinkLabel_GetParentDoubleBuffered(l.instance)
+}
+
+func (l *TLinkLabel) SetParentDoubleBuffered(value bool) {
+    LinkLabel_SetParentDoubleBuffered(l.instance, value)
+}
+
 func (l *TLinkLabel) Action() *TAction {
     return ActionFromInst(LinkLabel_GetAction(l.instance))
 }
 
 func (l *TLinkLabel) SetAction(value IComponent) {
     LinkLabel_SetAction(l.instance, CheckPtr(value))
+}
+
+func (l *TLinkLabel) BiDiMode() TBiDiMode {
+    return LinkLabel_GetBiDiMode(l.instance)
+}
+
+func (l *TLinkLabel) SetBiDiMode(value TBiDiMode) {
+    LinkLabel_SetBiDiMode(l.instance, value)
 }
 
 func (l *TLinkLabel) BoundsRect() TRect {
@@ -401,6 +449,14 @@ func (l *TLinkLabel) Parent() *TControl {
 
 func (l *TLinkLabel) SetParent(value IControl) {
     LinkLabel_SetParent(l.instance, CheckPtr(value))
+}
+
+func (l *TLinkLabel) StyleElements() TStyleElements {
+    return LinkLabel_GetStyleElements(l.instance)
+}
+
+func (l *TLinkLabel) SetStyleElements(value TStyleElements) {
+    LinkLabel_SetStyleElements(l.instance, value)
 }
 
 func (l *TLinkLabel) AlignWithMargins() bool {

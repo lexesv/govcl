@@ -107,6 +107,14 @@ func (p *TPopupMenu) SetAutoHotkeys(value TMenuAutoFlag) {
     PopupMenu_SetAutoHotkeys(p.instance, value)
 }
 
+func (p *TPopupMenu) BiDiMode() TBiDiMode {
+    return PopupMenu_GetBiDiMode(p.instance)
+}
+
+func (p *TPopupMenu) SetBiDiMode(value TBiDiMode) {
+    PopupMenu_SetBiDiMode(p.instance, value)
+}
+
 func (p *TPopupMenu) Images() *TImageList {
     return ImageListFromInst(PopupMenu_GetImages(p.instance))
 }

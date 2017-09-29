@@ -231,6 +231,46 @@ func (c *TColorListBox) SetAnchors(value TAnchors) {
     ColorListBox_SetAnchors(c.instance, value)
 }
 
+func (c *TColorListBox) BevelEdges() TBevelEdges {
+    return ColorListBox_GetBevelEdges(c.instance)
+}
+
+func (c *TColorListBox) SetBevelEdges(value TBevelEdges) {
+    ColorListBox_SetBevelEdges(c.instance, value)
+}
+
+func (c *TColorListBox) BevelInner() TBevelCut {
+    return ColorListBox_GetBevelInner(c.instance)
+}
+
+func (c *TColorListBox) SetBevelInner(value TBevelCut) {
+    ColorListBox_SetBevelInner(c.instance, value)
+}
+
+func (c *TColorListBox) BevelKind() TBevelKind {
+    return ColorListBox_GetBevelKind(c.instance)
+}
+
+func (c *TColorListBox) SetBevelKind(value TBevelKind) {
+    ColorListBox_SetBevelKind(c.instance, value)
+}
+
+func (c *TColorListBox) BevelOuter() TBevelCut {
+    return ColorListBox_GetBevelOuter(c.instance)
+}
+
+func (c *TColorListBox) SetBevelOuter(value TBevelCut) {
+    ColorListBox_SetBevelOuter(c.instance, value)
+}
+
+func (c *TColorListBox) BiDiMode() TBiDiMode {
+    return ColorListBox_GetBiDiMode(c.instance)
+}
+
+func (c *TColorListBox) SetBiDiMode(value TBiDiMode) {
+    ColorListBox_SetBiDiMode(c.instance, value)
+}
+
 func (c *TColorListBox) Color() TColor {
     return ColorListBox_GetColor(c.instance)
 }
@@ -287,6 +327,14 @@ func (c *TColorListBox) SetParentCtl3D(value bool) {
     ColorListBox_SetParentCtl3D(c.instance, value)
 }
 
+func (c *TColorListBox) ParentDoubleBuffered() bool {
+    return ColorListBox_GetParentDoubleBuffered(c.instance)
+}
+
+func (c *TColorListBox) SetParentDoubleBuffered(value bool) {
+    ColorListBox_SetParentDoubleBuffered(c.instance, value)
+}
+
 func (c *TColorListBox) ParentFont() bool {
     return ColorListBox_GetParentFont(c.instance)
 }
@@ -341,6 +389,14 @@ func (c *TColorListBox) Visible() bool {
 
 func (c *TColorListBox) SetVisible(value bool) {
     ColorListBox_SetVisible(c.instance, value)
+}
+
+func (c *TColorListBox) StyleElements() TStyleElements {
+    return ColorListBox_GetStyleElements(c.instance)
+}
+
+func (c *TColorListBox) SetStyleElements(value TStyleElements) {
+    ColorListBox_SetStyleElements(c.instance, value)
 }
 
 func (c *TColorListBox) SetOnClick(fn TNotifyEvent) {

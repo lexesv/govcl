@@ -259,6 +259,14 @@ func (p *TPaintBox) SetAction(value IComponent) {
     PaintBox_SetAction(p.instance, CheckPtr(value))
 }
 
+func (p *TPaintBox) BiDiMode() TBiDiMode {
+    return PaintBox_GetBiDiMode(p.instance)
+}
+
+func (p *TPaintBox) SetBiDiMode(value TBiDiMode) {
+    PaintBox_SetBiDiMode(p.instance, value)
+}
+
 func (p *TPaintBox) BoundsRect() TRect {
     return PaintBox_GetBoundsRect(p.instance)
 }
@@ -309,6 +317,14 @@ func (p *TPaintBox) Parent() *TControl {
 
 func (p *TPaintBox) SetParent(value IControl) {
     PaintBox_SetParent(p.instance, CheckPtr(value))
+}
+
+func (p *TPaintBox) StyleElements() TStyleElements {
+    return PaintBox_GetStyleElements(p.instance)
+}
+
+func (p *TPaintBox) SetStyleElements(value TStyleElements) {
+    PaintBox_SetStyleElements(p.instance, value)
 }
 
 func (p *TPaintBox) AlignWithMargins() bool {

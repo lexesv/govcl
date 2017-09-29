@@ -187,6 +187,14 @@ func (c *TCheckBox) SetAnchors(value TAnchors) {
     CheckBox_SetAnchors(c.instance, value)
 }
 
+func (c *TCheckBox) BiDiMode() TBiDiMode {
+    return CheckBox_GetBiDiMode(c.instance)
+}
+
+func (c *TCheckBox) SetBiDiMode(value TBiDiMode) {
+    CheckBox_SetBiDiMode(c.instance, value)
+}
+
 func (c *TCheckBox) Caption() string {
     return CheckBox_GetCaption(c.instance)
 }
@@ -249,6 +257,14 @@ func (c *TCheckBox) ParentCtl3D() bool {
 
 func (c *TCheckBox) SetParentCtl3D(value bool) {
     CheckBox_SetParentCtl3D(c.instance, value)
+}
+
+func (c *TCheckBox) ParentDoubleBuffered() bool {
+    return CheckBox_GetParentDoubleBuffered(c.instance)
+}
+
+func (c *TCheckBox) SetParentDoubleBuffered(value bool) {
+    CheckBox_SetParentDoubleBuffered(c.instance, value)
 }
 
 func (c *TCheckBox) ParentFont() bool {
@@ -321,6 +337,14 @@ func (c *TCheckBox) WordWrap() bool {
 
 func (c *TCheckBox) SetWordWrap(value bool) {
     CheckBox_SetWordWrap(c.instance, value)
+}
+
+func (c *TCheckBox) StyleElements() TStyleElements {
+    return CheckBox_GetStyleElements(c.instance)
+}
+
+func (c *TCheckBox) SetStyleElements(value TStyleElements) {
+    CheckBox_SetStyleElements(c.instance, value)
 }
 
 func (c *TCheckBox) SetOnClick(fn TNotifyEvent) {

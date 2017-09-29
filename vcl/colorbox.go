@@ -239,6 +239,46 @@ func (c *TColorBox) SetAnchors(value TAnchors) {
     ColorBox_SetAnchors(c.instance, value)
 }
 
+func (c *TColorBox) BevelEdges() TBevelEdges {
+    return ColorBox_GetBevelEdges(c.instance)
+}
+
+func (c *TColorBox) SetBevelEdges(value TBevelEdges) {
+    ColorBox_SetBevelEdges(c.instance, value)
+}
+
+func (c *TColorBox) BevelInner() TBevelCut {
+    return ColorBox_GetBevelInner(c.instance)
+}
+
+func (c *TColorBox) SetBevelInner(value TBevelCut) {
+    ColorBox_SetBevelInner(c.instance, value)
+}
+
+func (c *TColorBox) BevelKind() TBevelKind {
+    return ColorBox_GetBevelKind(c.instance)
+}
+
+func (c *TColorBox) SetBevelKind(value TBevelKind) {
+    ColorBox_SetBevelKind(c.instance, value)
+}
+
+func (c *TColorBox) BevelOuter() TBevelCut {
+    return ColorBox_GetBevelOuter(c.instance)
+}
+
+func (c *TColorBox) SetBevelOuter(value TBevelCut) {
+    ColorBox_SetBevelOuter(c.instance, value)
+}
+
+func (c *TColorBox) BiDiMode() TBiDiMode {
+    return ColorBox_GetBiDiMode(c.instance)
+}
+
+func (c *TColorBox) SetBiDiMode(value TBiDiMode) {
+    ColorBox_SetBiDiMode(c.instance, value)
+}
+
 func (c *TColorBox) Color() TColor {
     return ColorBox_GetColor(c.instance)
 }
@@ -303,6 +343,14 @@ func (c *TColorBox) SetParentCtl3D(value bool) {
     ColorBox_SetParentCtl3D(c.instance, value)
 }
 
+func (c *TColorBox) ParentDoubleBuffered() bool {
+    return ColorBox_GetParentDoubleBuffered(c.instance)
+}
+
+func (c *TColorBox) SetParentDoubleBuffered(value bool) {
+    ColorBox_SetParentDoubleBuffered(c.instance, value)
+}
+
 func (c *TColorBox) ParentFont() bool {
     return ColorBox_GetParentFont(c.instance)
 }
@@ -357,6 +405,14 @@ func (c *TColorBox) Visible() bool {
 
 func (c *TColorBox) SetVisible(value bool) {
     ColorBox_SetVisible(c.instance, value)
+}
+
+func (c *TColorBox) StyleElements() TStyleElements {
+    return ColorBox_GetStyleElements(c.instance)
+}
+
+func (c *TColorBox) SetStyleElements(value TStyleElements) {
+    ColorBox_SetStyleElements(c.instance, value)
 }
 
 func (c *TColorBox) SetOnChange(fn TNotifyEvent) {
@@ -429,6 +485,14 @@ func (c *TColorBox) SetTextHint(value string) {
 
 func (c *TColorBox) Canvas() *TCanvas {
     return CanvasFromInst(ColorBox_GetCanvas(c.instance))
+}
+
+func (c *TColorBox) DroppedDown() bool {
+    return ColorBox_GetDroppedDown(c.instance)
+}
+
+func (c *TColorBox) SetDroppedDown(value bool) {
+    ColorBox_SetDroppedDown(c.instance, value)
 }
 
 func (c *TColorBox) Items() *TStrings {

@@ -159,6 +159,14 @@ func (l *TLabel) SetAutoSize(value bool) {
     Label_SetAutoSize(l.instance, value)
 }
 
+func (l *TLabel) BiDiMode() TBiDiMode {
+    return Label_GetBiDiMode(l.instance)
+}
+
+func (l *TLabel) SetBiDiMode(value TBiDiMode) {
+    Label_SetBiDiMode(l.instance, value)
+}
+
 func (l *TLabel) Caption() string {
     return Label_GetCaption(l.instance)
 }
@@ -285,6 +293,14 @@ func (l *TLabel) WordWrap() bool {
 
 func (l *TLabel) SetWordWrap(value bool) {
     Label_SetWordWrap(l.instance, value)
+}
+
+func (l *TLabel) StyleElements() TStyleElements {
+    return Label_GetStyleElements(l.instance)
+}
+
+func (l *TLabel) SetStyleElements(value TStyleElements) {
+    Label_SetStyleElements(l.instance, value)
 }
 
 func (l *TLabel) SetOnClick(fn TNotifyEvent) {

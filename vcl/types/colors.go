@@ -1,6 +1,9 @@
 package types
 
 const (
+	// Delphi中的颜色表，Delphi中的TColor与一般HTML的RGB有点不一样，反过来的
+	// 以BGR表示.
+
 	ClClSysNone  = 0x1FFFFFFF
 	ClSysDefault = 0x20000000
 	// Actual colors

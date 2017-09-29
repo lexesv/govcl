@@ -11,6 +11,7 @@ type TLVChangeEvent func(sender IObject, item IObject, change int32)
 
 // TCloseEvent Form
 type TCloseEvent func(sender IObject, action uintptr) // Action *uintptr
+
 // TCloseQueryEvent Form
 type TCloseQueryEvent func(sender IObject, canClose uintptr) //CanClose *uintptr
 

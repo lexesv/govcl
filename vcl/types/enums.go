@@ -401,7 +401,26 @@ const (
 )
 
 //  TItemFind = (ifData, ifPartialString, ifExactString, ifNearest);
+type TItemFind int32
+
+const (
+	IfData = iota + 0
+	IfPartialString
+	IfExactString
+	IfNearest
+)
+
 //  TSearchDirection = (sdLeft, sdRight, sdAbove, sdBelow, sdAll);
+type TSearchDirection int32
+
+const (
+	SdLeft = iota + 0
+	SdRight
+	SdAbove
+	SdBelow
+	SdAll
+)
+
 //  TListHotTrackStyle = (htHandPoint, htUnderlineCold, htUnderlineHot);
 type TListHotTrackStyle int32
 
@@ -1180,5 +1199,121 @@ const (
 // TTextFormat = set of TTextFormats;
 type TTextFormat uint32
 
+// TStyleElements = set of (seFont, seClient, seBorder);
+type TStyleElements uint32
 
- 
+const (
+	SeFont = iota + 0
+	SeClient
+	SeBorder
+)
+
+// TBevelCut = (bvNone, bvLowered, bvRaised, bvSpace);
+type TBevelCut int32
+
+const (
+	BvNone = iota + 0
+	BvLowered
+	BvRaised
+	BvSpace
+)
+
+// TBevelEdge = (beLeft, beTop, beRight, beBottom);
+type TBevelEdge int32
+
+const (
+	BeLeft = iota + 0
+	BeTop
+	BeRight
+	BeBottom
+)
+
+// TBevelEdges = set of TBevelEdge;
+type TBevelEdges uint32
+
+// TBevelKind = (bkNone, bkTile, bkSoft, bkFlat);
+type TBevelKind int32
+
+const (
+	BkNone = iota + 0
+	BkTile
+	BkSoft
+	BkFlat
+)
+
+// TTickMark = (tmBottomRight, tmTopLeft, tmBoth);
+type TTickMark int32
+
+const (
+	TmBottomRight = iota + 0
+	TmTopLeft
+	TmBoth
+)
+
+// TTickStyle = (tsNone, tsAuto, tsManual);
+type TTickStyle int32
+
+const (
+	TsNone = iota + 0
+	TsAuto
+	TsManual
+)
+
+// TPositionToolTip = (ptNone, ptTop, ptLeft, ptBottom, ptRight);
+type TPositionToolTip int32
+
+const (
+	PtNone = iota + 0
+	PtTop
+	PtLeft
+	PtBottom
+	PtRight
+)
+
+// TDateTimeKind = (dtkDate, dtkTime);
+type TDateTimeKind int32
+
+const (
+	DtkDate = iota + 0
+	DtkTime
+)
+
+// TDTDateMode = (dmComboBox, dmUpDown);
+type TDTDateMode int32
+
+const (
+	DmComboBox = iota + 0
+	DmUpDown
+)
+
+// TDTDateFormat = (dfShort, dfLong);
+type TDTDateFormat int32
+
+const (
+	DfShort = iota + 0
+	DfLong
+)
+
+// TDTCalAlignment = (dtaLeft, dtaRight);
+type TDTCalAlignment int32
+
+const (
+	DtaLeft = iota + 0
+	DtaRight
+)
+
+// { Calendar common control support }
+// TCalDayOfWeek = (dowMonday, dowTuesday, dowWednesday, dowThursday,
+//   dowFriday, dowSaturday, dowSunday, dowLocaleDefault);
+type TCalDayOfWeek int32
+
+const (
+	dowMonday = iota + 0
+	dowTuesday
+	dowWednesday
+	dowThursday
+	dowFriday
+	dowSaturday
+	dowSunday
+	dowLocaleDefault
+)

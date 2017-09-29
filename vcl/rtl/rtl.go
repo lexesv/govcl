@@ -7,7 +7,7 @@ import (
 	. "gitee.com/ying32/govcl/vcl/types"
 )
 
-// Move Delphi中的内存操作
+// Move Delphi中的内存操作，不过这里传入的是指针
 func Move(src, dest uintptr, llen int) {
 	api.DMove(src, dest, llen)
 }
@@ -17,7 +17,7 @@ func MainInstance() uintptr {
 	return api.DGetMainInstance()
 }
 
-// Exclude Delphi集合加法，val...中存储为位的索引，下标为0
+// Include Delphi集合加法，val...中存储为位的索引，下标为0
 func Include(r uint32, val ...uint8) uint32 {
 	for _, v := range val {
 		r |= (1 << uint8(v))
@@ -33,7 +33,7 @@ func Exclude(r uint32, val ...uint8) uint32 {
 	return r
 }
 
-// Insets Delphi集合类型的判断,类型，然后后面是第几位，下标为0
+// InSets Delphi集合类型的判断,类型，然后后面是第几位，下标为0
 func InSets(r, s uint32) bool {
 	if r&(1<<uint8(s)) != 0 {
 		return true
@@ -55,12 +55,12 @@ func GetKey(p uintptr) uint16 {
 	return *(*uint16)(unsafe.Pointer(p))
 }
 
-// GetKey 获取var key：Char的 Unicode char size=2
+// SetKey 获取var key：Char的 Unicode char size=2
 func SetKey(p uintptr, val uint16) {
 	*(*uint16)(unsafe.Pointer(p)) = val
 }
 
-// SetReportMemoryLeaksOnShutdown 程序结束时报告内存泄露
+// SetReportMemoryLeaksOnShutdown 程序结束时报告内存泄露，总有2-4字节的未知泄露位置
 func SetReportMemoryLeaksOnShutdown(v bool) {
 	api.DSetReportMemoryLeaksOnShutdown(v)
 }
@@ -75,7 +75,7 @@ func ShortCutToText(val TShortCut) string {
 	return api.DShortCutToText(val)
 }
 
-// SysOpen
+// SysOpen 打开，windows下调用ShellExecute
 func SysOpen(filename string) {
 	api.DSysOpen(filename)
 }

@@ -20,7 +20,7 @@ func main() {
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
 	mainForm.SetPosition(types.PoScreenCenter)
-	mainForm.SetWidth(200)
+	mainForm.SetWidth(400)
 	mainForm.SetHeight(700)
 
 	var top int32 = 40
@@ -201,6 +201,36 @@ func main() {
 	img.Picture().LoadFromFile("1.jpg")
 	//img.SetStretch(true)
 	img.SetProportional(true)
+
+	left = 210
+	top = 10
+	// TTrackBar
+	trkbar := vcl.NewTrackBar(mainForm)
+	trkbar.SetParent(mainForm)
+	trkbar.SetBounds(left, top, 167, 20)
+	trkbar.SetMax(100)
+	trkbar.SetMin(0)
+	trkbar.SetPosition(50)
+
+	// TProgressBar
+	top += trkbar.Height() + 10
+	prgbar := vcl.NewProgressBar(mainForm)
+	prgbar.SetParent(mainForm)
+	prgbar.SetBounds(left, top, 10, 167)
+	prgbar.SetMax(100)
+	prgbar.SetMin(0)
+	prgbar.SetPosition(1)
+	prgbar.SetOrientation(types.PbVertical)
+
+	trkbar.SetOnChange(func(vcl.IObject) {
+		prgbar.SetPosition(trkbar.Position())
+	})
+
+	top += prgbar.Height() + 10
+
+	dtp := vcl.NewDateTimePicker(mainForm)
+	dtp.SetParent(mainForm)
+	dtp.SetBounds(left, top, 167, 25)
 
 	// run
 	vcl.Application.Run()

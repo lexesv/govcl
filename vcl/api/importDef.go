@@ -48,4 +48,12 @@ var (
 	canvas_StretchDraw   = libvcl.NewProc("Canvas_StretchDraw")
 	canvas_TextRect1     = libvcl.NewProc("Canvas_TextRect1")
 	canvas_TextRect2     = libvcl.NewProc("Canvas_TextRect2")
+
+	// TImageList
+	imageList_Draw1        = libvcl.NewProc("ImageList_Draw1")
+	imageList_Draw2        = libvcl.NewProc("ImageList_Draw2")
+	imageList_DrawOverlay1 = libvcl.NewProc("ImageList_DrawOverlay1")
+	imageList_DrawOverlay2 = libvcl.NewProc("ImageList_DrawOverlay2")
+	imageList_GetIcon1     = libvcl.NewProc("ImageList_GetIcon1")
+	imageList_GetIcon2     = libvcl.NewProc("ImageList_GetIcon2")
 )

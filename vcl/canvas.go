@@ -111,6 +111,10 @@ func (c *TCanvas) TextOut(X int32, Y int32, Text string) {
     Canvas_TextOut(c.instance, X , Y , Text )
 }
 
+func (c *TCanvas) Lock() {
+    Canvas_Lock(c.instance)
+}
+
 func (c *TCanvas) Assign(Source IObject) {
     Canvas_Assign(c.instance, CheckPtr(Source))
 }

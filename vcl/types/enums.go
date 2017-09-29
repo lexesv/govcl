@@ -787,6 +787,9 @@ const (
 	LrMonoChrome
 )
 
+//   TLoadResources = set of TLoadResource;
+type TLoadResources uint32
+
 // TColorDepth = (cdDefault, cdDeviceDependent, cd4Bit, cd8Bit, cd16Bit, cd24Bit, cd32Bit);
 type TColorDepth int32
 
@@ -1176,3 +1179,6 @@ const (
 
 // TTextFormat = set of TTextFormats;
 type TTextFormat uint32
+
+
+ 

@@ -15145,12 +15145,37 @@ func ImageList_Free(obj uintptr) {
     imageList_Free.Call(obj)
 }
 
+func ImageList_GetHotSpot(obj uintptr) TPoint {
+    var ret TPoint
+    imageList_GetHotSpot.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
 func ImageList_Assign(obj uintptr, Source uintptr)  {
     imageList_Assign.Call(obj, Source )
 }
 
 func ImageList_Add(obj uintptr, Image uintptr, Mask uintptr) int32 {
     ret, _, _ := imageList_Add.Call(obj, Image , Mask )
+    return int32(ret)
+}
+
+func ImageList_AddIcon(obj uintptr, Image uintptr) int32 {
+    ret, _, _ := imageList_AddIcon.Call(obj, Image )
+    return int32(ret)
+}
+
+func ImageList_AddImage(obj uintptr, Value uintptr, Index int32) int32 {
+    ret, _, _ := imageList_AddImage.Call(obj, Value , uintptr(Index) )
+    return int32(ret)
+}
+
+func ImageList_AddImages(obj uintptr, Value uintptr)  {
+    imageList_AddImages.Call(obj, Value )
+}
+
+func ImageList_AddMasked(obj uintptr, Image uintptr, MaskColor TColor) int32 {
+    ret, _, _ := imageList_AddMasked.Call(obj, Image , uintptr(MaskColor) )
     return int32(ret)
 }
 
@@ -15162,6 +15187,31 @@ func ImageList_Delete(obj uintptr, Index int32)  {
     imageList_Delete.Call(obj, uintptr(Index) )
 }
 
+func ImageList_FileLoad(obj uintptr, ResType TResType, Name string, MaskColor TColor) bool {
+    ret, _, _ := imageList_FileLoad.Call(obj, uintptr(ResType) , GoStrToDStr(Name) , uintptr(MaskColor) )
+    return DBoolToGoBool(ret)
+}
+
+func ImageList_GetBitmap(obj uintptr, Index int32, Image uintptr) bool {
+    ret, _, _ := imageList_GetBitmap.Call(obj, uintptr(Index) , Image )
+    return DBoolToGoBool(ret)
+}
+
+func ImageList_GetImageBitmap(obj uintptr) HBITMAP {
+    ret, _, _ := imageList_GetImageBitmap.Call(obj)
+    return HBITMAP(ret)
+}
+
+func ImageList_GetMaskBitmap(obj uintptr) HBITMAP {
+    ret, _, _ := imageList_GetMaskBitmap.Call(obj)
+    return HBITMAP(ret)
+}
+
+func ImageList_GetResource(obj uintptr, ResType TResType, Name string, Width int32, LoadFlags TLoadResources, MaskColor TColor) bool {
+    ret, _, _ := imageList_GetResource.Call(obj, uintptr(ResType) , GoStrToDStr(Name) , uintptr(Width) , uintptr(LoadFlags) , uintptr(MaskColor) )
+    return DBoolToGoBool(ret)
+}
+
 func ImageList_HandleAllocated(obj uintptr) bool {
     ret, _, _ := imageList_HandleAllocated.Call(obj)
     return DBoolToGoBool(ret)
@@ -15171,8 +15221,43 @@ func ImageList_Insert(obj uintptr, Index int32, Image uintptr, Mask uintptr)  {
     imageList_Insert.Call(obj, uintptr(Index) , Image , Mask )
 }
 
+func ImageList_InsertIcon(obj uintptr, Index int32, Image uintptr)  {
+    imageList_InsertIcon.Call(obj, uintptr(Index) , Image )
+}
+
+func ImageList_InsertMasked(obj uintptr, Index int32, Image uintptr, MaskColor TColor)  {
+    imageList_InsertMasked.Call(obj, uintptr(Index) , Image , uintptr(MaskColor) )
+}
+
 func ImageList_Move(obj uintptr, CurIndex int32, NewIndex int32)  {
     imageList_Move.Call(obj, uintptr(CurIndex) , uintptr(NewIndex) )
+}
+
+func ImageList_Overlay(obj uintptr, ImageIndex int32, Overlay uint8) bool {
+    ret, _, _ := imageList_Overlay.Call(obj, uintptr(ImageIndex) , uintptr(Overlay) )
+    return DBoolToGoBool(ret)
+}
+
+func ImageList_ResourceLoad(obj uintptr, ResType TResType, Name string, MaskColor TColor) bool {
+    ret, _, _ := imageList_ResourceLoad.Call(obj, uintptr(ResType) , GoStrToDStr(Name) , uintptr(MaskColor) )
+    return DBoolToGoBool(ret)
+}
+
+func ImageList_ResInstLoad(obj uintptr, Instance uintptr, ResType TResType, Name string, MaskColor TColor) bool {
+    ret, _, _ := imageList_ResInstLoad.Call(obj, Instance , uintptr(ResType) , GoStrToDStr(Name) , uintptr(MaskColor) )
+    return DBoolToGoBool(ret)
+}
+
+func ImageList_Replace(obj uintptr, Index int32, Image uintptr, Mask uintptr)  {
+    imageList_Replace.Call(obj, uintptr(Index) , Image , Mask )
+}
+
+func ImageList_ReplaceIcon(obj uintptr, Index int32, Image uintptr)  {
+    imageList_ReplaceIcon.Call(obj, uintptr(Index) , Image )
+}
+
+func ImageList_ReplaceMasked(obj uintptr, Index int32, NewImage uintptr, MaskColor TColor)  {
+    imageList_ReplaceMasked.Call(obj, uintptr(Index) , NewImage , uintptr(MaskColor) )
 }
 
 func ImageList_SetSize(obj uintptr, AWidth int32, AHeight int32)  {
@@ -25318,6 +25403,10 @@ func Canvas_TextExtent(obj uintptr, Text string) TSize {
 
 func Canvas_TextOut(obj uintptr, X int32, Y int32, Text string)  {
     canvas_TextOut.Call(obj, uintptr(X) , uintptr(Y) , GoStrToDStr(Text) )
+}
+
+func Canvas_Lock(obj uintptr)  {
+    canvas_Lock.Call(obj)
 }
 
 func Canvas_Assign(obj uintptr, Source uintptr)  {

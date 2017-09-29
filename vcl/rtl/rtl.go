@@ -4,6 +4,7 @@ import (
 	"unsafe"
 
 	"gitee.com/ying32/govcl/vcl/api"
+	. "gitee.com/ying32/govcl/vcl/types"
 )
 
 // Move Delphi中的内存操作
@@ -65,12 +66,12 @@ func SetReportMemoryLeaksOnShutdown(v bool) {
 }
 
 // TextToShortCut 将字符串转为ShortCut类型
-func TextToShortCut(val string) api.TShortCut {
+func TextToShortCut(val string) TShortCut {
 	return api.DTextToShortCut(val)
 }
 
 // ShortCutToText 将ShortCut类型转为字符串
-func ShortCutToText(val api.TShortCut) string {
+func ShortCutToText(val TShortCut) string {
 	return api.DShortCutToText(val)
 }
 

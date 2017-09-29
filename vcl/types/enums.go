@@ -1,4 +1,4 @@
-package api
+package types
 
 /*
   注意：Delphi中所有集合这里全部使用uint32表示，也就是说最多32个元素
@@ -129,13 +129,13 @@ const (
 	TaCenter
 )
 
-
 //  TLeftRight = TAlignment.taLeftJustify..TAlignment.taRightJustify;
 type TLeftRight int32
 
 //  TBiDiMode = (bdLeftToRight, bdRightToLeft, bdRightToLeftNoAlign,
 //    bdRightToLeftReadingOnly);
 type TBiDiMode int32
+
 const (
 	BdLeftToRight = iota + 0
 	BdRightToLeft
@@ -355,15 +355,15 @@ const (
 
 //  TListArrangement = (arAlignBottom, arAlignLeft, arAlignRight,
 //    arAlignTop, arDefault, arSnapToGrid);
-type TListArrangement int32 
+type TListArrangement int32
 
 const (
-	 ArAlignBottom = iota + 0
-	 ArAlignLeft
-	 ArAlignRight
-	 ArAlignTop
-	 ArDefault
-	 ArSnapToGrid	
+	ArAlignBottom = iota + 0
+	ArAlignLeft
+	ArAlignRight
+	ArAlignTop
+	ArDefault
+	ArSnapToGrid
 )
 
 //  TViewStyle = (vsIcon, vsSmallIcon, vsList, vsReport);
@@ -415,7 +415,7 @@ const (
 type TListHotTrackStyles uint32
 
 //  TItemRequests = (irText, irImage, irParam, irState, irIndent);
-type TItemRequests int32 
+type TItemRequests int32
 
 const (
 	IrText = iota + 0
@@ -1073,7 +1073,6 @@ const (
 //   TStringsOptions = set of TStringsOption;
 type TStringsOptions uint32
 
-
 // TShiftState = set of (ssShift, ssAlt, ssCtrl,
 //     ssLeft, ssRight, ssMiddle, ssDouble, ssTouch, ssPen, ssCommand, ssHorizontal);
 type TShiftState uint32
@@ -1093,14 +1092,13 @@ const (
 )
 
 // TMouseButton = (mbLeft, mbRight, mbMiddle);
-type TMouseButton int32 
+type TMouseButton int32
 
 const (
 	MbLeft = iota + 0
 	MbRight
 	MbMiddle
 )
-
 
 // TFillStyle = (fsSurface, fsBorder);
 type TFillStyle int32
@@ -1111,7 +1109,7 @@ const (
 )
 
 // TFillMode = (fmAlternate, fmWinding);
-type TFillMode int32 
+type TFillMode int32
 
 const (
 	FmAlternate = iota + 0
@@ -1121,12 +1119,12 @@ const (
 // TCopyMode = Longint;
 
 // TCanvasStates = (csHandleValid, csFontValid, csPenValid, csBrushValid);
-type TCanvasStates int32 
+type TCanvasStates int32
 
 const (
-	CsHandleValid = iota + 0 
-	CsFontValid 
-	CsPenValid 
+	CsHandleValid = iota + 0
+	CsFontValid
+	CsPenValid
 	CsBrushValid
 )
 
@@ -1134,7 +1132,7 @@ const (
 type TCanvasState uint32
 
 // TCanvasOrientation = (coLeftToRight, coRightToLeft);
-type TCanvasOrientation int32 
+type TCanvasOrientation int32
 
 const (
 	CoLeftToRight = iota + 0

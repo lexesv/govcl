@@ -1,4 +1,4 @@
-package api
+package types
 
 type TPoint struct {
 	X, Y int32

@@ -3,6 +3,8 @@ package api
 import (
 	"reflect"
 	"unsafe"
+
+	. "gitee.com/ying32/govcl/vcl/types"
 )
 
 type TGoParam struct {
@@ -80,7 +82,6 @@ func DShortCutToText(val TShortCut) string {
 	ret, _, _ := dShortCutToText.Call(uintptr(val))
 	return DStrToGoStr(ret)
 }
-
 
 func DSysOpen(filename string) {
 	dSysOpen.Call(GoStrToDStr(filename))

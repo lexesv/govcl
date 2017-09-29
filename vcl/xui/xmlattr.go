@@ -2,7 +2,7 @@ package xui
 
 import (
 	xmldom "bitbucket.org/rj/xmldom-go"
-	"gitee.com/ying32/govcl/vcl/api"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 type TXmlAttrs struct {
@@ -179,22 +179,22 @@ func (x *TXmlAttrs) Borderless() bool {
 	return x.ToBool("borderless")
 }
 
-func (x *TXmlAttrs) Align() api.TAlign {
+func (x *TXmlAttrs) Align() types.TAlign {
 	s := x.Get("align")
 	switch s {
 	case "alTop":
-		return api.AlTop
+		return types.AlTop
 	case "alBottom":
-		return api.AlBottom
+		return types.AlBottom
 	case "alLeft":
-		return api.AlLeft
+		return types.AlLeft
 	case "alRight":
-		return api.AlRight
+		return types.AlRight
 	case "alClient":
-		return api.AlClient
+		return types.AlClient
 	case "alCustom":
-		return api.AlCustom
+		return types.AlCustom
 	default:
 	}
-	return api.AlNone
+	return types.AlNone
 }

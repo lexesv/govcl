@@ -1,4 +1,4 @@
-package vcl
+package types
 
 const (
 	IdOK       = 1

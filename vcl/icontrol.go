@@ -1,7 +1,7 @@
 package vcl
 
 import (
-	. "gitee.com/ying32/govcl/vcl/api"
+	. "gitee.com/ying32/govcl/vcl/types"
 )
 
 type IControl interface {
@@ -47,8 +47,8 @@ type IControl interface {
 
 	Parent() *TControl
 	SetParent(IControl)
-	
-	SetBounds(int32,int32,int32,int32)
+
+	SetBounds(int32, int32, int32, int32)
 	// ---------------------事件
 
 	//SetOnClick(TNotifyEvent)

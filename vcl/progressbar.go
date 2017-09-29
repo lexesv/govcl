@@ -1,6 +1,6 @@
 
 //----------------------------------------
-// 代码由Genvcllib工具自动生成。
+// 代码由GenlibVcl工具自动生成。
 // Copyright © ying32. All Rights Reserved.
 //
 //----------------------------------------
@@ -11,6 +11,7 @@ package vcl
 
 import (
 	. "gitee.com/ying32/govcl/vcl/api"
+    . "gitee.com/ying32/govcl/vcl/types"
 )
 
 type TProgressBar struct {

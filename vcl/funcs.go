@@ -5,6 +5,7 @@ import (
 
 	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/rtl"
+	. "gitee.com/ying32/govcl/vcl/types"
 )
 
 func ShowMessage(msg string) {
@@ -12,8 +13,8 @@ func ShowMessage(msg string) {
 }
 
 // MessageDlg   api.TMsgDlgButtons
-func MessageDlg(Msg string, DlgType api.TMsgDlgType, Buttons ...uint8) int32 {
-	return api.DMessageDlg(Msg, DlgType, api.TMsgDlgButtons(rtl.Include(0, Buttons...)), 0)
+func MessageDlg(Msg string, DlgType TMsgDlgType, Buttons ...uint8) int32 {
+	return api.DMessageDlg(Msg, DlgType, TMsgDlgButtons(rtl.Include(0, Buttons...)), 0)
 }
 
 func CheckPtr(value IObject) uintptr {

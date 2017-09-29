@@ -1,11 +1,19 @@
 package main
 
 import (
-	"fmt"
-
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
+)
+
+type TPoint struct {
+	X, Y int32
+	Down bool
+}
+
+var (
+	isMouseDown bool
+	points      = make([]TPoint, 0)
 )
 
 func main() {
@@ -18,6 +26,7 @@ func main() {
 	mainForm.EnabledMaximize(false)
 	mainForm.SetWidth(400)
 	mainForm.SetHeight(600)
+	mainForm.SetDoubleBuffered(true)
 
 	mainForm.SetOnPaint(func(vcl.IObject) {
 
@@ -35,11 +44,11 @@ func main() {
 		r := types.TRect{0, 0, 80, 80}
 
 		// 计算文字
-		fmt.Println("TfSingleLine: ", types.TfSingleLine)
+		//fmt.Println("TfSingleLine: ", types.TfSingleLine)
 		s = "由于现有第三方的Go UI库不是太宠大就是用的不习惯，或者组件太少。"
 		canvas.TextRect2(&r, &s, types.TTextFormat(rtl.Include(0,
 			types.TfCenter, types.TfVerticalCenter, types.TfSingleLine)))
-		fmt.Println("r: ", r, ", s: ", s)
+		//fmt.Println("r: ", r, ", s: ", s)
 
 		s = "测试输出"
 		r = types.TRect{0, 0, 80, 80}
@@ -58,7 +67,7 @@ func main() {
 		canvas.Rectangle(r.Left, r.Top, r.Right, r.Bottom)
 
 		textFmt := rtl.Include(0, types.TfCenter, types.TfSingleLine, types.TfVerticalCenter)
-		fmt.Println("format: ", textFmt)
+		//fmt.Println("format: ", textFmt)
 		//		canvas.TextRect(r, 0, 0, s)
 		canvas.TextRect2(&r, &s, types.TTextFormat(textFmt))
 
@@ -69,6 +78,62 @@ func main() {
 		canvas.Draw(0, 80, jpgimg)
 		//canvas.Draw2(0, 200, jpgimg, 10)
 
+	})
+
+	paintbox := vcl.NewPaintBox(mainForm)
+	paintbox.SetParent(mainForm)
+	paintbox.SetAlign(types.AlBottom)
+	paintbox.SetHeight(mainForm.Height() - 280)
+	paintbox.SetOnPaint(func(vcl.IObject) {
+		canvas := paintbox.Canvas()
+		canvas.Pen().SetColor(types.ClRed)
+		r := paintbox.ClientRect()
+		canvas.Rectangle(r.Left, r.Top, r.Right, r.Bottom)
+
+		canvas.Font().SetColor(types.ClSkyblue)
+		rect := paintbox.ClientRect()
+		s := "在这可以用鼠标绘制"
+		textFmt := types.TTextFormat(rtl.Include(0, types.TfCenter, types.TfSingleLine, types.TfVerticalCenter))
+		canvas.TextRect2(&rect, &s, textFmt)
+
+		canvas.Pen().SetColor(types.ClGreen)
+		for _, p := range points {
+			if p.Down {
+				canvas.MoveTo(p.X, p.Y)
+			} else {
+				canvas.LineTo(p.X, p.Y)
+			}
+		}
+	})
+
+	paintbox.SetOnMouseDown(func(sender vcl.IObject, button, shift, x, y int32) {
+		if button == types.MbLeft {
+			points = append(points, TPoint{X: x, Y: y, Down: true})
+			isMouseDown = true
+		}
+	})
+
+	paintbox.SetOnMouseMove(func(sender vcl.IObject, shift, x, y int32) {
+		if isMouseDown {
+			points = append(points, TPoint{X: x, Y: y, Down: false})
+			paintbox.Repaint()
+		}
+	})
+
+	paintbox.SetOnMouseUp(func(sender vcl.IObject, button, shift, x, y int32) {
+		if button == types.MbLeft {
+			isMouseDown = false
+		}
+	})
+
+	btnClear := vcl.NewButton(mainForm)
+	btnClear.SetParent(mainForm)
+	btnClear.SetCaption("清除绘制")
+	btnClear.SetLeft(mainForm.Width() - btnClear.Width() - 20)
+	btnClear.SetTop(10)
+	btnClear.SetOnClick(func(vcl.IObject) {
+		points = make([]TPoint, 0)
+		paintbox.Repaint()
 	})
 
 	vcl.Application.Run()

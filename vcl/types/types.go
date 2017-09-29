@@ -5,7 +5,7 @@ type TPoint struct {
 }
 
 type TRect struct {
-	Left, Top, Width, Height int32
+	Left, Top, Right, Bottom int32
 }
 
 type TSize struct {

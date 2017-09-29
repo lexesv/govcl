@@ -34,6 +34,18 @@ var (
 	dSysOpen = libvcl.NewProc("DSysOpen")
 
 	// TMemoryStream
-	memoryStream_Read     = libvcl.NewProc("MemoryStream_Read")
-	memoryStream_Write    = libvcl.NewProc("MemoryStream_Write")
+	memoryStream_Read  = libvcl.NewProc("MemoryStream_Read")
+	memoryStream_Write = libvcl.NewProc("MemoryStream_Write")
+
+	// TCanvas
+	canvas_BrushCopy     = libvcl.NewProc("Canvas_BrushCopy")
+	canvas_CopyRect      = libvcl.NewProc("Canvas_CopyRect")
+	canvas_Draw1         = libvcl.NewProc("Canvas_Draw1")
+	canvas_Draw2         = libvcl.NewProc("Canvas_Draw2")
+	canvas_DrawFocusRect = libvcl.NewProc("Canvas_DrawFocusRect")
+	canvas_FillRect      = libvcl.NewProc("Canvas_FillRect")
+	canvas_FrameRect     = libvcl.NewProc("Canvas_FrameRect")
+	canvas_StretchDraw   = libvcl.NewProc("Canvas_StretchDraw")
+	canvas_TextRect1     = libvcl.NewProc("Canvas_TextRect1")
+	canvas_TextRect2     = libvcl.NewProc("Canvas_TextRect2")
 )

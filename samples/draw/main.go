@@ -11,7 +11,6 @@ import (
 func main() {
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	//    vcl.SetIcon()
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
@@ -38,7 +37,7 @@ func main() {
 		// 计算文字
 		fmt.Println("TfSingleLine: ", types.TfSingleLine)
 		s = "由于现有第三方的Go UI库不是太宠大就是用的不习惯，或者组件太少。"
-		canvas.TextRect1(&r, &s, types.TTextFormat(rtl.Include(0,
+		canvas.TextRect2(&r, &s, types.TTextFormat(rtl.Include(0,
 			types.TfCenter, types.TfVerticalCenter, types.TfSingleLine)))
 		fmt.Println("r: ", r, ", s: ", s)
 
@@ -60,14 +59,14 @@ func main() {
 
 		textFmt := rtl.Include(0, types.TfCenter, types.TfSingleLine, types.TfVerticalCenter)
 		fmt.Println("format: ", textFmt)
-		//		canvas.TextRect2(r, 0, 0, s)
-		canvas.TextRect1(&r, &s, types.TTextFormat(textFmt))
+		//		canvas.TextRect(r, 0, 0, s)
+		canvas.TextRect2(&r, &s, types.TTextFormat(textFmt))
 
 		jpgimg := vcl.NewJPEGImage()
 		defer jpgimg.Free()
 		jpgimg.LoadFromFile("..\\..\\imgs\\1.jpg")
 
-		canvas.Draw1(0, 80, jpgimg)
+		canvas.Draw(0, 80, jpgimg)
 		//canvas.Draw2(0, 200, jpgimg, 10)
 
 	})

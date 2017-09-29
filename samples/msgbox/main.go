@@ -2,7 +2,7 @@ package main
 
 import (
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/api"
+	"gitee.com/ying32/govcl/vcl/types"
 	"gitee.com/ying32/govcl/vcl/win"
 )
 
@@ -13,16 +13,16 @@ func main() {
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
-	mainForm.SetPosition(api.PoScreenCenter)
+	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.EnabledMaximize(false)
 	mainForm.SetWidth(300)
 	mainForm.SetHeight(200)
 
 	vcl.ShowMessage("消息")
-	if vcl.MessageDlg("消息", api.MtConfirmation, api.MbYes, api.MbNo) == vcl.IdYes {
+	if vcl.MessageDlg("消息", types.MtConfirmation, types.MbYes, types.MbNo) == types.IdYes {
 		vcl.ShowMessage("你点击了“是")
 	}
-	if vcl.Application.MessageBox("消息", "标题", win.MB_OKCANCEL+win.MB_ICONINFORMATION) == vcl.MrOk {
+	if vcl.Application.MessageBox("消息", "标题", win.MB_OKCANCEL+win.MB_ICONINFORMATION) == types.MrOk {
 		vcl.ShowMessage("你点击了“是")
 	}
 

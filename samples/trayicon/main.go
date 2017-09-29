@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
-	mainForm.SetPosition(api.PoScreenCenter)
+	mainForm.SetPosition(types.PoScreenCenter)
 	pm := vcl.NewPopupMenu(mainForm)
 	item := vcl.NewMenuItem(mainForm)
 	item.SetCaption("退出(&E)")
@@ -42,7 +42,7 @@ func main() {
 	trayicon.SetPopupMenu(pm)
 	// 其它事件请看源代码中以 SetOn 开头的
 	//	trayicon.SetOnMouseDown(func(Sender vcl.IObject, Button, Shift, X, Y int32) {
-	//		if Button == api.MbRight {
+	//		if Button == types.MbRight {
 	//			vcl.ShowMessage("fff")
 	//		}
 	//	})

@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
@@ -19,16 +19,16 @@ func main() {
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
-	mainForm.SetPosition(api.PoScreenCenter)
+	mainForm.SetPosition(types.PoScreenCenter)
 	// 双缓冲
 	mainForm.SetDoubleBuffered(true)
 
 	lv1 := vcl.NewListView(mainForm)
 	lv1.SetParent(mainForm)
-	lv1.SetAlign(api.AlClient)
+	lv1.SetAlign(types.AlClient)
 	lv1.SetRowSelect(true)
 	lv1.SetReadOnly(true)
-	lv1.SetViewStyle(api.VsReport)
+	lv1.SetViewStyle(types.VsReport)
 	lv1.SetGridLines(true)
 	lv1.SetColumnClick(false)
 

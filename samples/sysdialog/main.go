@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
-	mainForm.SetPosition(api.PoScreenCenter)
+	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.EnabledMaximize(false)
 	mainForm.SetWidth(300)
 	mainForm.SetHeight(200)
@@ -25,11 +25,11 @@ func main() {
 	//    dlgOpen.SetInitialDir()
 	//	dlgOpen.SetFilterIndex()
 
-	dlgOpen.SetOptions(api.TOpenOptions(rtl.Include(uint32(dlgOpen.Options()), api.OfShowHelp)))
+	dlgOpen.SetOptions(types.TOpenOptions(rtl.Include(uint32(dlgOpen.Options()), types.OfShowHelp)))
 	dlgOpen.SetTitle("打开")
 
 	btn := vcl.NewButton(mainForm)
-	btn.SetAlign(api.AlTop)
+	btn.SetAlign(types.AlTop)
 	btn.SetParent(mainForm)
 	btn.SetCaption("Open Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
@@ -40,11 +40,11 @@ func main() {
 
 	dlSave := vcl.NewSaveDialog(mainForm)
 	dlSave.SetFilter("文本文件(*.txt)|*.txt|所有文件(*.*)|*.*")
-	dlSave.SetOptions(api.TOpenOptions(rtl.Include(uint32(dlSave.Options()), api.OfShowHelp)))
+	dlSave.SetOptions(types.TOpenOptions(rtl.Include(uint32(dlSave.Options()), types.OfShowHelp)))
 	dlSave.SetTitle("保存")
 
 	btn = vcl.NewButton(mainForm)
-	btn.SetAlign(api.AlTop)
+	btn.SetAlign(types.AlTop)
 	btn.SetParent(mainForm)
 	btn.SetCaption("Save Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
@@ -56,7 +56,7 @@ func main() {
 	dlFont := vcl.NewFontDialog(mainForm)
 
 	btn = vcl.NewButton(mainForm)
-	btn.SetAlign(api.AlTop)
+	btn.SetAlign(types.AlTop)
 	btn.SetParent(mainForm)
 	btn.SetCaption("Font Dialog")
 	btn.SetOnClick(func(vcl.IObject) {

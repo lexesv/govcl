@@ -20,9 +20,9 @@ type TRegistry struct {
     instance uintptr
 }
 
-func NewRegistry() *TRegistry {
+func NewRegistry(aAccess uint32) *TRegistry {
     r := new(TRegistry)
-    r.instance = Registry_Create()
+    r.instance = Registry_Create(aAccess)
     return r
 }
 

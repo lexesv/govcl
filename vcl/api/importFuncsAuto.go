@@ -29120,8 +29120,8 @@ func IniFile_GetFileName(obj uintptr) string {
 
 //--------------------------- TRegistry ---------------------------
 
-func Registry_Create() uintptr {
-    ret, _, _ := registry_Create.Call()
+func Registry_Create(aAccess uint32) uintptr {
+    ret, _, _ := registry_Create.Call(uintptr(aAccess))
     return ret
 }
 

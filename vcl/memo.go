@@ -75,6 +75,10 @@ func (m *TMemo) SelectAll() {
     Memo_SelectAll(m.instance)
 }
 
+func (m *TMemo) GetSelTextBuf(Buffer string, BufSize int32) int32 {
+    return Memo_GetSelTextBuf(m.instance, Buffer , BufSize )
+}
+
 func (m *TMemo) CanFocus() bool {
     return Memo_CanFocus(m.instance)
 }

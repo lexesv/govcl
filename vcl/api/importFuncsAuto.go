@@ -341,6 +341,10 @@ func Form_Hide(obj uintptr)  {
     form_Hide.Call(obj)
 }
 
+func Form_Print(obj uintptr)  {
+    form_Print.Call(obj)
+}
+
 func Form_SetFocus(obj uintptr)  {
     form_SetFocus.Call(obj)
 }
@@ -1668,6 +1672,11 @@ func Edit_SelectAll(obj uintptr)  {
     edit_SelectAll.Call(obj)
 }
 
+func Edit_GetSelTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := edit_GetSelTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
 func Edit_CanFocus(obj uintptr) bool {
     ret, _, _ := edit_CanFocus.Call(obj)
     return DBoolToGoBool(ret)
@@ -2716,6 +2725,11 @@ func Memo_PasteFromClipboard(obj uintptr)  {
 
 func Memo_SelectAll(obj uintptr)  {
     memo_SelectAll.Call(obj)
+}
+
+func Memo_GetSelTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := memo_GetSelTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
 }
 
 func Memo_CanFocus(obj uintptr) bool {
@@ -14873,6 +14887,20 @@ func RichEdit_Clear(obj uintptr)  {
     richEdit_Clear.Call(obj)
 }
 
+func RichEdit_FindText(obj uintptr, SearchStr string, StartPos int32, Length int32, Options TSearchTypes) int32 {
+    ret, _, _ := richEdit_FindText.Call(obj, GoStrToDStr(SearchStr) , uintptr(StartPos) , uintptr(Length) , uintptr(Options) )
+    return int32(ret)
+}
+
+func RichEdit_Print(obj uintptr, Caption string)  {
+    richEdit_Print.Call(obj, GoStrToDStr(Caption) )
+}
+
+func RichEdit_GetSelTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := richEdit_GetSelTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
 func RichEdit_ClearSelection(obj uintptr)  {
     richEdit_ClearSelection.Call(obj)
 }
@@ -15135,6 +15163,15 @@ func RichEdit_SetHideSelection(obj uintptr, value bool) {
    richEdit_SetHideSelection.Call(obj, GoBoolToDBool(value))
 }
 
+func RichEdit_GetHideScrollBars(obj uintptr) bool {
+    ret, _, _ := richEdit_GetHideScrollBars.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RichEdit_SetHideScrollBars(obj uintptr, value bool) {
+   richEdit_SetHideScrollBars.Call(obj, GoBoolToDBool(value))
+}
+
 func RichEdit_GetLines(obj uintptr) uintptr {
     ret, _, _ := richEdit_GetLines.Call(obj)
     return ret
@@ -15187,6 +15224,15 @@ func RichEdit_GetParentShowHint(obj uintptr) bool {
 
 func RichEdit_SetParentShowHint(obj uintptr, value bool) {
    richEdit_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func RichEdit_GetPlainText(obj uintptr) bool {
+    ret, _, _ := richEdit_GetPlainText.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RichEdit_SetPlainText(obj uintptr, value bool) {
+   richEdit_SetPlainText.Call(obj, GoBoolToDBool(value))
 }
 
 func RichEdit_GetPopupMenu(obj uintptr) uintptr {
@@ -15288,6 +15334,15 @@ func RichEdit_SetStyleElements(obj uintptr, value TStyleElements) {
    richEdit_SetStyleElements.Call(obj, uintptr(value))
 }
 
+func RichEdit_GetZoom(obj uintptr) int32 {
+    ret, _, _ := richEdit_GetZoom.Call(obj)
+    return int32(ret)
+}
+
+func RichEdit_SetZoom(obj uintptr, value int32) {
+   richEdit_SetZoom.Call(obj, uintptr(value))
+}
+
 func RichEdit_SetOnChange(obj uintptr, fn interface{}) {
     richEdit_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -15342,6 +15397,21 @@ func RichEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
 
 func RichEdit_SetOnMouseWheel(obj uintptr, fn interface{}) {
     richEdit_SetOnMouseWheel.Call(obj, addEventToMap(fn))
+}
+
+func RichEdit_GetActiveLineNo(obj uintptr) uint32 {
+    ret, _, _ := richEdit_GetActiveLineNo.Call(obj)
+    return uint32(ret)
+}
+
+func RichEdit_GetPageRect(obj uintptr) TRect {
+    var ret TRect
+    richEdit_GetPageRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func RichEdit_SetPageRect(obj uintptr, value TRect) {
+   richEdit_SetPageRect.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func RichEdit_GetCaretPos(obj uintptr) TPoint {
@@ -19138,6 +19208,15 @@ func MonthCalendar_GetMaxDate(obj uintptr) TDate {
 
 func MonthCalendar_SetMaxDate(obj uintptr, value TDate) {
    monthCalendar_SetMaxDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func MonthCalendar_GetMaxSelectRange(obj uintptr) int32 {
+    ret, _, _ := monthCalendar_GetMaxSelectRange.Call(obj)
+    return int32(ret)
+}
+
+func MonthCalendar_SetMaxSelectRange(obj uintptr, value int32) {
+   monthCalendar_SetMaxSelectRange.Call(obj, uintptr(value))
 }
 
 func MonthCalendar_GetMinDate(obj uintptr) TDate {

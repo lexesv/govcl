@@ -55,6 +55,18 @@ func (r *TRichEdit) Clear() {
     RichEdit_Clear(r.instance)
 }
 
+func (r *TRichEdit) FindText(SearchStr string, StartPos int32, Length int32, Options TSearchTypes) int32 {
+    return RichEdit_FindText(r.instance, SearchStr , StartPos , Length , Options )
+}
+
+func (r *TRichEdit) Print(Caption string) {
+    RichEdit_Print(r.instance, Caption )
+}
+
+func (r *TRichEdit) GetSelTextBuf(Buffer string, BufSize int32) int32 {
+    return RichEdit_GetSelTextBuf(r.instance, Buffer , BufSize )
+}
+
 func (r *TRichEdit) ClearSelection() {
     RichEdit_ClearSelection(r.instance)
 }
@@ -291,6 +303,14 @@ func (r *TRichEdit) SetHideSelection(value bool) {
     RichEdit_SetHideSelection(r.instance, value)
 }
 
+func (r *TRichEdit) HideScrollBars() bool {
+    return RichEdit_GetHideScrollBars(r.instance)
+}
+
+func (r *TRichEdit) SetHideScrollBars(value bool) {
+    RichEdit_SetHideScrollBars(r.instance, value)
+}
+
 func (r *TRichEdit) Lines() *TStrings {
     return StringsFromInst(RichEdit_GetLines(r.instance))
 }
@@ -337,6 +357,14 @@ func (r *TRichEdit) ParentShowHint() bool {
 
 func (r *TRichEdit) SetParentShowHint(value bool) {
     RichEdit_SetParentShowHint(r.instance, value)
+}
+
+func (r *TRichEdit) PlainText() bool {
+    return RichEdit_GetPlainText(r.instance)
+}
+
+func (r *TRichEdit) SetPlainText(value bool) {
+    RichEdit_SetPlainText(r.instance, value)
 }
 
 func (r *TRichEdit) PopupMenu() *TPopupMenu {
@@ -427,6 +455,14 @@ func (r *TRichEdit) SetStyleElements(value TStyleElements) {
     RichEdit_SetStyleElements(r.instance, value)
 }
 
+func (r *TRichEdit) Zoom() int32 {
+    return RichEdit_GetZoom(r.instance)
+}
+
+func (r *TRichEdit) SetZoom(value int32) {
+    RichEdit_SetZoom(r.instance, value)
+}
+
 func (r *TRichEdit) SetOnChange(fn TNotifyEvent) {
     RichEdit_SetOnChange(r.instance, fn)
 }
@@ -481,6 +517,18 @@ func (r *TRichEdit) SetOnMouseUp(fn TMouseEvent) {
 
 func (r *TRichEdit) SetOnMouseWheel(fn TMouseWheelEvent) {
     RichEdit_SetOnMouseWheel(r.instance, fn)
+}
+
+func (r *TRichEdit) ActiveLineNo() uint32 {
+    return RichEdit_GetActiveLineNo(r.instance)
+}
+
+func (r *TRichEdit) PageRect() TRect {
+    return RichEdit_GetPageRect(r.instance)
+}
+
+func (r *TRichEdit) SetPageRect(value TRect) {
+    RichEdit_SetPageRect(r.instance, value)
 }
 
 func (r *TRichEdit) CaretPos() TPoint {

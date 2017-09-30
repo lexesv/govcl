@@ -259,6 +259,14 @@ func (m *TMonthCalendar) SetMaxDate(value TDate) {
     MonthCalendar_SetMaxDate(m.instance, value)
 }
 
+func (m *TMonthCalendar) MaxSelectRange() int32 {
+    return MonthCalendar_GetMaxSelectRange(m.instance)
+}
+
+func (m *TMonthCalendar) SetMaxSelectRange(value int32) {
+    MonthCalendar_SetMaxSelectRange(m.instance, value)
+}
+
 func (m *TMonthCalendar) MinDate() TDate {
     return MonthCalendar_GetMinDate(m.instance)
 }

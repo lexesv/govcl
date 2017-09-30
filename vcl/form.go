@@ -59,6 +59,10 @@ func (f *TForm) Hide() {
     Form_Hide(f.instance)
 }
 
+func (f *TForm) Print() {
+    Form_Print(f.instance)
+}
+
 func (f *TForm) SetFocus() {
     Form_SetFocus(f.instance)
 }

@@ -1317,3 +1317,15 @@ const (
 	dowSunday
 	dowLocaleDefault
 )
+
+// TSearchType = (stWholeWord, stMatchCase);
+type TSearchType int32
+
+const (
+	StWholeWord = iota + 0
+	StMatchCase
+)
+
+// TSearchTypes = set of TSearchType;
+
+type TSearchTypes uint32

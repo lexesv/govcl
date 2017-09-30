@@ -75,6 +75,10 @@ func (e *TEdit) SelectAll() {
     Edit_SelectAll(e.instance)
 }
 
+func (e *TEdit) GetSelTextBuf(Buffer string, BufSize int32) int32 {
+    return Edit_GetSelTextBuf(e.instance, Buffer , BufSize )
+}
+
 func (e *TEdit) CanFocus() bool {
     return Edit_CanFocus(e.instance)
 }

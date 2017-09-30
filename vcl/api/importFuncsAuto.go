@@ -15404,6 +15404,24 @@ func RichEdit_GetActiveLineNo(obj uintptr) uint32 {
     return uint32(ret)
 }
 
+func RichEdit_GetDefAttributes(obj uintptr) uintptr {
+    ret, _, _ := richEdit_GetDefAttributes.Call(obj)
+    return ret
+}
+
+func RichEdit_SetDefAttributes(obj uintptr, value uintptr) {
+   richEdit_SetDefAttributes.Call(obj, value)
+}
+
+func RichEdit_GetSelAttributes(obj uintptr) uintptr {
+    ret, _, _ := richEdit_GetSelAttributes.Call(obj)
+    return ret
+}
+
+func RichEdit_SetSelAttributes(obj uintptr, value uintptr) {
+   richEdit_SetSelAttributes.Call(obj, value)
+}
+
 func RichEdit_GetPageRect(obj uintptr) TRect {
     var ret TRect
     richEdit_GetPageRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -15412,6 +15430,11 @@ func RichEdit_GetPageRect(obj uintptr) TRect {
 
 func RichEdit_SetPageRect(obj uintptr, value TRect) {
    richEdit_SetPageRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func RichEdit_GetParagraph(obj uintptr) uintptr {
+    ret, _, _ := richEdit_GetParagraph.Call(obj)
+    return ret
 }
 
 func RichEdit_GetCaretPos(obj uintptr) TPoint {
@@ -30499,5 +30522,209 @@ func MonthCalColors_GetHashCode(obj uintptr) int32 {
 func MonthCalColors_ToString(obj uintptr) string {
     ret, _, _ := monthCalColors_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+
+//--------------------------- TParaAttributes ---------------------------
+
+func ParaAttributes_Assign(obj uintptr, Source uintptr)  {
+    paraAttributes_Assign.Call(obj, Source )
+}
+
+func ParaAttributes_GetNamePath(obj uintptr) string {
+    ret, _, _ := paraAttributes_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ParaAttributes_ClassName(obj uintptr) string {
+    ret, _, _ := paraAttributes_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ParaAttributes_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := paraAttributes_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func ParaAttributes_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := paraAttributes_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func ParaAttributes_ToString(obj uintptr) string {
+    ret, _, _ := paraAttributes_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ParaAttributes_GetAlignment(obj uintptr) TAlignment {
+    ret, _, _ := paraAttributes_GetAlignment.Call(obj)
+    return TAlignment(ret)
+}
+
+func ParaAttributes_SetAlignment(obj uintptr, value TAlignment) {
+   paraAttributes_SetAlignment.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetFirstIndent(obj uintptr) int32 {
+    ret, _, _ := paraAttributes_GetFirstIndent.Call(obj)
+    return int32(ret)
+}
+
+func ParaAttributes_SetFirstIndent(obj uintptr, value int32) {
+   paraAttributes_SetFirstIndent.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetLeftIndent(obj uintptr) int32 {
+    ret, _, _ := paraAttributes_GetLeftIndent.Call(obj)
+    return int32(ret)
+}
+
+func ParaAttributes_SetLeftIndent(obj uintptr, value int32) {
+   paraAttributes_SetLeftIndent.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetNumbering(obj uintptr) TNumberingStyle {
+    ret, _, _ := paraAttributes_GetNumbering.Call(obj)
+    return TNumberingStyle(ret)
+}
+
+func ParaAttributes_SetNumbering(obj uintptr, value TNumberingStyle) {
+   paraAttributes_SetNumbering.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetRightIndent(obj uintptr) int32 {
+    ret, _, _ := paraAttributes_GetRightIndent.Call(obj)
+    return int32(ret)
+}
+
+func ParaAttributes_SetRightIndent(obj uintptr, value int32) {
+   paraAttributes_SetRightIndent.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetTabCount(obj uintptr) int32 {
+    ret, _, _ := paraAttributes_GetTabCount.Call(obj)
+    return int32(ret)
+}
+
+func ParaAttributes_SetTabCount(obj uintptr, value int32) {
+   paraAttributes_SetTabCount.Call(obj, uintptr(value))
+}
+
+func ParaAttributes_GetTab(obj uintptr, Index uint8) int32 {
+    ret, _, _ := paraAttributes_GetTab.Call(obj, uintptr(Index))
+    return int32(ret)
+}
+
+func ParaAttributes_SetTab(obj uintptr, Index uint8, value int32) {
+   paraAttributes_SetTab.Call(obj, uintptr(Index), uintptr(value))
+}
+
+
+//--------------------------- TTextAttributes ---------------------------
+
+func TextAttributes_Assign(obj uintptr, Source uintptr)  {
+    textAttributes_Assign.Call(obj, Source )
+}
+
+func TextAttributes_GetNamePath(obj uintptr) string {
+    ret, _, _ := textAttributes_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func TextAttributes_ClassName(obj uintptr) string {
+    ret, _, _ := textAttributes_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func TextAttributes_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := textAttributes_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func TextAttributes_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := textAttributes_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func TextAttributes_ToString(obj uintptr) string {
+    ret, _, _ := textAttributes_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func TextAttributes_GetCharset(obj uintptr) TFontCharset {
+    ret, _, _ := textAttributes_GetCharset.Call(obj)
+    return TFontCharset(ret)
+}
+
+func TextAttributes_SetCharset(obj uintptr, value TFontCharset) {
+   textAttributes_SetCharset.Call(obj, uintptr(value))
+}
+
+func TextAttributes_GetColor(obj uintptr) TColor {
+    ret, _, _ := textAttributes_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func TextAttributes_SetColor(obj uintptr, value TColor) {
+   textAttributes_SetColor.Call(obj, uintptr(value))
+}
+
+func TextAttributes_GetConsistentAttributes(obj uintptr) TConsistentAttributes {
+    ret, _, _ := textAttributes_GetConsistentAttributes.Call(obj)
+    return TConsistentAttributes(ret)
+}
+
+func TextAttributes_GetName(obj uintptr) string {
+    ret, _, _ := textAttributes_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func TextAttributes_SetName(obj uintptr, value string) {
+   textAttributes_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func TextAttributes_GetPitch(obj uintptr) TFontPitch {
+    ret, _, _ := textAttributes_GetPitch.Call(obj)
+    return TFontPitch(ret)
+}
+
+func TextAttributes_SetPitch(obj uintptr, value TFontPitch) {
+   textAttributes_SetPitch.Call(obj, uintptr(value))
+}
+
+func TextAttributes_GetProtected(obj uintptr) bool {
+    ret, _, _ := textAttributes_GetProtected.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func TextAttributes_SetProtected(obj uintptr, value bool) {
+   textAttributes_SetProtected.Call(obj, GoBoolToDBool(value))
+}
+
+func TextAttributes_GetSize(obj uintptr) int32 {
+    ret, _, _ := textAttributes_GetSize.Call(obj)
+    return int32(ret)
+}
+
+func TextAttributes_SetSize(obj uintptr, value int32) {
+   textAttributes_SetSize.Call(obj, uintptr(value))
+}
+
+func TextAttributes_GetStyle(obj uintptr) TFontStyles {
+    ret, _, _ := textAttributes_GetStyle.Call(obj)
+    return TFontStyles(ret)
+}
+
+func TextAttributes_SetStyle(obj uintptr, value TFontStyles) {
+   textAttributes_SetStyle.Call(obj, uintptr(value))
+}
+
+func TextAttributes_GetHeight(obj uintptr) int32 {
+    ret, _, _ := textAttributes_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func TextAttributes_SetHeight(obj uintptr, value int32) {
+   textAttributes_SetHeight.Call(obj, uintptr(value))
 }
 

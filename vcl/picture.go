@@ -51,11 +51,11 @@ func (p *TPicture) IsValid() bool {
 }
 
 func (p *TPicture) LoadFromFile(Filename string) {
-    Picture_LoadFromFile(p.instance, Filename )
+    Picture_LoadFromFile(p.instance, Filename)
 }
 
 func (p *TPicture) SaveToFile(Filename string) {
-    Picture_SaveToFile(p.instance, Filename )
+    Picture_SaveToFile(p.instance, Filename)
 }
 
 func (p *TPicture) LoadFromStream(Stream IObject) {

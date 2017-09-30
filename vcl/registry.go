@@ -10,6 +10,7 @@ package vcl
 
 
 import (
+    "time"
 	. "gitee.com/ying32/govcl/vcl/api"
     . "gitee.com/ying32/govcl/vcl/types"
 )
@@ -56,15 +57,15 @@ func (r *TRegistry) CloseKey() {
 }
 
 func (r *TRegistry) CreateKey(Key string) bool {
-    return Registry_CreateKey(r.instance, Key )
+    return Registry_CreateKey(r.instance, Key)
 }
 
 func (r *TRegistry) DeleteKey(Key string) bool {
-    return Registry_DeleteKey(r.instance, Key )
+    return Registry_DeleteKey(r.instance, Key)
 }
 
 func (r *TRegistry) DeleteValue(Name string) bool {
-    return Registry_DeleteValue(r.instance, Name )
+    return Registry_DeleteValue(r.instance, Name)
 }
 
 func (r *TRegistry) HasSubKeys() bool {
@@ -72,111 +73,111 @@ func (r *TRegistry) HasSubKeys() bool {
 }
 
 func (r *TRegistry) KeyExists(Key string) bool {
-    return Registry_KeyExists(r.instance, Key )
+    return Registry_KeyExists(r.instance, Key)
 }
 
 func (r *TRegistry) LoadKey(Key string, FileName string) bool {
-    return Registry_LoadKey(r.instance, Key , FileName )
+    return Registry_LoadKey(r.instance, Key , FileName)
 }
 
 func (r *TRegistry) MoveKey(OldName string, NewName string, Delete bool) {
-    Registry_MoveKey(r.instance, OldName , NewName , Delete )
+    Registry_MoveKey(r.instance, OldName , NewName , Delete)
 }
 
 func (r *TRegistry) OpenKey(Key string, CanCreate bool) bool {
-    return Registry_OpenKey(r.instance, Key , CanCreate )
+    return Registry_OpenKey(r.instance, Key , CanCreate)
 }
 
 func (r *TRegistry) OpenKeyReadOnly(Key string) bool {
-    return Registry_OpenKeyReadOnly(r.instance, Key )
+    return Registry_OpenKeyReadOnly(r.instance, Key)
 }
 
 func (r *TRegistry) ReadBool(Name string) bool {
-    return Registry_ReadBool(r.instance, Name )
+    return Registry_ReadBool(r.instance, Name)
 }
 
-func (r *TRegistry) ReadDate(Name string) TDateTime {
-    return Registry_ReadDate(r.instance, Name )
+func (r *TRegistry) ReadDate(Name string) time.Time {
+    return Registry_ReadDate(r.instance, Name)
 }
 
-func (r *TRegistry) ReadDateTime(Name string) TDateTime {
-    return Registry_ReadDateTime(r.instance, Name )
+func (r *TRegistry) ReadDateTime(Name string) time.Time {
+    return Registry_ReadDateTime(r.instance, Name)
 }
 
 func (r *TRegistry) ReadFloat(Name string) float64 {
-    return Registry_ReadFloat(r.instance, Name )
+    return Registry_ReadFloat(r.instance, Name)
 }
 
 func (r *TRegistry) ReadInteger(Name string) int32 {
-    return Registry_ReadInteger(r.instance, Name )
+    return Registry_ReadInteger(r.instance, Name)
 }
 
 func (r *TRegistry) ReadString(Name string) string {
-    return Registry_ReadString(r.instance, Name )
+    return Registry_ReadString(r.instance, Name)
 }
 
-func (r *TRegistry) ReadTime(Name string) TDateTime {
-    return Registry_ReadTime(r.instance, Name )
+func (r *TRegistry) ReadTime(Name string) time.Time {
+    return Registry_ReadTime(r.instance, Name)
 }
 
 func (r *TRegistry) RegistryConnect(UNCName string) bool {
-    return Registry_RegistryConnect(r.instance, UNCName )
+    return Registry_RegistryConnect(r.instance, UNCName)
 }
 
 func (r *TRegistry) RenameValue(OldName string, NewName string) {
-    Registry_RenameValue(r.instance, OldName , NewName )
+    Registry_RenameValue(r.instance, OldName , NewName)
 }
 
 func (r *TRegistry) ReplaceKey(Key string, FileName string, BackUpFileName string) bool {
-    return Registry_ReplaceKey(r.instance, Key , FileName , BackUpFileName )
+    return Registry_ReplaceKey(r.instance, Key , FileName , BackUpFileName)
 }
 
 func (r *TRegistry) RestoreKey(Key string, FileName string) bool {
-    return Registry_RestoreKey(r.instance, Key , FileName )
+    return Registry_RestoreKey(r.instance, Key , FileName)
 }
 
 func (r *TRegistry) SaveKey(Key string, FileName string) bool {
-    return Registry_SaveKey(r.instance, Key , FileName )
+    return Registry_SaveKey(r.instance, Key , FileName)
 }
 
 func (r *TRegistry) UnLoadKey(Key string) bool {
-    return Registry_UnLoadKey(r.instance, Key )
+    return Registry_UnLoadKey(r.instance, Key)
 }
 
 func (r *TRegistry) ValueExists(Name string) bool {
-    return Registry_ValueExists(r.instance, Name )
+    return Registry_ValueExists(r.instance, Name)
 }
 
 func (r *TRegistry) WriteBool(Name string, Value bool) {
-    Registry_WriteBool(r.instance, Name , Value )
+    Registry_WriteBool(r.instance, Name , Value)
 }
 
-func (r *TRegistry) WriteDate(Name string, Value TDateTime) {
-    Registry_WriteDate(r.instance, Name , Value )
+func (r *TRegistry) WriteDate(Name string, Value time.Time) {
+    Registry_WriteDate(r.instance, Name , Value)
 }
 
-func (r *TRegistry) WriteDateTime(Name string, Value TDateTime) {
-    Registry_WriteDateTime(r.instance, Name , Value )
+func (r *TRegistry) WriteDateTime(Name string, Value time.Time) {
+    Registry_WriteDateTime(r.instance, Name , Value)
 }
 
 func (r *TRegistry) WriteFloat(Name string, Value float64) {
-    Registry_WriteFloat(r.instance, Name , Value )
+    Registry_WriteFloat(r.instance, Name , Value)
 }
 
 func (r *TRegistry) WriteInteger(Name string, Value int32) {
-    Registry_WriteInteger(r.instance, Name , Value )
+    Registry_WriteInteger(r.instance, Name , Value)
 }
 
 func (r *TRegistry) WriteString(Name string, Value string) {
-    Registry_WriteString(r.instance, Name , Value )
+    Registry_WriteString(r.instance, Name , Value)
 }
 
 func (r *TRegistry) WriteExpandString(Name string, Value string) {
-    Registry_WriteExpandString(r.instance, Name , Value )
+    Registry_WriteExpandString(r.instance, Name , Value)
 }
 
-func (r *TRegistry) WriteTime(Name string, Value TDateTime) {
-    Registry_WriteTime(r.instance, Name , Value )
+func (r *TRegistry) WriteTime(Name string, Value time.Time) {
+    Registry_WriteTime(r.instance, Name , Value)
 }
 
 func (r *TRegistry) ClassName() string {

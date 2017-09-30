@@ -52,7 +52,7 @@ func (a *TActionList) IsValid() bool {
 }
 
 func (a *TActionList) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ActionList_FindComponent(a.instance, AName ))
+    return ComponentFromInst(ActionList_FindComponent(a.instance, AName))
 }
 
 func (a *TActionList) GetNamePath() string {

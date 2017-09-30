@@ -56,7 +56,7 @@ func (s *TSaveTextFileDialog) Execute() bool {
 }
 
 func (s *TSaveTextFileDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(SaveTextFileDialog_FindComponent(s.instance, AName ))
+    return ComponentFromInst(SaveTextFileDialog_FindComponent(s.instance, AName))
 }
 
 func (s *TSaveTextFileDialog) GetNamePath() string {

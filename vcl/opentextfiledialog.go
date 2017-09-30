@@ -52,11 +52,11 @@ func (o *TOpenTextFileDialog) IsValid() bool {
 }
 
 func (o *TOpenTextFileDialog) Execute(ParentWnd HWND) bool {
-    return OpenTextFileDialog_Execute(o.instance, ParentWnd )
+    return OpenTextFileDialog_Execute(o.instance, ParentWnd)
 }
 
 func (o *TOpenTextFileDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(OpenTextFileDialog_FindComponent(o.instance, AName ))
+    return ComponentFromInst(OpenTextFileDialog_FindComponent(o.instance, AName))
 }
 
 func (o *TOpenTextFileDialog) GetNamePath() string {

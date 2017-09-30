@@ -52,7 +52,7 @@ func (t *TTreeNode) IsValid() bool {
 }
 
 func (t *TTreeNode) AlphaSort(ARecurse bool) bool {
-    return TreeNode_AlphaSort(t.instance, ARecurse )
+    return TreeNode_AlphaSort(t.instance, ARecurse)
 }
 
 func (t *TTreeNode) Assign(Source IObject) {
@@ -72,7 +72,7 @@ func (t *TTreeNode) MakeVisible() {
 }
 
 func (t *TTreeNode) MoveTo(Destination *TTreeNode, Mode TNodeAttachMode) {
-    TreeNode_MoveTo(t.instance, CheckPtr(Destination), Mode )
+    TreeNode_MoveTo(t.instance, CheckPtr(Destination), Mode)
 }
 
 func (t *TTreeNode) GetNamePath() string {

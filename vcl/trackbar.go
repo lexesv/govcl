@@ -52,7 +52,7 @@ func (t *TTrackBar) IsValid() bool {
 }
 
 func (t *TTrackBar) SetTick(Value int32) {
-    TrackBar_SetTick(t.instance, Value )
+    TrackBar_SetTick(t.instance, Value)
 }
 
 func (t *TTrackBar) CanFocus() bool {
@@ -60,7 +60,7 @@ func (t *TTrackBar) CanFocus() bool {
 }
 
 func (t *TTrackBar) FlipChildren(AllLevels bool) {
-    TrackBar_FlipChildren(t.instance, AllLevels )
+    TrackBar_FlipChildren(t.instance, AllLevels)
 }
 
 func (t *TTrackBar) Focused() bool {
@@ -84,11 +84,11 @@ func (t *TTrackBar) Repaint() {
 }
 
 func (t *TTrackBar) ScaleBy(M int32, D int32) {
-    TrackBar_ScaleBy(t.instance, M , D )
+    TrackBar_ScaleBy(t.instance, M , D)
 }
 
 func (t *TTrackBar) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    TrackBar_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight )
+    TrackBar_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (t *TTrackBar) SetFocus() {
@@ -112,7 +112,7 @@ func (t *TTrackBar) Hide() {
 }
 
 func (t *TTrackBar) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return TrackBar_Perform(t.instance, Msg , WParam , LParam )
+    return TrackBar_Perform(t.instance, Msg , WParam , LParam)
 }
 
 func (t *TTrackBar) Refresh() {
@@ -128,11 +128,11 @@ func (t *TTrackBar) Show() {
 }
 
 func (t *TTrackBar) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return TrackBar_GetTextBuf(t.instance, Buffer , BufSize )
+    return TrackBar_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
 func (t *TTrackBar) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(TrackBar_FindComponent(t.instance, AName ))
+    return ComponentFromInst(TrackBar_FindComponent(t.instance, AName))
 }
 
 func (t *TTrackBar) GetNamePath() string {

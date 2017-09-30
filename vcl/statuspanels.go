@@ -55,11 +55,11 @@ func (s *TStatusPanels) Add() *TStatusPanel {
 }
 
 func (s *TStatusPanels) AddItem(Item *TStatusPanel, Index int32) *TStatusPanel {
-    return StatusPanelFromInst(StatusPanels_AddItem(s.instance, CheckPtr(Item), Index ))
+    return StatusPanelFromInst(StatusPanels_AddItem(s.instance, CheckPtr(Item), Index))
 }
 
 func (s *TStatusPanels) Insert(Index int32) *TStatusPanel {
-    return StatusPanelFromInst(StatusPanels_Insert(s.instance, Index ))
+    return StatusPanelFromInst(StatusPanels_Insert(s.instance, Index))
 }
 
 func (s *TStatusPanels) Owner() *TObject {
@@ -79,7 +79,7 @@ func (s *TStatusPanels) Clear() {
 }
 
 func (s *TStatusPanels) Delete(Index int32) {
-    StatusPanels_Delete(s.instance, Index )
+    StatusPanels_Delete(s.instance, Index)
 }
 
 func (s *TStatusPanels) EndUpdate() {

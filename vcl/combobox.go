@@ -80,7 +80,7 @@ func (c *TComboBox) CanFocus() bool {
 }
 
 func (c *TComboBox) FlipChildren(AllLevels bool) {
-    ComboBox_FlipChildren(c.instance, AllLevels )
+    ComboBox_FlipChildren(c.instance, AllLevels)
 }
 
 func (c *TComboBox) HandleAllocated() bool {
@@ -100,11 +100,11 @@ func (c *TComboBox) Repaint() {
 }
 
 func (c *TComboBox) ScaleBy(M int32, D int32) {
-    ComboBox_ScaleBy(c.instance, M , D )
+    ComboBox_ScaleBy(c.instance, M , D)
 }
 
 func (c *TComboBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ComboBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight )
+    ComboBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (c *TComboBox) SetFocus() {
@@ -128,7 +128,7 @@ func (c *TComboBox) Hide() {
 }
 
 func (c *TComboBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ComboBox_Perform(c.instance, Msg , WParam , LParam )
+    return ComboBox_Perform(c.instance, Msg , WParam , LParam)
 }
 
 func (c *TComboBox) Refresh() {
@@ -144,11 +144,11 @@ func (c *TComboBox) Show() {
 }
 
 func (c *TComboBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ComboBox_GetTextBuf(c.instance, Buffer , BufSize )
+    return ComboBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TComboBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ComboBox_FindComponent(c.instance, AName ))
+    return ComponentFromInst(ComboBox_FindComponent(c.instance, AName))
 }
 
 func (c *TComboBox) GetNamePath() string {

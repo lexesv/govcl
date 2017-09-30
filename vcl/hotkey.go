@@ -56,7 +56,7 @@ func (h *THotKey) CanFocus() bool {
 }
 
 func (h *THotKey) FlipChildren(AllLevels bool) {
-    HotKey_FlipChildren(h.instance, AllLevels )
+    HotKey_FlipChildren(h.instance, AllLevels)
 }
 
 func (h *THotKey) Focused() bool {
@@ -80,11 +80,11 @@ func (h *THotKey) Repaint() {
 }
 
 func (h *THotKey) ScaleBy(M int32, D int32) {
-    HotKey_ScaleBy(h.instance, M , D )
+    HotKey_ScaleBy(h.instance, M , D)
 }
 
 func (h *THotKey) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    HotKey_SetBounds(h.instance, ALeft , ATop , AWidth , AHeight )
+    HotKey_SetBounds(h.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (h *THotKey) SetFocus() {
@@ -108,7 +108,7 @@ func (h *THotKey) Hide() {
 }
 
 func (h *THotKey) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return HotKey_Perform(h.instance, Msg , WParam , LParam )
+    return HotKey_Perform(h.instance, Msg , WParam , LParam)
 }
 
 func (h *THotKey) Refresh() {
@@ -124,11 +124,11 @@ func (h *THotKey) Show() {
 }
 
 func (h *THotKey) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return HotKey_GetTextBuf(h.instance, Buffer , BufSize )
+    return HotKey_GetTextBuf(h.instance, Buffer , BufSize)
 }
 
 func (h *THotKey) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(HotKey_FindComponent(h.instance, AName ))
+    return ComponentFromInst(HotKey_FindComponent(h.instance, AName))
 }
 
 func (h *THotKey) GetNamePath() string {

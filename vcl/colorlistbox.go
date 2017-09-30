@@ -76,7 +76,7 @@ func (c *TColorListBox) CanFocus() bool {
 }
 
 func (c *TColorListBox) FlipChildren(AllLevels bool) {
-    ColorListBox_FlipChildren(c.instance, AllLevels )
+    ColorListBox_FlipChildren(c.instance, AllLevels)
 }
 
 func (c *TColorListBox) Focused() bool {
@@ -100,11 +100,11 @@ func (c *TColorListBox) Repaint() {
 }
 
 func (c *TColorListBox) ScaleBy(M int32, D int32) {
-    ColorListBox_ScaleBy(c.instance, M , D )
+    ColorListBox_ScaleBy(c.instance, M , D)
 }
 
 func (c *TColorListBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ColorListBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight )
+    ColorListBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (c *TColorListBox) SetFocus() {
@@ -128,7 +128,7 @@ func (c *TColorListBox) Hide() {
 }
 
 func (c *TColorListBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ColorListBox_Perform(c.instance, Msg , WParam , LParam )
+    return ColorListBox_Perform(c.instance, Msg , WParam , LParam)
 }
 
 func (c *TColorListBox) Refresh() {
@@ -144,11 +144,11 @@ func (c *TColorListBox) Show() {
 }
 
 func (c *TColorListBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ColorListBox_GetTextBuf(c.instance, Buffer , BufSize )
+    return ColorListBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TColorListBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ColorListBox_FindComponent(c.instance, AName ))
+    return ComponentFromInst(ColorListBox_FindComponent(c.instance, AName))
 }
 
 func (c *TColorListBox) GetNamePath() string {

@@ -52,27 +52,27 @@ func (c *TCanvas) IsValid() bool {
 }
 
 func (c *TCanvas) Arc(X1 int32, Y1 int32, X2 int32, Y2 int32, X3 int32, Y3 int32, X4 int32, Y4 int32) {
-    Canvas_Arc(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4 )
+    Canvas_Arc(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4)
 }
 
 func (c *TCanvas) ArcTo(X1 int32, Y1 int32, X2 int32, Y2 int32, X3 int32, Y3 int32, X4 int32, Y4 int32) {
-    Canvas_ArcTo(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4 )
+    Canvas_ArcTo(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4)
 }
 
 func (c *TCanvas) AngleArc(X int32, Y int32, Radius uint32, StartAngle float32, SweepAngle float32) {
-    Canvas_AngleArc(c.instance, X , Y , Radius , StartAngle , SweepAngle )
+    Canvas_AngleArc(c.instance, X , Y , Radius , StartAngle , SweepAngle)
 }
 
 func (c *TCanvas) Chord(X1 int32, Y1 int32, X2 int32, Y2 int32, X3 int32, Y3 int32, X4 int32, Y4 int32) {
-    Canvas_Chord(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4 )
+    Canvas_Chord(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4)
 }
 
 func (c *TCanvas) Ellipse(X1 int32, Y1 int32, X2 int32, Y2 int32) {
-    Canvas_Ellipse(c.instance, X1 , Y1 , X2 , Y2 )
+    Canvas_Ellipse(c.instance, X1 , Y1 , X2 , Y2)
 }
 
 func (c *TCanvas) FloodFill(X int32, Y int32, Color TColor, FillStyle TFillStyle) {
-    Canvas_FloodFill(c.instance, X , Y , Color , FillStyle )
+    Canvas_FloodFill(c.instance, X , Y , Color , FillStyle)
 }
 
 func (c *TCanvas) HandleAllocated() bool {
@@ -80,19 +80,19 @@ func (c *TCanvas) HandleAllocated() bool {
 }
 
 func (c *TCanvas) LineTo(X int32, Y int32) {
-    Canvas_LineTo(c.instance, X , Y )
+    Canvas_LineTo(c.instance, X , Y)
 }
 
 func (c *TCanvas) MoveTo(X int32, Y int32) {
-    Canvas_MoveTo(c.instance, X , Y )
+    Canvas_MoveTo(c.instance, X , Y)
 }
 
 func (c *TCanvas) Pie(X1 int32, Y1 int32, X2 int32, Y2 int32, X3 int32, Y3 int32, X4 int32, Y4 int32) {
-    Canvas_Pie(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4 )
+    Canvas_Pie(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 , X4 , Y4)
 }
 
 func (c *TCanvas) Rectangle(X1 int32, Y1 int32, X2 int32, Y2 int32) {
-    Canvas_Rectangle(c.instance, X1 , Y1 , X2 , Y2 )
+    Canvas_Rectangle(c.instance, X1 , Y1 , X2 , Y2)
 }
 
 func (c *TCanvas) Refresh() {
@@ -100,15 +100,15 @@ func (c *TCanvas) Refresh() {
 }
 
 func (c *TCanvas) RoundRect(X1 int32, Y1 int32, X2 int32, Y2 int32, X3 int32, Y3 int32) {
-    Canvas_RoundRect(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3 )
+    Canvas_RoundRect(c.instance, X1 , Y1 , X2 , Y2 , X3 , Y3)
 }
 
 func (c *TCanvas) TextExtent(Text string) TSize {
-    return Canvas_TextExtent(c.instance, Text )
+    return Canvas_TextExtent(c.instance, Text)
 }
 
 func (c *TCanvas) TextOut(X int32, Y int32, Text string) {
-    Canvas_TextOut(c.instance, X , Y , Text )
+    Canvas_TextOut(c.instance, X , Y , Text)
 }
 
 func (c *TCanvas) Lock() {

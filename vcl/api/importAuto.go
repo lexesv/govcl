@@ -4158,6 +4158,8 @@ var (
     dateTimePicker_SetCalColors = libvcl.NewProc("DateTimePicker_SetCalColors")
     dateTimePicker_GetDate = libvcl.NewProc("DateTimePicker_GetDate")
     dateTimePicker_SetDate = libvcl.NewProc("DateTimePicker_SetDate")
+    dateTimePicker_GetFormat = libvcl.NewProc("DateTimePicker_GetFormat")
+    dateTimePicker_SetFormat = libvcl.NewProc("DateTimePicker_SetFormat")
     dateTimePicker_GetTime = libvcl.NewProc("DateTimePicker_GetTime")
     dateTimePicker_SetTime = libvcl.NewProc("DateTimePicker_SetTime")
     dateTimePicker_GetChecked = libvcl.NewProc("DateTimePicker_GetChecked")

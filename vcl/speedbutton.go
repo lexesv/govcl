@@ -72,7 +72,7 @@ func (s *TSpeedButton) Invalidate() {
 }
 
 func (s *TSpeedButton) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return SpeedButton_Perform(s.instance, Msg , WParam , LParam )
+    return SpeedButton_Perform(s.instance, Msg , WParam , LParam)
 }
 
 func (s *TSpeedButton) Refresh() {
@@ -88,7 +88,7 @@ func (s *TSpeedButton) SendToBack() {
 }
 
 func (s *TSpeedButton) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    SpeedButton_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight )
+    SpeedButton_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (s *TSpeedButton) Show() {
@@ -100,11 +100,11 @@ func (s *TSpeedButton) Update() {
 }
 
 func (s *TSpeedButton) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return SpeedButton_GetTextBuf(s.instance, Buffer , BufSize )
+    return SpeedButton_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
 func (s *TSpeedButton) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(SpeedButton_FindComponent(s.instance, AName ))
+    return ComponentFromInst(SpeedButton_FindComponent(s.instance, AName))
 }
 
 func (s *TSpeedButton) GetNamePath() string {

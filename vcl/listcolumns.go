@@ -71,7 +71,7 @@ func (l *TListColumns) Clear() {
 }
 
 func (l *TListColumns) Delete(Index int32) {
-    ListColumns_Delete(l.instance, Index )
+    ListColumns_Delete(l.instance, Index)
 }
 
 func (l *TListColumns) EndUpdate() {
@@ -83,7 +83,7 @@ func (l *TListColumns) GetNamePath() string {
 }
 
 func (l *TListColumns) Insert(Index int32) *TCollectionItem {
-    return CollectionItemFromInst(ListColumns_Insert(l.instance, Index ))
+    return CollectionItemFromInst(ListColumns_Insert(l.instance, Index))
 }
 
 func (l *TListColumns) ClassName() string {

@@ -80,7 +80,7 @@ func (f *TForm) CanFocus() bool {
 }
 
 func (f *TForm) FlipChildren(AllLevels bool) {
-    Form_FlipChildren(f.instance, AllLevels )
+    Form_FlipChildren(f.instance, AllLevels)
 }
 
 func (f *TForm) Focused() bool {
@@ -104,11 +104,11 @@ func (f *TForm) Repaint() {
 }
 
 func (f *TForm) ScaleBy(M int32, D int32) {
-    Form_ScaleBy(f.instance, M , D )
+    Form_ScaleBy(f.instance, M , D)
 }
 
 func (f *TForm) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Form_SetBounds(f.instance, ALeft , ATop , AWidth , AHeight )
+    Form_SetBounds(f.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (f *TForm) Update() {
@@ -124,7 +124,7 @@ func (f *TForm) HasParent() bool {
 }
 
 func (f *TForm) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Form_Perform(f.instance, Msg , WParam , LParam )
+    return Form_Perform(f.instance, Msg , WParam , LParam)
 }
 
 func (f *TForm) Refresh() {
@@ -136,11 +136,11 @@ func (f *TForm) SendToBack() {
 }
 
 func (f *TForm) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Form_GetTextBuf(f.instance, Buffer , BufSize )
+    return Form_GetTextBuf(f.instance, Buffer , BufSize)
 }
 
 func (f *TForm) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Form_FindComponent(f.instance, AName ))
+    return ComponentFromInst(Form_FindComponent(f.instance, AName))
 }
 
 func (f *TForm) GetNamePath() string {

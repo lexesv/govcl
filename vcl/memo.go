@@ -76,7 +76,7 @@ func (m *TMemo) SelectAll() {
 }
 
 func (m *TMemo) GetSelTextBuf(Buffer string, BufSize int32) int32 {
-    return Memo_GetSelTextBuf(m.instance, Buffer , BufSize )
+    return Memo_GetSelTextBuf(m.instance, Buffer , BufSize)
 }
 
 func (m *TMemo) CanFocus() bool {
@@ -84,7 +84,7 @@ func (m *TMemo) CanFocus() bool {
 }
 
 func (m *TMemo) FlipChildren(AllLevels bool) {
-    Memo_FlipChildren(m.instance, AllLevels )
+    Memo_FlipChildren(m.instance, AllLevels)
 }
 
 func (m *TMemo) Focused() bool {
@@ -108,11 +108,11 @@ func (m *TMemo) Repaint() {
 }
 
 func (m *TMemo) ScaleBy(M int32, D int32) {
-    Memo_ScaleBy(m.instance, M , D )
+    Memo_ScaleBy(m.instance, M , D)
 }
 
 func (m *TMemo) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Memo_SetBounds(m.instance, ALeft , ATop , AWidth , AHeight )
+    Memo_SetBounds(m.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (m *TMemo) SetFocus() {
@@ -136,7 +136,7 @@ func (m *TMemo) Hide() {
 }
 
 func (m *TMemo) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Memo_Perform(m.instance, Msg , WParam , LParam )
+    return Memo_Perform(m.instance, Msg , WParam , LParam)
 }
 
 func (m *TMemo) Refresh() {
@@ -152,11 +152,11 @@ func (m *TMemo) Show() {
 }
 
 func (m *TMemo) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Memo_GetTextBuf(m.instance, Buffer , BufSize )
+    return Memo_GetTextBuf(m.instance, Buffer , BufSize)
 }
 
 func (m *TMemo) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Memo_FindComponent(m.instance, AName ))
+    return ComponentFromInst(Memo_FindComponent(m.instance, AName))
 }
 
 func (m *TMemo) GetNamePath() string {

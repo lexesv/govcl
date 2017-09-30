@@ -56,7 +56,7 @@ func (g *TGroupBox) CanFocus() bool {
 }
 
 func (g *TGroupBox) FlipChildren(AllLevels bool) {
-    GroupBox_FlipChildren(g.instance, AllLevels )
+    GroupBox_FlipChildren(g.instance, AllLevels)
 }
 
 func (g *TGroupBox) Focused() bool {
@@ -80,11 +80,11 @@ func (g *TGroupBox) Repaint() {
 }
 
 func (g *TGroupBox) ScaleBy(M int32, D int32) {
-    GroupBox_ScaleBy(g.instance, M , D )
+    GroupBox_ScaleBy(g.instance, M , D)
 }
 
 func (g *TGroupBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    GroupBox_SetBounds(g.instance, ALeft , ATop , AWidth , AHeight )
+    GroupBox_SetBounds(g.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (g *TGroupBox) SetFocus() {
@@ -108,7 +108,7 @@ func (g *TGroupBox) Hide() {
 }
 
 func (g *TGroupBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return GroupBox_Perform(g.instance, Msg , WParam , LParam )
+    return GroupBox_Perform(g.instance, Msg , WParam , LParam)
 }
 
 func (g *TGroupBox) Refresh() {
@@ -124,11 +124,11 @@ func (g *TGroupBox) Show() {
 }
 
 func (g *TGroupBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return GroupBox_GetTextBuf(g.instance, Buffer , BufSize )
+    return GroupBox_GetTextBuf(g.instance, Buffer , BufSize)
 }
 
 func (g *TGroupBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(GroupBox_FindComponent(g.instance, AName ))
+    return ComponentFromInst(GroupBox_FindComponent(g.instance, AName))
 }
 
 func (g *TGroupBox) GetNamePath() string {

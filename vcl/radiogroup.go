@@ -52,7 +52,7 @@ func (r *TRadioGroup) IsValid() bool {
 }
 
 func (r *TRadioGroup) FlipChildren(AllLevels bool) {
-    RadioGroup_FlipChildren(r.instance, AllLevels )
+    RadioGroup_FlipChildren(r.instance, AllLevels)
 }
 
 func (r *TRadioGroup) CanFocus() bool {
@@ -80,11 +80,11 @@ func (r *TRadioGroup) Repaint() {
 }
 
 func (r *TRadioGroup) ScaleBy(M int32, D int32) {
-    RadioGroup_ScaleBy(r.instance, M , D )
+    RadioGroup_ScaleBy(r.instance, M , D)
 }
 
 func (r *TRadioGroup) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    RadioGroup_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight )
+    RadioGroup_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (r *TRadioGroup) SetFocus() {
@@ -108,7 +108,7 @@ func (r *TRadioGroup) Hide() {
 }
 
 func (r *TRadioGroup) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return RadioGroup_Perform(r.instance, Msg , WParam , LParam )
+    return RadioGroup_Perform(r.instance, Msg , WParam , LParam)
 }
 
 func (r *TRadioGroup) Refresh() {
@@ -124,11 +124,11 @@ func (r *TRadioGroup) Show() {
 }
 
 func (r *TRadioGroup) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return RadioGroup_GetTextBuf(r.instance, Buffer , BufSize )
+    return RadioGroup_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
 func (r *TRadioGroup) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(RadioGroup_FindComponent(r.instance, AName ))
+    return ComponentFromInst(RadioGroup_FindComponent(r.instance, AName))
 }
 
 func (r *TRadioGroup) GetNamePath() string {

@@ -68,15 +68,15 @@ func (b *TBitmap) SaveToStream(Stream IObject) {
 }
 
 func (b *TBitmap) SetSize(AWidth int32, AHeight int32) {
-    Bitmap_SetSize(b.instance, AWidth , AHeight )
+    Bitmap_SetSize(b.instance, AWidth , AHeight)
 }
 
 func (b *TBitmap) LoadFromResourceName(Instance uintptr, ResName string) {
-    Bitmap_LoadFromResourceName(b.instance, Instance , ResName )
+    Bitmap_LoadFromResourceName(b.instance, Instance , ResName)
 }
 
 func (b *TBitmap) LoadFromResourceID(Instance uintptr, ResID int32) {
-    Bitmap_LoadFromResourceID(b.instance, Instance , ResID )
+    Bitmap_LoadFromResourceID(b.instance, Instance , ResID)
 }
 
 func (b *TBitmap) Equals(Obj IObject) bool {
@@ -84,11 +84,11 @@ func (b *TBitmap) Equals(Obj IObject) bool {
 }
 
 func (b *TBitmap) LoadFromFile(Filename string) {
-    Bitmap_LoadFromFile(b.instance, Filename )
+    Bitmap_LoadFromFile(b.instance, Filename)
 }
 
 func (b *TBitmap) SaveToFile(Filename string) {
-    Bitmap_SaveToFile(b.instance, Filename )
+    Bitmap_SaveToFile(b.instance, Filename)
 }
 
 func (b *TBitmap) GetNamePath() string {

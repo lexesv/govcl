@@ -88,15 +88,15 @@ func (g *TGIFImage) Equals(Obj IObject) bool {
 }
 
 func (g *TGIFImage) LoadFromFile(Filename string) {
-    GIFImage_LoadFromFile(g.instance, Filename )
+    GIFImage_LoadFromFile(g.instance, Filename)
 }
 
 func (g *TGIFImage) SaveToFile(Filename string) {
-    GIFImage_SaveToFile(g.instance, Filename )
+    GIFImage_SaveToFile(g.instance, Filename)
 }
 
 func (g *TGIFImage) SetSize(AWidth int32, AHeight int32) {
-    GIFImage_SetSize(g.instance, AWidth , AHeight )
+    GIFImage_SetSize(g.instance, AWidth , AHeight)
 }
 
 func (g *TGIFImage) GetNamePath() string {

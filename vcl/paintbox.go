@@ -68,7 +68,7 @@ func (p *TPaintBox) Invalidate() {
 }
 
 func (p *TPaintBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return PaintBox_Perform(p.instance, Msg , WParam , LParam )
+    return PaintBox_Perform(p.instance, Msg , WParam , LParam)
 }
 
 func (p *TPaintBox) Refresh() {
@@ -84,7 +84,7 @@ func (p *TPaintBox) SendToBack() {
 }
 
 func (p *TPaintBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    PaintBox_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight )
+    PaintBox_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (p *TPaintBox) Show() {
@@ -96,11 +96,11 @@ func (p *TPaintBox) Update() {
 }
 
 func (p *TPaintBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return PaintBox_GetTextBuf(p.instance, Buffer , BufSize )
+    return PaintBox_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
 func (p *TPaintBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(PaintBox_FindComponent(p.instance, AName ))
+    return ComponentFromInst(PaintBox_FindComponent(p.instance, AName))
 }
 
 func (p *TPaintBox) GetNamePath() string {

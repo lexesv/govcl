@@ -64,7 +64,7 @@ func (t *TTrayIcon) ShowBalloonHint() {
 }
 
 func (t *TTrayIcon) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(TrayIcon_FindComponent(t.instance, AName ))
+    return ComponentFromInst(TrayIcon_FindComponent(t.instance, AName))
 }
 
 func (t *TTrayIcon) GetNamePath() string {

@@ -76,7 +76,7 @@ func (l *TListBox) CanFocus() bool {
 }
 
 func (l *TListBox) FlipChildren(AllLevels bool) {
-    ListBox_FlipChildren(l.instance, AllLevels )
+    ListBox_FlipChildren(l.instance, AllLevels)
 }
 
 func (l *TListBox) Focused() bool {
@@ -100,11 +100,11 @@ func (l *TListBox) Repaint() {
 }
 
 func (l *TListBox) ScaleBy(M int32, D int32) {
-    ListBox_ScaleBy(l.instance, M , D )
+    ListBox_ScaleBy(l.instance, M , D)
 }
 
 func (l *TListBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ListBox_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight )
+    ListBox_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (l *TListBox) SetFocus() {
@@ -128,7 +128,7 @@ func (l *TListBox) Hide() {
 }
 
 func (l *TListBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ListBox_Perform(l.instance, Msg , WParam , LParam )
+    return ListBox_Perform(l.instance, Msg , WParam , LParam)
 }
 
 func (l *TListBox) Refresh() {
@@ -144,11 +144,11 @@ func (l *TListBox) Show() {
 }
 
 func (l *TListBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ListBox_GetTextBuf(l.instance, Buffer , BufSize )
+    return ListBox_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
 func (l *TListBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ListBox_FindComponent(l.instance, AName ))
+    return ComponentFromInst(ListBox_FindComponent(l.instance, AName))
 }
 
 func (l *TListBox) GetNamePath() string {

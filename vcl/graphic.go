@@ -55,11 +55,11 @@ func (g *TGraphic) Equals(Obj IObject) bool {
 }
 
 func (g *TGraphic) LoadFromFile(Filename string) {
-    Graphic_LoadFromFile(g.instance, Filename )
+    Graphic_LoadFromFile(g.instance, Filename)
 }
 
 func (g *TGraphic) SaveToFile(Filename string) {
-    Graphic_SaveToFile(g.instance, Filename )
+    Graphic_SaveToFile(g.instance, Filename)
 }
 
 func (g *TGraphic) LoadFromStream(Stream IObject) {
@@ -71,7 +71,7 @@ func (g *TGraphic) SaveToStream(Stream IObject) {
 }
 
 func (g *TGraphic) SetSize(AWidth int32, AHeight int32) {
-    Graphic_SetSize(g.instance, AWidth , AHeight )
+    Graphic_SetSize(g.instance, AWidth , AHeight)
 }
 
 func (g *TGraphic) Assign(Source IObject) {

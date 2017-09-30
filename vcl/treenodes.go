@@ -52,43 +52,43 @@ func (t *TTreeNodes) IsValid() bool {
 }
 
 func (t *TTreeNodes) AddChildFirst(Parent *TTreeNode, S string) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddChildFirst(t.instance, CheckPtr(Parent), S ))
+    return TreeNodeFromInst(TreeNodes_AddChildFirst(t.instance, CheckPtr(Parent), S))
 }
 
 func (t *TTreeNodes) AddChild(Parent *TTreeNode, S string) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddChild(t.instance, CheckPtr(Parent), S ))
+    return TreeNodeFromInst(TreeNodes_AddChild(t.instance, CheckPtr(Parent), S))
 }
 
 func (t *TTreeNodes) AddChildObjectFirst(Parent *TTreeNode, S string, Ptr uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddChildObjectFirst(t.instance, CheckPtr(Parent), S , Ptr ))
+    return TreeNodeFromInst(TreeNodes_AddChildObjectFirst(t.instance, CheckPtr(Parent), S , Ptr))
 }
 
 func (t *TTreeNodes) AddChildObject(Parent *TTreeNode, S string, Ptr uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddChildObject(t.instance, CheckPtr(Parent), S , Ptr ))
+    return TreeNodeFromInst(TreeNodes_AddChildObject(t.instance, CheckPtr(Parent), S , Ptr))
 }
 
 func (t *TTreeNodes) AddObjectFirst(Sibling *TTreeNode, S string, Ptr uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddObjectFirst(t.instance, CheckPtr(Sibling), S , Ptr ))
+    return TreeNodeFromInst(TreeNodes_AddObjectFirst(t.instance, CheckPtr(Sibling), S , Ptr))
 }
 
 func (t *TTreeNodes) AddObject(Sibling *TTreeNode, S string, Ptr uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddObject(t.instance, CheckPtr(Sibling), S , Ptr ))
+    return TreeNodeFromInst(TreeNodes_AddObject(t.instance, CheckPtr(Sibling), S , Ptr))
 }
 
 func (t *TTreeNodes) AddNode(Node *TTreeNode, Relative *TTreeNode, S string, Ptr uintptr, Method TNodeAttachMode) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddNode(t.instance, CheckPtr(Node), CheckPtr(Relative), S , Ptr , Method ))
+    return TreeNodeFromInst(TreeNodes_AddNode(t.instance, CheckPtr(Node), CheckPtr(Relative), S , Ptr , Method))
 }
 
 func (t *TTreeNodes) AddFirst(Sibling *TTreeNode, S string) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_AddFirst(t.instance, CheckPtr(Sibling), S ))
+    return TreeNodeFromInst(TreeNodes_AddFirst(t.instance, CheckPtr(Sibling), S))
 }
 
 func (t *TTreeNodes) Add(Sibling *TTreeNode, S string) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_Add(t.instance, CheckPtr(Sibling), S ))
+    return TreeNodeFromInst(TreeNodes_Add(t.instance, CheckPtr(Sibling), S))
 }
 
 func (t *TTreeNodes) AlphaSort(ARecurse bool) bool {
-    return TreeNodes_AlphaSort(t.instance, ARecurse )
+    return TreeNodes_AlphaSort(t.instance, ARecurse)
 }
 
 func (t *TTreeNodes) Assign(Source IObject) {
@@ -116,15 +116,15 @@ func (t *TTreeNodes) GetFirstNode() *TTreeNode {
 }
 
 func (t *TTreeNodes) GetNode(ItemId uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_GetNode(t.instance, ItemId ))
+    return TreeNodeFromInst(TreeNodes_GetNode(t.instance, ItemId))
 }
 
 func (t *TTreeNodes) Insert(Sibling *TTreeNode, S string) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_Insert(t.instance, CheckPtr(Sibling), S ))
+    return TreeNodeFromInst(TreeNodes_Insert(t.instance, CheckPtr(Sibling), S))
 }
 
 func (t *TTreeNodes) InsertObject(Sibling *TTreeNode, S string, Ptr uintptr) *TTreeNode {
-    return TreeNodeFromInst(TreeNodes_InsertObject(t.instance, CheckPtr(Sibling), S , Ptr ))
+    return TreeNodeFromInst(TreeNodes_InsertObject(t.instance, CheckPtr(Sibling), S , Ptr))
 }
 
 func (t *TTreeNodes) GetNamePath() string {

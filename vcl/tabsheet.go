@@ -56,7 +56,7 @@ func (t *TTabSheet) CanFocus() bool {
 }
 
 func (t *TTabSheet) FlipChildren(AllLevels bool) {
-    TabSheet_FlipChildren(t.instance, AllLevels )
+    TabSheet_FlipChildren(t.instance, AllLevels)
 }
 
 func (t *TTabSheet) Focused() bool {
@@ -80,11 +80,11 @@ func (t *TTabSheet) Repaint() {
 }
 
 func (t *TTabSheet) ScaleBy(M int32, D int32) {
-    TabSheet_ScaleBy(t.instance, M , D )
+    TabSheet_ScaleBy(t.instance, M , D)
 }
 
 func (t *TTabSheet) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    TabSheet_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight )
+    TabSheet_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (t *TTabSheet) SetFocus() {
@@ -108,7 +108,7 @@ func (t *TTabSheet) Hide() {
 }
 
 func (t *TTabSheet) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return TabSheet_Perform(t.instance, Msg , WParam , LParam )
+    return TabSheet_Perform(t.instance, Msg , WParam , LParam)
 }
 
 func (t *TTabSheet) Refresh() {
@@ -124,11 +124,11 @@ func (t *TTabSheet) Show() {
 }
 
 func (t *TTabSheet) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return TabSheet_GetTextBuf(t.instance, Buffer , BufSize )
+    return TabSheet_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
 func (t *TTabSheet) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(TabSheet_FindComponent(t.instance, AName ))
+    return ComponentFromInst(TabSheet_FindComponent(t.instance, AName))
 }
 
 func (t *TTabSheet) GetNamePath() string {

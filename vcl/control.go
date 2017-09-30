@@ -68,7 +68,7 @@ func (c *TControl) Invalidate() {
 }
 
 func (c *TControl) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Control_Perform(c.instance, Msg , WParam , LParam )
+    return Control_Perform(c.instance, Msg , WParam , LParam)
 }
 
 func (c *TControl) Refresh() {
@@ -84,7 +84,7 @@ func (c *TControl) SendToBack() {
 }
 
 func (c *TControl) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Control_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight )
+    Control_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (c *TControl) Show() {
@@ -96,11 +96,11 @@ func (c *TControl) Update() {
 }
 
 func (c *TControl) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Control_GetTextBuf(c.instance, Buffer , BufSize )
+    return Control_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TControl) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Control_FindComponent(c.instance, AName ))
+    return ComponentFromInst(Control_FindComponent(c.instance, AName))
 }
 
 func (c *TControl) GetNamePath() string {

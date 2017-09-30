@@ -60,7 +60,7 @@ func (t *TToolButton) Click() {
 }
 
 func (t *TToolButton) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ToolButton_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight )
+    ToolButton_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (t *TToolButton) BringToFront() {
@@ -80,7 +80,7 @@ func (t *TToolButton) Invalidate() {
 }
 
 func (t *TToolButton) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ToolButton_Perform(t.instance, Msg , WParam , LParam )
+    return ToolButton_Perform(t.instance, Msg , WParam , LParam)
 }
 
 func (t *TToolButton) Refresh() {
@@ -104,11 +104,11 @@ func (t *TToolButton) Update() {
 }
 
 func (t *TToolButton) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ToolButton_GetTextBuf(t.instance, Buffer , BufSize )
+    return ToolButton_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
 func (t *TToolButton) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ToolButton_FindComponent(t.instance, AName ))
+    return ComponentFromInst(ToolButton_FindComponent(t.instance, AName))
 }
 
 func (t *TToolButton) GetNamePath() string {

@@ -56,7 +56,7 @@ func (p *TPanel) CanFocus() bool {
 }
 
 func (p *TPanel) FlipChildren(AllLevels bool) {
-    Panel_FlipChildren(p.instance, AllLevels )
+    Panel_FlipChildren(p.instance, AllLevels)
 }
 
 func (p *TPanel) Focused() bool {
@@ -80,11 +80,11 @@ func (p *TPanel) Repaint() {
 }
 
 func (p *TPanel) ScaleBy(M int32, D int32) {
-    Panel_ScaleBy(p.instance, M , D )
+    Panel_ScaleBy(p.instance, M , D)
 }
 
 func (p *TPanel) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Panel_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight )
+    Panel_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (p *TPanel) SetFocus() {
@@ -108,7 +108,7 @@ func (p *TPanel) Hide() {
 }
 
 func (p *TPanel) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Panel_Perform(p.instance, Msg , WParam , LParam )
+    return Panel_Perform(p.instance, Msg , WParam , LParam)
 }
 
 func (p *TPanel) Refresh() {
@@ -124,11 +124,11 @@ func (p *TPanel) Show() {
 }
 
 func (p *TPanel) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Panel_GetTextBuf(p.instance, Buffer , BufSize )
+    return Panel_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
 func (p *TPanel) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Panel_FindComponent(p.instance, AName ))
+    return ComponentFromInst(Panel_FindComponent(p.instance, AName))
 }
 
 func (p *TPanel) GetNamePath() string {

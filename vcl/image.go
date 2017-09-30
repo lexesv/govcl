@@ -68,7 +68,7 @@ func (i *TImage) Invalidate() {
 }
 
 func (i *TImage) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Image_Perform(i.instance, Msg , WParam , LParam )
+    return Image_Perform(i.instance, Msg , WParam , LParam)
 }
 
 func (i *TImage) Refresh() {
@@ -84,7 +84,7 @@ func (i *TImage) SendToBack() {
 }
 
 func (i *TImage) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Image_SetBounds(i.instance, ALeft , ATop , AWidth , AHeight )
+    Image_SetBounds(i.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (i *TImage) Show() {
@@ -96,11 +96,11 @@ func (i *TImage) Update() {
 }
 
 func (i *TImage) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Image_GetTextBuf(i.instance, Buffer , BufSize )
+    return Image_GetTextBuf(i.instance, Buffer , BufSize)
 }
 
 func (i *TImage) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Image_FindComponent(i.instance, AName ))
+    return ComponentFromInst(Image_FindComponent(i.instance, AName))
 }
 
 func (i *TImage) GetNamePath() string {

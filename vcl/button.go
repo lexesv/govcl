@@ -60,7 +60,7 @@ func (b *TButton) CanFocus() bool {
 }
 
 func (b *TButton) FlipChildren(AllLevels bool) {
-    Button_FlipChildren(b.instance, AllLevels )
+    Button_FlipChildren(b.instance, AllLevels)
 }
 
 func (b *TButton) Focused() bool {
@@ -84,11 +84,11 @@ func (b *TButton) Repaint() {
 }
 
 func (b *TButton) ScaleBy(M int32, D int32) {
-    Button_ScaleBy(b.instance, M , D )
+    Button_ScaleBy(b.instance, M , D)
 }
 
 func (b *TButton) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Button_SetBounds(b.instance, ALeft , ATop , AWidth , AHeight )
+    Button_SetBounds(b.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (b *TButton) SetFocus() {
@@ -112,7 +112,7 @@ func (b *TButton) Hide() {
 }
 
 func (b *TButton) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Button_Perform(b.instance, Msg , WParam , LParam )
+    return Button_Perform(b.instance, Msg , WParam , LParam)
 }
 
 func (b *TButton) Refresh() {
@@ -128,11 +128,11 @@ func (b *TButton) Show() {
 }
 
 func (b *TButton) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Button_GetTextBuf(b.instance, Buffer , BufSize )
+    return Button_GetTextBuf(b.instance, Buffer , BufSize)
 }
 
 func (b *TButton) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Button_FindComponent(b.instance, AName ))
+    return ComponentFromInst(Button_FindComponent(b.instance, AName))
 }
 
 func (b *TButton) GetNamePath() string {

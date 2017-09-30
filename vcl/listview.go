@@ -84,7 +84,7 @@ func (l *TListView) SelectAll() {
 }
 
 func (l *TListView) Scroll(DX int32, DY int32) {
-    ListView_Scroll(l.instance, DX , DY )
+    ListView_Scroll(l.instance, DX , DY)
 }
 
 func (l *TListView) CanFocus() bool {
@@ -92,7 +92,7 @@ func (l *TListView) CanFocus() bool {
 }
 
 func (l *TListView) FlipChildren(AllLevels bool) {
-    ListView_FlipChildren(l.instance, AllLevels )
+    ListView_FlipChildren(l.instance, AllLevels)
 }
 
 func (l *TListView) Focused() bool {
@@ -116,11 +116,11 @@ func (l *TListView) Repaint() {
 }
 
 func (l *TListView) ScaleBy(M int32, D int32) {
-    ListView_ScaleBy(l.instance, M , D )
+    ListView_ScaleBy(l.instance, M , D)
 }
 
 func (l *TListView) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ListView_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight )
+    ListView_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (l *TListView) SetFocus() {
@@ -144,7 +144,7 @@ func (l *TListView) Hide() {
 }
 
 func (l *TListView) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ListView_Perform(l.instance, Msg , WParam , LParam )
+    return ListView_Perform(l.instance, Msg , WParam , LParam)
 }
 
 func (l *TListView) Refresh() {
@@ -160,11 +160,11 @@ func (l *TListView) Show() {
 }
 
 func (l *TListView) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ListView_GetTextBuf(l.instance, Buffer , BufSize )
+    return ListView_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
 func (l *TListView) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ListView_FindComponent(l.instance, AName ))
+    return ComponentFromInst(ListView_FindComponent(l.instance, AName))
 }
 
 func (l *TListView) GetNamePath() string {

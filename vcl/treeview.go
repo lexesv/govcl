@@ -52,7 +52,7 @@ func (t *TTreeView) IsValid() bool {
 }
 
 func (t *TTreeView) AlphaSort(ARecurse bool) bool {
-    return TreeView_AlphaSort(t.instance, ARecurse )
+    return TreeView_AlphaSort(t.instance, ARecurse)
 }
 
 func (t *TTreeView) FullCollapse() {
@@ -64,7 +64,7 @@ func (t *TTreeView) FullExpand() {
 }
 
 func (t *TTreeView) GetNodeAt(X int32, Y int32) *TTreeNode {
-    return TreeNodeFromInst(TreeView_GetNodeAt(t.instance, X , Y ))
+    return TreeNodeFromInst(TreeView_GetNodeAt(t.instance, X , Y))
 }
 
 func (t *TTreeView) IsEditing() bool {
@@ -72,7 +72,7 @@ func (t *TTreeView) IsEditing() bool {
 }
 
 func (t *TTreeView) LoadFromFile(FileName string) {
-    TreeView_LoadFromFile(t.instance, FileName )
+    TreeView_LoadFromFile(t.instance, FileName)
 }
 
 func (t *TTreeView) LoadFromStream(Stream IObject) {
@@ -80,7 +80,7 @@ func (t *TTreeView) LoadFromStream(Stream IObject) {
 }
 
 func (t *TTreeView) SaveToFile(FileName string) {
-    TreeView_SaveToFile(t.instance, FileName )
+    TreeView_SaveToFile(t.instance, FileName)
 }
 
 func (t *TTreeView) SaveToStream(Stream IObject) {
@@ -92,11 +92,11 @@ func (t *TTreeView) Deselect(Node *TTreeNode) {
 }
 
 func (t *TTreeView) Subselect(Node *TTreeNode, Validate bool) {
-    TreeView_Subselect(t.instance, CheckPtr(Node), Validate )
+    TreeView_Subselect(t.instance, CheckPtr(Node), Validate)
 }
 
 func (t *TTreeView) ClearSelection(KeepPrimary bool) {
-    TreeView_ClearSelection(t.instance, KeepPrimary )
+    TreeView_ClearSelection(t.instance, KeepPrimary)
 }
 
 func (t *TTreeView) FindNextToSelect() *TTreeNode {
@@ -108,7 +108,7 @@ func (t *TTreeView) CanFocus() bool {
 }
 
 func (t *TTreeView) FlipChildren(AllLevels bool) {
-    TreeView_FlipChildren(t.instance, AllLevels )
+    TreeView_FlipChildren(t.instance, AllLevels)
 }
 
 func (t *TTreeView) Focused() bool {
@@ -132,11 +132,11 @@ func (t *TTreeView) Repaint() {
 }
 
 func (t *TTreeView) ScaleBy(M int32, D int32) {
-    TreeView_ScaleBy(t.instance, M , D )
+    TreeView_ScaleBy(t.instance, M , D)
 }
 
 func (t *TTreeView) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    TreeView_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight )
+    TreeView_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (t *TTreeView) SetFocus() {
@@ -160,7 +160,7 @@ func (t *TTreeView) Hide() {
 }
 
 func (t *TTreeView) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return TreeView_Perform(t.instance, Msg , WParam , LParam )
+    return TreeView_Perform(t.instance, Msg , WParam , LParam)
 }
 
 func (t *TTreeView) Refresh() {
@@ -176,11 +176,11 @@ func (t *TTreeView) Show() {
 }
 
 func (t *TTreeView) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return TreeView_GetTextBuf(t.instance, Buffer , BufSize )
+    return TreeView_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
 func (t *TTreeView) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(TreeView_FindComponent(t.instance, AName ))
+    return ComponentFromInst(TreeView_FindComponent(t.instance, AName))
 }
 
 func (t *TTreeView) GetNamePath() string {

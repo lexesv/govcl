@@ -52,7 +52,7 @@ func (s *TStringList) IsValid() bool {
 }
 
 func (s *TStringList) Add(S string) int32 {
-    return StringList_Add(s.instance, S )
+    return StringList_Add(s.instance, S)
 }
 
 func (s *TStringList) AddObject(S string, AObject IObject) int32 {
@@ -68,15 +68,15 @@ func (s *TStringList) Clear() {
 }
 
 func (s *TStringList) Delete(Index int32) {
-    StringList_Delete(s.instance, Index )
+    StringList_Delete(s.instance, Index)
 }
 
 func (s *TStringList) IndexOf(S string) int32 {
-    return StringList_IndexOf(s.instance, S )
+    return StringList_IndexOf(s.instance, S)
 }
 
 func (s *TStringList) Insert(Index int32, S string) {
-    StringList_Insert(s.instance, Index , S )
+    StringList_Insert(s.instance, Index , S)
 }
 
 func (s *TStringList) InsertObject(Index int32, S string, AObject IObject) {
@@ -84,7 +84,7 @@ func (s *TStringList) InsertObject(Index int32, S string, AObject IObject) {
 }
 
 func (s *TStringList) Append(S string) {
-    StringList_Append(s.instance, S )
+    StringList_Append(s.instance, S)
 }
 
 func (s *TStringList) BeginUpdate() {
@@ -100,7 +100,7 @@ func (s *TStringList) Equals(Strings IObject) bool {
 }
 
 func (s *TStringList) IndexOfName(Name string) int32 {
-    return StringList_IndexOfName(s.instance, Name )
+    return StringList_IndexOfName(s.instance, Name)
 }
 
 func (s *TStringList) IndexOfObject(AObject IObject) int32 {
@@ -108,7 +108,7 @@ func (s *TStringList) IndexOfObject(AObject IObject) int32 {
 }
 
 func (s *TStringList) LoadFromFile(FileName string) {
-    StringList_LoadFromFile(s.instance, FileName )
+    StringList_LoadFromFile(s.instance, FileName)
 }
 
 func (s *TStringList) LoadFromStream(Stream IObject) {
@@ -116,11 +116,11 @@ func (s *TStringList) LoadFromStream(Stream IObject) {
 }
 
 func (s *TStringList) Move(CurIndex int32, NewIndex int32) {
-    StringList_Move(s.instance, CurIndex , NewIndex )
+    StringList_Move(s.instance, CurIndex , NewIndex)
 }
 
 func (s *TStringList) SaveToFile(FileName string) {
-    StringList_SaveToFile(s.instance, FileName )
+    StringList_SaveToFile(s.instance, FileName)
 }
 
 func (s *TStringList) SaveToStream(Stream IObject) {

@@ -56,7 +56,7 @@ func (c *TCategoryPanelGroup) CanFocus() bool {
 }
 
 func (c *TCategoryPanelGroup) FlipChildren(AllLevels bool) {
-    CategoryPanelGroup_FlipChildren(c.instance, AllLevels )
+    CategoryPanelGroup_FlipChildren(c.instance, AllLevels)
 }
 
 func (c *TCategoryPanelGroup) Focused() bool {
@@ -80,11 +80,11 @@ func (c *TCategoryPanelGroup) Repaint() {
 }
 
 func (c *TCategoryPanelGroup) ScaleBy(M int32, D int32) {
-    CategoryPanelGroup_ScaleBy(c.instance, M , D )
+    CategoryPanelGroup_ScaleBy(c.instance, M , D)
 }
 
 func (c *TCategoryPanelGroup) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    CategoryPanelGroup_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight )
+    CategoryPanelGroup_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (c *TCategoryPanelGroup) SetFocus() {
@@ -108,7 +108,7 @@ func (c *TCategoryPanelGroup) Hide() {
 }
 
 func (c *TCategoryPanelGroup) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return CategoryPanelGroup_Perform(c.instance, Msg , WParam , LParam )
+    return CategoryPanelGroup_Perform(c.instance, Msg , WParam , LParam)
 }
 
 func (c *TCategoryPanelGroup) Refresh() {
@@ -124,11 +124,11 @@ func (c *TCategoryPanelGroup) Show() {
 }
 
 func (c *TCategoryPanelGroup) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return CategoryPanelGroup_GetTextBuf(c.instance, Buffer , BufSize )
+    return CategoryPanelGroup_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TCategoryPanelGroup) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(CategoryPanelGroup_FindComponent(c.instance, AName ))
+    return ComponentFromInst(CategoryPanelGroup_FindComponent(c.instance, AName))
 }
 
 func (c *TCategoryPanelGroup) GetNamePath() string {

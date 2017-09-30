@@ -10,8 +10,8 @@ package vcl
 
 
 import (
+    "time"
 	. "gitee.com/ying32/govcl/vcl/api"
-    . "gitee.com/ying32/govcl/vcl/types"
 )
 
 type TIniFile struct {
@@ -52,11 +52,11 @@ func (i *TIniFile) IsValid() bool {
 }
 
 func (i *TIniFile) ReadString(Section string, Ident string, Default string) string {
-    return IniFile_ReadString(i.instance, Section , Ident , Default )
+    return IniFile_ReadString(i.instance, Section , Ident , Default)
 }
 
 func (i *TIniFile) WriteString(Section string, Ident string, Value string) {
-    IniFile_WriteString(i.instance, Section , Ident , Value )
+    IniFile_WriteString(i.instance, Section , Ident , Value)
 }
 
 func (i *TIniFile) ReadSections(Strings IObject) {
@@ -68,11 +68,11 @@ func (i *TIniFile) ReadSectionValues(Section string, Strings IObject) {
 }
 
 func (i *TIniFile) EraseSection(Section string) {
-    IniFile_EraseSection(i.instance, Section )
+    IniFile_EraseSection(i.instance, Section)
 }
 
 func (i *TIniFile) DeleteKey(Section string, Ident string) {
-    IniFile_DeleteKey(i.instance, Section , Ident )
+    IniFile_DeleteKey(i.instance, Section , Ident)
 }
 
 func (i *TIniFile) UpdateFile() {
@@ -80,63 +80,63 @@ func (i *TIniFile) UpdateFile() {
 }
 
 func (i *TIniFile) SectionExists(Section string) bool {
-    return IniFile_SectionExists(i.instance, Section )
+    return IniFile_SectionExists(i.instance, Section)
 }
 
 func (i *TIniFile) ReadInteger(Section string, Ident string, Default int32) int32 {
-    return IniFile_ReadInteger(i.instance, Section , Ident , Default )
+    return IniFile_ReadInteger(i.instance, Section , Ident , Default)
 }
 
 func (i *TIniFile) WriteInteger(Section string, Ident string, Value int32) {
-    IniFile_WriteInteger(i.instance, Section , Ident , Value )
+    IniFile_WriteInteger(i.instance, Section , Ident , Value)
 }
 
 func (i *TIniFile) ReadBool(Section string, Ident string, Default bool) bool {
-    return IniFile_ReadBool(i.instance, Section , Ident , Default )
+    return IniFile_ReadBool(i.instance, Section , Ident , Default)
 }
 
 func (i *TIniFile) WriteBool(Section string, Ident string, Value bool) {
-    IniFile_WriteBool(i.instance, Section , Ident , Value )
+    IniFile_WriteBool(i.instance, Section , Ident , Value)
 }
 
-func (i *TIniFile) ReadDate(Section string, Name string, Default TDateTime) TDateTime {
-    return IniFile_ReadDate(i.instance, Section , Name , Default )
+func (i *TIniFile) ReadDate(Section string, Name string, Default time.Time) time.Time {
+    return IniFile_ReadDate(i.instance, Section , Name , Default)
 }
 
-func (i *TIniFile) ReadDateTime(Section string, Name string, Default TDateTime) TDateTime {
-    return IniFile_ReadDateTime(i.instance, Section , Name , Default )
+func (i *TIniFile) ReadDateTime(Section string, Name string, Default time.Time) time.Time {
+    return IniFile_ReadDateTime(i.instance, Section , Name , Default)
 }
 
 func (i *TIniFile) ReadFloat(Section string, Name string, Default float64) float64 {
-    return IniFile_ReadFloat(i.instance, Section , Name , Default )
+    return IniFile_ReadFloat(i.instance, Section , Name , Default)
 }
 
-func (i *TIniFile) ReadTime(Section string, Name string, Default TDateTime) TDateTime {
-    return IniFile_ReadTime(i.instance, Section , Name , Default )
+func (i *TIniFile) ReadTime(Section string, Name string, Default time.Time) time.Time {
+    return IniFile_ReadTime(i.instance, Section , Name , Default)
 }
 
-func (i *TIniFile) WriteDate(Section string, Name string, Value TDateTime) {
-    IniFile_WriteDate(i.instance, Section , Name , Value )
+func (i *TIniFile) WriteDate(Section string, Name string, Value time.Time) {
+    IniFile_WriteDate(i.instance, Section , Name , Value)
 }
 
-func (i *TIniFile) WriteDateTime(Section string, Name string, Value TDateTime) {
-    IniFile_WriteDateTime(i.instance, Section , Name , Value )
+func (i *TIniFile) WriteDateTime(Section string, Name string, Value time.Time) {
+    IniFile_WriteDateTime(i.instance, Section , Name , Value)
 }
 
 func (i *TIniFile) WriteFloat(Section string, Name string, Value float64) {
-    IniFile_WriteFloat(i.instance, Section , Name , Value )
+    IniFile_WriteFloat(i.instance, Section , Name , Value)
 }
 
-func (i *TIniFile) WriteTime(Section string, Name string, Value TDateTime) {
-    IniFile_WriteTime(i.instance, Section , Name , Value )
+func (i *TIniFile) WriteTime(Section string, Name string, Value time.Time) {
+    IniFile_WriteTime(i.instance, Section , Name , Value)
 }
 
 func (i *TIniFile) ReadSubSections(Section string, Strings IObject, Recurse bool) {
-    IniFile_ReadSubSections(i.instance, Section , CheckPtr(Strings), Recurse )
+    IniFile_ReadSubSections(i.instance, Section , CheckPtr(Strings), Recurse)
 }
 
 func (i *TIniFile) ValueExists(Section string, Ident string) bool {
-    return IniFile_ValueExists(i.instance, Section , Ident )
+    return IniFile_ValueExists(i.instance, Section , Ident)
 }
 
 func (i *TIniFile) ClassName() string {

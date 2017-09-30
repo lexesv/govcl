@@ -68,11 +68,11 @@ func (g *TGIFFrame) Assign(Source IObject) {
 }
 
 func (g *TGIFFrame) SaveToFile(Filename string) {
-    GIFFrame_SaveToFile(g.instance, Filename )
+    GIFFrame_SaveToFile(g.instance, Filename)
 }
 
 func (g *TGIFFrame) LoadFromFile(Filename string) {
-    GIFFrame_LoadFromFile(g.instance, Filename )
+    GIFFrame_LoadFromFile(g.instance, Filename)
 }
 
 func (g *TGIFFrame) GetNamePath() string {

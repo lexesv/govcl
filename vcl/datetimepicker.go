@@ -10,6 +10,7 @@ package vcl
 
 
 import (
+    "time"
 	. "gitee.com/ying32/govcl/vcl/api"
     . "gitee.com/ying32/govcl/vcl/types"
 )
@@ -56,7 +57,7 @@ func (d *TDateTimePicker) CanFocus() bool {
 }
 
 func (d *TDateTimePicker) FlipChildren(AllLevels bool) {
-    DateTimePicker_FlipChildren(d.instance, AllLevels )
+    DateTimePicker_FlipChildren(d.instance, AllLevels)
 }
 
 func (d *TDateTimePicker) Focused() bool {
@@ -80,11 +81,11 @@ func (d *TDateTimePicker) Repaint() {
 }
 
 func (d *TDateTimePicker) ScaleBy(M int32, D int32) {
-    DateTimePicker_ScaleBy(d.instance, M , D )
+    DateTimePicker_ScaleBy(d.instance, M , D)
 }
 
 func (d *TDateTimePicker) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    DateTimePicker_SetBounds(d.instance, ALeft , ATop , AWidth , AHeight )
+    DateTimePicker_SetBounds(d.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (d *TDateTimePicker) SetFocus() {
@@ -108,7 +109,7 @@ func (d *TDateTimePicker) Hide() {
 }
 
 func (d *TDateTimePicker) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return DateTimePicker_Perform(d.instance, Msg , WParam , LParam )
+    return DateTimePicker_Perform(d.instance, Msg , WParam , LParam)
 }
 
 func (d *TDateTimePicker) Refresh() {
@@ -124,11 +125,11 @@ func (d *TDateTimePicker) Show() {
 }
 
 func (d *TDateTimePicker) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return DateTimePicker_GetTextBuf(d.instance, Buffer , BufSize )
+    return DateTimePicker_GetTextBuf(d.instance, Buffer , BufSize)
 }
 
 func (d *TDateTimePicker) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(DateTimePicker_FindComponent(d.instance, AName ))
+    return ComponentFromInst(DateTimePicker_FindComponent(d.instance, AName))
 }
 
 func (d *TDateTimePicker) GetNamePath() string {
@@ -155,11 +156,11 @@ func (d *TDateTimePicker) ToString() string {
     return DateTimePicker_ToString(d.instance)
 }
 
-func (d *TDateTimePicker) DateTime() TDateTime {
+func (d *TDateTimePicker) DateTime() time.Time {
     return DateTimePicker_GetDateTime(d.instance)
 }
 
-func (d *TDateTimePicker) SetDateTime(value TDateTime) {
+func (d *TDateTimePicker) SetDateTime(value time.Time) {
     DateTimePicker_SetDateTime(d.instance, value)
 }
 
@@ -239,19 +240,27 @@ func (d *TDateTimePicker) SetCalColors(value *TMonthCalColors) {
     DateTimePicker_SetCalColors(d.instance, CheckPtr(value))
 }
 
-func (d *TDateTimePicker) Date() TDate {
+func (d *TDateTimePicker) Date() time.Time {
     return DateTimePicker_GetDate(d.instance)
 }
 
-func (d *TDateTimePicker) SetDate(value TDate) {
+func (d *TDateTimePicker) SetDate(value time.Time) {
     DateTimePicker_SetDate(d.instance, value)
 }
 
-func (d *TDateTimePicker) Time() TTime {
+func (d *TDateTimePicker) Format() string {
+    return DateTimePicker_GetFormat(d.instance)
+}
+
+func (d *TDateTimePicker) SetFormat(value string) {
+    DateTimePicker_SetFormat(d.instance, value)
+}
+
+func (d *TDateTimePicker) Time() time.Time {
     return DateTimePicker_GetTime(d.instance)
 }
 
-func (d *TDateTimePicker) SetTime(value TTime) {
+func (d *TDateTimePicker) SetTime(value time.Time) {
     DateTimePicker_SetTime(d.instance, value)
 }
 
@@ -319,19 +328,19 @@ func (d *TDateTimePicker) SetKind(value TDateTimeKind) {
     DateTimePicker_SetKind(d.instance, value)
 }
 
-func (d *TDateTimePicker) MaxDate() TDate {
+func (d *TDateTimePicker) MaxDate() time.Time {
     return DateTimePicker_GetMaxDate(d.instance)
 }
 
-func (d *TDateTimePicker) SetMaxDate(value TDate) {
+func (d *TDateTimePicker) SetMaxDate(value time.Time) {
     DateTimePicker_SetMaxDate(d.instance, value)
 }
 
-func (d *TDateTimePicker) MinDate() TDate {
+func (d *TDateTimePicker) MinDate() time.Time {
     return DateTimePicker_GetMinDate(d.instance)
 }
 
-func (d *TDateTimePicker) SetMinDate(value TDate) {
+func (d *TDateTimePicker) SetMinDate(value time.Time) {
     DateTimePicker_SetMinDate(d.instance, value)
 }
 

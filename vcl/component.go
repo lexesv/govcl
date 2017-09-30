@@ -51,7 +51,7 @@ func (c *TComponent) IsValid() bool {
 }
 
 func (c *TComponent) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Component_FindComponent(c.instance, AName ))
+    return ComponentFromInst(Component_FindComponent(c.instance, AName))
 }
 
 func (c *TComponent) GetNamePath() string {

@@ -51,7 +51,7 @@ func (l *TList) IsValid() bool {
 }
 
 func (l *TList) Add(Item uintptr) int32 {
-    return List_Add(l.instance, Item )
+    return List_Add(l.instance, Item)
 }
 
 func (l *TList) Clear() {
@@ -59,19 +59,19 @@ func (l *TList) Clear() {
 }
 
 func (l *TList) Delete(Index int32) {
-    List_Delete(l.instance, Index )
+    List_Delete(l.instance, Index)
 }
 
 func (l *TList) IndexOf(Item uintptr) int32 {
-    return List_IndexOf(l.instance, Item )
+    return List_IndexOf(l.instance, Item)
 }
 
 func (l *TList) Insert(Index int32, Item uintptr) {
-    List_Insert(l.instance, Index , Item )
+    List_Insert(l.instance, Index , Item)
 }
 
 func (l *TList) Move(CurIndex int32, NewIndex int32) {
-    List_Move(l.instance, CurIndex , NewIndex )
+    List_Move(l.instance, CurIndex , NewIndex)
 }
 
 func (l *TList) ClassName() string {

@@ -64,11 +64,11 @@ func (p *TPngImage) SaveToStream(Stream IObject) {
 }
 
 func (p *TPngImage) LoadFromResourceName(Instance uintptr, Name string) {
-    PngImage_LoadFromResourceName(p.instance, Instance , Name )
+    PngImage_LoadFromResourceName(p.instance, Instance , Name)
 }
 
 func (p *TPngImage) LoadFromResourceID(Instance uintptr, ResID int32) {
-    PngImage_LoadFromResourceID(p.instance, Instance , ResID )
+    PngImage_LoadFromResourceID(p.instance, Instance , ResID)
 }
 
 func (p *TPngImage) Equals(Obj IObject) bool {
@@ -76,15 +76,15 @@ func (p *TPngImage) Equals(Obj IObject) bool {
 }
 
 func (p *TPngImage) LoadFromFile(Filename string) {
-    PngImage_LoadFromFile(p.instance, Filename )
+    PngImage_LoadFromFile(p.instance, Filename)
 }
 
 func (p *TPngImage) SaveToFile(Filename string) {
-    PngImage_SaveToFile(p.instance, Filename )
+    PngImage_SaveToFile(p.instance, Filename)
 }
 
 func (p *TPngImage) SetSize(AWidth int32, AHeight int32) {
-    PngImage_SetSize(p.instance, AWidth , AHeight )
+    PngImage_SetSize(p.instance, AWidth , AHeight)
 }
 
 func (p *TPngImage) GetNamePath() string {

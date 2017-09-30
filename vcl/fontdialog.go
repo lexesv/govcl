@@ -52,11 +52,11 @@ func (f *TFontDialog) IsValid() bool {
 }
 
 func (f *TFontDialog) Execute(ParentWnd HWND) bool {
-    return FontDialog_Execute(f.instance, ParentWnd )
+    return FontDialog_Execute(f.instance, ParentWnd)
 }
 
 func (f *TFontDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(FontDialog_FindComponent(f.instance, AName ))
+    return ComponentFromInst(FontDialog_FindComponent(f.instance, AName))
 }
 
 func (f *TFontDialog) GetNamePath() string {

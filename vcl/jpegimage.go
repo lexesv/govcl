@@ -68,15 +68,15 @@ func (j *TJPEGImage) Equals(Obj IObject) bool {
 }
 
 func (j *TJPEGImage) LoadFromFile(Filename string) {
-    JPEGImage_LoadFromFile(j.instance, Filename )
+    JPEGImage_LoadFromFile(j.instance, Filename)
 }
 
 func (j *TJPEGImage) SaveToFile(Filename string) {
-    JPEGImage_SaveToFile(j.instance, Filename )
+    JPEGImage_SaveToFile(j.instance, Filename)
 }
 
 func (j *TJPEGImage) SetSize(AWidth int32, AHeight int32) {
-    JPEGImage_SetSize(j.instance, AWidth , AHeight )
+    JPEGImage_SetSize(j.instance, AWidth , AHeight)
 }
 
 func (j *TJPEGImage) GetNamePath() string {

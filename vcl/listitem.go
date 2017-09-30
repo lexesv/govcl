@@ -68,7 +68,7 @@ func (l *TListItem) EditCaption() bool {
 }
 
 func (l *TListItem) MakeVisible(PartialOK bool) {
-    ListItem_MakeVisible(l.instance, PartialOK )
+    ListItem_MakeVisible(l.instance, PartialOK)
 }
 
 func (l *TListItem) Update() {

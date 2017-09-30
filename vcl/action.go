@@ -64,7 +64,7 @@ func (a *TAction) HasParent() bool {
 }
 
 func (a *TAction) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Action_FindComponent(a.instance, AName ))
+    return ComponentFromInst(Action_FindComponent(a.instance, AName))
 }
 
 func (a *TAction) GetNamePath() string {

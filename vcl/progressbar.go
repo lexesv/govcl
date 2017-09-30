@@ -56,7 +56,7 @@ func (p *TProgressBar) StepIt() {
 }
 
 func (p *TProgressBar) StepBy(Delta int32) {
-    ProgressBar_StepBy(p.instance, Delta )
+    ProgressBar_StepBy(p.instance, Delta)
 }
 
 func (p *TProgressBar) CanFocus() bool {
@@ -64,7 +64,7 @@ func (p *TProgressBar) CanFocus() bool {
 }
 
 func (p *TProgressBar) FlipChildren(AllLevels bool) {
-    ProgressBar_FlipChildren(p.instance, AllLevels )
+    ProgressBar_FlipChildren(p.instance, AllLevels)
 }
 
 func (p *TProgressBar) Focused() bool {
@@ -88,11 +88,11 @@ func (p *TProgressBar) Repaint() {
 }
 
 func (p *TProgressBar) ScaleBy(M int32, D int32) {
-    ProgressBar_ScaleBy(p.instance, M , D )
+    ProgressBar_ScaleBy(p.instance, M , D)
 }
 
 func (p *TProgressBar) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ProgressBar_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight )
+    ProgressBar_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (p *TProgressBar) SetFocus() {
@@ -116,7 +116,7 @@ func (p *TProgressBar) Hide() {
 }
 
 func (p *TProgressBar) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ProgressBar_Perform(p.instance, Msg , WParam , LParam )
+    return ProgressBar_Perform(p.instance, Msg , WParam , LParam)
 }
 
 func (p *TProgressBar) Refresh() {
@@ -132,11 +132,11 @@ func (p *TProgressBar) Show() {
 }
 
 func (p *TProgressBar) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ProgressBar_GetTextBuf(p.instance, Buffer , BufSize )
+    return ProgressBar_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
 func (p *TProgressBar) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ProgressBar_FindComponent(p.instance, AName ))
+    return ComponentFromInst(ProgressBar_FindComponent(p.instance, AName))
 }
 
 func (p *TProgressBar) GetNamePath() string {

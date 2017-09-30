@@ -56,11 +56,11 @@ func (p *TPopupMenu) CloseMenu() {
 }
 
 func (p *TPopupMenu) Popup(X int32, Y int32) {
-    PopupMenu_Popup(p.instance, X , Y )
+    PopupMenu_Popup(p.instance, X , Y)
 }
 
 func (p *TPopupMenu) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(PopupMenu_FindComponent(p.instance, AName ))
+    return ComponentFromInst(PopupMenu_FindComponent(p.instance, AName))
 }
 
 func (p *TPopupMenu) GetNamePath() string {

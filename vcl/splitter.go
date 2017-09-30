@@ -68,7 +68,7 @@ func (s *TSplitter) Invalidate() {
 }
 
 func (s *TSplitter) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Splitter_Perform(s.instance, Msg , WParam , LParam )
+    return Splitter_Perform(s.instance, Msg , WParam , LParam)
 }
 
 func (s *TSplitter) Refresh() {
@@ -84,7 +84,7 @@ func (s *TSplitter) SendToBack() {
 }
 
 func (s *TSplitter) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Splitter_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight )
+    Splitter_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (s *TSplitter) Show() {
@@ -96,11 +96,11 @@ func (s *TSplitter) Update() {
 }
 
 func (s *TSplitter) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Splitter_GetTextBuf(s.instance, Buffer , BufSize )
+    return Splitter_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
 func (s *TSplitter) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Splitter_FindComponent(s.instance, AName ))
+    return ComponentFromInst(Splitter_FindComponent(s.instance, AName))
 }
 
 func (s *TSplitter) GetNamePath() string {

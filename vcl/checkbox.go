@@ -56,7 +56,7 @@ func (c *TCheckBox) CanFocus() bool {
 }
 
 func (c *TCheckBox) FlipChildren(AllLevels bool) {
-    CheckBox_FlipChildren(c.instance, AllLevels )
+    CheckBox_FlipChildren(c.instance, AllLevels)
 }
 
 func (c *TCheckBox) Focused() bool {
@@ -80,11 +80,11 @@ func (c *TCheckBox) Repaint() {
 }
 
 func (c *TCheckBox) ScaleBy(M int32, D int32) {
-    CheckBox_ScaleBy(c.instance, M , D )
+    CheckBox_ScaleBy(c.instance, M , D)
 }
 
 func (c *TCheckBox) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    CheckBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight )
+    CheckBox_SetBounds(c.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (c *TCheckBox) SetFocus() {
@@ -108,7 +108,7 @@ func (c *TCheckBox) Hide() {
 }
 
 func (c *TCheckBox) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return CheckBox_Perform(c.instance, Msg , WParam , LParam )
+    return CheckBox_Perform(c.instance, Msg , WParam , LParam)
 }
 
 func (c *TCheckBox) Refresh() {
@@ -124,11 +124,11 @@ func (c *TCheckBox) Show() {
 }
 
 func (c *TCheckBox) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return CheckBox_GetTextBuf(c.instance, Buffer , BufSize )
+    return CheckBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TCheckBox) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(CheckBox_FindComponent(c.instance, AName ))
+    return ComponentFromInst(CheckBox_FindComponent(c.instance, AName))
 }
 
 func (c *TCheckBox) GetNamePath() string {

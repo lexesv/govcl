@@ -52,11 +52,11 @@ func (s *TSaveDialog) IsValid() bool {
 }
 
 func (s *TSaveDialog) Execute(ParentWnd HWND) bool {
-    return SaveDialog_Execute(s.instance, ParentWnd )
+    return SaveDialog_Execute(s.instance, ParentWnd)
 }
 
 func (s *TSaveDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(SaveDialog_FindComponent(s.instance, AName ))
+    return ComponentFromInst(SaveDialog_FindComponent(s.instance, AName))
 }
 
 func (s *TSaveDialog) GetNamePath() string {

@@ -56,15 +56,15 @@ func (r *TRichEdit) Clear() {
 }
 
 func (r *TRichEdit) FindText(SearchStr string, StartPos int32, Length int32, Options TSearchTypes) int32 {
-    return RichEdit_FindText(r.instance, SearchStr , StartPos , Length , Options )
+    return RichEdit_FindText(r.instance, SearchStr , StartPos , Length , Options)
 }
 
 func (r *TRichEdit) Print(Caption string) {
-    RichEdit_Print(r.instance, Caption )
+    RichEdit_Print(r.instance, Caption)
 }
 
 func (r *TRichEdit) GetSelTextBuf(Buffer string, BufSize int32) int32 {
-    return RichEdit_GetSelTextBuf(r.instance, Buffer , BufSize )
+    return RichEdit_GetSelTextBuf(r.instance, Buffer , BufSize)
 }
 
 func (r *TRichEdit) ClearSelection() {
@@ -92,7 +92,7 @@ func (r *TRichEdit) CanFocus() bool {
 }
 
 func (r *TRichEdit) FlipChildren(AllLevels bool) {
-    RichEdit_FlipChildren(r.instance, AllLevels )
+    RichEdit_FlipChildren(r.instance, AllLevels)
 }
 
 func (r *TRichEdit) Focused() bool {
@@ -116,11 +116,11 @@ func (r *TRichEdit) Repaint() {
 }
 
 func (r *TRichEdit) ScaleBy(M int32, D int32) {
-    RichEdit_ScaleBy(r.instance, M , D )
+    RichEdit_ScaleBy(r.instance, M , D)
 }
 
 func (r *TRichEdit) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    RichEdit_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight )
+    RichEdit_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (r *TRichEdit) SetFocus() {
@@ -144,7 +144,7 @@ func (r *TRichEdit) Hide() {
 }
 
 func (r *TRichEdit) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return RichEdit_Perform(r.instance, Msg , WParam , LParam )
+    return RichEdit_Perform(r.instance, Msg , WParam , LParam)
 }
 
 func (r *TRichEdit) Refresh() {
@@ -160,11 +160,11 @@ func (r *TRichEdit) Show() {
 }
 
 func (r *TRichEdit) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return RichEdit_GetTextBuf(r.instance, Buffer , BufSize )
+    return RichEdit_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
 func (r *TRichEdit) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(RichEdit_FindComponent(r.instance, AName ))
+    return ComponentFromInst(RichEdit_FindComponent(r.instance, AName))
 }
 
 func (r *TRichEdit) GetNamePath() string {

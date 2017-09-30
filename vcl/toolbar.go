@@ -52,7 +52,7 @@ func (t *TToolBar) IsValid() bool {
 }
 
 func (t *TToolBar) FlipChildren(AllLevels bool) {
-    ToolBar_FlipChildren(t.instance, AllLevels )
+    ToolBar_FlipChildren(t.instance, AllLevels)
 }
 
 func (t *TToolBar) CanFocus() bool {
@@ -80,11 +80,11 @@ func (t *TToolBar) Repaint() {
 }
 
 func (t *TToolBar) ScaleBy(M int32, D int32) {
-    ToolBar_ScaleBy(t.instance, M , D )
+    ToolBar_ScaleBy(t.instance, M , D)
 }
 
 func (t *TToolBar) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    ToolBar_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight )
+    ToolBar_SetBounds(t.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (t *TToolBar) SetFocus() {
@@ -108,7 +108,7 @@ func (t *TToolBar) Hide() {
 }
 
 func (t *TToolBar) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return ToolBar_Perform(t.instance, Msg , WParam , LParam )
+    return ToolBar_Perform(t.instance, Msg , WParam , LParam)
 }
 
 func (t *TToolBar) Refresh() {
@@ -124,11 +124,11 @@ func (t *TToolBar) Show() {
 }
 
 func (t *TToolBar) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return ToolBar_GetTextBuf(t.instance, Buffer , BufSize )
+    return ToolBar_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
 func (t *TToolBar) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ToolBar_FindComponent(t.instance, AName ))
+    return ComponentFromInst(ToolBar_FindComponent(t.instance, AName))
 }
 
 func (t *TToolBar) GetNamePath() string {

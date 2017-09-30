@@ -68,7 +68,7 @@ func (i *TImageList) AddIcon(Image *TIcon) int32 {
 }
 
 func (i *TImageList) AddImage(Value IComponent, Index int32) int32 {
-    return ImageList_AddImage(i.instance, CheckPtr(Value), Index )
+    return ImageList_AddImage(i.instance, CheckPtr(Value), Index)
 }
 
 func (i *TImageList) AddImages(Value IComponent) {
@@ -76,7 +76,7 @@ func (i *TImageList) AddImages(Value IComponent) {
 }
 
 func (i *TImageList) AddMasked(Image *TBitmap, MaskColor TColor) int32 {
-    return ImageList_AddMasked(i.instance, CheckPtr(Image), MaskColor )
+    return ImageList_AddMasked(i.instance, CheckPtr(Image), MaskColor)
 }
 
 func (i *TImageList) Clear() {
@@ -84,11 +84,11 @@ func (i *TImageList) Clear() {
 }
 
 func (i *TImageList) Delete(Index int32) {
-    ImageList_Delete(i.instance, Index )
+    ImageList_Delete(i.instance, Index)
 }
 
 func (i *TImageList) FileLoad(ResType TResType, Name string, MaskColor TColor) bool {
-    return ImageList_FileLoad(i.instance, ResType , Name , MaskColor )
+    return ImageList_FileLoad(i.instance, ResType , Name , MaskColor)
 }
 
 func (i *TImageList) GetBitmap(Index int32, Image *TBitmap) bool {
@@ -104,7 +104,7 @@ func (i *TImageList) GetMaskBitmap() HBITMAP {
 }
 
 func (i *TImageList) GetResource(ResType TResType, Name string, Width int32, LoadFlags TLoadResources, MaskColor TColor) bool {
-    return ImageList_GetResource(i.instance, ResType , Name , Width , LoadFlags , MaskColor )
+    return ImageList_GetResource(i.instance, ResType , Name , Width , LoadFlags , MaskColor)
 }
 
 func (i *TImageList) HandleAllocated() bool {
@@ -120,23 +120,23 @@ func (i *TImageList) InsertIcon(Index int32, Image *TIcon) {
 }
 
 func (i *TImageList) InsertMasked(Index int32, Image *TBitmap, MaskColor TColor) {
-    ImageList_InsertMasked(i.instance, Index , CheckPtr(Image), MaskColor )
+    ImageList_InsertMasked(i.instance, Index , CheckPtr(Image), MaskColor)
 }
 
 func (i *TImageList) Move(CurIndex int32, NewIndex int32) {
-    ImageList_Move(i.instance, CurIndex , NewIndex )
+    ImageList_Move(i.instance, CurIndex , NewIndex)
 }
 
 func (i *TImageList) Overlay(ImageIndex int32, Overlay uint8) bool {
-    return ImageList_Overlay(i.instance, ImageIndex , Overlay )
+    return ImageList_Overlay(i.instance, ImageIndex , Overlay)
 }
 
 func (i *TImageList) ResourceLoad(ResType TResType, Name string, MaskColor TColor) bool {
-    return ImageList_ResourceLoad(i.instance, ResType , Name , MaskColor )
+    return ImageList_ResourceLoad(i.instance, ResType , Name , MaskColor)
 }
 
 func (i *TImageList) ResInstLoad(Instance uintptr, ResType TResType, Name string, MaskColor TColor) bool {
-    return ImageList_ResInstLoad(i.instance, Instance , ResType , Name , MaskColor )
+    return ImageList_ResInstLoad(i.instance, Instance , ResType , Name , MaskColor)
 }
 
 func (i *TImageList) Replace(Index int32, Image *TBitmap, Mask *TBitmap) {
@@ -148,11 +148,11 @@ func (i *TImageList) ReplaceIcon(Index int32, Image *TIcon) {
 }
 
 func (i *TImageList) ReplaceMasked(Index int32, NewImage *TBitmap, MaskColor TColor) {
-    ImageList_ReplaceMasked(i.instance, Index , CheckPtr(NewImage), MaskColor )
+    ImageList_ReplaceMasked(i.instance, Index , CheckPtr(NewImage), MaskColor)
 }
 
 func (i *TImageList) SetSize(AWidth int32, AHeight int32) {
-    ImageList_SetSize(i.instance, AWidth , AHeight )
+    ImageList_SetSize(i.instance, AWidth , AHeight)
 }
 
 func (i *TImageList) BeginUpdate() {
@@ -164,7 +164,7 @@ func (i *TImageList) EndUpdate() {
 }
 
 func (i *TImageList) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ImageList_FindComponent(i.instance, AName ))
+    return ComponentFromInst(ImageList_FindComponent(i.instance, AName))
 }
 
 func (i *TImageList) GetNamePath() string {

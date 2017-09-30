@@ -56,7 +56,7 @@ func (s *TScreen) Realign() {
 }
 
 func (s *TScreen) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Screen_FindComponent(s.instance, AName ))
+    return ComponentFromInst(Screen_FindComponent(s.instance, AName))
 }
 
 func (s *TScreen) GetNamePath() string {

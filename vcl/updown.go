@@ -56,7 +56,7 @@ func (u *TUpDown) CanFocus() bool {
 }
 
 func (u *TUpDown) FlipChildren(AllLevels bool) {
-    UpDown_FlipChildren(u.instance, AllLevels )
+    UpDown_FlipChildren(u.instance, AllLevels)
 }
 
 func (u *TUpDown) Focused() bool {
@@ -80,11 +80,11 @@ func (u *TUpDown) Repaint() {
 }
 
 func (u *TUpDown) ScaleBy(M int32, D int32) {
-    UpDown_ScaleBy(u.instance, M , D )
+    UpDown_ScaleBy(u.instance, M , D)
 }
 
 func (u *TUpDown) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    UpDown_SetBounds(u.instance, ALeft , ATop , AWidth , AHeight )
+    UpDown_SetBounds(u.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (u *TUpDown) SetFocus() {
@@ -108,7 +108,7 @@ func (u *TUpDown) Hide() {
 }
 
 func (u *TUpDown) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return UpDown_Perform(u.instance, Msg , WParam , LParam )
+    return UpDown_Perform(u.instance, Msg , WParam , LParam)
 }
 
 func (u *TUpDown) Refresh() {
@@ -124,11 +124,11 @@ func (u *TUpDown) Show() {
 }
 
 func (u *TUpDown) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return UpDown_GetTextBuf(u.instance, Buffer , BufSize )
+    return UpDown_GetTextBuf(u.instance, Buffer , BufSize)
 }
 
 func (u *TUpDown) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(UpDown_FindComponent(u.instance, AName ))
+    return ComponentFromInst(UpDown_FindComponent(u.instance, AName))
 }
 
 func (u *TUpDown) GetNamePath() string {

@@ -52,7 +52,7 @@ func (p *TPageControl) IsValid() bool {
 }
 
 func (p *TPageControl) SelectNextPage(GoForward bool, CheckTabVisible bool) {
-    PageControl_SelectNextPage(p.instance, GoForward , CheckTabVisible )
+    PageControl_SelectNextPage(p.instance, GoForward , CheckTabVisible)
 }
 
 func (p *TPageControl) RowCount() int32 {
@@ -64,7 +64,7 @@ func (p *TPageControl) CanFocus() bool {
 }
 
 func (p *TPageControl) FlipChildren(AllLevels bool) {
-    PageControl_FlipChildren(p.instance, AllLevels )
+    PageControl_FlipChildren(p.instance, AllLevels)
 }
 
 func (p *TPageControl) Focused() bool {
@@ -88,11 +88,11 @@ func (p *TPageControl) Repaint() {
 }
 
 func (p *TPageControl) ScaleBy(M int32, D int32) {
-    PageControl_ScaleBy(p.instance, M , D )
+    PageControl_ScaleBy(p.instance, M , D)
 }
 
 func (p *TPageControl) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    PageControl_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight )
+    PageControl_SetBounds(p.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (p *TPageControl) SetFocus() {
@@ -116,7 +116,7 @@ func (p *TPageControl) Hide() {
 }
 
 func (p *TPageControl) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return PageControl_Perform(p.instance, Msg , WParam , LParam )
+    return PageControl_Perform(p.instance, Msg , WParam , LParam)
 }
 
 func (p *TPageControl) Refresh() {
@@ -132,11 +132,11 @@ func (p *TPageControl) Show() {
 }
 
 func (p *TPageControl) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return PageControl_GetTextBuf(p.instance, Buffer , BufSize )
+    return PageControl_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
 func (p *TPageControl) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(PageControl_FindComponent(p.instance, AName ))
+    return ComponentFromInst(PageControl_FindComponent(p.instance, AName))
 }
 
 func (p *TPageControl) GetNamePath() string {

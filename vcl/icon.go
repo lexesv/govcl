@@ -68,15 +68,15 @@ func (i *TIcon) SaveToStream(Stream IObject) {
 }
 
 func (i *TIcon) SetSize(AWidth int32, AHeight int32) {
-    Icon_SetSize(i.instance, AWidth , AHeight )
+    Icon_SetSize(i.instance, AWidth , AHeight)
 }
 
 func (i *TIcon) LoadFromResourceName(Instance uintptr, ResName string) {
-    Icon_LoadFromResourceName(i.instance, Instance , ResName )
+    Icon_LoadFromResourceName(i.instance, Instance , ResName)
 }
 
 func (i *TIcon) LoadFromResourceID(Instance uintptr, ResID int32) {
-    Icon_LoadFromResourceID(i.instance, Instance , ResID )
+    Icon_LoadFromResourceID(i.instance, Instance , ResID)
 }
 
 func (i *TIcon) Equals(Obj IObject) bool {
@@ -84,11 +84,11 @@ func (i *TIcon) Equals(Obj IObject) bool {
 }
 
 func (i *TIcon) LoadFromFile(Filename string) {
-    Icon_LoadFromFile(i.instance, Filename )
+    Icon_LoadFromFile(i.instance, Filename)
 }
 
 func (i *TIcon) SaveToFile(Filename string) {
-    Icon_SaveToFile(i.instance, Filename )
+    Icon_SaveToFile(i.instance, Filename)
 }
 
 func (i *TIcon) GetNamePath() string {

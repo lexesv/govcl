@@ -52,11 +52,11 @@ func (s *TStatusBar) IsValid() bool {
 }
 
 func (s *TStatusBar) FlipChildren(AllLevels bool) {
-    StatusBar_FlipChildren(s.instance, AllLevels )
+    StatusBar_FlipChildren(s.instance, AllLevels)
 }
 
 func (s *TStatusBar) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    StatusBar_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight )
+    StatusBar_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (s *TStatusBar) CanFocus() bool {
@@ -84,7 +84,7 @@ func (s *TStatusBar) Repaint() {
 }
 
 func (s *TStatusBar) ScaleBy(M int32, D int32) {
-    StatusBar_ScaleBy(s.instance, M , D )
+    StatusBar_ScaleBy(s.instance, M , D)
 }
 
 func (s *TStatusBar) SetFocus() {
@@ -108,7 +108,7 @@ func (s *TStatusBar) Hide() {
 }
 
 func (s *TStatusBar) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return StatusBar_Perform(s.instance, Msg , WParam , LParam )
+    return StatusBar_Perform(s.instance, Msg , WParam , LParam)
 }
 
 func (s *TStatusBar) Refresh() {
@@ -124,11 +124,11 @@ func (s *TStatusBar) Show() {
 }
 
 func (s *TStatusBar) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return StatusBar_GetTextBuf(s.instance, Buffer , BufSize )
+    return StatusBar_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
 func (s *TStatusBar) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(StatusBar_FindComponent(s.instance, AName ))
+    return ComponentFromInst(StatusBar_FindComponent(s.instance, AName))
 }
 
 func (s *TStatusBar) GetNamePath() string {

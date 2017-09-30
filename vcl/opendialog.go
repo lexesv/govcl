@@ -52,11 +52,11 @@ func (o *TOpenDialog) IsValid() bool {
 }
 
 func (o *TOpenDialog) Execute(ParentWnd HWND) bool {
-    return OpenDialog_Execute(o.instance, ParentWnd )
+    return OpenDialog_Execute(o.instance, ParentWnd)
 }
 
 func (o *TOpenDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(OpenDialog_FindComponent(o.instance, AName ))
+    return ComponentFromInst(OpenDialog_FindComponent(o.instance, AName))
 }
 
 func (o *TOpenDialog) GetNamePath() string {

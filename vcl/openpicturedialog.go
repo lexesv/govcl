@@ -52,11 +52,11 @@ func (o *TOpenPictureDialog) IsValid() bool {
 }
 
 func (o *TOpenPictureDialog) Execute(ParentWnd HWND) bool {
-    return OpenPictureDialog_Execute(o.instance, ParentWnd )
+    return OpenPictureDialog_Execute(o.instance, ParentWnd)
 }
 
 func (o *TOpenPictureDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(OpenPictureDialog_FindComponent(o.instance, AName ))
+    return ComponentFromInst(OpenPictureDialog_FindComponent(o.instance, AName))
 }
 
 func (o *TOpenPictureDialog) GetNamePath() string {

@@ -3,6 +3,7 @@ package api
 
 import (
     "unsafe"
+    "time"
     . "gitee.com/ying32/govcl/vcl/types"
 )
 
@@ -18437,14 +18438,13 @@ func DateTimePicker_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
-func DateTimePicker_GetDateTime(obj uintptr) TDateTime {
-    var ret TDateTime
-    dateTimePicker_GetDateTime.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func DateTimePicker_GetDateTime(obj uintptr) time.Time {
+    ret, _, _ := dateTimePicker_GetDateTime.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func DateTimePicker_SetDateTime(obj uintptr, value TDateTime) {
-   dateTimePicker_SetDateTime.Call(obj, uintptr(unsafe.Pointer(&value)))
+func DateTimePicker_SetDateTime(obj uintptr, value time.Time) {
+   dateTimePicker_SetDateTime.Call(obj, uintptr(value.Unix()))
 }
 
 func DateTimePicker_GetDroppedDown(obj uintptr) bool {
@@ -18533,24 +18533,31 @@ func DateTimePicker_SetCalColors(obj uintptr, value uintptr) {
    dateTimePicker_SetCalColors.Call(obj, value)
 }
 
-func DateTimePicker_GetDate(obj uintptr) TDate {
-    var ret TDate
-    dateTimePicker_GetDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func DateTimePicker_GetDate(obj uintptr) time.Time {
+    ret, _, _ := dateTimePicker_GetDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func DateTimePicker_SetDate(obj uintptr, value TDate) {
-   dateTimePicker_SetDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func DateTimePicker_SetDate(obj uintptr, value time.Time) {
+   dateTimePicker_SetDate.Call(obj, uintptr(value.Unix()))
 }
 
-func DateTimePicker_GetTime(obj uintptr) TTime {
-    var ret TTime
-    dateTimePicker_GetTime.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func DateTimePicker_GetFormat(obj uintptr) string {
+    ret, _, _ := dateTimePicker_GetFormat.Call(obj)
+    return DStrToGoStr(ret)
 }
 
-func DateTimePicker_SetTime(obj uintptr, value TTime) {
-   dateTimePicker_SetTime.Call(obj, uintptr(unsafe.Pointer(&value)))
+func DateTimePicker_SetFormat(obj uintptr, value string) {
+   dateTimePicker_SetFormat.Call(obj, GoStrToDStr(value))
+}
+
+func DateTimePicker_GetTime(obj uintptr) time.Time {
+    ret, _, _ := dateTimePicker_GetTime.Call(obj)
+    return time.Unix(int64(ret), 0)
+}
+
+func DateTimePicker_SetTime(obj uintptr, value time.Time) {
+   dateTimePicker_SetTime.Call(obj, uintptr(value.Unix()))
 }
 
 func DateTimePicker_GetChecked(obj uintptr) bool {
@@ -18625,24 +18632,22 @@ func DateTimePicker_SetKind(obj uintptr, value TDateTimeKind) {
    dateTimePicker_SetKind.Call(obj, uintptr(value))
 }
 
-func DateTimePicker_GetMaxDate(obj uintptr) TDate {
-    var ret TDate
-    dateTimePicker_GetMaxDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func DateTimePicker_GetMaxDate(obj uintptr) time.Time {
+    ret, _, _ := dateTimePicker_GetMaxDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func DateTimePicker_SetMaxDate(obj uintptr, value TDate) {
-   dateTimePicker_SetMaxDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func DateTimePicker_SetMaxDate(obj uintptr, value time.Time) {
+   dateTimePicker_SetMaxDate.Call(obj, uintptr(value.Unix()))
 }
 
-func DateTimePicker_GetMinDate(obj uintptr) TDate {
-    var ret TDate
-    dateTimePicker_GetMinDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func DateTimePicker_GetMinDate(obj uintptr) time.Time {
+    ret, _, _ := dateTimePicker_GetMinDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func DateTimePicker_SetMinDate(obj uintptr, value TDate) {
-   dateTimePicker_SetMinDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func DateTimePicker_SetMinDate(obj uintptr, value time.Time) {
+   dateTimePicker_SetMinDate.Call(obj, uintptr(value.Unix()))
 }
 
 func DateTimePicker_GetParseInput(obj uintptr) bool {
@@ -19177,14 +19182,13 @@ func MonthCalendar_SetMultiSelect(obj uintptr, value bool) {
    monthCalendar_SetMultiSelect.Call(obj, GoBoolToDBool(value))
 }
 
-func MonthCalendar_GetDate(obj uintptr) TDate {
-    var ret TDate
-    monthCalendar_GetDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func MonthCalendar_GetDate(obj uintptr) time.Time {
+    ret, _, _ := monthCalendar_GetDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func MonthCalendar_SetDate(obj uintptr, value TDate) {
-   monthCalendar_SetDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func MonthCalendar_SetDate(obj uintptr, value time.Time) {
+   monthCalendar_SetDate.Call(obj, uintptr(value.Unix()))
 }
 
 func MonthCalendar_GetDoubleBuffered(obj uintptr) bool {
@@ -19223,14 +19227,13 @@ func MonthCalendar_SetFont(obj uintptr, value uintptr) {
    monthCalendar_SetFont.Call(obj, value)
 }
 
-func MonthCalendar_GetMaxDate(obj uintptr) TDate {
-    var ret TDate
-    monthCalendar_GetMaxDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func MonthCalendar_GetMaxDate(obj uintptr) time.Time {
+    ret, _, _ := monthCalendar_GetMaxDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func MonthCalendar_SetMaxDate(obj uintptr, value TDate) {
-   monthCalendar_SetMaxDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func MonthCalendar_SetMaxDate(obj uintptr, value time.Time) {
+   monthCalendar_SetMaxDate.Call(obj, uintptr(value.Unix()))
 }
 
 func MonthCalendar_GetMaxSelectRange(obj uintptr) int32 {
@@ -19242,14 +19245,13 @@ func MonthCalendar_SetMaxSelectRange(obj uintptr, value int32) {
    monthCalendar_SetMaxSelectRange.Call(obj, uintptr(value))
 }
 
-func MonthCalendar_GetMinDate(obj uintptr) TDate {
-    var ret TDate
-    monthCalendar_GetMinDate.Call(obj, uintptr(unsafe.Pointer(&ret)))
-    return ret
+func MonthCalendar_GetMinDate(obj uintptr) time.Time {
+    ret, _, _ := monthCalendar_GetMinDate.Call(obj)
+    return time.Unix(int64(ret), 0)
 }
 
-func MonthCalendar_SetMinDate(obj uintptr, value TDate) {
-   monthCalendar_SetMinDate.Call(obj, uintptr(unsafe.Pointer(&value)))
+func MonthCalendar_SetMinDate(obj uintptr, value time.Time) {
+   monthCalendar_SetMinDate.Call(obj, uintptr(value.Unix()))
 }
 
 func MonthCalendar_GetParentDoubleBuffered(obj uintptr) bool {
@@ -29040,16 +29042,14 @@ func IniFile_WriteBool(obj uintptr, Section string, Ident string, Value bool)  {
     iniFile_WriteBool.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Ident) , GoBoolToDBool(Value) )
 }
 
-func IniFile_ReadDate(obj uintptr, Section string, Name string, Default TDateTime) TDateTime {
-    var ret TDateTime
-    iniFile_ReadDate.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Default)), uintptr(unsafe.Pointer(&ret)))
-    return ret
+func IniFile_ReadDate(obj uintptr, Section string, Name string, Default time.Time) time.Time {
+    ret, _, _ := iniFile_ReadDate.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Default.Unix()))
+    return time.Unix(int64(ret), 0)
 }
 
-func IniFile_ReadDateTime(obj uintptr, Section string, Name string, Default TDateTime) TDateTime {
-    var ret TDateTime
-    iniFile_ReadDateTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Default)), uintptr(unsafe.Pointer(&ret)))
-    return ret
+func IniFile_ReadDateTime(obj uintptr, Section string, Name string, Default time.Time) time.Time {
+    ret, _, _ := iniFile_ReadDateTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Default.Unix()))
+    return time.Unix(int64(ret), 0)
 }
 
 func IniFile_ReadFloat(obj uintptr, Section string, Name string, Default float64) float64 {
@@ -29058,26 +29058,25 @@ func IniFile_ReadFloat(obj uintptr, Section string, Name string, Default float64
     return ret
 }
 
-func IniFile_ReadTime(obj uintptr, Section string, Name string, Default TDateTime) TDateTime {
-    var ret TDateTime
-    iniFile_ReadTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Default)), uintptr(unsafe.Pointer(&ret)))
-    return ret
+func IniFile_ReadTime(obj uintptr, Section string, Name string, Default time.Time) time.Time {
+    ret, _, _ := iniFile_ReadTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Default.Unix()))
+    return time.Unix(int64(ret), 0)
 }
 
-func IniFile_WriteDate(obj uintptr, Section string, Name string, Value TDateTime)  {
-    iniFile_WriteDate.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func IniFile_WriteDate(obj uintptr, Section string, Name string, Value time.Time)  {
+    iniFile_WriteDate.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
-func IniFile_WriteDateTime(obj uintptr, Section string, Name string, Value TDateTime)  {
-    iniFile_WriteDateTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func IniFile_WriteDateTime(obj uintptr, Section string, Name string, Value time.Time)  {
+    iniFile_WriteDateTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
 func IniFile_WriteFloat(obj uintptr, Section string, Name string, Value float64)  {
     iniFile_WriteFloat.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
 }
 
-func IniFile_WriteTime(obj uintptr, Section string, Name string, Value TDateTime)  {
-    iniFile_WriteTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func IniFile_WriteTime(obj uintptr, Section string, Name string, Value time.Time)  {
+    iniFile_WriteTime.Call(obj, GoStrToDStr(Section) , GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
 func IniFile_ReadSubSections(obj uintptr, Section string, Strings uintptr, Recurse bool)  {
@@ -29179,16 +29178,14 @@ func Registry_ReadBool(obj uintptr, Name string) bool {
     return DBoolToGoBool(ret)
 }
 
-func Registry_ReadDate(obj uintptr, Name string) TDateTime {
-    var ret TDateTime
-    registry_ReadDate.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&ret)))
-    return ret
+func Registry_ReadDate(obj uintptr, Name string) time.Time {
+    ret, _, _ := registry_ReadDate.Call(obj, GoStrToDStr(Name) )
+    return time.Unix(int64(ret), 0)
 }
 
-func Registry_ReadDateTime(obj uintptr, Name string) TDateTime {
-    var ret TDateTime
-    registry_ReadDateTime.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&ret)))
-    return ret
+func Registry_ReadDateTime(obj uintptr, Name string) time.Time {
+    ret, _, _ := registry_ReadDateTime.Call(obj, GoStrToDStr(Name) )
+    return time.Unix(int64(ret), 0)
 }
 
 func Registry_ReadFloat(obj uintptr, Name string) float64 {
@@ -29207,10 +29204,9 @@ func Registry_ReadString(obj uintptr, Name string) string {
     return DStrToGoStr(ret)
 }
 
-func Registry_ReadTime(obj uintptr, Name string) TDateTime {
-    var ret TDateTime
-    registry_ReadTime.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&ret)))
-    return ret
+func Registry_ReadTime(obj uintptr, Name string) time.Time {
+    ret, _, _ := registry_ReadTime.Call(obj, GoStrToDStr(Name) )
+    return time.Unix(int64(ret), 0)
 }
 
 func Registry_RegistryConnect(obj uintptr, UNCName string) bool {
@@ -29251,12 +29247,12 @@ func Registry_WriteBool(obj uintptr, Name string, Value bool)  {
     registry_WriteBool.Call(obj, GoStrToDStr(Name) , GoBoolToDBool(Value) )
 }
 
-func Registry_WriteDate(obj uintptr, Name string, Value TDateTime)  {
-    registry_WriteDate.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func Registry_WriteDate(obj uintptr, Name string, Value time.Time)  {
+    registry_WriteDate.Call(obj, GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
-func Registry_WriteDateTime(obj uintptr, Name string, Value TDateTime)  {
-    registry_WriteDateTime.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func Registry_WriteDateTime(obj uintptr, Name string, Value time.Time)  {
+    registry_WriteDateTime.Call(obj, GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
 func Registry_WriteFloat(obj uintptr, Name string, Value float64)  {
@@ -29275,8 +29271,8 @@ func Registry_WriteExpandString(obj uintptr, Name string, Value string)  {
     registry_WriteExpandString.Call(obj, GoStrToDStr(Name) , GoStrToDStr(Value) )
 }
 
-func Registry_WriteTime(obj uintptr, Name string, Value TDateTime)  {
-    registry_WriteTime.Call(obj, GoStrToDStr(Name) , uintptr(unsafe.Pointer(&Value)))
+func Registry_WriteTime(obj uintptr, Name string, Value time.Time)  {
+    registry_WriteTime.Call(obj, GoStrToDStr(Name) , uintptr(Value.Unix()))
 }
 
 func Registry_ClassName(obj uintptr) string {

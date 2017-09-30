@@ -76,7 +76,7 @@ func (e *TEdit) SelectAll() {
 }
 
 func (e *TEdit) GetSelTextBuf(Buffer string, BufSize int32) int32 {
-    return Edit_GetSelTextBuf(e.instance, Buffer , BufSize )
+    return Edit_GetSelTextBuf(e.instance, Buffer , BufSize)
 }
 
 func (e *TEdit) CanFocus() bool {
@@ -84,7 +84,7 @@ func (e *TEdit) CanFocus() bool {
 }
 
 func (e *TEdit) FlipChildren(AllLevels bool) {
-    Edit_FlipChildren(e.instance, AllLevels )
+    Edit_FlipChildren(e.instance, AllLevels)
 }
 
 func (e *TEdit) Focused() bool {
@@ -108,11 +108,11 @@ func (e *TEdit) Repaint() {
 }
 
 func (e *TEdit) ScaleBy(M int32, D int32) {
-    Edit_ScaleBy(e.instance, M , D )
+    Edit_ScaleBy(e.instance, M , D)
 }
 
 func (e *TEdit) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Edit_SetBounds(e.instance, ALeft , ATop , AWidth , AHeight )
+    Edit_SetBounds(e.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (e *TEdit) SetFocus() {
@@ -136,7 +136,7 @@ func (e *TEdit) Hide() {
 }
 
 func (e *TEdit) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Edit_Perform(e.instance, Msg , WParam , LParam )
+    return Edit_Perform(e.instance, Msg , WParam , LParam)
 }
 
 func (e *TEdit) Refresh() {
@@ -152,11 +152,11 @@ func (e *TEdit) Show() {
 }
 
 func (e *TEdit) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Edit_GetTextBuf(e.instance, Buffer , BufSize )
+    return Edit_GetTextBuf(e.instance, Buffer , BufSize)
 }
 
 func (e *TEdit) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Edit_FindComponent(e.instance, AName ))
+    return ComponentFromInst(Edit_FindComponent(e.instance, AName))
 }
 
 func (e *TEdit) GetNamePath() string {

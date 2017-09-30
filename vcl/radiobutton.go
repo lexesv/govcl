@@ -56,7 +56,7 @@ func (r *TRadioButton) CanFocus() bool {
 }
 
 func (r *TRadioButton) FlipChildren(AllLevels bool) {
-    RadioButton_FlipChildren(r.instance, AllLevels )
+    RadioButton_FlipChildren(r.instance, AllLevels)
 }
 
 func (r *TRadioButton) Focused() bool {
@@ -80,11 +80,11 @@ func (r *TRadioButton) Repaint() {
 }
 
 func (r *TRadioButton) ScaleBy(M int32, D int32) {
-    RadioButton_ScaleBy(r.instance, M , D )
+    RadioButton_ScaleBy(r.instance, M , D)
 }
 
 func (r *TRadioButton) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    RadioButton_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight )
+    RadioButton_SetBounds(r.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (r *TRadioButton) SetFocus() {
@@ -108,7 +108,7 @@ func (r *TRadioButton) Hide() {
 }
 
 func (r *TRadioButton) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return RadioButton_Perform(r.instance, Msg , WParam , LParam )
+    return RadioButton_Perform(r.instance, Msg , WParam , LParam)
 }
 
 func (r *TRadioButton) Refresh() {
@@ -124,11 +124,11 @@ func (r *TRadioButton) Show() {
 }
 
 func (r *TRadioButton) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return RadioButton_GetTextBuf(r.instance, Buffer , BufSize )
+    return RadioButton_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
 func (r *TRadioButton) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(RadioButton_FindComponent(r.instance, AName ))
+    return ComponentFromInst(RadioButton_FindComponent(r.instance, AName))
 }
 
 func (r *TRadioButton) GetNamePath() string {

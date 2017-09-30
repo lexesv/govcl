@@ -71,7 +71,7 @@ func (l *TListGroups) Clear() {
 }
 
 func (l *TListGroups) Delete(Index int32) {
-    ListGroups_Delete(l.instance, Index )
+    ListGroups_Delete(l.instance, Index)
 }
 
 func (l *TListGroups) EndUpdate() {
@@ -83,7 +83,7 @@ func (l *TListGroups) GetNamePath() string {
 }
 
 func (l *TListGroups) Insert(Index int32) *TCollectionItem {
-    return CollectionItemFromInst(ListGroups_Insert(l.instance, Index ))
+    return CollectionItemFromInst(ListGroups_Insert(l.instance, Index))
 }
 
 func (l *TListGroups) ClassName() string {

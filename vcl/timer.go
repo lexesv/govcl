@@ -51,7 +51,7 @@ func (t *TTimer) IsValid() bool {
 }
 
 func (t *TTimer) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Timer_FindComponent(t.instance, AName ))
+    return ComponentFromInst(Timer_FindComponent(t.instance, AName))
 }
 
 func (t *TTimer) GetNamePath() string {

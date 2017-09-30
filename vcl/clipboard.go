@@ -63,11 +63,11 @@ func (c *TClipboard) Close() {
 }
 
 func (c *TClipboard) GetAsHandle(Format uint16) uintptr {
-    return Clipboard_GetAsHandle(c.instance, Format )
+    return Clipboard_GetAsHandle(c.instance, Format)
 }
 
 func (c *TClipboard) HasFormat(Format uint16) bool {
-    return Clipboard_HasFormat(c.instance, Format )
+    return Clipboard_HasFormat(c.instance, Format)
 }
 
 func (c *TClipboard) Open() {
@@ -75,11 +75,11 @@ func (c *TClipboard) Open() {
 }
 
 func (c *TClipboard) SetAsHandle(Format uint16, Value uintptr) {
-    Clipboard_SetAsHandle(c.instance, Format , Value )
+    Clipboard_SetAsHandle(c.instance, Format , Value)
 }
 
 func (c *TClipboard) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Clipboard_GetTextBuf(c.instance, Buffer , BufSize )
+    return Clipboard_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
 func (c *TClipboard) GetNamePath() string {

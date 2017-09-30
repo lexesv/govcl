@@ -56,7 +56,7 @@ func (l *TLinkLabel) CanFocus() bool {
 }
 
 func (l *TLinkLabel) FlipChildren(AllLevels bool) {
-    LinkLabel_FlipChildren(l.instance, AllLevels )
+    LinkLabel_FlipChildren(l.instance, AllLevels)
 }
 
 func (l *TLinkLabel) Focused() bool {
@@ -80,11 +80,11 @@ func (l *TLinkLabel) Repaint() {
 }
 
 func (l *TLinkLabel) ScaleBy(M int32, D int32) {
-    LinkLabel_ScaleBy(l.instance, M , D )
+    LinkLabel_ScaleBy(l.instance, M , D)
 }
 
 func (l *TLinkLabel) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    LinkLabel_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight )
+    LinkLabel_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (l *TLinkLabel) SetFocus() {
@@ -108,7 +108,7 @@ func (l *TLinkLabel) Hide() {
 }
 
 func (l *TLinkLabel) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return LinkLabel_Perform(l.instance, Msg , WParam , LParam )
+    return LinkLabel_Perform(l.instance, Msg , WParam , LParam)
 }
 
 func (l *TLinkLabel) Refresh() {
@@ -124,11 +124,11 @@ func (l *TLinkLabel) Show() {
 }
 
 func (l *TLinkLabel) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return LinkLabel_GetTextBuf(l.instance, Buffer , BufSize )
+    return LinkLabel_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
 func (l *TLinkLabel) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(LinkLabel_FindComponent(l.instance, AName ))
+    return ComponentFromInst(LinkLabel_FindComponent(l.instance, AName))
 }
 
 func (l *TLinkLabel) GetNamePath() string {

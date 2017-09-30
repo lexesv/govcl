@@ -52,11 +52,11 @@ func (p *TPrintDialog) IsValid() bool {
 }
 
 func (p *TPrintDialog) Execute(ParentWnd HWND) bool {
-    return PrintDialog_Execute(p.instance, ParentWnd )
+    return PrintDialog_Execute(p.instance, ParentWnd)
 }
 
 func (p *TPrintDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(PrintDialog_FindComponent(p.instance, AName ))
+    return ComponentFromInst(PrintDialog_FindComponent(p.instance, AName))
 }
 
 func (p *TPrintDialog) GetNamePath() string {

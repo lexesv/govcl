@@ -52,7 +52,7 @@ func (a *TApplication) IsValid() bool {
 }
 
 func (a *TApplication) ActivateHint(CursorPos TPoint) {
-    Application_ActivateHint(a.instance, CursorPos )
+    Application_ActivateHint(a.instance, CursorPos)
 }
 
 func (a *TApplication) BringToFront() {
@@ -116,11 +116,11 @@ func (a *TApplication) Terminate() {
 }
 
 func (a *TApplication) MessageBox(Text string, Caption string, Flags int32) int32 {
-    return Application_MessageBox(a.instance, Text , Caption , Flags )
+    return Application_MessageBox(a.instance, Text , Caption , Flags)
 }
 
 func (a *TApplication) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Application_FindComponent(a.instance, AName ))
+    return ComponentFromInst(Application_FindComponent(a.instance, AName))
 }
 
 func (a *TApplication) GetNamePath() string {

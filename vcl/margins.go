@@ -51,7 +51,7 @@ func (m *TMargins) IsValid() bool {
 }
 
 func (m *TMargins) SetBounds(ALeft int32, ATop int32, ARight int32, ABottom int32) {
-    Margins_SetBounds(m.instance, ALeft , ATop , ARight , ABottom )
+    Margins_SetBounds(m.instance, ALeft , ATop , ARight , ABottom)
 }
 
 func (m *TMargins) Assign(Source IObject) {

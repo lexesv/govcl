@@ -56,7 +56,7 @@ func (s *TStaticText) CanFocus() bool {
 }
 
 func (s *TStaticText) FlipChildren(AllLevels bool) {
-    StaticText_FlipChildren(s.instance, AllLevels )
+    StaticText_FlipChildren(s.instance, AllLevels)
 }
 
 func (s *TStaticText) Focused() bool {
@@ -80,11 +80,11 @@ func (s *TStaticText) Repaint() {
 }
 
 func (s *TStaticText) ScaleBy(M int32, D int32) {
-    StaticText_ScaleBy(s.instance, M , D )
+    StaticText_ScaleBy(s.instance, M , D)
 }
 
 func (s *TStaticText) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    StaticText_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight )
+    StaticText_SetBounds(s.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (s *TStaticText) SetFocus() {
@@ -108,7 +108,7 @@ func (s *TStaticText) Hide() {
 }
 
 func (s *TStaticText) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return StaticText_Perform(s.instance, Msg , WParam , LParam )
+    return StaticText_Perform(s.instance, Msg , WParam , LParam)
 }
 
 func (s *TStaticText) Refresh() {
@@ -124,11 +124,11 @@ func (s *TStaticText) Show() {
 }
 
 func (s *TStaticText) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return StaticText_GetTextBuf(s.instance, Buffer , BufSize )
+    return StaticText_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
 func (s *TStaticText) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(StaticText_FindComponent(s.instance, AName ))
+    return ComponentFromInst(StaticText_FindComponent(s.instance, AName))
 }
 
 func (s *TStaticText) GetNamePath() string {

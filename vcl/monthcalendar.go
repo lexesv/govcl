@@ -10,6 +10,7 @@ package vcl
 
 
 import (
+    "time"
 	. "gitee.com/ying32/govcl/vcl/api"
     . "gitee.com/ying32/govcl/vcl/types"
 )
@@ -56,7 +57,7 @@ func (m *TMonthCalendar) CanFocus() bool {
 }
 
 func (m *TMonthCalendar) FlipChildren(AllLevels bool) {
-    MonthCalendar_FlipChildren(m.instance, AllLevels )
+    MonthCalendar_FlipChildren(m.instance, AllLevels)
 }
 
 func (m *TMonthCalendar) Focused() bool {
@@ -80,11 +81,11 @@ func (m *TMonthCalendar) Repaint() {
 }
 
 func (m *TMonthCalendar) ScaleBy(M int32, D int32) {
-    MonthCalendar_ScaleBy(m.instance, M , D )
+    MonthCalendar_ScaleBy(m.instance, M , D)
 }
 
 func (m *TMonthCalendar) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    MonthCalendar_SetBounds(m.instance, ALeft , ATop , AWidth , AHeight )
+    MonthCalendar_SetBounds(m.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (m *TMonthCalendar) SetFocus() {
@@ -108,7 +109,7 @@ func (m *TMonthCalendar) Hide() {
 }
 
 func (m *TMonthCalendar) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return MonthCalendar_Perform(m.instance, Msg , WParam , LParam )
+    return MonthCalendar_Perform(m.instance, Msg , WParam , LParam)
 }
 
 func (m *TMonthCalendar) Refresh() {
@@ -124,11 +125,11 @@ func (m *TMonthCalendar) Show() {
 }
 
 func (m *TMonthCalendar) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return MonthCalendar_GetTextBuf(m.instance, Buffer , BufSize )
+    return MonthCalendar_GetTextBuf(m.instance, Buffer , BufSize)
 }
 
 func (m *TMonthCalendar) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(MonthCalendar_FindComponent(m.instance, AName ))
+    return ComponentFromInst(MonthCalendar_FindComponent(m.instance, AName))
 }
 
 func (m *TMonthCalendar) GetNamePath() string {
@@ -211,11 +212,11 @@ func (m *TMonthCalendar) SetMultiSelect(value bool) {
     MonthCalendar_SetMultiSelect(m.instance, value)
 }
 
-func (m *TMonthCalendar) Date() TDate {
+func (m *TMonthCalendar) Date() time.Time {
     return MonthCalendar_GetDate(m.instance)
 }
 
-func (m *TMonthCalendar) SetDate(value TDate) {
+func (m *TMonthCalendar) SetDate(value time.Time) {
     MonthCalendar_SetDate(m.instance, value)
 }
 
@@ -251,11 +252,11 @@ func (m *TMonthCalendar) SetFont(value *TFont) {
     MonthCalendar_SetFont(m.instance, CheckPtr(value))
 }
 
-func (m *TMonthCalendar) MaxDate() TDate {
+func (m *TMonthCalendar) MaxDate() time.Time {
     return MonthCalendar_GetMaxDate(m.instance)
 }
 
-func (m *TMonthCalendar) SetMaxDate(value TDate) {
+func (m *TMonthCalendar) SetMaxDate(value time.Time) {
     MonthCalendar_SetMaxDate(m.instance, value)
 }
 
@@ -267,11 +268,11 @@ func (m *TMonthCalendar) SetMaxSelectRange(value int32) {
     MonthCalendar_SetMaxSelectRange(m.instance, value)
 }
 
-func (m *TMonthCalendar) MinDate() TDate {
+func (m *TMonthCalendar) MinDate() time.Time {
     return MonthCalendar_GetMinDate(m.instance)
 }
 
-func (m *TMonthCalendar) SetMinDate(value TDate) {
+func (m *TMonthCalendar) SetMinDate(value time.Time) {
     MonthCalendar_SetMinDate(m.instance, value)
 }
 

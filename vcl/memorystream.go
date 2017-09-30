@@ -60,11 +60,11 @@ func (m *TMemoryStream) LoadFromStream(Stream IObject) {
 }
 
 func (m *TMemoryStream) LoadFromFile(FileName string) {
-    MemoryStream_LoadFromFile(m.instance, FileName )
+    MemoryStream_LoadFromFile(m.instance, FileName)
 }
 
 func (m *TMemoryStream) Seek(Offset int64, Origin TSeekOrigin) int64 {
-    return MemoryStream_Seek(m.instance, Offset , Origin )
+    return MemoryStream_Seek(m.instance, Offset , Origin)
 }
 
 func (m *TMemoryStream) SaveToStream(Stream IObject) {
@@ -72,11 +72,11 @@ func (m *TMemoryStream) SaveToStream(Stream IObject) {
 }
 
 func (m *TMemoryStream) SaveToFile(FileName string) {
-    MemoryStream_SaveToFile(m.instance, FileName )
+    MemoryStream_SaveToFile(m.instance, FileName)
 }
 
 func (m *TMemoryStream) CopyFrom(Source IObject, Count int64) int64 {
-    return MemoryStream_CopyFrom(m.instance, CheckPtr(Source), Count )
+    return MemoryStream_CopyFrom(m.instance, CheckPtr(Source), Count)
 }
 
 func (m *TMemoryStream) ClassName() string {

@@ -52,11 +52,11 @@ func (c *TColorDialog) IsValid() bool {
 }
 
 func (c *TColorDialog) Execute(ParentWnd HWND) bool {
-    return ColorDialog_Execute(c.instance, ParentWnd )
+    return ColorDialog_Execute(c.instance, ParentWnd)
 }
 
 func (c *TColorDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(ColorDialog_FindComponent(c.instance, AName ))
+    return ComponentFromInst(ColorDialog_FindComponent(c.instance, AName))
 }
 
 func (c *TColorDialog) GetNamePath() string {

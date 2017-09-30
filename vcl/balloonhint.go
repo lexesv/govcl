@@ -60,7 +60,7 @@ func (b *TBalloonHint) HideHint() {
 }
 
 func (b *TBalloonHint) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(BalloonHint_FindComponent(b.instance, AName ))
+    return ComponentFromInst(BalloonHint_FindComponent(b.instance, AName))
 }
 
 func (b *TBalloonHint) GetNamePath() string {

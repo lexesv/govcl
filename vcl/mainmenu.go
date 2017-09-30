@@ -52,7 +52,7 @@ func (m *TMainMenu) IsValid() bool {
 }
 
 func (m *TMainMenu) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(MainMenu_FindComponent(m.instance, AName ))
+    return ComponentFromInst(MainMenu_FindComponent(m.instance, AName))
 }
 
 func (m *TMainMenu) GetNamePath() string {

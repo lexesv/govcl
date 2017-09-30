@@ -56,7 +56,7 @@ func (s *TSavePictureDialog) Execute() bool {
 }
 
 func (s *TSavePictureDialog) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(SavePictureDialog_FindComponent(s.instance, AName ))
+    return ComponentFromInst(SavePictureDialog_FindComponent(s.instance, AName))
 }
 
 func (s *TSavePictureDialog) GetNamePath() string {

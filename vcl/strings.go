@@ -52,7 +52,7 @@ func (s *TStrings) IsValid() bool {
 }
 
 func (s *TStrings) Add(S string) int32 {
-    return Strings_Add(s.instance, S )
+    return Strings_Add(s.instance, S)
 }
 
 func (s *TStrings) AddObject(S string, AObject IObject) int32 {
@@ -60,7 +60,7 @@ func (s *TStrings) AddObject(S string, AObject IObject) int32 {
 }
 
 func (s *TStrings) Append(S string) {
-    Strings_Append(s.instance, S )
+    Strings_Append(s.instance, S)
 }
 
 func (s *TStrings) Assign(Source IObject) {
@@ -76,7 +76,7 @@ func (s *TStrings) Clear() {
 }
 
 func (s *TStrings) Delete(Index int32) {
-    Strings_Delete(s.instance, Index )
+    Strings_Delete(s.instance, Index)
 }
 
 func (s *TStrings) EndUpdate() {
@@ -88,11 +88,11 @@ func (s *TStrings) Equals(Strings IObject) bool {
 }
 
 func (s *TStrings) IndexOf(S string) int32 {
-    return Strings_IndexOf(s.instance, S )
+    return Strings_IndexOf(s.instance, S)
 }
 
 func (s *TStrings) IndexOfName(Name string) int32 {
-    return Strings_IndexOfName(s.instance, Name )
+    return Strings_IndexOfName(s.instance, Name)
 }
 
 func (s *TStrings) IndexOfObject(AObject IObject) int32 {
@@ -100,7 +100,7 @@ func (s *TStrings) IndexOfObject(AObject IObject) int32 {
 }
 
 func (s *TStrings) Insert(Index int32, S string) {
-    Strings_Insert(s.instance, Index , S )
+    Strings_Insert(s.instance, Index , S)
 }
 
 func (s *TStrings) InsertObject(Index int32, S string, AObject IObject) {
@@ -108,7 +108,7 @@ func (s *TStrings) InsertObject(Index int32, S string, AObject IObject) {
 }
 
 func (s *TStrings) LoadFromFile(FileName string) {
-    Strings_LoadFromFile(s.instance, FileName )
+    Strings_LoadFromFile(s.instance, FileName)
 }
 
 func (s *TStrings) LoadFromStream(Stream IObject) {
@@ -116,11 +116,11 @@ func (s *TStrings) LoadFromStream(Stream IObject) {
 }
 
 func (s *TStrings) Move(CurIndex int32, NewIndex int32) {
-    Strings_Move(s.instance, CurIndex , NewIndex )
+    Strings_Move(s.instance, CurIndex , NewIndex)
 }
 
 func (s *TStrings) SaveToFile(FileName string) {
-    Strings_SaveToFile(s.instance, FileName )
+    Strings_SaveToFile(s.instance, FileName)
 }
 
 func (s *TStrings) SaveToStream(Stream IObject) {

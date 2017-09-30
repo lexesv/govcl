@@ -56,7 +56,7 @@ func (m *TMenuItem) Insert(Index int32, Item IComponent) {
 }
 
 func (m *TMenuItem) Delete(Index int32) {
-    MenuItem_Delete(m.instance, Index )
+    MenuItem_Delete(m.instance, Index)
 }
 
 func (m *TMenuItem) Clear() {
@@ -80,7 +80,7 @@ func (m *TMenuItem) Add(Item IComponent) {
 }
 
 func (m *TMenuItem) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(MenuItem_FindComponent(m.instance, AName ))
+    return ComponentFromInst(MenuItem_FindComponent(m.instance, AName))
 }
 
 func (m *TMenuItem) GetNamePath() string {

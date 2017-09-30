@@ -68,7 +68,7 @@ func (l *TLabel) Invalidate() {
 }
 
 func (l *TLabel) Perform(Msg uint32, WParam uintptr, LParam int) int {
-    return Label_Perform(l.instance, Msg , WParam , LParam )
+    return Label_Perform(l.instance, Msg , WParam , LParam)
 }
 
 func (l *TLabel) Refresh() {
@@ -84,7 +84,7 @@ func (l *TLabel) SendToBack() {
 }
 
 func (l *TLabel) SetBounds(ALeft int32, ATop int32, AWidth int32, AHeight int32) {
-    Label_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight )
+    Label_SetBounds(l.instance, ALeft , ATop , AWidth , AHeight)
 }
 
 func (l *TLabel) Show() {
@@ -96,11 +96,11 @@ func (l *TLabel) Update() {
 }
 
 func (l *TLabel) GetTextBuf(Buffer string, BufSize int32) int32 {
-    return Label_GetTextBuf(l.instance, Buffer , BufSize )
+    return Label_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
 func (l *TLabel) FindComponent(AName string) *TComponent {
-    return ComponentFromInst(Label_FindComponent(l.instance, AName ))
+    return ComponentFromInst(Label_FindComponent(l.instance, AName))
 }
 
 func (l *TLabel) GetNamePath() string {

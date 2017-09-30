@@ -56,7 +56,7 @@ func (l *TListItems) Add() *TListItem {
 }
 
 func (l *TListItems) AddItem(Item *TListItem, Index int32) *TListItem {
-    return ListItemFromInst(ListItems_AddItem(l.instance, CheckPtr(Item), Index ))
+    return ListItemFromInst(ListItems_AddItem(l.instance, CheckPtr(Item), Index))
 }
 
 func (l *TListItems) Assign(Source IObject) {
@@ -72,7 +72,7 @@ func (l *TListItems) Clear() {
 }
 
 func (l *TListItems) Delete(Index int32) {
-    ListItems_Delete(l.instance, Index )
+    ListItems_Delete(l.instance, Index)
 }
 
 func (l *TListItems) EndUpdate() {
@@ -84,7 +84,7 @@ func (l *TListItems) IndexOf(Value *TListItem) int32 {
 }
 
 func (l *TListItems) Insert(Index int32) *TListItem {
-    return ListItemFromInst(ListItems_Insert(l.instance, Index ))
+    return ListItemFromInst(ListItems_Insert(l.instance, Index))
 }
 
 func (l *TListItems) GetNamePath() string {

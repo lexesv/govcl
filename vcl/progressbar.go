@@ -339,11 +339,11 @@ func (p *TProgressBar) SetShowHint(value bool) {
     ProgressBar_SetShowHint(p.instance, value)
 }
 
-func (p *TProgressBar) TabOrder() int16 {
+func (p *TProgressBar) TabOrder() uint16 {
     return ProgressBar_GetTabOrder(p.instance)
 }
 
-func (p *TProgressBar) SetTabOrder(value int16) {
+func (p *TProgressBar) SetTabOrder(value uint16) {
     ProgressBar_SetTabOrder(p.instance, value)
 }
 

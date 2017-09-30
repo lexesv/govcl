@@ -399,11 +399,11 @@ func (e *TEdit) SetShowHint(value bool) {
     Edit_SetShowHint(e.instance, value)
 }
 
-func (e *TEdit) TabOrder() int16 {
+func (e *TEdit) TabOrder() uint16 {
     return Edit_GetTabOrder(e.instance)
 }
 
-func (e *TEdit) SetTabOrder(value int16) {
+func (e *TEdit) SetTabOrder(value uint16) {
     Edit_SetTabOrder(e.instance, value)
 }
 

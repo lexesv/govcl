@@ -399,11 +399,11 @@ func (r *TRichEdit) SetShowHint(value bool) {
     RichEdit_SetShowHint(r.instance, value)
 }
 
-func (r *TRichEdit) TabOrder() int16 {
+func (r *TRichEdit) TabOrder() uint16 {
     return RichEdit_GetTabOrder(r.instance)
 }
 
-func (r *TRichEdit) SetTabOrder(value int16) {
+func (r *TRichEdit) SetTabOrder(value uint16) {
     RichEdit_SetTabOrder(r.instance, value)
 }
 

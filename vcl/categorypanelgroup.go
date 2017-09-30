@@ -323,11 +323,11 @@ func (c *TCategoryPanelGroup) SetShowHint(value bool) {
     CategoryPanelGroup_SetShowHint(c.instance, value)
 }
 
-func (c *TCategoryPanelGroup) TabOrder() int16 {
+func (c *TCategoryPanelGroup) TabOrder() uint16 {
     return CategoryPanelGroup_GetTabOrder(c.instance)
 }
 
-func (c *TCategoryPanelGroup) SetTabOrder(value int16) {
+func (c *TCategoryPanelGroup) SetTabOrder(value uint16) {
     CategoryPanelGroup_SetTabOrder(c.instance, value)
 }
 

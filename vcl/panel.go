@@ -347,11 +347,11 @@ func (p *TPanel) SetShowHint(value bool) {
     Panel_SetShowHint(p.instance, value)
 }
 
-func (p *TPanel) TabOrder() int16 {
+func (p *TPanel) TabOrder() uint16 {
     return Panel_GetTabOrder(p.instance)
 }
 
-func (p *TPanel) SetTabOrder(value int16) {
+func (p *TPanel) SetTabOrder(value uint16) {
     Panel_SetTabOrder(p.instance, value)
 }
 

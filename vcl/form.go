@@ -563,11 +563,11 @@ func (f *TForm) SetParentDoubleBuffered(value bool) {
     Form_SetParentDoubleBuffered(f.instance, value)
 }
 
-func (f *TForm) TabOrder() int16 {
+func (f *TForm) TabOrder() uint16 {
     return Form_GetTabOrder(f.instance)
 }
 
-func (f *TForm) SetTabOrder(value int16) {
+func (f *TForm) SetTabOrder(value uint16) {
     Form_SetTabOrder(f.instance, value)
 }
 

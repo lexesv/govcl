@@ -383,11 +383,11 @@ func (m *TMemo) SetShowHint(value bool) {
     Memo_SetShowHint(m.instance, value)
 }
 
-func (m *TMemo) TabOrder() int16 {
+func (m *TMemo) TabOrder() uint16 {
     return Memo_GetTabOrder(m.instance)
 }
 
-func (m *TMemo) SetTabOrder(value int16) {
+func (m *TMemo) SetTabOrder(value uint16) {
     Memo_SetTabOrder(m.instance, value)
 }
 

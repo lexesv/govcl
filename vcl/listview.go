@@ -535,11 +535,11 @@ func (l *TListView) SetStateImages(value IComponent) {
     ListView_SetStateImages(l.instance, CheckPtr(value))
 }
 
-func (l *TListView) TabOrder() int16 {
+func (l *TListView) TabOrder() uint16 {
     return ListView_GetTabOrder(l.instance)
 }
 
-func (l *TListView) SetTabOrder(value int16) {
+func (l *TListView) SetTabOrder(value uint16) {
     ListView_SetTabOrder(l.instance, value)
 }
 

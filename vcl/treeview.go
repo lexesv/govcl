@@ -495,11 +495,11 @@ func (t *TTreeView) SetStateImages(value IComponent) {
     TreeView_SetStateImages(t.instance, CheckPtr(value))
 }
 
-func (t *TTreeView) TabOrder() int16 {
+func (t *TTreeView) TabOrder() uint16 {
     return TreeView_GetTabOrder(t.instance)
 }
 
-func (t *TTreeView) SetTabOrder(value int16) {
+func (t *TTreeView) SetTabOrder(value uint16) {
     TreeView_SetTabOrder(t.instance, value)
 }
 

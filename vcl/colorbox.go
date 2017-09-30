@@ -383,11 +383,11 @@ func (c *TColorBox) SetShowHint(value bool) {
     ColorBox_SetShowHint(c.instance, value)
 }
 
-func (c *TColorBox) TabOrder() int16 {
+func (c *TColorBox) TabOrder() uint16 {
     return ColorBox_GetTabOrder(c.instance)
 }
 
-func (c *TColorBox) SetTabOrder(value int16) {
+func (c *TColorBox) SetTabOrder(value uint16) {
     ColorBox_SetTabOrder(c.instance, value)
 }
 

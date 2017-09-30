@@ -311,11 +311,11 @@ func (b *TButton) SetStyle(value TButtonStyle) {
     Button_SetStyle(b.instance, value)
 }
 
-func (b *TButton) TabOrder() int16 {
+func (b *TButton) TabOrder() uint16 {
     return Button_GetTabOrder(b.instance)
 }
 
-func (b *TButton) SetTabOrder(value int16) {
+func (b *TButton) SetTabOrder(value uint16) {
     Button_SetTabOrder(b.instance, value)
 }
 

@@ -307,11 +307,11 @@ func (c *TCheckBox) SetState(value TCheckBoxState) {
     CheckBox_SetState(c.instance, value)
 }
 
-func (c *TCheckBox) TabOrder() int16 {
+func (c *TCheckBox) TabOrder() uint16 {
     return CheckBox_GetTabOrder(c.instance)
 }
 
-func (c *TCheckBox) SetTabOrder(value int16) {
+func (c *TCheckBox) SetTabOrder(value uint16) {
     CheckBox_SetTabOrder(c.instance, value)
 }
 

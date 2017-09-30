@@ -275,11 +275,11 @@ func (g *TGroupBox) SetShowHint(value bool) {
     GroupBox_SetShowHint(g.instance, value)
 }
 
-func (g *TGroupBox) TabOrder() int16 {
+func (g *TGroupBox) TabOrder() uint16 {
     return GroupBox_GetTabOrder(g.instance)
 }
 
-func (g *TGroupBox) SetTabOrder(value int16) {
+func (g *TGroupBox) SetTabOrder(value uint16) {
     GroupBox_SetTabOrder(g.instance, value)
 }
 

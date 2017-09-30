@@ -391,11 +391,11 @@ func (l *TListBox) SetSorted(value bool) {
     ListBox_SetSorted(l.instance, value)
 }
 
-func (l *TListBox) TabOrder() int16 {
+func (l *TListBox) TabOrder() uint16 {
     return ListBox_GetTabOrder(l.instance)
 }
 
-func (l *TListBox) SetTabOrder(value int16) {
+func (l *TListBox) SetTabOrder(value uint16) {
     ListBox_SetTabOrder(l.instance, value)
 }
 

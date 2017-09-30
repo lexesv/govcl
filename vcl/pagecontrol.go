@@ -311,11 +311,11 @@ func (p *TPageControl) SetTabIndex(value int32) {
     PageControl_SetTabIndex(p.instance, value)
 }
 
-func (p *TPageControl) TabOrder() int16 {
+func (p *TPageControl) TabOrder() uint16 {
     return PageControl_GetTabOrder(p.instance)
 }
 
-func (p *TPageControl) SetTabOrder(value int16) {
+func (p *TPageControl) SetTabOrder(value uint16) {
     PageControl_SetTabOrder(p.instance, value)
 }
 

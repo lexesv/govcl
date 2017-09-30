@@ -331,11 +331,11 @@ func (s *TStaticText) SetShowHint(value bool) {
     StaticText_SetShowHint(s.instance, value)
 }
 
-func (s *TStaticText) TabOrder() int16 {
+func (s *TStaticText) TabOrder() uint16 {
     return StaticText_GetTabOrder(s.instance)
 }
 
-func (s *TStaticText) SetTabOrder(value int16) {
+func (s *TStaticText) SetTabOrder(value uint16) {
     StaticText_SetTabOrder(s.instance, value)
 }
 

@@ -291,11 +291,11 @@ func (l *TLinkLabel) SetShowHint(value bool) {
     LinkLabel_SetShowHint(l.instance, value)
 }
 
-func (l *TLinkLabel) TabOrder() int16 {
+func (l *TLinkLabel) TabOrder() uint16 {
     return LinkLabel_GetTabOrder(l.instance)
 }
 
-func (l *TLinkLabel) SetTabOrder(value int16) {
+func (l *TLinkLabel) SetTabOrder(value uint16) {
     LinkLabel_SetTabOrder(l.instance, value)
 }
 

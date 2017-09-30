@@ -902,12 +902,12 @@ func Form_SetParentDoubleBuffered(obj uintptr, value bool) {
    form_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
-func Form_GetTabOrder(obj uintptr) int16 {
+func Form_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := form_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func Form_SetTabOrder(obj uintptr, value int16) {
+func Form_SetTabOrder(obj uintptr, value uint16) {
    form_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -1351,12 +1351,12 @@ func Button_SetStyle(obj uintptr, value TButtonStyle) {
    button_SetStyle.Call(obj, uintptr(value))
 }
 
-func Button_GetTabOrder(obj uintptr) int16 {
+func Button_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := button_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func Button_SetTabOrder(obj uintptr, value int16) {
+func Button_SetTabOrder(obj uintptr, value uint16) {
    button_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -2037,12 +2037,12 @@ func Edit_SetShowHint(obj uintptr, value bool) {
    edit_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func Edit_GetTabOrder(obj uintptr) int16 {
+func Edit_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := edit_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func Edit_SetTabOrder(obj uintptr, value int16) {
+func Edit_SetTabOrder(obj uintptr, value uint16) {
    edit_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -3074,12 +3074,12 @@ func Memo_SetShowHint(obj uintptr, value bool) {
    memo_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func Memo_GetTabOrder(obj uintptr) int16 {
+func Memo_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := memo_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func Memo_SetTabOrder(obj uintptr, value int16) {
+func Memo_SetTabOrder(obj uintptr, value uint16) {
    memo_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -3758,12 +3758,12 @@ func CheckBox_SetState(obj uintptr, value TCheckBoxState) {
    checkBox_SetState.Call(obj, uintptr(value))
 }
 
-func CheckBox_GetTabOrder(obj uintptr) int16 {
+func CheckBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := checkBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func CheckBox_SetTabOrder(obj uintptr, value int16) {
+func CheckBox_SetTabOrder(obj uintptr, value uint16) {
    checkBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -4334,12 +4334,12 @@ func RadioButton_SetShowHint(obj uintptr, value bool) {
    radioButton_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func RadioButton_GetTabOrder(obj uintptr) int16 {
+func RadioButton_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := radioButton_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func RadioButton_SetTabOrder(obj uintptr, value int16) {
+func RadioButton_SetTabOrder(obj uintptr, value uint16) {
    radioButton_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -4887,12 +4887,12 @@ func GroupBox_SetShowHint(obj uintptr, value bool) {
    groupBox_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func GroupBox_GetTabOrder(obj uintptr) int16 {
+func GroupBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := groupBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func GroupBox_SetTabOrder(obj uintptr, value int16) {
+func GroupBox_SetTabOrder(obj uintptr, value uint16) {
    groupBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -6070,12 +6070,12 @@ func ListBox_SetSorted(obj uintptr, value bool) {
    listBox_SetSorted.Call(obj, GoBoolToDBool(value))
 }
 
-func ListBox_GetTabOrder(obj uintptr) int16 {
+func ListBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := listBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ListBox_SetTabOrder(obj uintptr, value int16) {
+func ListBox_SetTabOrder(obj uintptr, value uint16) {
    listBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -6797,12 +6797,12 @@ func ComboBox_SetSorted(obj uintptr, value bool) {
    comboBox_SetSorted.Call(obj, GoBoolToDBool(value))
 }
 
-func ComboBox_GetTabOrder(obj uintptr) int16 {
+func ComboBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := comboBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ComboBox_SetTabOrder(obj uintptr, value int16) {
+func ComboBox_SetTabOrder(obj uintptr, value uint16) {
    comboBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -7491,12 +7491,12 @@ func Panel_SetShowHint(obj uintptr, value bool) {
    panel_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func Panel_GetTabOrder(obj uintptr) int16 {
+func Panel_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := panel_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func Panel_SetTabOrder(obj uintptr, value int16) {
+func Panel_SetTabOrder(obj uintptr, value uint16) {
    panel_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -8514,12 +8514,12 @@ func LinkLabel_SetShowHint(obj uintptr, value bool) {
    linkLabel_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func LinkLabel_GetTabOrder(obj uintptr) int16 {
+func LinkLabel_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := linkLabel_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func LinkLabel_SetTabOrder(obj uintptr, value int16) {
+func LinkLabel_SetTabOrder(obj uintptr, value uint16) {
    linkLabel_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -9964,12 +9964,12 @@ func RadioGroup_SetShowHint(obj uintptr, value bool) {
    radioGroup_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func RadioGroup_GetTabOrder(obj uintptr) int16 {
+func RadioGroup_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := radioGroup_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func RadioGroup_SetTabOrder(obj uintptr, value int16) {
+func RadioGroup_SetTabOrder(obj uintptr, value uint16) {
    radioGroup_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -10558,12 +10558,12 @@ func StaticText_SetShowHint(obj uintptr, value bool) {
    staticText_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func StaticText_GetTabOrder(obj uintptr) int16 {
+func StaticText_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := staticText_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func StaticText_SetTabOrder(obj uintptr, value int16) {
+func StaticText_SetTabOrder(obj uintptr, value uint16) {
    staticText_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -11219,12 +11219,12 @@ func ColorBox_SetShowHint(obj uintptr, value bool) {
    colorBox_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func ColorBox_GetTabOrder(obj uintptr) int16 {
+func ColorBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := colorBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ColorBox_SetTabOrder(obj uintptr, value int16) {
+func ColorBox_SetTabOrder(obj uintptr, value uint16) {
    colorBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -11957,12 +11957,12 @@ func ColorListBox_SetShowHint(obj uintptr, value bool) {
    colorListBox_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func ColorListBox_GetTabOrder(obj uintptr) int16 {
+func ColorListBox_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := colorListBox_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ColorListBox_SetTabOrder(obj uintptr, value int16) {
+func ColorListBox_SetTabOrder(obj uintptr, value uint16) {
    colorListBox_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -13012,12 +13012,12 @@ func CategoryPanelGroup_SetShowHint(obj uintptr, value bool) {
    categoryPanelGroup_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func CategoryPanelGroup_GetTabOrder(obj uintptr) int16 {
+func CategoryPanelGroup_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := categoryPanelGroup_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func CategoryPanelGroup_SetTabOrder(obj uintptr, value int16) {
+func CategoryPanelGroup_SetTabOrder(obj uintptr, value uint16) {
    categoryPanelGroup_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -15272,12 +15272,12 @@ func RichEdit_SetShowHint(obj uintptr, value bool) {
    richEdit_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func RichEdit_GetTabOrder(obj uintptr) int16 {
+func RichEdit_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := richEdit_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func RichEdit_SetTabOrder(obj uintptr, value int16) {
+func RichEdit_SetTabOrder(obj uintptr, value uint16) {
    richEdit_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -16056,12 +16056,12 @@ func TrackBar_SetShowSelRange(obj uintptr, value bool) {
    trackBar_SetShowSelRange.Call(obj, GoBoolToDBool(value))
 }
 
-func TrackBar_GetTabOrder(obj uintptr) int16 {
+func TrackBar_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := trackBar_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func TrackBar_SetTabOrder(obj uintptr, value int16) {
+func TrackBar_SetTabOrder(obj uintptr, value uint16) {
    trackBar_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -16922,12 +16922,12 @@ func UpDown_SetShowHint(obj uintptr, value bool) {
    upDown_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func UpDown_GetTabOrder(obj uintptr) int16 {
+func UpDown_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := upDown_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func UpDown_SetTabOrder(obj uintptr, value int16) {
+func UpDown_SetTabOrder(obj uintptr, value uint16) {
    upDown_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -17548,12 +17548,12 @@ func ProgressBar_SetShowHint(obj uintptr, value bool) {
    progressBar_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func ProgressBar_GetTabOrder(obj uintptr) int16 {
+func ProgressBar_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := progressBar_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ProgressBar_SetTabOrder(obj uintptr, value int16) {
+func ProgressBar_SetTabOrder(obj uintptr, value uint16) {
    progressBar_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -18018,12 +18018,12 @@ func HotKey_SetShowHint(obj uintptr, value bool) {
    hotKey_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func HotKey_GetTabOrder(obj uintptr) int16 {
+func HotKey_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := hotKey_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func HotKey_SetTabOrder(obj uintptr, value int16) {
+func HotKey_SetTabOrder(obj uintptr, value uint16) {
    hotKey_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -18713,12 +18713,12 @@ func DateTimePicker_SetShowHint(obj uintptr, value bool) {
    dateTimePicker_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func DateTimePicker_GetTabOrder(obj uintptr) int16 {
+func DateTimePicker_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := dateTimePicker_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func DateTimePicker_SetTabOrder(obj uintptr, value int16) {
+func DateTimePicker_SetTabOrder(obj uintptr, value uint16) {
    dateTimePicker_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -19317,12 +19317,12 @@ func MonthCalendar_SetShowTodayCircle(obj uintptr, value bool) {
    monthCalendar_SetShowTodayCircle.Call(obj, GoBoolToDBool(value))
 }
 
-func MonthCalendar_GetTabOrder(obj uintptr) int16 {
+func MonthCalendar_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := monthCalendar_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func MonthCalendar_SetTabOrder(obj uintptr, value int16) {
+func MonthCalendar_SetTabOrder(obj uintptr, value uint16) {
    monthCalendar_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -20158,12 +20158,12 @@ func ListView_SetStateImages(obj uintptr, value uintptr) {
    listView_SetStateImages.Call(obj, value)
 }
 
-func ListView_GetTabOrder(obj uintptr) int16 {
+func ListView_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := listView_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ListView_SetTabOrder(obj uintptr, value int16) {
+func ListView_SetTabOrder(obj uintptr, value uint16) {
    listView_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -21016,12 +21016,12 @@ func TreeView_SetStateImages(obj uintptr, value uintptr) {
    treeView_SetStateImages.Call(obj, value)
 }
 
-func TreeView_GetTabOrder(obj uintptr) int16 {
+func TreeView_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := treeView_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func TreeView_SetTabOrder(obj uintptr, value int16) {
+func TreeView_SetTabOrder(obj uintptr, value uint16) {
    treeView_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -21757,12 +21757,12 @@ func StatusBar_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
-func StatusBar_GetTabOrder(obj uintptr) int16 {
+func StatusBar_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := statusBar_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func StatusBar_SetTabOrder(obj uintptr, value int16) {
+func StatusBar_SetTabOrder(obj uintptr, value uint16) {
    statusBar_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -22397,12 +22397,12 @@ func ToolBar_SetShowHint(obj uintptr, value bool) {
    toolBar_SetShowHint.Call(obj, GoBoolToDBool(value))
 }
 
-func ToolBar_GetTabOrder(obj uintptr) int16 {
+func ToolBar_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := toolBar_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func ToolBar_SetTabOrder(obj uintptr, value int16) {
+func ToolBar_SetTabOrder(obj uintptr, value uint16) {
    toolBar_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -25335,12 +25335,12 @@ func PageControl_SetTabIndex(obj uintptr, value int32) {
    pageControl_SetTabIndex.Call(obj, uintptr(value))
 }
 
-func PageControl_GetTabOrder(obj uintptr) int16 {
+func PageControl_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := pageControl_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func PageControl_SetTabOrder(obj uintptr, value int16) {
+func PageControl_SetTabOrder(obj uintptr, value uint16) {
    pageControl_SetTabOrder.Call(obj, uintptr(value))
 }
 
@@ -26009,12 +26009,12 @@ func TabSheet_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
-func TabSheet_GetTabOrder(obj uintptr) int16 {
+func TabSheet_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := tabSheet_GetTabOrder.Call(obj)
-    return int16(ret)
+    return uint16(ret)
 }
 
-func TabSheet_SetTabOrder(obj uintptr, value int16) {
+func TabSheet_SetTabOrder(obj uintptr, value uint16) {
    tabSheet_SetTabOrder.Call(obj, uintptr(value))
 }
 

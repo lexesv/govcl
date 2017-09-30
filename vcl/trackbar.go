@@ -335,11 +335,11 @@ func (t *TTrackBar) SetShowSelRange(value bool) {
     TrackBar_SetShowSelRange(t.instance, value)
 }
 
-func (t *TTrackBar) TabOrder() int16 {
+func (t *TTrackBar) TabOrder() uint16 {
     return TrackBar_GetTabOrder(t.instance)
 }
 
-func (t *TTrackBar) SetTabOrder(value int16) {
+func (t *TTrackBar) SetTabOrder(value uint16) {
     TrackBar_SetTabOrder(t.instance, value)
 }
 

@@ -431,11 +431,11 @@ func (t *TToolBar) SetShowHint(value bool) {
     ToolBar_SetShowHint(t.instance, value)
 }
 
-func (t *TToolBar) TabOrder() int16 {
+func (t *TToolBar) TabOrder() uint16 {
     return ToolBar_GetTabOrder(t.instance)
 }
 
-func (t *TToolBar) SetTabOrder(value int16) {
+func (t *TToolBar) SetTabOrder(value uint16) {
     ToolBar_SetTabOrder(t.instance, value)
 }
 

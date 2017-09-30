@@ -332,11 +332,11 @@ func (m *TMonthCalendar) SetShowTodayCircle(value bool) {
     MonthCalendar_SetShowTodayCircle(m.instance, value)
 }
 
-func (m *TMonthCalendar) TabOrder() int16 {
+func (m *TMonthCalendar) TabOrder() uint16 {
     return MonthCalendar_GetTabOrder(m.instance)
 }
 
-func (m *TMonthCalendar) SetTabOrder(value int16) {
+func (m *TMonthCalendar) SetTabOrder(value uint16) {
     MonthCalendar_SetTabOrder(m.instance, value)
 }
 

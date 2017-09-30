@@ -371,11 +371,11 @@ func (t *TTabSheet) Handle() HWND {
     return TabSheet_GetHandle(t.instance)
 }
 
-func (t *TTabSheet) TabOrder() int16 {
+func (t *TTabSheet) TabOrder() uint16 {
     return TabSheet_GetTabOrder(t.instance)
 }
 
-func (t *TTabSheet) SetTabOrder(value int16) {
+func (t *TTabSheet) SetTabOrder(value uint16) {
     TabSheet_SetTabOrder(t.instance, value)
 }
 

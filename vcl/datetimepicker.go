@@ -400,11 +400,11 @@ func (d *TDateTimePicker) SetShowHint(value bool) {
     DateTimePicker_SetShowHint(d.instance, value)
 }
 
-func (d *TDateTimePicker) TabOrder() int16 {
+func (d *TDateTimePicker) TabOrder() uint16 {
     return DateTimePicker_GetTabOrder(d.instance)
 }
 
-func (d *TDateTimePicker) SetTabOrder(value int16) {
+func (d *TDateTimePicker) SetTabOrder(value uint16) {
     DateTimePicker_SetTabOrder(d.instance, value)
 }
 

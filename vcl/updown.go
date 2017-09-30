@@ -251,11 +251,11 @@ func (u *TUpDown) SetShowHint(value bool) {
     UpDown_SetShowHint(u.instance, value)
 }
 
-func (u *TUpDown) TabOrder() int16 {
+func (u *TUpDown) TabOrder() uint16 {
     return UpDown_GetTabOrder(u.instance)
 }
 
-func (u *TUpDown) SetTabOrder(value int16) {
+func (u *TUpDown) SetTabOrder(value uint16) {
     UpDown_SetTabOrder(u.instance, value)
 }
 

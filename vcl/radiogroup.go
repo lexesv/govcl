@@ -299,11 +299,11 @@ func (r *TRadioGroup) SetShowHint(value bool) {
     RadioGroup_SetShowHint(r.instance, value)
 }
 
-func (r *TRadioGroup) TabOrder() int16 {
+func (r *TRadioGroup) TabOrder() uint16 {
     return RadioGroup_GetTabOrder(r.instance)
 }
 
-func (r *TRadioGroup) SetTabOrder(value int16) {
+func (r *TRadioGroup) SetTabOrder(value uint16) {
     RadioGroup_SetTabOrder(r.instance, value)
 }
 

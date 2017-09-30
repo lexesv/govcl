@@ -399,11 +399,11 @@ func (c *TComboBox) SetSorted(value bool) {
     ComboBox_SetSorted(c.instance, value)
 }
 
-func (c *TComboBox) TabOrder() int16 {
+func (c *TComboBox) TabOrder() uint16 {
     return ComboBox_GetTabOrder(c.instance)
 }
 
-func (c *TComboBox) SetTabOrder(value int16) {
+func (c *TComboBox) SetTabOrder(value uint16) {
     ComboBox_SetTabOrder(c.instance, value)
 }
 

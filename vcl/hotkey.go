@@ -219,11 +219,11 @@ func (h *THotKey) SetShowHint(value bool) {
     HotKey_SetShowHint(h.instance, value)
 }
 
-func (h *THotKey) TabOrder() int16 {
+func (h *THotKey) TabOrder() uint16 {
     return HotKey_GetTabOrder(h.instance)
 }
 
-func (h *THotKey) SetTabOrder(value int16) {
+func (h *THotKey) SetTabOrder(value uint16) {
     HotKey_SetTabOrder(h.instance, value)
 }
 

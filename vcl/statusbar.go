@@ -387,11 +387,11 @@ func (s *TStatusBar) Handle() HWND {
     return StatusBar_GetHandle(s.instance)
 }
 
-func (s *TStatusBar) TabOrder() int16 {
+func (s *TStatusBar) TabOrder() uint16 {
     return StatusBar_GetTabOrder(s.instance)
 }
 
-func (s *TStatusBar) SetTabOrder(value int16) {
+func (s *TStatusBar) SetTabOrder(value uint16) {
     StatusBar_SetTabOrder(s.instance, value)
 }
 

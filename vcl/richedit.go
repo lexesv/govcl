@@ -523,12 +523,32 @@ func (r *TRichEdit) ActiveLineNo() uint32 {
     return RichEdit_GetActiveLineNo(r.instance)
 }
 
+func (r *TRichEdit) DefAttributes() *TTextAttributes {
+    return TextAttributesFromInst(RichEdit_GetDefAttributes(r.instance))
+}
+
+func (r *TRichEdit) SetDefAttributes(value *TTextAttributes) {
+    RichEdit_SetDefAttributes(r.instance, CheckPtr(value))
+}
+
+func (r *TRichEdit) SelAttributes() *TTextAttributes {
+    return TextAttributesFromInst(RichEdit_GetSelAttributes(r.instance))
+}
+
+func (r *TRichEdit) SetSelAttributes(value *TTextAttributes) {
+    RichEdit_SetSelAttributes(r.instance, CheckPtr(value))
+}
+
 func (r *TRichEdit) PageRect() TRect {
     return RichEdit_GetPageRect(r.instance)
 }
 
 func (r *TRichEdit) SetPageRect(value TRect) {
     RichEdit_SetPageRect(r.instance, value)
+}
+
+func (r *TRichEdit) Paragraph() *TParaAttributes {
+    return ParaAttributesFromInst(RichEdit_GetParagraph(r.instance))
 }
 
 func (r *TRichEdit) CaretPos() TPoint {

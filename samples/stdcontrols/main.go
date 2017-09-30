@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
@@ -255,12 +256,30 @@ func main() {
 	dtp := vcl.NewDateTimePicker(mainForm)
 	dtp.SetParent(mainForm)
 	dtp.SetBounds(left, top, 167, 25)
+	dtp.SetFormat("yyyy-MM-dd HH:mm:ss")
 
 	top += dtp.Height() + 10
 
 	mdtp := vcl.NewMonthCalendar(mainForm)
 	mdtp.SetParent(mainForm)
 	mdtp.SetBounds(left, top, 250, 250)
+	mdtp.SetOnClick(func(vcl.IObject) {
+		fmt.Println(mdtp.Date())
+	})
+
+	top += mdtp.Height() + 10
+	dtp.SetDateTime(time.Now().Add(time.Hour * 48))
+	dtp.SetDate(time.Now().AddDate(1, 0, 0))
+	fmt.Println("time: ", mdtp.Date())
+
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(mainForm)
+	btn.SetLeft(left)
+	btn.SetTop(top)
+	btn.SetCaption("改变日期")
+	btn.SetOnClick(func(vcl.IObject) {
+		mdtp.SetDate(time.Now().AddDate(-20, 0, 0))
+	})
 
 	// run
 	vcl.Application.Run()

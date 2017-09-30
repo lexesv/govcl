@@ -27,8 +27,13 @@ func (e *TEvents) OnButtonClick(sender vcl.IObject) {
 }
 
 func main() {
+	icon := vcl.NewIcon()
+	defer icon.Free()
+	icon.LoadFromResourceID(rtl.MainInstance(), 3)
+
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
+	vcl.Application.SetIcon(icon)
 
 	events := new(TEvents)
 	m, err := xui.NewFormBytes([]byte(uiXML), events)

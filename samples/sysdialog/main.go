@@ -9,9 +9,13 @@ import (
 )
 
 func main() {
+	icon := vcl.NewIcon()
+	defer icon.Free()
+	icon.LoadFromResourceID(rtl.MainInstance(), 3)
+
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	//    vcl.SetIcon()
+	vcl.Application.SetIcon(icon)
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")

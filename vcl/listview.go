@@ -391,6 +391,14 @@ func (l *TListView) SetHoverTime(value int32) {
     ListView_SetHoverTime(l.instance, value)
 }
 
+func (l *TListView) IconOptions() *TIconOptions {
+    return IconOptionsFromInst(ListView_GetIconOptions(l.instance))
+}
+
+func (l *TListView) SetIconOptions(value IObject) {
+    ListView_SetIconOptions(l.instance, CheckPtr(value))
+}
+
 func (l *TListView) Items() *TListItems {
     return ListItemsFromInst(ListView_GetItems(l.instance))
 }
@@ -429,6 +437,14 @@ func (l *TListView) GroupHeaderImages() *TImageList {
 
 func (l *TListView) SetGroupHeaderImages(value IComponent) {
     ListView_SetGroupHeaderImages(l.instance, CheckPtr(value))
+}
+
+func (l *TListView) GroupView() bool {
+    return ListView_GetGroupView(l.instance)
+}
+
+func (l *TListView) SetGroupView(value bool) {
+    ListView_SetGroupView(l.instance, value)
 }
 
 func (l *TListView) ReadOnly() bool {

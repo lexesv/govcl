@@ -75,6 +75,22 @@ func (l *TListGroup) ToString() string {
     return ListGroup_ToString(l.instance)
 }
 
+func (l *TListGroup) Header() string {
+    return ListGroup_GetHeader(l.instance)
+}
+
+func (l *TListGroup) SetHeader(value string) {
+    ListGroup_SetHeader(l.instance, value)
+}
+
+func (l *TListGroup) Footer() string {
+    return ListGroup_GetFooter(l.instance)
+}
+
+func (l *TListGroup) SetFooter(value string) {
+    ListGroup_SetFooter(l.instance, value)
+}
+
 func (l *TListGroup) GroupID() int32 {
     return ListGroup_GetGroupID(l.instance)
 }
@@ -89,6 +105,38 @@ func (l *TListGroup) State() TListGroupStateSet {
 
 func (l *TListGroup) SetState(value TListGroupStateSet) {
     ListGroup_SetState(l.instance, value)
+}
+
+func (l *TListGroup) HeaderAlign() TAlignment {
+    return ListGroup_GetHeaderAlign(l.instance)
+}
+
+func (l *TListGroup) SetHeaderAlign(value TAlignment) {
+    ListGroup_SetHeaderAlign(l.instance, value)
+}
+
+func (l *TListGroup) FooterAlign() TAlignment {
+    return ListGroup_GetFooterAlign(l.instance)
+}
+
+func (l *TListGroup) SetFooterAlign(value TAlignment) {
+    ListGroup_SetFooterAlign(l.instance, value)
+}
+
+func (l *TListGroup) Subtitle() string {
+    return ListGroup_GetSubtitle(l.instance)
+}
+
+func (l *TListGroup) SetSubtitle(value string) {
+    ListGroup_SetSubtitle(l.instance, value)
+}
+
+func (l *TListGroup) TitleImage() int32 {
+    return ListGroup_GetTitleImage(l.instance)
+}
+
+func (l *TListGroup) SetTitleImage(value int32) {
+    ListGroup_SetTitleImage(l.instance, value)
 }
 
 func (l *TListGroup) Index() int32 {

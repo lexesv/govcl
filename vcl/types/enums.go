@@ -1365,3 +1365,11 @@ const (
 
 // TConsistentAttributes = set of TConsistentAttribute;
 type TConsistentAttributes uint32
+
+// TIconArrangement = (iaTop, iaLeft);
+type TIconArrangement int32
+
+const (
+	IaTop = iota + 0
+	IaLeft
+)

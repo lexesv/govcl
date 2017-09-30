@@ -20001,6 +20001,15 @@ func ListView_SetHoverTime(obj uintptr, value int32) {
    listView_SetHoverTime.Call(obj, uintptr(value))
 }
 
+func ListView_GetIconOptions(obj uintptr) uintptr {
+    ret, _, _ := listView_GetIconOptions.Call(obj)
+    return ret
+}
+
+func ListView_SetIconOptions(obj uintptr, value uintptr) {
+   listView_SetIconOptions.Call(obj, value)
+}
+
 func ListView_GetItems(obj uintptr) uintptr {
     ret, _, _ := listView_GetItems.Call(obj)
     return ret
@@ -20044,6 +20053,15 @@ func ListView_GetGroupHeaderImages(obj uintptr) uintptr {
 
 func ListView_SetGroupHeaderImages(obj uintptr, value uintptr) {
    listView_SetGroupHeaderImages.Call(obj, value)
+}
+
+func ListView_GetGroupView(obj uintptr) bool {
+    ret, _, _ := listView_GetGroupView.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ListView_SetGroupView(obj uintptr, value bool) {
+   listView_SetGroupView.Call(obj, GoBoolToDBool(value))
 }
 
 func ListView_GetReadOnly(obj uintptr) bool {
@@ -26926,6 +26944,24 @@ func ListGroup_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func ListGroup_GetHeader(obj uintptr) string {
+    ret, _, _ := listGroup_GetHeader.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ListGroup_SetHeader(obj uintptr, value string) {
+   listGroup_SetHeader.Call(obj, GoStrToDStr(value))
+}
+
+func ListGroup_GetFooter(obj uintptr) string {
+    ret, _, _ := listGroup_GetFooter.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ListGroup_SetFooter(obj uintptr, value string) {
+   listGroup_SetFooter.Call(obj, GoStrToDStr(value))
+}
+
 func ListGroup_GetGroupID(obj uintptr) int32 {
     ret, _, _ := listGroup_GetGroupID.Call(obj)
     return int32(ret)
@@ -26942,6 +26978,42 @@ func ListGroup_GetState(obj uintptr) TListGroupStateSet {
 
 func ListGroup_SetState(obj uintptr, value TListGroupStateSet) {
    listGroup_SetState.Call(obj, uintptr(value))
+}
+
+func ListGroup_GetHeaderAlign(obj uintptr) TAlignment {
+    ret, _, _ := listGroup_GetHeaderAlign.Call(obj)
+    return TAlignment(ret)
+}
+
+func ListGroup_SetHeaderAlign(obj uintptr, value TAlignment) {
+   listGroup_SetHeaderAlign.Call(obj, uintptr(value))
+}
+
+func ListGroup_GetFooterAlign(obj uintptr) TAlignment {
+    ret, _, _ := listGroup_GetFooterAlign.Call(obj)
+    return TAlignment(ret)
+}
+
+func ListGroup_SetFooterAlign(obj uintptr, value TAlignment) {
+   listGroup_SetFooterAlign.Call(obj, uintptr(value))
+}
+
+func ListGroup_GetSubtitle(obj uintptr) string {
+    ret, _, _ := listGroup_GetSubtitle.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ListGroup_SetSubtitle(obj uintptr, value string) {
+   listGroup_SetSubtitle.Call(obj, GoStrToDStr(value))
+}
+
+func ListGroup_GetTitleImage(obj uintptr) int32 {
+    ret, _, _ := listGroup_GetTitleImage.Call(obj)
+    return int32(ret)
+}
+
+func ListGroup_SetTitleImage(obj uintptr, value int32) {
+   listGroup_SetTitleImage.Call(obj, uintptr(value))
 }
 
 func ListGroup_GetIndex(obj uintptr) int32 {
@@ -30731,5 +30803,55 @@ func TextAttributes_GetHeight(obj uintptr) int32 {
 
 func TextAttributes_SetHeight(obj uintptr, value int32) {
    textAttributes_SetHeight.Call(obj, uintptr(value))
+}
+
+
+//--------------------------- TIconOptions ---------------------------
+
+func IconOptions_Assign(obj uintptr, Source uintptr)  {
+    iconOptions_Assign.Call(obj, Source )
+}
+
+func IconOptions_GetNamePath(obj uintptr) string {
+    ret, _, _ := iconOptions_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func IconOptions_ClassName(obj uintptr) string {
+    ret, _, _ := iconOptions_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func IconOptions_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := iconOptions_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func IconOptions_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := iconOptions_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func IconOptions_ToString(obj uintptr) string {
+    ret, _, _ := iconOptions_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func IconOptions_GetArrangement(obj uintptr) TIconArrangement {
+    ret, _, _ := iconOptions_GetArrangement.Call(obj)
+    return TIconArrangement(ret)
+}
+
+func IconOptions_SetArrangement(obj uintptr, value TIconArrangement) {
+   iconOptions_SetArrangement.Call(obj, uintptr(value))
+}
+
+func IconOptions_GetAutoArrange(obj uintptr) bool {
+    ret, _, _ := iconOptions_GetAutoArrange.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func IconOptions_SetAutoArrange(obj uintptr, value bool) {
+   iconOptions_SetAutoArrange.Call(obj, GoBoolToDBool(value))
 }
 

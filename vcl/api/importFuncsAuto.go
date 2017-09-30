@@ -23029,8 +23029,9 @@ func MemoryStream_LoadFromFile(obj uintptr, FileName string)  {
 }
 
 func MemoryStream_Seek(obj uintptr, Offset int64, Origin TSeekOrigin) int64 {
-    ret, _, _ := memoryStream_Seek.Call(obj, uintptr(Offset) , uintptr(Origin) )
-    return int64(ret)
+    var ret int64
+    memoryStream_Seek.Call(obj, uintptr(unsafe.Pointer(&Offset)), uintptr(Origin) , uintptr(unsafe.Pointer(&ret)))
+    return ret
 }
 
 func MemoryStream_SaveToStream(obj uintptr, Stream uintptr)  {
@@ -23042,8 +23043,9 @@ func MemoryStream_SaveToFile(obj uintptr, FileName string)  {
 }
 
 func MemoryStream_CopyFrom(obj uintptr, Source uintptr, Count int64) int64 {
-    ret, _, _ := memoryStream_CopyFrom.Call(obj, Source , uintptr(Count) )
-    return int64(ret)
+    var ret int64
+    memoryStream_CopyFrom.Call(obj, Source , uintptr(unsafe.Pointer(&Count)), uintptr(unsafe.Pointer(&ret)))
+    return ret
 }
 
 func MemoryStream_ClassName(obj uintptr) string {
@@ -23072,21 +23074,23 @@ func MemoryStream_GetMemory(obj uintptr) uintptr {
 }
 
 func MemoryStream_GetPosition(obj uintptr) int64 {
-    ret, _, _ := memoryStream_GetPosition.Call(obj)
-    return int64(ret)
+    var ret int64
+    memoryStream_GetPosition.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
 }
 
 func MemoryStream_SetPosition(obj uintptr, value int64) {
-   memoryStream_SetPosition.Call(obj, uintptr(value))
+   memoryStream_SetPosition.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 func MemoryStream_GetSize(obj uintptr) int64 {
-    ret, _, _ := memoryStream_GetSize.Call(obj)
-    return int64(ret)
+    var ret int64
+    memoryStream_GetSize.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
 }
 
 func MemoryStream_SetSize(obj uintptr, value int64) {
-   memoryStream_SetSize.Call(obj, uintptr(value))
+   memoryStream_SetSize.Call(obj, uintptr(unsafe.Pointer(&value)))
 }
 
 

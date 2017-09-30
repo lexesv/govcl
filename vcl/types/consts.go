@@ -1,5 +1,7 @@
 package types
 
+// MessageBox or MessageDlg 返回值
+
 const (
 	IdOK       = 1
 	IdCancel   = 2

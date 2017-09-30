@@ -20,7 +20,7 @@ func main() {
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
 	mainForm.SetPosition(types.PoScreenCenter)
-	mainForm.SetWidth(400)
+	mainForm.SetWidth(500)
 	mainForm.SetHeight(700)
 
 	var top int32 = 40
@@ -186,12 +186,36 @@ func main() {
 	pgc := vcl.NewPageControl(mainForm)
 	pgc.SetParent(mainForm)
 	pgc.SetBounds(10, top, 167, 100)
+	pgc.SetOnChange(func(vcl.IObject) {
+		fmt.Println("当前索引:", pgc.ActivePageIndex())
+	})
+
 	sheet := vcl.NewTabSheet(mainForm)
 	sheet.SetPageControl(pgc)
 	sheet.SetCaption("一")
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetLeft(10)
+	btn.SetTop(10)
+	btn.SetCaption("按钮1")
+
 	sheet = vcl.NewTabSheet(mainForm)
 	sheet.SetPageControl(pgc)
 	sheet.SetCaption("二")
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetLeft(10)
+	btn.SetTop(10)
+	btn.SetCaption("按钮2")
+
+	sheet = vcl.NewTabSheet(mainForm)
+	sheet.SetPageControl(pgc)
+	sheet.SetCaption("三")
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetLeft(10)
+	btn.SetTop(10)
+	btn.SetCaption("按钮3")
 
 	// TImage
 	top += pgc.Height() + 5
@@ -231,6 +255,12 @@ func main() {
 	dtp := vcl.NewDateTimePicker(mainForm)
 	dtp.SetParent(mainForm)
 	dtp.SetBounds(left, top, 167, 25)
+
+	top += dtp.Height() + 10
+
+	mdtp := vcl.NewMonthCalendar(mainForm)
+	mdtp.SetParent(mainForm)
+	mdtp.SetBounds(left, top, 250, 250)
 
 	// run
 	vcl.Application.Run()

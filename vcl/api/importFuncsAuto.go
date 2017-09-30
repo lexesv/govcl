@@ -136,6 +136,11 @@ func Application_SetDialogHandle(obj uintptr, value HWND) {
    application_SetDialogHandle.Call(obj, uintptr(value))
 }
 
+func Application_GetExeName(obj uintptr) string {
+    ret, _, _ := application_GetExeName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
 func Application_GetHint(obj uintptr) string {
     ret, _, _ := application_GetHint.Call(obj)
     return DStrToGoStr(ret)

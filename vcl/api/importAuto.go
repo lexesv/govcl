@@ -38,6 +38,7 @@ var (
     application_ToString = libvcl.NewProc("Application_ToString")
     application_GetDialogHandle = libvcl.NewProc("Application_GetDialogHandle")
     application_SetDialogHandle = libvcl.NewProc("Application_SetDialogHandle")
+    application_GetExeName = libvcl.NewProc("Application_GetExeName")
     application_GetHint = libvcl.NewProc("Application_GetHint")
     application_SetHint = libvcl.NewProc("Application_SetHint")
     application_GetHintColor = libvcl.NewProc("Application_GetHintColor")

@@ -79,3 +79,13 @@ func ShortCutToText(val TShortCut) string {
 func SysOpen(filename string) {
 	api.DSysOpen(filename)
 }
+
+// ExtractFilePath 提取文件名的路径，带“\”的
+func ExtractFilePath(filename string) string {
+	return api.DExtractFilePath(filename)
+}
+
+// FileExists 判断文件是否存在
+func FileExists(filename string) bool {
+	return api.DFileExists(filename)
+}

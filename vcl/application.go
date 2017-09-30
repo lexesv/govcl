@@ -159,6 +159,10 @@ func (a *TApplication) SetDialogHandle(value HWND) {
     Application_SetDialogHandle(a.instance, value)
 }
 
+func (a *TApplication) ExeName() string {
+    return Application_GetExeName(a.instance)
+}
+
 func (a *TApplication) Hint() string {
     return Application_GetHint(a.instance)
 }

@@ -86,3 +86,13 @@ func DShortCutToText(val TShortCut) string {
 func DSysOpen(filename string) {
 	dSysOpen.Call(GoStrToDStr(filename))
 }
+
+func DExtractFilePath(filename string) string {
+	r, _, _ := dExtractFilePath.Call(GoStrToDStr(filename))
+	return DStrToGoStr(r)
+}
+
+func DFileExists(filename string) bool {
+	r, _, _ := dFileExists.Call(GoStrToDStr(filename))
+	return DBoolToGoBool(r)
+}

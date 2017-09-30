@@ -56,4 +56,7 @@ var (
 	imageList_DrawOverlay2 = libvcl.NewProc("ImageList_DrawOverlay2")
 	imageList_GetIcon1     = libvcl.NewProc("ImageList_GetIcon1")
 	imageList_GetIcon2     = libvcl.NewProc("ImageList_GetIcon2")
+
+	dExtractFilePath = libvcl.NewProc("DExtractFilePath")
+	dFileExists      = libvcl.NewProc("DFileExists")
 )

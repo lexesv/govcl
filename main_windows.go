@@ -50,6 +50,10 @@ func main() {
 	})
 
 	fmt.Println("MainForm ClientRect: ", mainForm.ClientRect())
+	filename := vcl.Application.ExeName()
+	fmt.Println("application.ExeName: ", filename)
+	fmt.Println("path: ", rtl.ExtractFilePath(filename))
+	fmt.Println("fileExists: ", rtl.FileExists(filename))
 
 	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose uintptr) {
 		rtl.SetFormCanClose(CanClose, vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes)

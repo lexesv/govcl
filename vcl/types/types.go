@@ -28,15 +28,7 @@ type TColor uint32
 
 type TTabOrder int16
 
-type TProgressRange int32
-
-type TBorderWidth int32
-
 type HFONT uintptr
-
-type TFontStyles int32
-
-type TImageIndex int32
 
 type HBRUSH uintptr
 

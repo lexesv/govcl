@@ -322,6 +322,8 @@ const (
 	FsStrikeOut
 )
 
+type TFontStyles uint32
+
 // TScrollStyle = (ssNone, ssHorizontal, ssVertical, ssBoth);
 type TScrollStyle int32
 
@@ -1329,3 +1331,37 @@ const (
 // TSearchTypes = set of TSearchType;
 
 type TSearchTypes uint32
+
+// TNumberingStyle = (nsNone, nsBullet);
+type TNumberingStyle int32
+
+const (
+	NsNone = iota + 0
+	NsBullte
+)
+
+// TAttributeType = (atSelected, atDefaultText);
+type TAttributeType int32
+
+const (
+	AtSelected = iota + 0
+	AtDefaultText
+)
+
+// TConsistentAttribute = (caBold, caColor, caFace, caItalic,
+//   caSize, caStrikeOut, caUnderline, caProtected);
+type TConsistentAttribute int32
+
+const (
+	CaBold = iota + 0
+	CaColor
+	CaFace
+	CaItalic
+	CaSize
+	CaStrikeOut
+	CaUnderline
+	CaProtected
+)
+
+// TConsistentAttributes = set of TConsistentAttribute;
+type TConsistentAttributes uint32

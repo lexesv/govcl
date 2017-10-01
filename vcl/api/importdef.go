@@ -61,5 +61,7 @@ var (
 	dFileExists      = libvcl.NewProc("DFileExists")
 
 	// TForm相关设置
-	setGlobalFormScaled = libvcl.NewProc("SetGlobalFormScaled")
+	setGlobalFormScaled      = libvcl.NewProc("SetGlobalFormScaled")
+	form_ScaleForPPI         = libvcl.NewProc("Form_ScaleForPPI")
+	form_ScaleControlsForDpi = libvcl.NewProc("Form_ScaleControlsForDpi")
 )

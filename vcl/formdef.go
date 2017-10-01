@@ -20,3 +20,12 @@ func (f *TForm) EnabledMinimize(val bool) {
 func (f *TForm) EnabledSystemMenu(val bool) {
 	Form_EnabledSystemMenu(f.instance, val)
 }
+
+func (f *TForm) ScaleForPPI(val int32) {
+	Form_ScaleForPPI(f.instance, val)
+}
+
+func (f *TForm) ScaleControlsForDpi(val int32) {
+	Form_ScaleControlsForDpi(f.instance, val)
+}
+

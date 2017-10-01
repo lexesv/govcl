@@ -41,21 +41,22 @@ func main() {
 	img2.SetAutoSize(true)
 	// 清除memory
 	mem.Clear()
-
-	resp, err := http.Get("http://ww2.sinaimg.cn/large/df780e95jw1egxm06uxerj20cs05hjs8.jpg")
-	if err == nil {
-		defer resp.Body.Close()
-		bs, err := ioutil.ReadAll(resp.Body)
+	// 异步加载，不知道这里会有啥，一般来说不要在非线程中访问UI组件
+	go func() {
+		resp, err := http.Get("http://ww2.sinaimg.cn/large/df780e95jw1egxm06uxerj20cs05hjs8.jpg")
 		if err == nil {
-			mem.Write(bs)
-			mem.SetPosition(0)
-			img2.Picture().LoadFromStream(mem)
+			defer resp.Body.Close()
+			bs, err := ioutil.ReadAll(resp.Body)
+			if err == nil {
+				mem.Write(bs)
+				mem.SetPosition(0)
+				img2.Picture().LoadFromStream(mem)
+			} else {
+				fmt.Println(err)
+			}
 		} else {
 			fmt.Println(err)
 		}
-	} else {
-		fmt.Println(err)
-	}
-
+	}()
 	vcl.Application.Run()
 }

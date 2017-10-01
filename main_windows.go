@@ -42,6 +42,9 @@ func main() {
 	vcl.Application.SetIcon(icon)
 	vcl.Application.SetTitle("Hello World!")
 	vcl.Application.SetMainFormOnTaskBar(true)
+	// 窗口自动根据系统绽放，默认为true
+	//vcl.Application.SetFormScaled(false)
+
 	mainForm = vcl.Application.CreateForm()
 	mainForm.SetWidth(600)
 	mainForm.SetHeight(400)

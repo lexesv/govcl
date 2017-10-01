@@ -60,6 +60,6 @@ var (
 	dExtractFilePath = libvcl.NewProc("DExtractFilePath")
 	dFileExists      = libvcl.NewProc("DFileExists")
 
-	// TWebbrowser
-	webbrowser_SetParent = libvcl.NewProc("Webbrowser_SetParent")
+	// TForm相关设置
+	setGlobalFormScaled = libvcl.NewProc("SetGlobalFormScaled")
 )

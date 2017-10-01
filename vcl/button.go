@@ -407,6 +407,14 @@ func (b *TButton) Handle() HWND {
     return Button_GetHandle(b.instance)
 }
 
+func (b *TButton) ParentWindow() HWND {
+    return Button_GetParentWindow(b.instance)
+}
+
+func (b *TButton) SetParentWindow(value HWND) {
+    Button_SetParentWindow(b.instance, value)
+}
+
 func (b *TButton) BoundsRect() TRect {
     return Button_GetBoundsRect(b.instance)
 }

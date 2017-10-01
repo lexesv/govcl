@@ -311,6 +311,14 @@ func (h *THotKey) SetParentDoubleBuffered(value bool) {
     HotKey_SetParentDoubleBuffered(h.instance, value)
 }
 
+func (h *THotKey) ParentWindow() HWND {
+    return HotKey_GetParentWindow(h.instance)
+}
+
+func (h *THotKey) SetParentWindow(value HWND) {
+    HotKey_SetParentWindow(h.instance, value)
+}
+
 func (h *THotKey) Action() *TAction {
     return ActionFromInst(HotKey_GetAction(h.instance))
 }

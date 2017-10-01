@@ -403,6 +403,14 @@ func (c *TCheckBox) Handle() HWND {
     return CheckBox_GetHandle(c.instance)
 }
 
+func (c *TCheckBox) ParentWindow() HWND {
+    return CheckBox_GetParentWindow(c.instance)
+}
+
+func (c *TCheckBox) SetParentWindow(value HWND) {
+    CheckBox_SetParentWindow(c.instance, value)
+}
+
 func (c *TCheckBox) BoundsRect() TRect {
     return CheckBox_GetBoundsRect(c.instance)
 }

@@ -423,6 +423,14 @@ func (c *TCategoryPanelGroup) Handle() HWND {
     return CategoryPanelGroup_GetHandle(c.instance)
 }
 
+func (c *TCategoryPanelGroup) ParentWindow() HWND {
+    return CategoryPanelGroup_GetParentWindow(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetParentWindow(value HWND) {
+    CategoryPanelGroup_SetParentWindow(c.instance, value)
+}
+
 func (c *TCategoryPanelGroup) Action() *TAction {
     return ActionFromInst(CategoryPanelGroup_GetAction(c.instance))
 }

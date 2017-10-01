@@ -411,6 +411,14 @@ func (s *TStaticText) Handle() HWND {
     return StaticText_GetHandle(s.instance)
 }
 
+func (s *TStaticText) ParentWindow() HWND {
+    return StaticText_GetParentWindow(s.instance)
+}
+
+func (s *TStaticText) SetParentWindow(value HWND) {
+    StaticText_SetParentWindow(s.instance, value)
+}
+
 func (s *TStaticText) Action() *TAction {
     return ActionFromInst(StaticText_GetAction(s.instance))
 }

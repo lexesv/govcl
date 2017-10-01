@@ -335,6 +335,14 @@ func (u *TUpDown) Handle() HWND {
     return UpDown_GetHandle(u.instance)
 }
 
+func (u *TUpDown) ParentWindow() HWND {
+    return UpDown_GetParentWindow(u.instance)
+}
+
+func (u *TUpDown) SetParentWindow(value HWND) {
+    UpDown_SetParentWindow(u.instance, value)
+}
+
 func (u *TUpDown) Action() *TAction {
     return ActionFromInst(UpDown_GetAction(u.instance))
 }

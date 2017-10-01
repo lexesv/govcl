@@ -699,6 +699,14 @@ func (l *TListView) Handle() HWND {
     return ListView_GetHandle(l.instance)
 }
 
+func (l *TListView) ParentWindow() HWND {
+    return ListView_GetParentWindow(l.instance)
+}
+
+func (l *TListView) SetParentWindow(value HWND) {
+    ListView_SetParentWindow(l.instance, value)
+}
+
 func (l *TListView) BoundsRect() TRect {
     return ListView_GetBoundsRect(l.instance)
 }

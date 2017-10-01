@@ -363,6 +363,14 @@ func (r *TRadioGroup) Handle() HWND {
     return RadioGroup_GetHandle(r.instance)
 }
 
+func (r *TRadioGroup) ParentWindow() HWND {
+    return RadioGroup_GetParentWindow(r.instance)
+}
+
+func (r *TRadioGroup) SetParentWindow(value HWND) {
+    RadioGroup_SetParentWindow(r.instance, value)
+}
+
 func (r *TRadioGroup) Action() *TAction {
     return ActionFromInst(RadioGroup_GetAction(r.instance))
 }

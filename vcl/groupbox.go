@@ -355,6 +355,14 @@ func (g *TGroupBox) Handle() HWND {
     return GroupBox_GetHandle(g.instance)
 }
 
+func (g *TGroupBox) ParentWindow() HWND {
+    return GroupBox_GetParentWindow(g.instance)
+}
+
+func (g *TGroupBox) SetParentWindow(value HWND) {
+    GroupBox_SetParentWindow(g.instance, value)
+}
+
 func (g *TGroupBox) Action() *TAction {
     return ActionFromInst(GroupBox_GetAction(g.instance))
 }

@@ -543,6 +543,14 @@ func (c *TComboBox) Handle() HWND {
     return ComboBox_GetHandle(c.instance)
 }
 
+func (c *TComboBox) ParentWindow() HWND {
+    return ComboBox_GetParentWindow(c.instance)
+}
+
+func (c *TComboBox) SetParentWindow(value HWND) {
+    ComboBox_SetParentWindow(c.instance, value)
+}
+
 func (c *TComboBox) Action() *TAction {
     return ActionFromInst(ComboBox_GetAction(c.instance))
 }

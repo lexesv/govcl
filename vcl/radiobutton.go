@@ -399,6 +399,14 @@ func (r *TRadioButton) Handle() HWND {
     return RadioButton_GetHandle(r.instance)
 }
 
+func (r *TRadioButton) ParentWindow() HWND {
+    return RadioButton_GetParentWindow(r.instance)
+}
+
+func (r *TRadioButton) SetParentWindow(value HWND) {
+    RadioButton_SetParentWindow(r.instance, value)
+}
+
 func (r *TRadioButton) BoundsRect() TRect {
     return RadioButton_GetBoundsRect(r.instance)
 }

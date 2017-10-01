@@ -371,6 +371,14 @@ func (t *TTabSheet) Handle() HWND {
     return TabSheet_GetHandle(t.instance)
 }
 
+func (t *TTabSheet) ParentWindow() HWND {
+    return TabSheet_GetParentWindow(t.instance)
+}
+
+func (t *TTabSheet) SetParentWindow(value HWND) {
+    TabSheet_SetParentWindow(t.instance, value)
+}
+
 func (t *TTabSheet) TabOrder() uint16 {
     return TabSheet_GetTabOrder(t.instance)
 }

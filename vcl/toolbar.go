@@ -531,6 +531,14 @@ func (t *TToolBar) Handle() HWND {
     return ToolBar_GetHandle(t.instance)
 }
 
+func (t *TToolBar) ParentWindow() HWND {
+    return ToolBar_GetParentWindow(t.instance)
+}
+
+func (t *TToolBar) SetParentWindow(value HWND) {
+    ToolBar_SetParentWindow(t.instance, value)
+}
+
 func (t *TToolBar) Action() *TAction {
     return ActionFromInst(ToolBar_GetAction(t.instance))
 }

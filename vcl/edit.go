@@ -543,6 +543,14 @@ func (e *TEdit) Handle() HWND {
     return Edit_GetHandle(e.instance)
 }
 
+func (e *TEdit) ParentWindow() HWND {
+    return Edit_GetParentWindow(e.instance)
+}
+
+func (e *TEdit) SetParentWindow(value HWND) {
+    Edit_SetParentWindow(e.instance, value)
+}
+
 func (e *TEdit) Action() *TAction {
     return ActionFromInst(Edit_GetAction(e.instance))
 }

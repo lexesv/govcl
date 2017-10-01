@@ -480,6 +480,14 @@ func (d *TDateTimePicker) Handle() HWND {
     return DateTimePicker_GetHandle(d.instance)
 }
 
+func (d *TDateTimePicker) ParentWindow() HWND {
+    return DateTimePicker_GetParentWindow(d.instance)
+}
+
+func (d *TDateTimePicker) SetParentWindow(value HWND) {
+    DateTimePicker_SetParentWindow(d.instance, value)
+}
+
 func (d *TDateTimePicker) Action() *TAction {
     return ActionFromInst(DateTimePicker_GetAction(d.instance))
 }

@@ -559,6 +559,14 @@ func (m *TMemo) Handle() HWND {
     return Memo_GetHandle(m.instance)
 }
 
+func (m *TMemo) ParentWindow() HWND {
+    return Memo_GetParentWindow(m.instance)
+}
+
+func (m *TMemo) SetParentWindow(value HWND) {
+    Memo_SetParentWindow(m.instance, value)
+}
+
 func (m *TMemo) Action() *TAction {
     return ActionFromInst(Memo_GetAction(m.instance))
 }

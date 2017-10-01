@@ -411,6 +411,14 @@ func (p *TProgressBar) Handle() HWND {
     return ProgressBar_GetHandle(p.instance)
 }
 
+func (p *TProgressBar) ParentWindow() HWND {
+    return ProgressBar_GetParentWindow(p.instance)
+}
+
+func (p *TProgressBar) SetParentWindow(value HWND) {
+    ProgressBar_SetParentWindow(p.instance, value)
+}
+
 func (p *TProgressBar) Action() *TAction {
     return ActionFromInst(ProgressBar_GetAction(p.instance))
 }

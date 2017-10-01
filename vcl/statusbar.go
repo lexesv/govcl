@@ -387,6 +387,14 @@ func (s *TStatusBar) Handle() HWND {
     return StatusBar_GetHandle(s.instance)
 }
 
+func (s *TStatusBar) ParentWindow() HWND {
+    return StatusBar_GetParentWindow(s.instance)
+}
+
+func (s *TStatusBar) SetParentWindow(value HWND) {
+    StatusBar_SetParentWindow(s.instance, value)
+}
+
 func (s *TStatusBar) TabOrder() uint16 {
     return StatusBar_GetTabOrder(s.instance)
 }

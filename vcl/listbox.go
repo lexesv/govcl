@@ -507,6 +507,14 @@ func (l *TListBox) Handle() HWND {
     return ListBox_GetHandle(l.instance)
 }
 
+func (l *TListBox) ParentWindow() HWND {
+    return ListBox_GetParentWindow(l.instance)
+}
+
+func (l *TListBox) SetParentWindow(value HWND) {
+    ListBox_SetParentWindow(l.instance, value)
+}
+
 func (l *TListBox) Action() *TAction {
     return ActionFromInst(ListBox_GetAction(l.instance))
 }

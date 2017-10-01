@@ -563,6 +563,14 @@ func (f *TForm) SetParentDoubleBuffered(value bool) {
     Form_SetParentDoubleBuffered(f.instance, value)
 }
 
+func (f *TForm) ParentWindow() HWND {
+    return Form_GetParentWindow(f.instance)
+}
+
+func (f *TForm) SetParentWindow(value HWND) {
+    Form_SetParentWindow(f.instance, value)
+}
+
 func (f *TForm) TabOrder() uint16 {
     return Form_GetTabOrder(f.instance)
 }

@@ -411,6 +411,14 @@ func (p *TPageControl) Handle() HWND {
     return PageControl_GetHandle(p.instance)
 }
 
+func (p *TPageControl) ParentWindow() HWND {
+    return PageControl_GetParentWindow(p.instance)
+}
+
+func (p *TPageControl) SetParentWindow(value HWND) {
+    PageControl_SetParentWindow(p.instance, value)
+}
+
 func (p *TPageControl) Action() *TAction {
     return ActionFromInst(PageControl_GetAction(p.instance))
 }

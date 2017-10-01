@@ -427,6 +427,14 @@ func (t *TTrackBar) Handle() HWND {
     return TrackBar_GetHandle(t.instance)
 }
 
+func (t *TTrackBar) ParentWindow() HWND {
+    return TrackBar_GetParentWindow(t.instance)
+}
+
+func (t *TTrackBar) SetParentWindow(value HWND) {
+    TrackBar_SetParentWindow(t.instance, value)
+}
+
 func (t *TTrackBar) Action() *TAction {
     return ActionFromInst(TrackBar_GetAction(t.instance))
 }

@@ -431,6 +431,14 @@ func (p *TPanel) Handle() HWND {
     return Panel_GetHandle(p.instance)
 }
 
+func (p *TPanel) ParentWindow() HWND {
+    return Panel_GetParentWindow(p.instance)
+}
+
+func (p *TPanel) SetParentWindow(value HWND) {
+    Panel_SetParentWindow(p.instance, value)
+}
+
 func (p *TPanel) Action() *TAction {
     return ActionFromInst(Panel_GetAction(p.instance))
 }

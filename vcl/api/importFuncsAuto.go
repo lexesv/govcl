@@ -907,6 +907,15 @@ func Form_SetParentDoubleBuffered(obj uintptr, value bool) {
    form_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
+func Form_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := form_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func Form_SetParentWindow(obj uintptr, value HWND) {
+   form_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func Form_GetTabOrder(obj uintptr) uint16 {
     ret, _, _ := form_GetTabOrder.Call(obj)
     return uint16(ret)
@@ -1458,6 +1467,15 @@ func Button_GetControlCount(obj uintptr) int32 {
 func Button_GetHandle(obj uintptr) HWND {
     ret, _, _ := button_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func Button_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := button_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func Button_SetParentWindow(obj uintptr, value HWND) {
+   button_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func Button_GetBoundsRect(obj uintptr) TRect {
@@ -2197,6 +2215,15 @@ func Edit_GetControlCount(obj uintptr) int32 {
 func Edit_GetHandle(obj uintptr) HWND {
     ret, _, _ := edit_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func Edit_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := edit_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func Edit_SetParentWindow(obj uintptr, value HWND) {
+   edit_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func Edit_GetAction(obj uintptr) uintptr {
@@ -3273,6 +3300,15 @@ func Memo_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func Memo_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := memo_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func Memo_SetParentWindow(obj uintptr, value HWND) {
+   memo_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func Memo_GetAction(obj uintptr) uintptr {
     ret, _, _ := memo_GetAction.Call(obj)
     return ret
@@ -3867,6 +3903,15 @@ func CheckBox_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func CheckBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := checkBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func CheckBox_SetParentWindow(obj uintptr, value HWND) {
+   checkBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func CheckBox_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     checkBox_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -4447,6 +4492,15 @@ func RadioButton_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func RadioButton_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := radioButton_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func RadioButton_SetParentWindow(obj uintptr, value HWND) {
+   radioButton_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func RadioButton_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     radioButton_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -4977,6 +5031,15 @@ func GroupBox_GetControlCount(obj uintptr) int32 {
 func GroupBox_GetHandle(obj uintptr) HWND {
     ret, _, _ := groupBox_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func GroupBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := groupBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func GroupBox_SetParentWindow(obj uintptr, value HWND) {
+   groupBox_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func GroupBox_GetAction(obj uintptr) uintptr {
@@ -6202,6 +6265,15 @@ func ListBox_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func ListBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := listBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ListBox_SetParentWindow(obj uintptr, value HWND) {
+   listBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func ListBox_GetAction(obj uintptr) uintptr {
     ret, _, _ := listBox_GetAction.Call(obj)
     return ret
@@ -6961,6 +7033,15 @@ func ComboBox_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func ComboBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := comboBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ComboBox_SetParentWindow(obj uintptr, value HWND) {
+   comboBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func ComboBox_GetAction(obj uintptr) uintptr {
     ret, _, _ := comboBox_GetAction.Call(obj)
     return ret
@@ -7585,6 +7666,15 @@ func Panel_GetControlCount(obj uintptr) int32 {
 func Panel_GetHandle(obj uintptr) HWND {
     ret, _, _ := panel_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func Panel_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := panel_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func Panel_SetParentWindow(obj uintptr, value HWND) {
+   panel_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func Panel_GetAction(obj uintptr) uintptr {
@@ -8618,6 +8708,15 @@ func LinkLabel_GetParentDoubleBuffered(obj uintptr) bool {
 
 func LinkLabel_SetParentDoubleBuffered(obj uintptr, value bool) {
    linkLabel_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func LinkLabel_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := linkLabel_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func LinkLabel_SetParentWindow(obj uintptr, value HWND) {
+   linkLabel_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func LinkLabel_GetAction(obj uintptr) uintptr {
@@ -10041,6 +10140,15 @@ func RadioGroup_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func RadioGroup_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := radioGroup_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func RadioGroup_SetParentWindow(obj uintptr, value HWND) {
+   radioGroup_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func RadioGroup_GetAction(obj uintptr) uintptr {
     ret, _, _ := radioGroup_GetAction.Call(obj)
     return ret
@@ -10649,6 +10757,15 @@ func StaticText_GetControlCount(obj uintptr) int32 {
 func StaticText_GetHandle(obj uintptr) HWND {
     ret, _, _ := staticText_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func StaticText_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := staticText_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func StaticText_SetParentWindow(obj uintptr, value HWND) {
+   staticText_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func StaticText_GetAction(obj uintptr) uintptr {
@@ -11397,6 +11514,15 @@ func ColorBox_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func ColorBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := colorBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ColorBox_SetParentWindow(obj uintptr, value HWND) {
+   colorBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func ColorBox_GetAction(obj uintptr) uintptr {
     ret, _, _ := colorBox_GetAction.Call(obj)
     return ret
@@ -12105,6 +12231,15 @@ func ColorListBox_GetControlCount(obj uintptr) int32 {
 func ColorListBox_GetHandle(obj uintptr) HWND {
     ret, _, _ := colorListBox_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func ColorListBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := colorListBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ColorListBox_SetParentWindow(obj uintptr, value HWND) {
+   colorListBox_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func ColorListBox_GetAction(obj uintptr) uintptr {
@@ -13124,6 +13259,15 @@ func CategoryPanelGroup_GetControlCount(obj uintptr) int32 {
 func CategoryPanelGroup_GetHandle(obj uintptr) HWND {
     ret, _, _ := categoryPanelGroup_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func CategoryPanelGroup_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := categoryPanelGroup_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func CategoryPanelGroup_SetParentWindow(obj uintptr, value HWND) {
+   categoryPanelGroup_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func CategoryPanelGroup_GetAction(obj uintptr) uintptr {
@@ -15540,6 +15684,15 @@ func RichEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
    richEdit_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
 }
 
+func RichEdit_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := richEdit_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func RichEdit_SetParentWindow(obj uintptr, value HWND) {
+   richEdit_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func RichEdit_GetAction(obj uintptr) uintptr {
     ret, _, _ := richEdit_GetAction.Call(obj)
     return ret
@@ -16161,6 +16314,15 @@ func TrackBar_GetControlCount(obj uintptr) int32 {
 func TrackBar_GetHandle(obj uintptr) HWND {
     ret, _, _ := trackBar_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func TrackBar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := trackBar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func TrackBar_SetParentWindow(obj uintptr, value HWND) {
+   trackBar_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func TrackBar_GetAction(obj uintptr) uintptr {
@@ -17019,6 +17181,15 @@ func UpDown_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func UpDown_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := upDown_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func UpDown_SetParentWindow(obj uintptr, value HWND) {
+   upDown_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func UpDown_GetAction(obj uintptr) uintptr {
     ret, _, _ := upDown_GetAction.Call(obj)
     return ret
@@ -17632,6 +17803,15 @@ func ProgressBar_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func ProgressBar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := progressBar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ProgressBar_SetParentWindow(obj uintptr, value HWND) {
+   progressBar_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func ProgressBar_GetAction(obj uintptr) uintptr {
     ret, _, _ := progressBar_GetAction.Call(obj)
     return ret
@@ -18122,6 +18302,15 @@ func HotKey_GetParentDoubleBuffered(obj uintptr) bool {
 
 func HotKey_SetParentDoubleBuffered(obj uintptr, value bool) {
    hotKey_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func HotKey_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := hotKey_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func HotKey_SetParentWindow(obj uintptr, value HWND) {
+   hotKey_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func HotKey_GetAction(obj uintptr) uintptr {
@@ -18805,6 +18994,15 @@ func DateTimePicker_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func DateTimePicker_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := dateTimePicker_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func DateTimePicker_SetParentWindow(obj uintptr, value HWND) {
+   dateTimePicker_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func DateTimePicker_GetAction(obj uintptr) uintptr {
     ret, _, _ := dateTimePicker_GetAction.Call(obj)
     return ret
@@ -19407,6 +19605,15 @@ func MonthCalendar_GetControlCount(obj uintptr) int32 {
 func MonthCalendar_GetHandle(obj uintptr) HWND {
     ret, _, _ := monthCalendar_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func MonthCalendar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := monthCalendar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func MonthCalendar_SetParentWindow(obj uintptr, value HWND) {
+   monthCalendar_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func MonthCalendar_GetAction(obj uintptr) uintptr {
@@ -20344,6 +20551,15 @@ func ListView_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func ListView_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := listView_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ListView_SetParentWindow(obj uintptr, value HWND) {
+   listView_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func ListView_GetBoundsRect(obj uintptr) TRect {
     var ret TRect
     listView_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
@@ -21197,6 +21413,15 @@ func TreeView_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func TreeView_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := treeView_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func TreeView_SetParentWindow(obj uintptr, value HWND) {
+   treeView_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func TreeView_GetAction(obj uintptr) uintptr {
     ret, _, _ := treeView_GetAction.Call(obj)
     return ret
@@ -21778,6 +22003,15 @@ func StatusBar_GetControlCount(obj uintptr) int32 {
 func StatusBar_GetHandle(obj uintptr) HWND {
     ret, _, _ := statusBar_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func StatusBar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := statusBar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func StatusBar_SetParentWindow(obj uintptr, value HWND) {
+   statusBar_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func StatusBar_GetTabOrder(obj uintptr) uint16 {
@@ -22527,6 +22761,15 @@ func ToolBar_GetControlCount(obj uintptr) int32 {
 func ToolBar_GetHandle(obj uintptr) HWND {
     ret, _, _ := toolBar_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func ToolBar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := toolBar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ToolBar_SetParentWindow(obj uintptr, value HWND) {
+   toolBar_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func ToolBar_GetAction(obj uintptr) uintptr {
@@ -25472,6 +25715,15 @@ func PageControl_GetHandle(obj uintptr) HWND {
     return HWND(ret)
 }
 
+func PageControl_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := pageControl_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func PageControl_SetParentWindow(obj uintptr, value HWND) {
+   pageControl_SetParentWindow.Call(obj, uintptr(value))
+}
+
 func PageControl_GetAction(obj uintptr) uintptr {
     ret, _, _ := pageControl_GetAction.Call(obj)
     return ret
@@ -26034,6 +26286,15 @@ func TabSheet_GetControlCount(obj uintptr) int32 {
 func TabSheet_GetHandle(obj uintptr) HWND {
     ret, _, _ := tabSheet_GetHandle.Call(obj)
     return HWND(ret)
+}
+
+func TabSheet_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := tabSheet_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func TabSheet_SetParentWindow(obj uintptr, value HWND) {
+   tabSheet_SetParentWindow.Call(obj, uintptr(value))
 }
 
 func TabSheet_GetTabOrder(obj uintptr) uint16 {

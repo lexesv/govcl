@@ -412,6 +412,14 @@ func (m *TMonthCalendar) Handle() HWND {
     return MonthCalendar_GetHandle(m.instance)
 }
 
+func (m *TMonthCalendar) ParentWindow() HWND {
+    return MonthCalendar_GetParentWindow(m.instance)
+}
+
+func (m *TMonthCalendar) SetParentWindow(value HWND) {
+    MonthCalendar_SetParentWindow(m.instance, value)
+}
+
 func (m *TMonthCalendar) Action() *TAction {
     return ActionFromInst(MonthCalendar_GetAction(m.instance))
 }

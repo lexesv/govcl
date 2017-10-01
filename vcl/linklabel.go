@@ -383,6 +383,14 @@ func (l *TLinkLabel) SetParentDoubleBuffered(value bool) {
     LinkLabel_SetParentDoubleBuffered(l.instance, value)
 }
 
+func (l *TLinkLabel) ParentWindow() HWND {
+    return LinkLabel_GetParentWindow(l.instance)
+}
+
+func (l *TLinkLabel) SetParentWindow(value HWND) {
+    LinkLabel_SetParentWindow(l.instance, value)
+}
+
 func (l *TLinkLabel) Action() *TAction {
     return ActionFromInst(LinkLabel_GetAction(l.instance))
 }

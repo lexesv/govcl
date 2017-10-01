@@ -539,6 +539,14 @@ func (c *TColorBox) Handle() HWND {
     return ColorBox_GetHandle(c.instance)
 }
 
+func (c *TColorBox) ParentWindow() HWND {
+    return ColorBox_GetParentWindow(c.instance)
+}
+
+func (c *TColorBox) SetParentWindow(value HWND) {
+    ColorBox_SetParentWindow(c.instance, value)
+}
+
 func (c *TColorBox) Action() *TAction {
     return ActionFromInst(ColorBox_GetAction(c.instance))
 }

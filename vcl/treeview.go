@@ -639,6 +639,14 @@ func (t *TTreeView) Handle() HWND {
     return TreeView_GetHandle(t.instance)
 }
 
+func (t *TTreeView) ParentWindow() HWND {
+    return TreeView_GetParentWindow(t.instance)
+}
+
+func (t *TTreeView) SetParentWindow(value HWND) {
+    TreeView_SetParentWindow(t.instance, value)
+}
+
 func (t *TTreeView) Action() *TAction {
     return ActionFromInst(TreeView_GetAction(t.instance))
 }

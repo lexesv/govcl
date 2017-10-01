@@ -635,6 +635,14 @@ func (r *TRichEdit) SetParentDoubleBuffered(value bool) {
     RichEdit_SetParentDoubleBuffered(r.instance, value)
 }
 
+func (r *TRichEdit) ParentWindow() HWND {
+    return RichEdit_GetParentWindow(r.instance)
+}
+
+func (r *TRichEdit) SetParentWindow(value HWND) {
+    RichEdit_SetParentWindow(r.instance, value)
+}
+
 func (r *TRichEdit) Action() *TAction {
     return ActionFromInst(RichEdit_GetAction(r.instance))
 }

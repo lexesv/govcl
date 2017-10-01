@@ -219,6 +219,14 @@ func (g *TGroupBox) SetFont(value *TFont) {
     GroupBox_SetFont(g.instance, CheckPtr(value))
 }
 
+func (g *TGroupBox) ParentBackground() bool {
+    return GroupBox_GetParentBackground(g.instance)
+}
+
+func (g *TGroupBox) SetParentBackground(value bool) {
+    GroupBox_SetParentBackground(g.instance, value)
+}
+
 func (g *TGroupBox) ParentColor() bool {
     return GroupBox_GetParentColor(g.instance)
 }

@@ -4883,6 +4883,15 @@ func GroupBox_SetFont(obj uintptr, value uintptr) {
    groupBox_SetFont.Call(obj, value)
 }
 
+func GroupBox_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := groupBox_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func GroupBox_SetParentBackground(obj uintptr, value bool) {
+   groupBox_SetParentBackground.Call(obj, GoBoolToDBool(value))
+}
+
 func GroupBox_GetParentColor(obj uintptr) bool {
     ret, _, _ := groupBox_GetParentColor.Call(obj)
     return DBoolToGoBool(ret)
@@ -7496,6 +7505,15 @@ func Panel_SetEnabled(obj uintptr, value bool) {
    panel_SetEnabled.Call(obj, GoBoolToDBool(value))
 }
 
+func Panel_GetFullRepaint(obj uintptr) bool {
+    ret, _, _ := panel_GetFullRepaint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Panel_SetFullRepaint(obj uintptr, value bool) {
+   panel_SetFullRepaint.Call(obj, GoBoolToDBool(value))
+}
+
 func Panel_GetFont(obj uintptr) uintptr {
     ret, _, _ := panel_GetFont.Call(obj)
     return ret
@@ -7503,6 +7521,24 @@ func Panel_GetFont(obj uintptr) uintptr {
 
 func Panel_SetFont(obj uintptr, value uintptr) {
    panel_SetFont.Call(obj, value)
+}
+
+func Panel_GetLocked(obj uintptr) bool {
+    ret, _, _ := panel_GetLocked.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Panel_SetLocked(obj uintptr, value bool) {
+   panel_SetLocked.Call(obj, GoBoolToDBool(value))
+}
+
+func Panel_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := panel_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Panel_SetParentBackground(obj uintptr, value bool) {
+   panel_SetParentBackground.Call(obj, GoBoolToDBool(value))
 }
 
 func Panel_GetParentColor(obj uintptr) bool {
@@ -10003,6 +10039,15 @@ func RadioGroup_GetItems(obj uintptr) uintptr {
 
 func RadioGroup_SetItems(obj uintptr, value uintptr) {
    radioGroup_SetItems.Call(obj, value)
+}
+
+func RadioGroup_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := radioGroup_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func RadioGroup_SetParentBackground(obj uintptr, value bool) {
+   radioGroup_SetParentBackground.Call(obj, GoBoolToDBool(value))
 }
 
 func RadioGroup_GetParentColor(obj uintptr) bool {
@@ -12847,6 +12892,14 @@ func CategoryPanelGroup_Free(obj uintptr) {
     categoryPanelGroup_Free.Call(obj)
 }
 
+func CategoryPanelGroup_CollapseAll(obj uintptr)  {
+    categoryPanelGroup_CollapseAll.Call(obj)
+}
+
+func CategoryPanelGroup_ExpandAll(obj uintptr)  {
+    categoryPanelGroup_ExpandAll.Call(obj)
+}
+
 func CategoryPanelGroup_CanFocus(obj uintptr) bool {
     ret, _, _ := categoryPanelGroup_CanFocus.Call(obj)
     return DBoolToGoBool(ret)
@@ -13026,6 +13079,33 @@ func CategoryPanelGroup_SetBiDiMode(obj uintptr, value TBiDiMode) {
    categoryPanelGroup_SetBiDiMode.Call(obj, uintptr(value))
 }
 
+func CategoryPanelGroup_GetChevronAlignment(obj uintptr) TAlignment {
+    ret, _, _ := categoryPanelGroup_GetChevronAlignment.Call(obj)
+    return TAlignment(ret)
+}
+
+func CategoryPanelGroup_SetChevronAlignment(obj uintptr, value TAlignment) {
+   categoryPanelGroup_SetChevronAlignment.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetChevronColor(obj uintptr) TColor {
+    ret, _, _ := categoryPanelGroup_GetChevronColor.Call(obj)
+    return TColor(ret)
+}
+
+func CategoryPanelGroup_SetChevronColor(obj uintptr, value TColor) {
+   categoryPanelGroup_SetChevronColor.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetChevronHotColor(obj uintptr) TColor {
+    ret, _, _ := categoryPanelGroup_GetChevronHotColor.Call(obj)
+    return TColor(ret)
+}
+
+func CategoryPanelGroup_SetChevronHotColor(obj uintptr, value TColor) {
+   categoryPanelGroup_SetChevronHotColor.Call(obj, uintptr(value))
+}
+
 func CategoryPanelGroup_GetDoubleBuffered(obj uintptr) bool {
     ret, _, _ := categoryPanelGroup_GetDoubleBuffered.Call(obj)
     return DBoolToGoBool(ret)
@@ -13062,6 +13142,24 @@ func CategoryPanelGroup_SetFont(obj uintptr, value uintptr) {
    categoryPanelGroup_SetFont.Call(obj, value)
 }
 
+func CategoryPanelGroup_GetGradientBaseColor(obj uintptr) TColor {
+    ret, _, _ := categoryPanelGroup_GetGradientBaseColor.Call(obj)
+    return TColor(ret)
+}
+
+func CategoryPanelGroup_SetGradientBaseColor(obj uintptr, value TColor) {
+   categoryPanelGroup_SetGradientBaseColor.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetGradientColor(obj uintptr) TColor {
+    ret, _, _ := categoryPanelGroup_GetGradientColor.Call(obj)
+    return TColor(ret)
+}
+
+func CategoryPanelGroup_SetGradientColor(obj uintptr, value TColor) {
+   categoryPanelGroup_SetGradientColor.Call(obj, uintptr(value))
+}
+
 func CategoryPanelGroup_GetGradientDirection(obj uintptr) TGradientDirection {
     ret, _, _ := categoryPanelGroup_GetGradientDirection.Call(obj)
     return TGradientDirection(ret)
@@ -13069,6 +13167,51 @@ func CategoryPanelGroup_GetGradientDirection(obj uintptr) TGradientDirection {
 
 func CategoryPanelGroup_SetGradientDirection(obj uintptr, value TGradientDirection) {
    categoryPanelGroup_SetGradientDirection.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetHeaderAlignment(obj uintptr) TAlignment {
+    ret, _, _ := categoryPanelGroup_GetHeaderAlignment.Call(obj)
+    return TAlignment(ret)
+}
+
+func CategoryPanelGroup_SetHeaderAlignment(obj uintptr, value TAlignment) {
+   categoryPanelGroup_SetHeaderAlignment.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetHeaderFont(obj uintptr) uintptr {
+    ret, _, _ := categoryPanelGroup_GetHeaderFont.Call(obj)
+    return ret
+}
+
+func CategoryPanelGroup_SetHeaderFont(obj uintptr, value uintptr) {
+   categoryPanelGroup_SetHeaderFont.Call(obj, value)
+}
+
+func CategoryPanelGroup_GetHeaderHeight(obj uintptr) int32 {
+    ret, _, _ := categoryPanelGroup_GetHeaderHeight.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanelGroup_SetHeaderHeight(obj uintptr, value int32) {
+   categoryPanelGroup_SetHeaderHeight.Call(obj, uintptr(value))
+}
+
+func CategoryPanelGroup_GetHeaderImage(obj uintptr) uintptr {
+    ret, _, _ := categoryPanelGroup_GetHeaderImage.Call(obj)
+    return ret
+}
+
+func CategoryPanelGroup_SetHeaderImage(obj uintptr, value uintptr) {
+   categoryPanelGroup_SetHeaderImage.Call(obj, value)
+}
+
+func CategoryPanelGroup_GetHeaderStyle(obj uintptr) THeaderStyle {
+    ret, _, _ := categoryPanelGroup_GetHeaderStyle.Call(obj)
+    return THeaderStyle(ret)
+}
+
+func CategoryPanelGroup_SetHeaderStyle(obj uintptr, value THeaderStyle) {
+   categoryPanelGroup_SetHeaderStyle.Call(obj, uintptr(value))
 }
 
 func CategoryPanelGroup_GetHeight(obj uintptr) int32 {
@@ -13087,6 +13230,15 @@ func CategoryPanelGroup_GetImages(obj uintptr) uintptr {
 
 func CategoryPanelGroup_SetImages(obj uintptr, value uintptr) {
    categoryPanelGroup_SetImages.Call(obj, value)
+}
+
+func CategoryPanelGroup_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := categoryPanelGroup_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanelGroup_SetParentBackground(obj uintptr, value bool) {
+   categoryPanelGroup_SetParentBackground.Call(obj, GoBoolToDBool(value))
 }
 
 func CategoryPanelGroup_GetParentColor(obj uintptr) bool {
@@ -13440,6 +13592,663 @@ func CategoryPanelGroup_GetControls(obj uintptr, Index int32) uintptr {
 
 func CategoryPanelGroup_GetComponents(obj uintptr, AIndex int32) uintptr {
     ret, _, _ := categoryPanelGroup_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TCategoryPanel ---------------------------
+
+func CategoryPanel_Create(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_Create.Call(obj)
+    return ret
+}
+
+func CategoryPanel_Free(obj uintptr) {
+    categoryPanel_Free.Call(obj)
+}
+
+func CategoryPanel_Collapse(obj uintptr)  {
+    categoryPanel_Collapse.Call(obj)
+}
+
+func CategoryPanel_Expand(obj uintptr)  {
+    categoryPanel_Expand.Call(obj)
+}
+
+func CategoryPanel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    categoryPanel_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func CategoryPanel_CanFocus(obj uintptr) bool {
+    ret, _, _ := categoryPanel_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_FlipChildren(obj uintptr, AllLevels bool)  {
+    categoryPanel_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func CategoryPanel_Focused(obj uintptr) bool {
+    ret, _, _ := categoryPanel_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := categoryPanel_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_Invalidate(obj uintptr)  {
+    categoryPanel_Invalidate.Call(obj)
+}
+
+func CategoryPanel_Realign(obj uintptr)  {
+    categoryPanel_Realign.Call(obj)
+}
+
+func CategoryPanel_Repaint(obj uintptr)  {
+    categoryPanel_Repaint.Call(obj)
+}
+
+func CategoryPanel_ScaleBy(obj uintptr, M int32, D int32)  {
+    categoryPanel_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func CategoryPanel_SetFocus(obj uintptr)  {
+    categoryPanel_SetFocus.Call(obj)
+}
+
+func CategoryPanel_Update(obj uintptr)  {
+    categoryPanel_Update.Call(obj)
+}
+
+func CategoryPanel_BringToFront(obj uintptr)  {
+    categoryPanel_BringToFront.Call(obj)
+}
+
+func CategoryPanel_HasParent(obj uintptr) bool {
+    ret, _, _ := categoryPanel_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_Hide(obj uintptr)  {
+    categoryPanel_Hide.Call(obj)
+}
+
+func CategoryPanel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := categoryPanel_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func CategoryPanel_Refresh(obj uintptr)  {
+    categoryPanel_Refresh.Call(obj)
+}
+
+func CategoryPanel_SendToBack(obj uintptr)  {
+    categoryPanel_SendToBack.Call(obj)
+}
+
+func CategoryPanel_Show(obj uintptr)  {
+    categoryPanel_Show.Call(obj)
+}
+
+func CategoryPanel_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := categoryPanel_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func CategoryPanel_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := categoryPanel_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func CategoryPanel_GetNamePath(obj uintptr) string {
+    ret, _, _ := categoryPanel_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_Assign(obj uintptr, Source uintptr)  {
+    categoryPanel_Assign.Call(obj, Source )
+}
+
+func CategoryPanel_ClassName(obj uintptr) string {
+    ret, _, _ := categoryPanel_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := categoryPanel_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_ToString(obj uintptr) string {
+    ret, _, _ := categoryPanel_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := categoryPanel_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func CategoryPanel_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   categoryPanel_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetCaption(obj uintptr) string {
+    ret, _, _ := categoryPanel_GetCaption.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_SetCaption(obj uintptr, value string) {
+   categoryPanel_SetCaption.Call(obj, GoStrToDStr(value))
+}
+
+func CategoryPanel_GetColor(obj uintptr) TColor {
+    ret, _, _ := categoryPanel_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func CategoryPanel_SetColor(obj uintptr, value TColor) {
+   categoryPanel_SetColor.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetCollapsed(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetCollapsed.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetCollapsed(obj uintptr, value bool) {
+   categoryPanel_SetCollapsed.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetCollapsedHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetCollapsedHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetCollapsedHotImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetCollapsedHotImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetCollapsedImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetCollapsedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetCollapsedImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetCollapsedImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetCollapsedPressedImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetCollapsedPressedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetCollapsedPressedImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetCollapsedPressedImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetDoubleBuffered(obj uintptr, value bool) {
+   categoryPanel_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetEnabled(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetEnabled(obj uintptr, value bool) {
+   categoryPanel_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetExpandedHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExpandedHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetExpandedHotImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetExpandedHotImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetExpandedImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExpandedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetExpandedImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetExpandedImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetExpandedPressedImageIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExpandedPressedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetExpandedPressedImageIndex(obj uintptr, value int32) {
+   categoryPanel_SetExpandedPressedImageIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetFullRepaint(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetFullRepaint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetFullRepaint(obj uintptr, value bool) {
+   categoryPanel_SetFullRepaint.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetFont(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetFont.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetFont(obj uintptr, value uintptr) {
+   categoryPanel_SetFont.Call(obj, value)
+}
+
+func CategoryPanel_GetHeight(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetHeight(obj uintptr, value int32) {
+   categoryPanel_SetHeight.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetLeft(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetLeft(obj uintptr, value int32) {
+   categoryPanel_SetLeft.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetLocked(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetLocked.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetLocked(obj uintptr, value bool) {
+   categoryPanel_SetLocked.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentBackground(obj uintptr, value bool) {
+   categoryPanel_SetParentBackground.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentColor(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentColor.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentColor(obj uintptr, value bool) {
+   categoryPanel_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentCtl3D(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentCtl3D.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentCtl3D(obj uintptr, value bool) {
+   categoryPanel_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentDoubleBuffered(obj uintptr, value bool) {
+   categoryPanel_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentFont(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentFont(obj uintptr, value bool) {
+   categoryPanel_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetParentShowHint(obj uintptr, value bool) {
+   categoryPanel_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetPopupMenu(obj uintptr, value uintptr) {
+   categoryPanel_SetPopupMenu.Call(obj, value)
+}
+
+func CategoryPanel_GetShowHint(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetShowHint(obj uintptr, value bool) {
+   categoryPanel_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := categoryPanel_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func CategoryPanel_SetTabOrder(obj uintptr, value uint16) {
+   categoryPanel_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetTabStop(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetTabStop(obj uintptr, value bool) {
+   categoryPanel_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetVisible(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetVisible(obj uintptr, value bool) {
+   categoryPanel_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := categoryPanel_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func CategoryPanel_SetStyleElements(obj uintptr, value TStyleElements) {
+   categoryPanel_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetWidth(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetWidth(obj uintptr, value int32) {
+   categoryPanel_SetWidth.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_SetOnClick(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnDblClick(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnEnter(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnExit(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnMouseDown(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnMouseMove(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_SetOnMouseUp(obj uintptr, fn interface{}) {
+    categoryPanel_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func CategoryPanel_GetPanelGroup(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetPanelGroup.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetPanelGroup(obj uintptr, value uintptr) {
+   categoryPanel_SetPanelGroup.Call(obj, value)
+}
+
+func CategoryPanel_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetBrush.Call(obj)
+    return ret
+}
+
+func CategoryPanel_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetHandle(obj uintptr) HWND {
+    ret, _, _ := categoryPanel_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func CategoryPanel_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := categoryPanel_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func CategoryPanel_SetParentWindow(obj uintptr, value HWND) {
+   categoryPanel_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetAction(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetAction.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetAction(obj uintptr, value uintptr) {
+   categoryPanel_SetAction.Call(obj, value)
+}
+
+func CategoryPanel_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := categoryPanel_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func CategoryPanel_SetAlign(obj uintptr, value TAlign) {
+   categoryPanel_SetAlign.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := categoryPanel_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func CategoryPanel_SetAnchors(obj uintptr, value TAnchors) {
+   categoryPanel_SetAnchors.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    categoryPanel_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func CategoryPanel_SetBoundsRect(obj uintptr, value TRect) {
+   categoryPanel_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func CategoryPanel_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetClientHeight(obj uintptr, value int32) {
+   categoryPanel_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    categoryPanel_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func CategoryPanel_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetClientWidth(obj uintptr, value int32) {
+   categoryPanel_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetParent(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetParent.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetParent(obj uintptr, value uintptr) {
+   categoryPanel_SetParent.Call(obj, value)
+}
+
+func CategoryPanel_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := categoryPanel_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CategoryPanel_SetAlignWithMargins(obj uintptr, value bool) {
+   categoryPanel_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func CategoryPanel_GetTop(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetTop(obj uintptr, value int32) {
+   categoryPanel_SetTop.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := categoryPanel_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func CategoryPanel_SetCursor(obj uintptr, value TCursor) {
+   categoryPanel_SetCursor.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetHint(obj uintptr) string {
+    ret, _, _ := categoryPanel_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_SetHint(obj uintptr, value string) {
+   categoryPanel_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func CategoryPanel_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetMargins.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetMargins(obj uintptr, value uintptr) {
+   categoryPanel_SetMargins.Call(obj, value)
+}
+
+func CategoryPanel_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func CategoryPanel_SetComponentIndex(obj uintptr, value int32) {
+   categoryPanel_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetOwner.Call(obj)
+    return ret
+}
+
+func CategoryPanel_GetName(obj uintptr) string {
+    ret, _, _ := categoryPanel_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CategoryPanel_SetName(obj uintptr, value string) {
+   categoryPanel_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func CategoryPanel_GetTag(obj uintptr) int {
+    ret, _, _ := categoryPanel_GetTag.Call(obj)
+    return int(ret)
+}
+
+func CategoryPanel_SetTag(obj uintptr, value int) {
+   categoryPanel_SetTag.Call(obj, uintptr(value))
+}
+
+func CategoryPanel_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := categoryPanel_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func CategoryPanel_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := categoryPanel_GetComponents.Call(obj, uintptr(AIndex))
     return ret
 }
 
@@ -25079,8 +25888,16 @@ func TreeNode_Assign(obj uintptr, Source uintptr)  {
     treeNode_Assign.Call(obj, Source )
 }
 
+func TreeNode_Collapse(obj uintptr, Recurse bool)  {
+    treeNode_Collapse.Call(obj, GoBoolToDBool(Recurse) )
+}
+
 func TreeNode_Delete(obj uintptr)  {
     treeNode_Delete.Call(obj)
+}
+
+func TreeNode_Expand(obj uintptr, Recurse bool)  {
+    treeNode_Expand.Call(obj, GoBoolToDBool(Recurse) )
 }
 
 func TreeNode_IndexOf(obj uintptr, Value uintptr) int32 {
@@ -30564,6 +31381,11 @@ func List_Clear(obj uintptr)  {
 
 func List_Delete(obj uintptr, Index int32)  {
     list_Delete.Call(obj, uintptr(Index) )
+}
+
+func List_Expand(obj uintptr) uintptr {
+    ret, _, _ := list_Expand.Call(obj)
+    return ret
 }
 
 func List_IndexOf(obj uintptr, Item uintptr) int32 {

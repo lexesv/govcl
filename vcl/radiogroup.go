@@ -243,6 +243,14 @@ func (r *TRadioGroup) SetItems(value IObject) {
     RadioGroup_SetItems(r.instance, CheckPtr(value))
 }
 
+func (r *TRadioGroup) ParentBackground() bool {
+    return RadioGroup_GetParentBackground(r.instance)
+}
+
+func (r *TRadioGroup) SetParentBackground(value bool) {
+    RadioGroup_SetParentBackground(r.instance, value)
+}
+
 func (r *TRadioGroup) ParentColor() bool {
     return RadioGroup_GetParentColor(r.instance)
 }

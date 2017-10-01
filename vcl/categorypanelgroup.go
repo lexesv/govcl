@@ -51,6 +51,14 @@ func (c *TCategoryPanelGroup) IsValid() bool {
     return c.instance != 0
 }
 
+func (c *TCategoryPanelGroup) CollapseAll() {
+    CategoryPanelGroup_CollapseAll(c.instance)
+}
+
+func (c *TCategoryPanelGroup) ExpandAll() {
+    CategoryPanelGroup_ExpandAll(c.instance)
+}
+
 func (c *TCategoryPanelGroup) CanFocus() bool {
     return CategoryPanelGroup_CanFocus(c.instance)
 }
@@ -211,6 +219,30 @@ func (c *TCategoryPanelGroup) SetBiDiMode(value TBiDiMode) {
     CategoryPanelGroup_SetBiDiMode(c.instance, value)
 }
 
+func (c *TCategoryPanelGroup) ChevronAlignment() TAlignment {
+    return CategoryPanelGroup_GetChevronAlignment(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetChevronAlignment(value TAlignment) {
+    CategoryPanelGroup_SetChevronAlignment(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) ChevronColor() TColor {
+    return CategoryPanelGroup_GetChevronColor(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetChevronColor(value TColor) {
+    CategoryPanelGroup_SetChevronColor(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) ChevronHotColor() TColor {
+    return CategoryPanelGroup_GetChevronHotColor(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetChevronHotColor(value TColor) {
+    CategoryPanelGroup_SetChevronHotColor(c.instance, value)
+}
+
 func (c *TCategoryPanelGroup) DoubleBuffered() bool {
     return CategoryPanelGroup_GetDoubleBuffered(c.instance)
 }
@@ -243,12 +275,68 @@ func (c *TCategoryPanelGroup) SetFont(value *TFont) {
     CategoryPanelGroup_SetFont(c.instance, CheckPtr(value))
 }
 
+func (c *TCategoryPanelGroup) GradientBaseColor() TColor {
+    return CategoryPanelGroup_GetGradientBaseColor(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetGradientBaseColor(value TColor) {
+    CategoryPanelGroup_SetGradientBaseColor(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) GradientColor() TColor {
+    return CategoryPanelGroup_GetGradientColor(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetGradientColor(value TColor) {
+    CategoryPanelGroup_SetGradientColor(c.instance, value)
+}
+
 func (c *TCategoryPanelGroup) GradientDirection() TGradientDirection {
     return CategoryPanelGroup_GetGradientDirection(c.instance)
 }
 
 func (c *TCategoryPanelGroup) SetGradientDirection(value TGradientDirection) {
     CategoryPanelGroup_SetGradientDirection(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) HeaderAlignment() TAlignment {
+    return CategoryPanelGroup_GetHeaderAlignment(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetHeaderAlignment(value TAlignment) {
+    CategoryPanelGroup_SetHeaderAlignment(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) HeaderFont() *TFont {
+    return FontFromInst(CategoryPanelGroup_GetHeaderFont(c.instance))
+}
+
+func (c *TCategoryPanelGroup) SetHeaderFont(value *TFont) {
+    CategoryPanelGroup_SetHeaderFont(c.instance, CheckPtr(value))
+}
+
+func (c *TCategoryPanelGroup) HeaderHeight() int32 {
+    return CategoryPanelGroup_GetHeaderHeight(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetHeaderHeight(value int32) {
+    CategoryPanelGroup_SetHeaderHeight(c.instance, value)
+}
+
+func (c *TCategoryPanelGroup) HeaderImage() *TPicture {
+    return PictureFromInst(CategoryPanelGroup_GetHeaderImage(c.instance))
+}
+
+func (c *TCategoryPanelGroup) SetHeaderImage(value *TPicture) {
+    CategoryPanelGroup_SetHeaderImage(c.instance, CheckPtr(value))
+}
+
+func (c *TCategoryPanelGroup) HeaderStyle() THeaderStyle {
+    return CategoryPanelGroup_GetHeaderStyle(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetHeaderStyle(value THeaderStyle) {
+    CategoryPanelGroup_SetHeaderStyle(c.instance, value)
 }
 
 func (c *TCategoryPanelGroup) Height() int32 {
@@ -265,6 +353,14 @@ func (c *TCategoryPanelGroup) Images() *TImageList {
 
 func (c *TCategoryPanelGroup) SetImages(value IComponent) {
     CategoryPanelGroup_SetImages(c.instance, CheckPtr(value))
+}
+
+func (c *TCategoryPanelGroup) ParentBackground() bool {
+    return CategoryPanelGroup_GetParentBackground(c.instance)
+}
+
+func (c *TCategoryPanelGroup) SetParentBackground(value bool) {
+    CategoryPanelGroup_SetParentBackground(c.instance, value)
 }
 
 func (c *TCategoryPanelGroup) ParentColor() bool {

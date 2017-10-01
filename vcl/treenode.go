@@ -59,8 +59,16 @@ func (t *TTreeNode) Assign(Source IObject) {
     TreeNode_Assign(t.instance, CheckPtr(Source))
 }
 
+func (t *TTreeNode) Collapse(Recurse bool) {
+    TreeNode_Collapse(t.instance, Recurse)
+}
+
 func (t *TTreeNode) Delete() {
     TreeNode_Delete(t.instance)
+}
+
+func (t *TTreeNode) Expand(Recurse bool) {
+    TreeNode_Expand(t.instance, Recurse)
 }
 
 func (t *TTreeNode) IndexOf(Value *TTreeNode) int32 {

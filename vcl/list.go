@@ -62,6 +62,10 @@ func (l *TList) Delete(Index int32) {
     List_Delete(l.instance, Index)
 }
 
+func (l *TList) Expand() *TList {
+    return ListFromInst(List_Expand(l.instance))
+}
+
 func (l *TList) IndexOf(Item uintptr) int32 {
     return List_IndexOf(l.instance, Item)
 }

@@ -275,12 +275,36 @@ func (p *TPanel) SetEnabled(value bool) {
     Panel_SetEnabled(p.instance, value)
 }
 
+func (p *TPanel) FullRepaint() bool {
+    return Panel_GetFullRepaint(p.instance)
+}
+
+func (p *TPanel) SetFullRepaint(value bool) {
+    Panel_SetFullRepaint(p.instance, value)
+}
+
 func (p *TPanel) Font() *TFont {
     return FontFromInst(Panel_GetFont(p.instance))
 }
 
 func (p *TPanel) SetFont(value *TFont) {
     Panel_SetFont(p.instance, CheckPtr(value))
+}
+
+func (p *TPanel) Locked() bool {
+    return Panel_GetLocked(p.instance)
+}
+
+func (p *TPanel) SetLocked(value bool) {
+    Panel_SetLocked(p.instance, value)
+}
+
+func (p *TPanel) ParentBackground() bool {
+    return Panel_GetParentBackground(p.instance)
+}
+
+func (p *TPanel) SetParentBackground(value bool) {
+    Panel_SetParentBackground(p.instance, value)
 }
 
 func (p *TPanel) ParentColor() bool {

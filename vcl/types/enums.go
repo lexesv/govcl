@@ -1373,3 +1373,12 @@ const (
 	IaTop = iota + 0
 	IaLeft
 )
+
+// THeaderStyle = (hsGradient, hsImage, hsThemed);
+type THeaderStyle int32
+
+const (
+	HsGradient = iota + 0
+	HsImage
+	HsThemed
+)

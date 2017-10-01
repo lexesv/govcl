@@ -20,7 +20,7 @@ func MessageDlg(Msg string, DlgType TMsgDlgType, Buttons ...uint8) int32 {
 
 // CheckPtr 检测接口是否被实例化，如果已经实例化则返回实例指针
 func CheckPtr(value IObject) uintptr {
-	if reflect.ValueOf(value).Pointer() == 0 {
+	if value == nil || reflect.ValueOf(value).Pointer() == 0 {
 		return 0
 	}
 	return value.Instance()

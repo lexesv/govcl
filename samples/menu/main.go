@@ -23,6 +23,8 @@ func main() {
 
 	// TMainMenu
 	mainMenu := vcl.NewMainMenu(mainForm)
+	// 不自动生成热键
+	mainMenu.SetAutoHotkeys(types.MaManual)
 	// 一级菜单
 	item := vcl.NewMenuItem(mainForm)
 	item.SetCaption("文件(&F)")
@@ -46,6 +48,18 @@ func main() {
 	item.Add(subMenu)
 
 	// 分割线
+	subMenu = vcl.NewMenuItem(mainForm)
+	subMenu.SetCaption("-")
+	item.Add(subMenu)
+
+	subMenu = vcl.NewMenuItem(mainForm)
+	subMenu.SetCaption("历史记录...")
+	item.Add(subMenu)
+
+	m := vcl.NewMenuItem(mainForm)
+	m.SetCaption("第一个历史记录")
+	subMenu.Add(m)
+
 	subMenu = vcl.NewMenuItem(mainForm)
 	subMenu.SetCaption("-")
 	item.Add(subMenu)

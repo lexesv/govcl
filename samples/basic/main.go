@@ -15,6 +15,8 @@ func main() {
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
 	vcl.Application.SetIcon(icon)
+	// 是否根据系统进行绽放，自行看效果
+	//	vcl.Application.SetFormScaled(false)
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
@@ -25,6 +27,12 @@ func main() {
 	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose uintptr) {
 		rtl.SetFormCanClose(CanClose, vcl.MessageDlg("是否退出？", types.MtConfirmation, types.MbYes, types.MbNo) == types.IdYes)
 	})
+
+	btn := vcl.NewButton(mainForm)
+	btn.SetParent(mainForm)
+	btn.SetCaption("按钮1")
+	btn.SetLeft(50)
+	btn.SetTop(50)
 
 	vcl.Application.Run()
 }

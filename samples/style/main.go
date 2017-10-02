@@ -68,6 +68,8 @@ func main() {
 	lbl.SetLeft(10)
 	lbl.SetTop(top)
 	lbl.SetCaption("标签1")
+	// 解除样式对Label Font的Hook
+	lbl.SetStyleElements(types.TStyleElements(rtl.Include(0, types.SeClient, types.SeBorder)))
 	lbl.Font().SetColor(255)
 
 	top += lbl.Height() + 5

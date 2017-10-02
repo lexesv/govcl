@@ -179,6 +179,8 @@ TMargins
 TList  
 TGraphic  
 TComponent  
+TCategoryPanel  
+TStyleManager  
 
 #### 截图
 

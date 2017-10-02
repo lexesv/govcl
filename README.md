@@ -141,6 +141,7 @@ TActionList
 TToolButton     
 TPaintBox  
 TTimer  
+TCategoryPanel  
 > 
 TIcon    
 TBitmap    
@@ -179,14 +180,12 @@ TMargins
 TList  
 TGraphic  
 TComponent  
-TCategoryPanel  
 TStyleManager  
 
 #### 截图
 
 ![截图1](https://gitee.com/ying32/govcl/raw/master/Screenshot/1.png)   
-![截图2](https://gitee.com/ying32/govcl/raw/master/Screenshot/2.png)    
-![截图2](https://gitee.com/ying32/govcl/raw/master/Screenshot/2.png)  
+![截图2](https://gitee.com/ying32/govcl/raw/master/Screenshot/2.png)      
 ![绘图](https://gitee.com/ying32/govcl/raw/master/Screenshot/draw.png)  
 ![ListView](https://gitee.com/ying32/govcl/raw/master/Screenshot/listview.png)  
 ![RichEdit](https://gitee.com/ying32/govcl/raw/master/Screenshot/richedit.png)  

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"git.oschina.net/ying32/govcl/vcl/dylib"
+	"gitee.com/ying32/govcl/vcl/dylib"
 )
 
 var (

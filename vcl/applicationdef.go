@@ -13,3 +13,4 @@ func (a *TApplication) CreateForm() *TForm {
 func (a *TApplication) SetFormScaled(val bool) {
 	SetGlobalFormScaled(val)
 }
+

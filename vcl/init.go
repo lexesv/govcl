@@ -10,6 +10,8 @@ var (
 	Screen      *TScreen
 	Mouse       *TMouse
 	Clipboard   *TClipboard
+	// StyleManager 没有实例类的，属于静态类
+	StyleManager *TStyleManager
 )
 
 func init() {
@@ -21,4 +23,6 @@ func init() {
 	Screen = ScreenFromInst(Screen_Instance())
 	Mouse = MouseFromInst(Mouse_Instance())
 	Clipboard = ClipboardFromInst(Clipboard_Instance())
+	StyleManager = NewStyleManager()
+
 }

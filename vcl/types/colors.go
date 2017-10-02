@@ -160,5 +160,6 @@ const (
 	ClWhitesmoke           = 0xF5F5F5
 	ClYellow               = 0x00FFFF
 	ClYellowgreen          = 0x32CD9A
+	ClBtnFace              = 0xFF00000F
 	ClNull                 = 0x00000000
 )

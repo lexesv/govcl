@@ -64,4 +64,15 @@ var (
 	setGlobalFormScaled      = libvcl.NewProc("SetGlobalFormScaled")
 	form_ScaleForPPI         = libvcl.NewProc("Form_ScaleForPPI")
 	form_ScaleControlsForDpi = libvcl.NewProc("Form_ScaleControlsForDpi")
+
+	// TStyleManager
+	styleManager_Initialize          = libvcl.NewProc("StyleManager_Initialize")
+	styleManager_UnInitialize        = libvcl.NewProc("StyleManager_UnInitialize")
+	styleManager_IsValidStyle        = libvcl.NewProc("StyleManager_IsValidStyle")
+	styleManager_LoadFromFile        = libvcl.NewProc("StyleManager_LoadFromFile")
+	styleManager_CheckSysClassName   = libvcl.NewProc("StyleManager_CheckSysClassName")
+	styleManager_TrySetStyle         = libvcl.NewProc("StyleManager_TrySetStyle")
+	styleManager_SetStyle1           = libvcl.NewProc("StyleManager_SetStyle1")
+	styleManager_SetStyle2           = libvcl.NewProc("StyleManager_SetStyle2")
+	styleManager_TryLoadFromResource = libvcl.NewProc("StyleManager_TryLoadFromResource")
 )

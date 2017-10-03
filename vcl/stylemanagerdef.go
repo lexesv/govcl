@@ -54,3 +54,7 @@ func (s *TStyleManager) SetStyle2(name string) {
 func (s *TStyleManager) TryLoadFromResource(instance uintptr, resName, resType string, handle *uintptr) bool {
 	return StyleManager_TryLoadFromResource(instance, resName, resType, handle)
 }
+
+func (s *TStyleManager) SetStyleFromFileName(filename string) {
+	StyleManager.SetStyle(StyleManager.LoadFromFile(filename))
+}

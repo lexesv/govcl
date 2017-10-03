@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"time"
 
+	"io"
+	"os"
+
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
@@ -255,6 +258,28 @@ func main() {
 		prgbar.SetPosition(trkbar.Position())
 	})
 
+	stylelist := vcl.NewListBox(mainForm)
+	stylelist.SetParent(mainForm)
+	stylelist.SetLeft(prgbar.Left() + prgbar.Width() + 10)
+	stylelist.SetTop(prgbar.Top())
+	stylelist.SetHeight(prgbar.Height())
+	stylelist.SetWidth(240)
+	stylelist.SetOnDblClick(func(vcl.IObject) {
+		if stylelist.ItemIndex() != -1 {
+			styleFileName := "..\\..\\bin\\styles\\" + stylelist.Items().Strings(stylelist.ItemIndex())
+			if rtl.FileExists(styleFileName) {
+				if vcl.StyleManager.IsValidStyle(styleFileName) {
+					vcl.StyleManager.SetStyleFromFileName(styleFileName)
+				} else {
+					fmt.Println("样式无效")
+				}
+			} else {
+				fmt.Println("样式文件不存在")
+			}
+		}
+	})
+	addStyleFileName(stylelist)
+
 	top += prgbar.Height() + 10
 
 	dtp := vcl.NewDateTimePicker(mainForm)
@@ -287,4 +312,32 @@ func main() {
 
 	// run
 	vcl.Application.Run()
+}
+
+func addStyleFileName(list *vcl.TListBox) {
+	fd, err := os.Open("..\\..\\bin\\styles\\")
+	if err != nil {
+		fmt.Println(err)
+		if os.IsNotExist(err) {
+			return
+		}
+		return
+	}
+	defer fd.Close()
+	list.Items().BeginUpdate()
+	defer list.Items().EndUpdate()
+	for {
+		files, err := fd.Readdir(100)
+		for _, f := range files {
+			if !f.IsDir() {
+				list.Items().Add(f.Name())
+			}
+		}
+		if err == io.EOF {
+			break
+		}
+		if len(files) == 0 {
+			break
+		}
+	}
 }

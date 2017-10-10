@@ -3,6 +3,7 @@
 #### 目录
 * [项目介绍](#项目介绍)
 * [重要说明](#重要说明)
+* [WIKI](#WIKI)
 * [使用方法](#使用方法)
 * [项目中的包说明](#项目中的包说明)
 * [实例类说明](#实例类说明)
@@ -36,6 +37,10 @@
 **至于github上会建一个同名的项目[govcl](https://github.com/ying32/govcl)，但不会提交任何代码**  
 **xui包目前还未完成，但不影响正常使用**  
 
+
+#### WIKI 
+
+后面视情况慢慢补充相关VCL组件的知识，详情可以[WIKI](https://gitee.com/ying32/govcl/wikis/Home)  
 
 #### 使用方法
 > go get gitee.com/ying32/govcl  

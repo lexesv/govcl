@@ -43,7 +43,7 @@ func NewFormBytes(xmlstr []byte, event interface{}) (*TXMLForm, error) {
 	if root != nil && root.NodeName() == "Form" {
 		w.Form = w.buildWindow(root)
 		if w.Form.IsValid() {
-			w.buildControls(root, w.Form)
+			w.buildControls(root, w.Form, nil)
 		} else {
 			panic("Window创建失败!")
 		}
@@ -53,28 +53,29 @@ func NewFormBytes(xmlstr []byte, event interface{}) (*TXMLForm, error) {
 	return w, nil
 }
 
+func (x *TXMLForm) setBounds(control vcl.IControl, attrs *TXmlAttrs) {
+	if attrs.HasAttr("left") {
+		control.SetLeft(attrs.Left())
+	}
+	if attrs.HasAttr("top") {
+		control.SetLeft(attrs.Top())
+	}
+	if attrs.HasAttr("width") {
+		control.SetLeft(attrs.Width())
+	}
+	if attrs.HasAttr("height") {
+		control.SetLeft(attrs.Height())
+	}
+}
+
 func (x *TXMLForm) buildWindow(node xmldom.Node) *vcl.TForm {
 	attrs := newXmlAttrsMap(node)
 	if attrs == nil {
 		return nil
 	}
-
-	var i uint
-	for i = 0; i < node.ChildNodes().Length(); i++ {
-		menuNode := node.ChildNodes().Item(i)
-		if menuNode.NodeName() == "Menus" {
-			if menuNode.ChildNodes().Length() > 0 {
-				menu := vcl.NewMainMenu(x.Form)
-				x.buildMenus(menuNode, x.Form, menu.Items())
-			}
-			node.RemoveChild(menuNode)
-			break
-		}
-	}
-
 	w := vcl.Application.CreateForm()
 	if w.IsValid() {
-		w.SetBounds(attrs.Left(), attrs.Top(), attrs.Width(), attrs.Height())
+		x.setBounds(w, attrs)
 		w.SetCaption(attrs.Caption())
 		w.EnabledMaximize(attrs.EnabledMax())
 		w.EnabledMinimize(attrs.EnabledMin())
@@ -86,46 +87,6 @@ func (x *TXMLForm) buildWindow(node xmldom.Node) *vcl.TForm {
 	return w
 }
 
-func (x *TXMLForm) buildMenus(node xmldom.Node, w *vcl.TForm, menu *vcl.TMenuItem) {
-	var i uint
-	for i = 0; i < node.ChildNodes().Length(); i++ {
-		menuNode := node.ChildNodes().Item(i)
-
-		if menuNode.NodeType() != 1 {
-			continue
-		}
-		attrs := newXmlAttrsMap(menuNode)
-		switch menuNode.NodeName() {
-		case "Menu":
-			menu = vcl.NewMenuItem(w)
-
-		case "MenuItem":
-			if menu != nil {
-
-				subm := vcl.NewMenuItem(w)
-				subm.SetEnabled(attrs.Enabled())
-				subm.SetChecked(attrs.Checked())
-				subm.SetVisible(attrs.Visible())
-
-				//				m, ok := x.getMethod(attrs.OnClick())
-				//				if ok {
-				//					subm.OnClicked(func(sender *ui.MenuItem) {
-				//						m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
-				//					})
-				//				}
-				//x.addNameControl(attrs.Name(), subm)
-
-			}
-
-		default:
-			continue
-		}
-		if menuNode.HasChildNodes() {
-			x.buildMenus(menuNode, w, menu)
-		}
-	}
-}
-
 func (x *TXMLForm) getMethod(name string) (reflect.Method, bool) {
 	if name == "" {
 		var m reflect.Method
@@ -134,7 +95,7 @@ func (x *TXMLForm) getMethod(name string) (reflect.Method, bool) {
 	return reflect.TypeOf(x.event).MethodByName(name)
 }
 
-func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl) {
+func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vcl.TMenuItem) {
 	if !node.HasChildNodes() {
 		return
 	}
@@ -149,13 +110,44 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl) {
 		}
 		pcontrol = nil
 		attrs = newXmlAttrsMap(subnode)
+
 		switch subnode.NodeName() {
+
+		case "MainMenu":
+
+			mmenu := vcl.NewMainMenu(x.Form)
+			mmenu.SetName(attrs.Name())
+			pcontrol = nil
+			x.buildControls(subnode, nil, mmenu.Items())
+
+		case "MenuItem":
+
+			pcontrol = nil
+			if menu != nil {
+
+				subm := vcl.NewMenuItem(x.Form)
+				subm.SetCaption(attrs.Caption())
+				subm.SetEnabled(attrs.Enabled())
+				subm.SetChecked(attrs.Checked())
+				subm.SetVisible(attrs.Visible())
+				subm.SetName(attrs.Name())
+				//				subm.set
+				m, ok := x.getMethod(attrs.OnClick())
+				if ok {
+					subm.SetOnClick(func(sender vcl.IObject) {
+						m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
+					})
+				}
+				menu.Add(subm)
+				x.buildControls(subnode, nil, subm)
+			}
+
 		case "Button":
 			btn := vcl.NewButton(x.Form)
 			btn.SetParent(parent)
 			btn.SetCaption(attrs.Caption())
 			pcontrol = btn
-			m, ok := x.getMethod(attrs.Onclick())
+			m, ok := x.getMethod(attrs.OnClick())
 			if ok {
 				btn.SetOnClick(func(sender vcl.IObject) {
 					m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
@@ -199,7 +191,7 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl) {
 			pnl := vcl.NewPanel(x.Form)
 			pcontrol = pnl
 			pnl.SetParent(parent)
-			x.buildControls(subnode, pnl)
+			x.buildControls(subnode, pnl, menu)
 
 		case "Checkbox":
 			chk := vcl.NewCheckBox(x.Form)
@@ -221,7 +213,7 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl) {
 		}
 
 		if pcontrol != nil {
-			pcontrol.SetBounds(attrs.Left(), attrs.Top(), attrs.Width(), attrs.Height())
+			x.setBounds(pcontrol, attrs)
 			pcontrol.SetEnabled(attrs.Enabled())
 			pcontrol.SetVisible(attrs.Visible())
 			pcontrol.SetAlign(attrs.Align())

@@ -91,7 +91,7 @@ func (x *TXmlAttrs) Name() string {
 	return x.Get("name")
 }
 
-func (x *TXmlAttrs) Onclick() string {
+func (x *TXmlAttrs) OnClick() string {
 	return x.Get("onclick")
 }
 

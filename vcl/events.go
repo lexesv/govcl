@@ -11,7 +11,7 @@ type TNotifyEvent func(sender IObject)
 type TUDClickEvent func(sender IObject, button TUDBtnType)
 
 // TLVChangeEvent TListView TTItemChange
-type TLVChangeEvent func(sender IObject, item IObject, change int32)
+type TLVChangeEvent func(sender IObject, item *TListItem, change TItemChange)
 
 // TCloseEvent Form
 type TCloseEvent func(sender IObject, action *TCloseAction) // Action *uintptr
@@ -20,10 +20,10 @@ type TCloseEvent func(sender IObject, action *TCloseAction) // Action *uintptr
 type TCloseQueryEvent func(sender IObject, canClose *bool) //CanClose *uintptr
 
 // TMenuChangeEvent Menu
-type TMenuChangeEvent func(sender IObject, source IObject, rebuild bool)
+type TMenuChangeEvent func(sender IObject, source *TMenuItem, rebuild bool)
 
 // TTVChangedEvent TTreeView
-type TTVChangedEvent func(sender IObject, node IObject)
+type TTVChangedEvent func(sender IObject, node *TTreeNode)
 
 // TSysLinkEvent LinkLabel
 type TSysLinkEvent = func(sender IObject, link string, linkType TSysLinkType) // TSysLinkType

@@ -48,9 +48,9 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 		case TUDClickEvent:
 			v.(TUDClickEvent)(ObjectFromInst(getVal(0)), TUDBtnType(getVal(1)))
 
-		// func(sender IObject, item IObject, change int32)
+		// func(sender IObject, item *TListItem, change int32)
 		case TLVChangeEvent:
-			v.(TLVChangeEvent)(ObjectFromInst(getVal(0)), ObjectFromInst(getVal(1)), int32(getVal(2)))
+			v.(TLVChangeEvent)(ObjectFromInst(getVal(0)), ListItemFromInst(getVal(1)), TItemChange(getVal(2)))
 
 		// func(sender IObject, action *TCloseAction) // Action *uintptr
 		case TCloseEvent:
@@ -60,13 +60,13 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 		case TCloseQueryEvent:
 			v.(TCloseQueryEvent)(ObjectFromInst(getVal(0)), (*bool)(unsafe.Pointer(getVal(1))))
 
-		// func(sender IObject, source IObject, rebuild bool)
+		// func(sender IObject, source *TMenuItem, rebuild bool)
 		case TMenuChangeEvent:
-			v.(TMenuChangeEvent)(ObjectFromInst(getVal(0)), ObjectFromInst(getVal(1)), DBoolToGoBool(getVal(2)))
+			v.(TMenuChangeEvent)(ObjectFromInst(getVal(0)), MenuItemFromInst(getVal(1)), DBoolToGoBool(getVal(2)))
 
-		// func(sender IObject, node IObject)
+		// func(sender IObject, node *TreeNode)
 		case TTVChangedEvent:
-			v.(TTVChangedEvent)(ObjectFromInst(getVal(0)), ObjectFromInst(getVal(1)))
+			v.(TTVChangedEvent)(ObjectFromInst(getVal(0)), TreeNodeFromInst(getVal(1)))
 
 		// func(sender IObject, link string, linkType TSysLinkType) // TSysLinkType
 		case TSysLinkEvent:

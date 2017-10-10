@@ -45,7 +45,6 @@ package main
 
 import (
    "gitee.com/ying32/govcl/vcl"
-   "gitee.com/ying32/govcl/api" // 这个视情况导入
 )
 
 var (
@@ -57,12 +56,13 @@ func main() {
     mainForm = vcl.Application.CreateForm()
     mainForm.SetCaption("Hello")
     mainForm.EnabledMaximize(false)
-    mainForm.SetDoubleBuffered(true)
     mainForm.ScreenCenter()
     vcl.Application.Run()
 }
 
 ```  
+
+复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下
 
 #### 项目中的包说明
 

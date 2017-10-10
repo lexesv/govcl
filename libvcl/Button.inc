@@ -210,6 +210,16 @@ begin
   AObj.Caption := AValue;
 end;
 
+function Button_GetCommandLinkHint(AObj: TButton): PChar; cdecl;
+begin
+  Result :=  PChar(AObj.CommandLinkHint);
+end;
+
+procedure Button_SetCommandLinkHint(AObj: TButton; AValue: PChar); cdecl;
+begin
+  AObj.CommandLinkHint := AValue;
+end;
+
 function Button_GetDefault(AObj: TButton): LongBool; cdecl;
 begin
   Result :=  AObj.Default;
@@ -220,6 +230,16 @@ begin
   AObj.Default := AValue;
 end;
 
+function Button_GetDisabledImageIndex(AObj: TButton): TImageIndex; cdecl;
+begin
+  Result :=  AObj.DisabledImageIndex;
+end;
+
+procedure Button_SetDisabledImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+begin
+  AObj.DisabledImageIndex := AValue;
+end;
+
 function Button_GetDoubleBuffered(AObj: TButton): LongBool; cdecl;
 begin
   Result :=  AObj.DoubleBuffered;
@@ -228,6 +248,16 @@ end;
 procedure Button_SetDoubleBuffered(AObj: TButton; AValue: LongBool); cdecl;
 begin
   AObj.DoubleBuffered := AValue;
+end;
+
+function Button_GetElevationRequired(AObj: TButton): LongBool; cdecl;
+begin
+  Result :=  AObj.ElevationRequired;
+end;
+
+procedure Button_SetElevationRequired(AObj: TButton; AValue: LongBool); cdecl;
+begin
+  AObj.ElevationRequired := AValue;
 end;
 
 function Button_GetEnabled(AObj: TButton): LongBool; cdecl;
@@ -248,6 +278,26 @@ end;
 procedure Button_SetFont(AObj: TButton; AValue: TFont); cdecl;
 begin
   AObj.Font := AValue;
+end;
+
+function Button_GetHotImageIndex(AObj: TButton): TImageIndex; cdecl;
+begin
+  Result :=  AObj.HotImageIndex;
+end;
+
+procedure Button_SetHotImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+begin
+  AObj.HotImageIndex := AValue;
+end;
+
+function Button_GetImageAlignment(AObj: TButton): TImageAlignment; cdecl;
+begin
+  Result :=  AObj.ImageAlignment;
+end;
+
+procedure Button_SetImageAlignment(AObj: TButton; AValue: TImageAlignment); cdecl;
+begin
+  AObj.ImageAlignment := AValue;
 end;
 
 function Button_GetImageIndex(AObj: TButton): TImageIndex; cdecl;
@@ -320,6 +370,26 @@ begin
   AObj.PopupMenu := AValue;
 end;
 
+function Button_GetPressedImageIndex(AObj: TButton): TImageIndex; cdecl;
+begin
+  Result :=  AObj.PressedImageIndex;
+end;
+
+procedure Button_SetPressedImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+begin
+  AObj.PressedImageIndex := AValue;
+end;
+
+function Button_GetSelectedImageIndex(AObj: TButton): TImageIndex; cdecl;
+begin
+  Result :=  AObj.SelectedImageIndex;
+end;
+
+procedure Button_SetSelectedImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+begin
+  AObj.SelectedImageIndex := AValue;
+end;
+
 function Button_GetShowHint(AObj: TButton): LongBool; cdecl;
 begin
   Result :=  AObj.ShowHint;
@@ -338,6 +408,16 @@ end;
 procedure Button_SetStyle(AObj: TButton; AValue: TCustomButton.TButtonStyle); cdecl;
 begin
   AObj.Style := AValue;
+end;
+
+function Button_GetStylusHotImageIndex(AObj: TButton): TImageIndex; cdecl;
+begin
+  Result :=  AObj.StylusHotImageIndex;
+end;
+
+procedure Button_SetStylusHotImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+begin
+  AObj.StylusHotImageIndex := AValue;
 end;
 
 function Button_GetTabOrder(AObj: TButton): TTabOrder; cdecl;
@@ -785,14 +865,24 @@ exports
   Button_SetCancel {$IFNDEF MSWINDOWS}name '_Button_SetCancel'{$ENDIF},
   Button_GetCaption {$IFNDEF MSWINDOWS}name '_Button_GetCaption'{$ENDIF},
   Button_SetCaption {$IFNDEF MSWINDOWS}name '_Button_SetCaption'{$ENDIF},
+  Button_GetCommandLinkHint {$IFNDEF MSWINDOWS}name '_Button_GetCommandLinkHint'{$ENDIF},
+  Button_SetCommandLinkHint {$IFNDEF MSWINDOWS}name '_Button_SetCommandLinkHint'{$ENDIF},
   Button_GetDefault {$IFNDEF MSWINDOWS}name '_Button_GetDefault'{$ENDIF},
   Button_SetDefault {$IFNDEF MSWINDOWS}name '_Button_SetDefault'{$ENDIF},
+  Button_GetDisabledImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetDisabledImageIndex'{$ENDIF},
+  Button_SetDisabledImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetDisabledImageIndex'{$ENDIF},
   Button_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_GetDoubleBuffered'{$ENDIF},
   Button_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_SetDoubleBuffered'{$ENDIF},
+  Button_GetElevationRequired {$IFNDEF MSWINDOWS}name '_Button_GetElevationRequired'{$ENDIF},
+  Button_SetElevationRequired {$IFNDEF MSWINDOWS}name '_Button_SetElevationRequired'{$ENDIF},
   Button_GetEnabled {$IFNDEF MSWINDOWS}name '_Button_GetEnabled'{$ENDIF},
   Button_SetEnabled {$IFNDEF MSWINDOWS}name '_Button_SetEnabled'{$ENDIF},
   Button_GetFont {$IFNDEF MSWINDOWS}name '_Button_GetFont'{$ENDIF},
   Button_SetFont {$IFNDEF MSWINDOWS}name '_Button_SetFont'{$ENDIF},
+  Button_GetHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetHotImageIndex'{$ENDIF},
+  Button_SetHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetHotImageIndex'{$ENDIF},
+  Button_GetImageAlignment {$IFNDEF MSWINDOWS}name '_Button_GetImageAlignment'{$ENDIF},
+  Button_SetImageAlignment {$IFNDEF MSWINDOWS}name '_Button_SetImageAlignment'{$ENDIF},
   Button_GetImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetImageIndex'{$ENDIF},
   Button_SetImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetImageIndex'{$ENDIF},
   Button_GetImages {$IFNDEF MSWINDOWS}name '_Button_GetImages'{$ENDIF},
@@ -807,10 +897,16 @@ exports
   Button_SetParentShowHint {$IFNDEF MSWINDOWS}name '_Button_SetParentShowHint'{$ENDIF},
   Button_GetPopupMenu {$IFNDEF MSWINDOWS}name '_Button_GetPopupMenu'{$ENDIF},
   Button_SetPopupMenu {$IFNDEF MSWINDOWS}name '_Button_SetPopupMenu'{$ENDIF},
+  Button_GetPressedImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetPressedImageIndex'{$ENDIF},
+  Button_SetPressedImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetPressedImageIndex'{$ENDIF},
+  Button_GetSelectedImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetSelectedImageIndex'{$ENDIF},
+  Button_SetSelectedImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetSelectedImageIndex'{$ENDIF},
   Button_GetShowHint {$IFNDEF MSWINDOWS}name '_Button_GetShowHint'{$ENDIF},
   Button_SetShowHint {$IFNDEF MSWINDOWS}name '_Button_SetShowHint'{$ENDIF},
   Button_GetStyle {$IFNDEF MSWINDOWS}name '_Button_GetStyle'{$ENDIF},
   Button_SetStyle {$IFNDEF MSWINDOWS}name '_Button_SetStyle'{$ENDIF},
+  Button_GetStylusHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetStylusHotImageIndex'{$ENDIF},
+  Button_SetStylusHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetStylusHotImageIndex'{$ENDIF},
   Button_GetTabOrder {$IFNDEF MSWINDOWS}name '_Button_GetTabOrder'{$ENDIF},
   Button_SetTabOrder {$IFNDEF MSWINDOWS}name '_Button_SetTabOrder'{$ENDIF},
   Button_GetTabStop {$IFNDEF MSWINDOWS}name '_Button_GetTabStop'{$ENDIF},

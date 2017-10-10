@@ -1248,6 +1248,15 @@ func Button_SetCaption(obj uintptr, value string) {
    button_SetCaption.Call(obj, GoStrToDStr(value))
 }
 
+func Button_GetCommandLinkHint(obj uintptr) string {
+    ret, _, _ := button_GetCommandLinkHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Button_SetCommandLinkHint(obj uintptr, value string) {
+   button_SetCommandLinkHint.Call(obj, GoStrToDStr(value))
+}
+
 func Button_GetDefault(obj uintptr) bool {
     ret, _, _ := button_GetDefault.Call(obj)
     return DBoolToGoBool(ret)
@@ -1257,6 +1266,15 @@ func Button_SetDefault(obj uintptr, value bool) {
    button_SetDefault.Call(obj, GoBoolToDBool(value))
 }
 
+func Button_GetDisabledImageIndex(obj uintptr) int32 {
+    ret, _, _ := button_GetDisabledImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func Button_SetDisabledImageIndex(obj uintptr, value int32) {
+   button_SetDisabledImageIndex.Call(obj, uintptr(value))
+}
+
 func Button_GetDoubleBuffered(obj uintptr) bool {
     ret, _, _ := button_GetDoubleBuffered.Call(obj)
     return DBoolToGoBool(ret)
@@ -1264,6 +1282,15 @@ func Button_GetDoubleBuffered(obj uintptr) bool {
 
 func Button_SetDoubleBuffered(obj uintptr, value bool) {
    button_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func Button_GetElevationRequired(obj uintptr) bool {
+    ret, _, _ := button_GetElevationRequired.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Button_SetElevationRequired(obj uintptr, value bool) {
+   button_SetElevationRequired.Call(obj, GoBoolToDBool(value))
 }
 
 func Button_GetEnabled(obj uintptr) bool {
@@ -1282,6 +1309,24 @@ func Button_GetFont(obj uintptr) uintptr {
 
 func Button_SetFont(obj uintptr, value uintptr) {
    button_SetFont.Call(obj, value)
+}
+
+func Button_GetHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := button_GetHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func Button_SetHotImageIndex(obj uintptr, value int32) {
+   button_SetHotImageIndex.Call(obj, uintptr(value))
+}
+
+func Button_GetImageAlignment(obj uintptr) TImageAlignment {
+    ret, _, _ := button_GetImageAlignment.Call(obj)
+    return TImageAlignment(ret)
+}
+
+func Button_SetImageAlignment(obj uintptr, value TImageAlignment) {
+   button_SetImageAlignment.Call(obj, uintptr(value))
 }
 
 func Button_GetImageIndex(obj uintptr) int32 {
@@ -1347,6 +1392,24 @@ func Button_SetPopupMenu(obj uintptr, value uintptr) {
    button_SetPopupMenu.Call(obj, value)
 }
 
+func Button_GetPressedImageIndex(obj uintptr) int32 {
+    ret, _, _ := button_GetPressedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func Button_SetPressedImageIndex(obj uintptr, value int32) {
+   button_SetPressedImageIndex.Call(obj, uintptr(value))
+}
+
+func Button_GetSelectedImageIndex(obj uintptr) int32 {
+    ret, _, _ := button_GetSelectedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func Button_SetSelectedImageIndex(obj uintptr, value int32) {
+   button_SetSelectedImageIndex.Call(obj, uintptr(value))
+}
+
 func Button_GetShowHint(obj uintptr) bool {
     ret, _, _ := button_GetShowHint.Call(obj)
     return DBoolToGoBool(ret)
@@ -1363,6 +1426,15 @@ func Button_GetStyle(obj uintptr) TButtonStyle {
 
 func Button_SetStyle(obj uintptr, value TButtonStyle) {
    button_SetStyle.Call(obj, uintptr(value))
+}
+
+func Button_GetStylusHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := button_GetStylusHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func Button_SetStylusHotImageIndex(obj uintptr, value int32) {
+   button_SetStylusHotImageIndex.Call(obj, uintptr(value))
 }
 
 func Button_GetTabOrder(obj uintptr) uint16 {

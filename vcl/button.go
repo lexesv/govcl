@@ -207,6 +207,14 @@ func (b *TButton) SetCaption(value string) {
     Button_SetCaption(b.instance, value)
 }
 
+func (b *TButton) CommandLinkHint() string {
+    return Button_GetCommandLinkHint(b.instance)
+}
+
+func (b *TButton) SetCommandLinkHint(value string) {
+    Button_SetCommandLinkHint(b.instance, value)
+}
+
 func (b *TButton) Default() bool {
     return Button_GetDefault(b.instance)
 }
@@ -215,12 +223,28 @@ func (b *TButton) SetDefault(value bool) {
     Button_SetDefault(b.instance, value)
 }
 
+func (b *TButton) DisabledImageIndex() int32 {
+    return Button_GetDisabledImageIndex(b.instance)
+}
+
+func (b *TButton) SetDisabledImageIndex(value int32) {
+    Button_SetDisabledImageIndex(b.instance, value)
+}
+
 func (b *TButton) DoubleBuffered() bool {
     return Button_GetDoubleBuffered(b.instance)
 }
 
 func (b *TButton) SetDoubleBuffered(value bool) {
     Button_SetDoubleBuffered(b.instance, value)
+}
+
+func (b *TButton) ElevationRequired() bool {
+    return Button_GetElevationRequired(b.instance)
+}
+
+func (b *TButton) SetElevationRequired(value bool) {
+    Button_SetElevationRequired(b.instance, value)
 }
 
 func (b *TButton) Enabled() bool {
@@ -237,6 +261,22 @@ func (b *TButton) Font() *TFont {
 
 func (b *TButton) SetFont(value *TFont) {
     Button_SetFont(b.instance, CheckPtr(value))
+}
+
+func (b *TButton) HotImageIndex() int32 {
+    return Button_GetHotImageIndex(b.instance)
+}
+
+func (b *TButton) SetHotImageIndex(value int32) {
+    Button_SetHotImageIndex(b.instance, value)
+}
+
+func (b *TButton) ImageAlignment() TImageAlignment {
+    return Button_GetImageAlignment(b.instance)
+}
+
+func (b *TButton) SetImageAlignment(value TImageAlignment) {
+    Button_SetImageAlignment(b.instance, value)
 }
 
 func (b *TButton) ImageIndex() int32 {
@@ -295,6 +335,22 @@ func (b *TButton) SetPopupMenu(value IComponent) {
     Button_SetPopupMenu(b.instance, CheckPtr(value))
 }
 
+func (b *TButton) PressedImageIndex() int32 {
+    return Button_GetPressedImageIndex(b.instance)
+}
+
+func (b *TButton) SetPressedImageIndex(value int32) {
+    Button_SetPressedImageIndex(b.instance, value)
+}
+
+func (b *TButton) SelectedImageIndex() int32 {
+    return Button_GetSelectedImageIndex(b.instance)
+}
+
+func (b *TButton) SetSelectedImageIndex(value int32) {
+    Button_SetSelectedImageIndex(b.instance, value)
+}
+
 func (b *TButton) ShowHint() bool {
     return Button_GetShowHint(b.instance)
 }
@@ -309,6 +365,14 @@ func (b *TButton) Style() TButtonStyle {
 
 func (b *TButton) SetStyle(value TButtonStyle) {
     Button_SetStyle(b.instance, value)
+}
+
+func (b *TButton) StylusHotImageIndex() int32 {
+    return Button_GetStylusHotImageIndex(b.instance)
+}
+
+func (b *TButton) SetStylusHotImageIndex(value int32) {
+    Button_SetStylusHotImageIndex(b.instance, value)
 }
 
 func (b *TButton) TabOrder() uint16 {

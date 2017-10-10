@@ -1382,3 +1382,14 @@ const (
 	HsImage
 	HsThemed
 )
+
+// TImageAlignment = (iaLeft, iaRight, iaTop, iaBottom, iaCenter);
+type TImageAlignment int32
+
+const (
+	IiaLeft = iota + 0 // IaTop有冲突，所以增加一个i
+	IiaRight
+	IiaTop
+	IiaBottom
+	IiaCenter
+)

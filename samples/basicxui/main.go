@@ -5,16 +5,24 @@ import (
 
 	"gitee.com/ying32/govcl/vcl"
 	//	"gitee.com/ying32/govcl/vcl/api"
-	//	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/xui"
 )
 
 const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 <Form name="mainForm" width="600" height="400" center="true" caption="这是一个测试" enabledmax="false">
-  <Button name="btn1" left="10" top="10" width="75" height="25" caption="按钮1" align="alTop"></Button>
-<Panel name="pnl1" align="alClient">
-  <Button name="btn2" left="10" top="10" width="75" height="25" caption="消息" onclick="OnButtonClick"></Button>
-</Panel>
+	<MainMenu>
+		<MenuItem name="mn1" caption="文件">
+			<MenuItem name="mn3" caption="新建" />
+			<MenuItem caption="-" />
+			<MenuItem name="mn4" caption="退出" onclick="OnMenuExit" />
+		</MenuItem>
+		<MenuItem name="mn2" caption="关于" />
+	</MainMenu>
+	<Button name="btn1" left="10" top="10" caption="按钮" align="alTop"></Button>
+	<Panel name="pnl1" align="alClient">
+		<Button name="btn2" left="10" top="10" caption="消息" onclick="OnButtonClick"></Button>
+	</Panel>
 </Form>`
 
 type TEvents struct {
@@ -24,6 +32,10 @@ type TEvents struct {
 func (e *TEvents) OnButtonClick(sender vcl.IObject) {
 	fmt.Println("OnButtonClick.")
 	vcl.ShowMessage("ButtonClick")
+}
+
+func (e *TEvents) OnMenuExit(sender vcl.IObject) {
+	e.form.Close()
 }
 
 func main() {

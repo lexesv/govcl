@@ -111,21 +111,21 @@ func main() {
 		}
 	})
 
-	paintbox.SetOnMouseDown(func(sender vcl.IObject, button, shift, x, y int32) {
+	paintbox.SetOnMouseDown(func(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x, y int32) {
 		if button == types.MbLeft {
 			points = append(points, TPoint{X: x, Y: y, Down: true})
 			isMouseDown = true
 		}
 	})
 
-	paintbox.SetOnMouseMove(func(sender vcl.IObject, shift, x, y int32) {
+	paintbox.SetOnMouseMove(func(sender vcl.IObject, shift types.TShiftState, x, y int32) {
 		if isMouseDown {
 			points = append(points, TPoint{X: x, Y: y, Down: false})
 			paintbox.Repaint()
 		}
 	})
 
-	paintbox.SetOnMouseUp(func(sender vcl.IObject, button, shift, x, y int32) {
+	paintbox.SetOnMouseUp(func(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x, y int32) {
 		if button == types.MbLeft {
 			isMouseDown = false
 		}

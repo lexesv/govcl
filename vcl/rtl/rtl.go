@@ -1,8 +1,6 @@
 package rtl
 
 import (
-	"unsafe"
-
 	"gitee.com/ying32/govcl/vcl/api"
 	. "gitee.com/ying32/govcl/vcl/types"
 )
@@ -42,23 +40,23 @@ func InSets(r, s uint32) bool {
 }
 
 // SetFormCanClose 窗口的TCloseQuery事件
-func SetFormCanClose(p uintptr, val bool) {
-	a := (*int32)(unsafe.Pointer(p))
-	*a = 1
-	if !val {
-		*a = 0
-	}
-}
+//func SetFormCanClose(p uintptr, val bool) {
+//	a := (*int32)(unsafe.Pointer(p))
+//	*a = 1
+//	if !val {
+//		*a = 0
+//	}
+//}
 
-// GetKey 获取var key：Char的 Unicode char size=2
-func GetKey(p uintptr) uint16 {
-	return *(*uint16)(unsafe.Pointer(p))
-}
+//// GetKey 获取var key：Char的 Unicode char size=2
+//func GetKey(p uintptr) uint16 {
+//	return *(*uint16)(unsafe.Pointer(p))
+//}
 
-// SetKey 获取var key：Char的 Unicode char size=2
-func SetKey(p uintptr, val uint16) {
-	*(*uint16)(unsafe.Pointer(p)) = val
-}
+//// SetKey 获取var key：Char的 Unicode char size=2
+//func SetKey(p uintptr, val uint16) {
+//	*(*uint16)(unsafe.Pointer(p)) = val
+//}
 
 // SetReportMemoryLeaksOnShutdown 程序结束时报告内存泄露，总有2-4字节的未知泄露位置
 func SetReportMemoryLeaksOnShutdown(v bool) {

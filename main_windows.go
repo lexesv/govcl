@@ -48,7 +48,7 @@ func main() {
 	mainForm = vcl.Application.CreateForm()
 	mainForm.SetWidth(600)
 	mainForm.SetHeight(400)
-	mainForm.SetOnClose(func(Sender vcl.IObject, Action uintptr) {
+	mainForm.SetOnClose(func(Sender vcl.IObject, Action *types.TCloseAction) {
 		fmt.Println("close")
 	})
 
@@ -58,8 +58,8 @@ func main() {
 	fmt.Println("path: ", rtl.ExtractFilePath(filename))
 	fmt.Println("fileExists: ", rtl.FileExists(filename))
 
-	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose uintptr) {
-		rtl.SetFormCanClose(CanClose, vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes)
+	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose *bool) {
+		*CanClose = vcl.MessageDlg("是否退出?", types.MtInformation, types.MbYes, types.MbNo) == types.MrYes
 		fmt.Println("OnCloseQuery")
 	})
 
@@ -68,12 +68,12 @@ func main() {
 	mainForm.SetDoubleBuffered(true)
 	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.SetKeyPreview(true)
-	mainForm.SetOnKeyDown(func(Sender vcl.IObject, Key uintptr, Shift int32) {
+	mainForm.SetOnKeyDown(func(Sender vcl.IObject, Key *types.Char, Shift types.TShiftState) {
 		fmt.Println(rtl.InSets(uint32(Shift), types.SsCtrl))
-		fmt.Println(rtl.GetKey(Key))
+		fmt.Println("key:", *Key)
 	})
 
-	mainForm.SetOnMouseDown(func(sender vcl.IObject, button, shift, x, y int32) {
+	mainForm.SetOnMouseDown(func(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x, y int32) {
 		fmt.Println("Button:", button == types.MbLeft, ", X:", x, ", y:", y)
 		fmt.Println("OnMouseDown")
 	})
@@ -128,7 +128,7 @@ func main() {
 	linklbl.SetAlign(types.AlBottom)
 	linklbl.SetCaption("<a href=\"https://github.com/ying32/govcl\">govcl测试链接</a>")
 	linklbl.SetParent(mainForm)
-	linklbl.SetOnLinkClick(func(sender vcl.IObject, link string, linktype int32) {
+	linklbl.SetOnLinkClick(func(sender vcl.IObject, link string, linktype types.TSysLinkType) {
 		fmt.Println("link label: ", link, ", type: ", linktype)
 		rtl.SysOpen(link)
 	})

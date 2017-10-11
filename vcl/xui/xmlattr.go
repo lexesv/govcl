@@ -179,6 +179,10 @@ func (x *TXmlAttrs) Borderless() bool {
 	return x.ToBool("borderless")
 }
 
+func (x *TXmlAttrs) ActiveIndex() int32 {
+	return int32(x.ToIntDef("activeindex", 0))
+}
+
 func (x *TXmlAttrs) Align() types.TAlign {
 	s := x.Get("align")
 	switch s {

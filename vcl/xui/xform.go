@@ -17,6 +17,13 @@ const (
 	methodTypeToggled
 )
 
+// TEvents 之后使用都要继承此类型
+type TEvents struct {
+	// Form 默认，不可改变，会由内部构建时自动填充值
+	Form *vcl.TForm
+}
+
+// TXMLForm
 type TXMLForm struct {
 	Form  *vcl.TForm
 	event interface{}
@@ -58,13 +65,13 @@ func (x *TXMLForm) setBounds(control vcl.IControl, attrs *TXmlAttrs) {
 		control.SetLeft(attrs.Left())
 	}
 	if attrs.HasAttr("top") {
-		control.SetLeft(attrs.Top())
+		control.SetTop(attrs.Top())
 	}
 	if attrs.HasAttr("width") {
-		control.SetLeft(attrs.Width())
+		control.SetWidth(attrs.Width())
 	}
 	if attrs.HasAttr("height") {
-		control.SetLeft(attrs.Height())
+		control.SetHeight(attrs.Height())
 	}
 }
 
@@ -75,6 +82,7 @@ func (x *TXMLForm) buildWindow(node xmldom.Node) *vcl.TForm {
 	}
 	w := vcl.Application.CreateForm()
 	if w.IsValid() {
+		x.setFiledVal("Form", w)
 		x.setBounds(w, attrs)
 		w.SetCaption(attrs.Caption())
 		w.EnabledMaximize(attrs.EnabledMax())
@@ -95,6 +103,24 @@ func (x *TXMLForm) getMethod(name string) (reflect.Method, bool) {
 	return reflect.TypeOf(x.event).MethodByName(name)
 }
 
+// callMethod 动态call方法
+func (x *TXMLForm) callMethod(m reflect.Method, param ...interface{}) {
+	ps := make([]reflect.Value, len(param)+1)
+	ps[0] = reflect.ValueOf(x.event)
+	for i := 1; i <= len(param); i++ {
+		ps[i] = reflect.ValueOf(param[i-1])
+	}
+	m.Func.Call(ps)
+}
+
+// setFiledVal 设置字段的值
+func (x *TXMLForm) setFiledVal(name string, v interface{}) {
+	vx := reflect.ValueOf(x.event).Elem().FieldByName(name)
+	if vx.IsValid() {
+		vx.Set(reflect.ValueOf(v))
+	}
+}
+
 func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vcl.TMenuItem) {
 	if !node.HasChildNodes() {
 		return
@@ -111,6 +137,7 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 		pcontrol = nil
 		attrs = newXmlAttrsMap(subnode)
 
+		//		fmt.Println("subnode.NodeName():", subnode.NodeName(), ", Caption:", attrs.Caption())
 		switch subnode.NodeName() {
 
 		case "MainMenu":
@@ -131,11 +158,11 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 				subm.SetChecked(attrs.Checked())
 				subm.SetVisible(attrs.Visible())
 				subm.SetName(attrs.Name())
-				//				subm.set
+
 				m, ok := x.getMethod(attrs.OnClick())
 				if ok {
 					subm.SetOnClick(func(sender vcl.IObject) {
-						m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
+						x.callMethod(m, sender)
 					})
 				}
 				menu.Add(subm)
@@ -143,14 +170,16 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			}
 
 		case "Button":
+
 			btn := vcl.NewButton(x.Form)
 			btn.SetParent(parent)
 			btn.SetCaption(attrs.Caption())
+			x.setFiledVal(attrs.Name(), btn)
 			pcontrol = btn
 			m, ok := x.getMethod(attrs.OnClick())
 			if ok {
 				btn.SetOnClick(func(sender vcl.IObject) {
-					m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
+					x.callMethod(m, sender)
 				})
 			}
 
@@ -162,7 +191,7 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			m, ok := x.getMethod(attrs.OnChange())
 			if ok {
 				edit.SetOnChange(func(sender vcl.IObject) {
-					m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
+					x.callMethod(m, sender)
 				})
 			}
 
@@ -175,7 +204,7 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			m, ok := x.getMethod(attrs.OnChange())
 			if ok {
 				memo.SetOnChange(func(sender vcl.IObject) {
-					m.Func.Call([]reflect.Value{reflect.ValueOf(x.event), reflect.ValueOf(sender)})
+					x.callMethod(m, sender)
 				})
 			}
 			pcontrol = memo
@@ -208,15 +237,41 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			combox.SetItemIndex(int32(attrs.Selected()))
 			continue
 
+		case "PageControl":
+			pgc := vcl.NewPageControl(x.Form)
+			pcontrol = pgc
+			pgc.SetParent(parent)
+			x.setFiledVal(attrs.Name(), pgc)
+			x.buildControls(subnode, pgc, menu)
+			pgc.SetActivePageIndex(attrs.ActiveIndex())
+
+		case "TabSheet":
+
+			sheet := vcl.NewTabSheet(x.Form)
+			pcontrol = sheet
+			sheet.SetCaption(attrs.Caption())
+			sheet.SetPageControl(parent)
+			x.setFiledVal(attrs.Name(), sheet)
+			x.buildControls(subnode, sheet, menu)
+
 		default:
 			continue
 		}
 
 		if pcontrol != nil {
 			x.setBounds(pcontrol, attrs)
+			pcontrol.SetName(attrs.Name())
 			pcontrol.SetEnabled(attrs.Enabled())
-			pcontrol.SetVisible(attrs.Visible())
-			pcontrol.SetAlign(attrs.Align())
+
+			className := pcontrol.ClassName()
+			// 不需要使用Align属性的控件
+			if className != "TTabSheet" && className != "TToolBar" &&
+				className != "TStatusBar" {
+				pcontrol.SetAlign(attrs.Align())
+			}
+			if className != "TTabSheet" {
+				pcontrol.SetVisible(attrs.Visible())
+			}
 		}
 	}
 	return

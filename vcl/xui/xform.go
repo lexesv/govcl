@@ -259,6 +259,16 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			x.setFiledVal(attrs.Name(), sheet)
 			x.buildControls(subnode, sheet, menu)
 
+		case "TrayIcon":
+			tray := vcl.NewTrayIcon(x.Form)
+			if attrs.HasAttr("hint") {
+				tray.SetHint(attrs.Hint())
+			}
+			if attrs.HasAttr("visible") {
+				tray.SetVisible(attrs.Visible())
+			}
+			pcontrol = nil
+
 		// 伪类名
 		case "TextItem":
 			if parent.IsValid() {
@@ -288,6 +298,12 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			}
 			if attrs.HasAttr("visible") {
 				pcontrol.SetVisible(attrs.Visible())
+			}
+			if attrs.HasAttr("hint") {
+				pcontrol.SetHint(attrs.Hint())
+			}
+			if attrs.HasAttr("showhint") {
+				pcontrol.SetShowHint(attrs.ShowHint())
 			}
 		}
 	}

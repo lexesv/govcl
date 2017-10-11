@@ -127,24 +127,12 @@ func (x *TXmlAttrs) Checked() bool {
 	return x.ToBool("checked")
 }
 
-func (x *TXmlAttrs) OnToggled() string {
-	return x.Get("ontoggled")
-}
-
 func (x *TXmlAttrs) OnChange() string {
 	return x.Get("onchange")
 }
 
 func (x *TXmlAttrs) ReadOnly() bool {
 	return x.ToBoolDef("readonly", false)
-}
-
-func (x *TXmlAttrs) Padded() bool {
-	return x.ToBool("padded")
-}
-
-func (x *TXmlAttrs) Stretchy() bool {
-	return x.ToBoolDef("stretchy", true)
 }
 
 func (x *TXmlAttrs) ItemIndex() int32 {
@@ -167,16 +155,12 @@ func (x *TXmlAttrs) Max() int32 {
 	return x.ToIntDef("max", 100)
 }
 
-func (x *TXmlAttrs) NonWrapping() bool {
-	return x.ToBool("nonwrapping")
+func (x *TXmlAttrs) Hint() string {
+	return x.Get("hint")
 }
 
-func (x *TXmlAttrs) Fullscreen() bool {
-	return x.ToBool("fullscreen")
-}
-
-func (x *TXmlAttrs) Borderless() bool {
-	return x.ToBool("borderless")
+func (x *TXmlAttrs) ShowHint() bool {
+	return x.ToBoolDef("showhint", false)
 }
 
 func (x *TXmlAttrs) ActiveIndex() int32 {

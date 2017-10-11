@@ -23,6 +23,16 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 		<PageControl name="PgcMain" activeindex="0" align="alClient">
 			<TabSheet caption="第一页">
 			   <Button name="Btn2" left="10" top="10" caption="消息2" onclick="OnButtonClick" />
+			   <Combobox name="Cbb1" itemindex="0" top="70" left="10">
+					<TextItem text="第1项" />
+					<TextItem text="第2项" />
+					<TextItem text="第3项" />
+			   </Combobox>
+			   <Memo name="Mmo1" top="100" left="10">
+					<TextItem text="第1项" />
+					<TextItem text="第2项" />
+			   </Memo>
+			   <Memo name="Mmo2" top="220" left="10" text="这是文本" />
 			</TabSheet>
 			<TabSheet caption="第二页"> 
 			    <Button name="Btn4" left="100" top="50" caption="消息4" onclick="OnButtonClick" />

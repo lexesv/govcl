@@ -147,8 +147,8 @@ func (x *TXmlAttrs) Stretchy() bool {
 	return x.ToBoolDef("stretchy", true)
 }
 
-func (x *TXmlAttrs) Selected() int32 {
-	return x.ToIntDef("selected", -1)
+func (x *TXmlAttrs) ItemIndex() int32 {
+	return x.ToIntDef("itemindex", -1)
 }
 
 func (x *TXmlAttrs) OnSelected() string {

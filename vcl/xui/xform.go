@@ -198,8 +198,10 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			edit.SetText(attrs.Text())
 
 		case "Memo":
+
 			memo := vcl.NewMemo(x.Form)
 			memo.SetReadOnly(attrs.ReadOnly())
+			memo.SetParent(parent)
 
 			m, ok := x.getMethod(attrs.OnChange())
 			if ok {
@@ -208,7 +210,10 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 				})
 			}
 			pcontrol = memo
-			memo.SetText(attrs.Text())
+			if attrs.HasAttr("text") {
+				memo.SetText(attrs.Text())
+			}
+			x.buildControls(subnode, memo, menu)
 
 		case "Label":
 			lbl := vcl.NewLabel(x.Form)
@@ -234,8 +239,8 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			combox := vcl.NewComboBox(x.Form)
 			combox.SetParent(parent)
 			pcontrol = combox
-			combox.SetItemIndex(int32(attrs.Selected()))
-			continue
+			x.buildControls(subnode, combox, menu)
+			combox.SetItemIndex(int32(attrs.ItemIndex()))
 
 		case "PageControl":
 			pgc := vcl.NewPageControl(x.Form)
@@ -254,22 +259,34 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			x.setFiledVal(attrs.Name(), sheet)
 			x.buildControls(subnode, sheet, menu)
 
+		// 伪类名
+		case "TextItem":
+			if parent.IsValid() {
+				switch parent.ClassName() {
+				case "TComboBox":
+					vcl.ComboBoxFromObj(parent).Items().Add(attrs.Text())
+				case "TMemo":
+					vcl.MemoFromObj(parent).Lines().Add(attrs.Text())
+				default:
+				}
+			}
+
 		default:
 			continue
 		}
 
 		if pcontrol != nil {
 			x.setBounds(pcontrol, attrs)
-			pcontrol.SetName(attrs.Name())
-			pcontrol.SetEnabled(attrs.Enabled())
-
-			className := pcontrol.ClassName()
-			// 不需要使用Align属性的控件
-			if className != "TTabSheet" && className != "TToolBar" &&
-				className != "TStatusBar" {
+			if attrs.HasAttr("name") {
+				pcontrol.SetName(attrs.Name())
+			}
+			if attrs.HasAttr("enabled") {
+				pcontrol.SetEnabled(attrs.Enabled())
+			}
+			if attrs.HasAttr("align") {
 				pcontrol.SetAlign(attrs.Align())
 			}
-			if className != "TTabSheet" {
+			if attrs.HasAttr("visible") {
 				pcontrol.SetVisible(attrs.Visible())
 			}
 		}

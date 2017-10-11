@@ -18,7 +18,10 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 		</MenuItem>
 		<MenuItem name="mn2" caption="关于" />
 	</MainMenu>
-	<Button name="Btn1" caption="按钮" align="alTop" />
+	<TrayIcon name="Tray1" hint="fdsfsdf" visible="true">
+	
+	</TrayIcon> 
+	<Button name="Btn1" caption="按钮" align="alTop" hint="提示" showhint="true" />
 	<Panel name="Pnl1" align="alClient">
 		<PageControl name="PgcMain" activeindex="0" align="alClient">
 			<TabSheet caption="第一页">

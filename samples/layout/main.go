@@ -22,9 +22,7 @@ func main() {
 	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.SetWidth(700)
 	mainForm.SetHeight(500)
-	mainForm.SetOnCloseQuery(func(Sender vcl.IObject, CanClose *bool) {
-		*CanClose = vcl.MessageDlg("是否退出？", types.MtConfirmation, types.MbYes, types.MbNo) == types.IdYes
-	})
+
 	// 为方便演示，这里使用一个TPageControl作为多个布局的演示
 	// Delphi中所有可视与非可视组件的owner都可设置为TForm的实例，
 	// 本示例中，TForm的实例即mainForm，当owner设置为mainForm时
@@ -140,6 +138,66 @@ func main() {
 	pnl.SetColor(types.ClBlue)
 	pnl.SetParent(sheet)
 	pnl.SetAlign(types.AlBottom)
+
+	//----------------------------------Anchors----------------------------------
+
+	sheet = vcl.NewTabSheet(mainForm)
+	sheet.SetPageControl(pgc)
+	sheet.SetCaption("Anchors")
+
+	btn := vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetCaption("左")
+	btn.SetLeft(10)
+
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetCaption("右")
+	btn.SetLeft(sheet.Width() - btn.Width() - 10)
+	a := types.TAnchors(rtl.Include(0, types.AkTop, types.AkRight))
+	btn.SetAnchors(a)
+
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetCaption("左下")
+	btn.SetLeft(10)
+	btn.SetTop(sheet.Height() - btn.Height() - 10)
+	a = types.TAnchors(rtl.Include(0, types.AkLeft, types.AkBottom))
+	btn.SetAnchors(a)
+
+	btn = vcl.NewButton(mainForm)
+	btn.SetParent(sheet)
+	btn.SetCaption("右下")
+	btn.SetLeft(sheet.Width() - btn.Width() - 10)
+	btn.SetTop(sheet.Height() - btn.Height() - 10)
+	a = types.TAnchors(rtl.Include(0, types.AkRight, types.AkBottom))
+	btn.SetAnchors(a)
+
+	//----------------------------------Margins----------------------------------
+
+	sheet = vcl.NewTabSheet(mainForm)
+	sheet.SetPageControl(pgc)
+	sheet.SetCaption("Margins")
+
+	ppnl = vcl.NewPanel(mainForm)
+	ppnl.SetParent(sheet)
+	ppnl.SetParentBackground(false)
+	ppnl.SetColor(types.ClRed)
+	ppnl.SetAlign(types.AlClient)
+
+	pnl = vcl.NewPanel(mainForm)
+	pnl.SetParent(ppnl)
+	pnl.SetParentBackground(false)
+	pnl.SetColor(types.ClGreen)
+
+	pnl.SetAlign(types.AlClient)
+
+	pnl.SetAlignWithMargins(true)
+	m := pnl.Margins()
+	m.SetLeft(20)
+	m.SetTop(30)
+	m.SetBottom(40)
+	m.SetRight(50)
 
 	vcl.Application.Run()
 }

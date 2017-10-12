@@ -40,6 +40,4 @@ type HKEY uintptr
 
 type HMONITOR uintptr
 
-type TAnchors uint8
-
 type Char uint16

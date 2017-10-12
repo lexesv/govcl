@@ -1393,3 +1393,16 @@ const (
 	IiaBottom
 	IiaCenter
 )
+
+//  TAnchorKind = (akLeft, akTop, akRight, akBottom);
+type TAnchorKind int32
+
+const (
+	AkLeft = iota + 0
+	AkTop
+	AkRight
+	AkBottom
+)
+
+//  TAnchors = set of TAnchorKind;
+type TAnchors uint32

@@ -70,7 +70,7 @@ func main() {
 #### 图标及manifest文件集成
 
 需要使用rsrc工具生成syso文件    
-> go get ithub.com/akavel/rsrc 
+> go get github.com/akavel/rsrc 
 
 ```bat
 rsrc -ico="your.ico" -o="your.manifest"

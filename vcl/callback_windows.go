@@ -5,5 +5,5 @@ import (
 )
 
 var (
-	callbackStdcall = syscall.NewCallbackCDecl(callbackProc)
+	callbackStdcall = syscall.NewCallback(callbackProc)
 )

@@ -11,7 +11,7 @@ func DStrToGoStr(ustr uintptr) string {
 		return ""
 	}
 	str := make([]uint16, l)
-	DMove(ustr, uintptr(unsafe.Pointer(&str[0])), len(str)*2)
+	DMove(ustr, uintptr(unsafe.Pointer(&str[0])), l*2)
 	return syscall.UTF16ToString(str)
 }
 

@@ -77,8 +77,6 @@ func main() {
   包含Delphi标准组件中的大部分    
 * api  
   DLL函数申明与重新包装  
-* dylib  
-  仅针对Linux及MacOS，模拟windows下动态调用，需要用到cgo  
 * rtl  
   包含Delphi中Set类型操作、内存操作等其它函数  
 * win  

@@ -5,217 +5,217 @@
 //
 //----------------------------------------
 
-function MenuItem_Create(AOwner: TComponent): TMenuItem; cdecl;
+function MenuItem_Create(AOwner: TComponent): TMenuItem; stdcall;
 begin
   Result :=  TMenuItem.Create(AOwner);
 end;
 
-procedure MenuItem_Free(AObj: TMenuItem); cdecl;
+procedure MenuItem_Free(AObj: TMenuItem); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure MenuItem_Insert(AObj: TMenuItem; Index: Integer; Item: TMenuItem); cdecl;
+procedure MenuItem_Insert(AObj: TMenuItem; Index: Integer; Item: TMenuItem); stdcall;
 begin
   AObj.Insert(Index, Item);
 end;
 
-procedure MenuItem_Delete(AObj: TMenuItem; Index: Integer); cdecl;
+procedure MenuItem_Delete(AObj: TMenuItem; Index: Integer); stdcall;
 begin
   AObj.Delete(Index);
 end;
 
-procedure MenuItem_Clear(AObj: TMenuItem); cdecl;
+procedure MenuItem_Clear(AObj: TMenuItem); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure MenuItem_Click(AObj: TMenuItem); cdecl;
+procedure MenuItem_Click(AObj: TMenuItem); stdcall;
 begin
   AObj.Click;
 end;
 
-function MenuItem_IndexOf(AObj: TMenuItem; Item: TMenuItem): Integer; cdecl;
+function MenuItem_IndexOf(AObj: TMenuItem; Item: TMenuItem): Integer; stdcall;
 begin
   Result :=  AObj.IndexOf(Item);
 end;
 
-function MenuItem_HasParent(AObj: TMenuItem): LongBool; cdecl;
+function MenuItem_HasParent(AObj: TMenuItem): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure MenuItem_Add(AObj: TMenuItem; Item: TMenuItem); cdecl;
+procedure MenuItem_Add(AObj: TMenuItem; Item: TMenuItem); stdcall;
 begin
   AObj.Add(Item);
 end;
 
-function MenuItem_FindComponent(AObj: TMenuItem; AName: PChar): TComponent; cdecl;
+function MenuItem_FindComponent(AObj: TMenuItem; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function MenuItem_GetNamePath(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_GetNamePath(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure MenuItem_Assign(AObj: TMenuItem; Source: TPersistent); cdecl;
+procedure MenuItem_Assign(AObj: TMenuItem; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function MenuItem_ClassName(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_ClassName(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function MenuItem_Equals(AObj: TMenuItem; Obj: TObject): LongBool; cdecl;
+function MenuItem_Equals(AObj: TMenuItem; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function MenuItem_GetHashCode(AObj: TMenuItem): Integer; cdecl;
+function MenuItem_GetHashCode(AObj: TMenuItem): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function MenuItem_ToString(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_ToString(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function MenuItem_GetHandle(AObj: TMenuItem): HMENU; cdecl;
+function MenuItem_GetHandle(AObj: TMenuItem): HMENU; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function MenuItem_GetParent(AObj: TMenuItem): TMenuItem; cdecl;
+function MenuItem_GetParent(AObj: TMenuItem): TMenuItem; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-function MenuItem_GetAction(AObj: TMenuItem): TBasicAction; cdecl;
+function MenuItem_GetAction(AObj: TMenuItem): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure MenuItem_SetAction(AObj: TMenuItem; AValue: TBasicAction); cdecl;
+procedure MenuItem_SetAction(AObj: TMenuItem; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function MenuItem_GetAutoHotkeys(AObj: TMenuItem): TMenuItemAutoFlag; cdecl;
+function MenuItem_GetAutoHotkeys(AObj: TMenuItem): TMenuItemAutoFlag; stdcall;
 begin
   Result :=  AObj.AutoHotkeys;
 end;
 
-procedure MenuItem_SetAutoHotkeys(AObj: TMenuItem; AValue: TMenuItemAutoFlag); cdecl;
+procedure MenuItem_SetAutoHotkeys(AObj: TMenuItem; AValue: TMenuItemAutoFlag); stdcall;
 begin
   AObj.AutoHotkeys := AValue;
 end;
 
-function MenuItem_GetBitmap(AObj: TMenuItem): TBitmap; cdecl;
+function MenuItem_GetBitmap(AObj: TMenuItem): TBitmap; stdcall;
 begin
   Result :=  AObj.Bitmap;
 end;
 
-procedure MenuItem_SetBitmap(AObj: TMenuItem; AValue: TBitmap); cdecl;
+procedure MenuItem_SetBitmap(AObj: TMenuItem; AValue: TBitmap); stdcall;
 begin
   AObj.Bitmap := AValue;
 end;
 
-function MenuItem_GetCaption(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_GetCaption(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure MenuItem_SetCaption(AObj: TMenuItem; AValue: PChar); cdecl;
+procedure MenuItem_SetCaption(AObj: TMenuItem; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function MenuItem_GetChecked(AObj: TMenuItem): LongBool; cdecl;
+function MenuItem_GetChecked(AObj: TMenuItem): LongBool; stdcall;
 begin
   Result :=  AObj.Checked;
 end;
 
-procedure MenuItem_SetChecked(AObj: TMenuItem; AValue: LongBool); cdecl;
+procedure MenuItem_SetChecked(AObj: TMenuItem; AValue: LongBool); stdcall;
 begin
   AObj.Checked := AValue;
 end;
 
-function MenuItem_GetDefault(AObj: TMenuItem): LongBool; cdecl;
+function MenuItem_GetDefault(AObj: TMenuItem): LongBool; stdcall;
 begin
   Result :=  AObj.Default;
 end;
 
-procedure MenuItem_SetDefault(AObj: TMenuItem; AValue: LongBool); cdecl;
+procedure MenuItem_SetDefault(AObj: TMenuItem; AValue: LongBool); stdcall;
 begin
   AObj.Default := AValue;
 end;
 
-function MenuItem_GetEnabled(AObj: TMenuItem): LongBool; cdecl;
+function MenuItem_GetEnabled(AObj: TMenuItem): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure MenuItem_SetEnabled(AObj: TMenuItem; AValue: LongBool); cdecl;
+procedure MenuItem_SetEnabled(AObj: TMenuItem; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function MenuItem_GetGroupIndex(AObj: TMenuItem): Byte; cdecl;
+function MenuItem_GetGroupIndex(AObj: TMenuItem): Byte; stdcall;
 begin
   Result :=  AObj.GroupIndex;
 end;
 
-procedure MenuItem_SetGroupIndex(AObj: TMenuItem; AValue: Byte); cdecl;
+procedure MenuItem_SetGroupIndex(AObj: TMenuItem; AValue: Byte); stdcall;
 begin
   AObj.GroupIndex := AValue;
 end;
 
-function MenuItem_GetHint(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_GetHint(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure MenuItem_SetHint(AObj: TMenuItem; AValue: PChar); cdecl;
+procedure MenuItem_SetHint(AObj: TMenuItem; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function MenuItem_GetImageIndex(AObj: TMenuItem): TImageIndex; cdecl;
+function MenuItem_GetImageIndex(AObj: TMenuItem): TImageIndex; stdcall;
 begin
   Result :=  AObj.ImageIndex;
 end;
 
-procedure MenuItem_SetImageIndex(AObj: TMenuItem; AValue: TImageIndex); cdecl;
+procedure MenuItem_SetImageIndex(AObj: TMenuItem; AValue: TImageIndex); stdcall;
 begin
   AObj.ImageIndex := AValue;
 end;
 
-function MenuItem_GetShortCut(AObj: TMenuItem): TShortCut; cdecl;
+function MenuItem_GetShortCut(AObj: TMenuItem): TShortCut; stdcall;
 begin
   Result :=  AObj.ShortCut;
 end;
 
-procedure MenuItem_SetShortCut(AObj: TMenuItem; AValue: TShortCut); cdecl;
+procedure MenuItem_SetShortCut(AObj: TMenuItem; AValue: TShortCut); stdcall;
 begin
   AObj.ShortCut := AValue;
 end;
 
-function MenuItem_GetVisible(AObj: TMenuItem): LongBool; cdecl;
+function MenuItem_GetVisible(AObj: TMenuItem): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure MenuItem_SetVisible(AObj: TMenuItem; AValue: LongBool); cdecl;
+procedure MenuItem_SetVisible(AObj: TMenuItem; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-procedure MenuItem_SetOnClick(AObj: TMenuItem; AEventId: NativeUInt); stdcall
+procedure MenuItem_SetOnClick(AObj: TMenuItem; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -227,109 +227,109 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-function MenuItem_GetComponentCount(AObj: TMenuItem): Integer; cdecl;
+function MenuItem_GetComponentCount(AObj: TMenuItem): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function MenuItem_GetComponentIndex(AObj: TMenuItem): Integer; cdecl;
+function MenuItem_GetComponentIndex(AObj: TMenuItem): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure MenuItem_SetComponentIndex(AObj: TMenuItem; AValue: Integer); cdecl;
+procedure MenuItem_SetComponentIndex(AObj: TMenuItem; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function MenuItem_GetOwner(AObj: TMenuItem): TComponent; cdecl;
+function MenuItem_GetOwner(AObj: TMenuItem): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function MenuItem_GetName(AObj: TMenuItem): PChar; cdecl;
+function MenuItem_GetName(AObj: TMenuItem): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure MenuItem_SetName(AObj: TMenuItem; AValue: PChar); cdecl;
+procedure MenuItem_SetName(AObj: TMenuItem; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function MenuItem_GetTag(AObj: TMenuItem): NativeInt; cdecl;
+function MenuItem_GetTag(AObj: TMenuItem): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure MenuItem_SetTag(AObj: TMenuItem; AValue: NativeInt); cdecl;
+procedure MenuItem_SetTag(AObj: TMenuItem; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function MenuItem_GetItems(AObj: TMenuItem; Index: Integer): TMenuItem; cdecl;
+function MenuItem_GetItems(AObj: TMenuItem; Index: Integer): TMenuItem; stdcall;
 begin
   Result :=  AObj.Items[Index];
 end;
 
-function MenuItem_GetComponents(AObj: TMenuItem; AIndex: Integer): TComponent; cdecl;
+function MenuItem_GetComponents(AObj: TMenuItem; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  MenuItem_Create {$IFNDEF MSWINDOWS}name '_MenuItem_Create'{$ENDIF},
-  MenuItem_Free {$IFNDEF MSWINDOWS}name '_MenuItem_Free'{$ENDIF},
-  MenuItem_Insert {$IFNDEF MSWINDOWS}name '_MenuItem_Insert'{$ENDIF},
-  MenuItem_Delete {$IFNDEF MSWINDOWS}name '_MenuItem_Delete'{$ENDIF},
-  MenuItem_Clear {$IFNDEF MSWINDOWS}name '_MenuItem_Clear'{$ENDIF},
-  MenuItem_Click {$IFNDEF MSWINDOWS}name '_MenuItem_Click'{$ENDIF},
-  MenuItem_IndexOf {$IFNDEF MSWINDOWS}name '_MenuItem_IndexOf'{$ENDIF},
-  MenuItem_HasParent {$IFNDEF MSWINDOWS}name '_MenuItem_HasParent'{$ENDIF},
-  MenuItem_Add {$IFNDEF MSWINDOWS}name '_MenuItem_Add'{$ENDIF},
-  MenuItem_FindComponent {$IFNDEF MSWINDOWS}name '_MenuItem_FindComponent'{$ENDIF},
-  MenuItem_GetNamePath {$IFNDEF MSWINDOWS}name '_MenuItem_GetNamePath'{$ENDIF},
-  MenuItem_Assign {$IFNDEF MSWINDOWS}name '_MenuItem_Assign'{$ENDIF},
-  MenuItem_ClassName {$IFNDEF MSWINDOWS}name '_MenuItem_ClassName'{$ENDIF},
-  MenuItem_Equals {$IFNDEF MSWINDOWS}name '_MenuItem_Equals'{$ENDIF},
-  MenuItem_GetHashCode {$IFNDEF MSWINDOWS}name '_MenuItem_GetHashCode'{$ENDIF},
-  MenuItem_ToString {$IFNDEF MSWINDOWS}name '_MenuItem_ToString'{$ENDIF},
-  MenuItem_GetHandle {$IFNDEF MSWINDOWS}name '_MenuItem_GetHandle'{$ENDIF},
-  MenuItem_GetParent {$IFNDEF MSWINDOWS}name '_MenuItem_GetParent'{$ENDIF},
-  MenuItem_GetAction {$IFNDEF MSWINDOWS}name '_MenuItem_GetAction'{$ENDIF},
-  MenuItem_SetAction {$IFNDEF MSWINDOWS}name '_MenuItem_SetAction'{$ENDIF},
-  MenuItem_GetAutoHotkeys {$IFNDEF MSWINDOWS}name '_MenuItem_GetAutoHotkeys'{$ENDIF},
-  MenuItem_SetAutoHotkeys {$IFNDEF MSWINDOWS}name '_MenuItem_SetAutoHotkeys'{$ENDIF},
-  MenuItem_GetBitmap {$IFNDEF MSWINDOWS}name '_MenuItem_GetBitmap'{$ENDIF},
-  MenuItem_SetBitmap {$IFNDEF MSWINDOWS}name '_MenuItem_SetBitmap'{$ENDIF},
-  MenuItem_GetCaption {$IFNDEF MSWINDOWS}name '_MenuItem_GetCaption'{$ENDIF},
-  MenuItem_SetCaption {$IFNDEF MSWINDOWS}name '_MenuItem_SetCaption'{$ENDIF},
-  MenuItem_GetChecked {$IFNDEF MSWINDOWS}name '_MenuItem_GetChecked'{$ENDIF},
-  MenuItem_SetChecked {$IFNDEF MSWINDOWS}name '_MenuItem_SetChecked'{$ENDIF},
-  MenuItem_GetDefault {$IFNDEF MSWINDOWS}name '_MenuItem_GetDefault'{$ENDIF},
-  MenuItem_SetDefault {$IFNDEF MSWINDOWS}name '_MenuItem_SetDefault'{$ENDIF},
-  MenuItem_GetEnabled {$IFNDEF MSWINDOWS}name '_MenuItem_GetEnabled'{$ENDIF},
-  MenuItem_SetEnabled {$IFNDEF MSWINDOWS}name '_MenuItem_SetEnabled'{$ENDIF},
-  MenuItem_GetGroupIndex {$IFNDEF MSWINDOWS}name '_MenuItem_GetGroupIndex'{$ENDIF},
-  MenuItem_SetGroupIndex {$IFNDEF MSWINDOWS}name '_MenuItem_SetGroupIndex'{$ENDIF},
-  MenuItem_GetHint {$IFNDEF MSWINDOWS}name '_MenuItem_GetHint'{$ENDIF},
-  MenuItem_SetHint {$IFNDEF MSWINDOWS}name '_MenuItem_SetHint'{$ENDIF},
-  MenuItem_GetImageIndex {$IFNDEF MSWINDOWS}name '_MenuItem_GetImageIndex'{$ENDIF},
-  MenuItem_SetImageIndex {$IFNDEF MSWINDOWS}name '_MenuItem_SetImageIndex'{$ENDIF},
-  MenuItem_GetShortCut {$IFNDEF MSWINDOWS}name '_MenuItem_GetShortCut'{$ENDIF},
-  MenuItem_SetShortCut {$IFNDEF MSWINDOWS}name '_MenuItem_SetShortCut'{$ENDIF},
-  MenuItem_GetVisible {$IFNDEF MSWINDOWS}name '_MenuItem_GetVisible'{$ENDIF},
-  MenuItem_SetVisible {$IFNDEF MSWINDOWS}name '_MenuItem_SetVisible'{$ENDIF},
-  MenuItem_SetOnClick {$IFNDEF MSWINDOWS}name '_MenuItem_SetOnClick'{$ENDIF},
-  MenuItem_GetComponentCount {$IFNDEF MSWINDOWS}name '_MenuItem_GetComponentCount'{$ENDIF},
-  MenuItem_GetComponentIndex {$IFNDEF MSWINDOWS}name '_MenuItem_GetComponentIndex'{$ENDIF},
-  MenuItem_SetComponentIndex {$IFNDEF MSWINDOWS}name '_MenuItem_SetComponentIndex'{$ENDIF},
-  MenuItem_GetOwner {$IFNDEF MSWINDOWS}name '_MenuItem_GetOwner'{$ENDIF},
-  MenuItem_GetName {$IFNDEF MSWINDOWS}name '_MenuItem_GetName'{$ENDIF},
-  MenuItem_SetName {$IFNDEF MSWINDOWS}name '_MenuItem_SetName'{$ENDIF},
-  MenuItem_GetTag {$IFNDEF MSWINDOWS}name '_MenuItem_GetTag'{$ENDIF},
-  MenuItem_SetTag {$IFNDEF MSWINDOWS}name '_MenuItem_SetTag'{$ENDIF},
-  MenuItem_GetItems {$IFNDEF MSWINDOWS}name '_MenuItem_GetItems'{$ENDIF},
-  MenuItem_GetComponents {$IFNDEF MSWINDOWS}name '_MenuItem_GetComponents'{$ENDIF};
+  MenuItem_Create,
+  MenuItem_Free,
+  MenuItem_Insert,
+  MenuItem_Delete,
+  MenuItem_Clear,
+  MenuItem_Click,
+  MenuItem_IndexOf,
+  MenuItem_HasParent,
+  MenuItem_Add,
+  MenuItem_FindComponent,
+  MenuItem_GetNamePath,
+  MenuItem_Assign,
+  MenuItem_ClassName,
+  MenuItem_Equals,
+  MenuItem_GetHashCode,
+  MenuItem_ToString,
+  MenuItem_GetHandle,
+  MenuItem_GetParent,
+  MenuItem_GetAction,
+  MenuItem_SetAction,
+  MenuItem_GetAutoHotkeys,
+  MenuItem_SetAutoHotkeys,
+  MenuItem_GetBitmap,
+  MenuItem_SetBitmap,
+  MenuItem_GetCaption,
+  MenuItem_SetCaption,
+  MenuItem_GetChecked,
+  MenuItem_SetChecked,
+  MenuItem_GetDefault,
+  MenuItem_SetDefault,
+  MenuItem_GetEnabled,
+  MenuItem_SetEnabled,
+  MenuItem_GetGroupIndex,
+  MenuItem_SetGroupIndex,
+  MenuItem_GetHint,
+  MenuItem_SetHint,
+  MenuItem_GetImageIndex,
+  MenuItem_SetImageIndex,
+  MenuItem_GetShortCut,
+  MenuItem_SetShortCut,
+  MenuItem_GetVisible,
+  MenuItem_SetVisible,
+  MenuItem_SetOnClick,
+  MenuItem_GetComponentCount,
+  MenuItem_GetComponentIndex,
+  MenuItem_SetComponentIndex,
+  MenuItem_GetOwner,
+  MenuItem_GetName,
+  MenuItem_SetName,
+  MenuItem_GetTag,
+  MenuItem_SetTag,
+  MenuItem_GetItems,
+  MenuItem_GetComponents;
 

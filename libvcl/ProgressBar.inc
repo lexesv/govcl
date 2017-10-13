@@ -5,417 +5,417 @@
 //
 //----------------------------------------
 
-function ProgressBar_Create(AOwner: TComponent): TProgressBar; cdecl;
+function ProgressBar_Create(AOwner: TComponent): TProgressBar; stdcall;
 begin
   Result :=  TProgressBar.Create(AOwner);
 end;
 
-procedure ProgressBar_Free(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Free(AObj: TProgressBar); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure ProgressBar_StepIt(AObj: TProgressBar); cdecl;
+procedure ProgressBar_StepIt(AObj: TProgressBar); stdcall;
 begin
   AObj.StepIt;
 end;
 
-procedure ProgressBar_StepBy(AObj: TProgressBar; Delta: Integer); cdecl;
+procedure ProgressBar_StepBy(AObj: TProgressBar; Delta: Integer); stdcall;
 begin
   AObj.StepBy(Delta);
 end;
 
-function ProgressBar_CanFocus(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_CanFocus(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure ProgressBar_FlipChildren(AObj: TProgressBar; AllLevels: LongBool); cdecl;
+procedure ProgressBar_FlipChildren(AObj: TProgressBar; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function ProgressBar_Focused(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_Focused(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function ProgressBar_HandleAllocated(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_HandleAllocated(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure ProgressBar_Invalidate(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Invalidate(AObj: TProgressBar); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure ProgressBar_Realign(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Realign(AObj: TProgressBar); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure ProgressBar_Repaint(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Repaint(AObj: TProgressBar); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure ProgressBar_ScaleBy(AObj: TProgressBar; M: Integer; D: Integer); cdecl;
+procedure ProgressBar_ScaleBy(AObj: TProgressBar; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure ProgressBar_SetBounds(AObj: TProgressBar; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure ProgressBar_SetBounds(AObj: TProgressBar; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure ProgressBar_SetFocus(AObj: TProgressBar); cdecl;
+procedure ProgressBar_SetFocus(AObj: TProgressBar); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure ProgressBar_Update(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Update(AObj: TProgressBar); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure ProgressBar_BringToFront(AObj: TProgressBar); cdecl;
+procedure ProgressBar_BringToFront(AObj: TProgressBar); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function ProgressBar_HasParent(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_HasParent(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure ProgressBar_Hide(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Hide(AObj: TProgressBar); stdcall;
 begin
   AObj.Hide;
 end;
 
-function ProgressBar_Perform(AObj: TProgressBar; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function ProgressBar_Perform(AObj: TProgressBar; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure ProgressBar_Refresh(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Refresh(AObj: TProgressBar); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure ProgressBar_SendToBack(AObj: TProgressBar); cdecl;
+procedure ProgressBar_SendToBack(AObj: TProgressBar); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure ProgressBar_Show(AObj: TProgressBar); cdecl;
+procedure ProgressBar_Show(AObj: TProgressBar); stdcall;
 begin
   AObj.Show;
 end;
 
-function ProgressBar_GetTextBuf(AObj: TProgressBar; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function ProgressBar_GetTextBuf(AObj: TProgressBar; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function ProgressBar_FindComponent(AObj: TProgressBar; AName: PChar): TComponent; cdecl;
+function ProgressBar_FindComponent(AObj: TProgressBar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function ProgressBar_GetNamePath(AObj: TProgressBar): PChar; cdecl;
+function ProgressBar_GetNamePath(AObj: TProgressBar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure ProgressBar_Assign(AObj: TProgressBar; Source: TPersistent); cdecl;
+procedure ProgressBar_Assign(AObj: TProgressBar; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function ProgressBar_ClassName(AObj: TProgressBar): PChar; cdecl;
+function ProgressBar_ClassName(AObj: TProgressBar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ProgressBar_Equals(AObj: TProgressBar; Obj: TObject): LongBool; cdecl;
+function ProgressBar_Equals(AObj: TProgressBar; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ProgressBar_GetHashCode(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetHashCode(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ProgressBar_ToString(AObj: TProgressBar): PChar; cdecl;
+function ProgressBar_ToString(AObj: TProgressBar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ProgressBar_GetAlign(AObj: TProgressBar): TAlign; cdecl;
+function ProgressBar_GetAlign(AObj: TProgressBar): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure ProgressBar_SetAlign(AObj: TProgressBar; AValue: TAlign); cdecl;
+procedure ProgressBar_SetAlign(AObj: TProgressBar; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function ProgressBar_GetAnchors(AObj: TProgressBar): TAnchors; cdecl;
+function ProgressBar_GetAnchors(AObj: TProgressBar): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure ProgressBar_SetAnchors(AObj: TProgressBar; AValue: TAnchors); cdecl;
+procedure ProgressBar_SetAnchors(AObj: TProgressBar; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function ProgressBar_GetBorderWidth(AObj: TProgressBar): TBorderWidth; cdecl;
+function ProgressBar_GetBorderWidth(AObj: TProgressBar): TBorderWidth; stdcall;
 begin
   Result :=  AObj.BorderWidth;
 end;
 
-procedure ProgressBar_SetBorderWidth(AObj: TProgressBar; AValue: TBorderWidth); cdecl;
+procedure ProgressBar_SetBorderWidth(AObj: TProgressBar; AValue: TBorderWidth); stdcall;
 begin
   AObj.BorderWidth := AValue;
 end;
 
-function ProgressBar_GetDoubleBuffered(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetDoubleBuffered(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure ProgressBar_SetDoubleBuffered(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetDoubleBuffered(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function ProgressBar_GetEnabled(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetEnabled(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure ProgressBar_SetEnabled(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetEnabled(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function ProgressBar_GetHint(AObj: TProgressBar): PChar; cdecl;
+function ProgressBar_GetHint(AObj: TProgressBar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure ProgressBar_SetHint(AObj: TProgressBar; AValue: PChar); cdecl;
+procedure ProgressBar_SetHint(AObj: TProgressBar; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function ProgressBar_GetMin(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetMin(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Min;
 end;
 
-procedure ProgressBar_SetMin(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetMin(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Min := AValue;
 end;
 
-function ProgressBar_GetMax(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetMax(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Max;
 end;
 
-procedure ProgressBar_SetMax(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetMax(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Max := AValue;
 end;
 
-function ProgressBar_GetOrientation(AObj: TProgressBar): TProgressBarOrientation; cdecl;
+function ProgressBar_GetOrientation(AObj: TProgressBar): TProgressBarOrientation; stdcall;
 begin
   Result :=  AObj.Orientation;
 end;
 
-procedure ProgressBar_SetOrientation(AObj: TProgressBar; AValue: TProgressBarOrientation); cdecl;
+procedure ProgressBar_SetOrientation(AObj: TProgressBar; AValue: TProgressBarOrientation); stdcall;
 begin
   AObj.Orientation := AValue;
 end;
 
-function ProgressBar_GetParentDoubleBuffered(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetParentDoubleBuffered(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure ProgressBar_SetParentDoubleBuffered(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetParentDoubleBuffered(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function ProgressBar_GetParentShowHint(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetParentShowHint(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure ProgressBar_SetParentShowHint(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetParentShowHint(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function ProgressBar_GetPopupMenu(AObj: TProgressBar): TPopupMenu; cdecl;
+function ProgressBar_GetPopupMenu(AObj: TProgressBar): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure ProgressBar_SetPopupMenu(AObj: TProgressBar; AValue: TPopupMenu); cdecl;
+procedure ProgressBar_SetPopupMenu(AObj: TProgressBar; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function ProgressBar_GetPosition(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetPosition(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Position;
 end;
 
-procedure ProgressBar_SetPosition(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetPosition(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Position := AValue;
 end;
 
-function ProgressBar_GetSmooth(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetSmooth(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.Smooth;
 end;
 
-procedure ProgressBar_SetSmooth(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetSmooth(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.Smooth := AValue;
 end;
 
-function ProgressBar_GetStyle(AObj: TProgressBar): TProgressBarStyle; cdecl;
+function ProgressBar_GetStyle(AObj: TProgressBar): TProgressBarStyle; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure ProgressBar_SetStyle(AObj: TProgressBar; AValue: TProgressBarStyle); cdecl;
+procedure ProgressBar_SetStyle(AObj: TProgressBar; AValue: TProgressBarStyle); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function ProgressBar_GetMarqueeInterval(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetMarqueeInterval(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.MarqueeInterval;
 end;
 
-procedure ProgressBar_SetMarqueeInterval(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetMarqueeInterval(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.MarqueeInterval := AValue;
 end;
 
-function ProgressBar_GetBarColor(AObj: TProgressBar): TColor; cdecl;
+function ProgressBar_GetBarColor(AObj: TProgressBar): TColor; stdcall;
 begin
   Result :=  AObj.BarColor;
 end;
 
-procedure ProgressBar_SetBarColor(AObj: TProgressBar; AValue: TColor); cdecl;
+procedure ProgressBar_SetBarColor(AObj: TProgressBar; AValue: TColor); stdcall;
 begin
   AObj.BarColor := AValue;
 end;
 
-function ProgressBar_GetBackgroundColor(AObj: TProgressBar): TColor; cdecl;
+function ProgressBar_GetBackgroundColor(AObj: TProgressBar): TColor; stdcall;
 begin
   Result :=  AObj.BackgroundColor;
 end;
 
-procedure ProgressBar_SetBackgroundColor(AObj: TProgressBar; AValue: TColor); cdecl;
+procedure ProgressBar_SetBackgroundColor(AObj: TProgressBar; AValue: TColor); stdcall;
 begin
   AObj.BackgroundColor := AValue;
 end;
 
-function ProgressBar_GetSmoothReverse(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetSmoothReverse(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.SmoothReverse;
 end;
 
-procedure ProgressBar_SetSmoothReverse(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetSmoothReverse(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.SmoothReverse := AValue;
 end;
 
-function ProgressBar_GetStep(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetStep(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Step;
 end;
 
-procedure ProgressBar_SetStep(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetStep(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Step := AValue;
 end;
 
-function ProgressBar_GetState(AObj: TProgressBar): TProgressBarState; cdecl;
+function ProgressBar_GetState(AObj: TProgressBar): TProgressBarState; stdcall;
 begin
   Result :=  AObj.State;
 end;
 
-procedure ProgressBar_SetState(AObj: TProgressBar; AValue: TProgressBarState); cdecl;
+procedure ProgressBar_SetState(AObj: TProgressBar; AValue: TProgressBarState); stdcall;
 begin
   AObj.State := AValue;
 end;
 
-function ProgressBar_GetShowHint(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetShowHint(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure ProgressBar_SetShowHint(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetShowHint(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function ProgressBar_GetTabOrder(AObj: TProgressBar): TTabOrder; cdecl;
+function ProgressBar_GetTabOrder(AObj: TProgressBar): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure ProgressBar_SetTabOrder(AObj: TProgressBar; AValue: TTabOrder); cdecl;
+procedure ProgressBar_SetTabOrder(AObj: TProgressBar; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function ProgressBar_GetTabStop(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetTabStop(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure ProgressBar_SetTabStop(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetTabStop(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function ProgressBar_GetVisible(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetVisible(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure ProgressBar_SetVisible(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetVisible(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function ProgressBar_GetStyleElements(AObj: TProgressBar): TStyleElements; cdecl;
+function ProgressBar_GetStyleElements(AObj: TProgressBar): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure ProgressBar_SetStyleElements(AObj: TProgressBar; AValue: TStyleElements); cdecl;
+procedure ProgressBar_SetStyleElements(AObj: TProgressBar; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-procedure ProgressBar_SetOnEnter(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnEnter(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -427,7 +427,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure ProgressBar_SetOnExit(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnExit(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -439,7 +439,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure ProgressBar_SetOnMouseDown(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnMouseDown(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -451,7 +451,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure ProgressBar_SetOnMouseEnter(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnMouseEnter(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -463,7 +463,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure ProgressBar_SetOnMouseLeave(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnMouseLeave(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -475,7 +475,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure ProgressBar_SetOnMouseMove(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnMouseMove(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -487,7 +487,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure ProgressBar_SetOnMouseUp(AObj: TProgressBar; AEventId: NativeUInt); stdcall
+procedure ProgressBar_SetOnMouseUp(AObj: TProgressBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -499,371 +499,371 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-function ProgressBar_GetBrush(AObj: TProgressBar): TBrush; cdecl;
+function ProgressBar_GetBrush(AObj: TProgressBar): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function ProgressBar_GetControlCount(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetControlCount(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function ProgressBar_GetHandle(AObj: TProgressBar): HWND; cdecl;
+function ProgressBar_GetHandle(AObj: TProgressBar): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function ProgressBar_GetParentWindow(AObj: TProgressBar): HWND; cdecl;
+function ProgressBar_GetParentWindow(AObj: TProgressBar): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure ProgressBar_SetParentWindow(AObj: TProgressBar; AValue: HWND); cdecl;
+procedure ProgressBar_SetParentWindow(AObj: TProgressBar; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-function ProgressBar_GetAction(AObj: TProgressBar): TBasicAction; cdecl;
+function ProgressBar_GetAction(AObj: TProgressBar): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure ProgressBar_SetAction(AObj: TProgressBar; AValue: TBasicAction); cdecl;
+procedure ProgressBar_SetAction(AObj: TProgressBar; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function ProgressBar_GetBiDiMode(AObj: TProgressBar): TBiDiMode; cdecl;
+function ProgressBar_GetBiDiMode(AObj: TProgressBar): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure ProgressBar_SetBiDiMode(AObj: TProgressBar; AValue: TBiDiMode); cdecl;
+procedure ProgressBar_SetBiDiMode(AObj: TProgressBar; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-procedure ProgressBar_GetBoundsRect(AObj: TProgressBar; var Result: TRect); cdecl;
+procedure ProgressBar_GetBoundsRect(AObj: TProgressBar; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure ProgressBar_SetBoundsRect(AObj: TProgressBar; var AValue: TRect); cdecl;
+procedure ProgressBar_SetBoundsRect(AObj: TProgressBar; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function ProgressBar_GetClientHeight(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetClientHeight(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure ProgressBar_SetClientHeight(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetClientHeight(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure ProgressBar_GetClientRect(AObj: TProgressBar; var Result: TRect); cdecl;
+procedure ProgressBar_GetClientRect(AObj: TProgressBar; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function ProgressBar_GetClientWidth(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetClientWidth(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure ProgressBar_SetClientWidth(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetClientWidth(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function ProgressBar_GetExplicitLeft(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetExplicitLeft(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function ProgressBar_GetExplicitTop(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetExplicitTop(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function ProgressBar_GetExplicitWidth(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetExplicitWidth(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function ProgressBar_GetExplicitHeight(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetExplicitHeight(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function ProgressBar_GetParent(AObj: TProgressBar): TWinControl; cdecl;
+function ProgressBar_GetParent(AObj: TProgressBar): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure ProgressBar_SetParent(AObj: TProgressBar; AValue: TWinControl); cdecl;
+procedure ProgressBar_SetParent(AObj: TProgressBar; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function ProgressBar_GetAlignWithMargins(AObj: TProgressBar): LongBool; cdecl;
+function ProgressBar_GetAlignWithMargins(AObj: TProgressBar): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure ProgressBar_SetAlignWithMargins(AObj: TProgressBar; AValue: LongBool); cdecl;
+procedure ProgressBar_SetAlignWithMargins(AObj: TProgressBar; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function ProgressBar_GetLeft(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetLeft(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure ProgressBar_SetLeft(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetLeft(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function ProgressBar_GetTop(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetTop(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure ProgressBar_SetTop(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetTop(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function ProgressBar_GetWidth(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetWidth(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure ProgressBar_SetWidth(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetWidth(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function ProgressBar_GetHeight(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetHeight(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure ProgressBar_SetHeight(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetHeight(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function ProgressBar_GetCursor(AObj: TProgressBar): TCursor; cdecl;
+function ProgressBar_GetCursor(AObj: TProgressBar): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure ProgressBar_SetCursor(AObj: TProgressBar; AValue: TCursor); cdecl;
+procedure ProgressBar_SetCursor(AObj: TProgressBar; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function ProgressBar_GetMargins(AObj: TProgressBar): TMargins; cdecl;
+function ProgressBar_GetMargins(AObj: TProgressBar): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure ProgressBar_SetMargins(AObj: TProgressBar; AValue: TMargins); cdecl;
+procedure ProgressBar_SetMargins(AObj: TProgressBar; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function ProgressBar_GetComponentCount(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetComponentCount(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function ProgressBar_GetComponentIndex(AObj: TProgressBar): Integer; cdecl;
+function ProgressBar_GetComponentIndex(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure ProgressBar_SetComponentIndex(AObj: TProgressBar; AValue: Integer); cdecl;
+procedure ProgressBar_SetComponentIndex(AObj: TProgressBar; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function ProgressBar_GetOwner(AObj: TProgressBar): TComponent; cdecl;
+function ProgressBar_GetOwner(AObj: TProgressBar): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function ProgressBar_GetName(AObj: TProgressBar): PChar; cdecl;
+function ProgressBar_GetName(AObj: TProgressBar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure ProgressBar_SetName(AObj: TProgressBar; AValue: PChar); cdecl;
+procedure ProgressBar_SetName(AObj: TProgressBar; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function ProgressBar_GetTag(AObj: TProgressBar): NativeInt; cdecl;
+function ProgressBar_GetTag(AObj: TProgressBar): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure ProgressBar_SetTag(AObj: TProgressBar; AValue: NativeInt); cdecl;
+procedure ProgressBar_SetTag(AObj: TProgressBar; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function ProgressBar_GetControls(AObj: TProgressBar; Index: Integer): TControl; cdecl;
+function ProgressBar_GetControls(AObj: TProgressBar; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function ProgressBar_GetComponents(AObj: TProgressBar; AIndex: Integer): TComponent; cdecl;
+function ProgressBar_GetComponents(AObj: TProgressBar; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  ProgressBar_Create {$IFNDEF MSWINDOWS}name '_ProgressBar_Create'{$ENDIF},
-  ProgressBar_Free {$IFNDEF MSWINDOWS}name '_ProgressBar_Free'{$ENDIF},
-  ProgressBar_StepIt {$IFNDEF MSWINDOWS}name '_ProgressBar_StepIt'{$ENDIF},
-  ProgressBar_StepBy {$IFNDEF MSWINDOWS}name '_ProgressBar_StepBy'{$ENDIF},
-  ProgressBar_CanFocus {$IFNDEF MSWINDOWS}name '_ProgressBar_CanFocus'{$ENDIF},
-  ProgressBar_FlipChildren {$IFNDEF MSWINDOWS}name '_ProgressBar_FlipChildren'{$ENDIF},
-  ProgressBar_Focused {$IFNDEF MSWINDOWS}name '_ProgressBar_Focused'{$ENDIF},
-  ProgressBar_HandleAllocated {$IFNDEF MSWINDOWS}name '_ProgressBar_HandleAllocated'{$ENDIF},
-  ProgressBar_Invalidate {$IFNDEF MSWINDOWS}name '_ProgressBar_Invalidate'{$ENDIF},
-  ProgressBar_Realign {$IFNDEF MSWINDOWS}name '_ProgressBar_Realign'{$ENDIF},
-  ProgressBar_Repaint {$IFNDEF MSWINDOWS}name '_ProgressBar_Repaint'{$ENDIF},
-  ProgressBar_ScaleBy {$IFNDEF MSWINDOWS}name '_ProgressBar_ScaleBy'{$ENDIF},
-  ProgressBar_SetBounds {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBounds'{$ENDIF},
-  ProgressBar_SetFocus {$IFNDEF MSWINDOWS}name '_ProgressBar_SetFocus'{$ENDIF},
-  ProgressBar_Update {$IFNDEF MSWINDOWS}name '_ProgressBar_Update'{$ENDIF},
-  ProgressBar_BringToFront {$IFNDEF MSWINDOWS}name '_ProgressBar_BringToFront'{$ENDIF},
-  ProgressBar_HasParent {$IFNDEF MSWINDOWS}name '_ProgressBar_HasParent'{$ENDIF},
-  ProgressBar_Hide {$IFNDEF MSWINDOWS}name '_ProgressBar_Hide'{$ENDIF},
-  ProgressBar_Perform {$IFNDEF MSWINDOWS}name '_ProgressBar_Perform'{$ENDIF},
-  ProgressBar_Refresh {$IFNDEF MSWINDOWS}name '_ProgressBar_Refresh'{$ENDIF},
-  ProgressBar_SendToBack {$IFNDEF MSWINDOWS}name '_ProgressBar_SendToBack'{$ENDIF},
-  ProgressBar_Show {$IFNDEF MSWINDOWS}name '_ProgressBar_Show'{$ENDIF},
-  ProgressBar_GetTextBuf {$IFNDEF MSWINDOWS}name '_ProgressBar_GetTextBuf'{$ENDIF},
-  ProgressBar_FindComponent {$IFNDEF MSWINDOWS}name '_ProgressBar_FindComponent'{$ENDIF},
-  ProgressBar_GetNamePath {$IFNDEF MSWINDOWS}name '_ProgressBar_GetNamePath'{$ENDIF},
-  ProgressBar_Assign {$IFNDEF MSWINDOWS}name '_ProgressBar_Assign'{$ENDIF},
-  ProgressBar_ClassName {$IFNDEF MSWINDOWS}name '_ProgressBar_ClassName'{$ENDIF},
-  ProgressBar_Equals {$IFNDEF MSWINDOWS}name '_ProgressBar_Equals'{$ENDIF},
-  ProgressBar_GetHashCode {$IFNDEF MSWINDOWS}name '_ProgressBar_GetHashCode'{$ENDIF},
-  ProgressBar_ToString {$IFNDEF MSWINDOWS}name '_ProgressBar_ToString'{$ENDIF},
-  ProgressBar_GetAlign {$IFNDEF MSWINDOWS}name '_ProgressBar_GetAlign'{$ENDIF},
-  ProgressBar_SetAlign {$IFNDEF MSWINDOWS}name '_ProgressBar_SetAlign'{$ENDIF},
-  ProgressBar_GetAnchors {$IFNDEF MSWINDOWS}name '_ProgressBar_GetAnchors'{$ENDIF},
-  ProgressBar_SetAnchors {$IFNDEF MSWINDOWS}name '_ProgressBar_SetAnchors'{$ENDIF},
-  ProgressBar_GetBorderWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBorderWidth'{$ENDIF},
-  ProgressBar_SetBorderWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBorderWidth'{$ENDIF},
-  ProgressBar_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_ProgressBar_GetDoubleBuffered'{$ENDIF},
-  ProgressBar_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_ProgressBar_SetDoubleBuffered'{$ENDIF},
-  ProgressBar_GetEnabled {$IFNDEF MSWINDOWS}name '_ProgressBar_GetEnabled'{$ENDIF},
-  ProgressBar_SetEnabled {$IFNDEF MSWINDOWS}name '_ProgressBar_SetEnabled'{$ENDIF},
-  ProgressBar_GetHint {$IFNDEF MSWINDOWS}name '_ProgressBar_GetHint'{$ENDIF},
-  ProgressBar_SetHint {$IFNDEF MSWINDOWS}name '_ProgressBar_SetHint'{$ENDIF},
-  ProgressBar_GetMin {$IFNDEF MSWINDOWS}name '_ProgressBar_GetMin'{$ENDIF},
-  ProgressBar_SetMin {$IFNDEF MSWINDOWS}name '_ProgressBar_SetMin'{$ENDIF},
-  ProgressBar_GetMax {$IFNDEF MSWINDOWS}name '_ProgressBar_GetMax'{$ENDIF},
-  ProgressBar_SetMax {$IFNDEF MSWINDOWS}name '_ProgressBar_SetMax'{$ENDIF},
-  ProgressBar_GetOrientation {$IFNDEF MSWINDOWS}name '_ProgressBar_GetOrientation'{$ENDIF},
-  ProgressBar_SetOrientation {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOrientation'{$ENDIF},
-  ProgressBar_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_ProgressBar_GetParentDoubleBuffered'{$ENDIF},
-  ProgressBar_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_ProgressBar_SetParentDoubleBuffered'{$ENDIF},
-  ProgressBar_GetParentShowHint {$IFNDEF MSWINDOWS}name '_ProgressBar_GetParentShowHint'{$ENDIF},
-  ProgressBar_SetParentShowHint {$IFNDEF MSWINDOWS}name '_ProgressBar_SetParentShowHint'{$ENDIF},
-  ProgressBar_GetPopupMenu {$IFNDEF MSWINDOWS}name '_ProgressBar_GetPopupMenu'{$ENDIF},
-  ProgressBar_SetPopupMenu {$IFNDEF MSWINDOWS}name '_ProgressBar_SetPopupMenu'{$ENDIF},
-  ProgressBar_GetPosition {$IFNDEF MSWINDOWS}name '_ProgressBar_GetPosition'{$ENDIF},
-  ProgressBar_SetPosition {$IFNDEF MSWINDOWS}name '_ProgressBar_SetPosition'{$ENDIF},
-  ProgressBar_GetSmooth {$IFNDEF MSWINDOWS}name '_ProgressBar_GetSmooth'{$ENDIF},
-  ProgressBar_SetSmooth {$IFNDEF MSWINDOWS}name '_ProgressBar_SetSmooth'{$ENDIF},
-  ProgressBar_GetStyle {$IFNDEF MSWINDOWS}name '_ProgressBar_GetStyle'{$ENDIF},
-  ProgressBar_SetStyle {$IFNDEF MSWINDOWS}name '_ProgressBar_SetStyle'{$ENDIF},
-  ProgressBar_GetMarqueeInterval {$IFNDEF MSWINDOWS}name '_ProgressBar_GetMarqueeInterval'{$ENDIF},
-  ProgressBar_SetMarqueeInterval {$IFNDEF MSWINDOWS}name '_ProgressBar_SetMarqueeInterval'{$ENDIF},
-  ProgressBar_GetBarColor {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBarColor'{$ENDIF},
-  ProgressBar_SetBarColor {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBarColor'{$ENDIF},
-  ProgressBar_GetBackgroundColor {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBackgroundColor'{$ENDIF},
-  ProgressBar_SetBackgroundColor {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBackgroundColor'{$ENDIF},
-  ProgressBar_GetSmoothReverse {$IFNDEF MSWINDOWS}name '_ProgressBar_GetSmoothReverse'{$ENDIF},
-  ProgressBar_SetSmoothReverse {$IFNDEF MSWINDOWS}name '_ProgressBar_SetSmoothReverse'{$ENDIF},
-  ProgressBar_GetStep {$IFNDEF MSWINDOWS}name '_ProgressBar_GetStep'{$ENDIF},
-  ProgressBar_SetStep {$IFNDEF MSWINDOWS}name '_ProgressBar_SetStep'{$ENDIF},
-  ProgressBar_GetState {$IFNDEF MSWINDOWS}name '_ProgressBar_GetState'{$ENDIF},
-  ProgressBar_SetState {$IFNDEF MSWINDOWS}name '_ProgressBar_SetState'{$ENDIF},
-  ProgressBar_GetShowHint {$IFNDEF MSWINDOWS}name '_ProgressBar_GetShowHint'{$ENDIF},
-  ProgressBar_SetShowHint {$IFNDEF MSWINDOWS}name '_ProgressBar_SetShowHint'{$ENDIF},
-  ProgressBar_GetTabOrder {$IFNDEF MSWINDOWS}name '_ProgressBar_GetTabOrder'{$ENDIF},
-  ProgressBar_SetTabOrder {$IFNDEF MSWINDOWS}name '_ProgressBar_SetTabOrder'{$ENDIF},
-  ProgressBar_GetTabStop {$IFNDEF MSWINDOWS}name '_ProgressBar_GetTabStop'{$ENDIF},
-  ProgressBar_SetTabStop {$IFNDEF MSWINDOWS}name '_ProgressBar_SetTabStop'{$ENDIF},
-  ProgressBar_GetVisible {$IFNDEF MSWINDOWS}name '_ProgressBar_GetVisible'{$ENDIF},
-  ProgressBar_SetVisible {$IFNDEF MSWINDOWS}name '_ProgressBar_SetVisible'{$ENDIF},
-  ProgressBar_GetStyleElements {$IFNDEF MSWINDOWS}name '_ProgressBar_GetStyleElements'{$ENDIF},
-  ProgressBar_SetStyleElements {$IFNDEF MSWINDOWS}name '_ProgressBar_SetStyleElements'{$ENDIF},
-  ProgressBar_SetOnEnter {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnEnter'{$ENDIF},
-  ProgressBar_SetOnExit {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnExit'{$ENDIF},
-  ProgressBar_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnMouseDown'{$ENDIF},
-  ProgressBar_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnMouseEnter'{$ENDIF},
-  ProgressBar_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnMouseLeave'{$ENDIF},
-  ProgressBar_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnMouseMove'{$ENDIF},
-  ProgressBar_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_ProgressBar_SetOnMouseUp'{$ENDIF},
-  ProgressBar_GetBrush {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBrush'{$ENDIF},
-  ProgressBar_GetControlCount {$IFNDEF MSWINDOWS}name '_ProgressBar_GetControlCount'{$ENDIF},
-  ProgressBar_GetHandle {$IFNDEF MSWINDOWS}name '_ProgressBar_GetHandle'{$ENDIF},
-  ProgressBar_GetParentWindow {$IFNDEF MSWINDOWS}name '_ProgressBar_GetParentWindow'{$ENDIF},
-  ProgressBar_SetParentWindow {$IFNDEF MSWINDOWS}name '_ProgressBar_SetParentWindow'{$ENDIF},
-  ProgressBar_GetAction {$IFNDEF MSWINDOWS}name '_ProgressBar_GetAction'{$ENDIF},
-  ProgressBar_SetAction {$IFNDEF MSWINDOWS}name '_ProgressBar_SetAction'{$ENDIF},
-  ProgressBar_GetBiDiMode {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBiDiMode'{$ENDIF},
-  ProgressBar_SetBiDiMode {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBiDiMode'{$ENDIF},
-  ProgressBar_GetBoundsRect {$IFNDEF MSWINDOWS}name '_ProgressBar_GetBoundsRect'{$ENDIF},
-  ProgressBar_SetBoundsRect {$IFNDEF MSWINDOWS}name '_ProgressBar_SetBoundsRect'{$ENDIF},
-  ProgressBar_GetClientHeight {$IFNDEF MSWINDOWS}name '_ProgressBar_GetClientHeight'{$ENDIF},
-  ProgressBar_SetClientHeight {$IFNDEF MSWINDOWS}name '_ProgressBar_SetClientHeight'{$ENDIF},
-  ProgressBar_GetClientRect {$IFNDEF MSWINDOWS}name '_ProgressBar_GetClientRect'{$ENDIF},
-  ProgressBar_GetClientWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_GetClientWidth'{$ENDIF},
-  ProgressBar_SetClientWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_SetClientWidth'{$ENDIF},
-  ProgressBar_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_ProgressBar_GetExplicitLeft'{$ENDIF},
-  ProgressBar_GetExplicitTop {$IFNDEF MSWINDOWS}name '_ProgressBar_GetExplicitTop'{$ENDIF},
-  ProgressBar_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_GetExplicitWidth'{$ENDIF},
-  ProgressBar_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_ProgressBar_GetExplicitHeight'{$ENDIF},
-  ProgressBar_GetParent {$IFNDEF MSWINDOWS}name '_ProgressBar_GetParent'{$ENDIF},
-  ProgressBar_SetParent {$IFNDEF MSWINDOWS}name '_ProgressBar_SetParent'{$ENDIF},
-  ProgressBar_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_ProgressBar_GetAlignWithMargins'{$ENDIF},
-  ProgressBar_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_ProgressBar_SetAlignWithMargins'{$ENDIF},
-  ProgressBar_GetLeft {$IFNDEF MSWINDOWS}name '_ProgressBar_GetLeft'{$ENDIF},
-  ProgressBar_SetLeft {$IFNDEF MSWINDOWS}name '_ProgressBar_SetLeft'{$ENDIF},
-  ProgressBar_GetTop {$IFNDEF MSWINDOWS}name '_ProgressBar_GetTop'{$ENDIF},
-  ProgressBar_SetTop {$IFNDEF MSWINDOWS}name '_ProgressBar_SetTop'{$ENDIF},
-  ProgressBar_GetWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_GetWidth'{$ENDIF},
-  ProgressBar_SetWidth {$IFNDEF MSWINDOWS}name '_ProgressBar_SetWidth'{$ENDIF},
-  ProgressBar_GetHeight {$IFNDEF MSWINDOWS}name '_ProgressBar_GetHeight'{$ENDIF},
-  ProgressBar_SetHeight {$IFNDEF MSWINDOWS}name '_ProgressBar_SetHeight'{$ENDIF},
-  ProgressBar_GetCursor {$IFNDEF MSWINDOWS}name '_ProgressBar_GetCursor'{$ENDIF},
-  ProgressBar_SetCursor {$IFNDEF MSWINDOWS}name '_ProgressBar_SetCursor'{$ENDIF},
-  ProgressBar_GetMargins {$IFNDEF MSWINDOWS}name '_ProgressBar_GetMargins'{$ENDIF},
-  ProgressBar_SetMargins {$IFNDEF MSWINDOWS}name '_ProgressBar_SetMargins'{$ENDIF},
-  ProgressBar_GetComponentCount {$IFNDEF MSWINDOWS}name '_ProgressBar_GetComponentCount'{$ENDIF},
-  ProgressBar_GetComponentIndex {$IFNDEF MSWINDOWS}name '_ProgressBar_GetComponentIndex'{$ENDIF},
-  ProgressBar_SetComponentIndex {$IFNDEF MSWINDOWS}name '_ProgressBar_SetComponentIndex'{$ENDIF},
-  ProgressBar_GetOwner {$IFNDEF MSWINDOWS}name '_ProgressBar_GetOwner'{$ENDIF},
-  ProgressBar_GetName {$IFNDEF MSWINDOWS}name '_ProgressBar_GetName'{$ENDIF},
-  ProgressBar_SetName {$IFNDEF MSWINDOWS}name '_ProgressBar_SetName'{$ENDIF},
-  ProgressBar_GetTag {$IFNDEF MSWINDOWS}name '_ProgressBar_GetTag'{$ENDIF},
-  ProgressBar_SetTag {$IFNDEF MSWINDOWS}name '_ProgressBar_SetTag'{$ENDIF},
-  ProgressBar_GetControls {$IFNDEF MSWINDOWS}name '_ProgressBar_GetControls'{$ENDIF},
-  ProgressBar_GetComponents {$IFNDEF MSWINDOWS}name '_ProgressBar_GetComponents'{$ENDIF};
+  ProgressBar_Create,
+  ProgressBar_Free,
+  ProgressBar_StepIt,
+  ProgressBar_StepBy,
+  ProgressBar_CanFocus,
+  ProgressBar_FlipChildren,
+  ProgressBar_Focused,
+  ProgressBar_HandleAllocated,
+  ProgressBar_Invalidate,
+  ProgressBar_Realign,
+  ProgressBar_Repaint,
+  ProgressBar_ScaleBy,
+  ProgressBar_SetBounds,
+  ProgressBar_SetFocus,
+  ProgressBar_Update,
+  ProgressBar_BringToFront,
+  ProgressBar_HasParent,
+  ProgressBar_Hide,
+  ProgressBar_Perform,
+  ProgressBar_Refresh,
+  ProgressBar_SendToBack,
+  ProgressBar_Show,
+  ProgressBar_GetTextBuf,
+  ProgressBar_FindComponent,
+  ProgressBar_GetNamePath,
+  ProgressBar_Assign,
+  ProgressBar_ClassName,
+  ProgressBar_Equals,
+  ProgressBar_GetHashCode,
+  ProgressBar_ToString,
+  ProgressBar_GetAlign,
+  ProgressBar_SetAlign,
+  ProgressBar_GetAnchors,
+  ProgressBar_SetAnchors,
+  ProgressBar_GetBorderWidth,
+  ProgressBar_SetBorderWidth,
+  ProgressBar_GetDoubleBuffered,
+  ProgressBar_SetDoubleBuffered,
+  ProgressBar_GetEnabled,
+  ProgressBar_SetEnabled,
+  ProgressBar_GetHint,
+  ProgressBar_SetHint,
+  ProgressBar_GetMin,
+  ProgressBar_SetMin,
+  ProgressBar_GetMax,
+  ProgressBar_SetMax,
+  ProgressBar_GetOrientation,
+  ProgressBar_SetOrientation,
+  ProgressBar_GetParentDoubleBuffered,
+  ProgressBar_SetParentDoubleBuffered,
+  ProgressBar_GetParentShowHint,
+  ProgressBar_SetParentShowHint,
+  ProgressBar_GetPopupMenu,
+  ProgressBar_SetPopupMenu,
+  ProgressBar_GetPosition,
+  ProgressBar_SetPosition,
+  ProgressBar_GetSmooth,
+  ProgressBar_SetSmooth,
+  ProgressBar_GetStyle,
+  ProgressBar_SetStyle,
+  ProgressBar_GetMarqueeInterval,
+  ProgressBar_SetMarqueeInterval,
+  ProgressBar_GetBarColor,
+  ProgressBar_SetBarColor,
+  ProgressBar_GetBackgroundColor,
+  ProgressBar_SetBackgroundColor,
+  ProgressBar_GetSmoothReverse,
+  ProgressBar_SetSmoothReverse,
+  ProgressBar_GetStep,
+  ProgressBar_SetStep,
+  ProgressBar_GetState,
+  ProgressBar_SetState,
+  ProgressBar_GetShowHint,
+  ProgressBar_SetShowHint,
+  ProgressBar_GetTabOrder,
+  ProgressBar_SetTabOrder,
+  ProgressBar_GetTabStop,
+  ProgressBar_SetTabStop,
+  ProgressBar_GetVisible,
+  ProgressBar_SetVisible,
+  ProgressBar_GetStyleElements,
+  ProgressBar_SetStyleElements,
+  ProgressBar_SetOnEnter,
+  ProgressBar_SetOnExit,
+  ProgressBar_SetOnMouseDown,
+  ProgressBar_SetOnMouseEnter,
+  ProgressBar_SetOnMouseLeave,
+  ProgressBar_SetOnMouseMove,
+  ProgressBar_SetOnMouseUp,
+  ProgressBar_GetBrush,
+  ProgressBar_GetControlCount,
+  ProgressBar_GetHandle,
+  ProgressBar_GetParentWindow,
+  ProgressBar_SetParentWindow,
+  ProgressBar_GetAction,
+  ProgressBar_SetAction,
+  ProgressBar_GetBiDiMode,
+  ProgressBar_SetBiDiMode,
+  ProgressBar_GetBoundsRect,
+  ProgressBar_SetBoundsRect,
+  ProgressBar_GetClientHeight,
+  ProgressBar_SetClientHeight,
+  ProgressBar_GetClientRect,
+  ProgressBar_GetClientWidth,
+  ProgressBar_SetClientWidth,
+  ProgressBar_GetExplicitLeft,
+  ProgressBar_GetExplicitTop,
+  ProgressBar_GetExplicitWidth,
+  ProgressBar_GetExplicitHeight,
+  ProgressBar_GetParent,
+  ProgressBar_SetParent,
+  ProgressBar_GetAlignWithMargins,
+  ProgressBar_SetAlignWithMargins,
+  ProgressBar_GetLeft,
+  ProgressBar_SetLeft,
+  ProgressBar_GetTop,
+  ProgressBar_SetTop,
+  ProgressBar_GetWidth,
+  ProgressBar_SetWidth,
+  ProgressBar_GetHeight,
+  ProgressBar_SetHeight,
+  ProgressBar_GetCursor,
+  ProgressBar_SetCursor,
+  ProgressBar_GetMargins,
+  ProgressBar_SetMargins,
+  ProgressBar_GetComponentCount,
+  ProgressBar_GetComponentIndex,
+  ProgressBar_SetComponentIndex,
+  ProgressBar_GetOwner,
+  ProgressBar_GetName,
+  ProgressBar_SetName,
+  ProgressBar_GetTag,
+  ProgressBar_SetTag,
+  ProgressBar_GetControls,
+  ProgressBar_GetComponents;
 

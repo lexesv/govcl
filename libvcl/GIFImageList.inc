@@ -5,87 +5,87 @@
 // ×÷Õß£ºying32
 //----------------------------------------
 
-function GIFImageList_Create(AOwner: TComponent): TGIFImageList; cdecl;
+function GIFImageList_Create(AOwner: TComponent): TGIFImageList; stdcall;
 begin
   Result :=  TGIFImageList.Create(AOwner);
 end;
 
-procedure GIFImageList_Free(AObj: TGIFImageList); cdecl;
+procedure GIFImageList_Free(AObj: TGIFImageList); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure GIFImageList_LoadFromStream(AObj: TGIFImageList; Stream: TStream); cdecl;
+procedure GIFImageList_LoadFromStream(AObj: TGIFImageList; Stream: TStream); stdcall;
 begin
   AObj.LoadFromStream(Stream);
 end;
 
-procedure GIFImageList_SaveToStream(AObj: TGIFImageList; Stream: TStream); cdecl;
+procedure GIFImageList_SaveToStream(AObj: TGIFImageList; Stream: TStream); stdcall;
 begin
   AObj.SaveToStream(Stream);
 end;
 
-function GIFImageList_Add(AObj: TGIFImageList; Item: TGIFItem): Integer; cdecl;
+function GIFImageList_Add(AObj: TGIFImageList; Item: TGIFItem): Integer; stdcall;
 begin
   Result :=  AObj.Add(Item);
 end;
 
-procedure GIFImageList_Clear(AObj: TGIFImageList); cdecl;
+procedure GIFImageList_Clear(AObj: TGIFImageList); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure GIFImageList_Delete(AObj: TGIFImageList; Index: Integer); cdecl;
+procedure GIFImageList_Delete(AObj: TGIFImageList; Index: Integer); stdcall;
 begin
   AObj.Delete(Index);
 end;
 
-function GIFImageList_IndexOf(AObj: TGIFImageList; Item: TGIFItem): Integer; cdecl;
+function GIFImageList_IndexOf(AObj: TGIFImageList; Item: TGIFItem): Integer; stdcall;
 begin
   Result :=  AObj.IndexOf(Item);
 end;
 
-procedure GIFImageList_Insert(AObj: TGIFImageList; Index: Integer; Item: TGIFItem); cdecl;
+procedure GIFImageList_Insert(AObj: TGIFImageList; Index: Integer; Item: TGIFItem); stdcall;
 begin
   AObj.Insert(Index, Item);
 end;
 
-procedure GIFImageList_Move(AObj: TGIFImageList; CurIndex: Integer; NewIndex: Integer); cdecl;
+procedure GIFImageList_Move(AObj: TGIFImageList; CurIndex: Integer; NewIndex: Integer); stdcall;
 begin
   AObj.Move(CurIndex, NewIndex);
 end;
 
-procedure GIFImageList_Assign(AObj: TGIFImageList; Source: TPersistent); cdecl;
+procedure GIFImageList_Assign(AObj: TGIFImageList; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function GIFImageList_GetNamePath(AObj: TGIFImageList): PChar; cdecl;
+function GIFImageList_GetNamePath(AObj: TGIFImageList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function GIFImageList_ClassName(AObj: TGIFImageList): PChar; cdecl;
+function GIFImageList_ClassName(AObj: TGIFImageList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function GIFImageList_Equals(AObj: TGIFImageList; Obj: TObject): Boolean; cdecl;
+function GIFImageList_Equals(AObj: TGIFImageList; Obj: TObject): Boolean; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function GIFImageList_GetHashCode(AObj: TGIFImageList): Integer; cdecl;
+function GIFImageList_GetHashCode(AObj: TGIFImageList): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function GIFImageList_ToString(AObj: TGIFImageList): PChar; cdecl;
+function GIFImageList_ToString(AObj: TGIFImageList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function GIFImageList_GetList(AObj: TGIFImageList): TList; cdecl;
+function GIFImageList_GetList(AObj: TGIFImageList): TList; stdcall;
 begin
   Result :=  AObj.List;
 end;

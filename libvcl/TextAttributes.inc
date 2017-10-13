@@ -1,141 +1,141 @@
-procedure TextAttributes_Assign(AObj: TTextAttributes; Source: TPersistent); cdecl;
+procedure TextAttributes_Assign(AObj: TTextAttributes; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function TextAttributes_GetNamePath(AObj: TTextAttributes): PChar; cdecl;
+function TextAttributes_GetNamePath(AObj: TTextAttributes): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function TextAttributes_ClassName(AObj: TTextAttributes): PChar; cdecl;
+function TextAttributes_ClassName(AObj: TTextAttributes): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function TextAttributes_Equals(AObj: TTextAttributes; Obj: TObject): LongBool; cdecl;
+function TextAttributes_Equals(AObj: TTextAttributes; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function TextAttributes_GetHashCode(AObj: TTextAttributes): Integer; cdecl;
+function TextAttributes_GetHashCode(AObj: TTextAttributes): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function TextAttributes_ToString(AObj: TTextAttributes): PChar; cdecl;
+function TextAttributes_ToString(AObj: TTextAttributes): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function TextAttributes_GetCharset(AObj: TTextAttributes): TFontCharset; cdecl;
+function TextAttributes_GetCharset(AObj: TTextAttributes): TFontCharset; stdcall;
 begin
   Result :=  AObj.Charset;
 end;
 
-procedure TextAttributes_SetCharset(AObj: TTextAttributes; AValue: TFontCharset); cdecl;
+procedure TextAttributes_SetCharset(AObj: TTextAttributes; AValue: TFontCharset); stdcall;
 begin
   AObj.Charset := AValue;
 end;
 
-function TextAttributes_GetColor(AObj: TTextAttributes): TColor; cdecl;
+function TextAttributes_GetColor(AObj: TTextAttributes): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure TextAttributes_SetColor(AObj: TTextAttributes; AValue: TColor); cdecl;
+procedure TextAttributes_SetColor(AObj: TTextAttributes; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function TextAttributes_GetConsistentAttributes(AObj: TTextAttributes): TConsistentAttributes; cdecl;
+function TextAttributes_GetConsistentAttributes(AObj: TTextAttributes): TConsistentAttributes; stdcall;
 begin
   Result :=  AObj.ConsistentAttributes;
 end;
 
-function TextAttributes_GetName(AObj: TTextAttributes): PChar; cdecl;
+function TextAttributes_GetName(AObj: TTextAttributes): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure TextAttributes_SetName(AObj: TTextAttributes; AValue: PChar); cdecl;
+procedure TextAttributes_SetName(AObj: TTextAttributes; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function TextAttributes_GetPitch(AObj: TTextAttributes): TFontPitch; cdecl;
+function TextAttributes_GetPitch(AObj: TTextAttributes): TFontPitch; stdcall;
 begin
   Result :=  AObj.Pitch;
 end;
 
-procedure TextAttributes_SetPitch(AObj: TTextAttributes; AValue: TFontPitch); cdecl;
+procedure TextAttributes_SetPitch(AObj: TTextAttributes; AValue: TFontPitch); stdcall;
 begin
   AObj.Pitch := AValue;
 end;
 
-function TextAttributes_GetProtected(AObj: TTextAttributes): LongBool; cdecl;
+function TextAttributes_GetProtected(AObj: TTextAttributes): LongBool; stdcall;
 begin
   Result :=  AObj.Protected;
 end;
 
-procedure TextAttributes_SetProtected(AObj: TTextAttributes; AValue: LongBool); cdecl;
+procedure TextAttributes_SetProtected(AObj: TTextAttributes; AValue: LongBool); stdcall;
 begin
   AObj.Protected := AValue;
 end;
 
-function TextAttributes_GetSize(AObj: TTextAttributes): Integer; cdecl;
+function TextAttributes_GetSize(AObj: TTextAttributes): Integer; stdcall;
 begin
   Result :=  AObj.Size;
 end;
 
-procedure TextAttributes_SetSize(AObj: TTextAttributes; AValue: Integer); cdecl;
+procedure TextAttributes_SetSize(AObj: TTextAttributes; AValue: Integer); stdcall;
 begin
   AObj.Size := AValue;
 end;
 
-function TextAttributes_GetStyle(AObj: TTextAttributes): TFontStyles; cdecl;
+function TextAttributes_GetStyle(AObj: TTextAttributes): TFontStyles; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure TextAttributes_SetStyle(AObj: TTextAttributes; AValue: TFontStyles); cdecl;
+procedure TextAttributes_SetStyle(AObj: TTextAttributes; AValue: TFontStyles); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function TextAttributes_GetHeight(AObj: TTextAttributes): Integer; cdecl;
+function TextAttributes_GetHeight(AObj: TTextAttributes): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure TextAttributes_SetHeight(AObj: TTextAttributes; AValue: Integer); cdecl;
+procedure TextAttributes_SetHeight(AObj: TTextAttributes; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
 
 exports
-  TextAttributes_Assign {$IFNDEF MSWINDOWS}name '_TextAttributes_Assign'{$ENDIF},
-  TextAttributes_GetNamePath {$IFNDEF MSWINDOWS}name '_TextAttributes_GetNamePath'{$ENDIF},
-  TextAttributes_ClassName {$IFNDEF MSWINDOWS}name '_TextAttributes_ClassName'{$ENDIF},
-  TextAttributes_Equals {$IFNDEF MSWINDOWS}name '_TextAttributes_Equals'{$ENDIF},
-  TextAttributes_GetHashCode {$IFNDEF MSWINDOWS}name '_TextAttributes_GetHashCode'{$ENDIF},
-  TextAttributes_ToString {$IFNDEF MSWINDOWS}name '_TextAttributes_ToString'{$ENDIF},
-  TextAttributes_GetCharset {$IFNDEF MSWINDOWS}name '_TextAttributes_GetCharset'{$ENDIF},
-  TextAttributes_SetCharset {$IFNDEF MSWINDOWS}name '_TextAttributes_SetCharset'{$ENDIF},
-  TextAttributes_GetColor {$IFNDEF MSWINDOWS}name '_TextAttributes_GetColor'{$ENDIF},
-  TextAttributes_SetColor {$IFNDEF MSWINDOWS}name '_TextAttributes_SetColor'{$ENDIF},
-  TextAttributes_GetConsistentAttributes {$IFNDEF MSWINDOWS}name '_TextAttributes_GetConsistentAttributes'{$ENDIF},
-  TextAttributes_GetName {$IFNDEF MSWINDOWS}name '_TextAttributes_GetName'{$ENDIF},
-  TextAttributes_SetName {$IFNDEF MSWINDOWS}name '_TextAttributes_SetName'{$ENDIF},
-  TextAttributes_GetPitch {$IFNDEF MSWINDOWS}name '_TextAttributes_GetPitch'{$ENDIF},
-  TextAttributes_SetPitch {$IFNDEF MSWINDOWS}name '_TextAttributes_SetPitch'{$ENDIF},
-  TextAttributes_GetProtected {$IFNDEF MSWINDOWS}name '_TextAttributes_GetProtected'{$ENDIF},
-  TextAttributes_SetProtected {$IFNDEF MSWINDOWS}name '_TextAttributes_SetProtected'{$ENDIF},
-  TextAttributes_GetSize {$IFNDEF MSWINDOWS}name '_TextAttributes_GetSize'{$ENDIF},
-  TextAttributes_SetSize {$IFNDEF MSWINDOWS}name '_TextAttributes_SetSize'{$ENDIF},
-  TextAttributes_GetStyle {$IFNDEF MSWINDOWS}name '_TextAttributes_GetStyle'{$ENDIF},
-  TextAttributes_SetStyle {$IFNDEF MSWINDOWS}name '_TextAttributes_SetStyle'{$ENDIF},
-  TextAttributes_GetHeight {$IFNDEF MSWINDOWS}name '_TextAttributes_GetHeight'{$ENDIF},
-  TextAttributes_SetHeight {$IFNDEF MSWINDOWS}name '_TextAttributes_SetHeight'{$ENDIF};
+  TextAttributes_Assign,
+  TextAttributes_GetNamePath,
+  TextAttributes_ClassName,
+  TextAttributes_Equals,
+  TextAttributes_GetHashCode,
+  TextAttributes_ToString,
+  TextAttributes_GetCharset,
+  TextAttributes_SetCharset,
+  TextAttributes_GetColor,
+  TextAttributes_SetColor,
+  TextAttributes_GetConsistentAttributes,
+  TextAttributes_GetName,
+  TextAttributes_SetName,
+  TextAttributes_GetPitch,
+  TextAttributes_SetPitch,
+  TextAttributes_GetProtected,
+  TextAttributes_SetProtected,
+  TextAttributes_GetSize,
+  TextAttributes_SetSize,
+  TextAttributes_GetStyle,
+  TextAttributes_SetStyle,
+  TextAttributes_GetHeight,
+  TextAttributes_SetHeight;
 

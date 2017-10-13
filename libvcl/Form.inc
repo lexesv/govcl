@@ -5,497 +5,497 @@
 //
 //----------------------------------------
 
-function Form_Create(AOwner: TComponent): TGoForm; cdecl;
+function Form_Create(AOwner: TComponent): TGoForm; stdcall;
 begin
   Result :=  TGoForm.Create(AOwner);
 end;
 
-procedure Form_Free(AObj: TGoForm); cdecl;
+procedure Form_Free(AObj: TGoForm); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Form_Close(AObj: TGoForm); cdecl;
+procedure Form_Close(AObj: TGoForm); stdcall;
 begin
   AObj.Close;
 end;
 
-procedure Form_Hide(AObj: TGoForm); cdecl;
+procedure Form_Hide(AObj: TGoForm); stdcall;
 begin
   AObj.Hide;
 end;
 
-procedure Form_Print(AObj: TGoForm); cdecl;
+procedure Form_Print(AObj: TGoForm); stdcall;
 begin
   AObj.Print;
 end;
 
-procedure Form_SetFocus(AObj: TGoForm); cdecl;
+procedure Form_SetFocus(AObj: TGoForm); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure Form_Show(AObj: TGoForm); cdecl;
+procedure Form_Show(AObj: TGoForm); stdcall;
 begin
   AObj.Show;
 end;
 
-function Form_ShowModal(AObj: TGoForm): Integer; cdecl;
+function Form_ShowModal(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ShowModal;
 end;
 
-function Form_CanFocus(AObj: TGoForm): LongBool; cdecl;
+function Form_CanFocus(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure Form_FlipChildren(AObj: TGoForm; AllLevels: LongBool); cdecl;
+procedure Form_FlipChildren(AObj: TGoForm; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function Form_Focused(AObj: TGoForm): LongBool; cdecl;
+function Form_Focused(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function Form_HandleAllocated(AObj: TGoForm): LongBool; cdecl;
+function Form_HandleAllocated(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure Form_Invalidate(AObj: TGoForm); cdecl;
+procedure Form_Invalidate(AObj: TGoForm); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure Form_Realign(AObj: TGoForm); cdecl;
+procedure Form_Realign(AObj: TGoForm); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure Form_Repaint(AObj: TGoForm); cdecl;
+procedure Form_Repaint(AObj: TGoForm); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure Form_ScaleBy(AObj: TGoForm; M: Integer; D: Integer); cdecl;
+procedure Form_ScaleBy(AObj: TGoForm; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure Form_SetBounds(AObj: TGoForm; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Form_SetBounds(AObj: TGoForm; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure Form_Update(AObj: TGoForm); cdecl;
+procedure Form_Update(AObj: TGoForm); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure Form_BringToFront(AObj: TGoForm); cdecl;
+procedure Form_BringToFront(AObj: TGoForm); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function Form_HasParent(AObj: TGoForm): LongBool; cdecl;
+function Form_HasParent(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-function Form_Perform(AObj: TGoForm; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function Form_Perform(AObj: TGoForm; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure Form_Refresh(AObj: TGoForm); cdecl;
+procedure Form_Refresh(AObj: TGoForm); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure Form_SendToBack(AObj: TGoForm); cdecl;
+procedure Form_SendToBack(AObj: TGoForm); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-function Form_GetTextBuf(AObj: TGoForm; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function Form_GetTextBuf(AObj: TGoForm; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function Form_FindComponent(AObj: TGoForm; AName: PChar): TComponent; cdecl;
+function Form_FindComponent(AObj: TGoForm; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Form_GetNamePath(AObj: TGoForm): PChar; cdecl;
+function Form_GetNamePath(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure Form_Assign(AObj: TGoForm; Source: TPersistent); cdecl;
+procedure Form_Assign(AObj: TGoForm; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Form_ClassName(AObj: TGoForm): PChar; cdecl;
+function Form_ClassName(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Form_Equals(AObj: TGoForm; Obj: TObject): LongBool; cdecl;
+function Form_Equals(AObj: TGoForm; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Form_GetHashCode(AObj: TGoForm): Integer; cdecl;
+function Form_GetHashCode(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Form_ToString(AObj: TGoForm): PChar; cdecl;
+function Form_ToString(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Form_GetAction(AObj: TGoForm): TBasicAction; cdecl;
+function Form_GetAction(AObj: TGoForm): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure Form_SetAction(AObj: TGoForm; AValue: TBasicAction); cdecl;
+procedure Form_SetAction(AObj: TGoForm; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function Form_GetAlign(AObj: TGoForm): TAlign; cdecl;
+function Form_GetAlign(AObj: TGoForm): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure Form_SetAlign(AObj: TGoForm; AValue: TAlign); cdecl;
+procedure Form_SetAlign(AObj: TGoForm; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function Form_GetAlphaBlend(AObj: TGoForm): LongBool; cdecl;
+function Form_GetAlphaBlend(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.AlphaBlend;
 end;
 
-procedure Form_SetAlphaBlend(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetAlphaBlend(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.AlphaBlend := AValue;
 end;
 
-function Form_GetAlphaBlendValue(AObj: TGoForm): Byte; cdecl;
+function Form_GetAlphaBlendValue(AObj: TGoForm): Byte; stdcall;
 begin
   Result :=  AObj.AlphaBlendValue;
 end;
 
-procedure Form_SetAlphaBlendValue(AObj: TGoForm; AValue: Byte); cdecl;
+procedure Form_SetAlphaBlendValue(AObj: TGoForm; AValue: Byte); stdcall;
 begin
   AObj.AlphaBlendValue := AValue;
 end;
 
-function Form_GetAnchors(AObj: TGoForm): TAnchors; cdecl;
+function Form_GetAnchors(AObj: TGoForm): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure Form_SetAnchors(AObj: TGoForm; AValue: TAnchors); cdecl;
+procedure Form_SetAnchors(AObj: TGoForm; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function Form_GetAutoSize(AObj: TGoForm): LongBool; cdecl;
+function Form_GetAutoSize(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.AutoSize;
 end;
 
-procedure Form_SetAutoSize(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetAutoSize(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.AutoSize := AValue;
 end;
 
-function Form_GetBiDiMode(AObj: TGoForm): TBiDiMode; cdecl;
+function Form_GetBiDiMode(AObj: TGoForm): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure Form_SetBiDiMode(AObj: TGoForm; AValue: TBiDiMode); cdecl;
+procedure Form_SetBiDiMode(AObj: TGoForm; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function Form_GetBorderIcons(AObj: TGoForm): TBorderIcons; cdecl;
+function Form_GetBorderIcons(AObj: TGoForm): TBorderIcons; stdcall;
 begin
   Result :=  AObj.BorderIcons;
 end;
 
-procedure Form_SetBorderIcons(AObj: TGoForm; AValue: TBorderIcons); cdecl;
+procedure Form_SetBorderIcons(AObj: TGoForm; AValue: TBorderIcons); stdcall;
 begin
   AObj.BorderIcons := AValue;
 end;
 
-function Form_GetBorderStyle(AObj: TGoForm): TFormBorderStyle; cdecl;
+function Form_GetBorderStyle(AObj: TGoForm): TFormBorderStyle; stdcall;
 begin
   Result :=  AObj.BorderStyle;
 end;
 
-procedure Form_SetBorderStyle(AObj: TGoForm; AValue: TFormBorderStyle); cdecl;
+procedure Form_SetBorderStyle(AObj: TGoForm; AValue: TFormBorderStyle); stdcall;
 begin
   AObj.BorderStyle := AValue;
 end;
 
-function Form_GetBorderWidth(AObj: TGoForm): TBorderWidth; cdecl;
+function Form_GetBorderWidth(AObj: TGoForm): TBorderWidth; stdcall;
 begin
   Result :=  AObj.BorderWidth;
 end;
 
-procedure Form_SetBorderWidth(AObj: TGoForm; AValue: TBorderWidth); cdecl;
+procedure Form_SetBorderWidth(AObj: TGoForm; AValue: TBorderWidth); stdcall;
 begin
   AObj.BorderWidth := AValue;
 end;
 
-function Form_GetCaption(AObj: TGoForm): PChar; cdecl;
+function Form_GetCaption(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure Form_SetCaption(AObj: TGoForm; AValue: PChar); cdecl;
+procedure Form_SetCaption(AObj: TGoForm; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function Form_GetClientHeight(AObj: TGoForm): Integer; cdecl;
+function Form_GetClientHeight(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure Form_SetClientHeight(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetClientHeight(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-function Form_GetClientWidth(AObj: TGoForm): Integer; cdecl;
+function Form_GetClientWidth(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure Form_SetClientWidth(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetClientWidth(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function Form_GetColor(AObj: TGoForm): TColor; cdecl;
+function Form_GetColor(AObj: TGoForm): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure Form_SetColor(AObj: TGoForm; AValue: TColor); cdecl;
+procedure Form_SetColor(AObj: TGoForm; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function Form_GetTransparentColor(AObj: TGoForm): LongBool; cdecl;
+function Form_GetTransparentColor(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.TransparentColor;
 end;
 
-procedure Form_SetTransparentColor(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetTransparentColor(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.TransparentColor := AValue;
 end;
 
-function Form_GetTransparentColorValue(AObj: TGoForm): TColor; cdecl;
+function Form_GetTransparentColorValue(AObj: TGoForm): TColor; stdcall;
 begin
   Result :=  AObj.TransparentColorValue;
 end;
 
-procedure Form_SetTransparentColorValue(AObj: TGoForm; AValue: TColor); cdecl;
+procedure Form_SetTransparentColorValue(AObj: TGoForm; AValue: TColor); stdcall;
 begin
   AObj.TransparentColorValue := AValue;
 end;
 
-function Form_GetDoubleBuffered(AObj: TGoForm): LongBool; cdecl;
+function Form_GetDoubleBuffered(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure Form_SetDoubleBuffered(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetDoubleBuffered(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function Form_GetEnabled(AObj: TGoForm): LongBool; cdecl;
+function Form_GetEnabled(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure Form_SetEnabled(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetEnabled(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function Form_GetParentFont(AObj: TGoForm): LongBool; cdecl;
+function Form_GetParentFont(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure Form_SetParentFont(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetParentFont(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function Form_GetFont(AObj: TGoForm): TFont; cdecl;
+function Form_GetFont(AObj: TGoForm): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure Form_SetFont(AObj: TGoForm; AValue: TFont); cdecl;
+procedure Form_SetFont(AObj: TGoForm; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function Form_GetFormStyle(AObj: TGoForm): TFormStyle; cdecl;
+function Form_GetFormStyle(AObj: TGoForm): TFormStyle; stdcall;
 begin
   Result :=  AObj.FormStyle;
 end;
 
-procedure Form_SetFormStyle(AObj: TGoForm; AValue: TFormStyle); cdecl;
+procedure Form_SetFormStyle(AObj: TGoForm; AValue: TFormStyle); stdcall;
 begin
   AObj.FormStyle := AValue;
 end;
 
-function Form_GetHeight(AObj: TGoForm): Integer; cdecl;
+function Form_GetHeight(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Form_SetHeight(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetHeight(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Form_GetIcon(AObj: TGoForm): TIcon; cdecl;
+function Form_GetIcon(AObj: TGoForm): TIcon; stdcall;
 begin
   Result :=  AObj.Icon;
 end;
 
-procedure Form_SetIcon(AObj: TGoForm; AValue: TIcon); cdecl;
+procedure Form_SetIcon(AObj: TGoForm; AValue: TIcon); stdcall;
 begin
   AObj.Icon := AValue;
 end;
 
-function Form_GetKeyPreview(AObj: TGoForm): LongBool; cdecl;
+function Form_GetKeyPreview(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.KeyPreview;
 end;
 
-procedure Form_SetKeyPreview(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetKeyPreview(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.KeyPreview := AValue;
 end;
 
-function Form_GetMenu(AObj: TGoForm): TMainMenu; cdecl;
+function Form_GetMenu(AObj: TGoForm): TMainMenu; stdcall;
 begin
   Result :=  AObj.Menu;
 end;
 
-procedure Form_SetMenu(AObj: TGoForm; AValue: TMainMenu); cdecl;
+procedure Form_SetMenu(AObj: TGoForm; AValue: TMainMenu); stdcall;
 begin
   AObj.Menu := AValue;
 end;
 
-function Form_GetPixelsPerInch(AObj: TGoForm): Integer; cdecl;
+function Form_GetPixelsPerInch(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.PixelsPerInch;
 end;
 
-procedure Form_SetPixelsPerInch(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetPixelsPerInch(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.PixelsPerInch := AValue;
 end;
 
-function Form_GetPopupMenu(AObj: TGoForm): TPopupMenu; cdecl;
+function Form_GetPopupMenu(AObj: TGoForm): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure Form_SetPopupMenu(AObj: TGoForm; AValue: TPopupMenu); cdecl;
+procedure Form_SetPopupMenu(AObj: TGoForm; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function Form_GetPosition(AObj: TGoForm): TPosition; cdecl;
+function Form_GetPosition(AObj: TGoForm): TPosition; stdcall;
 begin
   Result :=  AObj.Position;
 end;
 
-procedure Form_SetPosition(AObj: TGoForm; AValue: TPosition); cdecl;
+procedure Form_SetPosition(AObj: TGoForm; AValue: TPosition); stdcall;
 begin
   AObj.Position := AValue;
 end;
 
-function Form_GetScaled(AObj: TGoForm): LongBool; cdecl;
+function Form_GetScaled(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.Scaled;
 end;
 
-procedure Form_SetScaled(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetScaled(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.Scaled := AValue;
 end;
 
-function Form_GetShowHint(AObj: TGoForm): LongBool; cdecl;
+function Form_GetShowHint(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure Form_SetShowHint(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetShowHint(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function Form_GetVisible(AObj: TGoForm): LongBool; cdecl;
+function Form_GetVisible(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure Form_SetVisible(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetVisible(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function Form_GetWidth(AObj: TGoForm): Integer; cdecl;
+function Form_GetWidth(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Form_SetWidth(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetWidth(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function Form_GetWindowState(AObj: TGoForm): TWindowState; cdecl;
+function Form_GetWindowState(AObj: TGoForm): TWindowState; stdcall;
 begin
   Result :=  AObj.WindowState;
 end;
 
-procedure Form_SetWindowState(AObj: TGoForm; AValue: TWindowState); cdecl;
+procedure Form_SetWindowState(AObj: TGoForm; AValue: TWindowState); stdcall;
 begin
   AObj.WindowState := AValue;
 end;
 
-function Form_GetStyleElements(AObj: TGoForm): TStyleElements; cdecl;
+function Form_GetStyleElements(AObj: TGoForm): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure Form_SetStyleElements(AObj: TGoForm; AValue: TStyleElements); cdecl;
+procedure Form_SetStyleElements(AObj: TGoForm; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
@@ -704,237 +704,237 @@ begin
   TEventClass.Add(AObj, geShow, AEventId);
 end;
 
-function Form_GetCanvas(AObj: TGoForm): TCanvas; cdecl;
+function Form_GetCanvas(AObj: TGoForm): TCanvas; stdcall;
 begin
   Result :=  AObj.Canvas;
 end;
 
-function Form_GetDropTarget(AObj: TGoForm): LongBool; cdecl;
+function Form_GetDropTarget(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.DropTarget;
 end;
 
-procedure Form_SetDropTarget(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetDropTarget(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.DropTarget := AValue;
 end;
 
-function Form_GetModalResult(AObj: TGoForm): TModalResult; cdecl;
+function Form_GetModalResult(AObj: TGoForm): TModalResult; stdcall;
 begin
   Result :=  AObj.ModalResult;
 end;
 
-procedure Form_SetModalResult(AObj: TGoForm; AValue: TModalResult); cdecl;
+procedure Form_SetModalResult(AObj: TGoForm; AValue: TModalResult); stdcall;
 begin
   AObj.ModalResult := AValue;
 end;
 
-function Form_GetLeft(AObj: TGoForm): Integer; cdecl;
+function Form_GetLeft(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure Form_SetLeft(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetLeft(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function Form_GetTop(AObj: TGoForm): Integer; cdecl;
+function Form_GetTop(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure Form_SetTop(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetTop(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function Form_GetBrush(AObj: TGoForm): TBrush; cdecl;
+function Form_GetBrush(AObj: TGoForm): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function Form_GetControlCount(AObj: TGoForm): Integer; cdecl;
+function Form_GetControlCount(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function Form_GetHandle(AObj: TGoForm): HWND; cdecl;
+function Form_GetHandle(AObj: TGoForm): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function Form_GetParentDoubleBuffered(AObj: TGoForm): LongBool; cdecl;
+function Form_GetParentDoubleBuffered(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure Form_SetParentDoubleBuffered(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetParentDoubleBuffered(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function Form_GetParentWindow(AObj: TGoForm): HWND; cdecl;
+function Form_GetParentWindow(AObj: TGoForm): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure Form_SetParentWindow(AObj: TGoForm; AValue: HWND); cdecl;
+procedure Form_SetParentWindow(AObj: TGoForm; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-function Form_GetTabOrder(AObj: TGoForm): TTabOrder; cdecl;
+function Form_GetTabOrder(AObj: TGoForm): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure Form_SetTabOrder(AObj: TGoForm; AValue: TTabOrder); cdecl;
+procedure Form_SetTabOrder(AObj: TGoForm; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function Form_GetTabStop(AObj: TGoForm): LongBool; cdecl;
+function Form_GetTabStop(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure Form_SetTabStop(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetTabStop(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-procedure Form_GetBoundsRect(AObj: TGoForm; var Result: TRect); cdecl;
+procedure Form_GetBoundsRect(AObj: TGoForm; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure Form_SetBoundsRect(AObj: TGoForm; var AValue: TRect); cdecl;
+procedure Form_SetBoundsRect(AObj: TGoForm; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-procedure Form_GetClientRect(AObj: TGoForm; var Result: TRect); cdecl;
+procedure Form_GetClientRect(AObj: TGoForm; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function Form_GetExplicitLeft(AObj: TGoForm): Integer; cdecl;
+function Form_GetExplicitLeft(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function Form_GetExplicitTop(AObj: TGoForm): Integer; cdecl;
+function Form_GetExplicitTop(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function Form_GetExplicitWidth(AObj: TGoForm): Integer; cdecl;
+function Form_GetExplicitWidth(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function Form_GetExplicitHeight(AObj: TGoForm): Integer; cdecl;
+function Form_GetExplicitHeight(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function Form_GetParent(AObj: TGoForm): TWinControl; cdecl;
+function Form_GetParent(AObj: TGoForm): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure Form_SetParent(AObj: TGoForm; AValue: TWinControl); cdecl;
+procedure Form_SetParent(AObj: TGoForm; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function Form_GetAlignWithMargins(AObj: TGoForm): LongBool; cdecl;
+function Form_GetAlignWithMargins(AObj: TGoForm): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure Form_SetAlignWithMargins(AObj: TGoForm; AValue: LongBool); cdecl;
+procedure Form_SetAlignWithMargins(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function Form_GetCursor(AObj: TGoForm): TCursor; cdecl;
+function Form_GetCursor(AObj: TGoForm): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Form_SetCursor(AObj: TGoForm; AValue: TCursor); cdecl;
+procedure Form_SetCursor(AObj: TGoForm; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Form_GetHint(AObj: TGoForm): PChar; cdecl;
+function Form_GetHint(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure Form_SetHint(AObj: TGoForm; AValue: PChar); cdecl;
+procedure Form_SetHint(AObj: TGoForm; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function Form_GetMargins(AObj: TGoForm): TMargins; cdecl;
+function Form_GetMargins(AObj: TGoForm): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure Form_SetMargins(AObj: TGoForm; AValue: TMargins); cdecl;
+procedure Form_SetMargins(AObj: TGoForm; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function Form_GetComponentCount(AObj: TGoForm): Integer; cdecl;
+function Form_GetComponentCount(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Form_GetComponentIndex(AObj: TGoForm): Integer; cdecl;
+function Form_GetComponentIndex(AObj: TGoForm): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Form_SetComponentIndex(AObj: TGoForm; AValue: Integer); cdecl;
+procedure Form_SetComponentIndex(AObj: TGoForm; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Form_GetOwner(AObj: TGoForm): TComponent; cdecl;
+function Form_GetOwner(AObj: TGoForm): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Form_GetName(AObj: TGoForm): PChar; cdecl;
+function Form_GetName(AObj: TGoForm): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Form_SetName(AObj: TGoForm; AValue: PChar); cdecl;
+procedure Form_SetName(AObj: TGoForm; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Form_GetTag(AObj: TGoForm): NativeInt; cdecl;
+function Form_GetTag(AObj: TGoForm): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Form_SetTag(AObj: TGoForm; AValue: NativeInt); cdecl;
+procedure Form_SetTag(AObj: TGoForm; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Form_GetControls(AObj: TGoForm; Index: Integer): TControl; cdecl;
+function Form_GetControls(AObj: TGoForm; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function Form_GetComponents(AObj: TGoForm; AIndex: Integer): TComponent; cdecl;
+function Form_GetComponents(AObj: TGoForm; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;

@@ -5,227 +5,227 @@
 //
 //----------------------------------------
 
-function PaintBox_Create(AOwner: TComponent): TPaintBox; cdecl;
+function PaintBox_Create(AOwner: TComponent): TPaintBox; stdcall;
 begin
   Result :=  TPaintBox.Create(AOwner);
 end;
 
-procedure PaintBox_Free(AObj: TPaintBox); cdecl;
+procedure PaintBox_Free(AObj: TPaintBox); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure PaintBox_BringToFront(AObj: TPaintBox); cdecl;
+procedure PaintBox_BringToFront(AObj: TPaintBox); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function PaintBox_HasParent(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_HasParent(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure PaintBox_Hide(AObj: TPaintBox); cdecl;
+procedure PaintBox_Hide(AObj: TPaintBox); stdcall;
 begin
   AObj.Hide;
 end;
 
-procedure PaintBox_Invalidate(AObj: TPaintBox); cdecl;
+procedure PaintBox_Invalidate(AObj: TPaintBox); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-function PaintBox_Perform(AObj: TPaintBox; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function PaintBox_Perform(AObj: TPaintBox; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure PaintBox_Refresh(AObj: TPaintBox); cdecl;
+procedure PaintBox_Refresh(AObj: TPaintBox); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure PaintBox_Repaint(AObj: TPaintBox); cdecl;
+procedure PaintBox_Repaint(AObj: TPaintBox); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure PaintBox_SendToBack(AObj: TPaintBox); cdecl;
+procedure PaintBox_SendToBack(AObj: TPaintBox); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure PaintBox_SetBounds(AObj: TPaintBox; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure PaintBox_SetBounds(AObj: TPaintBox; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure PaintBox_Show(AObj: TPaintBox); cdecl;
+procedure PaintBox_Show(AObj: TPaintBox); stdcall;
 begin
   AObj.Show;
 end;
 
-procedure PaintBox_Update(AObj: TPaintBox); cdecl;
+procedure PaintBox_Update(AObj: TPaintBox); stdcall;
 begin
   AObj.Update;
 end;
 
-function PaintBox_GetTextBuf(AObj: TPaintBox; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function PaintBox_GetTextBuf(AObj: TPaintBox; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function PaintBox_FindComponent(AObj: TPaintBox; AName: PChar): TComponent; cdecl;
+function PaintBox_FindComponent(AObj: TPaintBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function PaintBox_GetNamePath(AObj: TPaintBox): PChar; cdecl;
+function PaintBox_GetNamePath(AObj: TPaintBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure PaintBox_Assign(AObj: TPaintBox; Source: TPersistent); cdecl;
+procedure PaintBox_Assign(AObj: TPaintBox; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function PaintBox_ClassName(AObj: TPaintBox): PChar; cdecl;
+function PaintBox_ClassName(AObj: TPaintBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function PaintBox_Equals(AObj: TPaintBox; Obj: TObject): LongBool; cdecl;
+function PaintBox_Equals(AObj: TPaintBox; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function PaintBox_GetHashCode(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetHashCode(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function PaintBox_ToString(AObj: TPaintBox): PChar; cdecl;
+function PaintBox_ToString(AObj: TPaintBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function PaintBox_GetCanvas(AObj: TPaintBox): TCanvas; cdecl;
+function PaintBox_GetCanvas(AObj: TPaintBox): TCanvas; stdcall;
 begin
   Result :=  AObj.Canvas;
 end;
 
-function PaintBox_GetAlign(AObj: TPaintBox): TAlign; cdecl;
+function PaintBox_GetAlign(AObj: TPaintBox): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure PaintBox_SetAlign(AObj: TPaintBox; AValue: TAlign); cdecl;
+procedure PaintBox_SetAlign(AObj: TPaintBox; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function PaintBox_GetAnchors(AObj: TPaintBox): TAnchors; cdecl;
+function PaintBox_GetAnchors(AObj: TPaintBox): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure PaintBox_SetAnchors(AObj: TPaintBox; AValue: TAnchors); cdecl;
+procedure PaintBox_SetAnchors(AObj: TPaintBox; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function PaintBox_GetColor(AObj: TPaintBox): TColor; cdecl;
+function PaintBox_GetColor(AObj: TPaintBox): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure PaintBox_SetColor(AObj: TPaintBox; AValue: TColor); cdecl;
+procedure PaintBox_SetColor(AObj: TPaintBox; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function PaintBox_GetEnabled(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetEnabled(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure PaintBox_SetEnabled(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetEnabled(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function PaintBox_GetFont(AObj: TPaintBox): TFont; cdecl;
+function PaintBox_GetFont(AObj: TPaintBox): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure PaintBox_SetFont(AObj: TPaintBox; AValue: TFont); cdecl;
+procedure PaintBox_SetFont(AObj: TPaintBox; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function PaintBox_GetParentColor(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetParentColor(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentColor;
 end;
 
-procedure PaintBox_SetParentColor(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetParentColor(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentColor := AValue;
 end;
 
-function PaintBox_GetParentFont(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetParentFont(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure PaintBox_SetParentFont(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetParentFont(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function PaintBox_GetParentShowHint(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetParentShowHint(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure PaintBox_SetParentShowHint(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetParentShowHint(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function PaintBox_GetPopupMenu(AObj: TPaintBox): TPopupMenu; cdecl;
+function PaintBox_GetPopupMenu(AObj: TPaintBox): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure PaintBox_SetPopupMenu(AObj: TPaintBox; AValue: TPopupMenu); cdecl;
+procedure PaintBox_SetPopupMenu(AObj: TPaintBox; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function PaintBox_GetShowHint(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetShowHint(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure PaintBox_SetShowHint(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetShowHint(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function PaintBox_GetVisible(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetVisible(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure PaintBox_SetVisible(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetVisible(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-procedure PaintBox_SetOnClick(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnClick(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -237,7 +237,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure PaintBox_SetOnDblClick(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnDblClick(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -249,7 +249,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure PaintBox_SetOnMouseDown(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnMouseDown(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -261,7 +261,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure PaintBox_SetOnMouseEnter(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnMouseEnter(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -273,7 +273,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure PaintBox_SetOnMouseLeave(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnMouseLeave(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -285,7 +285,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure PaintBox_SetOnMouseMove(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnMouseMove(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -297,7 +297,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure PaintBox_SetOnMouseUp(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnMouseUp(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -309,7 +309,7 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-procedure PaintBox_SetOnPaint(AObj: TPaintBox; AEventId: NativeUInt); stdcall
+procedure PaintBox_SetOnPaint(AObj: TPaintBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -321,322 +321,322 @@ begin
   TEventClass.Add(AObj, gePaint, AEventId);
 end;
 
-function PaintBox_GetAction(AObj: TPaintBox): TBasicAction; cdecl;
+function PaintBox_GetAction(AObj: TPaintBox): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure PaintBox_SetAction(AObj: TPaintBox; AValue: TBasicAction); cdecl;
+procedure PaintBox_SetAction(AObj: TPaintBox; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function PaintBox_GetBiDiMode(AObj: TPaintBox): TBiDiMode; cdecl;
+function PaintBox_GetBiDiMode(AObj: TPaintBox): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure PaintBox_SetBiDiMode(AObj: TPaintBox; AValue: TBiDiMode); cdecl;
+procedure PaintBox_SetBiDiMode(AObj: TPaintBox; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-procedure PaintBox_GetBoundsRect(AObj: TPaintBox; var Result: TRect); cdecl;
+procedure PaintBox_GetBoundsRect(AObj: TPaintBox; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure PaintBox_SetBoundsRect(AObj: TPaintBox; var AValue: TRect); cdecl;
+procedure PaintBox_SetBoundsRect(AObj: TPaintBox; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function PaintBox_GetClientHeight(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetClientHeight(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure PaintBox_SetClientHeight(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetClientHeight(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure PaintBox_GetClientRect(AObj: TPaintBox; var Result: TRect); cdecl;
+procedure PaintBox_GetClientRect(AObj: TPaintBox; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function PaintBox_GetClientWidth(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetClientWidth(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure PaintBox_SetClientWidth(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetClientWidth(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function PaintBox_GetExplicitLeft(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetExplicitLeft(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function PaintBox_GetExplicitTop(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetExplicitTop(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function PaintBox_GetExplicitWidth(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetExplicitWidth(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function PaintBox_GetExplicitHeight(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetExplicitHeight(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function PaintBox_GetParent(AObj: TPaintBox): TWinControl; cdecl;
+function PaintBox_GetParent(AObj: TPaintBox): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure PaintBox_SetParent(AObj: TPaintBox; AValue: TWinControl); cdecl;
+procedure PaintBox_SetParent(AObj: TPaintBox; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function PaintBox_GetStyleElements(AObj: TPaintBox): TStyleElements; cdecl;
+function PaintBox_GetStyleElements(AObj: TPaintBox): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure PaintBox_SetStyleElements(AObj: TPaintBox; AValue: TStyleElements); cdecl;
+procedure PaintBox_SetStyleElements(AObj: TPaintBox; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-function PaintBox_GetAlignWithMargins(AObj: TPaintBox): LongBool; cdecl;
+function PaintBox_GetAlignWithMargins(AObj: TPaintBox): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure PaintBox_SetAlignWithMargins(AObj: TPaintBox; AValue: LongBool); cdecl;
+procedure PaintBox_SetAlignWithMargins(AObj: TPaintBox; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function PaintBox_GetLeft(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetLeft(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure PaintBox_SetLeft(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetLeft(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function PaintBox_GetTop(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetTop(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure PaintBox_SetTop(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetTop(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function PaintBox_GetWidth(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetWidth(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure PaintBox_SetWidth(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetWidth(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function PaintBox_GetHeight(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetHeight(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure PaintBox_SetHeight(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetHeight(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function PaintBox_GetCursor(AObj: TPaintBox): TCursor; cdecl;
+function PaintBox_GetCursor(AObj: TPaintBox): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure PaintBox_SetCursor(AObj: TPaintBox; AValue: TCursor); cdecl;
+procedure PaintBox_SetCursor(AObj: TPaintBox; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function PaintBox_GetHint(AObj: TPaintBox): PChar; cdecl;
+function PaintBox_GetHint(AObj: TPaintBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure PaintBox_SetHint(AObj: TPaintBox; AValue: PChar); cdecl;
+procedure PaintBox_SetHint(AObj: TPaintBox; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function PaintBox_GetMargins(AObj: TPaintBox): TMargins; cdecl;
+function PaintBox_GetMargins(AObj: TPaintBox): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure PaintBox_SetMargins(AObj: TPaintBox; AValue: TMargins); cdecl;
+procedure PaintBox_SetMargins(AObj: TPaintBox; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function PaintBox_GetComponentCount(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetComponentCount(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function PaintBox_GetComponentIndex(AObj: TPaintBox): Integer; cdecl;
+function PaintBox_GetComponentIndex(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure PaintBox_SetComponentIndex(AObj: TPaintBox; AValue: Integer); cdecl;
+procedure PaintBox_SetComponentIndex(AObj: TPaintBox; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function PaintBox_GetOwner(AObj: TPaintBox): TComponent; cdecl;
+function PaintBox_GetOwner(AObj: TPaintBox): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function PaintBox_GetName(AObj: TPaintBox): PChar; cdecl;
+function PaintBox_GetName(AObj: TPaintBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure PaintBox_SetName(AObj: TPaintBox; AValue: PChar); cdecl;
+procedure PaintBox_SetName(AObj: TPaintBox; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function PaintBox_GetTag(AObj: TPaintBox): NativeInt; cdecl;
+function PaintBox_GetTag(AObj: TPaintBox): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure PaintBox_SetTag(AObj: TPaintBox; AValue: NativeInt); cdecl;
+procedure PaintBox_SetTag(AObj: TPaintBox; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function PaintBox_GetComponents(AObj: TPaintBox; AIndex: Integer): TComponent; cdecl;
+function PaintBox_GetComponents(AObj: TPaintBox; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  PaintBox_Create {$IFNDEF MSWINDOWS}name '_PaintBox_Create'{$ENDIF},
-  PaintBox_Free {$IFNDEF MSWINDOWS}name '_PaintBox_Free'{$ENDIF},
-  PaintBox_BringToFront {$IFNDEF MSWINDOWS}name '_PaintBox_BringToFront'{$ENDIF},
-  PaintBox_HasParent {$IFNDEF MSWINDOWS}name '_PaintBox_HasParent'{$ENDIF},
-  PaintBox_Hide {$IFNDEF MSWINDOWS}name '_PaintBox_Hide'{$ENDIF},
-  PaintBox_Invalidate {$IFNDEF MSWINDOWS}name '_PaintBox_Invalidate'{$ENDIF},
-  PaintBox_Perform {$IFNDEF MSWINDOWS}name '_PaintBox_Perform'{$ENDIF},
-  PaintBox_Refresh {$IFNDEF MSWINDOWS}name '_PaintBox_Refresh'{$ENDIF},
-  PaintBox_Repaint {$IFNDEF MSWINDOWS}name '_PaintBox_Repaint'{$ENDIF},
-  PaintBox_SendToBack {$IFNDEF MSWINDOWS}name '_PaintBox_SendToBack'{$ENDIF},
-  PaintBox_SetBounds {$IFNDEF MSWINDOWS}name '_PaintBox_SetBounds'{$ENDIF},
-  PaintBox_Show {$IFNDEF MSWINDOWS}name '_PaintBox_Show'{$ENDIF},
-  PaintBox_Update {$IFNDEF MSWINDOWS}name '_PaintBox_Update'{$ENDIF},
-  PaintBox_GetTextBuf {$IFNDEF MSWINDOWS}name '_PaintBox_GetTextBuf'{$ENDIF},
-  PaintBox_FindComponent {$IFNDEF MSWINDOWS}name '_PaintBox_FindComponent'{$ENDIF},
-  PaintBox_GetNamePath {$IFNDEF MSWINDOWS}name '_PaintBox_GetNamePath'{$ENDIF},
-  PaintBox_Assign {$IFNDEF MSWINDOWS}name '_PaintBox_Assign'{$ENDIF},
-  PaintBox_ClassName {$IFNDEF MSWINDOWS}name '_PaintBox_ClassName'{$ENDIF},
-  PaintBox_Equals {$IFNDEF MSWINDOWS}name '_PaintBox_Equals'{$ENDIF},
-  PaintBox_GetHashCode {$IFNDEF MSWINDOWS}name '_PaintBox_GetHashCode'{$ENDIF},
-  PaintBox_ToString {$IFNDEF MSWINDOWS}name '_PaintBox_ToString'{$ENDIF},
-  PaintBox_GetCanvas {$IFNDEF MSWINDOWS}name '_PaintBox_GetCanvas'{$ENDIF},
-  PaintBox_GetAlign {$IFNDEF MSWINDOWS}name '_PaintBox_GetAlign'{$ENDIF},
-  PaintBox_SetAlign {$IFNDEF MSWINDOWS}name '_PaintBox_SetAlign'{$ENDIF},
-  PaintBox_GetAnchors {$IFNDEF MSWINDOWS}name '_PaintBox_GetAnchors'{$ENDIF},
-  PaintBox_SetAnchors {$IFNDEF MSWINDOWS}name '_PaintBox_SetAnchors'{$ENDIF},
-  PaintBox_GetColor {$IFNDEF MSWINDOWS}name '_PaintBox_GetColor'{$ENDIF},
-  PaintBox_SetColor {$IFNDEF MSWINDOWS}name '_PaintBox_SetColor'{$ENDIF},
-  PaintBox_GetEnabled {$IFNDEF MSWINDOWS}name '_PaintBox_GetEnabled'{$ENDIF},
-  PaintBox_SetEnabled {$IFNDEF MSWINDOWS}name '_PaintBox_SetEnabled'{$ENDIF},
-  PaintBox_GetFont {$IFNDEF MSWINDOWS}name '_PaintBox_GetFont'{$ENDIF},
-  PaintBox_SetFont {$IFNDEF MSWINDOWS}name '_PaintBox_SetFont'{$ENDIF},
-  PaintBox_GetParentColor {$IFNDEF MSWINDOWS}name '_PaintBox_GetParentColor'{$ENDIF},
-  PaintBox_SetParentColor {$IFNDEF MSWINDOWS}name '_PaintBox_SetParentColor'{$ENDIF},
-  PaintBox_GetParentFont {$IFNDEF MSWINDOWS}name '_PaintBox_GetParentFont'{$ENDIF},
-  PaintBox_SetParentFont {$IFNDEF MSWINDOWS}name '_PaintBox_SetParentFont'{$ENDIF},
-  PaintBox_GetParentShowHint {$IFNDEF MSWINDOWS}name '_PaintBox_GetParentShowHint'{$ENDIF},
-  PaintBox_SetParentShowHint {$IFNDEF MSWINDOWS}name '_PaintBox_SetParentShowHint'{$ENDIF},
-  PaintBox_GetPopupMenu {$IFNDEF MSWINDOWS}name '_PaintBox_GetPopupMenu'{$ENDIF},
-  PaintBox_SetPopupMenu {$IFNDEF MSWINDOWS}name '_PaintBox_SetPopupMenu'{$ENDIF},
-  PaintBox_GetShowHint {$IFNDEF MSWINDOWS}name '_PaintBox_GetShowHint'{$ENDIF},
-  PaintBox_SetShowHint {$IFNDEF MSWINDOWS}name '_PaintBox_SetShowHint'{$ENDIF},
-  PaintBox_GetVisible {$IFNDEF MSWINDOWS}name '_PaintBox_GetVisible'{$ENDIF},
-  PaintBox_SetVisible {$IFNDEF MSWINDOWS}name '_PaintBox_SetVisible'{$ENDIF},
-  PaintBox_SetOnClick {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnClick'{$ENDIF},
-  PaintBox_SetOnDblClick {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnDblClick'{$ENDIF},
-  PaintBox_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnMouseDown'{$ENDIF},
-  PaintBox_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnMouseEnter'{$ENDIF},
-  PaintBox_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnMouseLeave'{$ENDIF},
-  PaintBox_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnMouseMove'{$ENDIF},
-  PaintBox_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnMouseUp'{$ENDIF},
-  PaintBox_SetOnPaint {$IFNDEF MSWINDOWS}name '_PaintBox_SetOnPaint'{$ENDIF},
-  PaintBox_GetAction {$IFNDEF MSWINDOWS}name '_PaintBox_GetAction'{$ENDIF},
-  PaintBox_SetAction {$IFNDEF MSWINDOWS}name '_PaintBox_SetAction'{$ENDIF},
-  PaintBox_GetBiDiMode {$IFNDEF MSWINDOWS}name '_PaintBox_GetBiDiMode'{$ENDIF},
-  PaintBox_SetBiDiMode {$IFNDEF MSWINDOWS}name '_PaintBox_SetBiDiMode'{$ENDIF},
-  PaintBox_GetBoundsRect {$IFNDEF MSWINDOWS}name '_PaintBox_GetBoundsRect'{$ENDIF},
-  PaintBox_SetBoundsRect {$IFNDEF MSWINDOWS}name '_PaintBox_SetBoundsRect'{$ENDIF},
-  PaintBox_GetClientHeight {$IFNDEF MSWINDOWS}name '_PaintBox_GetClientHeight'{$ENDIF},
-  PaintBox_SetClientHeight {$IFNDEF MSWINDOWS}name '_PaintBox_SetClientHeight'{$ENDIF},
-  PaintBox_GetClientRect {$IFNDEF MSWINDOWS}name '_PaintBox_GetClientRect'{$ENDIF},
-  PaintBox_GetClientWidth {$IFNDEF MSWINDOWS}name '_PaintBox_GetClientWidth'{$ENDIF},
-  PaintBox_SetClientWidth {$IFNDEF MSWINDOWS}name '_PaintBox_SetClientWidth'{$ENDIF},
-  PaintBox_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_PaintBox_GetExplicitLeft'{$ENDIF},
-  PaintBox_GetExplicitTop {$IFNDEF MSWINDOWS}name '_PaintBox_GetExplicitTop'{$ENDIF},
-  PaintBox_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_PaintBox_GetExplicitWidth'{$ENDIF},
-  PaintBox_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_PaintBox_GetExplicitHeight'{$ENDIF},
-  PaintBox_GetParent {$IFNDEF MSWINDOWS}name '_PaintBox_GetParent'{$ENDIF},
-  PaintBox_SetParent {$IFNDEF MSWINDOWS}name '_PaintBox_SetParent'{$ENDIF},
-  PaintBox_GetStyleElements {$IFNDEF MSWINDOWS}name '_PaintBox_GetStyleElements'{$ENDIF},
-  PaintBox_SetStyleElements {$IFNDEF MSWINDOWS}name '_PaintBox_SetStyleElements'{$ENDIF},
-  PaintBox_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_PaintBox_GetAlignWithMargins'{$ENDIF},
-  PaintBox_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_PaintBox_SetAlignWithMargins'{$ENDIF},
-  PaintBox_GetLeft {$IFNDEF MSWINDOWS}name '_PaintBox_GetLeft'{$ENDIF},
-  PaintBox_SetLeft {$IFNDEF MSWINDOWS}name '_PaintBox_SetLeft'{$ENDIF},
-  PaintBox_GetTop {$IFNDEF MSWINDOWS}name '_PaintBox_GetTop'{$ENDIF},
-  PaintBox_SetTop {$IFNDEF MSWINDOWS}name '_PaintBox_SetTop'{$ENDIF},
-  PaintBox_GetWidth {$IFNDEF MSWINDOWS}name '_PaintBox_GetWidth'{$ENDIF},
-  PaintBox_SetWidth {$IFNDEF MSWINDOWS}name '_PaintBox_SetWidth'{$ENDIF},
-  PaintBox_GetHeight {$IFNDEF MSWINDOWS}name '_PaintBox_GetHeight'{$ENDIF},
-  PaintBox_SetHeight {$IFNDEF MSWINDOWS}name '_PaintBox_SetHeight'{$ENDIF},
-  PaintBox_GetCursor {$IFNDEF MSWINDOWS}name '_PaintBox_GetCursor'{$ENDIF},
-  PaintBox_SetCursor {$IFNDEF MSWINDOWS}name '_PaintBox_SetCursor'{$ENDIF},
-  PaintBox_GetHint {$IFNDEF MSWINDOWS}name '_PaintBox_GetHint'{$ENDIF},
-  PaintBox_SetHint {$IFNDEF MSWINDOWS}name '_PaintBox_SetHint'{$ENDIF},
-  PaintBox_GetMargins {$IFNDEF MSWINDOWS}name '_PaintBox_GetMargins'{$ENDIF},
-  PaintBox_SetMargins {$IFNDEF MSWINDOWS}name '_PaintBox_SetMargins'{$ENDIF},
-  PaintBox_GetComponentCount {$IFNDEF MSWINDOWS}name '_PaintBox_GetComponentCount'{$ENDIF},
-  PaintBox_GetComponentIndex {$IFNDEF MSWINDOWS}name '_PaintBox_GetComponentIndex'{$ENDIF},
-  PaintBox_SetComponentIndex {$IFNDEF MSWINDOWS}name '_PaintBox_SetComponentIndex'{$ENDIF},
-  PaintBox_GetOwner {$IFNDEF MSWINDOWS}name '_PaintBox_GetOwner'{$ENDIF},
-  PaintBox_GetName {$IFNDEF MSWINDOWS}name '_PaintBox_GetName'{$ENDIF},
-  PaintBox_SetName {$IFNDEF MSWINDOWS}name '_PaintBox_SetName'{$ENDIF},
-  PaintBox_GetTag {$IFNDEF MSWINDOWS}name '_PaintBox_GetTag'{$ENDIF},
-  PaintBox_SetTag {$IFNDEF MSWINDOWS}name '_PaintBox_SetTag'{$ENDIF},
-  PaintBox_GetComponents {$IFNDEF MSWINDOWS}name '_PaintBox_GetComponents'{$ENDIF};
+  PaintBox_Create,
+  PaintBox_Free,
+  PaintBox_BringToFront,
+  PaintBox_HasParent,
+  PaintBox_Hide,
+  PaintBox_Invalidate,
+  PaintBox_Perform,
+  PaintBox_Refresh,
+  PaintBox_Repaint,
+  PaintBox_SendToBack,
+  PaintBox_SetBounds,
+  PaintBox_Show,
+  PaintBox_Update,
+  PaintBox_GetTextBuf,
+  PaintBox_FindComponent,
+  PaintBox_GetNamePath,
+  PaintBox_Assign,
+  PaintBox_ClassName,
+  PaintBox_Equals,
+  PaintBox_GetHashCode,
+  PaintBox_ToString,
+  PaintBox_GetCanvas,
+  PaintBox_GetAlign,
+  PaintBox_SetAlign,
+  PaintBox_GetAnchors,
+  PaintBox_SetAnchors,
+  PaintBox_GetColor,
+  PaintBox_SetColor,
+  PaintBox_GetEnabled,
+  PaintBox_SetEnabled,
+  PaintBox_GetFont,
+  PaintBox_SetFont,
+  PaintBox_GetParentColor,
+  PaintBox_SetParentColor,
+  PaintBox_GetParentFont,
+  PaintBox_SetParentFont,
+  PaintBox_GetParentShowHint,
+  PaintBox_SetParentShowHint,
+  PaintBox_GetPopupMenu,
+  PaintBox_SetPopupMenu,
+  PaintBox_GetShowHint,
+  PaintBox_SetShowHint,
+  PaintBox_GetVisible,
+  PaintBox_SetVisible,
+  PaintBox_SetOnClick,
+  PaintBox_SetOnDblClick,
+  PaintBox_SetOnMouseDown,
+  PaintBox_SetOnMouseEnter,
+  PaintBox_SetOnMouseLeave,
+  PaintBox_SetOnMouseMove,
+  PaintBox_SetOnMouseUp,
+  PaintBox_SetOnPaint,
+  PaintBox_GetAction,
+  PaintBox_SetAction,
+  PaintBox_GetBiDiMode,
+  PaintBox_SetBiDiMode,
+  PaintBox_GetBoundsRect,
+  PaintBox_SetBoundsRect,
+  PaintBox_GetClientHeight,
+  PaintBox_SetClientHeight,
+  PaintBox_GetClientRect,
+  PaintBox_GetClientWidth,
+  PaintBox_SetClientWidth,
+  PaintBox_GetExplicitLeft,
+  PaintBox_GetExplicitTop,
+  PaintBox_GetExplicitWidth,
+  PaintBox_GetExplicitHeight,
+  PaintBox_GetParent,
+  PaintBox_SetParent,
+  PaintBox_GetStyleElements,
+  PaintBox_SetStyleElements,
+  PaintBox_GetAlignWithMargins,
+  PaintBox_SetAlignWithMargins,
+  PaintBox_GetLeft,
+  PaintBox_SetLeft,
+  PaintBox_GetTop,
+  PaintBox_SetTop,
+  PaintBox_GetWidth,
+  PaintBox_SetWidth,
+  PaintBox_GetHeight,
+  PaintBox_SetHeight,
+  PaintBox_GetCursor,
+  PaintBox_SetCursor,
+  PaintBox_GetHint,
+  PaintBox_SetHint,
+  PaintBox_GetMargins,
+  PaintBox_SetMargins,
+  PaintBox_GetComponentCount,
+  PaintBox_GetComponentIndex,
+  PaintBox_SetComponentIndex,
+  PaintBox_GetOwner,
+  PaintBox_GetName,
+  PaintBox_SetName,
+  PaintBox_GetTag,
+  PaintBox_SetTag,
+  PaintBox_GetComponents;
 

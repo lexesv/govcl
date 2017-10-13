@@ -5,300 +5,300 @@
 //
 //----------------------------------------
 
-function Registry_Create(AAccess: LongWord): TRegistry; cdecl;
+function Registry_Create(AAccess: LongWord): TRegistry; stdcall;
 begin
   Result :=  TRegistry.Create(AAccess);
 end;
 
-procedure Registry_Free(AObj: TRegistry); cdecl;
+procedure Registry_Free(AObj: TRegistry); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Registry_CloseKey(AObj: TRegistry); cdecl;
+procedure Registry_CloseKey(AObj: TRegistry); stdcall;
 begin
   AObj.CloseKey;
 end;
 
-function Registry_CreateKey(AObj: TRegistry; Key: PChar): LongBool; cdecl;
+function Registry_CreateKey(AObj: TRegistry; Key: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.CreateKey(Key);
 end;
 
-function Registry_DeleteKey(AObj: TRegistry; Key: PChar): LongBool; cdecl;
+function Registry_DeleteKey(AObj: TRegistry; Key: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.DeleteKey(Key);
 end;
 
-function Registry_DeleteValue(AObj: TRegistry; Name: PChar): LongBool; cdecl;
+function Registry_DeleteValue(AObj: TRegistry; Name: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.DeleteValue(Name);
 end;
 
-function Registry_HasSubKeys(AObj: TRegistry): LongBool; cdecl;
+function Registry_HasSubKeys(AObj: TRegistry): LongBool; stdcall;
 begin
   Result :=  AObj.HasSubKeys;
 end;
 
-function Registry_KeyExists(AObj: TRegistry; Key: PChar): LongBool; cdecl;
+function Registry_KeyExists(AObj: TRegistry; Key: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.KeyExists(Key);
 end;
 
-function Registry_LoadKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; cdecl;
+function Registry_LoadKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.LoadKey(Key, FileName);
 end;
 
-procedure Registry_MoveKey(AObj: TRegistry; OldName: PChar; NewName: PChar; Delete: LongBool); cdecl;
+procedure Registry_MoveKey(AObj: TRegistry; OldName: PChar; NewName: PChar; Delete: LongBool); stdcall;
 begin
   AObj.MoveKey(OldName, NewName, Delete);
 end;
 
-function Registry_OpenKey(AObj: TRegistry; Key: PChar; CanCreate: LongBool): LongBool; cdecl;
+function Registry_OpenKey(AObj: TRegistry; Key: PChar; CanCreate: LongBool): LongBool; stdcall;
 begin
   Result :=  AObj.OpenKey(Key, CanCreate);
 end;
 
-function Registry_OpenKeyReadOnly(AObj: TRegistry; Key: PChar): LongBool; cdecl;
+function Registry_OpenKeyReadOnly(AObj: TRegistry; Key: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.OpenKeyReadOnly(Key);
 end;
 
-function Registry_ReadBool(AObj: TRegistry; Name: PChar): LongBool; cdecl;
+function Registry_ReadBool(AObj: TRegistry; Name: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.ReadBool(Name);
 end;
 
-function Registry_ReadDate(AObj: TRegistry; Name: PChar): TUnixDateTime; cdecl;
+function Registry_ReadDate(AObj: TRegistry; Name: PChar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadDate(Name));
 end;
 
-function Registry_ReadDateTime(AObj: TRegistry; Name: PChar): TUnixDateTime; cdecl;
+function Registry_ReadDateTime(AObj: TRegistry; Name: PChar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadDateTime(Name));
 end;
 
-procedure Registry_ReadFloat(AObj: TRegistry; Name: PChar; var Result: Double); cdecl;
+procedure Registry_ReadFloat(AObj: TRegistry; Name: PChar; var Result: Double); stdcall;
 begin
   Result :=  AObj.ReadFloat(Name);
 end;
 
-function Registry_ReadInteger(AObj: TRegistry; Name: PChar): Integer; cdecl;
+function Registry_ReadInteger(AObj: TRegistry; Name: PChar): Integer; stdcall;
 begin
   Result :=  AObj.ReadInteger(Name);
 end;
 
-function Registry_ReadString(AObj: TRegistry; Name: PChar): PChar; cdecl;
+function Registry_ReadString(AObj: TRegistry; Name: PChar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ReadString(Name));
 end;
 
-function Registry_ReadTime(AObj: TRegistry; Name: PChar): TUnixDateTime; cdecl;
+function Registry_ReadTime(AObj: TRegistry; Name: PChar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadTime(Name));
 end;
 
-function Registry_RegistryConnect(AObj: TRegistry; UNCName: PChar): LongBool; cdecl;
+function Registry_RegistryConnect(AObj: TRegistry; UNCName: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.RegistryConnect(UNCName);
 end;
 
-procedure Registry_RenameValue(AObj: TRegistry; OldName: PChar; NewName: PChar); cdecl;
+procedure Registry_RenameValue(AObj: TRegistry; OldName: PChar; NewName: PChar); stdcall;
 begin
   AObj.RenameValue(OldName, NewName);
 end;
 
-function Registry_ReplaceKey(AObj: TRegistry; Key: PChar; FileName: PChar; BackUpFileName: PChar): LongBool; cdecl;
+function Registry_ReplaceKey(AObj: TRegistry; Key: PChar; FileName: PChar; BackUpFileName: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.ReplaceKey(Key, FileName, BackUpFileName);
 end;
 
-function Registry_RestoreKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; cdecl;
+function Registry_RestoreKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.RestoreKey(Key, FileName);
 end;
 
-function Registry_SaveKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; cdecl;
+function Registry_SaveKey(AObj: TRegistry; Key: PChar; FileName: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.SaveKey(Key, FileName);
 end;
 
-function Registry_UnLoadKey(AObj: TRegistry; Key: PChar): LongBool; cdecl;
+function Registry_UnLoadKey(AObj: TRegistry; Key: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.UnLoadKey(Key);
 end;
 
-function Registry_ValueExists(AObj: TRegistry; Name: PChar): LongBool; cdecl;
+function Registry_ValueExists(AObj: TRegistry; Name: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.ValueExists(Name);
 end;
 
-procedure Registry_WriteBool(AObj: TRegistry; Name: PChar; Value: LongBool); cdecl;
+procedure Registry_WriteBool(AObj: TRegistry; Name: PChar; Value: LongBool); stdcall;
 begin
   AObj.WriteBool(Name, Value);
 end;
 
-procedure Registry_WriteDate(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure Registry_WriteDate(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteDate(Name, UnixToTime(Value));
 end;
 
-procedure Registry_WriteDateTime(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure Registry_WriteDateTime(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteDateTime(Name, UnixToTime(Value));
 end;
 
-procedure Registry_WriteFloat(AObj: TRegistry; Name: PChar; var Value: Double); cdecl;
+procedure Registry_WriteFloat(AObj: TRegistry; Name: PChar; var Value: Double); stdcall;
 begin
   AObj.WriteFloat(Name, Value);
 end;
 
-procedure Registry_WriteInteger(AObj: TRegistry; Name: PChar; Value: Integer); cdecl;
+procedure Registry_WriteInteger(AObj: TRegistry; Name: PChar; Value: Integer); stdcall;
 begin
   AObj.WriteInteger(Name, Value);
 end;
 
-procedure Registry_WriteString(AObj: TRegistry; Name: PChar; Value: PChar); cdecl;
+procedure Registry_WriteString(AObj: TRegistry; Name: PChar; Value: PChar); stdcall;
 begin
   AObj.WriteString(Name, Value);
 end;
 
-procedure Registry_WriteExpandString(AObj: TRegistry; Name: PChar; Value: PChar); cdecl;
+procedure Registry_WriteExpandString(AObj: TRegistry; Name: PChar; Value: PChar); stdcall;
 begin
   AObj.WriteExpandString(Name, Value);
 end;
 
-procedure Registry_WriteTime(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure Registry_WriteTime(AObj: TRegistry; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteTime(Name, UnixToTime(Value));
 end;
 
-function Registry_ClassName(AObj: TRegistry): PChar; cdecl;
+function Registry_ClassName(AObj: TRegistry): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Registry_Equals(AObj: TRegistry; Obj: TObject): LongBool; cdecl;
+function Registry_Equals(AObj: TRegistry; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Registry_GetHashCode(AObj: TRegistry): Integer; cdecl;
+function Registry_GetHashCode(AObj: TRegistry): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Registry_ToString(AObj: TRegistry): PChar; cdecl;
+function Registry_ToString(AObj: TRegistry): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Registry_GetCurrentKey(AObj: TRegistry): HKEY; cdecl;
+function Registry_GetCurrentKey(AObj: TRegistry): HKEY; stdcall;
 begin
   Result :=  AObj.CurrentKey;
 end;
 
-function Registry_GetCurrentPath(AObj: TRegistry): PChar; cdecl;
+function Registry_GetCurrentPath(AObj: TRegistry): PChar; stdcall;
 begin
   Result :=  PChar(AObj.CurrentPath);
 end;
 
-function Registry_GetLazyWrite(AObj: TRegistry): LongBool; cdecl;
+function Registry_GetLazyWrite(AObj: TRegistry): LongBool; stdcall;
 begin
   Result :=  AObj.LazyWrite;
 end;
 
-procedure Registry_SetLazyWrite(AObj: TRegistry; AValue: LongBool); cdecl;
+procedure Registry_SetLazyWrite(AObj: TRegistry; AValue: LongBool); stdcall;
 begin
   AObj.LazyWrite := AValue;
 end;
 
-function Registry_GetLastError(AObj: TRegistry): Integer; cdecl;
+function Registry_GetLastError(AObj: TRegistry): Integer; stdcall;
 begin
   Result :=  AObj.LastError;
 end;
 
-function Registry_GetLastErrorMsg(AObj: TRegistry): PChar; cdecl;
+function Registry_GetLastErrorMsg(AObj: TRegistry): PChar; stdcall;
 begin
   Result :=  PChar(AObj.LastErrorMsg);
 end;
 
-function Registry_GetRootKey(AObj: TRegistry): HKEY; cdecl;
+function Registry_GetRootKey(AObj: TRegistry): HKEY; stdcall;
 begin
   Result :=  AObj.RootKey;
 end;
 
-procedure Registry_SetRootKey(AObj: TRegistry; AValue: HKEY); cdecl;
+procedure Registry_SetRootKey(AObj: TRegistry; AValue: HKEY); stdcall;
 begin
   AObj.RootKey := AValue;
 end;
 
-function Registry_GetRootKeyName(AObj: TRegistry): PChar; cdecl;
+function Registry_GetRootKeyName(AObj: TRegistry): PChar; stdcall;
 begin
   Result :=  PChar(AObj.RootKeyName);
 end;
 
-function Registry_GetAccess(AObj: TRegistry): Cardinal; cdecl;
+function Registry_GetAccess(AObj: TRegistry): Cardinal; stdcall;
 begin
   Result :=  AObj.Access;
 end;
 
-procedure Registry_SetAccess(AObj: TRegistry; AValue: Cardinal); cdecl;
+procedure Registry_SetAccess(AObj: TRegistry; AValue: Cardinal); stdcall;
 begin
   AObj.Access := AValue;
 end;
 
 
 exports
-  Registry_Create {$IFNDEF MSWINDOWS}name '_Registry_Create'{$ENDIF},
-  Registry_Free {$IFNDEF MSWINDOWS}name '_Registry_Free'{$ENDIF},
-  Registry_CloseKey {$IFNDEF MSWINDOWS}name '_Registry_CloseKey'{$ENDIF},
-  Registry_CreateKey {$IFNDEF MSWINDOWS}name '_Registry_CreateKey'{$ENDIF},
-  Registry_DeleteKey {$IFNDEF MSWINDOWS}name '_Registry_DeleteKey'{$ENDIF},
-  Registry_DeleteValue {$IFNDEF MSWINDOWS}name '_Registry_DeleteValue'{$ENDIF},
-  Registry_HasSubKeys {$IFNDEF MSWINDOWS}name '_Registry_HasSubKeys'{$ENDIF},
-  Registry_KeyExists {$IFNDEF MSWINDOWS}name '_Registry_KeyExists'{$ENDIF},
-  Registry_LoadKey {$IFNDEF MSWINDOWS}name '_Registry_LoadKey'{$ENDIF},
-  Registry_MoveKey {$IFNDEF MSWINDOWS}name '_Registry_MoveKey'{$ENDIF},
-  Registry_OpenKey {$IFNDEF MSWINDOWS}name '_Registry_OpenKey'{$ENDIF},
-  Registry_OpenKeyReadOnly {$IFNDEF MSWINDOWS}name '_Registry_OpenKeyReadOnly'{$ENDIF},
-  Registry_ReadBool {$IFNDEF MSWINDOWS}name '_Registry_ReadBool'{$ENDIF},
-  Registry_ReadDate {$IFNDEF MSWINDOWS}name '_Registry_ReadDate'{$ENDIF},
-  Registry_ReadDateTime {$IFNDEF MSWINDOWS}name '_Registry_ReadDateTime'{$ENDIF},
-  Registry_ReadFloat {$IFNDEF MSWINDOWS}name '_Registry_ReadFloat'{$ENDIF},
-  Registry_ReadInteger {$IFNDEF MSWINDOWS}name '_Registry_ReadInteger'{$ENDIF},
-  Registry_ReadString {$IFNDEF MSWINDOWS}name '_Registry_ReadString'{$ENDIF},
-  Registry_ReadTime {$IFNDEF MSWINDOWS}name '_Registry_ReadTime'{$ENDIF},
-  Registry_RegistryConnect {$IFNDEF MSWINDOWS}name '_Registry_RegistryConnect'{$ENDIF},
-  Registry_RenameValue {$IFNDEF MSWINDOWS}name '_Registry_RenameValue'{$ENDIF},
-  Registry_ReplaceKey {$IFNDEF MSWINDOWS}name '_Registry_ReplaceKey'{$ENDIF},
-  Registry_RestoreKey {$IFNDEF MSWINDOWS}name '_Registry_RestoreKey'{$ENDIF},
-  Registry_SaveKey {$IFNDEF MSWINDOWS}name '_Registry_SaveKey'{$ENDIF},
-  Registry_UnLoadKey {$IFNDEF MSWINDOWS}name '_Registry_UnLoadKey'{$ENDIF},
-  Registry_ValueExists {$IFNDEF MSWINDOWS}name '_Registry_ValueExists'{$ENDIF},
-  Registry_WriteBool {$IFNDEF MSWINDOWS}name '_Registry_WriteBool'{$ENDIF},
-  Registry_WriteDate {$IFNDEF MSWINDOWS}name '_Registry_WriteDate'{$ENDIF},
-  Registry_WriteDateTime {$IFNDEF MSWINDOWS}name '_Registry_WriteDateTime'{$ENDIF},
-  Registry_WriteFloat {$IFNDEF MSWINDOWS}name '_Registry_WriteFloat'{$ENDIF},
-  Registry_WriteInteger {$IFNDEF MSWINDOWS}name '_Registry_WriteInteger'{$ENDIF},
-  Registry_WriteString {$IFNDEF MSWINDOWS}name '_Registry_WriteString'{$ENDIF},
-  Registry_WriteExpandString {$IFNDEF MSWINDOWS}name '_Registry_WriteExpandString'{$ENDIF},
-  Registry_WriteTime {$IFNDEF MSWINDOWS}name '_Registry_WriteTime'{$ENDIF},
-  Registry_ClassName {$IFNDEF MSWINDOWS}name '_Registry_ClassName'{$ENDIF},
-  Registry_Equals {$IFNDEF MSWINDOWS}name '_Registry_Equals'{$ENDIF},
-  Registry_GetHashCode {$IFNDEF MSWINDOWS}name '_Registry_GetHashCode'{$ENDIF},
-  Registry_ToString {$IFNDEF MSWINDOWS}name '_Registry_ToString'{$ENDIF},
-  Registry_GetCurrentKey {$IFNDEF MSWINDOWS}name '_Registry_GetCurrentKey'{$ENDIF},
-  Registry_GetCurrentPath {$IFNDEF MSWINDOWS}name '_Registry_GetCurrentPath'{$ENDIF},
-  Registry_GetLazyWrite {$IFNDEF MSWINDOWS}name '_Registry_GetLazyWrite'{$ENDIF},
-  Registry_SetLazyWrite {$IFNDEF MSWINDOWS}name '_Registry_SetLazyWrite'{$ENDIF},
-  Registry_GetLastError {$IFNDEF MSWINDOWS}name '_Registry_GetLastError'{$ENDIF},
-  Registry_GetLastErrorMsg {$IFNDEF MSWINDOWS}name '_Registry_GetLastErrorMsg'{$ENDIF},
-  Registry_GetRootKey {$IFNDEF MSWINDOWS}name '_Registry_GetRootKey'{$ENDIF},
-  Registry_SetRootKey {$IFNDEF MSWINDOWS}name '_Registry_SetRootKey'{$ENDIF},
-  Registry_GetRootKeyName {$IFNDEF MSWINDOWS}name '_Registry_GetRootKeyName'{$ENDIF},
-  Registry_GetAccess {$IFNDEF MSWINDOWS}name '_Registry_GetAccess'{$ENDIF},
-  Registry_SetAccess {$IFNDEF MSWINDOWS}name '_Registry_SetAccess'{$ENDIF};
+  Registry_Create,
+  Registry_Free,
+  Registry_CloseKey,
+  Registry_CreateKey,
+  Registry_DeleteKey,
+  Registry_DeleteValue,
+  Registry_HasSubKeys,
+  Registry_KeyExists,
+  Registry_LoadKey,
+  Registry_MoveKey,
+  Registry_OpenKey,
+  Registry_OpenKeyReadOnly,
+  Registry_ReadBool,
+  Registry_ReadDate,
+  Registry_ReadDateTime,
+  Registry_ReadFloat,
+  Registry_ReadInteger,
+  Registry_ReadString,
+  Registry_ReadTime,
+  Registry_RegistryConnect,
+  Registry_RenameValue,
+  Registry_ReplaceKey,
+  Registry_RestoreKey,
+  Registry_SaveKey,
+  Registry_UnLoadKey,
+  Registry_ValueExists,
+  Registry_WriteBool,
+  Registry_WriteDate,
+  Registry_WriteDateTime,
+  Registry_WriteFloat,
+  Registry_WriteInteger,
+  Registry_WriteString,
+  Registry_WriteExpandString,
+  Registry_WriteTime,
+  Registry_ClassName,
+  Registry_Equals,
+  Registry_GetHashCode,
+  Registry_ToString,
+  Registry_GetCurrentKey,
+  Registry_GetCurrentPath,
+  Registry_GetLazyWrite,
+  Registry_SetLazyWrite,
+  Registry_GetLastError,
+  Registry_GetLastErrorMsg,
+  Registry_GetRootKey,
+  Registry_SetRootKey,
+  Registry_GetRootKeyName,
+  Registry_GetAccess,
+  Registry_SetAccess;
 

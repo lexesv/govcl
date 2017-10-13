@@ -5,456 +5,456 @@
 //
 //----------------------------------------
 
-function Control_Create(AOwner: TComponent): TControl; cdecl;
+function Control_Create(AOwner: TComponent): TControl; stdcall;
 begin
   Result :=  TControl.Create(AOwner);
 end;
 
-procedure Control_Free(AObj: TControl); cdecl;
+procedure Control_Free(AObj: TControl); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Control_BringToFront(AObj: TControl); cdecl;
+procedure Control_BringToFront(AObj: TControl); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function Control_HasParent(AObj: TControl): LongBool; cdecl;
+function Control_HasParent(AObj: TControl): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure Control_Hide(AObj: TControl); cdecl;
+procedure Control_Hide(AObj: TControl); stdcall;
 begin
   AObj.Hide;
 end;
 
-procedure Control_Invalidate(AObj: TControl); cdecl;
+procedure Control_Invalidate(AObj: TControl); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-function Control_Perform(AObj: TControl; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function Control_Perform(AObj: TControl; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure Control_Refresh(AObj: TControl); cdecl;
+procedure Control_Refresh(AObj: TControl); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure Control_Repaint(AObj: TControl); cdecl;
+procedure Control_Repaint(AObj: TControl); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure Control_SendToBack(AObj: TControl); cdecl;
+procedure Control_SendToBack(AObj: TControl); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure Control_SetBounds(AObj: TControl; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Control_SetBounds(AObj: TControl; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure Control_Show(AObj: TControl); cdecl;
+procedure Control_Show(AObj: TControl); stdcall;
 begin
   AObj.Show;
 end;
 
-procedure Control_Update(AObj: TControl); cdecl;
+procedure Control_Update(AObj: TControl); stdcall;
 begin
   AObj.Update;
 end;
 
-function Control_GetTextBuf(AObj: TControl; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function Control_GetTextBuf(AObj: TControl; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function Control_FindComponent(AObj: TControl; AName: PChar): TComponent; cdecl;
+function Control_FindComponent(AObj: TControl; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Control_GetNamePath(AObj: TControl): PChar; cdecl;
+function Control_GetNamePath(AObj: TControl): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure Control_Assign(AObj: TControl; Source: TPersistent); cdecl;
+procedure Control_Assign(AObj: TControl; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Control_ClassName(AObj: TControl): PChar; cdecl;
+function Control_ClassName(AObj: TControl): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Control_Equals(AObj: TControl; Obj: TObject): LongBool; cdecl;
+function Control_Equals(AObj: TControl; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Control_GetHashCode(AObj: TControl): Integer; cdecl;
+function Control_GetHashCode(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Control_ToString(AObj: TControl): PChar; cdecl;
+function Control_ToString(AObj: TControl): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Control_GetEnabled(AObj: TControl): LongBool; cdecl;
+function Control_GetEnabled(AObj: TControl): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure Control_SetEnabled(AObj: TControl; AValue: LongBool); cdecl;
+procedure Control_SetEnabled(AObj: TControl; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function Control_GetAction(AObj: TControl): TBasicAction; cdecl;
+function Control_GetAction(AObj: TControl): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure Control_SetAction(AObj: TControl; AValue: TBasicAction); cdecl;
+procedure Control_SetAction(AObj: TControl; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function Control_GetAlign(AObj: TControl): TAlign; cdecl;
+function Control_GetAlign(AObj: TControl): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure Control_SetAlign(AObj: TControl; AValue: TAlign); cdecl;
+procedure Control_SetAlign(AObj: TControl; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function Control_GetAnchors(AObj: TControl): TAnchors; cdecl;
+function Control_GetAnchors(AObj: TControl): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure Control_SetAnchors(AObj: TControl; AValue: TAnchors); cdecl;
+procedure Control_SetAnchors(AObj: TControl; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function Control_GetBiDiMode(AObj: TControl): TBiDiMode; cdecl;
+function Control_GetBiDiMode(AObj: TControl): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure Control_SetBiDiMode(AObj: TControl; AValue: TBiDiMode); cdecl;
+procedure Control_SetBiDiMode(AObj: TControl; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-procedure Control_GetBoundsRect(AObj: TControl; var Result: TRect); cdecl;
+procedure Control_GetBoundsRect(AObj: TControl; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure Control_SetBoundsRect(AObj: TControl; var AValue: TRect); cdecl;
+procedure Control_SetBoundsRect(AObj: TControl; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function Control_GetClientHeight(AObj: TControl): Integer; cdecl;
+function Control_GetClientHeight(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure Control_SetClientHeight(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetClientHeight(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure Control_GetClientRect(AObj: TControl; var Result: TRect); cdecl;
+procedure Control_GetClientRect(AObj: TControl; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function Control_GetClientWidth(AObj: TControl): Integer; cdecl;
+function Control_GetClientWidth(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure Control_SetClientWidth(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetClientWidth(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function Control_GetExplicitLeft(AObj: TControl): Integer; cdecl;
+function Control_GetExplicitLeft(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function Control_GetExplicitTop(AObj: TControl): Integer; cdecl;
+function Control_GetExplicitTop(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function Control_GetExplicitWidth(AObj: TControl): Integer; cdecl;
+function Control_GetExplicitWidth(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function Control_GetExplicitHeight(AObj: TControl): Integer; cdecl;
+function Control_GetExplicitHeight(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function Control_GetShowHint(AObj: TControl): LongBool; cdecl;
+function Control_GetShowHint(AObj: TControl): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure Control_SetShowHint(AObj: TControl; AValue: LongBool); cdecl;
+procedure Control_SetShowHint(AObj: TControl; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function Control_GetVisible(AObj: TControl): LongBool; cdecl;
+function Control_GetVisible(AObj: TControl): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure Control_SetVisible(AObj: TControl; AValue: LongBool); cdecl;
+procedure Control_SetVisible(AObj: TControl; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function Control_GetParent(AObj: TControl): TWinControl; cdecl;
+function Control_GetParent(AObj: TControl): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure Control_SetParent(AObj: TControl; AValue: TWinControl); cdecl;
+procedure Control_SetParent(AObj: TControl; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function Control_GetStyleElements(AObj: TControl): TStyleElements; cdecl;
+function Control_GetStyleElements(AObj: TControl): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure Control_SetStyleElements(AObj: TControl; AValue: TStyleElements); cdecl;
+procedure Control_SetStyleElements(AObj: TControl; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-function Control_GetAlignWithMargins(AObj: TControl): LongBool; cdecl;
+function Control_GetAlignWithMargins(AObj: TControl): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure Control_SetAlignWithMargins(AObj: TControl; AValue: LongBool); cdecl;
+procedure Control_SetAlignWithMargins(AObj: TControl; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function Control_GetLeft(AObj: TControl): Integer; cdecl;
+function Control_GetLeft(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure Control_SetLeft(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetLeft(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function Control_GetTop(AObj: TControl): Integer; cdecl;
+function Control_GetTop(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure Control_SetTop(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetTop(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function Control_GetWidth(AObj: TControl): Integer; cdecl;
+function Control_GetWidth(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Control_SetWidth(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetWidth(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function Control_GetHeight(AObj: TControl): Integer; cdecl;
+function Control_GetHeight(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Control_SetHeight(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetHeight(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Control_GetCursor(AObj: TControl): TCursor; cdecl;
+function Control_GetCursor(AObj: TControl): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Control_SetCursor(AObj: TControl; AValue: TCursor); cdecl;
+procedure Control_SetCursor(AObj: TControl; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Control_GetHint(AObj: TControl): PChar; cdecl;
+function Control_GetHint(AObj: TControl): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure Control_SetHint(AObj: TControl; AValue: PChar); cdecl;
+procedure Control_SetHint(AObj: TControl; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function Control_GetMargins(AObj: TControl): TMargins; cdecl;
+function Control_GetMargins(AObj: TControl): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure Control_SetMargins(AObj: TControl; AValue: TMargins); cdecl;
+procedure Control_SetMargins(AObj: TControl; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function Control_GetComponentCount(AObj: TControl): Integer; cdecl;
+function Control_GetComponentCount(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Control_GetComponentIndex(AObj: TControl): Integer; cdecl;
+function Control_GetComponentIndex(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Control_SetComponentIndex(AObj: TControl; AValue: Integer); cdecl;
+procedure Control_SetComponentIndex(AObj: TControl; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Control_GetOwner(AObj: TControl): TComponent; cdecl;
+function Control_GetOwner(AObj: TControl): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Control_GetName(AObj: TControl): PChar; cdecl;
+function Control_GetName(AObj: TControl): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Control_SetName(AObj: TControl; AValue: PChar); cdecl;
+procedure Control_SetName(AObj: TControl; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Control_GetTag(AObj: TControl): NativeInt; cdecl;
+function Control_GetTag(AObj: TControl): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Control_SetTag(AObj: TControl; AValue: NativeInt); cdecl;
+procedure Control_SetTag(AObj: TControl; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Control_GetComponents(AObj: TControl; AIndex: Integer): TComponent; cdecl;
+function Control_GetComponents(AObj: TControl; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  Control_Create {$IFNDEF MSWINDOWS}name '_Control_Create'{$ENDIF},
-  Control_Free {$IFNDEF MSWINDOWS}name '_Control_Free'{$ENDIF},
-  Control_BringToFront {$IFNDEF MSWINDOWS}name '_Control_BringToFront'{$ENDIF},
-  Control_HasParent {$IFNDEF MSWINDOWS}name '_Control_HasParent'{$ENDIF},
-  Control_Hide {$IFNDEF MSWINDOWS}name '_Control_Hide'{$ENDIF},
-  Control_Invalidate {$IFNDEF MSWINDOWS}name '_Control_Invalidate'{$ENDIF},
-  Control_Perform {$IFNDEF MSWINDOWS}name '_Control_Perform'{$ENDIF},
-  Control_Refresh {$IFNDEF MSWINDOWS}name '_Control_Refresh'{$ENDIF},
-  Control_Repaint {$IFNDEF MSWINDOWS}name '_Control_Repaint'{$ENDIF},
-  Control_SendToBack {$IFNDEF MSWINDOWS}name '_Control_SendToBack'{$ENDIF},
-  Control_SetBounds {$IFNDEF MSWINDOWS}name '_Control_SetBounds'{$ENDIF},
-  Control_Show {$IFNDEF MSWINDOWS}name '_Control_Show'{$ENDIF},
-  Control_Update {$IFNDEF MSWINDOWS}name '_Control_Update'{$ENDIF},
-  Control_GetTextBuf {$IFNDEF MSWINDOWS}name '_Control_GetTextBuf'{$ENDIF},
-  Control_FindComponent {$IFNDEF MSWINDOWS}name '_Control_FindComponent'{$ENDIF},
-  Control_GetNamePath {$IFNDEF MSWINDOWS}name '_Control_GetNamePath'{$ENDIF},
-  Control_Assign {$IFNDEF MSWINDOWS}name '_Control_Assign'{$ENDIF},
-  Control_ClassName {$IFNDEF MSWINDOWS}name '_Control_ClassName'{$ENDIF},
-  Control_Equals {$IFNDEF MSWINDOWS}name '_Control_Equals'{$ENDIF},
-  Control_GetHashCode {$IFNDEF MSWINDOWS}name '_Control_GetHashCode'{$ENDIF},
-  Control_ToString {$IFNDEF MSWINDOWS}name '_Control_ToString'{$ENDIF},
-  Control_GetEnabled {$IFNDEF MSWINDOWS}name '_Control_GetEnabled'{$ENDIF},
-  Control_SetEnabled {$IFNDEF MSWINDOWS}name '_Control_SetEnabled'{$ENDIF},
-  Control_GetAction {$IFNDEF MSWINDOWS}name '_Control_GetAction'{$ENDIF},
-  Control_SetAction {$IFNDEF MSWINDOWS}name '_Control_SetAction'{$ENDIF},
-  Control_GetAlign {$IFNDEF MSWINDOWS}name '_Control_GetAlign'{$ENDIF},
-  Control_SetAlign {$IFNDEF MSWINDOWS}name '_Control_SetAlign'{$ENDIF},
-  Control_GetAnchors {$IFNDEF MSWINDOWS}name '_Control_GetAnchors'{$ENDIF},
-  Control_SetAnchors {$IFNDEF MSWINDOWS}name '_Control_SetAnchors'{$ENDIF},
-  Control_GetBiDiMode {$IFNDEF MSWINDOWS}name '_Control_GetBiDiMode'{$ENDIF},
-  Control_SetBiDiMode {$IFNDEF MSWINDOWS}name '_Control_SetBiDiMode'{$ENDIF},
-  Control_GetBoundsRect {$IFNDEF MSWINDOWS}name '_Control_GetBoundsRect'{$ENDIF},
-  Control_SetBoundsRect {$IFNDEF MSWINDOWS}name '_Control_SetBoundsRect'{$ENDIF},
-  Control_GetClientHeight {$IFNDEF MSWINDOWS}name '_Control_GetClientHeight'{$ENDIF},
-  Control_SetClientHeight {$IFNDEF MSWINDOWS}name '_Control_SetClientHeight'{$ENDIF},
-  Control_GetClientRect {$IFNDEF MSWINDOWS}name '_Control_GetClientRect'{$ENDIF},
-  Control_GetClientWidth {$IFNDEF MSWINDOWS}name '_Control_GetClientWidth'{$ENDIF},
-  Control_SetClientWidth {$IFNDEF MSWINDOWS}name '_Control_SetClientWidth'{$ENDIF},
-  Control_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_Control_GetExplicitLeft'{$ENDIF},
-  Control_GetExplicitTop {$IFNDEF MSWINDOWS}name '_Control_GetExplicitTop'{$ENDIF},
-  Control_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_Control_GetExplicitWidth'{$ENDIF},
-  Control_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_Control_GetExplicitHeight'{$ENDIF},
-  Control_GetShowHint {$IFNDEF MSWINDOWS}name '_Control_GetShowHint'{$ENDIF},
-  Control_SetShowHint {$IFNDEF MSWINDOWS}name '_Control_SetShowHint'{$ENDIF},
-  Control_GetVisible {$IFNDEF MSWINDOWS}name '_Control_GetVisible'{$ENDIF},
-  Control_SetVisible {$IFNDEF MSWINDOWS}name '_Control_SetVisible'{$ENDIF},
-  Control_GetParent {$IFNDEF MSWINDOWS}name '_Control_GetParent'{$ENDIF},
-  Control_SetParent {$IFNDEF MSWINDOWS}name '_Control_SetParent'{$ENDIF},
-  Control_GetStyleElements {$IFNDEF MSWINDOWS}name '_Control_GetStyleElements'{$ENDIF},
-  Control_SetStyleElements {$IFNDEF MSWINDOWS}name '_Control_SetStyleElements'{$ENDIF},
-  Control_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Control_GetAlignWithMargins'{$ENDIF},
-  Control_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Control_SetAlignWithMargins'{$ENDIF},
-  Control_GetLeft {$IFNDEF MSWINDOWS}name '_Control_GetLeft'{$ENDIF},
-  Control_SetLeft {$IFNDEF MSWINDOWS}name '_Control_SetLeft'{$ENDIF},
-  Control_GetTop {$IFNDEF MSWINDOWS}name '_Control_GetTop'{$ENDIF},
-  Control_SetTop {$IFNDEF MSWINDOWS}name '_Control_SetTop'{$ENDIF},
-  Control_GetWidth {$IFNDEF MSWINDOWS}name '_Control_GetWidth'{$ENDIF},
-  Control_SetWidth {$IFNDEF MSWINDOWS}name '_Control_SetWidth'{$ENDIF},
-  Control_GetHeight {$IFNDEF MSWINDOWS}name '_Control_GetHeight'{$ENDIF},
-  Control_SetHeight {$IFNDEF MSWINDOWS}name '_Control_SetHeight'{$ENDIF},
-  Control_GetCursor {$IFNDEF MSWINDOWS}name '_Control_GetCursor'{$ENDIF},
-  Control_SetCursor {$IFNDEF MSWINDOWS}name '_Control_SetCursor'{$ENDIF},
-  Control_GetHint {$IFNDEF MSWINDOWS}name '_Control_GetHint'{$ENDIF},
-  Control_SetHint {$IFNDEF MSWINDOWS}name '_Control_SetHint'{$ENDIF},
-  Control_GetMargins {$IFNDEF MSWINDOWS}name '_Control_GetMargins'{$ENDIF},
-  Control_SetMargins {$IFNDEF MSWINDOWS}name '_Control_SetMargins'{$ENDIF},
-  Control_GetComponentCount {$IFNDEF MSWINDOWS}name '_Control_GetComponentCount'{$ENDIF},
-  Control_GetComponentIndex {$IFNDEF MSWINDOWS}name '_Control_GetComponentIndex'{$ENDIF},
-  Control_SetComponentIndex {$IFNDEF MSWINDOWS}name '_Control_SetComponentIndex'{$ENDIF},
-  Control_GetOwner {$IFNDEF MSWINDOWS}name '_Control_GetOwner'{$ENDIF},
-  Control_GetName {$IFNDEF MSWINDOWS}name '_Control_GetName'{$ENDIF},
-  Control_SetName {$IFNDEF MSWINDOWS}name '_Control_SetName'{$ENDIF},
-  Control_GetTag {$IFNDEF MSWINDOWS}name '_Control_GetTag'{$ENDIF},
-  Control_SetTag {$IFNDEF MSWINDOWS}name '_Control_SetTag'{$ENDIF},
-  Control_GetComponents {$IFNDEF MSWINDOWS}name '_Control_GetComponents'{$ENDIF};
+  Control_Create,
+  Control_Free,
+  Control_BringToFront,
+  Control_HasParent,
+  Control_Hide,
+  Control_Invalidate,
+  Control_Perform,
+  Control_Refresh,
+  Control_Repaint,
+  Control_SendToBack,
+  Control_SetBounds,
+  Control_Show,
+  Control_Update,
+  Control_GetTextBuf,
+  Control_FindComponent,
+  Control_GetNamePath,
+  Control_Assign,
+  Control_ClassName,
+  Control_Equals,
+  Control_GetHashCode,
+  Control_ToString,
+  Control_GetEnabled,
+  Control_SetEnabled,
+  Control_GetAction,
+  Control_SetAction,
+  Control_GetAlign,
+  Control_SetAlign,
+  Control_GetAnchors,
+  Control_SetAnchors,
+  Control_GetBiDiMode,
+  Control_SetBiDiMode,
+  Control_GetBoundsRect,
+  Control_SetBoundsRect,
+  Control_GetClientHeight,
+  Control_SetClientHeight,
+  Control_GetClientRect,
+  Control_GetClientWidth,
+  Control_SetClientWidth,
+  Control_GetExplicitLeft,
+  Control_GetExplicitTop,
+  Control_GetExplicitWidth,
+  Control_GetExplicitHeight,
+  Control_GetShowHint,
+  Control_SetShowHint,
+  Control_GetVisible,
+  Control_SetVisible,
+  Control_GetParent,
+  Control_SetParent,
+  Control_GetStyleElements,
+  Control_SetStyleElements,
+  Control_GetAlignWithMargins,
+  Control_SetAlignWithMargins,
+  Control_GetLeft,
+  Control_SetLeft,
+  Control_GetTop,
+  Control_SetTop,
+  Control_GetWidth,
+  Control_SetWidth,
+  Control_GetHeight,
+  Control_SetHeight,
+  Control_GetCursor,
+  Control_SetCursor,
+  Control_GetHint,
+  Control_SetHint,
+  Control_GetMargins,
+  Control_SetMargins,
+  Control_GetComponentCount,
+  Control_GetComponentIndex,
+  Control_SetComponentIndex,
+  Control_GetOwner,
+  Control_GetName,
+  Control_SetName,
+  Control_GetTag,
+  Control_SetTag,
+  Control_GetComponents;
 

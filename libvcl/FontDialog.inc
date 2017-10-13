@@ -5,87 +5,87 @@
 //
 //----------------------------------------
 
-function FontDialog_Create(AOwner: TComponent): TFontDialog; cdecl;
+function FontDialog_Create(AOwner: TComponent): TFontDialog; stdcall;
 begin
   Result :=  TFontDialog.Create(AOwner);
 end;
 
-procedure FontDialog_Free(AObj: TFontDialog); cdecl;
+procedure FontDialog_Free(AObj: TFontDialog); stdcall;
 begin
   AObj.Free;
 end;
 
-function FontDialog_Execute(AObj: TFontDialog; ParentWnd: HWND): LongBool; cdecl;
+function FontDialog_Execute(AObj: TFontDialog; ParentWnd: HWND): LongBool; stdcall;
 begin
   Result :=  AObj.Execute(ParentWnd);
 end;
 
-function FontDialog_FindComponent(AObj: TFontDialog; AName: PChar): TComponent; cdecl;
+function FontDialog_FindComponent(AObj: TFontDialog; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function FontDialog_GetNamePath(AObj: TFontDialog): PChar; cdecl;
+function FontDialog_GetNamePath(AObj: TFontDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function FontDialog_HasParent(AObj: TFontDialog): LongBool; cdecl;
+function FontDialog_HasParent(AObj: TFontDialog): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure FontDialog_Assign(AObj: TFontDialog; Source: TPersistent); cdecl;
+procedure FontDialog_Assign(AObj: TFontDialog; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function FontDialog_ClassName(AObj: TFontDialog): PChar; cdecl;
+function FontDialog_ClassName(AObj: TFontDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function FontDialog_Equals(AObj: TFontDialog; Obj: TObject): LongBool; cdecl;
+function FontDialog_Equals(AObj: TFontDialog; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function FontDialog_GetHashCode(AObj: TFontDialog): Integer; cdecl;
+function FontDialog_GetHashCode(AObj: TFontDialog): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function FontDialog_ToString(AObj: TFontDialog): PChar; cdecl;
+function FontDialog_ToString(AObj: TFontDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function FontDialog_GetFont(AObj: TFontDialog): TFont; cdecl;
+function FontDialog_GetFont(AObj: TFontDialog): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure FontDialog_SetFont(AObj: TFontDialog; AValue: TFont); cdecl;
+procedure FontDialog_SetFont(AObj: TFontDialog; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function FontDialog_GetOptions(AObj: TFontDialog): TFontDialogOptions; cdecl;
+function FontDialog_GetOptions(AObj: TFontDialog): TFontDialogOptions; stdcall;
 begin
   Result :=  AObj.Options;
 end;
 
-procedure FontDialog_SetOptions(AObj: TFontDialog; AValue: TFontDialogOptions); cdecl;
+procedure FontDialog_SetOptions(AObj: TFontDialog; AValue: TFontDialogOptions); stdcall;
 begin
   AObj.Options := AValue;
 end;
 
-function FontDialog_GetHandle(AObj: TFontDialog): HWND; cdecl;
+function FontDialog_GetHandle(AObj: TFontDialog): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-procedure FontDialog_SetOnClose(AObj: TFontDialog; AEventId: NativeUInt); stdcall
+procedure FontDialog_SetOnClose(AObj: TFontDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -97,7 +97,7 @@ begin
   TEventClass.Add(AObj, geClose, AEventId);
 end;
 
-procedure FontDialog_SetOnShow(AObj: TFontDialog; AEventId: NativeUInt); stdcall
+procedure FontDialog_SetOnShow(AObj: TFontDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -109,78 +109,78 @@ begin
   TEventClass.Add(AObj, geShow, AEventId);
 end;
 
-function FontDialog_GetComponentCount(AObj: TFontDialog): Integer; cdecl;
+function FontDialog_GetComponentCount(AObj: TFontDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function FontDialog_GetComponentIndex(AObj: TFontDialog): Integer; cdecl;
+function FontDialog_GetComponentIndex(AObj: TFontDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure FontDialog_SetComponentIndex(AObj: TFontDialog; AValue: Integer); cdecl;
+procedure FontDialog_SetComponentIndex(AObj: TFontDialog; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function FontDialog_GetOwner(AObj: TFontDialog): TComponent; cdecl;
+function FontDialog_GetOwner(AObj: TFontDialog): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function FontDialog_GetName(AObj: TFontDialog): PChar; cdecl;
+function FontDialog_GetName(AObj: TFontDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure FontDialog_SetName(AObj: TFontDialog; AValue: PChar); cdecl;
+procedure FontDialog_SetName(AObj: TFontDialog; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function FontDialog_GetTag(AObj: TFontDialog): NativeInt; cdecl;
+function FontDialog_GetTag(AObj: TFontDialog): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure FontDialog_SetTag(AObj: TFontDialog; AValue: NativeInt); cdecl;
+procedure FontDialog_SetTag(AObj: TFontDialog; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function FontDialog_GetComponents(AObj: TFontDialog; AIndex: Integer): TComponent; cdecl;
+function FontDialog_GetComponents(AObj: TFontDialog; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  FontDialog_Create {$IFNDEF MSWINDOWS}name '_FontDialog_Create'{$ENDIF},
-  FontDialog_Free {$IFNDEF MSWINDOWS}name '_FontDialog_Free'{$ENDIF},
-  FontDialog_Execute {$IFNDEF MSWINDOWS}name '_FontDialog_Execute'{$ENDIF},
-  FontDialog_FindComponent {$IFNDEF MSWINDOWS}name '_FontDialog_FindComponent'{$ENDIF},
-  FontDialog_GetNamePath {$IFNDEF MSWINDOWS}name '_FontDialog_GetNamePath'{$ENDIF},
-  FontDialog_HasParent {$IFNDEF MSWINDOWS}name '_FontDialog_HasParent'{$ENDIF},
-  FontDialog_Assign {$IFNDEF MSWINDOWS}name '_FontDialog_Assign'{$ENDIF},
-  FontDialog_ClassName {$IFNDEF MSWINDOWS}name '_FontDialog_ClassName'{$ENDIF},
-  FontDialog_Equals {$IFNDEF MSWINDOWS}name '_FontDialog_Equals'{$ENDIF},
-  FontDialog_GetHashCode {$IFNDEF MSWINDOWS}name '_FontDialog_GetHashCode'{$ENDIF},
-  FontDialog_ToString {$IFNDEF MSWINDOWS}name '_FontDialog_ToString'{$ENDIF},
-  FontDialog_GetFont {$IFNDEF MSWINDOWS}name '_FontDialog_GetFont'{$ENDIF},
-  FontDialog_SetFont {$IFNDEF MSWINDOWS}name '_FontDialog_SetFont'{$ENDIF},
-  FontDialog_GetOptions {$IFNDEF MSWINDOWS}name '_FontDialog_GetOptions'{$ENDIF},
-  FontDialog_SetOptions {$IFNDEF MSWINDOWS}name '_FontDialog_SetOptions'{$ENDIF},
-  FontDialog_GetHandle {$IFNDEF MSWINDOWS}name '_FontDialog_GetHandle'{$ENDIF},
-  FontDialog_SetOnClose {$IFNDEF MSWINDOWS}name '_FontDialog_SetOnClose'{$ENDIF},
-  FontDialog_SetOnShow {$IFNDEF MSWINDOWS}name '_FontDialog_SetOnShow'{$ENDIF},
-  FontDialog_GetComponentCount {$IFNDEF MSWINDOWS}name '_FontDialog_GetComponentCount'{$ENDIF},
-  FontDialog_GetComponentIndex {$IFNDEF MSWINDOWS}name '_FontDialog_GetComponentIndex'{$ENDIF},
-  FontDialog_SetComponentIndex {$IFNDEF MSWINDOWS}name '_FontDialog_SetComponentIndex'{$ENDIF},
-  FontDialog_GetOwner {$IFNDEF MSWINDOWS}name '_FontDialog_GetOwner'{$ENDIF},
-  FontDialog_GetName {$IFNDEF MSWINDOWS}name '_FontDialog_GetName'{$ENDIF},
-  FontDialog_SetName {$IFNDEF MSWINDOWS}name '_FontDialog_SetName'{$ENDIF},
-  FontDialog_GetTag {$IFNDEF MSWINDOWS}name '_FontDialog_GetTag'{$ENDIF},
-  FontDialog_SetTag {$IFNDEF MSWINDOWS}name '_FontDialog_SetTag'{$ENDIF},
-  FontDialog_GetComponents {$IFNDEF MSWINDOWS}name '_FontDialog_GetComponents'{$ENDIF};
+  FontDialog_Create,
+  FontDialog_Free,
+  FontDialog_Execute,
+  FontDialog_FindComponent,
+  FontDialog_GetNamePath,
+  FontDialog_HasParent,
+  FontDialog_Assign,
+  FontDialog_ClassName,
+  FontDialog_Equals,
+  FontDialog_GetHashCode,
+  FontDialog_ToString,
+  FontDialog_GetFont,
+  FontDialog_SetFont,
+  FontDialog_GetOptions,
+  FontDialog_SetOptions,
+  FontDialog_GetHandle,
+  FontDialog_SetOnClose,
+  FontDialog_SetOnShow,
+  FontDialog_GetComponentCount,
+  FontDialog_GetComponentIndex,
+  FontDialog_SetComponentIndex,
+  FontDialog_GetOwner,
+  FontDialog_GetName,
+  FontDialog_SetName,
+  FontDialog_GetTag,
+  FontDialog_SetTag,
+  FontDialog_GetComponents;
 

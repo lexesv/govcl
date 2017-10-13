@@ -5,162 +5,162 @@
 //
 //----------------------------------------
 
-function Font_Create: TFont; cdecl;
+function Font_Create: TFont; stdcall;
 begin
   Result :=  TFont.Create;
 end;
 
-procedure Font_Free(AObj: TFont); cdecl;
+procedure Font_Free(AObj: TFont); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Font_Assign(AObj: TFont; Source: TPersistent); cdecl;
+procedure Font_Assign(AObj: TFont; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Font_HandleAllocated(AObj: TFont): LongBool; cdecl;
+function Font_HandleAllocated(AObj: TFont): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-function Font_GetNamePath(AObj: TFont): PChar; cdecl;
+function Font_GetNamePath(AObj: TFont): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function Font_ClassName(AObj: TFont): PChar; cdecl;
+function Font_ClassName(AObj: TFont): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Font_Equals(AObj: TFont; Obj: TObject): LongBool; cdecl;
+function Font_Equals(AObj: TFont; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Font_GetHashCode(AObj: TFont): Integer; cdecl;
+function Font_GetHashCode(AObj: TFont): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Font_ToString(AObj: TFont): PChar; cdecl;
+function Font_ToString(AObj: TFont): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Font_GetHandle(AObj: TFont): HFONT; cdecl;
+function Font_GetHandle(AObj: TFont): HFONT; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-procedure Font_SetHandle(AObj: TFont; AValue: HFONT); cdecl;
+procedure Font_SetHandle(AObj: TFont; AValue: HFONT); stdcall;
 begin
   AObj.Handle := AValue;
 end;
 
-function Font_GetPixelsPerInch(AObj: TFont): Integer; cdecl;
+function Font_GetPixelsPerInch(AObj: TFont): Integer; stdcall;
 begin
   Result :=  AObj.PixelsPerInch;
 end;
 
-procedure Font_SetPixelsPerInch(AObj: TFont; AValue: Integer); cdecl;
+procedure Font_SetPixelsPerInch(AObj: TFont; AValue: Integer); stdcall;
 begin
   AObj.PixelsPerInch := AValue;
 end;
 
-function Font_GetCharset(AObj: TFont): TFontCharset; cdecl;
+function Font_GetCharset(AObj: TFont): TFontCharset; stdcall;
 begin
   Result :=  AObj.Charset;
 end;
 
-procedure Font_SetCharset(AObj: TFont; AValue: TFontCharset); cdecl;
+procedure Font_SetCharset(AObj: TFont; AValue: TFontCharset); stdcall;
 begin
   AObj.Charset := AValue;
 end;
 
-function Font_GetColor(AObj: TFont): TColor; cdecl;
+function Font_GetColor(AObj: TFont): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure Font_SetColor(AObj: TFont; AValue: TColor); cdecl;
+procedure Font_SetColor(AObj: TFont; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function Font_GetHeight(AObj: TFont): Integer; cdecl;
+function Font_GetHeight(AObj: TFont): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Font_SetHeight(AObj: TFont; AValue: Integer); cdecl;
+procedure Font_SetHeight(AObj: TFont; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Font_GetName(AObj: TFont): PChar; cdecl;
+function Font_GetName(AObj: TFont): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Font_SetName(AObj: TFont; AValue: PChar); cdecl;
+procedure Font_SetName(AObj: TFont; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Font_GetOrientation(AObj: TFont): Integer; cdecl;
+function Font_GetOrientation(AObj: TFont): Integer; stdcall;
 begin
   Result :=  AObj.Orientation;
 end;
 
-procedure Font_SetOrientation(AObj: TFont; AValue: Integer); cdecl;
+procedure Font_SetOrientation(AObj: TFont; AValue: Integer); stdcall;
 begin
   AObj.Orientation := AValue;
 end;
 
-function Font_GetPitch(AObj: TFont): TFontPitch; cdecl;
+function Font_GetPitch(AObj: TFont): TFontPitch; stdcall;
 begin
   Result :=  AObj.Pitch;
 end;
 
-procedure Font_SetPitch(AObj: TFont; AValue: TFontPitch); cdecl;
+procedure Font_SetPitch(AObj: TFont; AValue: TFontPitch); stdcall;
 begin
   AObj.Pitch := AValue;
 end;
 
-function Font_GetSize(AObj: TFont): Integer; cdecl;
+function Font_GetSize(AObj: TFont): Integer; stdcall;
 begin
   Result :=  AObj.Size;
 end;
 
-procedure Font_SetSize(AObj: TFont; AValue: Integer); cdecl;
+procedure Font_SetSize(AObj: TFont; AValue: Integer); stdcall;
 begin
   AObj.Size := AValue;
 end;
 
-function Font_GetStyle(AObj: TFont): TFontStyles; cdecl;
+function Font_GetStyle(AObj: TFont): TFontStyles; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure Font_SetStyle(AObj: TFont; AValue: TFontStyles); cdecl;
+procedure Font_SetStyle(AObj: TFont; AValue: TFontStyles); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function Font_GetQuality(AObj: TFont): TFontQuality; cdecl;
+function Font_GetQuality(AObj: TFont): TFontQuality; stdcall;
 begin
   Result :=  AObj.Quality;
 end;
 
-procedure Font_SetQuality(AObj: TFont; AValue: TFontQuality); cdecl;
+procedure Font_SetQuality(AObj: TFont; AValue: TFontQuality); stdcall;
 begin
   AObj.Quality := AValue;
 end;
 
-procedure Font_SetOnChange(AObj: TFont; AEventId: NativeUInt); stdcall
+procedure Font_SetOnChange(AObj: TFont; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -174,36 +174,36 @@ end;
 
 
 exports
-  Font_Create {$IFNDEF MSWINDOWS}name '_Font_Create'{$ENDIF},
-  Font_Free {$IFNDEF MSWINDOWS}name '_Font_Free'{$ENDIF},
-  Font_Assign {$IFNDEF MSWINDOWS}name '_Font_Assign'{$ENDIF},
-  Font_HandleAllocated {$IFNDEF MSWINDOWS}name '_Font_HandleAllocated'{$ENDIF},
-  Font_GetNamePath {$IFNDEF MSWINDOWS}name '_Font_GetNamePath'{$ENDIF},
-  Font_ClassName {$IFNDEF MSWINDOWS}name '_Font_ClassName'{$ENDIF},
-  Font_Equals {$IFNDEF MSWINDOWS}name '_Font_Equals'{$ENDIF},
-  Font_GetHashCode {$IFNDEF MSWINDOWS}name '_Font_GetHashCode'{$ENDIF},
-  Font_ToString {$IFNDEF MSWINDOWS}name '_Font_ToString'{$ENDIF},
-  Font_GetHandle {$IFNDEF MSWINDOWS}name '_Font_GetHandle'{$ENDIF},
-  Font_SetHandle {$IFNDEF MSWINDOWS}name '_Font_SetHandle'{$ENDIF},
-  Font_GetPixelsPerInch {$IFNDEF MSWINDOWS}name '_Font_GetPixelsPerInch'{$ENDIF},
-  Font_SetPixelsPerInch {$IFNDEF MSWINDOWS}name '_Font_SetPixelsPerInch'{$ENDIF},
-  Font_GetCharset {$IFNDEF MSWINDOWS}name '_Font_GetCharset'{$ENDIF},
-  Font_SetCharset {$IFNDEF MSWINDOWS}name '_Font_SetCharset'{$ENDIF},
-  Font_GetColor {$IFNDEF MSWINDOWS}name '_Font_GetColor'{$ENDIF},
-  Font_SetColor {$IFNDEF MSWINDOWS}name '_Font_SetColor'{$ENDIF},
-  Font_GetHeight {$IFNDEF MSWINDOWS}name '_Font_GetHeight'{$ENDIF},
-  Font_SetHeight {$IFNDEF MSWINDOWS}name '_Font_SetHeight'{$ENDIF},
-  Font_GetName {$IFNDEF MSWINDOWS}name '_Font_GetName'{$ENDIF},
-  Font_SetName {$IFNDEF MSWINDOWS}name '_Font_SetName'{$ENDIF},
-  Font_GetOrientation {$IFNDEF MSWINDOWS}name '_Font_GetOrientation'{$ENDIF},
-  Font_SetOrientation {$IFNDEF MSWINDOWS}name '_Font_SetOrientation'{$ENDIF},
-  Font_GetPitch {$IFNDEF MSWINDOWS}name '_Font_GetPitch'{$ENDIF},
-  Font_SetPitch {$IFNDEF MSWINDOWS}name '_Font_SetPitch'{$ENDIF},
-  Font_GetSize {$IFNDEF MSWINDOWS}name '_Font_GetSize'{$ENDIF},
-  Font_SetSize {$IFNDEF MSWINDOWS}name '_Font_SetSize'{$ENDIF},
-  Font_GetStyle {$IFNDEF MSWINDOWS}name '_Font_GetStyle'{$ENDIF},
-  Font_SetStyle {$IFNDEF MSWINDOWS}name '_Font_SetStyle'{$ENDIF},
-  Font_GetQuality {$IFNDEF MSWINDOWS}name '_Font_GetQuality'{$ENDIF},
-  Font_SetQuality {$IFNDEF MSWINDOWS}name '_Font_SetQuality'{$ENDIF},
-  Font_SetOnChange {$IFNDEF MSWINDOWS}name '_Font_SetOnChange'{$ENDIF};
+  Font_Create,
+  Font_Free,
+  Font_Assign,
+  Font_HandleAllocated,
+  Font_GetNamePath,
+  Font_ClassName,
+  Font_Equals,
+  Font_GetHashCode,
+  Font_ToString,
+  Font_GetHandle,
+  Font_SetHandle,
+  Font_GetPixelsPerInch,
+  Font_SetPixelsPerInch,
+  Font_GetCharset,
+  Font_SetCharset,
+  Font_GetColor,
+  Font_SetColor,
+  Font_GetHeight,
+  Font_SetHeight,
+  Font_GetName,
+  Font_SetName,
+  Font_GetOrientation,
+  Font_SetOrientation,
+  Font_GetPitch,
+  Font_SetPitch,
+  Font_GetSize,
+  Font_SetSize,
+  Font_GetStyle,
+  Font_SetStyle,
+  Font_GetQuality,
+  Font_SetQuality,
+  Font_SetOnChange;
 

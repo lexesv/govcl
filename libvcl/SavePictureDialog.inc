@@ -5,152 +5,152 @@
 //
 //----------------------------------------
 
-function SavePictureDialog_Create(AOwner: TComponent): TSavePictureDialog; cdecl;
+function SavePictureDialog_Create(AOwner: TComponent): TSavePictureDialog; stdcall;
 begin
   Result :=  TSavePictureDialog.Create(AOwner);
 end;
 
-procedure SavePictureDialog_Free(AObj: TSavePictureDialog); cdecl;
+procedure SavePictureDialog_Free(AObj: TSavePictureDialog); stdcall;
 begin
   AObj.Free;
 end;
 
-function SavePictureDialog_Execute(AObj: TSavePictureDialog): LongBool; cdecl;
+function SavePictureDialog_Execute(AObj: TSavePictureDialog): LongBool; stdcall;
 begin
   Result :=  AObj.Execute;
 end;
 
-function SavePictureDialog_FindComponent(AObj: TSavePictureDialog; AName: PChar): TComponent; cdecl;
+function SavePictureDialog_FindComponent(AObj: TSavePictureDialog; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function SavePictureDialog_GetNamePath(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetNamePath(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function SavePictureDialog_HasParent(AObj: TSavePictureDialog): LongBool; cdecl;
+function SavePictureDialog_HasParent(AObj: TSavePictureDialog): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure SavePictureDialog_Assign(AObj: TSavePictureDialog; Source: TPersistent); cdecl;
+procedure SavePictureDialog_Assign(AObj: TSavePictureDialog; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function SavePictureDialog_ClassName(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_ClassName(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function SavePictureDialog_Equals(AObj: TSavePictureDialog; Obj: TObject): LongBool; cdecl;
+function SavePictureDialog_Equals(AObj: TSavePictureDialog; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function SavePictureDialog_GetHashCode(AObj: TSavePictureDialog): Integer; cdecl;
+function SavePictureDialog_GetHashCode(AObj: TSavePictureDialog): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function SavePictureDialog_ToString(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_ToString(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function SavePictureDialog_GetFilter(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetFilter(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Filter);
 end;
 
-procedure SavePictureDialog_SetFilter(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetFilter(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.Filter := AValue;
 end;
 
-function SavePictureDialog_GetFiles(AObj: TSavePictureDialog): TStrings; cdecl;
+function SavePictureDialog_GetFiles(AObj: TSavePictureDialog): TStrings; stdcall;
 begin
   Result :=  AObj.Files;
 end;
 
-function SavePictureDialog_GetDefaultExt(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetDefaultExt(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.DefaultExt);
 end;
 
-procedure SavePictureDialog_SetDefaultExt(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetDefaultExt(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.DefaultExt := AValue;
 end;
 
-function SavePictureDialog_GetFileName(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetFileName(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.FileName);
 end;
 
-procedure SavePictureDialog_SetFileName(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetFileName(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.FileName := AValue;
 end;
 
-function SavePictureDialog_GetFilterIndex(AObj: TSavePictureDialog): Integer; cdecl;
+function SavePictureDialog_GetFilterIndex(AObj: TSavePictureDialog): Integer; stdcall;
 begin
   Result :=  AObj.FilterIndex;
 end;
 
-procedure SavePictureDialog_SetFilterIndex(AObj: TSavePictureDialog; AValue: Integer); cdecl;
+procedure SavePictureDialog_SetFilterIndex(AObj: TSavePictureDialog; AValue: Integer); stdcall;
 begin
   AObj.FilterIndex := AValue;
 end;
 
-function SavePictureDialog_GetInitialDir(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetInitialDir(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.InitialDir);
 end;
 
-procedure SavePictureDialog_SetInitialDir(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetInitialDir(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.InitialDir := AValue;
 end;
 
-function SavePictureDialog_GetOptions(AObj: TSavePictureDialog): TOpenOptions; cdecl;
+function SavePictureDialog_GetOptions(AObj: TSavePictureDialog): TOpenOptions; stdcall;
 begin
   Result :=  AObj.Options;
 end;
 
-procedure SavePictureDialog_SetOptions(AObj: TSavePictureDialog; AValue: TOpenOptions); cdecl;
+procedure SavePictureDialog_SetOptions(AObj: TSavePictureDialog; AValue: TOpenOptions); stdcall;
 begin
   AObj.Options := AValue;
 end;
 
-function SavePictureDialog_GetOptionsEx(AObj: TSavePictureDialog): TOpenOptionsEx; cdecl;
+function SavePictureDialog_GetOptionsEx(AObj: TSavePictureDialog): TOpenOptionsEx; stdcall;
 begin
   Result :=  AObj.OptionsEx;
 end;
 
-procedure SavePictureDialog_SetOptionsEx(AObj: TSavePictureDialog; AValue: TOpenOptionsEx); cdecl;
+procedure SavePictureDialog_SetOptionsEx(AObj: TSavePictureDialog; AValue: TOpenOptionsEx); stdcall;
 begin
   AObj.OptionsEx := AValue;
 end;
 
-function SavePictureDialog_GetTitle(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetTitle(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Title);
 end;
 
-procedure SavePictureDialog_SetTitle(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetTitle(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.Title := AValue;
 end;
 
-function SavePictureDialog_GetHandle(AObj: TSavePictureDialog): HWND; cdecl;
+function SavePictureDialog_GetHandle(AObj: TSavePictureDialog): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-procedure SavePictureDialog_SetOnClose(AObj: TSavePictureDialog; AEventId: NativeUInt); stdcall
+procedure SavePictureDialog_SetOnClose(AObj: TSavePictureDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -162,7 +162,7 @@ begin
   TEventClass.Add(AObj, geClose, AEventId);
 end;
 
-procedure SavePictureDialog_SetOnShow(AObj: TSavePictureDialog; AEventId: NativeUInt); stdcall
+procedure SavePictureDialog_SetOnShow(AObj: TSavePictureDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -174,91 +174,91 @@ begin
   TEventClass.Add(AObj, geShow, AEventId);
 end;
 
-function SavePictureDialog_GetComponentCount(AObj: TSavePictureDialog): Integer; cdecl;
+function SavePictureDialog_GetComponentCount(AObj: TSavePictureDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function SavePictureDialog_GetComponentIndex(AObj: TSavePictureDialog): Integer; cdecl;
+function SavePictureDialog_GetComponentIndex(AObj: TSavePictureDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure SavePictureDialog_SetComponentIndex(AObj: TSavePictureDialog; AValue: Integer); cdecl;
+procedure SavePictureDialog_SetComponentIndex(AObj: TSavePictureDialog; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function SavePictureDialog_GetOwner(AObj: TSavePictureDialog): TComponent; cdecl;
+function SavePictureDialog_GetOwner(AObj: TSavePictureDialog): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function SavePictureDialog_GetName(AObj: TSavePictureDialog): PChar; cdecl;
+function SavePictureDialog_GetName(AObj: TSavePictureDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure SavePictureDialog_SetName(AObj: TSavePictureDialog; AValue: PChar); cdecl;
+procedure SavePictureDialog_SetName(AObj: TSavePictureDialog; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function SavePictureDialog_GetTag(AObj: TSavePictureDialog): NativeInt; cdecl;
+function SavePictureDialog_GetTag(AObj: TSavePictureDialog): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure SavePictureDialog_SetTag(AObj: TSavePictureDialog; AValue: NativeInt); cdecl;
+procedure SavePictureDialog_SetTag(AObj: TSavePictureDialog; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function SavePictureDialog_GetComponents(AObj: TSavePictureDialog; AIndex: Integer): TComponent; cdecl;
+function SavePictureDialog_GetComponents(AObj: TSavePictureDialog; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  SavePictureDialog_Create {$IFNDEF MSWINDOWS}name '_SavePictureDialog_Create'{$ENDIF},
-  SavePictureDialog_Free {$IFNDEF MSWINDOWS}name '_SavePictureDialog_Free'{$ENDIF},
-  SavePictureDialog_Execute {$IFNDEF MSWINDOWS}name '_SavePictureDialog_Execute'{$ENDIF},
-  SavePictureDialog_FindComponent {$IFNDEF MSWINDOWS}name '_SavePictureDialog_FindComponent'{$ENDIF},
-  SavePictureDialog_GetNamePath {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetNamePath'{$ENDIF},
-  SavePictureDialog_HasParent {$IFNDEF MSWINDOWS}name '_SavePictureDialog_HasParent'{$ENDIF},
-  SavePictureDialog_Assign {$IFNDEF MSWINDOWS}name '_SavePictureDialog_Assign'{$ENDIF},
-  SavePictureDialog_ClassName {$IFNDEF MSWINDOWS}name '_SavePictureDialog_ClassName'{$ENDIF},
-  SavePictureDialog_Equals {$IFNDEF MSWINDOWS}name '_SavePictureDialog_Equals'{$ENDIF},
-  SavePictureDialog_GetHashCode {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetHashCode'{$ENDIF},
-  SavePictureDialog_ToString {$IFNDEF MSWINDOWS}name '_SavePictureDialog_ToString'{$ENDIF},
-  SavePictureDialog_GetFilter {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetFilter'{$ENDIF},
-  SavePictureDialog_SetFilter {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetFilter'{$ENDIF},
-  SavePictureDialog_GetFiles {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetFiles'{$ENDIF},
-  SavePictureDialog_GetDefaultExt {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetDefaultExt'{$ENDIF},
-  SavePictureDialog_SetDefaultExt {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetDefaultExt'{$ENDIF},
-  SavePictureDialog_GetFileName {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetFileName'{$ENDIF},
-  SavePictureDialog_SetFileName {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetFileName'{$ENDIF},
-  SavePictureDialog_GetFilterIndex {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetFilterIndex'{$ENDIF},
-  SavePictureDialog_SetFilterIndex {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetFilterIndex'{$ENDIF},
-  SavePictureDialog_GetInitialDir {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetInitialDir'{$ENDIF},
-  SavePictureDialog_SetInitialDir {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetInitialDir'{$ENDIF},
-  SavePictureDialog_GetOptions {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetOptions'{$ENDIF},
-  SavePictureDialog_SetOptions {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetOptions'{$ENDIF},
-  SavePictureDialog_GetOptionsEx {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetOptionsEx'{$ENDIF},
-  SavePictureDialog_SetOptionsEx {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetOptionsEx'{$ENDIF},
-  SavePictureDialog_GetTitle {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetTitle'{$ENDIF},
-  SavePictureDialog_SetTitle {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetTitle'{$ENDIF},
-  SavePictureDialog_GetHandle {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetHandle'{$ENDIF},
-  SavePictureDialog_SetOnClose {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetOnClose'{$ENDIF},
-  SavePictureDialog_SetOnShow {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetOnShow'{$ENDIF},
-  SavePictureDialog_GetComponentCount {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetComponentCount'{$ENDIF},
-  SavePictureDialog_GetComponentIndex {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetComponentIndex'{$ENDIF},
-  SavePictureDialog_SetComponentIndex {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetComponentIndex'{$ENDIF},
-  SavePictureDialog_GetOwner {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetOwner'{$ENDIF},
-  SavePictureDialog_GetName {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetName'{$ENDIF},
-  SavePictureDialog_SetName {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetName'{$ENDIF},
-  SavePictureDialog_GetTag {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetTag'{$ENDIF},
-  SavePictureDialog_SetTag {$IFNDEF MSWINDOWS}name '_SavePictureDialog_SetTag'{$ENDIF},
-  SavePictureDialog_GetComponents {$IFNDEF MSWINDOWS}name '_SavePictureDialog_GetComponents'{$ENDIF};
+  SavePictureDialog_Create,
+  SavePictureDialog_Free,
+  SavePictureDialog_Execute,
+  SavePictureDialog_FindComponent,
+  SavePictureDialog_GetNamePath,
+  SavePictureDialog_HasParent,
+  SavePictureDialog_Assign,
+  SavePictureDialog_ClassName,
+  SavePictureDialog_Equals,
+  SavePictureDialog_GetHashCode,
+  SavePictureDialog_ToString,
+  SavePictureDialog_GetFilter,
+  SavePictureDialog_SetFilter,
+  SavePictureDialog_GetFiles,
+  SavePictureDialog_GetDefaultExt,
+  SavePictureDialog_SetDefaultExt,
+  SavePictureDialog_GetFileName,
+  SavePictureDialog_SetFileName,
+  SavePictureDialog_GetFilterIndex,
+  SavePictureDialog_SetFilterIndex,
+  SavePictureDialog_GetInitialDir,
+  SavePictureDialog_SetInitialDir,
+  SavePictureDialog_GetOptions,
+  SavePictureDialog_SetOptions,
+  SavePictureDialog_GetOptionsEx,
+  SavePictureDialog_SetOptionsEx,
+  SavePictureDialog_GetTitle,
+  SavePictureDialog_SetTitle,
+  SavePictureDialog_GetHandle,
+  SavePictureDialog_SetOnClose,
+  SavePictureDialog_SetOnShow,
+  SavePictureDialog_GetComponentCount,
+  SavePictureDialog_GetComponentIndex,
+  SavePictureDialog_SetComponentIndex,
+  SavePictureDialog_GetOwner,
+  SavePictureDialog_GetName,
+  SavePictureDialog_SetName,
+  SavePictureDialog_GetTag,
+  SavePictureDialog_SetTag,
+  SavePictureDialog_GetComponents;
 

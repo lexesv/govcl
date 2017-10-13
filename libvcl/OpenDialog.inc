@@ -5,152 +5,152 @@
 //
 //----------------------------------------
 
-function OpenDialog_Create(AOwner: TComponent): TOpenDialog; cdecl;
+function OpenDialog_Create(AOwner: TComponent): TOpenDialog; stdcall;
 begin
   Result :=  TOpenDialog.Create(AOwner);
 end;
 
-procedure OpenDialog_Free(AObj: TOpenDialog); cdecl;
+procedure OpenDialog_Free(AObj: TOpenDialog); stdcall;
 begin
   AObj.Free;
 end;
 
-function OpenDialog_Execute(AObj: TOpenDialog; ParentWnd: HWND): LongBool; cdecl;
+function OpenDialog_Execute(AObj: TOpenDialog; ParentWnd: HWND): LongBool; stdcall;
 begin
   Result :=  AObj.Execute(ParentWnd);
 end;
 
-function OpenDialog_FindComponent(AObj: TOpenDialog; AName: PChar): TComponent; cdecl;
+function OpenDialog_FindComponent(AObj: TOpenDialog; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function OpenDialog_GetNamePath(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetNamePath(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function OpenDialog_HasParent(AObj: TOpenDialog): LongBool; cdecl;
+function OpenDialog_HasParent(AObj: TOpenDialog): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure OpenDialog_Assign(AObj: TOpenDialog; Source: TPersistent); cdecl;
+procedure OpenDialog_Assign(AObj: TOpenDialog; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function OpenDialog_ClassName(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_ClassName(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function OpenDialog_Equals(AObj: TOpenDialog; Obj: TObject): LongBool; cdecl;
+function OpenDialog_Equals(AObj: TOpenDialog; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function OpenDialog_GetHashCode(AObj: TOpenDialog): Integer; cdecl;
+function OpenDialog_GetHashCode(AObj: TOpenDialog): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function OpenDialog_ToString(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_ToString(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function OpenDialog_GetFiles(AObj: TOpenDialog): TStrings; cdecl;
+function OpenDialog_GetFiles(AObj: TOpenDialog): TStrings; stdcall;
 begin
   Result :=  AObj.Files;
 end;
 
-function OpenDialog_GetDefaultExt(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetDefaultExt(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.DefaultExt);
 end;
 
-procedure OpenDialog_SetDefaultExt(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetDefaultExt(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.DefaultExt := AValue;
 end;
 
-function OpenDialog_GetFileName(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetFileName(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.FileName);
 end;
 
-procedure OpenDialog_SetFileName(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetFileName(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.FileName := AValue;
 end;
 
-function OpenDialog_GetFilter(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetFilter(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Filter);
 end;
 
-procedure OpenDialog_SetFilter(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetFilter(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.Filter := AValue;
 end;
 
-function OpenDialog_GetFilterIndex(AObj: TOpenDialog): Integer; cdecl;
+function OpenDialog_GetFilterIndex(AObj: TOpenDialog): Integer; stdcall;
 begin
   Result :=  AObj.FilterIndex;
 end;
 
-procedure OpenDialog_SetFilterIndex(AObj: TOpenDialog; AValue: Integer); cdecl;
+procedure OpenDialog_SetFilterIndex(AObj: TOpenDialog; AValue: Integer); stdcall;
 begin
   AObj.FilterIndex := AValue;
 end;
 
-function OpenDialog_GetInitialDir(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetInitialDir(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.InitialDir);
 end;
 
-procedure OpenDialog_SetInitialDir(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetInitialDir(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.InitialDir := AValue;
 end;
 
-function OpenDialog_GetOptions(AObj: TOpenDialog): TOpenOptions; cdecl;
+function OpenDialog_GetOptions(AObj: TOpenDialog): TOpenOptions; stdcall;
 begin
   Result :=  AObj.Options;
 end;
 
-procedure OpenDialog_SetOptions(AObj: TOpenDialog; AValue: TOpenOptions); cdecl;
+procedure OpenDialog_SetOptions(AObj: TOpenDialog; AValue: TOpenOptions); stdcall;
 begin
   AObj.Options := AValue;
 end;
 
-function OpenDialog_GetOptionsEx(AObj: TOpenDialog): TOpenOptionsEx; cdecl;
+function OpenDialog_GetOptionsEx(AObj: TOpenDialog): TOpenOptionsEx; stdcall;
 begin
   Result :=  AObj.OptionsEx;
 end;
 
-procedure OpenDialog_SetOptionsEx(AObj: TOpenDialog; AValue: TOpenOptionsEx); cdecl;
+procedure OpenDialog_SetOptionsEx(AObj: TOpenDialog; AValue: TOpenOptionsEx); stdcall;
 begin
   AObj.OptionsEx := AValue;
 end;
 
-function OpenDialog_GetTitle(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetTitle(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Title);
 end;
 
-procedure OpenDialog_SetTitle(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetTitle(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.Title := AValue;
 end;
 
-function OpenDialog_GetHandle(AObj: TOpenDialog): HWND; cdecl;
+function OpenDialog_GetHandle(AObj: TOpenDialog): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-procedure OpenDialog_SetOnClose(AObj: TOpenDialog; AEventId: NativeUInt); stdcall
+procedure OpenDialog_SetOnClose(AObj: TOpenDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -162,7 +162,7 @@ begin
   TEventClass.Add(AObj, geClose, AEventId);
 end;
 
-procedure OpenDialog_SetOnShow(AObj: TOpenDialog; AEventId: NativeUInt); stdcall
+procedure OpenDialog_SetOnShow(AObj: TOpenDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -174,91 +174,91 @@ begin
   TEventClass.Add(AObj, geShow, AEventId);
 end;
 
-function OpenDialog_GetComponentCount(AObj: TOpenDialog): Integer; cdecl;
+function OpenDialog_GetComponentCount(AObj: TOpenDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function OpenDialog_GetComponentIndex(AObj: TOpenDialog): Integer; cdecl;
+function OpenDialog_GetComponentIndex(AObj: TOpenDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure OpenDialog_SetComponentIndex(AObj: TOpenDialog; AValue: Integer); cdecl;
+procedure OpenDialog_SetComponentIndex(AObj: TOpenDialog; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function OpenDialog_GetOwner(AObj: TOpenDialog): TComponent; cdecl;
+function OpenDialog_GetOwner(AObj: TOpenDialog): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function OpenDialog_GetName(AObj: TOpenDialog): PChar; cdecl;
+function OpenDialog_GetName(AObj: TOpenDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure OpenDialog_SetName(AObj: TOpenDialog; AValue: PChar); cdecl;
+procedure OpenDialog_SetName(AObj: TOpenDialog; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function OpenDialog_GetTag(AObj: TOpenDialog): NativeInt; cdecl;
+function OpenDialog_GetTag(AObj: TOpenDialog): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure OpenDialog_SetTag(AObj: TOpenDialog; AValue: NativeInt); cdecl;
+procedure OpenDialog_SetTag(AObj: TOpenDialog; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function OpenDialog_GetComponents(AObj: TOpenDialog; AIndex: Integer): TComponent; cdecl;
+function OpenDialog_GetComponents(AObj: TOpenDialog; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  OpenDialog_Create {$IFNDEF MSWINDOWS}name '_OpenDialog_Create'{$ENDIF},
-  OpenDialog_Free {$IFNDEF MSWINDOWS}name '_OpenDialog_Free'{$ENDIF},
-  OpenDialog_Execute {$IFNDEF MSWINDOWS}name '_OpenDialog_Execute'{$ENDIF},
-  OpenDialog_FindComponent {$IFNDEF MSWINDOWS}name '_OpenDialog_FindComponent'{$ENDIF},
-  OpenDialog_GetNamePath {$IFNDEF MSWINDOWS}name '_OpenDialog_GetNamePath'{$ENDIF},
-  OpenDialog_HasParent {$IFNDEF MSWINDOWS}name '_OpenDialog_HasParent'{$ENDIF},
-  OpenDialog_Assign {$IFNDEF MSWINDOWS}name '_OpenDialog_Assign'{$ENDIF},
-  OpenDialog_ClassName {$IFNDEF MSWINDOWS}name '_OpenDialog_ClassName'{$ENDIF},
-  OpenDialog_Equals {$IFNDEF MSWINDOWS}name '_OpenDialog_Equals'{$ENDIF},
-  OpenDialog_GetHashCode {$IFNDEF MSWINDOWS}name '_OpenDialog_GetHashCode'{$ENDIF},
-  OpenDialog_ToString {$IFNDEF MSWINDOWS}name '_OpenDialog_ToString'{$ENDIF},
-  OpenDialog_GetFiles {$IFNDEF MSWINDOWS}name '_OpenDialog_GetFiles'{$ENDIF},
-  OpenDialog_GetDefaultExt {$IFNDEF MSWINDOWS}name '_OpenDialog_GetDefaultExt'{$ENDIF},
-  OpenDialog_SetDefaultExt {$IFNDEF MSWINDOWS}name '_OpenDialog_SetDefaultExt'{$ENDIF},
-  OpenDialog_GetFileName {$IFNDEF MSWINDOWS}name '_OpenDialog_GetFileName'{$ENDIF},
-  OpenDialog_SetFileName {$IFNDEF MSWINDOWS}name '_OpenDialog_SetFileName'{$ENDIF},
-  OpenDialog_GetFilter {$IFNDEF MSWINDOWS}name '_OpenDialog_GetFilter'{$ENDIF},
-  OpenDialog_SetFilter {$IFNDEF MSWINDOWS}name '_OpenDialog_SetFilter'{$ENDIF},
-  OpenDialog_GetFilterIndex {$IFNDEF MSWINDOWS}name '_OpenDialog_GetFilterIndex'{$ENDIF},
-  OpenDialog_SetFilterIndex {$IFNDEF MSWINDOWS}name '_OpenDialog_SetFilterIndex'{$ENDIF},
-  OpenDialog_GetInitialDir {$IFNDEF MSWINDOWS}name '_OpenDialog_GetInitialDir'{$ENDIF},
-  OpenDialog_SetInitialDir {$IFNDEF MSWINDOWS}name '_OpenDialog_SetInitialDir'{$ENDIF},
-  OpenDialog_GetOptions {$IFNDEF MSWINDOWS}name '_OpenDialog_GetOptions'{$ENDIF},
-  OpenDialog_SetOptions {$IFNDEF MSWINDOWS}name '_OpenDialog_SetOptions'{$ENDIF},
-  OpenDialog_GetOptionsEx {$IFNDEF MSWINDOWS}name '_OpenDialog_GetOptionsEx'{$ENDIF},
-  OpenDialog_SetOptionsEx {$IFNDEF MSWINDOWS}name '_OpenDialog_SetOptionsEx'{$ENDIF},
-  OpenDialog_GetTitle {$IFNDEF MSWINDOWS}name '_OpenDialog_GetTitle'{$ENDIF},
-  OpenDialog_SetTitle {$IFNDEF MSWINDOWS}name '_OpenDialog_SetTitle'{$ENDIF},
-  OpenDialog_GetHandle {$IFNDEF MSWINDOWS}name '_OpenDialog_GetHandle'{$ENDIF},
-  OpenDialog_SetOnClose {$IFNDEF MSWINDOWS}name '_OpenDialog_SetOnClose'{$ENDIF},
-  OpenDialog_SetOnShow {$IFNDEF MSWINDOWS}name '_OpenDialog_SetOnShow'{$ENDIF},
-  OpenDialog_GetComponentCount {$IFNDEF MSWINDOWS}name '_OpenDialog_GetComponentCount'{$ENDIF},
-  OpenDialog_GetComponentIndex {$IFNDEF MSWINDOWS}name '_OpenDialog_GetComponentIndex'{$ENDIF},
-  OpenDialog_SetComponentIndex {$IFNDEF MSWINDOWS}name '_OpenDialog_SetComponentIndex'{$ENDIF},
-  OpenDialog_GetOwner {$IFNDEF MSWINDOWS}name '_OpenDialog_GetOwner'{$ENDIF},
-  OpenDialog_GetName {$IFNDEF MSWINDOWS}name '_OpenDialog_GetName'{$ENDIF},
-  OpenDialog_SetName {$IFNDEF MSWINDOWS}name '_OpenDialog_SetName'{$ENDIF},
-  OpenDialog_GetTag {$IFNDEF MSWINDOWS}name '_OpenDialog_GetTag'{$ENDIF},
-  OpenDialog_SetTag {$IFNDEF MSWINDOWS}name '_OpenDialog_SetTag'{$ENDIF},
-  OpenDialog_GetComponents {$IFNDEF MSWINDOWS}name '_OpenDialog_GetComponents'{$ENDIF};
+  OpenDialog_Create,
+  OpenDialog_Free,
+  OpenDialog_Execute,
+  OpenDialog_FindComponent,
+  OpenDialog_GetNamePath,
+  OpenDialog_HasParent,
+  OpenDialog_Assign,
+  OpenDialog_ClassName,
+  OpenDialog_Equals,
+  OpenDialog_GetHashCode,
+  OpenDialog_ToString,
+  OpenDialog_GetFiles,
+  OpenDialog_GetDefaultExt,
+  OpenDialog_SetDefaultExt,
+  OpenDialog_GetFileName,
+  OpenDialog_SetFileName,
+  OpenDialog_GetFilter,
+  OpenDialog_SetFilter,
+  OpenDialog_GetFilterIndex,
+  OpenDialog_SetFilterIndex,
+  OpenDialog_GetInitialDir,
+  OpenDialog_SetInitialDir,
+  OpenDialog_GetOptions,
+  OpenDialog_SetOptions,
+  OpenDialog_GetOptionsEx,
+  OpenDialog_SetOptionsEx,
+  OpenDialog_GetTitle,
+  OpenDialog_SetTitle,
+  OpenDialog_GetHandle,
+  OpenDialog_SetOnClose,
+  OpenDialog_SetOnShow,
+  OpenDialog_GetComponentCount,
+  OpenDialog_GetComponentIndex,
+  OpenDialog_SetComponentIndex,
+  OpenDialog_GetOwner,
+  OpenDialog_GetName,
+  OpenDialog_SetName,
+  OpenDialog_GetTag,
+  OpenDialog_SetTag,
+  OpenDialog_GetComponents;
 

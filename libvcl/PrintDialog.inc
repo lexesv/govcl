@@ -5,157 +5,157 @@
 //
 //----------------------------------------
 
-function PrintDialog_Create(AOwner: TComponent): TPrintDialog; cdecl;
+function PrintDialog_Create(AOwner: TComponent): TPrintDialog; stdcall;
 begin
   Result :=  TPrintDialog.Create(AOwner);
 end;
 
-procedure PrintDialog_Free(AObj: TPrintDialog); cdecl;
+procedure PrintDialog_Free(AObj: TPrintDialog); stdcall;
 begin
   AObj.Free;
 end;
 
-function PrintDialog_Execute(AObj: TPrintDialog; ParentWnd: HWND): LongBool; cdecl;
+function PrintDialog_Execute(AObj: TPrintDialog; ParentWnd: HWND): LongBool; stdcall;
 begin
   Result :=  AObj.Execute(ParentWnd);
 end;
 
-function PrintDialog_FindComponent(AObj: TPrintDialog; AName: PChar): TComponent; cdecl;
+function PrintDialog_FindComponent(AObj: TPrintDialog; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function PrintDialog_GetNamePath(AObj: TPrintDialog): PChar; cdecl;
+function PrintDialog_GetNamePath(AObj: TPrintDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function PrintDialog_HasParent(AObj: TPrintDialog): LongBool; cdecl;
+function PrintDialog_HasParent(AObj: TPrintDialog): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure PrintDialog_Assign(AObj: TPrintDialog; Source: TPersistent); cdecl;
+procedure PrintDialog_Assign(AObj: TPrintDialog; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function PrintDialog_ClassName(AObj: TPrintDialog): PChar; cdecl;
+function PrintDialog_ClassName(AObj: TPrintDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function PrintDialog_Equals(AObj: TPrintDialog; Obj: TObject): LongBool; cdecl;
+function PrintDialog_Equals(AObj: TPrintDialog; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function PrintDialog_GetHashCode(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetHashCode(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function PrintDialog_ToString(AObj: TPrintDialog): PChar; cdecl;
+function PrintDialog_ToString(AObj: TPrintDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function PrintDialog_GetCollate(AObj: TPrintDialog): LongBool; cdecl;
+function PrintDialog_GetCollate(AObj: TPrintDialog): LongBool; stdcall;
 begin
   Result :=  AObj.Collate;
 end;
 
-procedure PrintDialog_SetCollate(AObj: TPrintDialog; AValue: LongBool); cdecl;
+procedure PrintDialog_SetCollate(AObj: TPrintDialog; AValue: LongBool); stdcall;
 begin
   AObj.Collate := AValue;
 end;
 
-function PrintDialog_GetCopies(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetCopies(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.Copies;
 end;
 
-procedure PrintDialog_SetCopies(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetCopies(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.Copies := AValue;
 end;
 
-function PrintDialog_GetFromPage(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetFromPage(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.FromPage;
 end;
 
-procedure PrintDialog_SetFromPage(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetFromPage(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.FromPage := AValue;
 end;
 
-function PrintDialog_GetMinPage(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetMinPage(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.MinPage;
 end;
 
-procedure PrintDialog_SetMinPage(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetMinPage(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.MinPage := AValue;
 end;
 
-function PrintDialog_GetMaxPage(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetMaxPage(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.MaxPage;
 end;
 
-procedure PrintDialog_SetMaxPage(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetMaxPage(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.MaxPage := AValue;
 end;
 
-function PrintDialog_GetOptions(AObj: TPrintDialog): TPrintDialogOptions; cdecl;
+function PrintDialog_GetOptions(AObj: TPrintDialog): TPrintDialogOptions; stdcall;
 begin
   Result :=  AObj.Options;
 end;
 
-procedure PrintDialog_SetOptions(AObj: TPrintDialog; AValue: TPrintDialogOptions); cdecl;
+procedure PrintDialog_SetOptions(AObj: TPrintDialog; AValue: TPrintDialogOptions); stdcall;
 begin
   AObj.Options := AValue;
 end;
 
-function PrintDialog_GetPrintToFile(AObj: TPrintDialog): LongBool; cdecl;
+function PrintDialog_GetPrintToFile(AObj: TPrintDialog): LongBool; stdcall;
 begin
   Result :=  AObj.PrintToFile;
 end;
 
-procedure PrintDialog_SetPrintToFile(AObj: TPrintDialog; AValue: LongBool); cdecl;
+procedure PrintDialog_SetPrintToFile(AObj: TPrintDialog; AValue: LongBool); stdcall;
 begin
   AObj.PrintToFile := AValue;
 end;
 
-function PrintDialog_GetPrintRange(AObj: TPrintDialog): TPrintRange; cdecl;
+function PrintDialog_GetPrintRange(AObj: TPrintDialog): TPrintRange; stdcall;
 begin
   Result :=  AObj.PrintRange;
 end;
 
-procedure PrintDialog_SetPrintRange(AObj: TPrintDialog; AValue: TPrintRange); cdecl;
+procedure PrintDialog_SetPrintRange(AObj: TPrintDialog; AValue: TPrintRange); stdcall;
 begin
   AObj.PrintRange := AValue;
 end;
 
-function PrintDialog_GetToPage(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetToPage(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.ToPage;
 end;
 
-procedure PrintDialog_SetToPage(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetToPage(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.ToPage := AValue;
 end;
 
-function PrintDialog_GetHandle(AObj: TPrintDialog): HWND; cdecl;
+function PrintDialog_GetHandle(AObj: TPrintDialog): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-procedure PrintDialog_SetOnClose(AObj: TPrintDialog; AEventId: NativeUInt); stdcall
+procedure PrintDialog_SetOnClose(AObj: TPrintDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -167,7 +167,7 @@ begin
   TEventClass.Add(AObj, geClose, AEventId);
 end;
 
-procedure PrintDialog_SetOnShow(AObj: TPrintDialog; AEventId: NativeUInt); stdcall
+procedure PrintDialog_SetOnShow(AObj: TPrintDialog; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -179,92 +179,92 @@ begin
   TEventClass.Add(AObj, geShow, AEventId);
 end;
 
-function PrintDialog_GetComponentCount(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetComponentCount(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function PrintDialog_GetComponentIndex(AObj: TPrintDialog): Integer; cdecl;
+function PrintDialog_GetComponentIndex(AObj: TPrintDialog): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure PrintDialog_SetComponentIndex(AObj: TPrintDialog; AValue: Integer); cdecl;
+procedure PrintDialog_SetComponentIndex(AObj: TPrintDialog; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function PrintDialog_GetOwner(AObj: TPrintDialog): TComponent; cdecl;
+function PrintDialog_GetOwner(AObj: TPrintDialog): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function PrintDialog_GetName(AObj: TPrintDialog): PChar; cdecl;
+function PrintDialog_GetName(AObj: TPrintDialog): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure PrintDialog_SetName(AObj: TPrintDialog; AValue: PChar); cdecl;
+procedure PrintDialog_SetName(AObj: TPrintDialog; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function PrintDialog_GetTag(AObj: TPrintDialog): NativeInt; cdecl;
+function PrintDialog_GetTag(AObj: TPrintDialog): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure PrintDialog_SetTag(AObj: TPrintDialog; AValue: NativeInt); cdecl;
+procedure PrintDialog_SetTag(AObj: TPrintDialog; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function PrintDialog_GetComponents(AObj: TPrintDialog; AIndex: Integer): TComponent; cdecl;
+function PrintDialog_GetComponents(AObj: TPrintDialog; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  PrintDialog_Create {$IFNDEF MSWINDOWS}name '_PrintDialog_Create'{$ENDIF},
-  PrintDialog_Free {$IFNDEF MSWINDOWS}name '_PrintDialog_Free'{$ENDIF},
-  PrintDialog_Execute {$IFNDEF MSWINDOWS}name '_PrintDialog_Execute'{$ENDIF},
-  PrintDialog_FindComponent {$IFNDEF MSWINDOWS}name '_PrintDialog_FindComponent'{$ENDIF},
-  PrintDialog_GetNamePath {$IFNDEF MSWINDOWS}name '_PrintDialog_GetNamePath'{$ENDIF},
-  PrintDialog_HasParent {$IFNDEF MSWINDOWS}name '_PrintDialog_HasParent'{$ENDIF},
-  PrintDialog_Assign {$IFNDEF MSWINDOWS}name '_PrintDialog_Assign'{$ENDIF},
-  PrintDialog_ClassName {$IFNDEF MSWINDOWS}name '_PrintDialog_ClassName'{$ENDIF},
-  PrintDialog_Equals {$IFNDEF MSWINDOWS}name '_PrintDialog_Equals'{$ENDIF},
-  PrintDialog_GetHashCode {$IFNDEF MSWINDOWS}name '_PrintDialog_GetHashCode'{$ENDIF},
-  PrintDialog_ToString {$IFNDEF MSWINDOWS}name '_PrintDialog_ToString'{$ENDIF},
-  PrintDialog_GetCollate {$IFNDEF MSWINDOWS}name '_PrintDialog_GetCollate'{$ENDIF},
-  PrintDialog_SetCollate {$IFNDEF MSWINDOWS}name '_PrintDialog_SetCollate'{$ENDIF},
-  PrintDialog_GetCopies {$IFNDEF MSWINDOWS}name '_PrintDialog_GetCopies'{$ENDIF},
-  PrintDialog_SetCopies {$IFNDEF MSWINDOWS}name '_PrintDialog_SetCopies'{$ENDIF},
-  PrintDialog_GetFromPage {$IFNDEF MSWINDOWS}name '_PrintDialog_GetFromPage'{$ENDIF},
-  PrintDialog_SetFromPage {$IFNDEF MSWINDOWS}name '_PrintDialog_SetFromPage'{$ENDIF},
-  PrintDialog_GetMinPage {$IFNDEF MSWINDOWS}name '_PrintDialog_GetMinPage'{$ENDIF},
-  PrintDialog_SetMinPage {$IFNDEF MSWINDOWS}name '_PrintDialog_SetMinPage'{$ENDIF},
-  PrintDialog_GetMaxPage {$IFNDEF MSWINDOWS}name '_PrintDialog_GetMaxPage'{$ENDIF},
-  PrintDialog_SetMaxPage {$IFNDEF MSWINDOWS}name '_PrintDialog_SetMaxPage'{$ENDIF},
-  PrintDialog_GetOptions {$IFNDEF MSWINDOWS}name '_PrintDialog_GetOptions'{$ENDIF},
-  PrintDialog_SetOptions {$IFNDEF MSWINDOWS}name '_PrintDialog_SetOptions'{$ENDIF},
-  PrintDialog_GetPrintToFile {$IFNDEF MSWINDOWS}name '_PrintDialog_GetPrintToFile'{$ENDIF},
-  PrintDialog_SetPrintToFile {$IFNDEF MSWINDOWS}name '_PrintDialog_SetPrintToFile'{$ENDIF},
-  PrintDialog_GetPrintRange {$IFNDEF MSWINDOWS}name '_PrintDialog_GetPrintRange'{$ENDIF},
-  PrintDialog_SetPrintRange {$IFNDEF MSWINDOWS}name '_PrintDialog_SetPrintRange'{$ENDIF},
-  PrintDialog_GetToPage {$IFNDEF MSWINDOWS}name '_PrintDialog_GetToPage'{$ENDIF},
-  PrintDialog_SetToPage {$IFNDEF MSWINDOWS}name '_PrintDialog_SetToPage'{$ENDIF},
-  PrintDialog_GetHandle {$IFNDEF MSWINDOWS}name '_PrintDialog_GetHandle'{$ENDIF},
-  PrintDialog_SetOnClose {$IFNDEF MSWINDOWS}name '_PrintDialog_SetOnClose'{$ENDIF},
-  PrintDialog_SetOnShow {$IFNDEF MSWINDOWS}name '_PrintDialog_SetOnShow'{$ENDIF},
-  PrintDialog_GetComponentCount {$IFNDEF MSWINDOWS}name '_PrintDialog_GetComponentCount'{$ENDIF},
-  PrintDialog_GetComponentIndex {$IFNDEF MSWINDOWS}name '_PrintDialog_GetComponentIndex'{$ENDIF},
-  PrintDialog_SetComponentIndex {$IFNDEF MSWINDOWS}name '_PrintDialog_SetComponentIndex'{$ENDIF},
-  PrintDialog_GetOwner {$IFNDEF MSWINDOWS}name '_PrintDialog_GetOwner'{$ENDIF},
-  PrintDialog_GetName {$IFNDEF MSWINDOWS}name '_PrintDialog_GetName'{$ENDIF},
-  PrintDialog_SetName {$IFNDEF MSWINDOWS}name '_PrintDialog_SetName'{$ENDIF},
-  PrintDialog_GetTag {$IFNDEF MSWINDOWS}name '_PrintDialog_GetTag'{$ENDIF},
-  PrintDialog_SetTag {$IFNDEF MSWINDOWS}name '_PrintDialog_SetTag'{$ENDIF},
-  PrintDialog_GetComponents {$IFNDEF MSWINDOWS}name '_PrintDialog_GetComponents'{$ENDIF};
+  PrintDialog_Create,
+  PrintDialog_Free,
+  PrintDialog_Execute,
+  PrintDialog_FindComponent,
+  PrintDialog_GetNamePath,
+  PrintDialog_HasParent,
+  PrintDialog_Assign,
+  PrintDialog_ClassName,
+  PrintDialog_Equals,
+  PrintDialog_GetHashCode,
+  PrintDialog_ToString,
+  PrintDialog_GetCollate,
+  PrintDialog_SetCollate,
+  PrintDialog_GetCopies,
+  PrintDialog_SetCopies,
+  PrintDialog_GetFromPage,
+  PrintDialog_SetFromPage,
+  PrintDialog_GetMinPage,
+  PrintDialog_SetMinPage,
+  PrintDialog_GetMaxPage,
+  PrintDialog_SetMaxPage,
+  PrintDialog_GetOptions,
+  PrintDialog_SetOptions,
+  PrintDialog_GetPrintToFile,
+  PrintDialog_SetPrintToFile,
+  PrintDialog_GetPrintRange,
+  PrintDialog_SetPrintRange,
+  PrintDialog_GetToPage,
+  PrintDialog_SetToPage,
+  PrintDialog_GetHandle,
+  PrintDialog_SetOnClose,
+  PrintDialog_SetOnShow,
+  PrintDialog_GetComponentCount,
+  PrintDialog_GetComponentIndex,
+  PrintDialog_SetComponentIndex,
+  PrintDialog_GetOwner,
+  PrintDialog_GetName,
+  PrintDialog_SetName,
+  PrintDialog_GetTag,
+  PrintDialog_SetTag,
+  PrintDialog_GetComponents;
 

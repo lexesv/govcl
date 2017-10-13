@@ -5,108 +5,108 @@
 //
 //----------------------------------------
 
-function ListColumns_Create(AOwner: TCustomListView): TListColumns; cdecl;
+function ListColumns_Create(AOwner: TCustomListView): TListColumns; stdcall;
 begin
   Result :=  TListColumns.Create(AOwner);
 end;
 
-procedure ListColumns_Free(AObj: TListColumns); cdecl;
+procedure ListColumns_Free(AObj: TListColumns); stdcall;
 begin
   AObj.Free;
 end;
 
-function ListColumns_Add(AObj: TListColumns): TListColumn; cdecl;
+function ListColumns_Add(AObj: TListColumns): TListColumn; stdcall;
 begin
   Result :=  AObj.Add;
 end;
 
-function ListColumns_Owner(AObj: TListColumns): TCustomListView; cdecl;
+function ListColumns_Owner(AObj: TListColumns): TCustomListView; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-procedure ListColumns_Assign(AObj: TListColumns; Source: TPersistent); cdecl;
+procedure ListColumns_Assign(AObj: TListColumns; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-procedure ListColumns_BeginUpdate(AObj: TListColumns); cdecl;
+procedure ListColumns_BeginUpdate(AObj: TListColumns); stdcall;
 begin
   AObj.BeginUpdate;
 end;
 
-procedure ListColumns_Clear(AObj: TListColumns); cdecl;
+procedure ListColumns_Clear(AObj: TListColumns); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure ListColumns_Delete(AObj: TListColumns; Index: Integer); cdecl;
+procedure ListColumns_Delete(AObj: TListColumns; Index: Integer); stdcall;
 begin
   AObj.Delete(Index);
 end;
 
-procedure ListColumns_EndUpdate(AObj: TListColumns); cdecl;
+procedure ListColumns_EndUpdate(AObj: TListColumns); stdcall;
 begin
   AObj.EndUpdate;
 end;
 
-function ListColumns_GetNamePath(AObj: TListColumns): PChar; cdecl;
+function ListColumns_GetNamePath(AObj: TListColumns): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function ListColumns_Insert(AObj: TListColumns; Index: Integer): TCollectionItem; cdecl;
+function ListColumns_Insert(AObj: TListColumns; Index: Integer): TCollectionItem; stdcall;
 begin
   Result :=  AObj.Insert(Index);
 end;
 
-function ListColumns_ClassName(AObj: TListColumns): PChar; cdecl;
+function ListColumns_ClassName(AObj: TListColumns): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ListColumns_Equals(AObj: TListColumns; Obj: TObject): LongBool; cdecl;
+function ListColumns_Equals(AObj: TListColumns; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ListColumns_GetHashCode(AObj: TListColumns): Integer; cdecl;
+function ListColumns_GetHashCode(AObj: TListColumns): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ListColumns_ToString(AObj: TListColumns): PChar; cdecl;
+function ListColumns_ToString(AObj: TListColumns): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ListColumns_GetItems(AObj: TListColumns; Index: Integer): TListColumn; cdecl;
+function ListColumns_GetItems(AObj: TListColumns; Index: Integer): TListColumn; stdcall;
 begin
   Result :=  AObj.Items[Index];
 end;
 
-procedure ListColumns_SetItems(AObj: TListColumns; Index: Integer; AValue: TListColumn); cdecl;
+procedure ListColumns_SetItems(AObj: TListColumns; Index: Integer; AValue: TListColumn); stdcall;
 begin
   AObj.Items[Index] := AValue;
 end;
 
 
 exports
-  ListColumns_Create {$IFNDEF MSWINDOWS}name '_ListColumns_Create'{$ENDIF},
-  ListColumns_Free {$IFNDEF MSWINDOWS}name '_ListColumns_Free'{$ENDIF},
-  ListColumns_Add {$IFNDEF MSWINDOWS}name '_ListColumns_Add'{$ENDIF},
-  ListColumns_Owner {$IFNDEF MSWINDOWS}name '_ListColumns_Owner'{$ENDIF},
-  ListColumns_Assign {$IFNDEF MSWINDOWS}name '_ListColumns_Assign'{$ENDIF},
-  ListColumns_BeginUpdate {$IFNDEF MSWINDOWS}name '_ListColumns_BeginUpdate'{$ENDIF},
-  ListColumns_Clear {$IFNDEF MSWINDOWS}name '_ListColumns_Clear'{$ENDIF},
-  ListColumns_Delete {$IFNDEF MSWINDOWS}name '_ListColumns_Delete'{$ENDIF},
-  ListColumns_EndUpdate {$IFNDEF MSWINDOWS}name '_ListColumns_EndUpdate'{$ENDIF},
-  ListColumns_GetNamePath {$IFNDEF MSWINDOWS}name '_ListColumns_GetNamePath'{$ENDIF},
-  ListColumns_Insert {$IFNDEF MSWINDOWS}name '_ListColumns_Insert'{$ENDIF},
-  ListColumns_ClassName {$IFNDEF MSWINDOWS}name '_ListColumns_ClassName'{$ENDIF},
-  ListColumns_Equals {$IFNDEF MSWINDOWS}name '_ListColumns_Equals'{$ENDIF},
-  ListColumns_GetHashCode {$IFNDEF MSWINDOWS}name '_ListColumns_GetHashCode'{$ENDIF},
-  ListColumns_ToString {$IFNDEF MSWINDOWS}name '_ListColumns_ToString'{$ENDIF},
-  ListColumns_GetItems {$IFNDEF MSWINDOWS}name '_ListColumns_GetItems'{$ENDIF},
-  ListColumns_SetItems {$IFNDEF MSWINDOWS}name '_ListColumns_SetItems'{$ENDIF};
+  ListColumns_Create,
+  ListColumns_Free,
+  ListColumns_Add,
+  ListColumns_Owner,
+  ListColumns_Assign,
+  ListColumns_BeginUpdate,
+  ListColumns_Clear,
+  ListColumns_Delete,
+  ListColumns_EndUpdate,
+  ListColumns_GetNamePath,
+  ListColumns_Insert,
+  ListColumns_ClassName,
+  ListColumns_Equals,
+  ListColumns_GetHashCode,
+  ListColumns_ToString,
+  ListColumns_GetItems,
+  ListColumns_SetItems;
 

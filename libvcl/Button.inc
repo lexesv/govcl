@@ -5,472 +5,472 @@
 //
 //----------------------------------------
 
-function Button_Create(AOwner: TComponent): TButton; cdecl;
+function Button_Create(AOwner: TComponent): TButton; stdcall;
 begin
   Result :=  TButton.Create(AOwner);
 end;
 
-procedure Button_Free(AObj: TButton); cdecl;
+procedure Button_Free(AObj: TButton); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Button_Click(AObj: TButton); cdecl;
+procedure Button_Click(AObj: TButton); stdcall;
 begin
   AObj.Click;
 end;
 
-function Button_CanFocus(AObj: TButton): LongBool; cdecl;
+function Button_CanFocus(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure Button_FlipChildren(AObj: TButton; AllLevels: LongBool); cdecl;
+procedure Button_FlipChildren(AObj: TButton; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function Button_Focused(AObj: TButton): LongBool; cdecl;
+function Button_Focused(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function Button_HandleAllocated(AObj: TButton): LongBool; cdecl;
+function Button_HandleAllocated(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure Button_Invalidate(AObj: TButton); cdecl;
+procedure Button_Invalidate(AObj: TButton); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure Button_Realign(AObj: TButton); cdecl;
+procedure Button_Realign(AObj: TButton); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure Button_Repaint(AObj: TButton); cdecl;
+procedure Button_Repaint(AObj: TButton); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure Button_ScaleBy(AObj: TButton; M: Integer; D: Integer); cdecl;
+procedure Button_ScaleBy(AObj: TButton; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure Button_SetBounds(AObj: TButton; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Button_SetBounds(AObj: TButton; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure Button_SetFocus(AObj: TButton); cdecl;
+procedure Button_SetFocus(AObj: TButton); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure Button_Update(AObj: TButton); cdecl;
+procedure Button_Update(AObj: TButton); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure Button_BringToFront(AObj: TButton); cdecl;
+procedure Button_BringToFront(AObj: TButton); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function Button_HasParent(AObj: TButton): LongBool; cdecl;
+function Button_HasParent(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure Button_Hide(AObj: TButton); cdecl;
+procedure Button_Hide(AObj: TButton); stdcall;
 begin
   AObj.Hide;
 end;
 
-function Button_Perform(AObj: TButton; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function Button_Perform(AObj: TButton; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure Button_Refresh(AObj: TButton); cdecl;
+procedure Button_Refresh(AObj: TButton); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure Button_SendToBack(AObj: TButton); cdecl;
+procedure Button_SendToBack(AObj: TButton); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure Button_Show(AObj: TButton); cdecl;
+procedure Button_Show(AObj: TButton); stdcall;
 begin
   AObj.Show;
 end;
 
-function Button_GetTextBuf(AObj: TButton; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function Button_GetTextBuf(AObj: TButton; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function Button_FindComponent(AObj: TButton; AName: PChar): TComponent; cdecl;
+function Button_FindComponent(AObj: TButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Button_GetNamePath(AObj: TButton): PChar; cdecl;
+function Button_GetNamePath(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure Button_Assign(AObj: TButton; Source: TPersistent); cdecl;
+procedure Button_Assign(AObj: TButton; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Button_ClassName(AObj: TButton): PChar; cdecl;
+function Button_ClassName(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Button_Equals(AObj: TButton; Obj: TObject): LongBool; cdecl;
+function Button_Equals(AObj: TButton; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Button_GetHashCode(AObj: TButton): Integer; cdecl;
+function Button_GetHashCode(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Button_ToString(AObj: TButton): PChar; cdecl;
+function Button_ToString(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Button_GetAction(AObj: TButton): TBasicAction; cdecl;
+function Button_GetAction(AObj: TButton): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure Button_SetAction(AObj: TButton; AValue: TBasicAction); cdecl;
+procedure Button_SetAction(AObj: TButton; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function Button_GetAlign(AObj: TButton): TAlign; cdecl;
+function Button_GetAlign(AObj: TButton): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure Button_SetAlign(AObj: TButton; AValue: TAlign); cdecl;
+procedure Button_SetAlign(AObj: TButton; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function Button_GetAnchors(AObj: TButton): TAnchors; cdecl;
+function Button_GetAnchors(AObj: TButton): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure Button_SetAnchors(AObj: TButton; AValue: TAnchors); cdecl;
+procedure Button_SetAnchors(AObj: TButton; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function Button_GetBiDiMode(AObj: TButton): TBiDiMode; cdecl;
+function Button_GetBiDiMode(AObj: TButton): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure Button_SetBiDiMode(AObj: TButton; AValue: TBiDiMode); cdecl;
+procedure Button_SetBiDiMode(AObj: TButton; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function Button_GetCancel(AObj: TButton): LongBool; cdecl;
+function Button_GetCancel(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.Cancel;
 end;
 
-procedure Button_SetCancel(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetCancel(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.Cancel := AValue;
 end;
 
-function Button_GetCaption(AObj: TButton): PChar; cdecl;
+function Button_GetCaption(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure Button_SetCaption(AObj: TButton; AValue: PChar); cdecl;
+procedure Button_SetCaption(AObj: TButton; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function Button_GetCommandLinkHint(AObj: TButton): PChar; cdecl;
+function Button_GetCommandLinkHint(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.CommandLinkHint);
 end;
 
-procedure Button_SetCommandLinkHint(AObj: TButton; AValue: PChar); cdecl;
+procedure Button_SetCommandLinkHint(AObj: TButton; AValue: PChar); stdcall;
 begin
   AObj.CommandLinkHint := AValue;
 end;
 
-function Button_GetDefault(AObj: TButton): LongBool; cdecl;
+function Button_GetDefault(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.Default;
 end;
 
-procedure Button_SetDefault(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetDefault(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.Default := AValue;
 end;
 
-function Button_GetDisabledImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetDisabledImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.DisabledImageIndex;
 end;
 
-procedure Button_SetDisabledImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetDisabledImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.DisabledImageIndex := AValue;
 end;
 
-function Button_GetDoubleBuffered(AObj: TButton): LongBool; cdecl;
+function Button_GetDoubleBuffered(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure Button_SetDoubleBuffered(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetDoubleBuffered(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function Button_GetElevationRequired(AObj: TButton): LongBool; cdecl;
+function Button_GetElevationRequired(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.ElevationRequired;
 end;
 
-procedure Button_SetElevationRequired(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetElevationRequired(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.ElevationRequired := AValue;
 end;
 
-function Button_GetEnabled(AObj: TButton): LongBool; cdecl;
+function Button_GetEnabled(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure Button_SetEnabled(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetEnabled(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function Button_GetFont(AObj: TButton): TFont; cdecl;
+function Button_GetFont(AObj: TButton): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure Button_SetFont(AObj: TButton; AValue: TFont); cdecl;
+procedure Button_SetFont(AObj: TButton; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function Button_GetHotImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetHotImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.HotImageIndex;
 end;
 
-procedure Button_SetHotImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetHotImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.HotImageIndex := AValue;
 end;
 
-function Button_GetImageAlignment(AObj: TButton): TImageAlignment; cdecl;
+function Button_GetImageAlignment(AObj: TButton): TImageAlignment; stdcall;
 begin
   Result :=  AObj.ImageAlignment;
 end;
 
-procedure Button_SetImageAlignment(AObj: TButton; AValue: TImageAlignment); cdecl;
+procedure Button_SetImageAlignment(AObj: TButton; AValue: TImageAlignment); stdcall;
 begin
   AObj.ImageAlignment := AValue;
 end;
 
-function Button_GetImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.ImageIndex;
 end;
 
-procedure Button_SetImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.ImageIndex := AValue;
 end;
 
-function Button_GetImages(AObj: TButton): TCustomImageList; cdecl;
+function Button_GetImages(AObj: TButton): TCustomImageList; stdcall;
 begin
   Result :=  AObj.Images;
 end;
 
-procedure Button_SetImages(AObj: TButton; AValue: TCustomImageList); cdecl;
+procedure Button_SetImages(AObj: TButton; AValue: TCustomImageList); stdcall;
 begin
   AObj.Images := AValue;
 end;
 
-function Button_GetModalResult(AObj: TButton): TModalResult; cdecl;
+function Button_GetModalResult(AObj: TButton): TModalResult; stdcall;
 begin
   Result :=  AObj.ModalResult;
 end;
 
-procedure Button_SetModalResult(AObj: TButton; AValue: TModalResult); cdecl;
+procedure Button_SetModalResult(AObj: TButton; AValue: TModalResult); stdcall;
 begin
   AObj.ModalResult := AValue;
 end;
 
-function Button_GetParentDoubleBuffered(AObj: TButton): LongBool; cdecl;
+function Button_GetParentDoubleBuffered(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure Button_SetParentDoubleBuffered(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetParentDoubleBuffered(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function Button_GetParentFont(AObj: TButton): LongBool; cdecl;
+function Button_GetParentFont(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure Button_SetParentFont(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetParentFont(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function Button_GetParentShowHint(AObj: TButton): LongBool; cdecl;
+function Button_GetParentShowHint(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure Button_SetParentShowHint(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetParentShowHint(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function Button_GetPopupMenu(AObj: TButton): TPopupMenu; cdecl;
+function Button_GetPopupMenu(AObj: TButton): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure Button_SetPopupMenu(AObj: TButton; AValue: TPopupMenu); cdecl;
+procedure Button_SetPopupMenu(AObj: TButton; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function Button_GetPressedImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetPressedImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.PressedImageIndex;
 end;
 
-procedure Button_SetPressedImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetPressedImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.PressedImageIndex := AValue;
 end;
 
-function Button_GetSelectedImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetSelectedImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.SelectedImageIndex;
 end;
 
-procedure Button_SetSelectedImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetSelectedImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.SelectedImageIndex := AValue;
 end;
 
-function Button_GetShowHint(AObj: TButton): LongBool; cdecl;
+function Button_GetShowHint(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure Button_SetShowHint(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetShowHint(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function Button_GetStyle(AObj: TButton): TCustomButton.TButtonStyle; cdecl;
+function Button_GetStyle(AObj: TButton): TCustomButton.TButtonStyle; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure Button_SetStyle(AObj: TButton; AValue: TCustomButton.TButtonStyle); cdecl;
+procedure Button_SetStyle(AObj: TButton; AValue: TCustomButton.TButtonStyle); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function Button_GetStylusHotImageIndex(AObj: TButton): TImageIndex; cdecl;
+function Button_GetStylusHotImageIndex(AObj: TButton): TImageIndex; stdcall;
 begin
   Result :=  AObj.StylusHotImageIndex;
 end;
 
-procedure Button_SetStylusHotImageIndex(AObj: TButton; AValue: TImageIndex); cdecl;
+procedure Button_SetStylusHotImageIndex(AObj: TButton; AValue: TImageIndex); stdcall;
 begin
   AObj.StylusHotImageIndex := AValue;
 end;
 
-function Button_GetTabOrder(AObj: TButton): TTabOrder; cdecl;
+function Button_GetTabOrder(AObj: TButton): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure Button_SetTabOrder(AObj: TButton; AValue: TTabOrder); cdecl;
+procedure Button_SetTabOrder(AObj: TButton; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function Button_GetTabStop(AObj: TButton): LongBool; cdecl;
+function Button_GetTabStop(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure Button_SetTabStop(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetTabStop(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function Button_GetVisible(AObj: TButton): LongBool; cdecl;
+function Button_GetVisible(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure Button_SetVisible(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetVisible(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function Button_GetWordWrap(AObj: TButton): LongBool; cdecl;
+function Button_GetWordWrap(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.WordWrap;
 end;
 
-procedure Button_SetWordWrap(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetWordWrap(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.WordWrap := AValue;
 end;
 
-function Button_GetStyleElements(AObj: TButton): TStyleElements; cdecl;
+function Button_GetStyleElements(AObj: TButton): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure Button_SetStyleElements(AObj: TButton; AValue: TStyleElements); cdecl;
+procedure Button_SetStyleElements(AObj: TButton; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-procedure Button_SetOnClick(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnClick(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -482,7 +482,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure Button_SetOnEnter(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnEnter(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -494,7 +494,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure Button_SetOnExit(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnExit(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -506,7 +506,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure Button_SetOnKeyDown(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnKeyDown(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -518,7 +518,7 @@ begin
   TEventClass.Add(AObj, geKeyDown, AEventId);
 end;
 
-procedure Button_SetOnKeyPress(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnKeyPress(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -530,7 +530,7 @@ begin
   TEventClass.Add(AObj, geKeyPress, AEventId);
 end;
 
-procedure Button_SetOnKeyUp(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnKeyUp(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -542,7 +542,7 @@ begin
   TEventClass.Add(AObj, geKeyUp, AEventId);
 end;
 
-procedure Button_SetOnMouseDown(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnMouseDown(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -554,7 +554,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure Button_SetOnMouseEnter(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnMouseEnter(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -566,7 +566,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure Button_SetOnMouseLeave(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnMouseLeave(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -578,7 +578,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure Button_SetOnMouseMove(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnMouseMove(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -590,7 +590,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure Button_SetOnMouseUp(AObj: TButton; AEventId: NativeUInt); stdcall
+procedure Button_SetOnMouseUp(AObj: TButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -602,374 +602,374 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-function Button_GetBrush(AObj: TButton): TBrush; cdecl;
+function Button_GetBrush(AObj: TButton): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function Button_GetControlCount(AObj: TButton): Integer; cdecl;
+function Button_GetControlCount(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function Button_GetHandle(AObj: TButton): HWND; cdecl;
+function Button_GetHandle(AObj: TButton): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function Button_GetParentWindow(AObj: TButton): HWND; cdecl;
+function Button_GetParentWindow(AObj: TButton): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure Button_SetParentWindow(AObj: TButton; AValue: HWND); cdecl;
+procedure Button_SetParentWindow(AObj: TButton; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-procedure Button_GetBoundsRect(AObj: TButton; var Result: TRect); cdecl;
+procedure Button_GetBoundsRect(AObj: TButton; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure Button_SetBoundsRect(AObj: TButton; var AValue: TRect); cdecl;
+procedure Button_SetBoundsRect(AObj: TButton; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function Button_GetClientHeight(AObj: TButton): Integer; cdecl;
+function Button_GetClientHeight(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure Button_SetClientHeight(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetClientHeight(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure Button_GetClientRect(AObj: TButton; var Result: TRect); cdecl;
+procedure Button_GetClientRect(AObj: TButton; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function Button_GetClientWidth(AObj: TButton): Integer; cdecl;
+function Button_GetClientWidth(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure Button_SetClientWidth(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetClientWidth(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function Button_GetExplicitLeft(AObj: TButton): Integer; cdecl;
+function Button_GetExplicitLeft(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function Button_GetExplicitTop(AObj: TButton): Integer; cdecl;
+function Button_GetExplicitTop(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function Button_GetExplicitWidth(AObj: TButton): Integer; cdecl;
+function Button_GetExplicitWidth(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function Button_GetExplicitHeight(AObj: TButton): Integer; cdecl;
+function Button_GetExplicitHeight(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function Button_GetParent(AObj: TButton): TWinControl; cdecl;
+function Button_GetParent(AObj: TButton): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure Button_SetParent(AObj: TButton; AValue: TWinControl); cdecl;
+procedure Button_SetParent(AObj: TButton; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function Button_GetAlignWithMargins(AObj: TButton): LongBool; cdecl;
+function Button_GetAlignWithMargins(AObj: TButton): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure Button_SetAlignWithMargins(AObj: TButton; AValue: LongBool); cdecl;
+procedure Button_SetAlignWithMargins(AObj: TButton; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function Button_GetLeft(AObj: TButton): Integer; cdecl;
+function Button_GetLeft(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure Button_SetLeft(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetLeft(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function Button_GetTop(AObj: TButton): Integer; cdecl;
+function Button_GetTop(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure Button_SetTop(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetTop(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function Button_GetWidth(AObj: TButton): Integer; cdecl;
+function Button_GetWidth(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Button_SetWidth(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetWidth(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function Button_GetHeight(AObj: TButton): Integer; cdecl;
+function Button_GetHeight(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Button_SetHeight(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetHeight(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Button_GetCursor(AObj: TButton): TCursor; cdecl;
+function Button_GetCursor(AObj: TButton): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Button_SetCursor(AObj: TButton; AValue: TCursor); cdecl;
+procedure Button_SetCursor(AObj: TButton; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Button_GetHint(AObj: TButton): PChar; cdecl;
+function Button_GetHint(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure Button_SetHint(AObj: TButton; AValue: PChar); cdecl;
+procedure Button_SetHint(AObj: TButton; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function Button_GetMargins(AObj: TButton): TMargins; cdecl;
+function Button_GetMargins(AObj: TButton): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure Button_SetMargins(AObj: TButton; AValue: TMargins); cdecl;
+procedure Button_SetMargins(AObj: TButton; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function Button_GetComponentCount(AObj: TButton): Integer; cdecl;
+function Button_GetComponentCount(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Button_GetComponentIndex(AObj: TButton): Integer; cdecl;
+function Button_GetComponentIndex(AObj: TButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Button_SetComponentIndex(AObj: TButton; AValue: Integer); cdecl;
+procedure Button_SetComponentIndex(AObj: TButton; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Button_GetOwner(AObj: TButton): TComponent; cdecl;
+function Button_GetOwner(AObj: TButton): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Button_GetName(AObj: TButton): PChar; cdecl;
+function Button_GetName(AObj: TButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Button_SetName(AObj: TButton; AValue: PChar); cdecl;
+procedure Button_SetName(AObj: TButton; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Button_GetTag(AObj: TButton): NativeInt; cdecl;
+function Button_GetTag(AObj: TButton): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Button_SetTag(AObj: TButton; AValue: NativeInt); cdecl;
+procedure Button_SetTag(AObj: TButton; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Button_GetControls(AObj: TButton; Index: Integer): TControl; cdecl;
+function Button_GetControls(AObj: TButton; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function Button_GetComponents(AObj: TButton; AIndex: Integer): TComponent; cdecl;
+function Button_GetComponents(AObj: TButton; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  Button_Create {$IFNDEF MSWINDOWS}name '_Button_Create'{$ENDIF},
-  Button_Free {$IFNDEF MSWINDOWS}name '_Button_Free'{$ENDIF},
-  Button_Click {$IFNDEF MSWINDOWS}name '_Button_Click'{$ENDIF},
-  Button_CanFocus {$IFNDEF MSWINDOWS}name '_Button_CanFocus'{$ENDIF},
-  Button_FlipChildren {$IFNDEF MSWINDOWS}name '_Button_FlipChildren'{$ENDIF},
-  Button_Focused {$IFNDEF MSWINDOWS}name '_Button_Focused'{$ENDIF},
-  Button_HandleAllocated {$IFNDEF MSWINDOWS}name '_Button_HandleAllocated'{$ENDIF},
-  Button_Invalidate {$IFNDEF MSWINDOWS}name '_Button_Invalidate'{$ENDIF},
-  Button_Realign {$IFNDEF MSWINDOWS}name '_Button_Realign'{$ENDIF},
-  Button_Repaint {$IFNDEF MSWINDOWS}name '_Button_Repaint'{$ENDIF},
-  Button_ScaleBy {$IFNDEF MSWINDOWS}name '_Button_ScaleBy'{$ENDIF},
-  Button_SetBounds {$IFNDEF MSWINDOWS}name '_Button_SetBounds'{$ENDIF},
-  Button_SetFocus {$IFNDEF MSWINDOWS}name '_Button_SetFocus'{$ENDIF},
-  Button_Update {$IFNDEF MSWINDOWS}name '_Button_Update'{$ENDIF},
-  Button_BringToFront {$IFNDEF MSWINDOWS}name '_Button_BringToFront'{$ENDIF},
-  Button_HasParent {$IFNDEF MSWINDOWS}name '_Button_HasParent'{$ENDIF},
-  Button_Hide {$IFNDEF MSWINDOWS}name '_Button_Hide'{$ENDIF},
-  Button_Perform {$IFNDEF MSWINDOWS}name '_Button_Perform'{$ENDIF},
-  Button_Refresh {$IFNDEF MSWINDOWS}name '_Button_Refresh'{$ENDIF},
-  Button_SendToBack {$IFNDEF MSWINDOWS}name '_Button_SendToBack'{$ENDIF},
-  Button_Show {$IFNDEF MSWINDOWS}name '_Button_Show'{$ENDIF},
-  Button_GetTextBuf {$IFNDEF MSWINDOWS}name '_Button_GetTextBuf'{$ENDIF},
-  Button_FindComponent {$IFNDEF MSWINDOWS}name '_Button_FindComponent'{$ENDIF},
-  Button_GetNamePath {$IFNDEF MSWINDOWS}name '_Button_GetNamePath'{$ENDIF},
-  Button_Assign {$IFNDEF MSWINDOWS}name '_Button_Assign'{$ENDIF},
-  Button_ClassName {$IFNDEF MSWINDOWS}name '_Button_ClassName'{$ENDIF},
-  Button_Equals {$IFNDEF MSWINDOWS}name '_Button_Equals'{$ENDIF},
-  Button_GetHashCode {$IFNDEF MSWINDOWS}name '_Button_GetHashCode'{$ENDIF},
-  Button_ToString {$IFNDEF MSWINDOWS}name '_Button_ToString'{$ENDIF},
-  Button_GetAction {$IFNDEF MSWINDOWS}name '_Button_GetAction'{$ENDIF},
-  Button_SetAction {$IFNDEF MSWINDOWS}name '_Button_SetAction'{$ENDIF},
-  Button_GetAlign {$IFNDEF MSWINDOWS}name '_Button_GetAlign'{$ENDIF},
-  Button_SetAlign {$IFNDEF MSWINDOWS}name '_Button_SetAlign'{$ENDIF},
-  Button_GetAnchors {$IFNDEF MSWINDOWS}name '_Button_GetAnchors'{$ENDIF},
-  Button_SetAnchors {$IFNDEF MSWINDOWS}name '_Button_SetAnchors'{$ENDIF},
-  Button_GetBiDiMode {$IFNDEF MSWINDOWS}name '_Button_GetBiDiMode'{$ENDIF},
-  Button_SetBiDiMode {$IFNDEF MSWINDOWS}name '_Button_SetBiDiMode'{$ENDIF},
-  Button_GetCancel {$IFNDEF MSWINDOWS}name '_Button_GetCancel'{$ENDIF},
-  Button_SetCancel {$IFNDEF MSWINDOWS}name '_Button_SetCancel'{$ENDIF},
-  Button_GetCaption {$IFNDEF MSWINDOWS}name '_Button_GetCaption'{$ENDIF},
-  Button_SetCaption {$IFNDEF MSWINDOWS}name '_Button_SetCaption'{$ENDIF},
-  Button_GetCommandLinkHint {$IFNDEF MSWINDOWS}name '_Button_GetCommandLinkHint'{$ENDIF},
-  Button_SetCommandLinkHint {$IFNDEF MSWINDOWS}name '_Button_SetCommandLinkHint'{$ENDIF},
-  Button_GetDefault {$IFNDEF MSWINDOWS}name '_Button_GetDefault'{$ENDIF},
-  Button_SetDefault {$IFNDEF MSWINDOWS}name '_Button_SetDefault'{$ENDIF},
-  Button_GetDisabledImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetDisabledImageIndex'{$ENDIF},
-  Button_SetDisabledImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetDisabledImageIndex'{$ENDIF},
-  Button_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_GetDoubleBuffered'{$ENDIF},
-  Button_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_SetDoubleBuffered'{$ENDIF},
-  Button_GetElevationRequired {$IFNDEF MSWINDOWS}name '_Button_GetElevationRequired'{$ENDIF},
-  Button_SetElevationRequired {$IFNDEF MSWINDOWS}name '_Button_SetElevationRequired'{$ENDIF},
-  Button_GetEnabled {$IFNDEF MSWINDOWS}name '_Button_GetEnabled'{$ENDIF},
-  Button_SetEnabled {$IFNDEF MSWINDOWS}name '_Button_SetEnabled'{$ENDIF},
-  Button_GetFont {$IFNDEF MSWINDOWS}name '_Button_GetFont'{$ENDIF},
-  Button_SetFont {$IFNDEF MSWINDOWS}name '_Button_SetFont'{$ENDIF},
-  Button_GetHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetHotImageIndex'{$ENDIF},
-  Button_SetHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetHotImageIndex'{$ENDIF},
-  Button_GetImageAlignment {$IFNDEF MSWINDOWS}name '_Button_GetImageAlignment'{$ENDIF},
-  Button_SetImageAlignment {$IFNDEF MSWINDOWS}name '_Button_SetImageAlignment'{$ENDIF},
-  Button_GetImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetImageIndex'{$ENDIF},
-  Button_SetImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetImageIndex'{$ENDIF},
-  Button_GetImages {$IFNDEF MSWINDOWS}name '_Button_GetImages'{$ENDIF},
-  Button_SetImages {$IFNDEF MSWINDOWS}name '_Button_SetImages'{$ENDIF},
-  Button_GetModalResult {$IFNDEF MSWINDOWS}name '_Button_GetModalResult'{$ENDIF},
-  Button_SetModalResult {$IFNDEF MSWINDOWS}name '_Button_SetModalResult'{$ENDIF},
-  Button_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_GetParentDoubleBuffered'{$ENDIF},
-  Button_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_Button_SetParentDoubleBuffered'{$ENDIF},
-  Button_GetParentFont {$IFNDEF MSWINDOWS}name '_Button_GetParentFont'{$ENDIF},
-  Button_SetParentFont {$IFNDEF MSWINDOWS}name '_Button_SetParentFont'{$ENDIF},
-  Button_GetParentShowHint {$IFNDEF MSWINDOWS}name '_Button_GetParentShowHint'{$ENDIF},
-  Button_SetParentShowHint {$IFNDEF MSWINDOWS}name '_Button_SetParentShowHint'{$ENDIF},
-  Button_GetPopupMenu {$IFNDEF MSWINDOWS}name '_Button_GetPopupMenu'{$ENDIF},
-  Button_SetPopupMenu {$IFNDEF MSWINDOWS}name '_Button_SetPopupMenu'{$ENDIF},
-  Button_GetPressedImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetPressedImageIndex'{$ENDIF},
-  Button_SetPressedImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetPressedImageIndex'{$ENDIF},
-  Button_GetSelectedImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetSelectedImageIndex'{$ENDIF},
-  Button_SetSelectedImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetSelectedImageIndex'{$ENDIF},
-  Button_GetShowHint {$IFNDEF MSWINDOWS}name '_Button_GetShowHint'{$ENDIF},
-  Button_SetShowHint {$IFNDEF MSWINDOWS}name '_Button_SetShowHint'{$ENDIF},
-  Button_GetStyle {$IFNDEF MSWINDOWS}name '_Button_GetStyle'{$ENDIF},
-  Button_SetStyle {$IFNDEF MSWINDOWS}name '_Button_SetStyle'{$ENDIF},
-  Button_GetStylusHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_GetStylusHotImageIndex'{$ENDIF},
-  Button_SetStylusHotImageIndex {$IFNDEF MSWINDOWS}name '_Button_SetStylusHotImageIndex'{$ENDIF},
-  Button_GetTabOrder {$IFNDEF MSWINDOWS}name '_Button_GetTabOrder'{$ENDIF},
-  Button_SetTabOrder {$IFNDEF MSWINDOWS}name '_Button_SetTabOrder'{$ENDIF},
-  Button_GetTabStop {$IFNDEF MSWINDOWS}name '_Button_GetTabStop'{$ENDIF},
-  Button_SetTabStop {$IFNDEF MSWINDOWS}name '_Button_SetTabStop'{$ENDIF},
-  Button_GetVisible {$IFNDEF MSWINDOWS}name '_Button_GetVisible'{$ENDIF},
-  Button_SetVisible {$IFNDEF MSWINDOWS}name '_Button_SetVisible'{$ENDIF},
-  Button_GetWordWrap {$IFNDEF MSWINDOWS}name '_Button_GetWordWrap'{$ENDIF},
-  Button_SetWordWrap {$IFNDEF MSWINDOWS}name '_Button_SetWordWrap'{$ENDIF},
-  Button_GetStyleElements {$IFNDEF MSWINDOWS}name '_Button_GetStyleElements'{$ENDIF},
-  Button_SetStyleElements {$IFNDEF MSWINDOWS}name '_Button_SetStyleElements'{$ENDIF},
-  Button_SetOnClick {$IFNDEF MSWINDOWS}name '_Button_SetOnClick'{$ENDIF},
-  Button_SetOnEnter {$IFNDEF MSWINDOWS}name '_Button_SetOnEnter'{$ENDIF},
-  Button_SetOnExit {$IFNDEF MSWINDOWS}name '_Button_SetOnExit'{$ENDIF},
-  Button_SetOnKeyDown {$IFNDEF MSWINDOWS}name '_Button_SetOnKeyDown'{$ENDIF},
-  Button_SetOnKeyPress {$IFNDEF MSWINDOWS}name '_Button_SetOnKeyPress'{$ENDIF},
-  Button_SetOnKeyUp {$IFNDEF MSWINDOWS}name '_Button_SetOnKeyUp'{$ENDIF},
-  Button_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_Button_SetOnMouseDown'{$ENDIF},
-  Button_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_Button_SetOnMouseEnter'{$ENDIF},
-  Button_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_Button_SetOnMouseLeave'{$ENDIF},
-  Button_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_Button_SetOnMouseMove'{$ENDIF},
-  Button_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_Button_SetOnMouseUp'{$ENDIF},
-  Button_GetBrush {$IFNDEF MSWINDOWS}name '_Button_GetBrush'{$ENDIF},
-  Button_GetControlCount {$IFNDEF MSWINDOWS}name '_Button_GetControlCount'{$ENDIF},
-  Button_GetHandle {$IFNDEF MSWINDOWS}name '_Button_GetHandle'{$ENDIF},
-  Button_GetParentWindow {$IFNDEF MSWINDOWS}name '_Button_GetParentWindow'{$ENDIF},
-  Button_SetParentWindow {$IFNDEF MSWINDOWS}name '_Button_SetParentWindow'{$ENDIF},
-  Button_GetBoundsRect {$IFNDEF MSWINDOWS}name '_Button_GetBoundsRect'{$ENDIF},
-  Button_SetBoundsRect {$IFNDEF MSWINDOWS}name '_Button_SetBoundsRect'{$ENDIF},
-  Button_GetClientHeight {$IFNDEF MSWINDOWS}name '_Button_GetClientHeight'{$ENDIF},
-  Button_SetClientHeight {$IFNDEF MSWINDOWS}name '_Button_SetClientHeight'{$ENDIF},
-  Button_GetClientRect {$IFNDEF MSWINDOWS}name '_Button_GetClientRect'{$ENDIF},
-  Button_GetClientWidth {$IFNDEF MSWINDOWS}name '_Button_GetClientWidth'{$ENDIF},
-  Button_SetClientWidth {$IFNDEF MSWINDOWS}name '_Button_SetClientWidth'{$ENDIF},
-  Button_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_Button_GetExplicitLeft'{$ENDIF},
-  Button_GetExplicitTop {$IFNDEF MSWINDOWS}name '_Button_GetExplicitTop'{$ENDIF},
-  Button_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_Button_GetExplicitWidth'{$ENDIF},
-  Button_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_Button_GetExplicitHeight'{$ENDIF},
-  Button_GetParent {$IFNDEF MSWINDOWS}name '_Button_GetParent'{$ENDIF},
-  Button_SetParent {$IFNDEF MSWINDOWS}name '_Button_SetParent'{$ENDIF},
-  Button_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Button_GetAlignWithMargins'{$ENDIF},
-  Button_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Button_SetAlignWithMargins'{$ENDIF},
-  Button_GetLeft {$IFNDEF MSWINDOWS}name '_Button_GetLeft'{$ENDIF},
-  Button_SetLeft {$IFNDEF MSWINDOWS}name '_Button_SetLeft'{$ENDIF},
-  Button_GetTop {$IFNDEF MSWINDOWS}name '_Button_GetTop'{$ENDIF},
-  Button_SetTop {$IFNDEF MSWINDOWS}name '_Button_SetTop'{$ENDIF},
-  Button_GetWidth {$IFNDEF MSWINDOWS}name '_Button_GetWidth'{$ENDIF},
-  Button_SetWidth {$IFNDEF MSWINDOWS}name '_Button_SetWidth'{$ENDIF},
-  Button_GetHeight {$IFNDEF MSWINDOWS}name '_Button_GetHeight'{$ENDIF},
-  Button_SetHeight {$IFNDEF MSWINDOWS}name '_Button_SetHeight'{$ENDIF},
-  Button_GetCursor {$IFNDEF MSWINDOWS}name '_Button_GetCursor'{$ENDIF},
-  Button_SetCursor {$IFNDEF MSWINDOWS}name '_Button_SetCursor'{$ENDIF},
-  Button_GetHint {$IFNDEF MSWINDOWS}name '_Button_GetHint'{$ENDIF},
-  Button_SetHint {$IFNDEF MSWINDOWS}name '_Button_SetHint'{$ENDIF},
-  Button_GetMargins {$IFNDEF MSWINDOWS}name '_Button_GetMargins'{$ENDIF},
-  Button_SetMargins {$IFNDEF MSWINDOWS}name '_Button_SetMargins'{$ENDIF},
-  Button_GetComponentCount {$IFNDEF MSWINDOWS}name '_Button_GetComponentCount'{$ENDIF},
-  Button_GetComponentIndex {$IFNDEF MSWINDOWS}name '_Button_GetComponentIndex'{$ENDIF},
-  Button_SetComponentIndex {$IFNDEF MSWINDOWS}name '_Button_SetComponentIndex'{$ENDIF},
-  Button_GetOwner {$IFNDEF MSWINDOWS}name '_Button_GetOwner'{$ENDIF},
-  Button_GetName {$IFNDEF MSWINDOWS}name '_Button_GetName'{$ENDIF},
-  Button_SetName {$IFNDEF MSWINDOWS}name '_Button_SetName'{$ENDIF},
-  Button_GetTag {$IFNDEF MSWINDOWS}name '_Button_GetTag'{$ENDIF},
-  Button_SetTag {$IFNDEF MSWINDOWS}name '_Button_SetTag'{$ENDIF},
-  Button_GetControls {$IFNDEF MSWINDOWS}name '_Button_GetControls'{$ENDIF},
-  Button_GetComponents {$IFNDEF MSWINDOWS}name '_Button_GetComponents'{$ENDIF};
+  Button_Create,
+  Button_Free,
+  Button_Click,
+  Button_CanFocus,
+  Button_FlipChildren,
+  Button_Focused,
+  Button_HandleAllocated,
+  Button_Invalidate,
+  Button_Realign,
+  Button_Repaint,
+  Button_ScaleBy,
+  Button_SetBounds,
+  Button_SetFocus,
+  Button_Update,
+  Button_BringToFront,
+  Button_HasParent,
+  Button_Hide,
+  Button_Perform,
+  Button_Refresh,
+  Button_SendToBack,
+  Button_Show,
+  Button_GetTextBuf,
+  Button_FindComponent,
+  Button_GetNamePath,
+  Button_Assign,
+  Button_ClassName,
+  Button_Equals,
+  Button_GetHashCode,
+  Button_ToString,
+  Button_GetAction,
+  Button_SetAction,
+  Button_GetAlign,
+  Button_SetAlign,
+  Button_GetAnchors,
+  Button_SetAnchors,
+  Button_GetBiDiMode,
+  Button_SetBiDiMode,
+  Button_GetCancel,
+  Button_SetCancel,
+  Button_GetCaption,
+  Button_SetCaption,
+  Button_GetCommandLinkHint,
+  Button_SetCommandLinkHint,
+  Button_GetDefault,
+  Button_SetDefault,
+  Button_GetDisabledImageIndex,
+  Button_SetDisabledImageIndex,
+  Button_GetDoubleBuffered,
+  Button_SetDoubleBuffered,
+  Button_GetElevationRequired,
+  Button_SetElevationRequired,
+  Button_GetEnabled,
+  Button_SetEnabled,
+  Button_GetFont,
+  Button_SetFont,
+  Button_GetHotImageIndex,
+  Button_SetHotImageIndex,
+  Button_GetImageAlignment,
+  Button_SetImageAlignment,
+  Button_GetImageIndex,
+  Button_SetImageIndex,
+  Button_GetImages,
+  Button_SetImages,
+  Button_GetModalResult,
+  Button_SetModalResult,
+  Button_GetParentDoubleBuffered,
+  Button_SetParentDoubleBuffered,
+  Button_GetParentFont,
+  Button_SetParentFont,
+  Button_GetParentShowHint,
+  Button_SetParentShowHint,
+  Button_GetPopupMenu,
+  Button_SetPopupMenu,
+  Button_GetPressedImageIndex,
+  Button_SetPressedImageIndex,
+  Button_GetSelectedImageIndex,
+  Button_SetSelectedImageIndex,
+  Button_GetShowHint,
+  Button_SetShowHint,
+  Button_GetStyle,
+  Button_SetStyle,
+  Button_GetStylusHotImageIndex,
+  Button_SetStylusHotImageIndex,
+  Button_GetTabOrder,
+  Button_SetTabOrder,
+  Button_GetTabStop,
+  Button_SetTabStop,
+  Button_GetVisible,
+  Button_SetVisible,
+  Button_GetWordWrap,
+  Button_SetWordWrap,
+  Button_GetStyleElements,
+  Button_SetStyleElements,
+  Button_SetOnClick,
+  Button_SetOnEnter,
+  Button_SetOnExit,
+  Button_SetOnKeyDown,
+  Button_SetOnKeyPress,
+  Button_SetOnKeyUp,
+  Button_SetOnMouseDown,
+  Button_SetOnMouseEnter,
+  Button_SetOnMouseLeave,
+  Button_SetOnMouseMove,
+  Button_SetOnMouseUp,
+  Button_GetBrush,
+  Button_GetControlCount,
+  Button_GetHandle,
+  Button_GetParentWindow,
+  Button_SetParentWindow,
+  Button_GetBoundsRect,
+  Button_SetBoundsRect,
+  Button_GetClientHeight,
+  Button_SetClientHeight,
+  Button_GetClientRect,
+  Button_GetClientWidth,
+  Button_SetClientWidth,
+  Button_GetExplicitLeft,
+  Button_GetExplicitTop,
+  Button_GetExplicitWidth,
+  Button_GetExplicitHeight,
+  Button_GetParent,
+  Button_SetParent,
+  Button_GetAlignWithMargins,
+  Button_SetAlignWithMargins,
+  Button_GetLeft,
+  Button_SetLeft,
+  Button_GetTop,
+  Button_SetTop,
+  Button_GetWidth,
+  Button_SetWidth,
+  Button_GetHeight,
+  Button_SetHeight,
+  Button_GetCursor,
+  Button_SetCursor,
+  Button_GetHint,
+  Button_SetHint,
+  Button_GetMargins,
+  Button_SetMargins,
+  Button_GetComponentCount,
+  Button_GetComponentIndex,
+  Button_SetComponentIndex,
+  Button_GetOwner,
+  Button_GetName,
+  Button_SetName,
+  Button_GetTag,
+  Button_SetTag,
+  Button_GetControls,
+  Button_GetComponents;
 

@@ -5,257 +5,257 @@
 //
 //----------------------------------------
 
-function Image_Create(AOwner: TComponent): TImage; cdecl;
+function Image_Create(AOwner: TComponent): TImage; stdcall;
 begin
   Result :=  TImage.Create(AOwner);
 end;
 
-procedure Image_Free(AObj: TImage); cdecl;
+procedure Image_Free(AObj: TImage); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Image_BringToFront(AObj: TImage); cdecl;
+procedure Image_BringToFront(AObj: TImage); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function Image_HasParent(AObj: TImage): LongBool; cdecl;
+function Image_HasParent(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure Image_Hide(AObj: TImage); cdecl;
+procedure Image_Hide(AObj: TImage); stdcall;
 begin
   AObj.Hide;
 end;
 
-procedure Image_Invalidate(AObj: TImage); cdecl;
+procedure Image_Invalidate(AObj: TImage); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-function Image_Perform(AObj: TImage; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function Image_Perform(AObj: TImage; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure Image_Refresh(AObj: TImage); cdecl;
+procedure Image_Refresh(AObj: TImage); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure Image_Repaint(AObj: TImage); cdecl;
+procedure Image_Repaint(AObj: TImage); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure Image_SendToBack(AObj: TImage); cdecl;
+procedure Image_SendToBack(AObj: TImage); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure Image_SetBounds(AObj: TImage; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Image_SetBounds(AObj: TImage; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure Image_Show(AObj: TImage); cdecl;
+procedure Image_Show(AObj: TImage); stdcall;
 begin
   AObj.Show;
 end;
 
-procedure Image_Update(AObj: TImage); cdecl;
+procedure Image_Update(AObj: TImage); stdcall;
 begin
   AObj.Update;
 end;
 
-function Image_GetTextBuf(AObj: TImage; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function Image_GetTextBuf(AObj: TImage; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function Image_FindComponent(AObj: TImage; AName: PChar): TComponent; cdecl;
+function Image_FindComponent(AObj: TImage; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Image_GetNamePath(AObj: TImage): PChar; cdecl;
+function Image_GetNamePath(AObj: TImage): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure Image_Assign(AObj: TImage; Source: TPersistent); cdecl;
+procedure Image_Assign(AObj: TImage; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Image_ClassName(AObj: TImage): PChar; cdecl;
+function Image_ClassName(AObj: TImage): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Image_Equals(AObj: TImage; Obj: TObject): LongBool; cdecl;
+function Image_Equals(AObj: TImage; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Image_GetHashCode(AObj: TImage): Integer; cdecl;
+function Image_GetHashCode(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Image_ToString(AObj: TImage): PChar; cdecl;
+function Image_ToString(AObj: TImage): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Image_GetCanvas(AObj: TImage): TCanvas; cdecl;
+function Image_GetCanvas(AObj: TImage): TCanvas; stdcall;
 begin
   Result :=  AObj.Canvas;
 end;
 
-function Image_GetAlign(AObj: TImage): TAlign; cdecl;
+function Image_GetAlign(AObj: TImage): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure Image_SetAlign(AObj: TImage; AValue: TAlign); cdecl;
+procedure Image_SetAlign(AObj: TImage; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function Image_GetAnchors(AObj: TImage): TAnchors; cdecl;
+function Image_GetAnchors(AObj: TImage): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure Image_SetAnchors(AObj: TImage; AValue: TAnchors); cdecl;
+procedure Image_SetAnchors(AObj: TImage; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function Image_GetAutoSize(AObj: TImage): LongBool; cdecl;
+function Image_GetAutoSize(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.AutoSize;
 end;
 
-procedure Image_SetAutoSize(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetAutoSize(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.AutoSize := AValue;
 end;
 
-function Image_GetCenter(AObj: TImage): LongBool; cdecl;
+function Image_GetCenter(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Center;
 end;
 
-procedure Image_SetCenter(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetCenter(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Center := AValue;
 end;
 
-function Image_GetEnabled(AObj: TImage): LongBool; cdecl;
+function Image_GetEnabled(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure Image_SetEnabled(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetEnabled(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function Image_GetIncrementalDisplay(AObj: TImage): LongBool; cdecl;
+function Image_GetIncrementalDisplay(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.IncrementalDisplay;
 end;
 
-procedure Image_SetIncrementalDisplay(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetIncrementalDisplay(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.IncrementalDisplay := AValue;
 end;
 
-function Image_GetParentShowHint(AObj: TImage): LongBool; cdecl;
+function Image_GetParentShowHint(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure Image_SetParentShowHint(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetParentShowHint(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function Image_GetPicture(AObj: TImage): TPicture; cdecl;
+function Image_GetPicture(AObj: TImage): TPicture; stdcall;
 begin
   Result :=  AObj.Picture;
 end;
 
-procedure Image_SetPicture(AObj: TImage; AValue: TPicture); cdecl;
+procedure Image_SetPicture(AObj: TImage; AValue: TPicture); stdcall;
 begin
   AObj.Picture := AValue;
 end;
 
-function Image_GetPopupMenu(AObj: TImage): TPopupMenu; cdecl;
+function Image_GetPopupMenu(AObj: TImage): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure Image_SetPopupMenu(AObj: TImage; AValue: TPopupMenu); cdecl;
+procedure Image_SetPopupMenu(AObj: TImage; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function Image_GetProportional(AObj: TImage): LongBool; cdecl;
+function Image_GetProportional(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Proportional;
 end;
 
-procedure Image_SetProportional(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetProportional(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Proportional := AValue;
 end;
 
-function Image_GetShowHint(AObj: TImage): LongBool; cdecl;
+function Image_GetShowHint(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure Image_SetShowHint(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetShowHint(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function Image_GetStretch(AObj: TImage): LongBool; cdecl;
+function Image_GetStretch(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Stretch;
 end;
 
-procedure Image_SetStretch(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetStretch(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Stretch := AValue;
 end;
 
-function Image_GetTransparent(AObj: TImage): LongBool; cdecl;
+function Image_GetTransparent(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Transparent;
 end;
 
-procedure Image_SetTransparent(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetTransparent(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Transparent := AValue;
 end;
 
-function Image_GetVisible(AObj: TImage): LongBool; cdecl;
+function Image_GetVisible(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure Image_SetVisible(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetVisible(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-procedure Image_SetOnClick(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnClick(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -267,7 +267,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure Image_SetOnDblClick(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnDblClick(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -279,7 +279,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure Image_SetOnMouseDown(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnMouseDown(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -291,7 +291,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure Image_SetOnMouseEnter(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnMouseEnter(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -303,7 +303,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure Image_SetOnMouseLeave(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnMouseLeave(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -315,7 +315,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure Image_SetOnMouseMove(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnMouseMove(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -327,7 +327,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure Image_SetOnMouseUp(AObj: TImage; AEventId: NativeUInt); stdcall
+procedure Image_SetOnMouseUp(AObj: TImage; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -339,327 +339,327 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-function Image_GetAction(AObj: TImage): TBasicAction; cdecl;
+function Image_GetAction(AObj: TImage): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure Image_SetAction(AObj: TImage; AValue: TBasicAction); cdecl;
+procedure Image_SetAction(AObj: TImage; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function Image_GetBiDiMode(AObj: TImage): TBiDiMode; cdecl;
+function Image_GetBiDiMode(AObj: TImage): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure Image_SetBiDiMode(AObj: TImage; AValue: TBiDiMode); cdecl;
+procedure Image_SetBiDiMode(AObj: TImage; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-procedure Image_GetBoundsRect(AObj: TImage; var Result: TRect); cdecl;
+procedure Image_GetBoundsRect(AObj: TImage; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure Image_SetBoundsRect(AObj: TImage; var AValue: TRect); cdecl;
+procedure Image_SetBoundsRect(AObj: TImage; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function Image_GetClientHeight(AObj: TImage): Integer; cdecl;
+function Image_GetClientHeight(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure Image_SetClientHeight(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetClientHeight(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure Image_GetClientRect(AObj: TImage; var Result: TRect); cdecl;
+procedure Image_GetClientRect(AObj: TImage; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function Image_GetClientWidth(AObj: TImage): Integer; cdecl;
+function Image_GetClientWidth(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure Image_SetClientWidth(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetClientWidth(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function Image_GetExplicitLeft(AObj: TImage): Integer; cdecl;
+function Image_GetExplicitLeft(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function Image_GetExplicitTop(AObj: TImage): Integer; cdecl;
+function Image_GetExplicitTop(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function Image_GetExplicitWidth(AObj: TImage): Integer; cdecl;
+function Image_GetExplicitWidth(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function Image_GetExplicitHeight(AObj: TImage): Integer; cdecl;
+function Image_GetExplicitHeight(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function Image_GetParent(AObj: TImage): TWinControl; cdecl;
+function Image_GetParent(AObj: TImage): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure Image_SetParent(AObj: TImage; AValue: TWinControl); cdecl;
+procedure Image_SetParent(AObj: TImage; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function Image_GetStyleElements(AObj: TImage): TStyleElements; cdecl;
+function Image_GetStyleElements(AObj: TImage): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure Image_SetStyleElements(AObj: TImage; AValue: TStyleElements); cdecl;
+procedure Image_SetStyleElements(AObj: TImage; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-function Image_GetAlignWithMargins(AObj: TImage): LongBool; cdecl;
+function Image_GetAlignWithMargins(AObj: TImage): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure Image_SetAlignWithMargins(AObj: TImage; AValue: LongBool); cdecl;
+procedure Image_SetAlignWithMargins(AObj: TImage; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function Image_GetLeft(AObj: TImage): Integer; cdecl;
+function Image_GetLeft(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure Image_SetLeft(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetLeft(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function Image_GetTop(AObj: TImage): Integer; cdecl;
+function Image_GetTop(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure Image_SetTop(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetTop(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function Image_GetWidth(AObj: TImage): Integer; cdecl;
+function Image_GetWidth(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Image_SetWidth(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetWidth(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function Image_GetHeight(AObj: TImage): Integer; cdecl;
+function Image_GetHeight(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Image_SetHeight(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetHeight(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Image_GetCursor(AObj: TImage): TCursor; cdecl;
+function Image_GetCursor(AObj: TImage): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Image_SetCursor(AObj: TImage; AValue: TCursor); cdecl;
+procedure Image_SetCursor(AObj: TImage; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Image_GetHint(AObj: TImage): PChar; cdecl;
+function Image_GetHint(AObj: TImage): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure Image_SetHint(AObj: TImage; AValue: PChar); cdecl;
+procedure Image_SetHint(AObj: TImage; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function Image_GetMargins(AObj: TImage): TMargins; cdecl;
+function Image_GetMargins(AObj: TImage): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure Image_SetMargins(AObj: TImage; AValue: TMargins); cdecl;
+procedure Image_SetMargins(AObj: TImage; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function Image_GetComponentCount(AObj: TImage): Integer; cdecl;
+function Image_GetComponentCount(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Image_GetComponentIndex(AObj: TImage): Integer; cdecl;
+function Image_GetComponentIndex(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Image_SetComponentIndex(AObj: TImage; AValue: Integer); cdecl;
+procedure Image_SetComponentIndex(AObj: TImage; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Image_GetOwner(AObj: TImage): TComponent; cdecl;
+function Image_GetOwner(AObj: TImage): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Image_GetName(AObj: TImage): PChar; cdecl;
+function Image_GetName(AObj: TImage): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Image_SetName(AObj: TImage; AValue: PChar); cdecl;
+procedure Image_SetName(AObj: TImage; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Image_GetTag(AObj: TImage): NativeInt; cdecl;
+function Image_GetTag(AObj: TImage): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Image_SetTag(AObj: TImage; AValue: NativeInt); cdecl;
+procedure Image_SetTag(AObj: TImage; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Image_GetComponents(AObj: TImage; AIndex: Integer): TComponent; cdecl;
+function Image_GetComponents(AObj: TImage; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  Image_Create {$IFNDEF MSWINDOWS}name '_Image_Create'{$ENDIF},
-  Image_Free {$IFNDEF MSWINDOWS}name '_Image_Free'{$ENDIF},
-  Image_BringToFront {$IFNDEF MSWINDOWS}name '_Image_BringToFront'{$ENDIF},
-  Image_HasParent {$IFNDEF MSWINDOWS}name '_Image_HasParent'{$ENDIF},
-  Image_Hide {$IFNDEF MSWINDOWS}name '_Image_Hide'{$ENDIF},
-  Image_Invalidate {$IFNDEF MSWINDOWS}name '_Image_Invalidate'{$ENDIF},
-  Image_Perform {$IFNDEF MSWINDOWS}name '_Image_Perform'{$ENDIF},
-  Image_Refresh {$IFNDEF MSWINDOWS}name '_Image_Refresh'{$ENDIF},
-  Image_Repaint {$IFNDEF MSWINDOWS}name '_Image_Repaint'{$ENDIF},
-  Image_SendToBack {$IFNDEF MSWINDOWS}name '_Image_SendToBack'{$ENDIF},
-  Image_SetBounds {$IFNDEF MSWINDOWS}name '_Image_SetBounds'{$ENDIF},
-  Image_Show {$IFNDEF MSWINDOWS}name '_Image_Show'{$ENDIF},
-  Image_Update {$IFNDEF MSWINDOWS}name '_Image_Update'{$ENDIF},
-  Image_GetTextBuf {$IFNDEF MSWINDOWS}name '_Image_GetTextBuf'{$ENDIF},
-  Image_FindComponent {$IFNDEF MSWINDOWS}name '_Image_FindComponent'{$ENDIF},
-  Image_GetNamePath {$IFNDEF MSWINDOWS}name '_Image_GetNamePath'{$ENDIF},
-  Image_Assign {$IFNDEF MSWINDOWS}name '_Image_Assign'{$ENDIF},
-  Image_ClassName {$IFNDEF MSWINDOWS}name '_Image_ClassName'{$ENDIF},
-  Image_Equals {$IFNDEF MSWINDOWS}name '_Image_Equals'{$ENDIF},
-  Image_GetHashCode {$IFNDEF MSWINDOWS}name '_Image_GetHashCode'{$ENDIF},
-  Image_ToString {$IFNDEF MSWINDOWS}name '_Image_ToString'{$ENDIF},
-  Image_GetCanvas {$IFNDEF MSWINDOWS}name '_Image_GetCanvas'{$ENDIF},
-  Image_GetAlign {$IFNDEF MSWINDOWS}name '_Image_GetAlign'{$ENDIF},
-  Image_SetAlign {$IFNDEF MSWINDOWS}name '_Image_SetAlign'{$ENDIF},
-  Image_GetAnchors {$IFNDEF MSWINDOWS}name '_Image_GetAnchors'{$ENDIF},
-  Image_SetAnchors {$IFNDEF MSWINDOWS}name '_Image_SetAnchors'{$ENDIF},
-  Image_GetAutoSize {$IFNDEF MSWINDOWS}name '_Image_GetAutoSize'{$ENDIF},
-  Image_SetAutoSize {$IFNDEF MSWINDOWS}name '_Image_SetAutoSize'{$ENDIF},
-  Image_GetCenter {$IFNDEF MSWINDOWS}name '_Image_GetCenter'{$ENDIF},
-  Image_SetCenter {$IFNDEF MSWINDOWS}name '_Image_SetCenter'{$ENDIF},
-  Image_GetEnabled {$IFNDEF MSWINDOWS}name '_Image_GetEnabled'{$ENDIF},
-  Image_SetEnabled {$IFNDEF MSWINDOWS}name '_Image_SetEnabled'{$ENDIF},
-  Image_GetIncrementalDisplay {$IFNDEF MSWINDOWS}name '_Image_GetIncrementalDisplay'{$ENDIF},
-  Image_SetIncrementalDisplay {$IFNDEF MSWINDOWS}name '_Image_SetIncrementalDisplay'{$ENDIF},
-  Image_GetParentShowHint {$IFNDEF MSWINDOWS}name '_Image_GetParentShowHint'{$ENDIF},
-  Image_SetParentShowHint {$IFNDEF MSWINDOWS}name '_Image_SetParentShowHint'{$ENDIF},
-  Image_GetPicture {$IFNDEF MSWINDOWS}name '_Image_GetPicture'{$ENDIF},
-  Image_SetPicture {$IFNDEF MSWINDOWS}name '_Image_SetPicture'{$ENDIF},
-  Image_GetPopupMenu {$IFNDEF MSWINDOWS}name '_Image_GetPopupMenu'{$ENDIF},
-  Image_SetPopupMenu {$IFNDEF MSWINDOWS}name '_Image_SetPopupMenu'{$ENDIF},
-  Image_GetProportional {$IFNDEF MSWINDOWS}name '_Image_GetProportional'{$ENDIF},
-  Image_SetProportional {$IFNDEF MSWINDOWS}name '_Image_SetProportional'{$ENDIF},
-  Image_GetShowHint {$IFNDEF MSWINDOWS}name '_Image_GetShowHint'{$ENDIF},
-  Image_SetShowHint {$IFNDEF MSWINDOWS}name '_Image_SetShowHint'{$ENDIF},
-  Image_GetStretch {$IFNDEF MSWINDOWS}name '_Image_GetStretch'{$ENDIF},
-  Image_SetStretch {$IFNDEF MSWINDOWS}name '_Image_SetStretch'{$ENDIF},
-  Image_GetTransparent {$IFNDEF MSWINDOWS}name '_Image_GetTransparent'{$ENDIF},
-  Image_SetTransparent {$IFNDEF MSWINDOWS}name '_Image_SetTransparent'{$ENDIF},
-  Image_GetVisible {$IFNDEF MSWINDOWS}name '_Image_GetVisible'{$ENDIF},
-  Image_SetVisible {$IFNDEF MSWINDOWS}name '_Image_SetVisible'{$ENDIF},
-  Image_SetOnClick {$IFNDEF MSWINDOWS}name '_Image_SetOnClick'{$ENDIF},
-  Image_SetOnDblClick {$IFNDEF MSWINDOWS}name '_Image_SetOnDblClick'{$ENDIF},
-  Image_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_Image_SetOnMouseDown'{$ENDIF},
-  Image_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_Image_SetOnMouseEnter'{$ENDIF},
-  Image_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_Image_SetOnMouseLeave'{$ENDIF},
-  Image_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_Image_SetOnMouseMove'{$ENDIF},
-  Image_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_Image_SetOnMouseUp'{$ENDIF},
-  Image_GetAction {$IFNDEF MSWINDOWS}name '_Image_GetAction'{$ENDIF},
-  Image_SetAction {$IFNDEF MSWINDOWS}name '_Image_SetAction'{$ENDIF},
-  Image_GetBiDiMode {$IFNDEF MSWINDOWS}name '_Image_GetBiDiMode'{$ENDIF},
-  Image_SetBiDiMode {$IFNDEF MSWINDOWS}name '_Image_SetBiDiMode'{$ENDIF},
-  Image_GetBoundsRect {$IFNDEF MSWINDOWS}name '_Image_GetBoundsRect'{$ENDIF},
-  Image_SetBoundsRect {$IFNDEF MSWINDOWS}name '_Image_SetBoundsRect'{$ENDIF},
-  Image_GetClientHeight {$IFNDEF MSWINDOWS}name '_Image_GetClientHeight'{$ENDIF},
-  Image_SetClientHeight {$IFNDEF MSWINDOWS}name '_Image_SetClientHeight'{$ENDIF},
-  Image_GetClientRect {$IFNDEF MSWINDOWS}name '_Image_GetClientRect'{$ENDIF},
-  Image_GetClientWidth {$IFNDEF MSWINDOWS}name '_Image_GetClientWidth'{$ENDIF},
-  Image_SetClientWidth {$IFNDEF MSWINDOWS}name '_Image_SetClientWidth'{$ENDIF},
-  Image_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_Image_GetExplicitLeft'{$ENDIF},
-  Image_GetExplicitTop {$IFNDEF MSWINDOWS}name '_Image_GetExplicitTop'{$ENDIF},
-  Image_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_Image_GetExplicitWidth'{$ENDIF},
-  Image_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_Image_GetExplicitHeight'{$ENDIF},
-  Image_GetParent {$IFNDEF MSWINDOWS}name '_Image_GetParent'{$ENDIF},
-  Image_SetParent {$IFNDEF MSWINDOWS}name '_Image_SetParent'{$ENDIF},
-  Image_GetStyleElements {$IFNDEF MSWINDOWS}name '_Image_GetStyleElements'{$ENDIF},
-  Image_SetStyleElements {$IFNDEF MSWINDOWS}name '_Image_SetStyleElements'{$ENDIF},
-  Image_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Image_GetAlignWithMargins'{$ENDIF},
-  Image_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Image_SetAlignWithMargins'{$ENDIF},
-  Image_GetLeft {$IFNDEF MSWINDOWS}name '_Image_GetLeft'{$ENDIF},
-  Image_SetLeft {$IFNDEF MSWINDOWS}name '_Image_SetLeft'{$ENDIF},
-  Image_GetTop {$IFNDEF MSWINDOWS}name '_Image_GetTop'{$ENDIF},
-  Image_SetTop {$IFNDEF MSWINDOWS}name '_Image_SetTop'{$ENDIF},
-  Image_GetWidth {$IFNDEF MSWINDOWS}name '_Image_GetWidth'{$ENDIF},
-  Image_SetWidth {$IFNDEF MSWINDOWS}name '_Image_SetWidth'{$ENDIF},
-  Image_GetHeight {$IFNDEF MSWINDOWS}name '_Image_GetHeight'{$ENDIF},
-  Image_SetHeight {$IFNDEF MSWINDOWS}name '_Image_SetHeight'{$ENDIF},
-  Image_GetCursor {$IFNDEF MSWINDOWS}name '_Image_GetCursor'{$ENDIF},
-  Image_SetCursor {$IFNDEF MSWINDOWS}name '_Image_SetCursor'{$ENDIF},
-  Image_GetHint {$IFNDEF MSWINDOWS}name '_Image_GetHint'{$ENDIF},
-  Image_SetHint {$IFNDEF MSWINDOWS}name '_Image_SetHint'{$ENDIF},
-  Image_GetMargins {$IFNDEF MSWINDOWS}name '_Image_GetMargins'{$ENDIF},
-  Image_SetMargins {$IFNDEF MSWINDOWS}name '_Image_SetMargins'{$ENDIF},
-  Image_GetComponentCount {$IFNDEF MSWINDOWS}name '_Image_GetComponentCount'{$ENDIF},
-  Image_GetComponentIndex {$IFNDEF MSWINDOWS}name '_Image_GetComponentIndex'{$ENDIF},
-  Image_SetComponentIndex {$IFNDEF MSWINDOWS}name '_Image_SetComponentIndex'{$ENDIF},
-  Image_GetOwner {$IFNDEF MSWINDOWS}name '_Image_GetOwner'{$ENDIF},
-  Image_GetName {$IFNDEF MSWINDOWS}name '_Image_GetName'{$ENDIF},
-  Image_SetName {$IFNDEF MSWINDOWS}name '_Image_SetName'{$ENDIF},
-  Image_GetTag {$IFNDEF MSWINDOWS}name '_Image_GetTag'{$ENDIF},
-  Image_SetTag {$IFNDEF MSWINDOWS}name '_Image_SetTag'{$ENDIF},
-  Image_GetComponents {$IFNDEF MSWINDOWS}name '_Image_GetComponents'{$ENDIF};
+  Image_Create,
+  Image_Free,
+  Image_BringToFront,
+  Image_HasParent,
+  Image_Hide,
+  Image_Invalidate,
+  Image_Perform,
+  Image_Refresh,
+  Image_Repaint,
+  Image_SendToBack,
+  Image_SetBounds,
+  Image_Show,
+  Image_Update,
+  Image_GetTextBuf,
+  Image_FindComponent,
+  Image_GetNamePath,
+  Image_Assign,
+  Image_ClassName,
+  Image_Equals,
+  Image_GetHashCode,
+  Image_ToString,
+  Image_GetCanvas,
+  Image_GetAlign,
+  Image_SetAlign,
+  Image_GetAnchors,
+  Image_SetAnchors,
+  Image_GetAutoSize,
+  Image_SetAutoSize,
+  Image_GetCenter,
+  Image_SetCenter,
+  Image_GetEnabled,
+  Image_SetEnabled,
+  Image_GetIncrementalDisplay,
+  Image_SetIncrementalDisplay,
+  Image_GetParentShowHint,
+  Image_SetParentShowHint,
+  Image_GetPicture,
+  Image_SetPicture,
+  Image_GetPopupMenu,
+  Image_SetPopupMenu,
+  Image_GetProportional,
+  Image_SetProportional,
+  Image_GetShowHint,
+  Image_SetShowHint,
+  Image_GetStretch,
+  Image_SetStretch,
+  Image_GetTransparent,
+  Image_SetTransparent,
+  Image_GetVisible,
+  Image_SetVisible,
+  Image_SetOnClick,
+  Image_SetOnDblClick,
+  Image_SetOnMouseDown,
+  Image_SetOnMouseEnter,
+  Image_SetOnMouseLeave,
+  Image_SetOnMouseMove,
+  Image_SetOnMouseUp,
+  Image_GetAction,
+  Image_SetAction,
+  Image_GetBiDiMode,
+  Image_SetBiDiMode,
+  Image_GetBoundsRect,
+  Image_SetBoundsRect,
+  Image_GetClientHeight,
+  Image_SetClientHeight,
+  Image_GetClientRect,
+  Image_GetClientWidth,
+  Image_SetClientWidth,
+  Image_GetExplicitLeft,
+  Image_GetExplicitTop,
+  Image_GetExplicitWidth,
+  Image_GetExplicitHeight,
+  Image_GetParent,
+  Image_SetParent,
+  Image_GetStyleElements,
+  Image_SetStyleElements,
+  Image_GetAlignWithMargins,
+  Image_SetAlignWithMargins,
+  Image_GetLeft,
+  Image_SetLeft,
+  Image_GetTop,
+  Image_SetTop,
+  Image_GetWidth,
+  Image_SetWidth,
+  Image_GetHeight,
+  Image_SetHeight,
+  Image_GetCursor,
+  Image_SetCursor,
+  Image_GetHint,
+  Image_SetHint,
+  Image_GetMargins,
+  Image_SetMargins,
+  Image_GetComponentCount,
+  Image_GetComponentIndex,
+  Image_SetComponentIndex,
+  Image_GetOwner,
+  Image_GetName,
+  Image_SetName,
+  Image_GetTag,
+  Image_SetTag,
+  Image_GetComponents;
 

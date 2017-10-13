@@ -5,407 +5,407 @@
 //
 //----------------------------------------
 
-function MonthCalendar_Create(AOwner: TComponent): TMonthCalendar; cdecl;
+function MonthCalendar_Create(AOwner: TComponent): TMonthCalendar; stdcall;
 begin
   Result :=  TMonthCalendar.Create(AOwner);
 end;
 
-procedure MonthCalendar_Free(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Free(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Free;
 end;
 
-function MonthCalendar_CanFocus(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_CanFocus(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure MonthCalendar_FlipChildren(AObj: TMonthCalendar; AllLevels: LongBool); cdecl;
+procedure MonthCalendar_FlipChildren(AObj: TMonthCalendar; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function MonthCalendar_Focused(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_Focused(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function MonthCalendar_HandleAllocated(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_HandleAllocated(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure MonthCalendar_Invalidate(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Invalidate(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure MonthCalendar_Realign(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Realign(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure MonthCalendar_Repaint(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Repaint(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure MonthCalendar_ScaleBy(AObj: TMonthCalendar; M: Integer; D: Integer); cdecl;
+procedure MonthCalendar_ScaleBy(AObj: TMonthCalendar; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure MonthCalendar_SetBounds(AObj: TMonthCalendar; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure MonthCalendar_SetBounds(AObj: TMonthCalendar; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure MonthCalendar_SetFocus(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_SetFocus(AObj: TMonthCalendar); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure MonthCalendar_Update(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Update(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure MonthCalendar_BringToFront(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_BringToFront(AObj: TMonthCalendar); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function MonthCalendar_HasParent(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_HasParent(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure MonthCalendar_Hide(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Hide(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Hide;
 end;
 
-function MonthCalendar_Perform(AObj: TMonthCalendar; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function MonthCalendar_Perform(AObj: TMonthCalendar; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure MonthCalendar_Refresh(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Refresh(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure MonthCalendar_SendToBack(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_SendToBack(AObj: TMonthCalendar); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure MonthCalendar_Show(AObj: TMonthCalendar); cdecl;
+procedure MonthCalendar_Show(AObj: TMonthCalendar); stdcall;
 begin
   AObj.Show;
 end;
 
-function MonthCalendar_GetTextBuf(AObj: TMonthCalendar; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function MonthCalendar_GetTextBuf(AObj: TMonthCalendar; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function MonthCalendar_FindComponent(AObj: TMonthCalendar; AName: PChar): TComponent; cdecl;
+function MonthCalendar_FindComponent(AObj: TMonthCalendar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function MonthCalendar_GetNamePath(AObj: TMonthCalendar): PChar; cdecl;
+function MonthCalendar_GetNamePath(AObj: TMonthCalendar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure MonthCalendar_Assign(AObj: TMonthCalendar; Source: TPersistent); cdecl;
+procedure MonthCalendar_Assign(AObj: TMonthCalendar; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function MonthCalendar_ClassName(AObj: TMonthCalendar): PChar; cdecl;
+function MonthCalendar_ClassName(AObj: TMonthCalendar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function MonthCalendar_Equals(AObj: TMonthCalendar; Obj: TObject): LongBool; cdecl;
+function MonthCalendar_Equals(AObj: TMonthCalendar; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function MonthCalendar_GetHashCode(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetHashCode(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function MonthCalendar_ToString(AObj: TMonthCalendar): PChar; cdecl;
+function MonthCalendar_ToString(AObj: TMonthCalendar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function MonthCalendar_GetAlign(AObj: TMonthCalendar): TAlign; cdecl;
+function MonthCalendar_GetAlign(AObj: TMonthCalendar): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure MonthCalendar_SetAlign(AObj: TMonthCalendar; AValue: TAlign); cdecl;
+procedure MonthCalendar_SetAlign(AObj: TMonthCalendar; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function MonthCalendar_GetAnchors(AObj: TMonthCalendar): TAnchors; cdecl;
+function MonthCalendar_GetAnchors(AObj: TMonthCalendar): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure MonthCalendar_SetAnchors(AObj: TMonthCalendar; AValue: TAnchors); cdecl;
+procedure MonthCalendar_SetAnchors(AObj: TMonthCalendar; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function MonthCalendar_GetAutoSize(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetAutoSize(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.AutoSize;
 end;
 
-procedure MonthCalendar_SetAutoSize(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetAutoSize(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.AutoSize := AValue;
 end;
 
-function MonthCalendar_GetBorderWidth(AObj: TMonthCalendar): TBorderWidth; cdecl;
+function MonthCalendar_GetBorderWidth(AObj: TMonthCalendar): TBorderWidth; stdcall;
 begin
   Result :=  AObj.BorderWidth;
 end;
 
-procedure MonthCalendar_SetBorderWidth(AObj: TMonthCalendar; AValue: TBorderWidth); cdecl;
+procedure MonthCalendar_SetBorderWidth(AObj: TMonthCalendar; AValue: TBorderWidth); stdcall;
 begin
   AObj.BorderWidth := AValue;
 end;
 
-function MonthCalendar_GetBiDiMode(AObj: TMonthCalendar): TBiDiMode; cdecl;
+function MonthCalendar_GetBiDiMode(AObj: TMonthCalendar): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure MonthCalendar_SetBiDiMode(AObj: TMonthCalendar; AValue: TBiDiMode); cdecl;
+procedure MonthCalendar_SetBiDiMode(AObj: TMonthCalendar; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function MonthCalendar_GetCalColors(AObj: TMonthCalendar): TMonthCalColors; cdecl;
+function MonthCalendar_GetCalColors(AObj: TMonthCalendar): TMonthCalColors; stdcall;
 begin
   Result :=  AObj.CalColors;
 end;
 
-procedure MonthCalendar_SetCalColors(AObj: TMonthCalendar; AValue: TMonthCalColors); cdecl;
+procedure MonthCalendar_SetCalColors(AObj: TMonthCalendar; AValue: TMonthCalColors); stdcall;
 begin
   AObj.CalColors := AValue;
 end;
 
-function MonthCalendar_GetMultiSelect(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetMultiSelect(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.MultiSelect;
 end;
 
-procedure MonthCalendar_SetMultiSelect(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetMultiSelect(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.MultiSelect := AValue;
 end;
 
-function MonthCalendar_GetDate(AObj: TMonthCalendar): TUnixDateTime; cdecl;
+function MonthCalendar_GetDate(AObj: TMonthCalendar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.Date);
 end;
 
-procedure MonthCalendar_SetDate(AObj: TMonthCalendar; AValue: TUnixDateTime); cdecl;
+procedure MonthCalendar_SetDate(AObj: TMonthCalendar; AValue: TUnixDateTime); stdcall;
 begin
   AObj.Date := UnixToTime(AValue);
 end;
 
-function MonthCalendar_GetDoubleBuffered(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetDoubleBuffered(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure MonthCalendar_SetDoubleBuffered(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetDoubleBuffered(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function MonthCalendar_GetEnabled(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetEnabled(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure MonthCalendar_SetEnabled(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetEnabled(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function MonthCalendar_GetFirstDayOfWeek(AObj: TMonthCalendar): TCalDayOfWeek; cdecl;
+function MonthCalendar_GetFirstDayOfWeek(AObj: TMonthCalendar): TCalDayOfWeek; stdcall;
 begin
   Result :=  AObj.FirstDayOfWeek;
 end;
 
-procedure MonthCalendar_SetFirstDayOfWeek(AObj: TMonthCalendar; AValue: TCalDayOfWeek); cdecl;
+procedure MonthCalendar_SetFirstDayOfWeek(AObj: TMonthCalendar; AValue: TCalDayOfWeek); stdcall;
 begin
   AObj.FirstDayOfWeek := AValue;
 end;
 
-function MonthCalendar_GetFont(AObj: TMonthCalendar): TFont; cdecl;
+function MonthCalendar_GetFont(AObj: TMonthCalendar): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure MonthCalendar_SetFont(AObj: TMonthCalendar; AValue: TFont); cdecl;
+procedure MonthCalendar_SetFont(AObj: TMonthCalendar; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function MonthCalendar_GetMaxDate(AObj: TMonthCalendar): TUnixDateTime; cdecl;
+function MonthCalendar_GetMaxDate(AObj: TMonthCalendar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.MaxDate);
 end;
 
-procedure MonthCalendar_SetMaxDate(AObj: TMonthCalendar; AValue: TUnixDateTime); cdecl;
+procedure MonthCalendar_SetMaxDate(AObj: TMonthCalendar; AValue: TUnixDateTime); stdcall;
 begin
   AObj.MaxDate := UnixToTime(AValue);
 end;
 
-function MonthCalendar_GetMaxSelectRange(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetMaxSelectRange(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.MaxSelectRange;
 end;
 
-procedure MonthCalendar_SetMaxSelectRange(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetMaxSelectRange(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.MaxSelectRange := AValue;
 end;
 
-function MonthCalendar_GetMinDate(AObj: TMonthCalendar): TUnixDateTime; cdecl;
+function MonthCalendar_GetMinDate(AObj: TMonthCalendar): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.MinDate);
 end;
 
-procedure MonthCalendar_SetMinDate(AObj: TMonthCalendar; AValue: TUnixDateTime); cdecl;
+procedure MonthCalendar_SetMinDate(AObj: TMonthCalendar; AValue: TUnixDateTime); stdcall;
 begin
   AObj.MinDate := UnixToTime(AValue);
 end;
 
-function MonthCalendar_GetParentDoubleBuffered(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetParentDoubleBuffered(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure MonthCalendar_SetParentDoubleBuffered(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetParentDoubleBuffered(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function MonthCalendar_GetParentFont(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetParentFont(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure MonthCalendar_SetParentFont(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetParentFont(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function MonthCalendar_GetParentShowHint(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetParentShowHint(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure MonthCalendar_SetParentShowHint(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetParentShowHint(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function MonthCalendar_GetPopupMenu(AObj: TMonthCalendar): TPopupMenu; cdecl;
+function MonthCalendar_GetPopupMenu(AObj: TMonthCalendar): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure MonthCalendar_SetPopupMenu(AObj: TMonthCalendar; AValue: TPopupMenu); cdecl;
+procedure MonthCalendar_SetPopupMenu(AObj: TMonthCalendar; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function MonthCalendar_GetShowHint(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetShowHint(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure MonthCalendar_SetShowHint(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetShowHint(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function MonthCalendar_GetShowToday(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetShowToday(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ShowToday;
 end;
 
-procedure MonthCalendar_SetShowToday(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetShowToday(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ShowToday := AValue;
 end;
 
-function MonthCalendar_GetShowTodayCircle(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetShowTodayCircle(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.ShowTodayCircle;
 end;
 
-procedure MonthCalendar_SetShowTodayCircle(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetShowTodayCircle(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.ShowTodayCircle := AValue;
 end;
 
-function MonthCalendar_GetTabOrder(AObj: TMonthCalendar): TTabOrder; cdecl;
+function MonthCalendar_GetTabOrder(AObj: TMonthCalendar): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure MonthCalendar_SetTabOrder(AObj: TMonthCalendar; AValue: TTabOrder); cdecl;
+procedure MonthCalendar_SetTabOrder(AObj: TMonthCalendar; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function MonthCalendar_GetTabStop(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetTabStop(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure MonthCalendar_SetTabStop(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetTabStop(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function MonthCalendar_GetVisible(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetVisible(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure MonthCalendar_SetVisible(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetVisible(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function MonthCalendar_GetWeekNumbers(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetWeekNumbers(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.WeekNumbers;
 end;
 
-procedure MonthCalendar_SetWeekNumbers(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetWeekNumbers(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.WeekNumbers := AValue;
 end;
 
-procedure MonthCalendar_SetOnClick(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnClick(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -417,7 +417,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure MonthCalendar_SetOnDblClick(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnDblClick(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -429,7 +429,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure MonthCalendar_SetOnEnter(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnEnter(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -441,7 +441,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure MonthCalendar_SetOnExit(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnExit(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -453,7 +453,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure MonthCalendar_SetOnKeyDown(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnKeyDown(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -465,7 +465,7 @@ begin
   TEventClass.Add(AObj, geKeyDown, AEventId);
 end;
 
-procedure MonthCalendar_SetOnKeyPress(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnKeyPress(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -477,7 +477,7 @@ begin
   TEventClass.Add(AObj, geKeyPress, AEventId);
 end;
 
-procedure MonthCalendar_SetOnKeyUp(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnKeyUp(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -489,7 +489,7 @@ begin
   TEventClass.Add(AObj, geKeyUp, AEventId);
 end;
 
-procedure MonthCalendar_SetOnMouseEnter(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnMouseEnter(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -501,7 +501,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure MonthCalendar_SetOnMouseLeave(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall
+procedure MonthCalendar_SetOnMouseLeave(AObj: TMonthCalendar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -513,383 +513,383 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-function MonthCalendar_GetBrush(AObj: TMonthCalendar): TBrush; cdecl;
+function MonthCalendar_GetBrush(AObj: TMonthCalendar): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function MonthCalendar_GetControlCount(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetControlCount(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function MonthCalendar_GetHandle(AObj: TMonthCalendar): HWND; cdecl;
+function MonthCalendar_GetHandle(AObj: TMonthCalendar): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function MonthCalendar_GetParentWindow(AObj: TMonthCalendar): HWND; cdecl;
+function MonthCalendar_GetParentWindow(AObj: TMonthCalendar): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure MonthCalendar_SetParentWindow(AObj: TMonthCalendar; AValue: HWND); cdecl;
+procedure MonthCalendar_SetParentWindow(AObj: TMonthCalendar; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-function MonthCalendar_GetAction(AObj: TMonthCalendar): TBasicAction; cdecl;
+function MonthCalendar_GetAction(AObj: TMonthCalendar): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure MonthCalendar_SetAction(AObj: TMonthCalendar; AValue: TBasicAction); cdecl;
+procedure MonthCalendar_SetAction(AObj: TMonthCalendar; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-procedure MonthCalendar_GetBoundsRect(AObj: TMonthCalendar; var Result: TRect); cdecl;
+procedure MonthCalendar_GetBoundsRect(AObj: TMonthCalendar; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure MonthCalendar_SetBoundsRect(AObj: TMonthCalendar; var AValue: TRect); cdecl;
+procedure MonthCalendar_SetBoundsRect(AObj: TMonthCalendar; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function MonthCalendar_GetClientHeight(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetClientHeight(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure MonthCalendar_SetClientHeight(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetClientHeight(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure MonthCalendar_GetClientRect(AObj: TMonthCalendar; var Result: TRect); cdecl;
+procedure MonthCalendar_GetClientRect(AObj: TMonthCalendar; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function MonthCalendar_GetClientWidth(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetClientWidth(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure MonthCalendar_SetClientWidth(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetClientWidth(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function MonthCalendar_GetExplicitLeft(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetExplicitLeft(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function MonthCalendar_GetExplicitTop(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetExplicitTop(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function MonthCalendar_GetExplicitWidth(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetExplicitWidth(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function MonthCalendar_GetExplicitHeight(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetExplicitHeight(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function MonthCalendar_GetParent(AObj: TMonthCalendar): TWinControl; cdecl;
+function MonthCalendar_GetParent(AObj: TMonthCalendar): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure MonthCalendar_SetParent(AObj: TMonthCalendar; AValue: TWinControl); cdecl;
+procedure MonthCalendar_SetParent(AObj: TMonthCalendar; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function MonthCalendar_GetStyleElements(AObj: TMonthCalendar): TStyleElements; cdecl;
+function MonthCalendar_GetStyleElements(AObj: TMonthCalendar): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure MonthCalendar_SetStyleElements(AObj: TMonthCalendar; AValue: TStyleElements); cdecl;
+procedure MonthCalendar_SetStyleElements(AObj: TMonthCalendar; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-function MonthCalendar_GetAlignWithMargins(AObj: TMonthCalendar): LongBool; cdecl;
+function MonthCalendar_GetAlignWithMargins(AObj: TMonthCalendar): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure MonthCalendar_SetAlignWithMargins(AObj: TMonthCalendar; AValue: LongBool); cdecl;
+procedure MonthCalendar_SetAlignWithMargins(AObj: TMonthCalendar; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function MonthCalendar_GetLeft(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetLeft(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure MonthCalendar_SetLeft(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetLeft(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function MonthCalendar_GetTop(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetTop(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure MonthCalendar_SetTop(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetTop(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function MonthCalendar_GetWidth(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetWidth(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure MonthCalendar_SetWidth(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetWidth(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function MonthCalendar_GetHeight(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetHeight(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure MonthCalendar_SetHeight(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetHeight(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function MonthCalendar_GetCursor(AObj: TMonthCalendar): TCursor; cdecl;
+function MonthCalendar_GetCursor(AObj: TMonthCalendar): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure MonthCalendar_SetCursor(AObj: TMonthCalendar; AValue: TCursor); cdecl;
+procedure MonthCalendar_SetCursor(AObj: TMonthCalendar; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function MonthCalendar_GetHint(AObj: TMonthCalendar): PChar; cdecl;
+function MonthCalendar_GetHint(AObj: TMonthCalendar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure MonthCalendar_SetHint(AObj: TMonthCalendar; AValue: PChar); cdecl;
+procedure MonthCalendar_SetHint(AObj: TMonthCalendar; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function MonthCalendar_GetMargins(AObj: TMonthCalendar): TMargins; cdecl;
+function MonthCalendar_GetMargins(AObj: TMonthCalendar): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure MonthCalendar_SetMargins(AObj: TMonthCalendar; AValue: TMargins); cdecl;
+procedure MonthCalendar_SetMargins(AObj: TMonthCalendar; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function MonthCalendar_GetComponentCount(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetComponentCount(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function MonthCalendar_GetComponentIndex(AObj: TMonthCalendar): Integer; cdecl;
+function MonthCalendar_GetComponentIndex(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure MonthCalendar_SetComponentIndex(AObj: TMonthCalendar; AValue: Integer); cdecl;
+procedure MonthCalendar_SetComponentIndex(AObj: TMonthCalendar; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function MonthCalendar_GetOwner(AObj: TMonthCalendar): TComponent; cdecl;
+function MonthCalendar_GetOwner(AObj: TMonthCalendar): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function MonthCalendar_GetName(AObj: TMonthCalendar): PChar; cdecl;
+function MonthCalendar_GetName(AObj: TMonthCalendar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure MonthCalendar_SetName(AObj: TMonthCalendar; AValue: PChar); cdecl;
+procedure MonthCalendar_SetName(AObj: TMonthCalendar; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function MonthCalendar_GetTag(AObj: TMonthCalendar): NativeInt; cdecl;
+function MonthCalendar_GetTag(AObj: TMonthCalendar): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure MonthCalendar_SetTag(AObj: TMonthCalendar; AValue: NativeInt); cdecl;
+procedure MonthCalendar_SetTag(AObj: TMonthCalendar; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function MonthCalendar_GetControls(AObj: TMonthCalendar; Index: Integer): TControl; cdecl;
+function MonthCalendar_GetControls(AObj: TMonthCalendar; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function MonthCalendar_GetComponents(AObj: TMonthCalendar; AIndex: Integer): TComponent; cdecl;
+function MonthCalendar_GetComponents(AObj: TMonthCalendar; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  MonthCalendar_Create {$IFNDEF MSWINDOWS}name '_MonthCalendar_Create'{$ENDIF},
-  MonthCalendar_Free {$IFNDEF MSWINDOWS}name '_MonthCalendar_Free'{$ENDIF},
-  MonthCalendar_CanFocus {$IFNDEF MSWINDOWS}name '_MonthCalendar_CanFocus'{$ENDIF},
-  MonthCalendar_FlipChildren {$IFNDEF MSWINDOWS}name '_MonthCalendar_FlipChildren'{$ENDIF},
-  MonthCalendar_Focused {$IFNDEF MSWINDOWS}name '_MonthCalendar_Focused'{$ENDIF},
-  MonthCalendar_HandleAllocated {$IFNDEF MSWINDOWS}name '_MonthCalendar_HandleAllocated'{$ENDIF},
-  MonthCalendar_Invalidate {$IFNDEF MSWINDOWS}name '_MonthCalendar_Invalidate'{$ENDIF},
-  MonthCalendar_Realign {$IFNDEF MSWINDOWS}name '_MonthCalendar_Realign'{$ENDIF},
-  MonthCalendar_Repaint {$IFNDEF MSWINDOWS}name '_MonthCalendar_Repaint'{$ENDIF},
-  MonthCalendar_ScaleBy {$IFNDEF MSWINDOWS}name '_MonthCalendar_ScaleBy'{$ENDIF},
-  MonthCalendar_SetBounds {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetBounds'{$ENDIF},
-  MonthCalendar_SetFocus {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetFocus'{$ENDIF},
-  MonthCalendar_Update {$IFNDEF MSWINDOWS}name '_MonthCalendar_Update'{$ENDIF},
-  MonthCalendar_BringToFront {$IFNDEF MSWINDOWS}name '_MonthCalendar_BringToFront'{$ENDIF},
-  MonthCalendar_HasParent {$IFNDEF MSWINDOWS}name '_MonthCalendar_HasParent'{$ENDIF},
-  MonthCalendar_Hide {$IFNDEF MSWINDOWS}name '_MonthCalendar_Hide'{$ENDIF},
-  MonthCalendar_Perform {$IFNDEF MSWINDOWS}name '_MonthCalendar_Perform'{$ENDIF},
-  MonthCalendar_Refresh {$IFNDEF MSWINDOWS}name '_MonthCalendar_Refresh'{$ENDIF},
-  MonthCalendar_SendToBack {$IFNDEF MSWINDOWS}name '_MonthCalendar_SendToBack'{$ENDIF},
-  MonthCalendar_Show {$IFNDEF MSWINDOWS}name '_MonthCalendar_Show'{$ENDIF},
-  MonthCalendar_GetTextBuf {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetTextBuf'{$ENDIF},
-  MonthCalendar_FindComponent {$IFNDEF MSWINDOWS}name '_MonthCalendar_FindComponent'{$ENDIF},
-  MonthCalendar_GetNamePath {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetNamePath'{$ENDIF},
-  MonthCalendar_Assign {$IFNDEF MSWINDOWS}name '_MonthCalendar_Assign'{$ENDIF},
-  MonthCalendar_ClassName {$IFNDEF MSWINDOWS}name '_MonthCalendar_ClassName'{$ENDIF},
-  MonthCalendar_Equals {$IFNDEF MSWINDOWS}name '_MonthCalendar_Equals'{$ENDIF},
-  MonthCalendar_GetHashCode {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetHashCode'{$ENDIF},
-  MonthCalendar_ToString {$IFNDEF MSWINDOWS}name '_MonthCalendar_ToString'{$ENDIF},
-  MonthCalendar_GetAlign {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetAlign'{$ENDIF},
-  MonthCalendar_SetAlign {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetAlign'{$ENDIF},
-  MonthCalendar_GetAnchors {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetAnchors'{$ENDIF},
-  MonthCalendar_SetAnchors {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetAnchors'{$ENDIF},
-  MonthCalendar_GetAutoSize {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetAutoSize'{$ENDIF},
-  MonthCalendar_SetAutoSize {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetAutoSize'{$ENDIF},
-  MonthCalendar_GetBorderWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetBorderWidth'{$ENDIF},
-  MonthCalendar_SetBorderWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetBorderWidth'{$ENDIF},
-  MonthCalendar_GetBiDiMode {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetBiDiMode'{$ENDIF},
-  MonthCalendar_SetBiDiMode {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetBiDiMode'{$ENDIF},
-  MonthCalendar_GetCalColors {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetCalColors'{$ENDIF},
-  MonthCalendar_SetCalColors {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetCalColors'{$ENDIF},
-  MonthCalendar_GetMultiSelect {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetMultiSelect'{$ENDIF},
-  MonthCalendar_SetMultiSelect {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetMultiSelect'{$ENDIF},
-  MonthCalendar_GetDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetDate'{$ENDIF},
-  MonthCalendar_SetDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetDate'{$ENDIF},
-  MonthCalendar_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetDoubleBuffered'{$ENDIF},
-  MonthCalendar_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetDoubleBuffered'{$ENDIF},
-  MonthCalendar_GetEnabled {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetEnabled'{$ENDIF},
-  MonthCalendar_SetEnabled {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetEnabled'{$ENDIF},
-  MonthCalendar_GetFirstDayOfWeek {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetFirstDayOfWeek'{$ENDIF},
-  MonthCalendar_SetFirstDayOfWeek {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetFirstDayOfWeek'{$ENDIF},
-  MonthCalendar_GetFont {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetFont'{$ENDIF},
-  MonthCalendar_SetFont {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetFont'{$ENDIF},
-  MonthCalendar_GetMaxDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetMaxDate'{$ENDIF},
-  MonthCalendar_SetMaxDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetMaxDate'{$ENDIF},
-  MonthCalendar_GetMaxSelectRange {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetMaxSelectRange'{$ENDIF},
-  MonthCalendar_SetMaxSelectRange {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetMaxSelectRange'{$ENDIF},
-  MonthCalendar_GetMinDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetMinDate'{$ENDIF},
-  MonthCalendar_SetMinDate {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetMinDate'{$ENDIF},
-  MonthCalendar_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetParentDoubleBuffered'{$ENDIF},
-  MonthCalendar_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetParentDoubleBuffered'{$ENDIF},
-  MonthCalendar_GetParentFont {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetParentFont'{$ENDIF},
-  MonthCalendar_SetParentFont {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetParentFont'{$ENDIF},
-  MonthCalendar_GetParentShowHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetParentShowHint'{$ENDIF},
-  MonthCalendar_SetParentShowHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetParentShowHint'{$ENDIF},
-  MonthCalendar_GetPopupMenu {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetPopupMenu'{$ENDIF},
-  MonthCalendar_SetPopupMenu {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetPopupMenu'{$ENDIF},
-  MonthCalendar_GetShowHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetShowHint'{$ENDIF},
-  MonthCalendar_SetShowHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetShowHint'{$ENDIF},
-  MonthCalendar_GetShowToday {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetShowToday'{$ENDIF},
-  MonthCalendar_SetShowToday {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetShowToday'{$ENDIF},
-  MonthCalendar_GetShowTodayCircle {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetShowTodayCircle'{$ENDIF},
-  MonthCalendar_SetShowTodayCircle {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetShowTodayCircle'{$ENDIF},
-  MonthCalendar_GetTabOrder {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetTabOrder'{$ENDIF},
-  MonthCalendar_SetTabOrder {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetTabOrder'{$ENDIF},
-  MonthCalendar_GetTabStop {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetTabStop'{$ENDIF},
-  MonthCalendar_SetTabStop {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetTabStop'{$ENDIF},
-  MonthCalendar_GetVisible {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetVisible'{$ENDIF},
-  MonthCalendar_SetVisible {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetVisible'{$ENDIF},
-  MonthCalendar_GetWeekNumbers {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetWeekNumbers'{$ENDIF},
-  MonthCalendar_SetWeekNumbers {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetWeekNumbers'{$ENDIF},
-  MonthCalendar_SetOnClick {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnClick'{$ENDIF},
-  MonthCalendar_SetOnDblClick {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnDblClick'{$ENDIF},
-  MonthCalendar_SetOnEnter {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnEnter'{$ENDIF},
-  MonthCalendar_SetOnExit {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnExit'{$ENDIF},
-  MonthCalendar_SetOnKeyDown {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnKeyDown'{$ENDIF},
-  MonthCalendar_SetOnKeyPress {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnKeyPress'{$ENDIF},
-  MonthCalendar_SetOnKeyUp {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnKeyUp'{$ENDIF},
-  MonthCalendar_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnMouseEnter'{$ENDIF},
-  MonthCalendar_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetOnMouseLeave'{$ENDIF},
-  MonthCalendar_GetBrush {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetBrush'{$ENDIF},
-  MonthCalendar_GetControlCount {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetControlCount'{$ENDIF},
-  MonthCalendar_GetHandle {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetHandle'{$ENDIF},
-  MonthCalendar_GetParentWindow {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetParentWindow'{$ENDIF},
-  MonthCalendar_SetParentWindow {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetParentWindow'{$ENDIF},
-  MonthCalendar_GetAction {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetAction'{$ENDIF},
-  MonthCalendar_SetAction {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetAction'{$ENDIF},
-  MonthCalendar_GetBoundsRect {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetBoundsRect'{$ENDIF},
-  MonthCalendar_SetBoundsRect {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetBoundsRect'{$ENDIF},
-  MonthCalendar_GetClientHeight {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetClientHeight'{$ENDIF},
-  MonthCalendar_SetClientHeight {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetClientHeight'{$ENDIF},
-  MonthCalendar_GetClientRect {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetClientRect'{$ENDIF},
-  MonthCalendar_GetClientWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetClientWidth'{$ENDIF},
-  MonthCalendar_SetClientWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetClientWidth'{$ENDIF},
-  MonthCalendar_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetExplicitLeft'{$ENDIF},
-  MonthCalendar_GetExplicitTop {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetExplicitTop'{$ENDIF},
-  MonthCalendar_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetExplicitWidth'{$ENDIF},
-  MonthCalendar_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetExplicitHeight'{$ENDIF},
-  MonthCalendar_GetParent {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetParent'{$ENDIF},
-  MonthCalendar_SetParent {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetParent'{$ENDIF},
-  MonthCalendar_GetStyleElements {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetStyleElements'{$ENDIF},
-  MonthCalendar_SetStyleElements {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetStyleElements'{$ENDIF},
-  MonthCalendar_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetAlignWithMargins'{$ENDIF},
-  MonthCalendar_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetAlignWithMargins'{$ENDIF},
-  MonthCalendar_GetLeft {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetLeft'{$ENDIF},
-  MonthCalendar_SetLeft {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetLeft'{$ENDIF},
-  MonthCalendar_GetTop {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetTop'{$ENDIF},
-  MonthCalendar_SetTop {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetTop'{$ENDIF},
-  MonthCalendar_GetWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetWidth'{$ENDIF},
-  MonthCalendar_SetWidth {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetWidth'{$ENDIF},
-  MonthCalendar_GetHeight {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetHeight'{$ENDIF},
-  MonthCalendar_SetHeight {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetHeight'{$ENDIF},
-  MonthCalendar_GetCursor {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetCursor'{$ENDIF},
-  MonthCalendar_SetCursor {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetCursor'{$ENDIF},
-  MonthCalendar_GetHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetHint'{$ENDIF},
-  MonthCalendar_SetHint {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetHint'{$ENDIF},
-  MonthCalendar_GetMargins {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetMargins'{$ENDIF},
-  MonthCalendar_SetMargins {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetMargins'{$ENDIF},
-  MonthCalendar_GetComponentCount {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetComponentCount'{$ENDIF},
-  MonthCalendar_GetComponentIndex {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetComponentIndex'{$ENDIF},
-  MonthCalendar_SetComponentIndex {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetComponentIndex'{$ENDIF},
-  MonthCalendar_GetOwner {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetOwner'{$ENDIF},
-  MonthCalendar_GetName {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetName'{$ENDIF},
-  MonthCalendar_SetName {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetName'{$ENDIF},
-  MonthCalendar_GetTag {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetTag'{$ENDIF},
-  MonthCalendar_SetTag {$IFNDEF MSWINDOWS}name '_MonthCalendar_SetTag'{$ENDIF},
-  MonthCalendar_GetControls {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetControls'{$ENDIF},
-  MonthCalendar_GetComponents {$IFNDEF MSWINDOWS}name '_MonthCalendar_GetComponents'{$ENDIF};
+  MonthCalendar_Create,
+  MonthCalendar_Free,
+  MonthCalendar_CanFocus,
+  MonthCalendar_FlipChildren,
+  MonthCalendar_Focused,
+  MonthCalendar_HandleAllocated,
+  MonthCalendar_Invalidate,
+  MonthCalendar_Realign,
+  MonthCalendar_Repaint,
+  MonthCalendar_ScaleBy,
+  MonthCalendar_SetBounds,
+  MonthCalendar_SetFocus,
+  MonthCalendar_Update,
+  MonthCalendar_BringToFront,
+  MonthCalendar_HasParent,
+  MonthCalendar_Hide,
+  MonthCalendar_Perform,
+  MonthCalendar_Refresh,
+  MonthCalendar_SendToBack,
+  MonthCalendar_Show,
+  MonthCalendar_GetTextBuf,
+  MonthCalendar_FindComponent,
+  MonthCalendar_GetNamePath,
+  MonthCalendar_Assign,
+  MonthCalendar_ClassName,
+  MonthCalendar_Equals,
+  MonthCalendar_GetHashCode,
+  MonthCalendar_ToString,
+  MonthCalendar_GetAlign,
+  MonthCalendar_SetAlign,
+  MonthCalendar_GetAnchors,
+  MonthCalendar_SetAnchors,
+  MonthCalendar_GetAutoSize,
+  MonthCalendar_SetAutoSize,
+  MonthCalendar_GetBorderWidth,
+  MonthCalendar_SetBorderWidth,
+  MonthCalendar_GetBiDiMode,
+  MonthCalendar_SetBiDiMode,
+  MonthCalendar_GetCalColors,
+  MonthCalendar_SetCalColors,
+  MonthCalendar_GetMultiSelect,
+  MonthCalendar_SetMultiSelect,
+  MonthCalendar_GetDate,
+  MonthCalendar_SetDate,
+  MonthCalendar_GetDoubleBuffered,
+  MonthCalendar_SetDoubleBuffered,
+  MonthCalendar_GetEnabled,
+  MonthCalendar_SetEnabled,
+  MonthCalendar_GetFirstDayOfWeek,
+  MonthCalendar_SetFirstDayOfWeek,
+  MonthCalendar_GetFont,
+  MonthCalendar_SetFont,
+  MonthCalendar_GetMaxDate,
+  MonthCalendar_SetMaxDate,
+  MonthCalendar_GetMaxSelectRange,
+  MonthCalendar_SetMaxSelectRange,
+  MonthCalendar_GetMinDate,
+  MonthCalendar_SetMinDate,
+  MonthCalendar_GetParentDoubleBuffered,
+  MonthCalendar_SetParentDoubleBuffered,
+  MonthCalendar_GetParentFont,
+  MonthCalendar_SetParentFont,
+  MonthCalendar_GetParentShowHint,
+  MonthCalendar_SetParentShowHint,
+  MonthCalendar_GetPopupMenu,
+  MonthCalendar_SetPopupMenu,
+  MonthCalendar_GetShowHint,
+  MonthCalendar_SetShowHint,
+  MonthCalendar_GetShowToday,
+  MonthCalendar_SetShowToday,
+  MonthCalendar_GetShowTodayCircle,
+  MonthCalendar_SetShowTodayCircle,
+  MonthCalendar_GetTabOrder,
+  MonthCalendar_SetTabOrder,
+  MonthCalendar_GetTabStop,
+  MonthCalendar_SetTabStop,
+  MonthCalendar_GetVisible,
+  MonthCalendar_SetVisible,
+  MonthCalendar_GetWeekNumbers,
+  MonthCalendar_SetWeekNumbers,
+  MonthCalendar_SetOnClick,
+  MonthCalendar_SetOnDblClick,
+  MonthCalendar_SetOnEnter,
+  MonthCalendar_SetOnExit,
+  MonthCalendar_SetOnKeyDown,
+  MonthCalendar_SetOnKeyPress,
+  MonthCalendar_SetOnKeyUp,
+  MonthCalendar_SetOnMouseEnter,
+  MonthCalendar_SetOnMouseLeave,
+  MonthCalendar_GetBrush,
+  MonthCalendar_GetControlCount,
+  MonthCalendar_GetHandle,
+  MonthCalendar_GetParentWindow,
+  MonthCalendar_SetParentWindow,
+  MonthCalendar_GetAction,
+  MonthCalendar_SetAction,
+  MonthCalendar_GetBoundsRect,
+  MonthCalendar_SetBoundsRect,
+  MonthCalendar_GetClientHeight,
+  MonthCalendar_SetClientHeight,
+  MonthCalendar_GetClientRect,
+  MonthCalendar_GetClientWidth,
+  MonthCalendar_SetClientWidth,
+  MonthCalendar_GetExplicitLeft,
+  MonthCalendar_GetExplicitTop,
+  MonthCalendar_GetExplicitWidth,
+  MonthCalendar_GetExplicitHeight,
+  MonthCalendar_GetParent,
+  MonthCalendar_SetParent,
+  MonthCalendar_GetStyleElements,
+  MonthCalendar_SetStyleElements,
+  MonthCalendar_GetAlignWithMargins,
+  MonthCalendar_SetAlignWithMargins,
+  MonthCalendar_GetLeft,
+  MonthCalendar_SetLeft,
+  MonthCalendar_GetTop,
+  MonthCalendar_SetTop,
+  MonthCalendar_GetWidth,
+  MonthCalendar_SetWidth,
+  MonthCalendar_GetHeight,
+  MonthCalendar_SetHeight,
+  MonthCalendar_GetCursor,
+  MonthCalendar_SetCursor,
+  MonthCalendar_GetHint,
+  MonthCalendar_SetHint,
+  MonthCalendar_GetMargins,
+  MonthCalendar_SetMargins,
+  MonthCalendar_GetComponentCount,
+  MonthCalendar_GetComponentIndex,
+  MonthCalendar_SetComponentIndex,
+  MonthCalendar_GetOwner,
+  MonthCalendar_GetName,
+  MonthCalendar_SetName,
+  MonthCalendar_GetTag,
+  MonthCalendar_SetTag,
+  MonthCalendar_GetControls,
+  MonthCalendar_GetComponents;
 

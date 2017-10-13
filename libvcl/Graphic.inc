@@ -5,127 +5,127 @@
 //
 //----------------------------------------
 
-function Graphic_Create: TGraphic; cdecl;
+function Graphic_Create: TGraphic; stdcall;
 begin
   Result :=  TGraphic.Create;
 end;
 
-procedure Graphic_Free(AObj: TGraphic); cdecl;
+procedure Graphic_Free(AObj: TGraphic); stdcall;
 begin
   AObj.Free;
 end;
 
-function Graphic_Equals(AObj: TGraphic; Obj: TObject): LongBool; cdecl;
+function Graphic_Equals(AObj: TGraphic; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-procedure Graphic_LoadFromFile(AObj: TGraphic; Filename: PChar); cdecl;
+procedure Graphic_LoadFromFile(AObj: TGraphic; Filename: PChar); stdcall;
 begin
   AObj.LoadFromFile(Filename);
 end;
 
-procedure Graphic_SaveToFile(AObj: TGraphic; Filename: PChar); cdecl;
+procedure Graphic_SaveToFile(AObj: TGraphic; Filename: PChar); stdcall;
 begin
   AObj.SaveToFile(Filename);
 end;
 
-procedure Graphic_LoadFromStream(AObj: TGraphic; Stream: TStream); cdecl;
+procedure Graphic_LoadFromStream(AObj: TGraphic; Stream: TStream); stdcall;
 begin
   AObj.LoadFromStream(Stream);
 end;
 
-procedure Graphic_SaveToStream(AObj: TGraphic; Stream: TStream); cdecl;
+procedure Graphic_SaveToStream(AObj: TGraphic; Stream: TStream); stdcall;
 begin
   AObj.SaveToStream(Stream);
 end;
 
-procedure Graphic_SetSize(AObj: TGraphic; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Graphic_SetSize(AObj: TGraphic; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetSize(AWidth, AHeight);
 end;
 
-procedure Graphic_Assign(AObj: TGraphic; Source: TPersistent); cdecl;
+procedure Graphic_Assign(AObj: TGraphic; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Graphic_GetNamePath(AObj: TGraphic): PChar; cdecl;
+function Graphic_GetNamePath(AObj: TGraphic): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function Graphic_ClassName(AObj: TGraphic): PChar; cdecl;
+function Graphic_ClassName(AObj: TGraphic): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Graphic_GetHashCode(AObj: TGraphic): Integer; cdecl;
+function Graphic_GetHashCode(AObj: TGraphic): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Graphic_ToString(AObj: TGraphic): PChar; cdecl;
+function Graphic_ToString(AObj: TGraphic): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Graphic_GetEmpty(AObj: TGraphic): LongBool; cdecl;
+function Graphic_GetEmpty(AObj: TGraphic): LongBool; stdcall;
 begin
   Result :=  AObj.Empty;
 end;
 
-function Graphic_GetHeight(AObj: TGraphic): Integer; cdecl;
+function Graphic_GetHeight(AObj: TGraphic): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Graphic_SetHeight(AObj: TGraphic; AValue: Integer); cdecl;
+procedure Graphic_SetHeight(AObj: TGraphic; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Graphic_GetModified(AObj: TGraphic): LongBool; cdecl;
+function Graphic_GetModified(AObj: TGraphic): LongBool; stdcall;
 begin
   Result :=  AObj.Modified;
 end;
 
-procedure Graphic_SetModified(AObj: TGraphic; AValue: LongBool); cdecl;
+procedure Graphic_SetModified(AObj: TGraphic; AValue: LongBool); stdcall;
 begin
   AObj.Modified := AValue;
 end;
 
-function Graphic_GetPaletteModified(AObj: TGraphic): LongBool; cdecl;
+function Graphic_GetPaletteModified(AObj: TGraphic): LongBool; stdcall;
 begin
   Result :=  AObj.PaletteModified;
 end;
 
-procedure Graphic_SetPaletteModified(AObj: TGraphic; AValue: LongBool); cdecl;
+procedure Graphic_SetPaletteModified(AObj: TGraphic; AValue: LongBool); stdcall;
 begin
   AObj.PaletteModified := AValue;
 end;
 
-function Graphic_GetTransparent(AObj: TGraphic): LongBool; cdecl;
+function Graphic_GetTransparent(AObj: TGraphic): LongBool; stdcall;
 begin
   Result :=  AObj.Transparent;
 end;
 
-procedure Graphic_SetTransparent(AObj: TGraphic; AValue: LongBool); cdecl;
+procedure Graphic_SetTransparent(AObj: TGraphic; AValue: LongBool); stdcall;
 begin
   AObj.Transparent := AValue;
 end;
 
-function Graphic_GetWidth(AObj: TGraphic): Integer; cdecl;
+function Graphic_GetWidth(AObj: TGraphic): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Graphic_SetWidth(AObj: TGraphic; AValue: Integer); cdecl;
+procedure Graphic_SetWidth(AObj: TGraphic; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-procedure Graphic_SetOnChange(AObj: TGraphic; AEventId: NativeUInt); stdcall
+procedure Graphic_SetOnChange(AObj: TGraphic; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -139,29 +139,29 @@ end;
 
 
 exports
-  Graphic_Create {$IFNDEF MSWINDOWS}name '_Graphic_Create'{$ENDIF},
-  Graphic_Free {$IFNDEF MSWINDOWS}name '_Graphic_Free'{$ENDIF},
-  Graphic_Equals {$IFNDEF MSWINDOWS}name '_Graphic_Equals'{$ENDIF},
-  Graphic_LoadFromFile {$IFNDEF MSWINDOWS}name '_Graphic_LoadFromFile'{$ENDIF},
-  Graphic_SaveToFile {$IFNDEF MSWINDOWS}name '_Graphic_SaveToFile'{$ENDIF},
-  Graphic_LoadFromStream {$IFNDEF MSWINDOWS}name '_Graphic_LoadFromStream'{$ENDIF},
-  Graphic_SaveToStream {$IFNDEF MSWINDOWS}name '_Graphic_SaveToStream'{$ENDIF},
-  Graphic_SetSize {$IFNDEF MSWINDOWS}name '_Graphic_SetSize'{$ENDIF},
-  Graphic_Assign {$IFNDEF MSWINDOWS}name '_Graphic_Assign'{$ENDIF},
-  Graphic_GetNamePath {$IFNDEF MSWINDOWS}name '_Graphic_GetNamePath'{$ENDIF},
-  Graphic_ClassName {$IFNDEF MSWINDOWS}name '_Graphic_ClassName'{$ENDIF},
-  Graphic_GetHashCode {$IFNDEF MSWINDOWS}name '_Graphic_GetHashCode'{$ENDIF},
-  Graphic_ToString {$IFNDEF MSWINDOWS}name '_Graphic_ToString'{$ENDIF},
-  Graphic_GetEmpty {$IFNDEF MSWINDOWS}name '_Graphic_GetEmpty'{$ENDIF},
-  Graphic_GetHeight {$IFNDEF MSWINDOWS}name '_Graphic_GetHeight'{$ENDIF},
-  Graphic_SetHeight {$IFNDEF MSWINDOWS}name '_Graphic_SetHeight'{$ENDIF},
-  Graphic_GetModified {$IFNDEF MSWINDOWS}name '_Graphic_GetModified'{$ENDIF},
-  Graphic_SetModified {$IFNDEF MSWINDOWS}name '_Graphic_SetModified'{$ENDIF},
-  Graphic_GetPaletteModified {$IFNDEF MSWINDOWS}name '_Graphic_GetPaletteModified'{$ENDIF},
-  Graphic_SetPaletteModified {$IFNDEF MSWINDOWS}name '_Graphic_SetPaletteModified'{$ENDIF},
-  Graphic_GetTransparent {$IFNDEF MSWINDOWS}name '_Graphic_GetTransparent'{$ENDIF},
-  Graphic_SetTransparent {$IFNDEF MSWINDOWS}name '_Graphic_SetTransparent'{$ENDIF},
-  Graphic_GetWidth {$IFNDEF MSWINDOWS}name '_Graphic_GetWidth'{$ENDIF},
-  Graphic_SetWidth {$IFNDEF MSWINDOWS}name '_Graphic_SetWidth'{$ENDIF},
-  Graphic_SetOnChange {$IFNDEF MSWINDOWS}name '_Graphic_SetOnChange'{$ENDIF};
+  Graphic_Create,
+  Graphic_Free,
+  Graphic_Equals,
+  Graphic_LoadFromFile,
+  Graphic_SaveToFile,
+  Graphic_LoadFromStream,
+  Graphic_SaveToStream,
+  Graphic_SetSize,
+  Graphic_Assign,
+  Graphic_GetNamePath,
+  Graphic_ClassName,
+  Graphic_GetHashCode,
+  Graphic_ToString,
+  Graphic_GetEmpty,
+  Graphic_GetHeight,
+  Graphic_SetHeight,
+  Graphic_GetModified,
+  Graphic_SetModified,
+  Graphic_GetPaletteModified,
+  Graphic_SetPaletteModified,
+  Graphic_GetTransparent,
+  Graphic_SetTransparent,
+  Graphic_GetWidth,
+  Graphic_SetWidth,
+  Graphic_SetOnChange;
 

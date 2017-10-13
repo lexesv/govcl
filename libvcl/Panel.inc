@@ -5,457 +5,457 @@
 //
 //----------------------------------------
 
-function Panel_Create(AOwner: TComponent): TPanel; cdecl;
+function Panel_Create(AOwner: TComponent): TPanel; stdcall;
 begin
   Result :=  TPanel.Create(AOwner);
 end;
 
-procedure Panel_Free(AObj: TPanel); cdecl;
+procedure Panel_Free(AObj: TPanel); stdcall;
 begin
   AObj.Free;
 end;
 
-function Panel_CanFocus(AObj: TPanel): LongBool; cdecl;
+function Panel_CanFocus(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure Panel_FlipChildren(AObj: TPanel; AllLevels: LongBool); cdecl;
+procedure Panel_FlipChildren(AObj: TPanel; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function Panel_Focused(AObj: TPanel): LongBool; cdecl;
+function Panel_Focused(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function Panel_HandleAllocated(AObj: TPanel): LongBool; cdecl;
+function Panel_HandleAllocated(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure Panel_Invalidate(AObj: TPanel); cdecl;
+procedure Panel_Invalidate(AObj: TPanel); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure Panel_Realign(AObj: TPanel); cdecl;
+procedure Panel_Realign(AObj: TPanel); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure Panel_Repaint(AObj: TPanel); cdecl;
+procedure Panel_Repaint(AObj: TPanel); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure Panel_ScaleBy(AObj: TPanel; M: Integer; D: Integer); cdecl;
+procedure Panel_ScaleBy(AObj: TPanel; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure Panel_SetBounds(AObj: TPanel; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure Panel_SetBounds(AObj: TPanel; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure Panel_SetFocus(AObj: TPanel); cdecl;
+procedure Panel_SetFocus(AObj: TPanel); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure Panel_Update(AObj: TPanel); cdecl;
+procedure Panel_Update(AObj: TPanel); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure Panel_BringToFront(AObj: TPanel); cdecl;
+procedure Panel_BringToFront(AObj: TPanel); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function Panel_HasParent(AObj: TPanel): LongBool; cdecl;
+function Panel_HasParent(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure Panel_Hide(AObj: TPanel); cdecl;
+procedure Panel_Hide(AObj: TPanel); stdcall;
 begin
   AObj.Hide;
 end;
 
-function Panel_Perform(AObj: TPanel; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function Panel_Perform(AObj: TPanel; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure Panel_Refresh(AObj: TPanel); cdecl;
+procedure Panel_Refresh(AObj: TPanel); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure Panel_SendToBack(AObj: TPanel); cdecl;
+procedure Panel_SendToBack(AObj: TPanel); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure Panel_Show(AObj: TPanel); cdecl;
+procedure Panel_Show(AObj: TPanel); stdcall;
 begin
   AObj.Show;
 end;
 
-function Panel_GetTextBuf(AObj: TPanel; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function Panel_GetTextBuf(AObj: TPanel; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function Panel_FindComponent(AObj: TPanel; AName: PChar): TComponent; cdecl;
+function Panel_FindComponent(AObj: TPanel; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Panel_GetNamePath(AObj: TPanel): PChar; cdecl;
+function Panel_GetNamePath(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure Panel_Assign(AObj: TPanel; Source: TPersistent); cdecl;
+procedure Panel_Assign(AObj: TPanel; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Panel_ClassName(AObj: TPanel): PChar; cdecl;
+function Panel_ClassName(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Panel_Equals(AObj: TPanel; Obj: TObject): LongBool; cdecl;
+function Panel_Equals(AObj: TPanel; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Panel_GetHashCode(AObj: TPanel): Integer; cdecl;
+function Panel_GetHashCode(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Panel_ToString(AObj: TPanel): PChar; cdecl;
+function Panel_ToString(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Panel_GetAlign(AObj: TPanel): TAlign; cdecl;
+function Panel_GetAlign(AObj: TPanel): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure Panel_SetAlign(AObj: TPanel; AValue: TAlign); cdecl;
+procedure Panel_SetAlign(AObj: TPanel; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function Panel_GetAlignment(AObj: TPanel): TAlignment; cdecl;
+function Panel_GetAlignment(AObj: TPanel): TAlignment; stdcall;
 begin
   Result :=  AObj.Alignment;
 end;
 
-procedure Panel_SetAlignment(AObj: TPanel; AValue: TAlignment); cdecl;
+procedure Panel_SetAlignment(AObj: TPanel; AValue: TAlignment); stdcall;
 begin
   AObj.Alignment := AValue;
 end;
 
-function Panel_GetAnchors(AObj: TPanel): TAnchors; cdecl;
+function Panel_GetAnchors(AObj: TPanel): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure Panel_SetAnchors(AObj: TPanel; AValue: TAnchors); cdecl;
+procedure Panel_SetAnchors(AObj: TPanel; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function Panel_GetAutoSize(AObj: TPanel): LongBool; cdecl;
+function Panel_GetAutoSize(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.AutoSize;
 end;
 
-procedure Panel_SetAutoSize(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetAutoSize(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.AutoSize := AValue;
 end;
 
-function Panel_GetBevelEdges(AObj: TPanel): TBevelEdges; cdecl;
+function Panel_GetBevelEdges(AObj: TPanel): TBevelEdges; stdcall;
 begin
   Result :=  AObj.BevelEdges;
 end;
 
-procedure Panel_SetBevelEdges(AObj: TPanel; AValue: TBevelEdges); cdecl;
+procedure Panel_SetBevelEdges(AObj: TPanel; AValue: TBevelEdges); stdcall;
 begin
   AObj.BevelEdges := AValue;
 end;
 
-function Panel_GetBevelInner(AObj: TPanel): TBevelCut; cdecl;
+function Panel_GetBevelInner(AObj: TPanel): TBevelCut; stdcall;
 begin
   Result :=  AObj.BevelInner;
 end;
 
-procedure Panel_SetBevelInner(AObj: TPanel; AValue: TBevelCut); cdecl;
+procedure Panel_SetBevelInner(AObj: TPanel; AValue: TBevelCut); stdcall;
 begin
   AObj.BevelInner := AValue;
 end;
 
-function Panel_GetBevelKind(AObj: TPanel): TBevelKind; cdecl;
+function Panel_GetBevelKind(AObj: TPanel): TBevelKind; stdcall;
 begin
   Result :=  AObj.BevelKind;
 end;
 
-procedure Panel_SetBevelKind(AObj: TPanel; AValue: TBevelKind); cdecl;
+procedure Panel_SetBevelKind(AObj: TPanel; AValue: TBevelKind); stdcall;
 begin
   AObj.BevelKind := AValue;
 end;
 
-function Panel_GetBevelOuter(AObj: TPanel): TBevelCut; cdecl;
+function Panel_GetBevelOuter(AObj: TPanel): TBevelCut; stdcall;
 begin
   Result :=  AObj.BevelOuter;
 end;
 
-procedure Panel_SetBevelOuter(AObj: TPanel; AValue: TBevelCut); cdecl;
+procedure Panel_SetBevelOuter(AObj: TPanel; AValue: TBevelCut); stdcall;
 begin
   AObj.BevelOuter := AValue;
 end;
 
-function Panel_GetBiDiMode(AObj: TPanel): TBiDiMode; cdecl;
+function Panel_GetBiDiMode(AObj: TPanel): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure Panel_SetBiDiMode(AObj: TPanel; AValue: TBiDiMode); cdecl;
+procedure Panel_SetBiDiMode(AObj: TPanel; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function Panel_GetBorderWidth(AObj: TPanel): TBorderWidth; cdecl;
+function Panel_GetBorderWidth(AObj: TPanel): TBorderWidth; stdcall;
 begin
   Result :=  AObj.BorderWidth;
 end;
 
-procedure Panel_SetBorderWidth(AObj: TPanel; AValue: TBorderWidth); cdecl;
+procedure Panel_SetBorderWidth(AObj: TPanel; AValue: TBorderWidth); stdcall;
 begin
   AObj.BorderWidth := AValue;
 end;
 
-function Panel_GetBorderStyle(AObj: TPanel): TBorderStyle; cdecl;
+function Panel_GetBorderStyle(AObj: TPanel): TBorderStyle; stdcall;
 begin
   Result :=  AObj.BorderStyle;
 end;
 
-procedure Panel_SetBorderStyle(AObj: TPanel; AValue: TBorderStyle); cdecl;
+procedure Panel_SetBorderStyle(AObj: TPanel; AValue: TBorderStyle); stdcall;
 begin
   AObj.BorderStyle := AValue;
 end;
 
-function Panel_GetCaption(AObj: TPanel): PChar; cdecl;
+function Panel_GetCaption(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure Panel_SetCaption(AObj: TPanel; AValue: PChar); cdecl;
+procedure Panel_SetCaption(AObj: TPanel; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function Panel_GetColor(AObj: TPanel): TColor; cdecl;
+function Panel_GetColor(AObj: TPanel): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure Panel_SetColor(AObj: TPanel; AValue: TColor); cdecl;
+procedure Panel_SetColor(AObj: TPanel; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function Panel_GetDoubleBuffered(AObj: TPanel): LongBool; cdecl;
+function Panel_GetDoubleBuffered(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure Panel_SetDoubleBuffered(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetDoubleBuffered(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function Panel_GetEnabled(AObj: TPanel): LongBool; cdecl;
+function Panel_GetEnabled(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure Panel_SetEnabled(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetEnabled(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function Panel_GetFullRepaint(AObj: TPanel): LongBool; cdecl;
+function Panel_GetFullRepaint(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.FullRepaint;
 end;
 
-procedure Panel_SetFullRepaint(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetFullRepaint(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.FullRepaint := AValue;
 end;
 
-function Panel_GetFont(AObj: TPanel): TFont; cdecl;
+function Panel_GetFont(AObj: TPanel): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure Panel_SetFont(AObj: TPanel; AValue: TFont); cdecl;
+procedure Panel_SetFont(AObj: TPanel; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function Panel_GetLocked(AObj: TPanel): LongBool; cdecl;
+function Panel_GetLocked(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.Locked;
 end;
 
-procedure Panel_SetLocked(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetLocked(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.Locked := AValue;
 end;
 
-function Panel_GetParentBackground(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentBackground(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentBackground;
 end;
 
-procedure Panel_SetParentBackground(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentBackground(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentBackground := AValue;
 end;
 
-function Panel_GetParentColor(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentColor(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentColor;
 end;
 
-procedure Panel_SetParentColor(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentColor(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentColor := AValue;
 end;
 
-function Panel_GetParentCtl3D(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentCtl3D(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentCtl3D;
 end;
 
-procedure Panel_SetParentCtl3D(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentCtl3D(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentCtl3D := AValue;
 end;
 
-function Panel_GetParentDoubleBuffered(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentDoubleBuffered(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure Panel_SetParentDoubleBuffered(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentDoubleBuffered(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function Panel_GetParentFont(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentFont(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure Panel_SetParentFont(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentFont(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function Panel_GetParentShowHint(AObj: TPanel): LongBool; cdecl;
+function Panel_GetParentShowHint(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure Panel_SetParentShowHint(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetParentShowHint(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function Panel_GetPopupMenu(AObj: TPanel): TPopupMenu; cdecl;
+function Panel_GetPopupMenu(AObj: TPanel): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure Panel_SetPopupMenu(AObj: TPanel; AValue: TPopupMenu); cdecl;
+procedure Panel_SetPopupMenu(AObj: TPanel; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function Panel_GetShowCaption(AObj: TPanel): LongBool; cdecl;
+function Panel_GetShowCaption(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ShowCaption;
 end;
 
-procedure Panel_SetShowCaption(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetShowCaption(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ShowCaption := AValue;
 end;
 
-function Panel_GetShowHint(AObj: TPanel): LongBool; cdecl;
+function Panel_GetShowHint(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure Panel_SetShowHint(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetShowHint(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function Panel_GetTabOrder(AObj: TPanel): TTabOrder; cdecl;
+function Panel_GetTabOrder(AObj: TPanel): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure Panel_SetTabOrder(AObj: TPanel; AValue: TTabOrder); cdecl;
+procedure Panel_SetTabOrder(AObj: TPanel; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function Panel_GetTabStop(AObj: TPanel): LongBool; cdecl;
+function Panel_GetTabStop(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure Panel_SetTabStop(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetTabStop(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function Panel_GetVisible(AObj: TPanel): LongBool; cdecl;
+function Panel_GetVisible(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure Panel_SetVisible(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetVisible(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function Panel_GetStyleElements(AObj: TPanel): TStyleElements; cdecl;
+function Panel_GetStyleElements(AObj: TPanel): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure Panel_SetStyleElements(AObj: TPanel; AValue: TStyleElements); cdecl;
+procedure Panel_SetStyleElements(AObj: TPanel; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-procedure Panel_SetOnClick(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnClick(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -467,7 +467,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure Panel_SetOnDblClick(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnDblClick(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -479,7 +479,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure Panel_SetOnEnter(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnEnter(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -491,7 +491,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure Panel_SetOnExit(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnExit(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -503,7 +503,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure Panel_SetOnMouseDown(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnMouseDown(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -515,7 +515,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure Panel_SetOnMouseEnter(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnMouseEnter(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -527,7 +527,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure Panel_SetOnMouseLeave(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnMouseLeave(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -539,7 +539,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure Panel_SetOnMouseMove(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnMouseMove(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -551,7 +551,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure Panel_SetOnMouseUp(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnMouseUp(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -563,7 +563,7 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-procedure Panel_SetOnResize(AObj: TPanel; AEventId: NativeUInt); stdcall
+procedure Panel_SetOnResize(AObj: TPanel; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -575,382 +575,382 @@ begin
   TEventClass.Add(AObj, geResize, AEventId);
 end;
 
-function Panel_GetBrush(AObj: TPanel): TBrush; cdecl;
+function Panel_GetBrush(AObj: TPanel): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function Panel_GetControlCount(AObj: TPanel): Integer; cdecl;
+function Panel_GetControlCount(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function Panel_GetHandle(AObj: TPanel): HWND; cdecl;
+function Panel_GetHandle(AObj: TPanel): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function Panel_GetParentWindow(AObj: TPanel): HWND; cdecl;
+function Panel_GetParentWindow(AObj: TPanel): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure Panel_SetParentWindow(AObj: TPanel; AValue: HWND); cdecl;
+procedure Panel_SetParentWindow(AObj: TPanel; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-function Panel_GetAction(AObj: TPanel): TBasicAction; cdecl;
+function Panel_GetAction(AObj: TPanel): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure Panel_SetAction(AObj: TPanel; AValue: TBasicAction); cdecl;
+procedure Panel_SetAction(AObj: TPanel; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-procedure Panel_GetBoundsRect(AObj: TPanel; var Result: TRect); cdecl;
+procedure Panel_GetBoundsRect(AObj: TPanel; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure Panel_SetBoundsRect(AObj: TPanel; var AValue: TRect); cdecl;
+procedure Panel_SetBoundsRect(AObj: TPanel; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function Panel_GetClientHeight(AObj: TPanel): Integer; cdecl;
+function Panel_GetClientHeight(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure Panel_SetClientHeight(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetClientHeight(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure Panel_GetClientRect(AObj: TPanel; var Result: TRect); cdecl;
+procedure Panel_GetClientRect(AObj: TPanel; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function Panel_GetClientWidth(AObj: TPanel): Integer; cdecl;
+function Panel_GetClientWidth(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure Panel_SetClientWidth(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetClientWidth(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function Panel_GetExplicitLeft(AObj: TPanel): Integer; cdecl;
+function Panel_GetExplicitLeft(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function Panel_GetExplicitTop(AObj: TPanel): Integer; cdecl;
+function Panel_GetExplicitTop(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function Panel_GetExplicitWidth(AObj: TPanel): Integer; cdecl;
+function Panel_GetExplicitWidth(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function Panel_GetExplicitHeight(AObj: TPanel): Integer; cdecl;
+function Panel_GetExplicitHeight(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function Panel_GetParent(AObj: TPanel): TWinControl; cdecl;
+function Panel_GetParent(AObj: TPanel): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure Panel_SetParent(AObj: TPanel; AValue: TWinControl); cdecl;
+procedure Panel_SetParent(AObj: TPanel; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function Panel_GetAlignWithMargins(AObj: TPanel): LongBool; cdecl;
+function Panel_GetAlignWithMargins(AObj: TPanel): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure Panel_SetAlignWithMargins(AObj: TPanel; AValue: LongBool); cdecl;
+procedure Panel_SetAlignWithMargins(AObj: TPanel; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function Panel_GetLeft(AObj: TPanel): Integer; cdecl;
+function Panel_GetLeft(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure Panel_SetLeft(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetLeft(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function Panel_GetTop(AObj: TPanel): Integer; cdecl;
+function Panel_GetTop(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure Panel_SetTop(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetTop(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function Panel_GetWidth(AObj: TPanel): Integer; cdecl;
+function Panel_GetWidth(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Panel_SetWidth(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetWidth(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function Panel_GetHeight(AObj: TPanel): Integer; cdecl;
+function Panel_GetHeight(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure Panel_SetHeight(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetHeight(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function Panel_GetCursor(AObj: TPanel): TCursor; cdecl;
+function Panel_GetCursor(AObj: TPanel): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Panel_SetCursor(AObj: TPanel; AValue: TCursor); cdecl;
+procedure Panel_SetCursor(AObj: TPanel; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Panel_GetHint(AObj: TPanel): PChar; cdecl;
+function Panel_GetHint(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure Panel_SetHint(AObj: TPanel; AValue: PChar); cdecl;
+procedure Panel_SetHint(AObj: TPanel; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function Panel_GetMargins(AObj: TPanel): TMargins; cdecl;
+function Panel_GetMargins(AObj: TPanel): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure Panel_SetMargins(AObj: TPanel; AValue: TMargins); cdecl;
+procedure Panel_SetMargins(AObj: TPanel; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function Panel_GetComponentCount(AObj: TPanel): Integer; cdecl;
+function Panel_GetComponentCount(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Panel_GetComponentIndex(AObj: TPanel): Integer; cdecl;
+function Panel_GetComponentIndex(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Panel_SetComponentIndex(AObj: TPanel; AValue: Integer); cdecl;
+procedure Panel_SetComponentIndex(AObj: TPanel; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Panel_GetOwner(AObj: TPanel): TComponent; cdecl;
+function Panel_GetOwner(AObj: TPanel): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Panel_GetName(AObj: TPanel): PChar; cdecl;
+function Panel_GetName(AObj: TPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Panel_SetName(AObj: TPanel; AValue: PChar); cdecl;
+procedure Panel_SetName(AObj: TPanel; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Panel_GetTag(AObj: TPanel): NativeInt; cdecl;
+function Panel_GetTag(AObj: TPanel): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Panel_SetTag(AObj: TPanel; AValue: NativeInt); cdecl;
+procedure Panel_SetTag(AObj: TPanel; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Panel_GetControls(AObj: TPanel; Index: Integer): TControl; cdecl;
+function Panel_GetControls(AObj: TPanel; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function Panel_GetComponents(AObj: TPanel; AIndex: Integer): TComponent; cdecl;
+function Panel_GetComponents(AObj: TPanel; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  Panel_Create {$IFNDEF MSWINDOWS}name '_Panel_Create'{$ENDIF},
-  Panel_Free {$IFNDEF MSWINDOWS}name '_Panel_Free'{$ENDIF},
-  Panel_CanFocus {$IFNDEF MSWINDOWS}name '_Panel_CanFocus'{$ENDIF},
-  Panel_FlipChildren {$IFNDEF MSWINDOWS}name '_Panel_FlipChildren'{$ENDIF},
-  Panel_Focused {$IFNDEF MSWINDOWS}name '_Panel_Focused'{$ENDIF},
-  Panel_HandleAllocated {$IFNDEF MSWINDOWS}name '_Panel_HandleAllocated'{$ENDIF},
-  Panel_Invalidate {$IFNDEF MSWINDOWS}name '_Panel_Invalidate'{$ENDIF},
-  Panel_Realign {$IFNDEF MSWINDOWS}name '_Panel_Realign'{$ENDIF},
-  Panel_Repaint {$IFNDEF MSWINDOWS}name '_Panel_Repaint'{$ENDIF},
-  Panel_ScaleBy {$IFNDEF MSWINDOWS}name '_Panel_ScaleBy'{$ENDIF},
-  Panel_SetBounds {$IFNDEF MSWINDOWS}name '_Panel_SetBounds'{$ENDIF},
-  Panel_SetFocus {$IFNDEF MSWINDOWS}name '_Panel_SetFocus'{$ENDIF},
-  Panel_Update {$IFNDEF MSWINDOWS}name '_Panel_Update'{$ENDIF},
-  Panel_BringToFront {$IFNDEF MSWINDOWS}name '_Panel_BringToFront'{$ENDIF},
-  Panel_HasParent {$IFNDEF MSWINDOWS}name '_Panel_HasParent'{$ENDIF},
-  Panel_Hide {$IFNDEF MSWINDOWS}name '_Panel_Hide'{$ENDIF},
-  Panel_Perform {$IFNDEF MSWINDOWS}name '_Panel_Perform'{$ENDIF},
-  Panel_Refresh {$IFNDEF MSWINDOWS}name '_Panel_Refresh'{$ENDIF},
-  Panel_SendToBack {$IFNDEF MSWINDOWS}name '_Panel_SendToBack'{$ENDIF},
-  Panel_Show {$IFNDEF MSWINDOWS}name '_Panel_Show'{$ENDIF},
-  Panel_GetTextBuf {$IFNDEF MSWINDOWS}name '_Panel_GetTextBuf'{$ENDIF},
-  Panel_FindComponent {$IFNDEF MSWINDOWS}name '_Panel_FindComponent'{$ENDIF},
-  Panel_GetNamePath {$IFNDEF MSWINDOWS}name '_Panel_GetNamePath'{$ENDIF},
-  Panel_Assign {$IFNDEF MSWINDOWS}name '_Panel_Assign'{$ENDIF},
-  Panel_ClassName {$IFNDEF MSWINDOWS}name '_Panel_ClassName'{$ENDIF},
-  Panel_Equals {$IFNDEF MSWINDOWS}name '_Panel_Equals'{$ENDIF},
-  Panel_GetHashCode {$IFNDEF MSWINDOWS}name '_Panel_GetHashCode'{$ENDIF},
-  Panel_ToString {$IFNDEF MSWINDOWS}name '_Panel_ToString'{$ENDIF},
-  Panel_GetAlign {$IFNDEF MSWINDOWS}name '_Panel_GetAlign'{$ENDIF},
-  Panel_SetAlign {$IFNDEF MSWINDOWS}name '_Panel_SetAlign'{$ENDIF},
-  Panel_GetAlignment {$IFNDEF MSWINDOWS}name '_Panel_GetAlignment'{$ENDIF},
-  Panel_SetAlignment {$IFNDEF MSWINDOWS}name '_Panel_SetAlignment'{$ENDIF},
-  Panel_GetAnchors {$IFNDEF MSWINDOWS}name '_Panel_GetAnchors'{$ENDIF},
-  Panel_SetAnchors {$IFNDEF MSWINDOWS}name '_Panel_SetAnchors'{$ENDIF},
-  Panel_GetAutoSize {$IFNDEF MSWINDOWS}name '_Panel_GetAutoSize'{$ENDIF},
-  Panel_SetAutoSize {$IFNDEF MSWINDOWS}name '_Panel_SetAutoSize'{$ENDIF},
-  Panel_GetBevelEdges {$IFNDEF MSWINDOWS}name '_Panel_GetBevelEdges'{$ENDIF},
-  Panel_SetBevelEdges {$IFNDEF MSWINDOWS}name '_Panel_SetBevelEdges'{$ENDIF},
-  Panel_GetBevelInner {$IFNDEF MSWINDOWS}name '_Panel_GetBevelInner'{$ENDIF},
-  Panel_SetBevelInner {$IFNDEF MSWINDOWS}name '_Panel_SetBevelInner'{$ENDIF},
-  Panel_GetBevelKind {$IFNDEF MSWINDOWS}name '_Panel_GetBevelKind'{$ENDIF},
-  Panel_SetBevelKind {$IFNDEF MSWINDOWS}name '_Panel_SetBevelKind'{$ENDIF},
-  Panel_GetBevelOuter {$IFNDEF MSWINDOWS}name '_Panel_GetBevelOuter'{$ENDIF},
-  Panel_SetBevelOuter {$IFNDEF MSWINDOWS}name '_Panel_SetBevelOuter'{$ENDIF},
-  Panel_GetBiDiMode {$IFNDEF MSWINDOWS}name '_Panel_GetBiDiMode'{$ENDIF},
-  Panel_SetBiDiMode {$IFNDEF MSWINDOWS}name '_Panel_SetBiDiMode'{$ENDIF},
-  Panel_GetBorderWidth {$IFNDEF MSWINDOWS}name '_Panel_GetBorderWidth'{$ENDIF},
-  Panel_SetBorderWidth {$IFNDEF MSWINDOWS}name '_Panel_SetBorderWidth'{$ENDIF},
-  Panel_GetBorderStyle {$IFNDEF MSWINDOWS}name '_Panel_GetBorderStyle'{$ENDIF},
-  Panel_SetBorderStyle {$IFNDEF MSWINDOWS}name '_Panel_SetBorderStyle'{$ENDIF},
-  Panel_GetCaption {$IFNDEF MSWINDOWS}name '_Panel_GetCaption'{$ENDIF},
-  Panel_SetCaption {$IFNDEF MSWINDOWS}name '_Panel_SetCaption'{$ENDIF},
-  Panel_GetColor {$IFNDEF MSWINDOWS}name '_Panel_GetColor'{$ENDIF},
-  Panel_SetColor {$IFNDEF MSWINDOWS}name '_Panel_SetColor'{$ENDIF},
-  Panel_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Panel_GetDoubleBuffered'{$ENDIF},
-  Panel_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_Panel_SetDoubleBuffered'{$ENDIF},
-  Panel_GetEnabled {$IFNDEF MSWINDOWS}name '_Panel_GetEnabled'{$ENDIF},
-  Panel_SetEnabled {$IFNDEF MSWINDOWS}name '_Panel_SetEnabled'{$ENDIF},
-  Panel_GetFullRepaint {$IFNDEF MSWINDOWS}name '_Panel_GetFullRepaint'{$ENDIF},
-  Panel_SetFullRepaint {$IFNDEF MSWINDOWS}name '_Panel_SetFullRepaint'{$ENDIF},
-  Panel_GetFont {$IFNDEF MSWINDOWS}name '_Panel_GetFont'{$ENDIF},
-  Panel_SetFont {$IFNDEF MSWINDOWS}name '_Panel_SetFont'{$ENDIF},
-  Panel_GetLocked {$IFNDEF MSWINDOWS}name '_Panel_GetLocked'{$ENDIF},
-  Panel_SetLocked {$IFNDEF MSWINDOWS}name '_Panel_SetLocked'{$ENDIF},
-  Panel_GetParentBackground {$IFNDEF MSWINDOWS}name '_Panel_GetParentBackground'{$ENDIF},
-  Panel_SetParentBackground {$IFNDEF MSWINDOWS}name '_Panel_SetParentBackground'{$ENDIF},
-  Panel_GetParentColor {$IFNDEF MSWINDOWS}name '_Panel_GetParentColor'{$ENDIF},
-  Panel_SetParentColor {$IFNDEF MSWINDOWS}name '_Panel_SetParentColor'{$ENDIF},
-  Panel_GetParentCtl3D {$IFNDEF MSWINDOWS}name '_Panel_GetParentCtl3D'{$ENDIF},
-  Panel_SetParentCtl3D {$IFNDEF MSWINDOWS}name '_Panel_SetParentCtl3D'{$ENDIF},
-  Panel_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_Panel_GetParentDoubleBuffered'{$ENDIF},
-  Panel_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_Panel_SetParentDoubleBuffered'{$ENDIF},
-  Panel_GetParentFont {$IFNDEF MSWINDOWS}name '_Panel_GetParentFont'{$ENDIF},
-  Panel_SetParentFont {$IFNDEF MSWINDOWS}name '_Panel_SetParentFont'{$ENDIF},
-  Panel_GetParentShowHint {$IFNDEF MSWINDOWS}name '_Panel_GetParentShowHint'{$ENDIF},
-  Panel_SetParentShowHint {$IFNDEF MSWINDOWS}name '_Panel_SetParentShowHint'{$ENDIF},
-  Panel_GetPopupMenu {$IFNDEF MSWINDOWS}name '_Panel_GetPopupMenu'{$ENDIF},
-  Panel_SetPopupMenu {$IFNDEF MSWINDOWS}name '_Panel_SetPopupMenu'{$ENDIF},
-  Panel_GetShowCaption {$IFNDEF MSWINDOWS}name '_Panel_GetShowCaption'{$ENDIF},
-  Panel_SetShowCaption {$IFNDEF MSWINDOWS}name '_Panel_SetShowCaption'{$ENDIF},
-  Panel_GetShowHint {$IFNDEF MSWINDOWS}name '_Panel_GetShowHint'{$ENDIF},
-  Panel_SetShowHint {$IFNDEF MSWINDOWS}name '_Panel_SetShowHint'{$ENDIF},
-  Panel_GetTabOrder {$IFNDEF MSWINDOWS}name '_Panel_GetTabOrder'{$ENDIF},
-  Panel_SetTabOrder {$IFNDEF MSWINDOWS}name '_Panel_SetTabOrder'{$ENDIF},
-  Panel_GetTabStop {$IFNDEF MSWINDOWS}name '_Panel_GetTabStop'{$ENDIF},
-  Panel_SetTabStop {$IFNDEF MSWINDOWS}name '_Panel_SetTabStop'{$ENDIF},
-  Panel_GetVisible {$IFNDEF MSWINDOWS}name '_Panel_GetVisible'{$ENDIF},
-  Panel_SetVisible {$IFNDEF MSWINDOWS}name '_Panel_SetVisible'{$ENDIF},
-  Panel_GetStyleElements {$IFNDEF MSWINDOWS}name '_Panel_GetStyleElements'{$ENDIF},
-  Panel_SetStyleElements {$IFNDEF MSWINDOWS}name '_Panel_SetStyleElements'{$ENDIF},
-  Panel_SetOnClick {$IFNDEF MSWINDOWS}name '_Panel_SetOnClick'{$ENDIF},
-  Panel_SetOnDblClick {$IFNDEF MSWINDOWS}name '_Panel_SetOnDblClick'{$ENDIF},
-  Panel_SetOnEnter {$IFNDEF MSWINDOWS}name '_Panel_SetOnEnter'{$ENDIF},
-  Panel_SetOnExit {$IFNDEF MSWINDOWS}name '_Panel_SetOnExit'{$ENDIF},
-  Panel_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_Panel_SetOnMouseDown'{$ENDIF},
-  Panel_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_Panel_SetOnMouseEnter'{$ENDIF},
-  Panel_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_Panel_SetOnMouseLeave'{$ENDIF},
-  Panel_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_Panel_SetOnMouseMove'{$ENDIF},
-  Panel_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_Panel_SetOnMouseUp'{$ENDIF},
-  Panel_SetOnResize {$IFNDEF MSWINDOWS}name '_Panel_SetOnResize'{$ENDIF},
-  Panel_GetBrush {$IFNDEF MSWINDOWS}name '_Panel_GetBrush'{$ENDIF},
-  Panel_GetControlCount {$IFNDEF MSWINDOWS}name '_Panel_GetControlCount'{$ENDIF},
-  Panel_GetHandle {$IFNDEF MSWINDOWS}name '_Panel_GetHandle'{$ENDIF},
-  Panel_GetParentWindow {$IFNDEF MSWINDOWS}name '_Panel_GetParentWindow'{$ENDIF},
-  Panel_SetParentWindow {$IFNDEF MSWINDOWS}name '_Panel_SetParentWindow'{$ENDIF},
-  Panel_GetAction {$IFNDEF MSWINDOWS}name '_Panel_GetAction'{$ENDIF},
-  Panel_SetAction {$IFNDEF MSWINDOWS}name '_Panel_SetAction'{$ENDIF},
-  Panel_GetBoundsRect {$IFNDEF MSWINDOWS}name '_Panel_GetBoundsRect'{$ENDIF},
-  Panel_SetBoundsRect {$IFNDEF MSWINDOWS}name '_Panel_SetBoundsRect'{$ENDIF},
-  Panel_GetClientHeight {$IFNDEF MSWINDOWS}name '_Panel_GetClientHeight'{$ENDIF},
-  Panel_SetClientHeight {$IFNDEF MSWINDOWS}name '_Panel_SetClientHeight'{$ENDIF},
-  Panel_GetClientRect {$IFNDEF MSWINDOWS}name '_Panel_GetClientRect'{$ENDIF},
-  Panel_GetClientWidth {$IFNDEF MSWINDOWS}name '_Panel_GetClientWidth'{$ENDIF},
-  Panel_SetClientWidth {$IFNDEF MSWINDOWS}name '_Panel_SetClientWidth'{$ENDIF},
-  Panel_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_Panel_GetExplicitLeft'{$ENDIF},
-  Panel_GetExplicitTop {$IFNDEF MSWINDOWS}name '_Panel_GetExplicitTop'{$ENDIF},
-  Panel_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_Panel_GetExplicitWidth'{$ENDIF},
-  Panel_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_Panel_GetExplicitHeight'{$ENDIF},
-  Panel_GetParent {$IFNDEF MSWINDOWS}name '_Panel_GetParent'{$ENDIF},
-  Panel_SetParent {$IFNDEF MSWINDOWS}name '_Panel_SetParent'{$ENDIF},
-  Panel_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Panel_GetAlignWithMargins'{$ENDIF},
-  Panel_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_Panel_SetAlignWithMargins'{$ENDIF},
-  Panel_GetLeft {$IFNDEF MSWINDOWS}name '_Panel_GetLeft'{$ENDIF},
-  Panel_SetLeft {$IFNDEF MSWINDOWS}name '_Panel_SetLeft'{$ENDIF},
-  Panel_GetTop {$IFNDEF MSWINDOWS}name '_Panel_GetTop'{$ENDIF},
-  Panel_SetTop {$IFNDEF MSWINDOWS}name '_Panel_SetTop'{$ENDIF},
-  Panel_GetWidth {$IFNDEF MSWINDOWS}name '_Panel_GetWidth'{$ENDIF},
-  Panel_SetWidth {$IFNDEF MSWINDOWS}name '_Panel_SetWidth'{$ENDIF},
-  Panel_GetHeight {$IFNDEF MSWINDOWS}name '_Panel_GetHeight'{$ENDIF},
-  Panel_SetHeight {$IFNDEF MSWINDOWS}name '_Panel_SetHeight'{$ENDIF},
-  Panel_GetCursor {$IFNDEF MSWINDOWS}name '_Panel_GetCursor'{$ENDIF},
-  Panel_SetCursor {$IFNDEF MSWINDOWS}name '_Panel_SetCursor'{$ENDIF},
-  Panel_GetHint {$IFNDEF MSWINDOWS}name '_Panel_GetHint'{$ENDIF},
-  Panel_SetHint {$IFNDEF MSWINDOWS}name '_Panel_SetHint'{$ENDIF},
-  Panel_GetMargins {$IFNDEF MSWINDOWS}name '_Panel_GetMargins'{$ENDIF},
-  Panel_SetMargins {$IFNDEF MSWINDOWS}name '_Panel_SetMargins'{$ENDIF},
-  Panel_GetComponentCount {$IFNDEF MSWINDOWS}name '_Panel_GetComponentCount'{$ENDIF},
-  Panel_GetComponentIndex {$IFNDEF MSWINDOWS}name '_Panel_GetComponentIndex'{$ENDIF},
-  Panel_SetComponentIndex {$IFNDEF MSWINDOWS}name '_Panel_SetComponentIndex'{$ENDIF},
-  Panel_GetOwner {$IFNDEF MSWINDOWS}name '_Panel_GetOwner'{$ENDIF},
-  Panel_GetName {$IFNDEF MSWINDOWS}name '_Panel_GetName'{$ENDIF},
-  Panel_SetName {$IFNDEF MSWINDOWS}name '_Panel_SetName'{$ENDIF},
-  Panel_GetTag {$IFNDEF MSWINDOWS}name '_Panel_GetTag'{$ENDIF},
-  Panel_SetTag {$IFNDEF MSWINDOWS}name '_Panel_SetTag'{$ENDIF},
-  Panel_GetControls {$IFNDEF MSWINDOWS}name '_Panel_GetControls'{$ENDIF},
-  Panel_GetComponents {$IFNDEF MSWINDOWS}name '_Panel_GetComponents'{$ENDIF};
+  Panel_Create,
+  Panel_Free,
+  Panel_CanFocus,
+  Panel_FlipChildren,
+  Panel_Focused,
+  Panel_HandleAllocated,
+  Panel_Invalidate,
+  Panel_Realign,
+  Panel_Repaint,
+  Panel_ScaleBy,
+  Panel_SetBounds,
+  Panel_SetFocus,
+  Panel_Update,
+  Panel_BringToFront,
+  Panel_HasParent,
+  Panel_Hide,
+  Panel_Perform,
+  Panel_Refresh,
+  Panel_SendToBack,
+  Panel_Show,
+  Panel_GetTextBuf,
+  Panel_FindComponent,
+  Panel_GetNamePath,
+  Panel_Assign,
+  Panel_ClassName,
+  Panel_Equals,
+  Panel_GetHashCode,
+  Panel_ToString,
+  Panel_GetAlign,
+  Panel_SetAlign,
+  Panel_GetAlignment,
+  Panel_SetAlignment,
+  Panel_GetAnchors,
+  Panel_SetAnchors,
+  Panel_GetAutoSize,
+  Panel_SetAutoSize,
+  Panel_GetBevelEdges,
+  Panel_SetBevelEdges,
+  Panel_GetBevelInner,
+  Panel_SetBevelInner,
+  Panel_GetBevelKind,
+  Panel_SetBevelKind,
+  Panel_GetBevelOuter,
+  Panel_SetBevelOuter,
+  Panel_GetBiDiMode,
+  Panel_SetBiDiMode,
+  Panel_GetBorderWidth,
+  Panel_SetBorderWidth,
+  Panel_GetBorderStyle,
+  Panel_SetBorderStyle,
+  Panel_GetCaption,
+  Panel_SetCaption,
+  Panel_GetColor,
+  Panel_SetColor,
+  Panel_GetDoubleBuffered,
+  Panel_SetDoubleBuffered,
+  Panel_GetEnabled,
+  Panel_SetEnabled,
+  Panel_GetFullRepaint,
+  Panel_SetFullRepaint,
+  Panel_GetFont,
+  Panel_SetFont,
+  Panel_GetLocked,
+  Panel_SetLocked,
+  Panel_GetParentBackground,
+  Panel_SetParentBackground,
+  Panel_GetParentColor,
+  Panel_SetParentColor,
+  Panel_GetParentCtl3D,
+  Panel_SetParentCtl3D,
+  Panel_GetParentDoubleBuffered,
+  Panel_SetParentDoubleBuffered,
+  Panel_GetParentFont,
+  Panel_SetParentFont,
+  Panel_GetParentShowHint,
+  Panel_SetParentShowHint,
+  Panel_GetPopupMenu,
+  Panel_SetPopupMenu,
+  Panel_GetShowCaption,
+  Panel_SetShowCaption,
+  Panel_GetShowHint,
+  Panel_SetShowHint,
+  Panel_GetTabOrder,
+  Panel_SetTabOrder,
+  Panel_GetTabStop,
+  Panel_SetTabStop,
+  Panel_GetVisible,
+  Panel_SetVisible,
+  Panel_GetStyleElements,
+  Panel_SetStyleElements,
+  Panel_SetOnClick,
+  Panel_SetOnDblClick,
+  Panel_SetOnEnter,
+  Panel_SetOnExit,
+  Panel_SetOnMouseDown,
+  Panel_SetOnMouseEnter,
+  Panel_SetOnMouseLeave,
+  Panel_SetOnMouseMove,
+  Panel_SetOnMouseUp,
+  Panel_SetOnResize,
+  Panel_GetBrush,
+  Panel_GetControlCount,
+  Panel_GetHandle,
+  Panel_GetParentWindow,
+  Panel_SetParentWindow,
+  Panel_GetAction,
+  Panel_SetAction,
+  Panel_GetBoundsRect,
+  Panel_SetBoundsRect,
+  Panel_GetClientHeight,
+  Panel_SetClientHeight,
+  Panel_GetClientRect,
+  Panel_GetClientWidth,
+  Panel_SetClientWidth,
+  Panel_GetExplicitLeft,
+  Panel_GetExplicitTop,
+  Panel_GetExplicitWidth,
+  Panel_GetExplicitHeight,
+  Panel_GetParent,
+  Panel_SetParent,
+  Panel_GetAlignWithMargins,
+  Panel_SetAlignWithMargins,
+  Panel_GetLeft,
+  Panel_SetLeft,
+  Panel_GetTop,
+  Panel_SetTop,
+  Panel_GetWidth,
+  Panel_SetWidth,
+  Panel_GetHeight,
+  Panel_SetHeight,
+  Panel_GetCursor,
+  Panel_SetCursor,
+  Panel_GetHint,
+  Panel_SetHint,
+  Panel_GetMargins,
+  Panel_SetMargins,
+  Panel_GetComponentCount,
+  Panel_GetComponentIndex,
+  Panel_SetComponentIndex,
+  Panel_GetOwner,
+  Panel_GetName,
+  Panel_SetName,
+  Panel_GetTag,
+  Panel_SetTag,
+  Panel_GetControls,
+  Panel_GetComponents;
 

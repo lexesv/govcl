@@ -5,108 +5,108 @@
 //
 //----------------------------------------
 
-function ListGroups_Create(AOwner: TCustomListView): TListGroups; cdecl;
+function ListGroups_Create(AOwner: TCustomListView): TListGroups; stdcall;
 begin
   Result :=  TListGroups.Create(AOwner);
 end;
 
-procedure ListGroups_Free(AObj: TListGroups); cdecl;
+procedure ListGroups_Free(AObj: TListGroups); stdcall;
 begin
   AObj.Free;
 end;
 
-function ListGroups_Add(AObj: TListGroups): TListGroup; cdecl;
+function ListGroups_Add(AObj: TListGroups): TListGroup; stdcall;
 begin
   Result :=  AObj.Add;
 end;
 
-function ListGroups_Owner(AObj: TListGroups): TCustomListView; cdecl;
+function ListGroups_Owner(AObj: TListGroups): TCustomListView; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-procedure ListGroups_Assign(AObj: TListGroups; Source: TPersistent); cdecl;
+procedure ListGroups_Assign(AObj: TListGroups; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-procedure ListGroups_BeginUpdate(AObj: TListGroups); cdecl;
+procedure ListGroups_BeginUpdate(AObj: TListGroups); stdcall;
 begin
   AObj.BeginUpdate;
 end;
 
-procedure ListGroups_Clear(AObj: TListGroups); cdecl;
+procedure ListGroups_Clear(AObj: TListGroups); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure ListGroups_Delete(AObj: TListGroups; Index: Integer); cdecl;
+procedure ListGroups_Delete(AObj: TListGroups; Index: Integer); stdcall;
 begin
   AObj.Delete(Index);
 end;
 
-procedure ListGroups_EndUpdate(AObj: TListGroups); cdecl;
+procedure ListGroups_EndUpdate(AObj: TListGroups); stdcall;
 begin
   AObj.EndUpdate;
 end;
 
-function ListGroups_GetNamePath(AObj: TListGroups): PChar; cdecl;
+function ListGroups_GetNamePath(AObj: TListGroups): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function ListGroups_Insert(AObj: TListGroups; Index: Integer): TCollectionItem; cdecl;
+function ListGroups_Insert(AObj: TListGroups; Index: Integer): TCollectionItem; stdcall;
 begin
   Result :=  AObj.Insert(Index);
 end;
 
-function ListGroups_ClassName(AObj: TListGroups): PChar; cdecl;
+function ListGroups_ClassName(AObj: TListGroups): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ListGroups_Equals(AObj: TListGroups; Obj: TObject): LongBool; cdecl;
+function ListGroups_Equals(AObj: TListGroups; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ListGroups_GetHashCode(AObj: TListGroups): Integer; cdecl;
+function ListGroups_GetHashCode(AObj: TListGroups): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ListGroups_ToString(AObj: TListGroups): PChar; cdecl;
+function ListGroups_ToString(AObj: TListGroups): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ListGroups_GetItems(AObj: TListGroups; Index: Integer): TListGroup; cdecl;
+function ListGroups_GetItems(AObj: TListGroups; Index: Integer): TListGroup; stdcall;
 begin
   Result :=  AObj.Items[Index];
 end;
 
-procedure ListGroups_SetItems(AObj: TListGroups; Index: Integer; AValue: TListGroup); cdecl;
+procedure ListGroups_SetItems(AObj: TListGroups; Index: Integer; AValue: TListGroup); stdcall;
 begin
   AObj.Items[Index] := AValue;
 end;
 
 
 exports
-  ListGroups_Create {$IFNDEF MSWINDOWS}name '_ListGroups_Create'{$ENDIF},
-  ListGroups_Free {$IFNDEF MSWINDOWS}name '_ListGroups_Free'{$ENDIF},
-  ListGroups_Add {$IFNDEF MSWINDOWS}name '_ListGroups_Add'{$ENDIF},
-  ListGroups_Owner {$IFNDEF MSWINDOWS}name '_ListGroups_Owner'{$ENDIF},
-  ListGroups_Assign {$IFNDEF MSWINDOWS}name '_ListGroups_Assign'{$ENDIF},
-  ListGroups_BeginUpdate {$IFNDEF MSWINDOWS}name '_ListGroups_BeginUpdate'{$ENDIF},
-  ListGroups_Clear {$IFNDEF MSWINDOWS}name '_ListGroups_Clear'{$ENDIF},
-  ListGroups_Delete {$IFNDEF MSWINDOWS}name '_ListGroups_Delete'{$ENDIF},
-  ListGroups_EndUpdate {$IFNDEF MSWINDOWS}name '_ListGroups_EndUpdate'{$ENDIF},
-  ListGroups_GetNamePath {$IFNDEF MSWINDOWS}name '_ListGroups_GetNamePath'{$ENDIF},
-  ListGroups_Insert {$IFNDEF MSWINDOWS}name '_ListGroups_Insert'{$ENDIF},
-  ListGroups_ClassName {$IFNDEF MSWINDOWS}name '_ListGroups_ClassName'{$ENDIF},
-  ListGroups_Equals {$IFNDEF MSWINDOWS}name '_ListGroups_Equals'{$ENDIF},
-  ListGroups_GetHashCode {$IFNDEF MSWINDOWS}name '_ListGroups_GetHashCode'{$ENDIF},
-  ListGroups_ToString {$IFNDEF MSWINDOWS}name '_ListGroups_ToString'{$ENDIF},
-  ListGroups_GetItems {$IFNDEF MSWINDOWS}name '_ListGroups_GetItems'{$ENDIF},
-  ListGroups_SetItems {$IFNDEF MSWINDOWS}name '_ListGroups_SetItems'{$ENDIF};
+  ListGroups_Create,
+  ListGroups_Free,
+  ListGroups_Add,
+  ListGroups_Owner,
+  ListGroups_Assign,
+  ListGroups_BeginUpdate,
+  ListGroups_Clear,
+  ListGroups_Delete,
+  ListGroups_EndUpdate,
+  ListGroups_GetNamePath,
+  ListGroups_Insert,
+  ListGroups_ClassName,
+  ListGroups_Equals,
+  ListGroups_GetHashCode,
+  ListGroups_ToString,
+  ListGroups_GetItems,
+  ListGroups_SetItems;
 

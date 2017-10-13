@@ -5,107 +5,107 @@
 //
 //----------------------------------------
 
-function Picture_Create: TPicture; cdecl;
+function Picture_Create: TPicture; stdcall;
 begin
   Result :=  TPicture.Create;
 end;
 
-procedure Picture_Free(AObj: TPicture); cdecl;
+procedure Picture_Free(AObj: TPicture); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Picture_LoadFromFile(AObj: TPicture; Filename: PChar); cdecl;
+procedure Picture_LoadFromFile(AObj: TPicture; Filename: PChar); stdcall;
 begin
   AObj.LoadFromFile(Filename);
 end;
 
-procedure Picture_SaveToFile(AObj: TPicture; Filename: PChar); cdecl;
+procedure Picture_SaveToFile(AObj: TPicture; Filename: PChar); stdcall;
 begin
   AObj.SaveToFile(Filename);
 end;
 
-procedure Picture_LoadFromStream(AObj: TPicture; Stream: TStream); cdecl;
+procedure Picture_LoadFromStream(AObj: TPicture; Stream: TStream); stdcall;
 begin
   AObj.LoadFromStream(Stream);
 end;
 
-procedure Picture_SaveToStream(AObj: TPicture; Stream: TStream); cdecl;
+procedure Picture_SaveToStream(AObj: TPicture; Stream: TStream); stdcall;
 begin
   AObj.SaveToStream(Stream);
 end;
 
-procedure Picture_Assign(AObj: TPicture; Source: TPersistent); cdecl;
+procedure Picture_Assign(AObj: TPicture; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Picture_GetNamePath(AObj: TPicture): PChar; cdecl;
+function Picture_GetNamePath(AObj: TPicture): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function Picture_ClassName(AObj: TPicture): PChar; cdecl;
+function Picture_ClassName(AObj: TPicture): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Picture_Equals(AObj: TPicture; Obj: TObject): LongBool; cdecl;
+function Picture_Equals(AObj: TPicture; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Picture_GetHashCode(AObj: TPicture): Integer; cdecl;
+function Picture_GetHashCode(AObj: TPicture): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Picture_ToString(AObj: TPicture): PChar; cdecl;
+function Picture_ToString(AObj: TPicture): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Picture_GetBitmap(AObj: TPicture): TBitmap; cdecl;
+function Picture_GetBitmap(AObj: TPicture): TBitmap; stdcall;
 begin
   Result :=  AObj.Bitmap;
 end;
 
-procedure Picture_SetBitmap(AObj: TPicture; AValue: TBitmap); cdecl;
+procedure Picture_SetBitmap(AObj: TPicture; AValue: TBitmap); stdcall;
 begin
   AObj.Bitmap := AValue;
 end;
 
-function Picture_GetGraphic(AObj: TPicture): TGraphic; cdecl;
+function Picture_GetGraphic(AObj: TPicture): TGraphic; stdcall;
 begin
   Result :=  AObj.Graphic;
 end;
 
-procedure Picture_SetGraphic(AObj: TPicture; AValue: TGraphic); cdecl;
+procedure Picture_SetGraphic(AObj: TPicture; AValue: TGraphic); stdcall;
 begin
   AObj.Graphic := AValue;
 end;
 
-function Picture_GetHeight(AObj: TPicture): Integer; cdecl;
+function Picture_GetHeight(AObj: TPicture): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-function Picture_GetIcon(AObj: TPicture): TIcon; cdecl;
+function Picture_GetIcon(AObj: TPicture): TIcon; stdcall;
 begin
   Result :=  AObj.Icon;
 end;
 
-procedure Picture_SetIcon(AObj: TPicture; AValue: TIcon); cdecl;
+procedure Picture_SetIcon(AObj: TPicture; AValue: TIcon); stdcall;
 begin
   AObj.Icon := AValue;
 end;
 
-function Picture_GetWidth(AObj: TPicture): Integer; cdecl;
+function Picture_GetWidth(AObj: TPicture): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure Picture_SetOnChange(AObj: TPicture; AEventId: NativeUInt); stdcall
+procedure Picture_SetOnChange(AObj: TPicture; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -119,25 +119,25 @@ end;
 
 
 exports
-  Picture_Create {$IFNDEF MSWINDOWS}name '_Picture_Create'{$ENDIF},
-  Picture_Free {$IFNDEF MSWINDOWS}name '_Picture_Free'{$ENDIF},
-  Picture_LoadFromFile {$IFNDEF MSWINDOWS}name '_Picture_LoadFromFile'{$ENDIF},
-  Picture_SaveToFile {$IFNDEF MSWINDOWS}name '_Picture_SaveToFile'{$ENDIF},
-  Picture_LoadFromStream {$IFNDEF MSWINDOWS}name '_Picture_LoadFromStream'{$ENDIF},
-  Picture_SaveToStream {$IFNDEF MSWINDOWS}name '_Picture_SaveToStream'{$ENDIF},
-  Picture_Assign {$IFNDEF MSWINDOWS}name '_Picture_Assign'{$ENDIF},
-  Picture_GetNamePath {$IFNDEF MSWINDOWS}name '_Picture_GetNamePath'{$ENDIF},
-  Picture_ClassName {$IFNDEF MSWINDOWS}name '_Picture_ClassName'{$ENDIF},
-  Picture_Equals {$IFNDEF MSWINDOWS}name '_Picture_Equals'{$ENDIF},
-  Picture_GetHashCode {$IFNDEF MSWINDOWS}name '_Picture_GetHashCode'{$ENDIF},
-  Picture_ToString {$IFNDEF MSWINDOWS}name '_Picture_ToString'{$ENDIF},
-  Picture_GetBitmap {$IFNDEF MSWINDOWS}name '_Picture_GetBitmap'{$ENDIF},
-  Picture_SetBitmap {$IFNDEF MSWINDOWS}name '_Picture_SetBitmap'{$ENDIF},
-  Picture_GetGraphic {$IFNDEF MSWINDOWS}name '_Picture_GetGraphic'{$ENDIF},
-  Picture_SetGraphic {$IFNDEF MSWINDOWS}name '_Picture_SetGraphic'{$ENDIF},
-  Picture_GetHeight {$IFNDEF MSWINDOWS}name '_Picture_GetHeight'{$ENDIF},
-  Picture_GetIcon {$IFNDEF MSWINDOWS}name '_Picture_GetIcon'{$ENDIF},
-  Picture_SetIcon {$IFNDEF MSWINDOWS}name '_Picture_SetIcon'{$ENDIF},
-  Picture_GetWidth {$IFNDEF MSWINDOWS}name '_Picture_GetWidth'{$ENDIF},
-  Picture_SetOnChange {$IFNDEF MSWINDOWS}name '_Picture_SetOnChange'{$ENDIF};
+  Picture_Create,
+  Picture_Free,
+  Picture_LoadFromFile,
+  Picture_SaveToFile,
+  Picture_LoadFromStream,
+  Picture_SaveToStream,
+  Picture_Assign,
+  Picture_GetNamePath,
+  Picture_ClassName,
+  Picture_Equals,
+  Picture_GetHashCode,
+  Picture_ToString,
+  Picture_GetBitmap,
+  Picture_SetBitmap,
+  Picture_GetGraphic,
+  Picture_SetGraphic,
+  Picture_GetHeight,
+  Picture_GetIcon,
+  Picture_SetIcon,
+  Picture_GetWidth,
+  Picture_SetOnChange;
 

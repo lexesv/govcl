@@ -5,77 +5,77 @@
 //
 //----------------------------------------
 
-function ActionList_Create(AOwner: TComponent): TActionList; cdecl;
+function ActionList_Create(AOwner: TComponent): TActionList; stdcall;
 begin
   Result :=  TActionList.Create(AOwner);
 end;
 
-procedure ActionList_Free(AObj: TActionList); cdecl;
+procedure ActionList_Free(AObj: TActionList); stdcall;
 begin
   AObj.Free;
 end;
 
-function ActionList_FindComponent(AObj: TActionList; AName: PChar): TComponent; cdecl;
+function ActionList_FindComponent(AObj: TActionList; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function ActionList_GetNamePath(AObj: TActionList): PChar; cdecl;
+function ActionList_GetNamePath(AObj: TActionList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function ActionList_HasParent(AObj: TActionList): LongBool; cdecl;
+function ActionList_HasParent(AObj: TActionList): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure ActionList_Assign(AObj: TActionList; Source: TPersistent); cdecl;
+procedure ActionList_Assign(AObj: TActionList; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function ActionList_ClassName(AObj: TActionList): PChar; cdecl;
+function ActionList_ClassName(AObj: TActionList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ActionList_Equals(AObj: TActionList; Obj: TObject): LongBool; cdecl;
+function ActionList_Equals(AObj: TActionList; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ActionList_GetHashCode(AObj: TActionList): Integer; cdecl;
+function ActionList_GetHashCode(AObj: TActionList): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ActionList_ToString(AObj: TActionList): PChar; cdecl;
+function ActionList_ToString(AObj: TActionList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ActionList_GetImages(AObj: TActionList): TCustomImageList; cdecl;
+function ActionList_GetImages(AObj: TActionList): TCustomImageList; stdcall;
 begin
   Result :=  AObj.Images;
 end;
 
-procedure ActionList_SetImages(AObj: TActionList; AValue: TCustomImageList); cdecl;
+procedure ActionList_SetImages(AObj: TActionList; AValue: TCustomImageList); stdcall;
 begin
   AObj.Images := AValue;
 end;
 
-function ActionList_GetState(AObj: TActionList): TActionListState; cdecl;
+function ActionList_GetState(AObj: TActionList): TActionListState; stdcall;
 begin
   Result :=  AObj.State;
 end;
 
-procedure ActionList_SetState(AObj: TActionList; AValue: TActionListState); cdecl;
+procedure ActionList_SetState(AObj: TActionList; AValue: TActionListState); stdcall;
 begin
   AObj.State := AValue;
 end;
 
-procedure ActionList_SetOnChange(AObj: TActionList; AEventId: NativeUInt); stdcall
+procedure ActionList_SetOnChange(AObj: TActionList; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -87,75 +87,75 @@ begin
   TEventClass.Add(AObj, geChange, AEventId);
 end;
 
-function ActionList_GetComponentCount(AObj: TActionList): Integer; cdecl;
+function ActionList_GetComponentCount(AObj: TActionList): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function ActionList_GetComponentIndex(AObj: TActionList): Integer; cdecl;
+function ActionList_GetComponentIndex(AObj: TActionList): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure ActionList_SetComponentIndex(AObj: TActionList; AValue: Integer); cdecl;
+procedure ActionList_SetComponentIndex(AObj: TActionList; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function ActionList_GetOwner(AObj: TActionList): TComponent; cdecl;
+function ActionList_GetOwner(AObj: TActionList): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function ActionList_GetName(AObj: TActionList): PChar; cdecl;
+function ActionList_GetName(AObj: TActionList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure ActionList_SetName(AObj: TActionList; AValue: PChar); cdecl;
+procedure ActionList_SetName(AObj: TActionList; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function ActionList_GetTag(AObj: TActionList): NativeInt; cdecl;
+function ActionList_GetTag(AObj: TActionList): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure ActionList_SetTag(AObj: TActionList; AValue: NativeInt); cdecl;
+procedure ActionList_SetTag(AObj: TActionList; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function ActionList_GetComponents(AObj: TActionList; AIndex: Integer): TComponent; cdecl;
+function ActionList_GetComponents(AObj: TActionList; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  ActionList_Create {$IFNDEF MSWINDOWS}name '_ActionList_Create'{$ENDIF},
-  ActionList_Free {$IFNDEF MSWINDOWS}name '_ActionList_Free'{$ENDIF},
-  ActionList_FindComponent {$IFNDEF MSWINDOWS}name '_ActionList_FindComponent'{$ENDIF},
-  ActionList_GetNamePath {$IFNDEF MSWINDOWS}name '_ActionList_GetNamePath'{$ENDIF},
-  ActionList_HasParent {$IFNDEF MSWINDOWS}name '_ActionList_HasParent'{$ENDIF},
-  ActionList_Assign {$IFNDEF MSWINDOWS}name '_ActionList_Assign'{$ENDIF},
-  ActionList_ClassName {$IFNDEF MSWINDOWS}name '_ActionList_ClassName'{$ENDIF},
-  ActionList_Equals {$IFNDEF MSWINDOWS}name '_ActionList_Equals'{$ENDIF},
-  ActionList_GetHashCode {$IFNDEF MSWINDOWS}name '_ActionList_GetHashCode'{$ENDIF},
-  ActionList_ToString {$IFNDEF MSWINDOWS}name '_ActionList_ToString'{$ENDIF},
-  ActionList_GetImages {$IFNDEF MSWINDOWS}name '_ActionList_GetImages'{$ENDIF},
-  ActionList_SetImages {$IFNDEF MSWINDOWS}name '_ActionList_SetImages'{$ENDIF},
-  ActionList_GetState {$IFNDEF MSWINDOWS}name '_ActionList_GetState'{$ENDIF},
-  ActionList_SetState {$IFNDEF MSWINDOWS}name '_ActionList_SetState'{$ENDIF},
-  ActionList_SetOnChange {$IFNDEF MSWINDOWS}name '_ActionList_SetOnChange'{$ENDIF},
-  ActionList_GetComponentCount {$IFNDEF MSWINDOWS}name '_ActionList_GetComponentCount'{$ENDIF},
-  ActionList_GetComponentIndex {$IFNDEF MSWINDOWS}name '_ActionList_GetComponentIndex'{$ENDIF},
-  ActionList_SetComponentIndex {$IFNDEF MSWINDOWS}name '_ActionList_SetComponentIndex'{$ENDIF},
-  ActionList_GetOwner {$IFNDEF MSWINDOWS}name '_ActionList_GetOwner'{$ENDIF},
-  ActionList_GetName {$IFNDEF MSWINDOWS}name '_ActionList_GetName'{$ENDIF},
-  ActionList_SetName {$IFNDEF MSWINDOWS}name '_ActionList_SetName'{$ENDIF},
-  ActionList_GetTag {$IFNDEF MSWINDOWS}name '_ActionList_GetTag'{$ENDIF},
-  ActionList_SetTag {$IFNDEF MSWINDOWS}name '_ActionList_SetTag'{$ENDIF},
-  ActionList_GetComponents {$IFNDEF MSWINDOWS}name '_ActionList_GetComponents'{$ENDIF};
+  ActionList_Create,
+  ActionList_Free,
+  ActionList_FindComponent,
+  ActionList_GetNamePath,
+  ActionList_HasParent,
+  ActionList_Assign,
+  ActionList_ClassName,
+  ActionList_Equals,
+  ActionList_GetHashCode,
+  ActionList_ToString,
+  ActionList_GetImages,
+  ActionList_SetImages,
+  ActionList_GetState,
+  ActionList_SetState,
+  ActionList_SetOnChange,
+  ActionList_GetComponentCount,
+  ActionList_GetComponentIndex,
+  ActionList_SetComponentIndex,
+  ActionList_GetOwner,
+  ActionList_GetName,
+  ActionList_SetName,
+  ActionList_GetTag,
+  ActionList_SetTag,
+  ActionList_GetComponents;
 

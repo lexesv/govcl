@@ -5,216 +5,216 @@
 //
 //----------------------------------------
 
-function BalloonHint_Create(AOwner: TComponent): TBalloonHint; cdecl;
+function BalloonHint_Create(AOwner: TComponent): TBalloonHint; stdcall;
 begin
   Result :=  TBalloonHint.Create(AOwner);
 end;
 
-procedure BalloonHint_Free(AObj: TBalloonHint); cdecl;
+procedure BalloonHint_Free(AObj: TBalloonHint); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure BalloonHint_ShowHint(AObj: TBalloonHint); cdecl;
+procedure BalloonHint_ShowHint(AObj: TBalloonHint); stdcall;
 begin
   AObj.ShowHint;
 end;
 
-procedure BalloonHint_HideHint(AObj: TBalloonHint); cdecl;
+procedure BalloonHint_HideHint(AObj: TBalloonHint); stdcall;
 begin
   AObj.HideHint;
 end;
 
-function BalloonHint_FindComponent(AObj: TBalloonHint; AName: PChar): TComponent; cdecl;
+function BalloonHint_FindComponent(AObj: TBalloonHint; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function BalloonHint_GetNamePath(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_GetNamePath(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function BalloonHint_HasParent(AObj: TBalloonHint): LongBool; cdecl;
+function BalloonHint_HasParent(AObj: TBalloonHint): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure BalloonHint_Assign(AObj: TBalloonHint; Source: TPersistent); cdecl;
+procedure BalloonHint_Assign(AObj: TBalloonHint; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function BalloonHint_ClassName(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_ClassName(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function BalloonHint_Equals(AObj: TBalloonHint; Obj: TObject): LongBool; cdecl;
+function BalloonHint_Equals(AObj: TBalloonHint; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function BalloonHint_GetHashCode(AObj: TBalloonHint): Integer; cdecl;
+function BalloonHint_GetHashCode(AObj: TBalloonHint): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function BalloonHint_ToString(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_ToString(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function BalloonHint_GetTitle(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_GetTitle(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Title);
 end;
 
-procedure BalloonHint_SetTitle(AObj: TBalloonHint; AValue: PChar); cdecl;
+procedure BalloonHint_SetTitle(AObj: TBalloonHint; AValue: PChar); stdcall;
 begin
   AObj.Title := AValue;
 end;
 
-function BalloonHint_GetDescription(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_GetDescription(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Description);
 end;
 
-procedure BalloonHint_SetDescription(AObj: TBalloonHint; AValue: PChar); cdecl;
+procedure BalloonHint_SetDescription(AObj: TBalloonHint; AValue: PChar); stdcall;
 begin
   AObj.Description := AValue;
 end;
 
-function BalloonHint_GetImageIndex(AObj: TBalloonHint): TImageIndex; cdecl;
+function BalloonHint_GetImageIndex(AObj: TBalloonHint): TImageIndex; stdcall;
 begin
   Result :=  AObj.ImageIndex;
 end;
 
-procedure BalloonHint_SetImageIndex(AObj: TBalloonHint; AValue: TImageIndex); cdecl;
+procedure BalloonHint_SetImageIndex(AObj: TBalloonHint; AValue: TImageIndex); stdcall;
 begin
   AObj.ImageIndex := AValue;
 end;
 
-function BalloonHint_GetImages(AObj: TBalloonHint): TImageList; cdecl;
+function BalloonHint_GetImages(AObj: TBalloonHint): TImageList; stdcall;
 begin
   Result :=  AObj.Images;
 end;
 
-procedure BalloonHint_SetImages(AObj: TBalloonHint; AValue: TImageList); cdecl;
+procedure BalloonHint_SetImages(AObj: TBalloonHint; AValue: TImageList); stdcall;
 begin
   AObj.Images := AValue;
 end;
 
-function BalloonHint_GetStyle(AObj: TBalloonHint): TBalloonHintStyle; cdecl;
+function BalloonHint_GetStyle(AObj: TBalloonHint): TBalloonHintStyle; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure BalloonHint_SetStyle(AObj: TBalloonHint; AValue: TBalloonHintStyle); cdecl;
+procedure BalloonHint_SetStyle(AObj: TBalloonHint; AValue: TBalloonHintStyle); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function BalloonHint_GetDelay(AObj: TBalloonHint): Cardinal; cdecl;
+function BalloonHint_GetDelay(AObj: TBalloonHint): Cardinal; stdcall;
 begin
   Result :=  AObj.Delay;
 end;
 
-procedure BalloonHint_SetDelay(AObj: TBalloonHint; AValue: Cardinal); cdecl;
+procedure BalloonHint_SetDelay(AObj: TBalloonHint; AValue: Cardinal); stdcall;
 begin
   AObj.Delay := AValue;
 end;
 
-function BalloonHint_GetHideAfter(AObj: TBalloonHint): Integer; cdecl;
+function BalloonHint_GetHideAfter(AObj: TBalloonHint): Integer; stdcall;
 begin
   Result :=  AObj.HideAfter;
 end;
 
-procedure BalloonHint_SetHideAfter(AObj: TBalloonHint; AValue: Integer); cdecl;
+procedure BalloonHint_SetHideAfter(AObj: TBalloonHint; AValue: Integer); stdcall;
 begin
   AObj.HideAfter := AValue;
 end;
 
-function BalloonHint_GetComponentCount(AObj: TBalloonHint): Integer; cdecl;
+function BalloonHint_GetComponentCount(AObj: TBalloonHint): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function BalloonHint_GetComponentIndex(AObj: TBalloonHint): Integer; cdecl;
+function BalloonHint_GetComponentIndex(AObj: TBalloonHint): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure BalloonHint_SetComponentIndex(AObj: TBalloonHint; AValue: Integer); cdecl;
+procedure BalloonHint_SetComponentIndex(AObj: TBalloonHint; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function BalloonHint_GetOwner(AObj: TBalloonHint): TComponent; cdecl;
+function BalloonHint_GetOwner(AObj: TBalloonHint): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function BalloonHint_GetName(AObj: TBalloonHint): PChar; cdecl;
+function BalloonHint_GetName(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure BalloonHint_SetName(AObj: TBalloonHint; AValue: PChar); cdecl;
+procedure BalloonHint_SetName(AObj: TBalloonHint; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function BalloonHint_GetTag(AObj: TBalloonHint): NativeInt; cdecl;
+function BalloonHint_GetTag(AObj: TBalloonHint): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure BalloonHint_SetTag(AObj: TBalloonHint; AValue: NativeInt); cdecl;
+procedure BalloonHint_SetTag(AObj: TBalloonHint; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function BalloonHint_GetComponents(AObj: TBalloonHint; AIndex: Integer): TComponent; cdecl;
+function BalloonHint_GetComponents(AObj: TBalloonHint; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  BalloonHint_Create {$IFNDEF MSWINDOWS}name '_BalloonHint_Create'{$ENDIF},
-  BalloonHint_Free {$IFNDEF MSWINDOWS}name '_BalloonHint_Free'{$ENDIF},
-  BalloonHint_ShowHint {$IFNDEF MSWINDOWS}name '_BalloonHint_ShowHint'{$ENDIF},
-  BalloonHint_HideHint {$IFNDEF MSWINDOWS}name '_BalloonHint_HideHint'{$ENDIF},
-  BalloonHint_FindComponent {$IFNDEF MSWINDOWS}name '_BalloonHint_FindComponent'{$ENDIF},
-  BalloonHint_GetNamePath {$IFNDEF MSWINDOWS}name '_BalloonHint_GetNamePath'{$ENDIF},
-  BalloonHint_HasParent {$IFNDEF MSWINDOWS}name '_BalloonHint_HasParent'{$ENDIF},
-  BalloonHint_Assign {$IFNDEF MSWINDOWS}name '_BalloonHint_Assign'{$ENDIF},
-  BalloonHint_ClassName {$IFNDEF MSWINDOWS}name '_BalloonHint_ClassName'{$ENDIF},
-  BalloonHint_Equals {$IFNDEF MSWINDOWS}name '_BalloonHint_Equals'{$ENDIF},
-  BalloonHint_GetHashCode {$IFNDEF MSWINDOWS}name '_BalloonHint_GetHashCode'{$ENDIF},
-  BalloonHint_ToString {$IFNDEF MSWINDOWS}name '_BalloonHint_ToString'{$ENDIF},
-  BalloonHint_GetTitle {$IFNDEF MSWINDOWS}name '_BalloonHint_GetTitle'{$ENDIF},
-  BalloonHint_SetTitle {$IFNDEF MSWINDOWS}name '_BalloonHint_SetTitle'{$ENDIF},
-  BalloonHint_GetDescription {$IFNDEF MSWINDOWS}name '_BalloonHint_GetDescription'{$ENDIF},
-  BalloonHint_SetDescription {$IFNDEF MSWINDOWS}name '_BalloonHint_SetDescription'{$ENDIF},
-  BalloonHint_GetImageIndex {$IFNDEF MSWINDOWS}name '_BalloonHint_GetImageIndex'{$ENDIF},
-  BalloonHint_SetImageIndex {$IFNDEF MSWINDOWS}name '_BalloonHint_SetImageIndex'{$ENDIF},
-  BalloonHint_GetImages {$IFNDEF MSWINDOWS}name '_BalloonHint_GetImages'{$ENDIF},
-  BalloonHint_SetImages {$IFNDEF MSWINDOWS}name '_BalloonHint_SetImages'{$ENDIF},
-  BalloonHint_GetStyle {$IFNDEF MSWINDOWS}name '_BalloonHint_GetStyle'{$ENDIF},
-  BalloonHint_SetStyle {$IFNDEF MSWINDOWS}name '_BalloonHint_SetStyle'{$ENDIF},
-  BalloonHint_GetDelay {$IFNDEF MSWINDOWS}name '_BalloonHint_GetDelay'{$ENDIF},
-  BalloonHint_SetDelay {$IFNDEF MSWINDOWS}name '_BalloonHint_SetDelay'{$ENDIF},
-  BalloonHint_GetHideAfter {$IFNDEF MSWINDOWS}name '_BalloonHint_GetHideAfter'{$ENDIF},
-  BalloonHint_SetHideAfter {$IFNDEF MSWINDOWS}name '_BalloonHint_SetHideAfter'{$ENDIF},
-  BalloonHint_GetComponentCount {$IFNDEF MSWINDOWS}name '_BalloonHint_GetComponentCount'{$ENDIF},
-  BalloonHint_GetComponentIndex {$IFNDEF MSWINDOWS}name '_BalloonHint_GetComponentIndex'{$ENDIF},
-  BalloonHint_SetComponentIndex {$IFNDEF MSWINDOWS}name '_BalloonHint_SetComponentIndex'{$ENDIF},
-  BalloonHint_GetOwner {$IFNDEF MSWINDOWS}name '_BalloonHint_GetOwner'{$ENDIF},
-  BalloonHint_GetName {$IFNDEF MSWINDOWS}name '_BalloonHint_GetName'{$ENDIF},
-  BalloonHint_SetName {$IFNDEF MSWINDOWS}name '_BalloonHint_SetName'{$ENDIF},
-  BalloonHint_GetTag {$IFNDEF MSWINDOWS}name '_BalloonHint_GetTag'{$ENDIF},
-  BalloonHint_SetTag {$IFNDEF MSWINDOWS}name '_BalloonHint_SetTag'{$ENDIF},
-  BalloonHint_GetComponents {$IFNDEF MSWINDOWS}name '_BalloonHint_GetComponents'{$ENDIF};
+  BalloonHint_Create,
+  BalloonHint_Free,
+  BalloonHint_ShowHint,
+  BalloonHint_HideHint,
+  BalloonHint_FindComponent,
+  BalloonHint_GetNamePath,
+  BalloonHint_HasParent,
+  BalloonHint_Assign,
+  BalloonHint_ClassName,
+  BalloonHint_Equals,
+  BalloonHint_GetHashCode,
+  BalloonHint_ToString,
+  BalloonHint_GetTitle,
+  BalloonHint_SetTitle,
+  BalloonHint_GetDescription,
+  BalloonHint_SetDescription,
+  BalloonHint_GetImageIndex,
+  BalloonHint_SetImageIndex,
+  BalloonHint_GetImages,
+  BalloonHint_SetImages,
+  BalloonHint_GetStyle,
+  BalloonHint_SetStyle,
+  BalloonHint_GetDelay,
+  BalloonHint_SetDelay,
+  BalloonHint_GetHideAfter,
+  BalloonHint_SetHideAfter,
+  BalloonHint_GetComponentCount,
+  BalloonHint_GetComponentIndex,
+  BalloonHint_SetComponentIndex,
+  BalloonHint_GetOwner,
+  BalloonHint_GetName,
+  BalloonHint_SetName,
+  BalloonHint_GetTag,
+  BalloonHint_SetTag,
+  BalloonHint_GetComponents;
 

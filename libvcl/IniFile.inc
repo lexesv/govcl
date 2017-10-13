@@ -5,180 +5,180 @@
 //
 //----------------------------------------
 
-function IniFile_Create(AFileName: PChar): TIniFile; cdecl;
+function IniFile_Create(AFileName: PChar): TIniFile; stdcall;
 begin
   Result :=  TIniFile.Create(AFileName);
 end;
 
-procedure IniFile_Free(AObj: TIniFile); cdecl;
+procedure IniFile_Free(AObj: TIniFile); stdcall;
 begin
   AObj.Free;
 end;
 
-function IniFile_ReadString(AObj: TIniFile; Section: PChar; Ident: PChar; Default: PChar): PChar; cdecl;
+function IniFile_ReadString(AObj: TIniFile; Section: PChar; Ident: PChar; Default: PChar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ReadString(Section, Ident, Default));
 end;
 
-procedure IniFile_WriteString(AObj: TIniFile; Section: PChar; Ident: PChar; Value: PChar); cdecl;
+procedure IniFile_WriteString(AObj: TIniFile; Section: PChar; Ident: PChar; Value: PChar); stdcall;
 begin
   AObj.WriteString(Section, Ident, Value);
 end;
 
-procedure IniFile_ReadSections(AObj: TIniFile; Strings: TStrings); cdecl;
+procedure IniFile_ReadSections(AObj: TIniFile; Strings: TStrings); stdcall;
 begin
   AObj.ReadSections(Strings);
 end;
 
-procedure IniFile_ReadSectionValues(AObj: TIniFile; Section: PChar; Strings: TStrings); cdecl;
+procedure IniFile_ReadSectionValues(AObj: TIniFile; Section: PChar; Strings: TStrings); stdcall;
 begin
   AObj.ReadSectionValues(Section, Strings);
 end;
 
-procedure IniFile_EraseSection(AObj: TIniFile; Section: PChar); cdecl;
+procedure IniFile_EraseSection(AObj: TIniFile; Section: PChar); stdcall;
 begin
   AObj.EraseSection(Section);
 end;
 
-procedure IniFile_DeleteKey(AObj: TIniFile; Section: PChar; Ident: PChar); cdecl;
+procedure IniFile_DeleteKey(AObj: TIniFile; Section: PChar; Ident: PChar); stdcall;
 begin
   AObj.DeleteKey(Section, Ident);
 end;
 
-procedure IniFile_UpdateFile(AObj: TIniFile); cdecl;
+procedure IniFile_UpdateFile(AObj: TIniFile); stdcall;
 begin
   AObj.UpdateFile;
 end;
 
-function IniFile_SectionExists(AObj: TIniFile; Section: PChar): LongBool; cdecl;
+function IniFile_SectionExists(AObj: TIniFile; Section: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.SectionExists(Section);
 end;
 
-function IniFile_ReadInteger(AObj: TIniFile; Section: PChar; Ident: PChar; Default: Integer): Integer; cdecl;
+function IniFile_ReadInteger(AObj: TIniFile; Section: PChar; Ident: PChar; Default: Integer): Integer; stdcall;
 begin
   Result :=  AObj.ReadInteger(Section, Ident, Default);
 end;
 
-procedure IniFile_WriteInteger(AObj: TIniFile; Section: PChar; Ident: PChar; Value: Integer); cdecl;
+procedure IniFile_WriteInteger(AObj: TIniFile; Section: PChar; Ident: PChar; Value: Integer); stdcall;
 begin
   AObj.WriteInteger(Section, Ident, Value);
 end;
 
-function IniFile_ReadBool(AObj: TIniFile; Section: PChar; Ident: PChar; Default: LongBool): LongBool; cdecl;
+function IniFile_ReadBool(AObj: TIniFile; Section: PChar; Ident: PChar; Default: LongBool): LongBool; stdcall;
 begin
   Result :=  AObj.ReadBool(Section, Ident, Default);
 end;
 
-procedure IniFile_WriteBool(AObj: TIniFile; Section: PChar; Ident: PChar; Value: LongBool); cdecl;
+procedure IniFile_WriteBool(AObj: TIniFile; Section: PChar; Ident: PChar; Value: LongBool); stdcall;
 begin
   AObj.WriteBool(Section, Ident, Value);
 end;
 
-function IniFile_ReadDate(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; cdecl;
+function IniFile_ReadDate(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadDate(Section, Name, UnixToTime(Default)));
 end;
 
-function IniFile_ReadDateTime(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; cdecl;
+function IniFile_ReadDateTime(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadDateTime(Section, Name, UnixToTime(Default)));
 end;
 
-procedure IniFile_ReadFloat(AObj: TIniFile; Section: PChar; Name: PChar; var Default: Double; var Result: Double); cdecl;
+procedure IniFile_ReadFloat(AObj: TIniFile; Section: PChar; Name: PChar; var Default: Double; var Result: Double); stdcall;
 begin
   Result :=  AObj.ReadFloat(Section, Name, Default);
 end;
 
-function IniFile_ReadTime(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; cdecl;
+function IniFile_ReadTime(AObj: TIniFile; Section: PChar; Name: PChar; Default: TUnixDateTime): TUnixDateTime; stdcall;
 begin
   Result :=  ToUnixTime(AObj.ReadTime(Section, Name, UnixToTime(Default)));
 end;
 
-procedure IniFile_WriteDate(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure IniFile_WriteDate(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteDate(Section, Name, UnixToTime(Value));
 end;
 
-procedure IniFile_WriteDateTime(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure IniFile_WriteDateTime(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteDateTime(Section, Name, UnixToTime(Value));
 end;
 
-procedure IniFile_WriteFloat(AObj: TIniFile; Section: PChar; Name: PChar; var Value: Double); cdecl;
+procedure IniFile_WriteFloat(AObj: TIniFile; Section: PChar; Name: PChar; var Value: Double); stdcall;
 begin
   AObj.WriteFloat(Section, Name, Value);
 end;
 
-procedure IniFile_WriteTime(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); cdecl;
+procedure IniFile_WriteTime(AObj: TIniFile; Section: PChar; Name: PChar; Value: TUnixDateTime); stdcall;
 begin
   AObj.WriteTime(Section, Name, UnixToTime(Value));
 end;
 
-procedure IniFile_ReadSubSections(AObj: TIniFile; Section: PChar; Strings: TStrings; Recurse: LongBool); cdecl;
+procedure IniFile_ReadSubSections(AObj: TIniFile; Section: PChar; Strings: TStrings; Recurse: LongBool); stdcall;
 begin
   AObj.ReadSubSections(Section, Strings, Recurse);
 end;
 
-function IniFile_ValueExists(AObj: TIniFile; Section: PChar; Ident: PChar): LongBool; cdecl;
+function IniFile_ValueExists(AObj: TIniFile; Section: PChar; Ident: PChar): LongBool; stdcall;
 begin
   Result :=  AObj.ValueExists(Section, Ident);
 end;
 
-function IniFile_ClassName(AObj: TIniFile): PChar; cdecl;
+function IniFile_ClassName(AObj: TIniFile): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function IniFile_Equals(AObj: TIniFile; Obj: TObject): LongBool; cdecl;
+function IniFile_Equals(AObj: TIniFile; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function IniFile_GetHashCode(AObj: TIniFile): Integer; cdecl;
+function IniFile_GetHashCode(AObj: TIniFile): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function IniFile_ToString(AObj: TIniFile): PChar; cdecl;
+function IniFile_ToString(AObj: TIniFile): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function IniFile_GetFileName(AObj: TIniFile): PChar; cdecl;
+function IniFile_GetFileName(AObj: TIniFile): PChar; stdcall;
 begin
   Result :=  PChar(AObj.FileName);
 end;
 
 
 exports
-  IniFile_Create {$IFNDEF MSWINDOWS}name '_IniFile_Create'{$ENDIF},
-  IniFile_Free {$IFNDEF MSWINDOWS}name '_IniFile_Free'{$ENDIF},
-  IniFile_ReadString {$IFNDEF MSWINDOWS}name '_IniFile_ReadString'{$ENDIF},
-  IniFile_WriteString {$IFNDEF MSWINDOWS}name '_IniFile_WriteString'{$ENDIF},
-  IniFile_ReadSections {$IFNDEF MSWINDOWS}name '_IniFile_ReadSections'{$ENDIF},
-  IniFile_ReadSectionValues {$IFNDEF MSWINDOWS}name '_IniFile_ReadSectionValues'{$ENDIF},
-  IniFile_EraseSection {$IFNDEF MSWINDOWS}name '_IniFile_EraseSection'{$ENDIF},
-  IniFile_DeleteKey {$IFNDEF MSWINDOWS}name '_IniFile_DeleteKey'{$ENDIF},
-  IniFile_UpdateFile {$IFNDEF MSWINDOWS}name '_IniFile_UpdateFile'{$ENDIF},
-  IniFile_SectionExists {$IFNDEF MSWINDOWS}name '_IniFile_SectionExists'{$ENDIF},
-  IniFile_ReadInteger {$IFNDEF MSWINDOWS}name '_IniFile_ReadInteger'{$ENDIF},
-  IniFile_WriteInteger {$IFNDEF MSWINDOWS}name '_IniFile_WriteInteger'{$ENDIF},
-  IniFile_ReadBool {$IFNDEF MSWINDOWS}name '_IniFile_ReadBool'{$ENDIF},
-  IniFile_WriteBool {$IFNDEF MSWINDOWS}name '_IniFile_WriteBool'{$ENDIF},
-  IniFile_ReadDate {$IFNDEF MSWINDOWS}name '_IniFile_ReadDate'{$ENDIF},
-  IniFile_ReadDateTime {$IFNDEF MSWINDOWS}name '_IniFile_ReadDateTime'{$ENDIF},
-  IniFile_ReadFloat {$IFNDEF MSWINDOWS}name '_IniFile_ReadFloat'{$ENDIF},
-  IniFile_ReadTime {$IFNDEF MSWINDOWS}name '_IniFile_ReadTime'{$ENDIF},
-  IniFile_WriteDate {$IFNDEF MSWINDOWS}name '_IniFile_WriteDate'{$ENDIF},
-  IniFile_WriteDateTime {$IFNDEF MSWINDOWS}name '_IniFile_WriteDateTime'{$ENDIF},
-  IniFile_WriteFloat {$IFNDEF MSWINDOWS}name '_IniFile_WriteFloat'{$ENDIF},
-  IniFile_WriteTime {$IFNDEF MSWINDOWS}name '_IniFile_WriteTime'{$ENDIF},
-  IniFile_ReadSubSections {$IFNDEF MSWINDOWS}name '_IniFile_ReadSubSections'{$ENDIF},
-  IniFile_ValueExists {$IFNDEF MSWINDOWS}name '_IniFile_ValueExists'{$ENDIF},
-  IniFile_ClassName {$IFNDEF MSWINDOWS}name '_IniFile_ClassName'{$ENDIF},
-  IniFile_Equals {$IFNDEF MSWINDOWS}name '_IniFile_Equals'{$ENDIF},
-  IniFile_GetHashCode {$IFNDEF MSWINDOWS}name '_IniFile_GetHashCode'{$ENDIF},
-  IniFile_ToString {$IFNDEF MSWINDOWS}name '_IniFile_ToString'{$ENDIF},
-  IniFile_GetFileName {$IFNDEF MSWINDOWS}name '_IniFile_GetFileName'{$ENDIF};
+  IniFile_Create,
+  IniFile_Free,
+  IniFile_ReadString,
+  IniFile_WriteString,
+  IniFile_ReadSections,
+  IniFile_ReadSectionValues,
+  IniFile_EraseSection,
+  IniFile_DeleteKey,
+  IniFile_UpdateFile,
+  IniFile_SectionExists,
+  IniFile_ReadInteger,
+  IniFile_WriteInteger,
+  IniFile_ReadBool,
+  IniFile_WriteBool,
+  IniFile_ReadDate,
+  IniFile_ReadDateTime,
+  IniFile_ReadFloat,
+  IniFile_ReadTime,
+  IniFile_WriteDate,
+  IniFile_WriteDateTime,
+  IniFile_WriteFloat,
+  IniFile_WriteTime,
+  IniFile_ReadSubSections,
+  IniFile_ValueExists,
+  IniFile_ClassName,
+  IniFile_Equals,
+  IniFile_GetHashCode,
+  IniFile_ToString,
+  IniFile_GetFileName;
 

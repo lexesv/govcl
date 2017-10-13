@@ -5,90 +5,90 @@
 //
 //----------------------------------------
 
-function Mouse_Create: TMouse; cdecl;
+function Mouse_Create: TMouse; stdcall;
 begin
   Result :=  TMouse.Create;
 end;
 
-procedure Mouse_Free(AObj: TMouse); cdecl;
+procedure Mouse_Free(AObj: TMouse); stdcall;
 begin
   AObj.Free;
 end;
 
-function Mouse_ClassName(AObj: TMouse): PChar; cdecl;
+function Mouse_ClassName(AObj: TMouse): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Mouse_Equals(AObj: TMouse; Obj: TObject): LongBool; cdecl;
+function Mouse_Equals(AObj: TMouse; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Mouse_GetHashCode(AObj: TMouse): Integer; cdecl;
+function Mouse_GetHashCode(AObj: TMouse): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Mouse_ToString(AObj: TMouse): PChar; cdecl;
+function Mouse_ToString(AObj: TMouse): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Mouse_GetCapture(AObj: TMouse): HWND; cdecl;
+function Mouse_GetCapture(AObj: TMouse): HWND; stdcall;
 begin
   Result :=  AObj.Capture;
 end;
 
-procedure Mouse_SetCapture(AObj: TMouse; AValue: HWND); cdecl;
+procedure Mouse_SetCapture(AObj: TMouse; AValue: HWND); stdcall;
 begin
   AObj.Capture := AValue;
 end;
 
-procedure Mouse_GetCursorPos(AObj: TMouse; var Result: TPoint); cdecl;
+procedure Mouse_GetCursorPos(AObj: TMouse; var Result: TPoint); stdcall;
 begin
   Result :=  AObj.CursorPos;
 end;
 
-procedure Mouse_SetCursorPos(AObj: TMouse; var AValue: TPoint); cdecl;
+procedure Mouse_SetCursorPos(AObj: TMouse; var AValue: TPoint); stdcall;
 begin
   AObj.CursorPos := AValue;
 end;
 
-function Mouse_GetIsDragging(AObj: TMouse): LongBool; cdecl;
+function Mouse_GetIsDragging(AObj: TMouse): LongBool; stdcall;
 begin
   Result :=  AObj.IsDragging;
 end;
 
-function Mouse_GetIsPanning(AObj: TMouse): LongBool; cdecl;
+function Mouse_GetIsPanning(AObj: TMouse): LongBool; stdcall;
 begin
   Result :=  AObj.IsPanning;
 end;
 
-function Mouse_GetWheelPresent(AObj: TMouse): LongBool; cdecl;
+function Mouse_GetWheelPresent(AObj: TMouse): LongBool; stdcall;
 begin
   Result :=  AObj.WheelPresent;
 end;
 
-function Mouse_GetWheelScrollLines(AObj: TMouse): Integer; cdecl;
+function Mouse_GetWheelScrollLines(AObj: TMouse): Integer; stdcall;
 begin
   Result :=  AObj.WheelScrollLines;
 end;
 
 
 exports
-  Mouse_Create {$IFNDEF MSWINDOWS}name '_Mouse_Create'{$ENDIF},
-  Mouse_Free {$IFNDEF MSWINDOWS}name '_Mouse_Free'{$ENDIF},
-  Mouse_ClassName {$IFNDEF MSWINDOWS}name '_Mouse_ClassName'{$ENDIF},
-  Mouse_Equals {$IFNDEF MSWINDOWS}name '_Mouse_Equals'{$ENDIF},
-  Mouse_GetHashCode {$IFNDEF MSWINDOWS}name '_Mouse_GetHashCode'{$ENDIF},
-  Mouse_ToString {$IFNDEF MSWINDOWS}name '_Mouse_ToString'{$ENDIF},
-  Mouse_GetCapture {$IFNDEF MSWINDOWS}name '_Mouse_GetCapture'{$ENDIF},
-  Mouse_SetCapture {$IFNDEF MSWINDOWS}name '_Mouse_SetCapture'{$ENDIF},
-  Mouse_GetCursorPos {$IFNDEF MSWINDOWS}name '_Mouse_GetCursorPos'{$ENDIF},
-  Mouse_SetCursorPos {$IFNDEF MSWINDOWS}name '_Mouse_SetCursorPos'{$ENDIF},
-  Mouse_GetIsDragging {$IFNDEF MSWINDOWS}name '_Mouse_GetIsDragging'{$ENDIF},
-  Mouse_GetIsPanning {$IFNDEF MSWINDOWS}name '_Mouse_GetIsPanning'{$ENDIF},
-  Mouse_GetWheelPresent {$IFNDEF MSWINDOWS}name '_Mouse_GetWheelPresent'{$ENDIF},
-  Mouse_GetWheelScrollLines {$IFNDEF MSWINDOWS}name '_Mouse_GetWheelScrollLines'{$ENDIF};
+  Mouse_Create,
+  Mouse_Free,
+  Mouse_ClassName,
+  Mouse_Equals,
+  Mouse_GetHashCode,
+  Mouse_ToString,
+  Mouse_GetCapture,
+  Mouse_SetCapture,
+  Mouse_GetCursorPos,
+  Mouse_SetCursorPos,
+  Mouse_GetIsDragging,
+  Mouse_GetIsPanning,
+  Mouse_GetWheelPresent,
+  Mouse_GetWheelScrollLines;
 

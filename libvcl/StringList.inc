@@ -5,142 +5,142 @@
 //
 //----------------------------------------
 
-function StringList_Create: TStringList; cdecl;
+function StringList_Create: TStringList; stdcall;
 begin
   Result :=  TStringList.Create;
 end;
 
-procedure StringList_Free(AObj: TStringList); cdecl;
+procedure StringList_Free(AObj: TStringList); stdcall;
 begin
   AObj.Free;
 end;
 
-function StringList_Add(AObj: TStringList; S: PChar): Integer; cdecl;
+function StringList_Add(AObj: TStringList; S: PChar): Integer; stdcall;
 begin
   Result :=  AObj.Add(S);
 end;
 
-function StringList_AddObject(AObj: TStringList; S: PChar; AObject: TObject): Integer; cdecl;
+function StringList_AddObject(AObj: TStringList; S: PChar; AObject: TObject): Integer; stdcall;
 begin
   Result :=  AObj.AddObject(S, AObject);
 end;
 
-procedure StringList_Assign(AObj: TStringList; Source: TPersistent); cdecl;
+procedure StringList_Assign(AObj: TStringList; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-procedure StringList_Clear(AObj: TStringList); cdecl;
+procedure StringList_Clear(AObj: TStringList); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure StringList_Delete(AObj: TStringList; Index: Integer); cdecl;
+procedure StringList_Delete(AObj: TStringList; Index: Integer); stdcall;
 begin
   AObj.Delete(Index);
 end;
 
-function StringList_IndexOf(AObj: TStringList; S: PChar): Integer; cdecl;
+function StringList_IndexOf(AObj: TStringList; S: PChar): Integer; stdcall;
 begin
   Result :=  AObj.IndexOf(S);
 end;
 
-procedure StringList_Insert(AObj: TStringList; Index: Integer; S: PChar); cdecl;
+procedure StringList_Insert(AObj: TStringList; Index: Integer; S: PChar); stdcall;
 begin
   AObj.Insert(Index, S);
 end;
 
-procedure StringList_InsertObject(AObj: TStringList; Index: Integer; S: PChar; AObject: TObject); cdecl;
+procedure StringList_InsertObject(AObj: TStringList; Index: Integer; S: PChar; AObject: TObject); stdcall;
 begin
   AObj.InsertObject(Index, S, AObject);
 end;
 
-procedure StringList_Append(AObj: TStringList; S: PChar); cdecl;
+procedure StringList_Append(AObj: TStringList; S: PChar); stdcall;
 begin
   AObj.Append(S);
 end;
 
-procedure StringList_BeginUpdate(AObj: TStringList); cdecl;
+procedure StringList_BeginUpdate(AObj: TStringList); stdcall;
 begin
   AObj.BeginUpdate;
 end;
 
-procedure StringList_EndUpdate(AObj: TStringList); cdecl;
+procedure StringList_EndUpdate(AObj: TStringList); stdcall;
 begin
   AObj.EndUpdate;
 end;
 
-function StringList_Equals(AObj: TStringList; Strings: TStrings): LongBool; cdecl;
+function StringList_Equals(AObj: TStringList; Strings: TStrings): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Strings);
 end;
 
-function StringList_IndexOfName(AObj: TStringList; Name: PChar): Integer; cdecl;
+function StringList_IndexOfName(AObj: TStringList; Name: PChar): Integer; stdcall;
 begin
   Result :=  AObj.IndexOfName(Name);
 end;
 
-function StringList_IndexOfObject(AObj: TStringList; AObject: TObject): Integer; cdecl;
+function StringList_IndexOfObject(AObj: TStringList; AObject: TObject): Integer; stdcall;
 begin
   Result :=  AObj.IndexOfObject(AObject);
 end;
 
-procedure StringList_LoadFromFile(AObj: TStringList; FileName: PChar); cdecl;
+procedure StringList_LoadFromFile(AObj: TStringList; FileName: PChar); stdcall;
 begin
   AObj.LoadFromFile(FileName);
 end;
 
-procedure StringList_LoadFromStream(AObj: TStringList; Stream: TStream); cdecl;
+procedure StringList_LoadFromStream(AObj: TStringList; Stream: TStream); stdcall;
 begin
   AObj.LoadFromStream(Stream);
 end;
 
-procedure StringList_Move(AObj: TStringList; CurIndex: Integer; NewIndex: Integer); cdecl;
+procedure StringList_Move(AObj: TStringList; CurIndex: Integer; NewIndex: Integer); stdcall;
 begin
   AObj.Move(CurIndex, NewIndex);
 end;
 
-procedure StringList_SaveToFile(AObj: TStringList; FileName: PChar); cdecl;
+procedure StringList_SaveToFile(AObj: TStringList; FileName: PChar); stdcall;
 begin
   AObj.SaveToFile(FileName);
 end;
 
-procedure StringList_SaveToStream(AObj: TStringList; Stream: TStream); cdecl;
+procedure StringList_SaveToStream(AObj: TStringList; Stream: TStream); stdcall;
 begin
   AObj.SaveToStream(Stream);
 end;
 
-function StringList_GetNamePath(AObj: TStringList): PChar; cdecl;
+function StringList_GetNamePath(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function StringList_ClassName(AObj: TStringList): PChar; cdecl;
+function StringList_ClassName(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function StringList_GetHashCode(AObj: TStringList): Integer; cdecl;
+function StringList_GetHashCode(AObj: TStringList): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function StringList_ToString(AObj: TStringList): PChar; cdecl;
+function StringList_ToString(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function StringList_GetSorted(AObj: TStringList): LongBool; cdecl;
+function StringList_GetSorted(AObj: TStringList): LongBool; stdcall;
 begin
   Result :=  AObj.Sorted;
 end;
 
-procedure StringList_SetSorted(AObj: TStringList; AValue: LongBool); cdecl;
+procedure StringList_SetSorted(AObj: TStringList; AValue: LongBool); stdcall;
 begin
   AObj.Sorted := AValue;
 end;
 
-procedure StringList_SetOnChange(AObj: TStringList; AEventId: NativeUInt); stdcall
+procedure StringList_SetOnChange(AObj: TStringList; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -152,130 +152,130 @@ begin
   TEventClass.Add(AObj, geChange, AEventId);
 end;
 
-function StringList_GetCommaText(AObj: TStringList): PChar; cdecl;
+function StringList_GetCommaText(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.CommaText);
 end;
 
-procedure StringList_SetCommaText(AObj: TStringList; AValue: PChar); cdecl;
+procedure StringList_SetCommaText(AObj: TStringList; AValue: PChar); stdcall;
 begin
   AObj.CommaText := AValue;
 end;
 
-function StringList_GetDelimiter(AObj: TStringList): Char; cdecl;
+function StringList_GetDelimiter(AObj: TStringList): Char; stdcall;
 begin
   Result :=  AObj.Delimiter;
 end;
 
-procedure StringList_SetDelimiter(AObj: TStringList; AValue: Char); cdecl;
+procedure StringList_SetDelimiter(AObj: TStringList; AValue: Char); stdcall;
 begin
   AObj.Delimiter := AValue;
 end;
 
-function StringList_GetText(AObj: TStringList): PChar; cdecl;
+function StringList_GetText(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Text);
 end;
 
-procedure StringList_SetText(AObj: TStringList; AValue: PChar); cdecl;
+procedure StringList_SetText(AObj: TStringList; AValue: PChar); stdcall;
 begin
   AObj.Text := AValue;
 end;
 
-function StringList_GetWriteBOM(AObj: TStringList): LongBool; cdecl;
+function StringList_GetWriteBOM(AObj: TStringList): LongBool; stdcall;
 begin
   Result :=  AObj.WriteBOM;
 end;
 
-procedure StringList_SetWriteBOM(AObj: TStringList; AValue: LongBool); cdecl;
+procedure StringList_SetWriteBOM(AObj: TStringList; AValue: LongBool); stdcall;
 begin
   AObj.WriteBOM := AValue;
 end;
 
-function StringList_GetOptions(AObj: TStringList): TStringsOptions; cdecl;
+function StringList_GetOptions(AObj: TStringList): TStringsOptions; stdcall;
 begin
   Result :=  AObj.Options;
 end;
 
-procedure StringList_SetOptions(AObj: TStringList; AValue: TStringsOptions); cdecl;
+procedure StringList_SetOptions(AObj: TStringList; AValue: TStringsOptions); stdcall;
 begin
   AObj.Options := AValue;
 end;
 
-function StringList_GetValues(AObj: TStringList; Name: PChar): PChar; cdecl;
+function StringList_GetValues(AObj: TStringList; Name: PChar): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Values[Name]);
 end;
 
-procedure StringList_SetValues(AObj: TStringList; Name: string; AValue: PChar); cdecl;
+procedure StringList_SetValues(AObj: TStringList; Name: string; AValue: PChar); stdcall;
 begin
   AObj.Values[Name] := AValue;
 end;
 
-function StringList_GetValueFromIndex(AObj: TStringList; Index: Integer): PChar; cdecl;
+function StringList_GetValueFromIndex(AObj: TStringList; Index: Integer): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ValueFromIndex[Index]);
 end;
 
-procedure StringList_SetValueFromIndex(AObj: TStringList; Index: Integer; AValue: PChar); cdecl;
+procedure StringList_SetValueFromIndex(AObj: TStringList; Index: Integer; AValue: PChar); stdcall;
 begin
   AObj.ValueFromIndex[Index] := AValue;
 end;
 
-function StringList_GetStrings(AObj: TStringList; Index: Integer): PChar; cdecl;
+function StringList_GetStrings(AObj: TStringList; Index: Integer): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Strings[Index]);
 end;
 
-procedure StringList_SetStrings(AObj: TStringList; Index: Integer; AValue: PChar); cdecl;
+procedure StringList_SetStrings(AObj: TStringList; Index: Integer; AValue: PChar); stdcall;
 begin
   AObj.Strings[Index] := AValue;
 end;
 
 
 exports
-  StringList_Create {$IFNDEF MSWINDOWS}name '_StringList_Create'{$ENDIF},
-  StringList_Free {$IFNDEF MSWINDOWS}name '_StringList_Free'{$ENDIF},
-  StringList_Add {$IFNDEF MSWINDOWS}name '_StringList_Add'{$ENDIF},
-  StringList_AddObject {$IFNDEF MSWINDOWS}name '_StringList_AddObject'{$ENDIF},
-  StringList_Assign {$IFNDEF MSWINDOWS}name '_StringList_Assign'{$ENDIF},
-  StringList_Clear {$IFNDEF MSWINDOWS}name '_StringList_Clear'{$ENDIF},
-  StringList_Delete {$IFNDEF MSWINDOWS}name '_StringList_Delete'{$ENDIF},
-  StringList_IndexOf {$IFNDEF MSWINDOWS}name '_StringList_IndexOf'{$ENDIF},
-  StringList_Insert {$IFNDEF MSWINDOWS}name '_StringList_Insert'{$ENDIF},
-  StringList_InsertObject {$IFNDEF MSWINDOWS}name '_StringList_InsertObject'{$ENDIF},
-  StringList_Append {$IFNDEF MSWINDOWS}name '_StringList_Append'{$ENDIF},
-  StringList_BeginUpdate {$IFNDEF MSWINDOWS}name '_StringList_BeginUpdate'{$ENDIF},
-  StringList_EndUpdate {$IFNDEF MSWINDOWS}name '_StringList_EndUpdate'{$ENDIF},
-  StringList_Equals {$IFNDEF MSWINDOWS}name '_StringList_Equals'{$ENDIF},
-  StringList_IndexOfName {$IFNDEF MSWINDOWS}name '_StringList_IndexOfName'{$ENDIF},
-  StringList_IndexOfObject {$IFNDEF MSWINDOWS}name '_StringList_IndexOfObject'{$ENDIF},
-  StringList_LoadFromFile {$IFNDEF MSWINDOWS}name '_StringList_LoadFromFile'{$ENDIF},
-  StringList_LoadFromStream {$IFNDEF MSWINDOWS}name '_StringList_LoadFromStream'{$ENDIF},
-  StringList_Move {$IFNDEF MSWINDOWS}name '_StringList_Move'{$ENDIF},
-  StringList_SaveToFile {$IFNDEF MSWINDOWS}name '_StringList_SaveToFile'{$ENDIF},
-  StringList_SaveToStream {$IFNDEF MSWINDOWS}name '_StringList_SaveToStream'{$ENDIF},
-  StringList_GetNamePath {$IFNDEF MSWINDOWS}name '_StringList_GetNamePath'{$ENDIF},
-  StringList_ClassName {$IFNDEF MSWINDOWS}name '_StringList_ClassName'{$ENDIF},
-  StringList_GetHashCode {$IFNDEF MSWINDOWS}name '_StringList_GetHashCode'{$ENDIF},
-  StringList_ToString {$IFNDEF MSWINDOWS}name '_StringList_ToString'{$ENDIF},
-  StringList_GetSorted {$IFNDEF MSWINDOWS}name '_StringList_GetSorted'{$ENDIF},
-  StringList_SetSorted {$IFNDEF MSWINDOWS}name '_StringList_SetSorted'{$ENDIF},
-  StringList_SetOnChange {$IFNDEF MSWINDOWS}name '_StringList_SetOnChange'{$ENDIF},
-  StringList_GetCommaText {$IFNDEF MSWINDOWS}name '_StringList_GetCommaText'{$ENDIF},
-  StringList_SetCommaText {$IFNDEF MSWINDOWS}name '_StringList_SetCommaText'{$ENDIF},
-  StringList_GetDelimiter {$IFNDEF MSWINDOWS}name '_StringList_GetDelimiter'{$ENDIF},
-  StringList_SetDelimiter {$IFNDEF MSWINDOWS}name '_StringList_SetDelimiter'{$ENDIF},
-  StringList_GetText {$IFNDEF MSWINDOWS}name '_StringList_GetText'{$ENDIF},
-  StringList_SetText {$IFNDEF MSWINDOWS}name '_StringList_SetText'{$ENDIF},
-  StringList_GetWriteBOM {$IFNDEF MSWINDOWS}name '_StringList_GetWriteBOM'{$ENDIF},
-  StringList_SetWriteBOM {$IFNDEF MSWINDOWS}name '_StringList_SetWriteBOM'{$ENDIF},
-  StringList_GetOptions {$IFNDEF MSWINDOWS}name '_StringList_GetOptions'{$ENDIF},
-  StringList_SetOptions {$IFNDEF MSWINDOWS}name '_StringList_SetOptions'{$ENDIF},
-  StringList_GetValues {$IFNDEF MSWINDOWS}name '_StringList_GetValues'{$ENDIF},
-  StringList_SetValues {$IFNDEF MSWINDOWS}name '_StringList_SetValues'{$ENDIF},
-  StringList_GetValueFromIndex {$IFNDEF MSWINDOWS}name '_StringList_GetValueFromIndex'{$ENDIF},
-  StringList_SetValueFromIndex {$IFNDEF MSWINDOWS}name '_StringList_SetValueFromIndex'{$ENDIF},
-  StringList_GetStrings {$IFNDEF MSWINDOWS}name '_StringList_GetStrings'{$ENDIF},
-  StringList_SetStrings {$IFNDEF MSWINDOWS}name '_StringList_SetStrings'{$ENDIF};
+  StringList_Create,
+  StringList_Free,
+  StringList_Add,
+  StringList_AddObject,
+  StringList_Assign,
+  StringList_Clear,
+  StringList_Delete,
+  StringList_IndexOf,
+  StringList_Insert,
+  StringList_InsertObject,
+  StringList_Append,
+  StringList_BeginUpdate,
+  StringList_EndUpdate,
+  StringList_Equals,
+  StringList_IndexOfName,
+  StringList_IndexOfObject,
+  StringList_LoadFromFile,
+  StringList_LoadFromStream,
+  StringList_Move,
+  StringList_SaveToFile,
+  StringList_SaveToStream,
+  StringList_GetNamePath,
+  StringList_ClassName,
+  StringList_GetHashCode,
+  StringList_ToString,
+  StringList_GetSorted,
+  StringList_SetSorted,
+  StringList_SetOnChange,
+  StringList_GetCommaText,
+  StringList_SetCommaText,
+  StringList_GetDelimiter,
+  StringList_SetDelimiter,
+  StringList_GetText,
+  StringList_SetText,
+  StringList_GetWriteBOM,
+  StringList_SetWriteBOM,
+  StringList_GetOptions,
+  StringList_SetOptions,
+  StringList_GetValues,
+  StringList_SetValues,
+  StringList_GetValueFromIndex,
+  StringList_SetValueFromIndex,
+  StringList_GetStrings,
+  StringList_SetStrings;
 

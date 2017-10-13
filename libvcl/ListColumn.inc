@@ -5,138 +5,138 @@
 //
 //----------------------------------------
 
-function ListColumn_Create(AOwner: TCollection): TListColumn; cdecl;
+function ListColumn_Create(AOwner: TCollection): TListColumn; stdcall;
 begin
   Result :=  TListColumn.Create(AOwner);
 end;
 
-procedure ListColumn_Free(AObj: TListColumn); cdecl;
+procedure ListColumn_Free(AObj: TListColumn); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure ListColumn_Assign(AObj: TListColumn; Source: TPersistent); cdecl;
+procedure ListColumn_Assign(AObj: TListColumn; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function ListColumn_GetNamePath(AObj: TListColumn): PChar; cdecl;
+function ListColumn_GetNamePath(AObj: TListColumn): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function ListColumn_ClassName(AObj: TListColumn): PChar; cdecl;
+function ListColumn_ClassName(AObj: TListColumn): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ListColumn_Equals(AObj: TListColumn; Obj: TObject): LongBool; cdecl;
+function ListColumn_Equals(AObj: TListColumn; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ListColumn_GetHashCode(AObj: TListColumn): Integer; cdecl;
+function ListColumn_GetHashCode(AObj: TListColumn): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ListColumn_ToString(AObj: TListColumn): PChar; cdecl;
+function ListColumn_ToString(AObj: TListColumn): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ListColumn_GetAlignment(AObj: TListColumn): TAlignment; cdecl;
+function ListColumn_GetAlignment(AObj: TListColumn): TAlignment; stdcall;
 begin
   Result :=  AObj.Alignment;
 end;
 
-procedure ListColumn_SetAlignment(AObj: TListColumn; AValue: TAlignment); cdecl;
+procedure ListColumn_SetAlignment(AObj: TListColumn; AValue: TAlignment); stdcall;
 begin
   AObj.Alignment := AValue;
 end;
 
-function ListColumn_GetAutoSize(AObj: TListColumn): LongBool; cdecl;
+function ListColumn_GetAutoSize(AObj: TListColumn): LongBool; stdcall;
 begin
   Result :=  AObj.AutoSize;
 end;
 
-procedure ListColumn_SetAutoSize(AObj: TListColumn; AValue: LongBool); cdecl;
+procedure ListColumn_SetAutoSize(AObj: TListColumn; AValue: LongBool); stdcall;
 begin
   AObj.AutoSize := AValue;
 end;
 
-function ListColumn_GetCaption(AObj: TListColumn): PChar; cdecl;
+function ListColumn_GetCaption(AObj: TListColumn): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure ListColumn_SetCaption(AObj: TListColumn; AValue: PChar); cdecl;
+procedure ListColumn_SetCaption(AObj: TListColumn; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function ListColumn_GetImageIndex(AObj: TListColumn): TImageIndex; cdecl;
+function ListColumn_GetImageIndex(AObj: TListColumn): TImageIndex; stdcall;
 begin
   Result :=  AObj.ImageIndex;
 end;
 
-procedure ListColumn_SetImageIndex(AObj: TListColumn; AValue: TImageIndex); cdecl;
+procedure ListColumn_SetImageIndex(AObj: TListColumn; AValue: TImageIndex); stdcall;
 begin
   AObj.ImageIndex := AValue;
 end;
 
-function ListColumn_GetTag(AObj: TListColumn): Integer; cdecl;
+function ListColumn_GetTag(AObj: TListColumn): Integer; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure ListColumn_SetTag(AObj: TListColumn; AValue: Integer); cdecl;
+procedure ListColumn_SetTag(AObj: TListColumn; AValue: Integer); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function ListColumn_GetWidth(AObj: TListColumn): TWidth; cdecl;
+function ListColumn_GetWidth(AObj: TListColumn): TWidth; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure ListColumn_SetWidth(AObj: TListColumn; AValue: TWidth); cdecl;
+procedure ListColumn_SetWidth(AObj: TListColumn; AValue: TWidth); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function ListColumn_GetIndex(AObj: TListColumn): Integer; cdecl;
+function ListColumn_GetIndex(AObj: TListColumn): Integer; stdcall;
 begin
   Result :=  AObj.Index;
 end;
 
-procedure ListColumn_SetIndex(AObj: TListColumn; AValue: Integer); cdecl;
+procedure ListColumn_SetIndex(AObj: TListColumn; AValue: Integer); stdcall;
 begin
   AObj.Index := AValue;
 end;
 
 
 exports
-  ListColumn_Create {$IFNDEF MSWINDOWS}name '_ListColumn_Create'{$ENDIF},
-  ListColumn_Free {$IFNDEF MSWINDOWS}name '_ListColumn_Free'{$ENDIF},
-  ListColumn_Assign {$IFNDEF MSWINDOWS}name '_ListColumn_Assign'{$ENDIF},
-  ListColumn_GetNamePath {$IFNDEF MSWINDOWS}name '_ListColumn_GetNamePath'{$ENDIF},
-  ListColumn_ClassName {$IFNDEF MSWINDOWS}name '_ListColumn_ClassName'{$ENDIF},
-  ListColumn_Equals {$IFNDEF MSWINDOWS}name '_ListColumn_Equals'{$ENDIF},
-  ListColumn_GetHashCode {$IFNDEF MSWINDOWS}name '_ListColumn_GetHashCode'{$ENDIF},
-  ListColumn_ToString {$IFNDEF MSWINDOWS}name '_ListColumn_ToString'{$ENDIF},
-  ListColumn_GetAlignment {$IFNDEF MSWINDOWS}name '_ListColumn_GetAlignment'{$ENDIF},
-  ListColumn_SetAlignment {$IFNDEF MSWINDOWS}name '_ListColumn_SetAlignment'{$ENDIF},
-  ListColumn_GetAutoSize {$IFNDEF MSWINDOWS}name '_ListColumn_GetAutoSize'{$ENDIF},
-  ListColumn_SetAutoSize {$IFNDEF MSWINDOWS}name '_ListColumn_SetAutoSize'{$ENDIF},
-  ListColumn_GetCaption {$IFNDEF MSWINDOWS}name '_ListColumn_GetCaption'{$ENDIF},
-  ListColumn_SetCaption {$IFNDEF MSWINDOWS}name '_ListColumn_SetCaption'{$ENDIF},
-  ListColumn_GetImageIndex {$IFNDEF MSWINDOWS}name '_ListColumn_GetImageIndex'{$ENDIF},
-  ListColumn_SetImageIndex {$IFNDEF MSWINDOWS}name '_ListColumn_SetImageIndex'{$ENDIF},
-  ListColumn_GetTag {$IFNDEF MSWINDOWS}name '_ListColumn_GetTag'{$ENDIF},
-  ListColumn_SetTag {$IFNDEF MSWINDOWS}name '_ListColumn_SetTag'{$ENDIF},
-  ListColumn_GetWidth {$IFNDEF MSWINDOWS}name '_ListColumn_GetWidth'{$ENDIF},
-  ListColumn_SetWidth {$IFNDEF MSWINDOWS}name '_ListColumn_SetWidth'{$ENDIF},
-  ListColumn_GetIndex {$IFNDEF MSWINDOWS}name '_ListColumn_GetIndex'{$ENDIF},
-  ListColumn_SetIndex {$IFNDEF MSWINDOWS}name '_ListColumn_SetIndex'{$ENDIF};
+  ListColumn_Create,
+  ListColumn_Free,
+  ListColumn_Assign,
+  ListColumn_GetNamePath,
+  ListColumn_ClassName,
+  ListColumn_Equals,
+  ListColumn_GetHashCode,
+  ListColumn_ToString,
+  ListColumn_GetAlignment,
+  ListColumn_SetAlignment,
+  ListColumn_GetAutoSize,
+  ListColumn_SetAutoSize,
+  ListColumn_GetCaption,
+  ListColumn_SetCaption,
+  ListColumn_GetImageIndex,
+  ListColumn_SetImageIndex,
+  ListColumn_GetTag,
+  ListColumn_SetTag,
+  ListColumn_GetWidth,
+  ListColumn_SetWidth,
+  ListColumn_GetIndex,
+  ListColumn_SetIndex;
 

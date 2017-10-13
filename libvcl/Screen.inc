@@ -5,300 +5,300 @@
 //
 //----------------------------------------
 
-function Screen_Create(AOwner: TComponent): TScreen; cdecl;
+function Screen_Create(AOwner: TComponent): TScreen; stdcall;
 begin
   Result :=  TScreen.Create(AOwner);
 end;
 
-procedure Screen_Free(AObj: TScreen); cdecl;
+procedure Screen_Free(AObj: TScreen); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure Screen_Realign(AObj: TScreen); cdecl;
+procedure Screen_Realign(AObj: TScreen); stdcall;
 begin
   AObj.Realign;
 end;
 
-function Screen_FindComponent(AObj: TScreen; AName: PChar): TComponent; cdecl;
+function Screen_FindComponent(AObj: TScreen; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function Screen_GetNamePath(AObj: TScreen): PChar; cdecl;
+function Screen_GetNamePath(AObj: TScreen): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function Screen_HasParent(AObj: TScreen): LongBool; cdecl;
+function Screen_HasParent(AObj: TScreen): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure Screen_Assign(AObj: TScreen; Source: TPersistent); cdecl;
+procedure Screen_Assign(AObj: TScreen; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function Screen_ClassName(AObj: TScreen): PChar; cdecl;
+function Screen_ClassName(AObj: TScreen): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Screen_Equals(AObj: TScreen; Obj: TObject): LongBool; cdecl;
+function Screen_Equals(AObj: TScreen; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Screen_GetHashCode(AObj: TScreen): Integer; cdecl;
+function Screen_GetHashCode(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Screen_ToString(AObj: TScreen): PChar; cdecl;
+function Screen_ToString(AObj: TScreen): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function Screen_GetActiveForm(AObj: TScreen): TForm; cdecl;
+function Screen_GetActiveForm(AObj: TScreen): TForm; stdcall;
 begin
   Result :=  AObj.ActiveForm;
 end;
 
-function Screen_GetCustomFormCount(AObj: TScreen): Integer; cdecl;
+function Screen_GetCustomFormCount(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.CustomFormCount;
 end;
 
-function Screen_GetCursorCount(AObj: TScreen): Integer; cdecl;
+function Screen_GetCursorCount(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.CursorCount;
 end;
 
-function Screen_GetCursor(AObj: TScreen): TCursor; cdecl;
+function Screen_GetCursor(AObj: TScreen): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure Screen_SetCursor(AObj: TScreen; AValue: TCursor); cdecl;
+procedure Screen_SetCursor(AObj: TScreen; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function Screen_GetFocusedForm(AObj: TScreen): TCustomForm; cdecl;
+function Screen_GetFocusedForm(AObj: TScreen): TCustomForm; stdcall;
 begin
   Result :=  AObj.FocusedForm;
 end;
 
-procedure Screen_SetFocusedForm(AObj: TScreen; AValue: TCustomForm); cdecl;
+procedure Screen_SetFocusedForm(AObj: TScreen; AValue: TCustomForm); stdcall;
 begin
   AObj.FocusedForm := AValue;
 end;
 
-function Screen_GetMonitorCount(AObj: TScreen): Integer; cdecl;
+function Screen_GetMonitorCount(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.MonitorCount;
 end;
 
-procedure Screen_GetDesktopRect(AObj: TScreen; var Result: TRect); cdecl;
+procedure Screen_GetDesktopRect(AObj: TScreen; var Result: TRect); stdcall;
 begin
   Result :=  AObj.DesktopRect;
 end;
 
-function Screen_GetDesktopHeight(AObj: TScreen): Integer; cdecl;
+function Screen_GetDesktopHeight(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.DesktopHeight;
 end;
 
-function Screen_GetDesktopLeft(AObj: TScreen): Integer; cdecl;
+function Screen_GetDesktopLeft(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.DesktopLeft;
 end;
 
-function Screen_GetDesktopTop(AObj: TScreen): Integer; cdecl;
+function Screen_GetDesktopTop(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.DesktopTop;
 end;
 
-function Screen_GetDesktopWidth(AObj: TScreen): Integer; cdecl;
+function Screen_GetDesktopWidth(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.DesktopWidth;
 end;
 
-procedure Screen_GetWorkAreaRect(AObj: TScreen; var Result: TRect); cdecl;
+procedure Screen_GetWorkAreaRect(AObj: TScreen; var Result: TRect); stdcall;
 begin
   Result :=  AObj.WorkAreaRect;
 end;
 
-function Screen_GetWorkAreaHeight(AObj: TScreen): Integer; cdecl;
+function Screen_GetWorkAreaHeight(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.WorkAreaHeight;
 end;
 
-function Screen_GetWorkAreaLeft(AObj: TScreen): Integer; cdecl;
+function Screen_GetWorkAreaLeft(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.WorkAreaLeft;
 end;
 
-function Screen_GetWorkAreaTop(AObj: TScreen): Integer; cdecl;
+function Screen_GetWorkAreaTop(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.WorkAreaTop;
 end;
 
-function Screen_GetWorkAreaWidth(AObj: TScreen): Integer; cdecl;
+function Screen_GetWorkAreaWidth(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.WorkAreaWidth;
 end;
 
-function Screen_GetFonts(AObj: TScreen): TStrings; cdecl;
+function Screen_GetFonts(AObj: TScreen): TStrings; stdcall;
 begin
   Result :=  AObj.Fonts;
 end;
 
-function Screen_GetImes(AObj: TScreen): TStrings; cdecl;
+function Screen_GetImes(AObj: TScreen): TStrings; stdcall;
 begin
   Result :=  AObj.Imes;
 end;
 
-function Screen_GetDefaultIme(AObj: TScreen): PChar; cdecl;
+function Screen_GetDefaultIme(AObj: TScreen): PChar; stdcall;
 begin
   Result :=  PChar(AObj.DefaultIme);
 end;
 
-function Screen_GetHeight(AObj: TScreen): Integer; cdecl;
+function Screen_GetHeight(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-function Screen_GetPixelsPerInch(AObj: TScreen): Integer; cdecl;
+function Screen_GetPixelsPerInch(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.PixelsPerInch;
 end;
 
-function Screen_GetPrimaryMonitor(AObj: TScreen): TMonitor; cdecl;
+function Screen_GetPrimaryMonitor(AObj: TScreen): TMonitor; stdcall;
 begin
   Result :=  AObj.PrimaryMonitor;
 end;
 
-function Screen_GetWidth(AObj: TScreen): Integer; cdecl;
+function Screen_GetWidth(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-function Screen_GetComponentCount(AObj: TScreen): Integer; cdecl;
+function Screen_GetComponentCount(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function Screen_GetComponentIndex(AObj: TScreen): Integer; cdecl;
+function Screen_GetComponentIndex(AObj: TScreen): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure Screen_SetComponentIndex(AObj: TScreen; AValue: Integer); cdecl;
+procedure Screen_SetComponentIndex(AObj: TScreen; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function Screen_GetOwner(AObj: TScreen): TComponent; cdecl;
+function Screen_GetOwner(AObj: TScreen): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function Screen_GetName(AObj: TScreen): PChar; cdecl;
+function Screen_GetName(AObj: TScreen): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure Screen_SetName(AObj: TScreen; AValue: PChar); cdecl;
+procedure Screen_SetName(AObj: TScreen; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function Screen_GetTag(AObj: TScreen): NativeInt; cdecl;
+function Screen_GetTag(AObj: TScreen): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure Screen_SetTag(AObj: TScreen; AValue: NativeInt); cdecl;
+procedure Screen_SetTag(AObj: TScreen; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function Screen_GetCursors(AObj: TScreen; Index: Integer): HICON; cdecl;
+function Screen_GetCursors(AObj: TScreen; Index: Integer): HICON; stdcall;
 begin
   Result :=  AObj.Cursors[Index];
 end;
 
-procedure Screen_SetCursors(AObj: TScreen; Index: Integer; AValue: HICON); cdecl;
+procedure Screen_SetCursors(AObj: TScreen; Index: Integer; AValue: HICON); stdcall;
 begin
   AObj.Cursors[Index] := AValue;
 end;
 
-function Screen_GetMonitors(AObj: TScreen; Index: Integer): TMonitor; cdecl;
+function Screen_GetMonitors(AObj: TScreen; Index: Integer): TMonitor; stdcall;
 begin
   Result :=  AObj.Monitors[Index];
 end;
 
-function Screen_GetForms(AObj: TScreen; Index: Integer): TForm; cdecl;
+function Screen_GetForms(AObj: TScreen; Index: Integer): TForm; stdcall;
 begin
   Result :=  AObj.Forms[Index];
 end;
 
-function Screen_GetComponents(AObj: TScreen; AIndex: Integer): TComponent; cdecl;
+function Screen_GetComponents(AObj: TScreen; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  Screen_Create {$IFNDEF MSWINDOWS}name '_Screen_Create'{$ENDIF},
-  Screen_Free {$IFNDEF MSWINDOWS}name '_Screen_Free'{$ENDIF},
-  Screen_Realign {$IFNDEF MSWINDOWS}name '_Screen_Realign'{$ENDIF},
-  Screen_FindComponent {$IFNDEF MSWINDOWS}name '_Screen_FindComponent'{$ENDIF},
-  Screen_GetNamePath {$IFNDEF MSWINDOWS}name '_Screen_GetNamePath'{$ENDIF},
-  Screen_HasParent {$IFNDEF MSWINDOWS}name '_Screen_HasParent'{$ENDIF},
-  Screen_Assign {$IFNDEF MSWINDOWS}name '_Screen_Assign'{$ENDIF},
-  Screen_ClassName {$IFNDEF MSWINDOWS}name '_Screen_ClassName'{$ENDIF},
-  Screen_Equals {$IFNDEF MSWINDOWS}name '_Screen_Equals'{$ENDIF},
-  Screen_GetHashCode {$IFNDEF MSWINDOWS}name '_Screen_GetHashCode'{$ENDIF},
-  Screen_ToString {$IFNDEF MSWINDOWS}name '_Screen_ToString'{$ENDIF},
-  Screen_GetActiveForm {$IFNDEF MSWINDOWS}name '_Screen_GetActiveForm'{$ENDIF},
-  Screen_GetCustomFormCount {$IFNDEF MSWINDOWS}name '_Screen_GetCustomFormCount'{$ENDIF},
-  Screen_GetCursorCount {$IFNDEF MSWINDOWS}name '_Screen_GetCursorCount'{$ENDIF},
-  Screen_GetCursor {$IFNDEF MSWINDOWS}name '_Screen_GetCursor'{$ENDIF},
-  Screen_SetCursor {$IFNDEF MSWINDOWS}name '_Screen_SetCursor'{$ENDIF},
-  Screen_GetFocusedForm {$IFNDEF MSWINDOWS}name '_Screen_GetFocusedForm'{$ENDIF},
-  Screen_SetFocusedForm {$IFNDEF MSWINDOWS}name '_Screen_SetFocusedForm'{$ENDIF},
-  Screen_GetMonitorCount {$IFNDEF MSWINDOWS}name '_Screen_GetMonitorCount'{$ENDIF},
-  Screen_GetDesktopRect {$IFNDEF MSWINDOWS}name '_Screen_GetDesktopRect'{$ENDIF},
-  Screen_GetDesktopHeight {$IFNDEF MSWINDOWS}name '_Screen_GetDesktopHeight'{$ENDIF},
-  Screen_GetDesktopLeft {$IFNDEF MSWINDOWS}name '_Screen_GetDesktopLeft'{$ENDIF},
-  Screen_GetDesktopTop {$IFNDEF MSWINDOWS}name '_Screen_GetDesktopTop'{$ENDIF},
-  Screen_GetDesktopWidth {$IFNDEF MSWINDOWS}name '_Screen_GetDesktopWidth'{$ENDIF},
-  Screen_GetWorkAreaRect {$IFNDEF MSWINDOWS}name '_Screen_GetWorkAreaRect'{$ENDIF},
-  Screen_GetWorkAreaHeight {$IFNDEF MSWINDOWS}name '_Screen_GetWorkAreaHeight'{$ENDIF},
-  Screen_GetWorkAreaLeft {$IFNDEF MSWINDOWS}name '_Screen_GetWorkAreaLeft'{$ENDIF},
-  Screen_GetWorkAreaTop {$IFNDEF MSWINDOWS}name '_Screen_GetWorkAreaTop'{$ENDIF},
-  Screen_GetWorkAreaWidth {$IFNDEF MSWINDOWS}name '_Screen_GetWorkAreaWidth'{$ENDIF},
-  Screen_GetFonts {$IFNDEF MSWINDOWS}name '_Screen_GetFonts'{$ENDIF},
-  Screen_GetImes {$IFNDEF MSWINDOWS}name '_Screen_GetImes'{$ENDIF},
-  Screen_GetDefaultIme {$IFNDEF MSWINDOWS}name '_Screen_GetDefaultIme'{$ENDIF},
-  Screen_GetHeight {$IFNDEF MSWINDOWS}name '_Screen_GetHeight'{$ENDIF},
-  Screen_GetPixelsPerInch {$IFNDEF MSWINDOWS}name '_Screen_GetPixelsPerInch'{$ENDIF},
-  Screen_GetPrimaryMonitor {$IFNDEF MSWINDOWS}name '_Screen_GetPrimaryMonitor'{$ENDIF},
-  Screen_GetWidth {$IFNDEF MSWINDOWS}name '_Screen_GetWidth'{$ENDIF},
-  Screen_GetComponentCount {$IFNDEF MSWINDOWS}name '_Screen_GetComponentCount'{$ENDIF},
-  Screen_GetComponentIndex {$IFNDEF MSWINDOWS}name '_Screen_GetComponentIndex'{$ENDIF},
-  Screen_SetComponentIndex {$IFNDEF MSWINDOWS}name '_Screen_SetComponentIndex'{$ENDIF},
-  Screen_GetOwner {$IFNDEF MSWINDOWS}name '_Screen_GetOwner'{$ENDIF},
-  Screen_GetName {$IFNDEF MSWINDOWS}name '_Screen_GetName'{$ENDIF},
-  Screen_SetName {$IFNDEF MSWINDOWS}name '_Screen_SetName'{$ENDIF},
-  Screen_GetTag {$IFNDEF MSWINDOWS}name '_Screen_GetTag'{$ENDIF},
-  Screen_SetTag {$IFNDEF MSWINDOWS}name '_Screen_SetTag'{$ENDIF},
-  Screen_GetCursors {$IFNDEF MSWINDOWS}name '_Screen_GetCursors'{$ENDIF},
-  Screen_SetCursors {$IFNDEF MSWINDOWS}name '_Screen_SetCursors'{$ENDIF},
-  Screen_GetMonitors {$IFNDEF MSWINDOWS}name '_Screen_GetMonitors'{$ENDIF},
-  Screen_GetForms {$IFNDEF MSWINDOWS}name '_Screen_GetForms'{$ENDIF},
-  Screen_GetComponents {$IFNDEF MSWINDOWS}name '_Screen_GetComponents'{$ENDIF};
+  Screen_Create,
+  Screen_Free,
+  Screen_Realign,
+  Screen_FindComponent,
+  Screen_GetNamePath,
+  Screen_HasParent,
+  Screen_Assign,
+  Screen_ClassName,
+  Screen_Equals,
+  Screen_GetHashCode,
+  Screen_ToString,
+  Screen_GetActiveForm,
+  Screen_GetCustomFormCount,
+  Screen_GetCursorCount,
+  Screen_GetCursor,
+  Screen_SetCursor,
+  Screen_GetFocusedForm,
+  Screen_SetFocusedForm,
+  Screen_GetMonitorCount,
+  Screen_GetDesktopRect,
+  Screen_GetDesktopHeight,
+  Screen_GetDesktopLeft,
+  Screen_GetDesktopTop,
+  Screen_GetDesktopWidth,
+  Screen_GetWorkAreaRect,
+  Screen_GetWorkAreaHeight,
+  Screen_GetWorkAreaLeft,
+  Screen_GetWorkAreaTop,
+  Screen_GetWorkAreaWidth,
+  Screen_GetFonts,
+  Screen_GetImes,
+  Screen_GetDefaultIme,
+  Screen_GetHeight,
+  Screen_GetPixelsPerInch,
+  Screen_GetPrimaryMonitor,
+  Screen_GetWidth,
+  Screen_GetComponentCount,
+  Screen_GetComponentIndex,
+  Screen_SetComponentIndex,
+  Screen_GetOwner,
+  Screen_GetName,
+  Screen_SetName,
+  Screen_GetTag,
+  Screen_SetTag,
+  Screen_GetCursors,
+  Screen_SetCursors,
+  Screen_GetMonitors,
+  Screen_GetForms,
+  Screen_GetComponents;
 

@@ -5,107 +5,107 @@
 //
 //----------------------------------------
 
-function PopupMenu_Create(AOwner: TComponent): TPopupMenu; cdecl;
+function PopupMenu_Create(AOwner: TComponent): TPopupMenu; stdcall;
 begin
   Result :=  TPopupMenu.Create(AOwner);
 end;
 
-procedure PopupMenu_Free(AObj: TPopupMenu); cdecl;
+procedure PopupMenu_Free(AObj: TPopupMenu); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure PopupMenu_CloseMenu(AObj: TPopupMenu); cdecl;
+procedure PopupMenu_CloseMenu(AObj: TPopupMenu); stdcall;
 begin
   AObj.CloseMenu;
 end;
 
-procedure PopupMenu_Popup(AObj: TPopupMenu; X: Integer; Y: Integer); cdecl;
+procedure PopupMenu_Popup(AObj: TPopupMenu; X: Integer; Y: Integer); stdcall;
 begin
   AObj.Popup(X, Y);
 end;
 
-function PopupMenu_FindComponent(AObj: TPopupMenu; AName: PChar): TComponent; cdecl;
+function PopupMenu_FindComponent(AObj: TPopupMenu; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function PopupMenu_GetNamePath(AObj: TPopupMenu): PChar; cdecl;
+function PopupMenu_GetNamePath(AObj: TPopupMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function PopupMenu_HasParent(AObj: TPopupMenu): LongBool; cdecl;
+function PopupMenu_HasParent(AObj: TPopupMenu): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure PopupMenu_Assign(AObj: TPopupMenu; Source: TPersistent); cdecl;
+procedure PopupMenu_Assign(AObj: TPopupMenu; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function PopupMenu_ClassName(AObj: TPopupMenu): PChar; cdecl;
+function PopupMenu_ClassName(AObj: TPopupMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function PopupMenu_Equals(AObj: TPopupMenu; Obj: TObject): LongBool; cdecl;
+function PopupMenu_Equals(AObj: TPopupMenu; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function PopupMenu_GetHashCode(AObj: TPopupMenu): Integer; cdecl;
+function PopupMenu_GetHashCode(AObj: TPopupMenu): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function PopupMenu_ToString(AObj: TPopupMenu): PChar; cdecl;
+function PopupMenu_ToString(AObj: TPopupMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function PopupMenu_GetAlignment(AObj: TPopupMenu): TPopupAlignment; cdecl;
+function PopupMenu_GetAlignment(AObj: TPopupMenu): TPopupAlignment; stdcall;
 begin
   Result :=  AObj.Alignment;
 end;
 
-procedure PopupMenu_SetAlignment(AObj: TPopupMenu; AValue: TPopupAlignment); cdecl;
+procedure PopupMenu_SetAlignment(AObj: TPopupMenu; AValue: TPopupAlignment); stdcall;
 begin
   AObj.Alignment := AValue;
 end;
 
-function PopupMenu_GetAutoHotkeys(AObj: TPopupMenu): TMenuAutoFlag; cdecl;
+function PopupMenu_GetAutoHotkeys(AObj: TPopupMenu): TMenuAutoFlag; stdcall;
 begin
   Result :=  AObj.AutoHotkeys;
 end;
 
-procedure PopupMenu_SetAutoHotkeys(AObj: TPopupMenu; AValue: TMenuAutoFlag); cdecl;
+procedure PopupMenu_SetAutoHotkeys(AObj: TPopupMenu; AValue: TMenuAutoFlag); stdcall;
 begin
   AObj.AutoHotkeys := AValue;
 end;
 
-function PopupMenu_GetBiDiMode(AObj: TPopupMenu): TBiDiMode; cdecl;
+function PopupMenu_GetBiDiMode(AObj: TPopupMenu): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure PopupMenu_SetBiDiMode(AObj: TPopupMenu; AValue: TBiDiMode); cdecl;
+procedure PopupMenu_SetBiDiMode(AObj: TPopupMenu; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function PopupMenu_GetImages(AObj: TPopupMenu): TCustomImageList; cdecl;
+function PopupMenu_GetImages(AObj: TPopupMenu): TCustomImageList; stdcall;
 begin
   Result :=  AObj.Images;
 end;
 
-procedure PopupMenu_SetImages(AObj: TPopupMenu; AValue: TCustomImageList); cdecl;
+procedure PopupMenu_SetImages(AObj: TPopupMenu; AValue: TCustomImageList); stdcall;
 begin
   AObj.Images := AValue;
 end;
 
-procedure PopupMenu_SetOnChange(AObj: TPopupMenu; AEventId: NativeUInt); stdcall
+procedure PopupMenu_SetOnChange(AObj: TPopupMenu; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -117,7 +117,7 @@ begin
   TEventClass.Add(AObj, geMenuChange, AEventId);
 end;
 
-procedure PopupMenu_SetOnPopup(AObj: TPopupMenu; AEventId: NativeUInt); stdcall
+procedure PopupMenu_SetOnPopup(AObj: TPopupMenu; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -129,106 +129,106 @@ begin
   TEventClass.Add(AObj, gePopup, AEventId);
 end;
 
-function PopupMenu_GetHandle(AObj: TPopupMenu): HMENU; cdecl;
+function PopupMenu_GetHandle(AObj: TPopupMenu): HMENU; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function PopupMenu_GetWindowHandle(AObj: TPopupMenu): HWND; cdecl;
+function PopupMenu_GetWindowHandle(AObj: TPopupMenu): HWND; stdcall;
 begin
   Result :=  AObj.WindowHandle;
 end;
 
-procedure PopupMenu_SetWindowHandle(AObj: TPopupMenu; AValue: HWND); cdecl;
+procedure PopupMenu_SetWindowHandle(AObj: TPopupMenu; AValue: HWND); stdcall;
 begin
   AObj.WindowHandle := AValue;
 end;
 
-function PopupMenu_GetItems(AObj: TPopupMenu): TMenuItem; cdecl;
+function PopupMenu_GetItems(AObj: TPopupMenu): TMenuItem; stdcall;
 begin
   Result :=  AObj.Items;
 end;
 
-function PopupMenu_GetComponentCount(AObj: TPopupMenu): Integer; cdecl;
+function PopupMenu_GetComponentCount(AObj: TPopupMenu): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function PopupMenu_GetComponentIndex(AObj: TPopupMenu): Integer; cdecl;
+function PopupMenu_GetComponentIndex(AObj: TPopupMenu): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure PopupMenu_SetComponentIndex(AObj: TPopupMenu; AValue: Integer); cdecl;
+procedure PopupMenu_SetComponentIndex(AObj: TPopupMenu; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function PopupMenu_GetOwner(AObj: TPopupMenu): TComponent; cdecl;
+function PopupMenu_GetOwner(AObj: TPopupMenu): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function PopupMenu_GetName(AObj: TPopupMenu): PChar; cdecl;
+function PopupMenu_GetName(AObj: TPopupMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure PopupMenu_SetName(AObj: TPopupMenu; AValue: PChar); cdecl;
+procedure PopupMenu_SetName(AObj: TPopupMenu; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function PopupMenu_GetTag(AObj: TPopupMenu): NativeInt; cdecl;
+function PopupMenu_GetTag(AObj: TPopupMenu): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure PopupMenu_SetTag(AObj: TPopupMenu; AValue: NativeInt); cdecl;
+procedure PopupMenu_SetTag(AObj: TPopupMenu; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function PopupMenu_GetComponents(AObj: TPopupMenu; AIndex: Integer): TComponent; cdecl;
+function PopupMenu_GetComponents(AObj: TPopupMenu; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  PopupMenu_Create {$IFNDEF MSWINDOWS}name '_PopupMenu_Create'{$ENDIF},
-  PopupMenu_Free {$IFNDEF MSWINDOWS}name '_PopupMenu_Free'{$ENDIF},
-  PopupMenu_CloseMenu {$IFNDEF MSWINDOWS}name '_PopupMenu_CloseMenu'{$ENDIF},
-  PopupMenu_Popup {$IFNDEF MSWINDOWS}name '_PopupMenu_Popup'{$ENDIF},
-  PopupMenu_FindComponent {$IFNDEF MSWINDOWS}name '_PopupMenu_FindComponent'{$ENDIF},
-  PopupMenu_GetNamePath {$IFNDEF MSWINDOWS}name '_PopupMenu_GetNamePath'{$ENDIF},
-  PopupMenu_HasParent {$IFNDEF MSWINDOWS}name '_PopupMenu_HasParent'{$ENDIF},
-  PopupMenu_Assign {$IFNDEF MSWINDOWS}name '_PopupMenu_Assign'{$ENDIF},
-  PopupMenu_ClassName {$IFNDEF MSWINDOWS}name '_PopupMenu_ClassName'{$ENDIF},
-  PopupMenu_Equals {$IFNDEF MSWINDOWS}name '_PopupMenu_Equals'{$ENDIF},
-  PopupMenu_GetHashCode {$IFNDEF MSWINDOWS}name '_PopupMenu_GetHashCode'{$ENDIF},
-  PopupMenu_ToString {$IFNDEF MSWINDOWS}name '_PopupMenu_ToString'{$ENDIF},
-  PopupMenu_GetAlignment {$IFNDEF MSWINDOWS}name '_PopupMenu_GetAlignment'{$ENDIF},
-  PopupMenu_SetAlignment {$IFNDEF MSWINDOWS}name '_PopupMenu_SetAlignment'{$ENDIF},
-  PopupMenu_GetAutoHotkeys {$IFNDEF MSWINDOWS}name '_PopupMenu_GetAutoHotkeys'{$ENDIF},
-  PopupMenu_SetAutoHotkeys {$IFNDEF MSWINDOWS}name '_PopupMenu_SetAutoHotkeys'{$ENDIF},
-  PopupMenu_GetBiDiMode {$IFNDEF MSWINDOWS}name '_PopupMenu_GetBiDiMode'{$ENDIF},
-  PopupMenu_SetBiDiMode {$IFNDEF MSWINDOWS}name '_PopupMenu_SetBiDiMode'{$ENDIF},
-  PopupMenu_GetImages {$IFNDEF MSWINDOWS}name '_PopupMenu_GetImages'{$ENDIF},
-  PopupMenu_SetImages {$IFNDEF MSWINDOWS}name '_PopupMenu_SetImages'{$ENDIF},
-  PopupMenu_SetOnChange {$IFNDEF MSWINDOWS}name '_PopupMenu_SetOnChange'{$ENDIF},
-  PopupMenu_SetOnPopup {$IFNDEF MSWINDOWS}name '_PopupMenu_SetOnPopup'{$ENDIF},
-  PopupMenu_GetHandle {$IFNDEF MSWINDOWS}name '_PopupMenu_GetHandle'{$ENDIF},
-  PopupMenu_GetWindowHandle {$IFNDEF MSWINDOWS}name '_PopupMenu_GetWindowHandle'{$ENDIF},
-  PopupMenu_SetWindowHandle {$IFNDEF MSWINDOWS}name '_PopupMenu_SetWindowHandle'{$ENDIF},
-  PopupMenu_GetItems {$IFNDEF MSWINDOWS}name '_PopupMenu_GetItems'{$ENDIF},
-  PopupMenu_GetComponentCount {$IFNDEF MSWINDOWS}name '_PopupMenu_GetComponentCount'{$ENDIF},
-  PopupMenu_GetComponentIndex {$IFNDEF MSWINDOWS}name '_PopupMenu_GetComponentIndex'{$ENDIF},
-  PopupMenu_SetComponentIndex {$IFNDEF MSWINDOWS}name '_PopupMenu_SetComponentIndex'{$ENDIF},
-  PopupMenu_GetOwner {$IFNDEF MSWINDOWS}name '_PopupMenu_GetOwner'{$ENDIF},
-  PopupMenu_GetName {$IFNDEF MSWINDOWS}name '_PopupMenu_GetName'{$ENDIF},
-  PopupMenu_SetName {$IFNDEF MSWINDOWS}name '_PopupMenu_SetName'{$ENDIF},
-  PopupMenu_GetTag {$IFNDEF MSWINDOWS}name '_PopupMenu_GetTag'{$ENDIF},
-  PopupMenu_SetTag {$IFNDEF MSWINDOWS}name '_PopupMenu_SetTag'{$ENDIF},
-  PopupMenu_GetComponents {$IFNDEF MSWINDOWS}name '_PopupMenu_GetComponents'{$ENDIF};
+  PopupMenu_Create,
+  PopupMenu_Free,
+  PopupMenu_CloseMenu,
+  PopupMenu_Popup,
+  PopupMenu_FindComponent,
+  PopupMenu_GetNamePath,
+  PopupMenu_HasParent,
+  PopupMenu_Assign,
+  PopupMenu_ClassName,
+  PopupMenu_Equals,
+  PopupMenu_GetHashCode,
+  PopupMenu_ToString,
+  PopupMenu_GetAlignment,
+  PopupMenu_SetAlignment,
+  PopupMenu_GetAutoHotkeys,
+  PopupMenu_SetAutoHotkeys,
+  PopupMenu_GetBiDiMode,
+  PopupMenu_SetBiDiMode,
+  PopupMenu_GetImages,
+  PopupMenu_SetImages,
+  PopupMenu_SetOnChange,
+  PopupMenu_SetOnPopup,
+  PopupMenu_GetHandle,
+  PopupMenu_GetWindowHandle,
+  PopupMenu_SetWindowHandle,
+  PopupMenu_GetItems,
+  PopupMenu_GetComponentCount,
+  PopupMenu_GetComponentIndex,
+  PopupMenu_SetComponentIndex,
+  PopupMenu_GetOwner,
+  PopupMenu_GetName,
+  PopupMenu_SetName,
+  PopupMenu_GetTag,
+  PopupMenu_SetTag,
+  PopupMenu_GetComponents;
 

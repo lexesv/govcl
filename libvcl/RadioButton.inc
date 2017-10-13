@@ -5,377 +5,377 @@
 //
 //----------------------------------------
 
-function RadioButton_Create(AOwner: TComponent): TRadioButton; cdecl;
+function RadioButton_Create(AOwner: TComponent): TRadioButton; stdcall;
 begin
   Result :=  TRadioButton.Create(AOwner);
 end;
 
-procedure RadioButton_Free(AObj: TRadioButton); cdecl;
+procedure RadioButton_Free(AObj: TRadioButton); stdcall;
 begin
   AObj.Free;
 end;
 
-function RadioButton_CanFocus(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_CanFocus(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure RadioButton_FlipChildren(AObj: TRadioButton; AllLevels: LongBool); cdecl;
+procedure RadioButton_FlipChildren(AObj: TRadioButton; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function RadioButton_Focused(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_Focused(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function RadioButton_HandleAllocated(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_HandleAllocated(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure RadioButton_Invalidate(AObj: TRadioButton); cdecl;
+procedure RadioButton_Invalidate(AObj: TRadioButton); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure RadioButton_Realign(AObj: TRadioButton); cdecl;
+procedure RadioButton_Realign(AObj: TRadioButton); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure RadioButton_Repaint(AObj: TRadioButton); cdecl;
+procedure RadioButton_Repaint(AObj: TRadioButton); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure RadioButton_ScaleBy(AObj: TRadioButton; M: Integer; D: Integer); cdecl;
+procedure RadioButton_ScaleBy(AObj: TRadioButton; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure RadioButton_SetBounds(AObj: TRadioButton; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure RadioButton_SetBounds(AObj: TRadioButton; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure RadioButton_SetFocus(AObj: TRadioButton); cdecl;
+procedure RadioButton_SetFocus(AObj: TRadioButton); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure RadioButton_Update(AObj: TRadioButton); cdecl;
+procedure RadioButton_Update(AObj: TRadioButton); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure RadioButton_BringToFront(AObj: TRadioButton); cdecl;
+procedure RadioButton_BringToFront(AObj: TRadioButton); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function RadioButton_HasParent(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_HasParent(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure RadioButton_Hide(AObj: TRadioButton); cdecl;
+procedure RadioButton_Hide(AObj: TRadioButton); stdcall;
 begin
   AObj.Hide;
 end;
 
-function RadioButton_Perform(AObj: TRadioButton; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function RadioButton_Perform(AObj: TRadioButton; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure RadioButton_Refresh(AObj: TRadioButton); cdecl;
+procedure RadioButton_Refresh(AObj: TRadioButton); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure RadioButton_SendToBack(AObj: TRadioButton); cdecl;
+procedure RadioButton_SendToBack(AObj: TRadioButton); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure RadioButton_Show(AObj: TRadioButton); cdecl;
+procedure RadioButton_Show(AObj: TRadioButton); stdcall;
 begin
   AObj.Show;
 end;
 
-function RadioButton_GetTextBuf(AObj: TRadioButton; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function RadioButton_GetTextBuf(AObj: TRadioButton; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function RadioButton_FindComponent(AObj: TRadioButton; AName: PChar): TComponent; cdecl;
+function RadioButton_FindComponent(AObj: TRadioButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function RadioButton_GetNamePath(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_GetNamePath(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure RadioButton_Assign(AObj: TRadioButton; Source: TPersistent); cdecl;
+procedure RadioButton_Assign(AObj: TRadioButton; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function RadioButton_ClassName(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_ClassName(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function RadioButton_Equals(AObj: TRadioButton; Obj: TObject): LongBool; cdecl;
+function RadioButton_Equals(AObj: TRadioButton; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function RadioButton_GetHashCode(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetHashCode(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function RadioButton_ToString(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_ToString(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function RadioButton_GetAction(AObj: TRadioButton): TBasicAction; cdecl;
+function RadioButton_GetAction(AObj: TRadioButton): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure RadioButton_SetAction(AObj: TRadioButton; AValue: TBasicAction); cdecl;
+procedure RadioButton_SetAction(AObj: TRadioButton; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-function RadioButton_GetAlign(AObj: TRadioButton): TAlign; cdecl;
+function RadioButton_GetAlign(AObj: TRadioButton): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure RadioButton_SetAlign(AObj: TRadioButton; AValue: TAlign); cdecl;
+procedure RadioButton_SetAlign(AObj: TRadioButton; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function RadioButton_GetAlignment(AObj: TRadioButton): TLeftRight; cdecl;
+function RadioButton_GetAlignment(AObj: TRadioButton): TLeftRight; stdcall;
 begin
   Result :=  AObj.Alignment;
 end;
 
-procedure RadioButton_SetAlignment(AObj: TRadioButton; AValue: TLeftRight); cdecl;
+procedure RadioButton_SetAlignment(AObj: TRadioButton; AValue: TLeftRight); stdcall;
 begin
   AObj.Alignment := AValue;
 end;
 
-function RadioButton_GetAnchors(AObj: TRadioButton): TAnchors; cdecl;
+function RadioButton_GetAnchors(AObj: TRadioButton): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure RadioButton_SetAnchors(AObj: TRadioButton; AValue: TAnchors); cdecl;
+procedure RadioButton_SetAnchors(AObj: TRadioButton; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function RadioButton_GetBiDiMode(AObj: TRadioButton): TBiDiMode; cdecl;
+function RadioButton_GetBiDiMode(AObj: TRadioButton): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure RadioButton_SetBiDiMode(AObj: TRadioButton; AValue: TBiDiMode); cdecl;
+procedure RadioButton_SetBiDiMode(AObj: TRadioButton; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function RadioButton_GetCaption(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_GetCaption(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Caption);
 end;
 
-procedure RadioButton_SetCaption(AObj: TRadioButton; AValue: PChar); cdecl;
+procedure RadioButton_SetCaption(AObj: TRadioButton; AValue: PChar); stdcall;
 begin
   AObj.Caption := AValue;
 end;
 
-function RadioButton_GetChecked(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetChecked(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.Checked;
 end;
 
-procedure RadioButton_SetChecked(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetChecked(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.Checked := AValue;
 end;
 
-function RadioButton_GetColor(AObj: TRadioButton): TColor; cdecl;
+function RadioButton_GetColor(AObj: TRadioButton): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure RadioButton_SetColor(AObj: TRadioButton; AValue: TColor); cdecl;
+procedure RadioButton_SetColor(AObj: TRadioButton; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function RadioButton_GetDoubleBuffered(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetDoubleBuffered(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure RadioButton_SetDoubleBuffered(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetDoubleBuffered(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function RadioButton_GetEnabled(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetEnabled(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure RadioButton_SetEnabled(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetEnabled(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function RadioButton_GetFont(AObj: TRadioButton): TFont; cdecl;
+function RadioButton_GetFont(AObj: TRadioButton): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure RadioButton_SetFont(AObj: TRadioButton; AValue: TFont); cdecl;
+procedure RadioButton_SetFont(AObj: TRadioButton; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function RadioButton_GetParentColor(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetParentColor(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentColor;
 end;
 
-procedure RadioButton_SetParentColor(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetParentColor(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentColor := AValue;
 end;
 
-function RadioButton_GetParentCtl3D(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetParentCtl3D(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentCtl3D;
 end;
 
-procedure RadioButton_SetParentCtl3D(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetParentCtl3D(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentCtl3D := AValue;
 end;
 
-function RadioButton_GetParentDoubleBuffered(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetParentDoubleBuffered(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure RadioButton_SetParentDoubleBuffered(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetParentDoubleBuffered(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function RadioButton_GetParentFont(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetParentFont(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure RadioButton_SetParentFont(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetParentFont(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function RadioButton_GetParentShowHint(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetParentShowHint(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure RadioButton_SetParentShowHint(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetParentShowHint(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function RadioButton_GetPopupMenu(AObj: TRadioButton): TPopupMenu; cdecl;
+function RadioButton_GetPopupMenu(AObj: TRadioButton): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure RadioButton_SetPopupMenu(AObj: TRadioButton; AValue: TPopupMenu); cdecl;
+procedure RadioButton_SetPopupMenu(AObj: TRadioButton; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function RadioButton_GetShowHint(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetShowHint(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure RadioButton_SetShowHint(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetShowHint(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function RadioButton_GetTabOrder(AObj: TRadioButton): TTabOrder; cdecl;
+function RadioButton_GetTabOrder(AObj: TRadioButton): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure RadioButton_SetTabOrder(AObj: TRadioButton; AValue: TTabOrder); cdecl;
+procedure RadioButton_SetTabOrder(AObj: TRadioButton; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function RadioButton_GetTabStop(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetTabStop(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure RadioButton_SetTabStop(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetTabStop(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function RadioButton_GetVisible(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetVisible(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure RadioButton_SetVisible(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetVisible(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function RadioButton_GetWordWrap(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetWordWrap(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.WordWrap;
 end;
 
-procedure RadioButton_SetWordWrap(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetWordWrap(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.WordWrap := AValue;
 end;
 
-function RadioButton_GetStyleElements(AObj: TRadioButton): TStyleElements; cdecl;
+function RadioButton_GetStyleElements(AObj: TRadioButton): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure RadioButton_SetStyleElements(AObj: TRadioButton; AValue: TStyleElements); cdecl;
+procedure RadioButton_SetStyleElements(AObj: TRadioButton; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-procedure RadioButton_SetOnClick(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnClick(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -387,7 +387,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure RadioButton_SetOnDblClick(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnDblClick(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -399,7 +399,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure RadioButton_SetOnEnter(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnEnter(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -411,7 +411,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure RadioButton_SetOnExit(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnExit(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -423,7 +423,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure RadioButton_SetOnKeyDown(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnKeyDown(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -435,7 +435,7 @@ begin
   TEventClass.Add(AObj, geKeyDown, AEventId);
 end;
 
-procedure RadioButton_SetOnKeyPress(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnKeyPress(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -447,7 +447,7 @@ begin
   TEventClass.Add(AObj, geKeyPress, AEventId);
 end;
 
-procedure RadioButton_SetOnKeyUp(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnKeyUp(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -459,7 +459,7 @@ begin
   TEventClass.Add(AObj, geKeyUp, AEventId);
 end;
 
-procedure RadioButton_SetOnMouseDown(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnMouseDown(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -471,7 +471,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure RadioButton_SetOnMouseEnter(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnMouseEnter(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -483,7 +483,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure RadioButton_SetOnMouseLeave(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnMouseLeave(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -495,7 +495,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure RadioButton_SetOnMouseMove(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnMouseMove(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -507,7 +507,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure RadioButton_SetOnMouseUp(AObj: TRadioButton; AEventId: NativeUInt); stdcall
+procedure RadioButton_SetOnMouseUp(AObj: TRadioButton; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -519,356 +519,356 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-function RadioButton_GetBrush(AObj: TRadioButton): TBrush; cdecl;
+function RadioButton_GetBrush(AObj: TRadioButton): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function RadioButton_GetControlCount(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetControlCount(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function RadioButton_GetHandle(AObj: TRadioButton): HWND; cdecl;
+function RadioButton_GetHandle(AObj: TRadioButton): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function RadioButton_GetParentWindow(AObj: TRadioButton): HWND; cdecl;
+function RadioButton_GetParentWindow(AObj: TRadioButton): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure RadioButton_SetParentWindow(AObj: TRadioButton; AValue: HWND); cdecl;
+procedure RadioButton_SetParentWindow(AObj: TRadioButton; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-procedure RadioButton_GetBoundsRect(AObj: TRadioButton; var Result: TRect); cdecl;
+procedure RadioButton_GetBoundsRect(AObj: TRadioButton; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure RadioButton_SetBoundsRect(AObj: TRadioButton; var AValue: TRect); cdecl;
+procedure RadioButton_SetBoundsRect(AObj: TRadioButton; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function RadioButton_GetClientHeight(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetClientHeight(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure RadioButton_SetClientHeight(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetClientHeight(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure RadioButton_GetClientRect(AObj: TRadioButton; var Result: TRect); cdecl;
+procedure RadioButton_GetClientRect(AObj: TRadioButton; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function RadioButton_GetClientWidth(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetClientWidth(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure RadioButton_SetClientWidth(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetClientWidth(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function RadioButton_GetExplicitLeft(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetExplicitLeft(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function RadioButton_GetExplicitTop(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetExplicitTop(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function RadioButton_GetExplicitWidth(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetExplicitWidth(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function RadioButton_GetExplicitHeight(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetExplicitHeight(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function RadioButton_GetParent(AObj: TRadioButton): TWinControl; cdecl;
+function RadioButton_GetParent(AObj: TRadioButton): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure RadioButton_SetParent(AObj: TRadioButton; AValue: TWinControl); cdecl;
+procedure RadioButton_SetParent(AObj: TRadioButton; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function RadioButton_GetAlignWithMargins(AObj: TRadioButton): LongBool; cdecl;
+function RadioButton_GetAlignWithMargins(AObj: TRadioButton): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure RadioButton_SetAlignWithMargins(AObj: TRadioButton; AValue: LongBool); cdecl;
+procedure RadioButton_SetAlignWithMargins(AObj: TRadioButton; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function RadioButton_GetLeft(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetLeft(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure RadioButton_SetLeft(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetLeft(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function RadioButton_GetTop(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetTop(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure RadioButton_SetTop(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetTop(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function RadioButton_GetWidth(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetWidth(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure RadioButton_SetWidth(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetWidth(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function RadioButton_GetHeight(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetHeight(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure RadioButton_SetHeight(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetHeight(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function RadioButton_GetCursor(AObj: TRadioButton): TCursor; cdecl;
+function RadioButton_GetCursor(AObj: TRadioButton): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure RadioButton_SetCursor(AObj: TRadioButton; AValue: TCursor); cdecl;
+procedure RadioButton_SetCursor(AObj: TRadioButton; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function RadioButton_GetHint(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_GetHint(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure RadioButton_SetHint(AObj: TRadioButton; AValue: PChar); cdecl;
+procedure RadioButton_SetHint(AObj: TRadioButton; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function RadioButton_GetMargins(AObj: TRadioButton): TMargins; cdecl;
+function RadioButton_GetMargins(AObj: TRadioButton): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure RadioButton_SetMargins(AObj: TRadioButton; AValue: TMargins); cdecl;
+procedure RadioButton_SetMargins(AObj: TRadioButton; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function RadioButton_GetComponentCount(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetComponentCount(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function RadioButton_GetComponentIndex(AObj: TRadioButton): Integer; cdecl;
+function RadioButton_GetComponentIndex(AObj: TRadioButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure RadioButton_SetComponentIndex(AObj: TRadioButton; AValue: Integer); cdecl;
+procedure RadioButton_SetComponentIndex(AObj: TRadioButton; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function RadioButton_GetOwner(AObj: TRadioButton): TComponent; cdecl;
+function RadioButton_GetOwner(AObj: TRadioButton): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function RadioButton_GetName(AObj: TRadioButton): PChar; cdecl;
+function RadioButton_GetName(AObj: TRadioButton): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure RadioButton_SetName(AObj: TRadioButton; AValue: PChar); cdecl;
+procedure RadioButton_SetName(AObj: TRadioButton; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function RadioButton_GetTag(AObj: TRadioButton): NativeInt; cdecl;
+function RadioButton_GetTag(AObj: TRadioButton): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure RadioButton_SetTag(AObj: TRadioButton; AValue: NativeInt); cdecl;
+procedure RadioButton_SetTag(AObj: TRadioButton; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function RadioButton_GetControls(AObj: TRadioButton; Index: Integer): TControl; cdecl;
+function RadioButton_GetControls(AObj: TRadioButton; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function RadioButton_GetComponents(AObj: TRadioButton; AIndex: Integer): TComponent; cdecl;
+function RadioButton_GetComponents(AObj: TRadioButton; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  RadioButton_Create {$IFNDEF MSWINDOWS}name '_RadioButton_Create'{$ENDIF},
-  RadioButton_Free {$IFNDEF MSWINDOWS}name '_RadioButton_Free'{$ENDIF},
-  RadioButton_CanFocus {$IFNDEF MSWINDOWS}name '_RadioButton_CanFocus'{$ENDIF},
-  RadioButton_FlipChildren {$IFNDEF MSWINDOWS}name '_RadioButton_FlipChildren'{$ENDIF},
-  RadioButton_Focused {$IFNDEF MSWINDOWS}name '_RadioButton_Focused'{$ENDIF},
-  RadioButton_HandleAllocated {$IFNDEF MSWINDOWS}name '_RadioButton_HandleAllocated'{$ENDIF},
-  RadioButton_Invalidate {$IFNDEF MSWINDOWS}name '_RadioButton_Invalidate'{$ENDIF},
-  RadioButton_Realign {$IFNDEF MSWINDOWS}name '_RadioButton_Realign'{$ENDIF},
-  RadioButton_Repaint {$IFNDEF MSWINDOWS}name '_RadioButton_Repaint'{$ENDIF},
-  RadioButton_ScaleBy {$IFNDEF MSWINDOWS}name '_RadioButton_ScaleBy'{$ENDIF},
-  RadioButton_SetBounds {$IFNDEF MSWINDOWS}name '_RadioButton_SetBounds'{$ENDIF},
-  RadioButton_SetFocus {$IFNDEF MSWINDOWS}name '_RadioButton_SetFocus'{$ENDIF},
-  RadioButton_Update {$IFNDEF MSWINDOWS}name '_RadioButton_Update'{$ENDIF},
-  RadioButton_BringToFront {$IFNDEF MSWINDOWS}name '_RadioButton_BringToFront'{$ENDIF},
-  RadioButton_HasParent {$IFNDEF MSWINDOWS}name '_RadioButton_HasParent'{$ENDIF},
-  RadioButton_Hide {$IFNDEF MSWINDOWS}name '_RadioButton_Hide'{$ENDIF},
-  RadioButton_Perform {$IFNDEF MSWINDOWS}name '_RadioButton_Perform'{$ENDIF},
-  RadioButton_Refresh {$IFNDEF MSWINDOWS}name '_RadioButton_Refresh'{$ENDIF},
-  RadioButton_SendToBack {$IFNDEF MSWINDOWS}name '_RadioButton_SendToBack'{$ENDIF},
-  RadioButton_Show {$IFNDEF MSWINDOWS}name '_RadioButton_Show'{$ENDIF},
-  RadioButton_GetTextBuf {$IFNDEF MSWINDOWS}name '_RadioButton_GetTextBuf'{$ENDIF},
-  RadioButton_FindComponent {$IFNDEF MSWINDOWS}name '_RadioButton_FindComponent'{$ENDIF},
-  RadioButton_GetNamePath {$IFNDEF MSWINDOWS}name '_RadioButton_GetNamePath'{$ENDIF},
-  RadioButton_Assign {$IFNDEF MSWINDOWS}name '_RadioButton_Assign'{$ENDIF},
-  RadioButton_ClassName {$IFNDEF MSWINDOWS}name '_RadioButton_ClassName'{$ENDIF},
-  RadioButton_Equals {$IFNDEF MSWINDOWS}name '_RadioButton_Equals'{$ENDIF},
-  RadioButton_GetHashCode {$IFNDEF MSWINDOWS}name '_RadioButton_GetHashCode'{$ENDIF},
-  RadioButton_ToString {$IFNDEF MSWINDOWS}name '_RadioButton_ToString'{$ENDIF},
-  RadioButton_GetAction {$IFNDEF MSWINDOWS}name '_RadioButton_GetAction'{$ENDIF},
-  RadioButton_SetAction {$IFNDEF MSWINDOWS}name '_RadioButton_SetAction'{$ENDIF},
-  RadioButton_GetAlign {$IFNDEF MSWINDOWS}name '_RadioButton_GetAlign'{$ENDIF},
-  RadioButton_SetAlign {$IFNDEF MSWINDOWS}name '_RadioButton_SetAlign'{$ENDIF},
-  RadioButton_GetAlignment {$IFNDEF MSWINDOWS}name '_RadioButton_GetAlignment'{$ENDIF},
-  RadioButton_SetAlignment {$IFNDEF MSWINDOWS}name '_RadioButton_SetAlignment'{$ENDIF},
-  RadioButton_GetAnchors {$IFNDEF MSWINDOWS}name '_RadioButton_GetAnchors'{$ENDIF},
-  RadioButton_SetAnchors {$IFNDEF MSWINDOWS}name '_RadioButton_SetAnchors'{$ENDIF},
-  RadioButton_GetBiDiMode {$IFNDEF MSWINDOWS}name '_RadioButton_GetBiDiMode'{$ENDIF},
-  RadioButton_SetBiDiMode {$IFNDEF MSWINDOWS}name '_RadioButton_SetBiDiMode'{$ENDIF},
-  RadioButton_GetCaption {$IFNDEF MSWINDOWS}name '_RadioButton_GetCaption'{$ENDIF},
-  RadioButton_SetCaption {$IFNDEF MSWINDOWS}name '_RadioButton_SetCaption'{$ENDIF},
-  RadioButton_GetChecked {$IFNDEF MSWINDOWS}name '_RadioButton_GetChecked'{$ENDIF},
-  RadioButton_SetChecked {$IFNDEF MSWINDOWS}name '_RadioButton_SetChecked'{$ENDIF},
-  RadioButton_GetColor {$IFNDEF MSWINDOWS}name '_RadioButton_GetColor'{$ENDIF},
-  RadioButton_SetColor {$IFNDEF MSWINDOWS}name '_RadioButton_SetColor'{$ENDIF},
-  RadioButton_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_RadioButton_GetDoubleBuffered'{$ENDIF},
-  RadioButton_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_RadioButton_SetDoubleBuffered'{$ENDIF},
-  RadioButton_GetEnabled {$IFNDEF MSWINDOWS}name '_RadioButton_GetEnabled'{$ENDIF},
-  RadioButton_SetEnabled {$IFNDEF MSWINDOWS}name '_RadioButton_SetEnabled'{$ENDIF},
-  RadioButton_GetFont {$IFNDEF MSWINDOWS}name '_RadioButton_GetFont'{$ENDIF},
-  RadioButton_SetFont {$IFNDEF MSWINDOWS}name '_RadioButton_SetFont'{$ENDIF},
-  RadioButton_GetParentColor {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentColor'{$ENDIF},
-  RadioButton_SetParentColor {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentColor'{$ENDIF},
-  RadioButton_GetParentCtl3D {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentCtl3D'{$ENDIF},
-  RadioButton_SetParentCtl3D {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentCtl3D'{$ENDIF},
-  RadioButton_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentDoubleBuffered'{$ENDIF},
-  RadioButton_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentDoubleBuffered'{$ENDIF},
-  RadioButton_GetParentFont {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentFont'{$ENDIF},
-  RadioButton_SetParentFont {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentFont'{$ENDIF},
-  RadioButton_GetParentShowHint {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentShowHint'{$ENDIF},
-  RadioButton_SetParentShowHint {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentShowHint'{$ENDIF},
-  RadioButton_GetPopupMenu {$IFNDEF MSWINDOWS}name '_RadioButton_GetPopupMenu'{$ENDIF},
-  RadioButton_SetPopupMenu {$IFNDEF MSWINDOWS}name '_RadioButton_SetPopupMenu'{$ENDIF},
-  RadioButton_GetShowHint {$IFNDEF MSWINDOWS}name '_RadioButton_GetShowHint'{$ENDIF},
-  RadioButton_SetShowHint {$IFNDEF MSWINDOWS}name '_RadioButton_SetShowHint'{$ENDIF},
-  RadioButton_GetTabOrder {$IFNDEF MSWINDOWS}name '_RadioButton_GetTabOrder'{$ENDIF},
-  RadioButton_SetTabOrder {$IFNDEF MSWINDOWS}name '_RadioButton_SetTabOrder'{$ENDIF},
-  RadioButton_GetTabStop {$IFNDEF MSWINDOWS}name '_RadioButton_GetTabStop'{$ENDIF},
-  RadioButton_SetTabStop {$IFNDEF MSWINDOWS}name '_RadioButton_SetTabStop'{$ENDIF},
-  RadioButton_GetVisible {$IFNDEF MSWINDOWS}name '_RadioButton_GetVisible'{$ENDIF},
-  RadioButton_SetVisible {$IFNDEF MSWINDOWS}name '_RadioButton_SetVisible'{$ENDIF},
-  RadioButton_GetWordWrap {$IFNDEF MSWINDOWS}name '_RadioButton_GetWordWrap'{$ENDIF},
-  RadioButton_SetWordWrap {$IFNDEF MSWINDOWS}name '_RadioButton_SetWordWrap'{$ENDIF},
-  RadioButton_GetStyleElements {$IFNDEF MSWINDOWS}name '_RadioButton_GetStyleElements'{$ENDIF},
-  RadioButton_SetStyleElements {$IFNDEF MSWINDOWS}name '_RadioButton_SetStyleElements'{$ENDIF},
-  RadioButton_SetOnClick {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnClick'{$ENDIF},
-  RadioButton_SetOnDblClick {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnDblClick'{$ENDIF},
-  RadioButton_SetOnEnter {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnEnter'{$ENDIF},
-  RadioButton_SetOnExit {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnExit'{$ENDIF},
-  RadioButton_SetOnKeyDown {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnKeyDown'{$ENDIF},
-  RadioButton_SetOnKeyPress {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnKeyPress'{$ENDIF},
-  RadioButton_SetOnKeyUp {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnKeyUp'{$ENDIF},
-  RadioButton_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnMouseDown'{$ENDIF},
-  RadioButton_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnMouseEnter'{$ENDIF},
-  RadioButton_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnMouseLeave'{$ENDIF},
-  RadioButton_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnMouseMove'{$ENDIF},
-  RadioButton_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_RadioButton_SetOnMouseUp'{$ENDIF},
-  RadioButton_GetBrush {$IFNDEF MSWINDOWS}name '_RadioButton_GetBrush'{$ENDIF},
-  RadioButton_GetControlCount {$IFNDEF MSWINDOWS}name '_RadioButton_GetControlCount'{$ENDIF},
-  RadioButton_GetHandle {$IFNDEF MSWINDOWS}name '_RadioButton_GetHandle'{$ENDIF},
-  RadioButton_GetParentWindow {$IFNDEF MSWINDOWS}name '_RadioButton_GetParentWindow'{$ENDIF},
-  RadioButton_SetParentWindow {$IFNDEF MSWINDOWS}name '_RadioButton_SetParentWindow'{$ENDIF},
-  RadioButton_GetBoundsRect {$IFNDEF MSWINDOWS}name '_RadioButton_GetBoundsRect'{$ENDIF},
-  RadioButton_SetBoundsRect {$IFNDEF MSWINDOWS}name '_RadioButton_SetBoundsRect'{$ENDIF},
-  RadioButton_GetClientHeight {$IFNDEF MSWINDOWS}name '_RadioButton_GetClientHeight'{$ENDIF},
-  RadioButton_SetClientHeight {$IFNDEF MSWINDOWS}name '_RadioButton_SetClientHeight'{$ENDIF},
-  RadioButton_GetClientRect {$IFNDEF MSWINDOWS}name '_RadioButton_GetClientRect'{$ENDIF},
-  RadioButton_GetClientWidth {$IFNDEF MSWINDOWS}name '_RadioButton_GetClientWidth'{$ENDIF},
-  RadioButton_SetClientWidth {$IFNDEF MSWINDOWS}name '_RadioButton_SetClientWidth'{$ENDIF},
-  RadioButton_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_RadioButton_GetExplicitLeft'{$ENDIF},
-  RadioButton_GetExplicitTop {$IFNDEF MSWINDOWS}name '_RadioButton_GetExplicitTop'{$ENDIF},
-  RadioButton_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_RadioButton_GetExplicitWidth'{$ENDIF},
-  RadioButton_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_RadioButton_GetExplicitHeight'{$ENDIF},
-  RadioButton_GetParent {$IFNDEF MSWINDOWS}name '_RadioButton_GetParent'{$ENDIF},
-  RadioButton_SetParent {$IFNDEF MSWINDOWS}name '_RadioButton_SetParent'{$ENDIF},
-  RadioButton_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_RadioButton_GetAlignWithMargins'{$ENDIF},
-  RadioButton_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_RadioButton_SetAlignWithMargins'{$ENDIF},
-  RadioButton_GetLeft {$IFNDEF MSWINDOWS}name '_RadioButton_GetLeft'{$ENDIF},
-  RadioButton_SetLeft {$IFNDEF MSWINDOWS}name '_RadioButton_SetLeft'{$ENDIF},
-  RadioButton_GetTop {$IFNDEF MSWINDOWS}name '_RadioButton_GetTop'{$ENDIF},
-  RadioButton_SetTop {$IFNDEF MSWINDOWS}name '_RadioButton_SetTop'{$ENDIF},
-  RadioButton_GetWidth {$IFNDEF MSWINDOWS}name '_RadioButton_GetWidth'{$ENDIF},
-  RadioButton_SetWidth {$IFNDEF MSWINDOWS}name '_RadioButton_SetWidth'{$ENDIF},
-  RadioButton_GetHeight {$IFNDEF MSWINDOWS}name '_RadioButton_GetHeight'{$ENDIF},
-  RadioButton_SetHeight {$IFNDEF MSWINDOWS}name '_RadioButton_SetHeight'{$ENDIF},
-  RadioButton_GetCursor {$IFNDEF MSWINDOWS}name '_RadioButton_GetCursor'{$ENDIF},
-  RadioButton_SetCursor {$IFNDEF MSWINDOWS}name '_RadioButton_SetCursor'{$ENDIF},
-  RadioButton_GetHint {$IFNDEF MSWINDOWS}name '_RadioButton_GetHint'{$ENDIF},
-  RadioButton_SetHint {$IFNDEF MSWINDOWS}name '_RadioButton_SetHint'{$ENDIF},
-  RadioButton_GetMargins {$IFNDEF MSWINDOWS}name '_RadioButton_GetMargins'{$ENDIF},
-  RadioButton_SetMargins {$IFNDEF MSWINDOWS}name '_RadioButton_SetMargins'{$ENDIF},
-  RadioButton_GetComponentCount {$IFNDEF MSWINDOWS}name '_RadioButton_GetComponentCount'{$ENDIF},
-  RadioButton_GetComponentIndex {$IFNDEF MSWINDOWS}name '_RadioButton_GetComponentIndex'{$ENDIF},
-  RadioButton_SetComponentIndex {$IFNDEF MSWINDOWS}name '_RadioButton_SetComponentIndex'{$ENDIF},
-  RadioButton_GetOwner {$IFNDEF MSWINDOWS}name '_RadioButton_GetOwner'{$ENDIF},
-  RadioButton_GetName {$IFNDEF MSWINDOWS}name '_RadioButton_GetName'{$ENDIF},
-  RadioButton_SetName {$IFNDEF MSWINDOWS}name '_RadioButton_SetName'{$ENDIF},
-  RadioButton_GetTag {$IFNDEF MSWINDOWS}name '_RadioButton_GetTag'{$ENDIF},
-  RadioButton_SetTag {$IFNDEF MSWINDOWS}name '_RadioButton_SetTag'{$ENDIF},
-  RadioButton_GetControls {$IFNDEF MSWINDOWS}name '_RadioButton_GetControls'{$ENDIF},
-  RadioButton_GetComponents {$IFNDEF MSWINDOWS}name '_RadioButton_GetComponents'{$ENDIF};
+  RadioButton_Create,
+  RadioButton_Free,
+  RadioButton_CanFocus,
+  RadioButton_FlipChildren,
+  RadioButton_Focused,
+  RadioButton_HandleAllocated,
+  RadioButton_Invalidate,
+  RadioButton_Realign,
+  RadioButton_Repaint,
+  RadioButton_ScaleBy,
+  RadioButton_SetBounds,
+  RadioButton_SetFocus,
+  RadioButton_Update,
+  RadioButton_BringToFront,
+  RadioButton_HasParent,
+  RadioButton_Hide,
+  RadioButton_Perform,
+  RadioButton_Refresh,
+  RadioButton_SendToBack,
+  RadioButton_Show,
+  RadioButton_GetTextBuf,
+  RadioButton_FindComponent,
+  RadioButton_GetNamePath,
+  RadioButton_Assign,
+  RadioButton_ClassName,
+  RadioButton_Equals,
+  RadioButton_GetHashCode,
+  RadioButton_ToString,
+  RadioButton_GetAction,
+  RadioButton_SetAction,
+  RadioButton_GetAlign,
+  RadioButton_SetAlign,
+  RadioButton_GetAlignment,
+  RadioButton_SetAlignment,
+  RadioButton_GetAnchors,
+  RadioButton_SetAnchors,
+  RadioButton_GetBiDiMode,
+  RadioButton_SetBiDiMode,
+  RadioButton_GetCaption,
+  RadioButton_SetCaption,
+  RadioButton_GetChecked,
+  RadioButton_SetChecked,
+  RadioButton_GetColor,
+  RadioButton_SetColor,
+  RadioButton_GetDoubleBuffered,
+  RadioButton_SetDoubleBuffered,
+  RadioButton_GetEnabled,
+  RadioButton_SetEnabled,
+  RadioButton_GetFont,
+  RadioButton_SetFont,
+  RadioButton_GetParentColor,
+  RadioButton_SetParentColor,
+  RadioButton_GetParentCtl3D,
+  RadioButton_SetParentCtl3D,
+  RadioButton_GetParentDoubleBuffered,
+  RadioButton_SetParentDoubleBuffered,
+  RadioButton_GetParentFont,
+  RadioButton_SetParentFont,
+  RadioButton_GetParentShowHint,
+  RadioButton_SetParentShowHint,
+  RadioButton_GetPopupMenu,
+  RadioButton_SetPopupMenu,
+  RadioButton_GetShowHint,
+  RadioButton_SetShowHint,
+  RadioButton_GetTabOrder,
+  RadioButton_SetTabOrder,
+  RadioButton_GetTabStop,
+  RadioButton_SetTabStop,
+  RadioButton_GetVisible,
+  RadioButton_SetVisible,
+  RadioButton_GetWordWrap,
+  RadioButton_SetWordWrap,
+  RadioButton_GetStyleElements,
+  RadioButton_SetStyleElements,
+  RadioButton_SetOnClick,
+  RadioButton_SetOnDblClick,
+  RadioButton_SetOnEnter,
+  RadioButton_SetOnExit,
+  RadioButton_SetOnKeyDown,
+  RadioButton_SetOnKeyPress,
+  RadioButton_SetOnKeyUp,
+  RadioButton_SetOnMouseDown,
+  RadioButton_SetOnMouseEnter,
+  RadioButton_SetOnMouseLeave,
+  RadioButton_SetOnMouseMove,
+  RadioButton_SetOnMouseUp,
+  RadioButton_GetBrush,
+  RadioButton_GetControlCount,
+  RadioButton_GetHandle,
+  RadioButton_GetParentWindow,
+  RadioButton_SetParentWindow,
+  RadioButton_GetBoundsRect,
+  RadioButton_SetBoundsRect,
+  RadioButton_GetClientHeight,
+  RadioButton_SetClientHeight,
+  RadioButton_GetClientRect,
+  RadioButton_GetClientWidth,
+  RadioButton_SetClientWidth,
+  RadioButton_GetExplicitLeft,
+  RadioButton_GetExplicitTop,
+  RadioButton_GetExplicitWidth,
+  RadioButton_GetExplicitHeight,
+  RadioButton_GetParent,
+  RadioButton_SetParent,
+  RadioButton_GetAlignWithMargins,
+  RadioButton_SetAlignWithMargins,
+  RadioButton_GetLeft,
+  RadioButton_SetLeft,
+  RadioButton_GetTop,
+  RadioButton_SetTop,
+  RadioButton_GetWidth,
+  RadioButton_SetWidth,
+  RadioButton_GetHeight,
+  RadioButton_SetHeight,
+  RadioButton_GetCursor,
+  RadioButton_SetCursor,
+  RadioButton_GetHint,
+  RadioButton_SetHint,
+  RadioButton_GetMargins,
+  RadioButton_SetMargins,
+  RadioButton_GetComponentCount,
+  RadioButton_GetComponentIndex,
+  RadioButton_SetComponentIndex,
+  RadioButton_GetOwner,
+  RadioButton_GetName,
+  RadioButton_SetName,
+  RadioButton_GetTag,
+  RadioButton_SetTag,
+  RadioButton_GetControls,
+  RadioButton_GetComponents;
 

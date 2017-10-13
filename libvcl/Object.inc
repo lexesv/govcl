@@ -5,42 +5,42 @@
 //
 //----------------------------------------
 
-function Object_Create: TObject; cdecl;
+function Object_Create: TObject; stdcall;
 begin
   Result :=  TObject.Create;
 end;
 
-procedure Object_Free(AObj: TObject); cdecl;
+procedure Object_Free(AObj: TObject); stdcall;
 begin
   AObj.Free;
 end;
 
-function Object_ClassName(AObj: TObject): PChar; cdecl;
+function Object_ClassName(AObj: TObject): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function Object_Equals(AObj: TObject; Obj: TObject): LongBool; cdecl;
+function Object_Equals(AObj: TObject; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function Object_GetHashCode(AObj: TObject): Integer; cdecl;
+function Object_GetHashCode(AObj: TObject): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function Object_ToString(AObj: TObject): PChar; cdecl;
+function Object_ToString(AObj: TObject): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
 
 exports
-  Object_Create {$IFNDEF MSWINDOWS}name '_Object_Create'{$ENDIF},
-  Object_Free {$IFNDEF MSWINDOWS}name '_Object_Free'{$ENDIF},
-  Object_ClassName {$IFNDEF MSWINDOWS}name '_Object_ClassName'{$ENDIF},
-  Object_Equals {$IFNDEF MSWINDOWS}name '_Object_Equals'{$ENDIF},
-  Object_GetHashCode {$IFNDEF MSWINDOWS}name '_Object_GetHashCode'{$ENDIF},
-  Object_ToString {$IFNDEF MSWINDOWS}name '_Object_ToString'{$ENDIF};
+  Object_Create,
+  Object_Free,
+  Object_ClassName,
+  Object_Equals,
+  Object_GetHashCode,
+  Object_ToString;
 

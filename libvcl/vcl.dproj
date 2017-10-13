@@ -6,7 +6,7 @@
         <MainSource>vcl.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>7</TargetedPlatforms>
         <AppType>Library</AppType>
     </PropertyGroup>
@@ -154,10 +154,10 @@ $(PostBuildEvent)]]></PostBuildEvent>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=Golang Binding VCL for Win32;FileVersion=1.0.0.39;InternalName=govcl;LegalCopyright=Copyright © 2017 ying32. All Rights Reserved.;LegalTrademarks=;OriginalFilename=libvcl.dll;ProductName=govcl;ProductVersion=1.0.0.0;Comments=Golang Binding VCL for Win32;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=Golang Binding VCL for Win32;FileVersion=1.0.0.42;InternalName=govcl;LegalCopyright=Copyright © 2017 ying32. All Rights Reserved.;LegalTrademarks=;OriginalFilename=libvcl.dll;ProductName=govcl;ProductVersion=1.0.0.0;Comments=Golang Binding VCL for Win32;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Build>39</VerInfo_Build>
+        <VerInfo_Build>42</VerInfo_Build>
         <PostBuildEvent><![CDATA[Move "$(OUTPUTDIR)vcl.dll" "$(OUTPUTDIR)libvcl.dll"
  Copy "$(OUTPUTDIR)libvcl.dll" "$(GOPATH)\bin\libvcl.dll" /Y 
  Copy "$(OUTPUTDIR)libvcl.dll" "$(GOPATH)\src\gitee.com\ying32\govcl\bin\win32\libvcl.dll" /Y]]></PostBuildEvent>
@@ -165,10 +165,10 @@ $(PostBuildEvent)]]></PostBuildEvent>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <DCC_FullBooleanEvaluations>true</DCC_FullBooleanEvaluations>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=ying32;FileDescription=Golang Binding VCL for Win64;FileVersion=1.0.0.76;InternalName=govcl;LegalCopyright=Copyright © 2017 ying32. All Rights Reserved.;LegalTrademarks=;OriginalFilename=libvcl.dll;ProductName=govcl;ProductVersion=1.0.0.0;Comments=Golang Binding VCL for Win64;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=ying32;FileDescription=Golang Binding VCL for Win64;FileVersion=1.0.0.79;InternalName=govcl;LegalCopyright=Copyright © 2017 ying32. All Rights Reserved.;LegalTrademarks=;OriginalFilename=libvcl.dll;ProductName=govcl;ProductVersion=1.0.0.0;Comments=Golang Binding VCL for Win64;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Build>76</VerInfo_Build>
+        <VerInfo_Build>79</VerInfo_Build>
         <DCC_ExeOutput>..\x64</DCC_ExeOutput>
         <PostBuildEvent><![CDATA[Move "$(OUTPUTDIR)vcl.dll" "$(OUTPUTDIR)libvclx64.dll"
  Copy "$(OUTPUTDIR)libvclx64.dll" "$(GOPATH)\bin\libvclx64.dll" /Y 

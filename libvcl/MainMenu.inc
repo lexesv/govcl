@@ -5,87 +5,87 @@
 //
 //----------------------------------------
 
-function MainMenu_Create(AOwner: TComponent): TMainMenu; cdecl;
+function MainMenu_Create(AOwner: TComponent): TMainMenu; stdcall;
 begin
   Result :=  TMainMenu.Create(AOwner);
 end;
 
-procedure MainMenu_Free(AObj: TMainMenu); cdecl;
+procedure MainMenu_Free(AObj: TMainMenu); stdcall;
 begin
   AObj.Free;
 end;
 
-function MainMenu_FindComponent(AObj: TMainMenu; AName: PChar): TComponent; cdecl;
+function MainMenu_FindComponent(AObj: TMainMenu; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function MainMenu_GetNamePath(AObj: TMainMenu): PChar; cdecl;
+function MainMenu_GetNamePath(AObj: TMainMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function MainMenu_HasParent(AObj: TMainMenu): LongBool; cdecl;
+function MainMenu_HasParent(AObj: TMainMenu): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure MainMenu_Assign(AObj: TMainMenu; Source: TPersistent); cdecl;
+procedure MainMenu_Assign(AObj: TMainMenu; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function MainMenu_ClassName(AObj: TMainMenu): PChar; cdecl;
+function MainMenu_ClassName(AObj: TMainMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function MainMenu_Equals(AObj: TMainMenu; Obj: TObject): LongBool; cdecl;
+function MainMenu_Equals(AObj: TMainMenu; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function MainMenu_GetHashCode(AObj: TMainMenu): Integer; cdecl;
+function MainMenu_GetHashCode(AObj: TMainMenu): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function MainMenu_ToString(AObj: TMainMenu): PChar; cdecl;
+function MainMenu_ToString(AObj: TMainMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function MainMenu_GetAutoHotkeys(AObj: TMainMenu): TMenuAutoFlag; cdecl;
+function MainMenu_GetAutoHotkeys(AObj: TMainMenu): TMenuAutoFlag; stdcall;
 begin
   Result :=  AObj.AutoHotkeys;
 end;
 
-procedure MainMenu_SetAutoHotkeys(AObj: TMainMenu; AValue: TMenuAutoFlag); cdecl;
+procedure MainMenu_SetAutoHotkeys(AObj: TMainMenu; AValue: TMenuAutoFlag); stdcall;
 begin
   AObj.AutoHotkeys := AValue;
 end;
 
-function MainMenu_GetBiDiMode(AObj: TMainMenu): TBiDiMode; cdecl;
+function MainMenu_GetBiDiMode(AObj: TMainMenu): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure MainMenu_SetBiDiMode(AObj: TMainMenu; AValue: TBiDiMode); cdecl;
+procedure MainMenu_SetBiDiMode(AObj: TMainMenu; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function MainMenu_GetImages(AObj: TMainMenu): TCustomImageList; cdecl;
+function MainMenu_GetImages(AObj: TMainMenu): TCustomImageList; stdcall;
 begin
   Result :=  AObj.Images;
 end;
 
-procedure MainMenu_SetImages(AObj: TMainMenu; AValue: TCustomImageList); cdecl;
+procedure MainMenu_SetImages(AObj: TMainMenu; AValue: TCustomImageList); stdcall;
 begin
   AObj.Images := AValue;
 end;
 
-procedure MainMenu_SetOnChange(AObj: TMainMenu; AEventId: NativeUInt); stdcall
+procedure MainMenu_SetOnChange(AObj: TMainMenu; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -97,101 +97,101 @@ begin
   TEventClass.Add(AObj, geMenuChange, AEventId);
 end;
 
-function MainMenu_GetHandle(AObj: TMainMenu): HMENU; cdecl;
+function MainMenu_GetHandle(AObj: TMainMenu): HMENU; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function MainMenu_GetWindowHandle(AObj: TMainMenu): HWND; cdecl;
+function MainMenu_GetWindowHandle(AObj: TMainMenu): HWND; stdcall;
 begin
   Result :=  AObj.WindowHandle;
 end;
 
-procedure MainMenu_SetWindowHandle(AObj: TMainMenu; AValue: HWND); cdecl;
+procedure MainMenu_SetWindowHandle(AObj: TMainMenu; AValue: HWND); stdcall;
 begin
   AObj.WindowHandle := AValue;
 end;
 
-function MainMenu_GetItems(AObj: TMainMenu): TMenuItem; cdecl;
+function MainMenu_GetItems(AObj: TMainMenu): TMenuItem; stdcall;
 begin
   Result :=  AObj.Items;
 end;
 
-function MainMenu_GetComponentCount(AObj: TMainMenu): Integer; cdecl;
+function MainMenu_GetComponentCount(AObj: TMainMenu): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function MainMenu_GetComponentIndex(AObj: TMainMenu): Integer; cdecl;
+function MainMenu_GetComponentIndex(AObj: TMainMenu): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure MainMenu_SetComponentIndex(AObj: TMainMenu; AValue: Integer); cdecl;
+procedure MainMenu_SetComponentIndex(AObj: TMainMenu; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function MainMenu_GetOwner(AObj: TMainMenu): TComponent; cdecl;
+function MainMenu_GetOwner(AObj: TMainMenu): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function MainMenu_GetName(AObj: TMainMenu): PChar; cdecl;
+function MainMenu_GetName(AObj: TMainMenu): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure MainMenu_SetName(AObj: TMainMenu; AValue: PChar); cdecl;
+procedure MainMenu_SetName(AObj: TMainMenu; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function MainMenu_GetTag(AObj: TMainMenu): NativeInt; cdecl;
+function MainMenu_GetTag(AObj: TMainMenu): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure MainMenu_SetTag(AObj: TMainMenu; AValue: NativeInt); cdecl;
+procedure MainMenu_SetTag(AObj: TMainMenu; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function MainMenu_GetComponents(AObj: TMainMenu; AIndex: Integer): TComponent; cdecl;
+function MainMenu_GetComponents(AObj: TMainMenu; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  MainMenu_Create {$IFNDEF MSWINDOWS}name '_MainMenu_Create'{$ENDIF},
-  MainMenu_Free {$IFNDEF MSWINDOWS}name '_MainMenu_Free'{$ENDIF},
-  MainMenu_FindComponent {$IFNDEF MSWINDOWS}name '_MainMenu_FindComponent'{$ENDIF},
-  MainMenu_GetNamePath {$IFNDEF MSWINDOWS}name '_MainMenu_GetNamePath'{$ENDIF},
-  MainMenu_HasParent {$IFNDEF MSWINDOWS}name '_MainMenu_HasParent'{$ENDIF},
-  MainMenu_Assign {$IFNDEF MSWINDOWS}name '_MainMenu_Assign'{$ENDIF},
-  MainMenu_ClassName {$IFNDEF MSWINDOWS}name '_MainMenu_ClassName'{$ENDIF},
-  MainMenu_Equals {$IFNDEF MSWINDOWS}name '_MainMenu_Equals'{$ENDIF},
-  MainMenu_GetHashCode {$IFNDEF MSWINDOWS}name '_MainMenu_GetHashCode'{$ENDIF},
-  MainMenu_ToString {$IFNDEF MSWINDOWS}name '_MainMenu_ToString'{$ENDIF},
-  MainMenu_GetAutoHotkeys {$IFNDEF MSWINDOWS}name '_MainMenu_GetAutoHotkeys'{$ENDIF},
-  MainMenu_SetAutoHotkeys {$IFNDEF MSWINDOWS}name '_MainMenu_SetAutoHotkeys'{$ENDIF},
-  MainMenu_GetBiDiMode {$IFNDEF MSWINDOWS}name '_MainMenu_GetBiDiMode'{$ENDIF},
-  MainMenu_SetBiDiMode {$IFNDEF MSWINDOWS}name '_MainMenu_SetBiDiMode'{$ENDIF},
-  MainMenu_GetImages {$IFNDEF MSWINDOWS}name '_MainMenu_GetImages'{$ENDIF},
-  MainMenu_SetImages {$IFNDEF MSWINDOWS}name '_MainMenu_SetImages'{$ENDIF},
-  MainMenu_SetOnChange {$IFNDEF MSWINDOWS}name '_MainMenu_SetOnChange'{$ENDIF},
-  MainMenu_GetHandle {$IFNDEF MSWINDOWS}name '_MainMenu_GetHandle'{$ENDIF},
-  MainMenu_GetWindowHandle {$IFNDEF MSWINDOWS}name '_MainMenu_GetWindowHandle'{$ENDIF},
-  MainMenu_SetWindowHandle {$IFNDEF MSWINDOWS}name '_MainMenu_SetWindowHandle'{$ENDIF},
-  MainMenu_GetItems {$IFNDEF MSWINDOWS}name '_MainMenu_GetItems'{$ENDIF},
-  MainMenu_GetComponentCount {$IFNDEF MSWINDOWS}name '_MainMenu_GetComponentCount'{$ENDIF},
-  MainMenu_GetComponentIndex {$IFNDEF MSWINDOWS}name '_MainMenu_GetComponentIndex'{$ENDIF},
-  MainMenu_SetComponentIndex {$IFNDEF MSWINDOWS}name '_MainMenu_SetComponentIndex'{$ENDIF},
-  MainMenu_GetOwner {$IFNDEF MSWINDOWS}name '_MainMenu_GetOwner'{$ENDIF},
-  MainMenu_GetName {$IFNDEF MSWINDOWS}name '_MainMenu_GetName'{$ENDIF},
-  MainMenu_SetName {$IFNDEF MSWINDOWS}name '_MainMenu_SetName'{$ENDIF},
-  MainMenu_GetTag {$IFNDEF MSWINDOWS}name '_MainMenu_GetTag'{$ENDIF},
-  MainMenu_SetTag {$IFNDEF MSWINDOWS}name '_MainMenu_SetTag'{$ENDIF},
-  MainMenu_GetComponents {$IFNDEF MSWINDOWS}name '_MainMenu_GetComponents'{$ENDIF};
+  MainMenu_Create,
+  MainMenu_Free,
+  MainMenu_FindComponent,
+  MainMenu_GetNamePath,
+  MainMenu_HasParent,
+  MainMenu_Assign,
+  MainMenu_ClassName,
+  MainMenu_Equals,
+  MainMenu_GetHashCode,
+  MainMenu_ToString,
+  MainMenu_GetAutoHotkeys,
+  MainMenu_SetAutoHotkeys,
+  MainMenu_GetBiDiMode,
+  MainMenu_SetBiDiMode,
+  MainMenu_GetImages,
+  MainMenu_SetImages,
+  MainMenu_SetOnChange,
+  MainMenu_GetHandle,
+  MainMenu_GetWindowHandle,
+  MainMenu_SetWindowHandle,
+  MainMenu_GetItems,
+  MainMenu_GetComponentCount,
+  MainMenu_GetComponentIndex,
+  MainMenu_SetComponentIndex,
+  MainMenu_GetOwner,
+  MainMenu_GetName,
+  MainMenu_SetName,
+  MainMenu_GetTag,
+  MainMenu_SetTag,
+  MainMenu_GetComponents;
 

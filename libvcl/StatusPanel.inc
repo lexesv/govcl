@@ -5,126 +5,126 @@
 //
 //----------------------------------------
 
-function StatusPanel_Create(AOwner: TCollection): TStatusPanel; cdecl;
+function StatusPanel_Create(AOwner: TCollection): TStatusPanel; stdcall;
 begin
   Result :=  TStatusPanel.Create(AOwner);
 end;
 
-procedure StatusPanel_Free(AObj: TStatusPanel); cdecl;
+procedure StatusPanel_Free(AObj: TStatusPanel); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure StatusPanel_Assign(AObj: TStatusPanel; Source: TPersistent); cdecl;
+procedure StatusPanel_Assign(AObj: TStatusPanel; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function StatusPanel_GetNamePath(AObj: TStatusPanel): PChar; cdecl;
+function StatusPanel_GetNamePath(AObj: TStatusPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-function StatusPanel_ClassName(AObj: TStatusPanel): PChar; cdecl;
+function StatusPanel_ClassName(AObj: TStatusPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function StatusPanel_Equals(AObj: TStatusPanel; Obj: TObject): LongBool; cdecl;
+function StatusPanel_Equals(AObj: TStatusPanel; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function StatusPanel_GetHashCode(AObj: TStatusPanel): Integer; cdecl;
+function StatusPanel_GetHashCode(AObj: TStatusPanel): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function StatusPanel_ToString(AObj: TStatusPanel): PChar; cdecl;
+function StatusPanel_ToString(AObj: TStatusPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function StatusPanel_GetAlignment(AObj: TStatusPanel): TAlignment; cdecl;
+function StatusPanel_GetAlignment(AObj: TStatusPanel): TAlignment; stdcall;
 begin
   Result :=  AObj.Alignment;
 end;
 
-procedure StatusPanel_SetAlignment(AObj: TStatusPanel; AValue: TAlignment); cdecl;
+procedure StatusPanel_SetAlignment(AObj: TStatusPanel; AValue: TAlignment); stdcall;
 begin
   AObj.Alignment := AValue;
 end;
 
-function StatusPanel_GetBiDiMode(AObj: TStatusPanel): TBiDiMode; cdecl;
+function StatusPanel_GetBiDiMode(AObj: TStatusPanel): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure StatusPanel_SetBiDiMode(AObj: TStatusPanel; AValue: TBiDiMode); cdecl;
+procedure StatusPanel_SetBiDiMode(AObj: TStatusPanel; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function StatusPanel_GetStyle(AObj: TStatusPanel): TStatusPanelStyle; cdecl;
+function StatusPanel_GetStyle(AObj: TStatusPanel): TStatusPanelStyle; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure StatusPanel_SetStyle(AObj: TStatusPanel; AValue: TStatusPanelStyle); cdecl;
+procedure StatusPanel_SetStyle(AObj: TStatusPanel; AValue: TStatusPanelStyle); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function StatusPanel_GetText(AObj: TStatusPanel): PChar; cdecl;
+function StatusPanel_GetText(AObj: TStatusPanel): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Text);
 end;
 
-procedure StatusPanel_SetText(AObj: TStatusPanel; AValue: PChar); cdecl;
+procedure StatusPanel_SetText(AObj: TStatusPanel; AValue: PChar); stdcall;
 begin
   AObj.Text := AValue;
 end;
 
-function StatusPanel_GetWidth(AObj: TStatusPanel): Integer; cdecl;
+function StatusPanel_GetWidth(AObj: TStatusPanel): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure StatusPanel_SetWidth(AObj: TStatusPanel; AValue: Integer); cdecl;
+procedure StatusPanel_SetWidth(AObj: TStatusPanel; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function StatusPanel_GetIndex(AObj: TStatusPanel): Integer; cdecl;
+function StatusPanel_GetIndex(AObj: TStatusPanel): Integer; stdcall;
 begin
   Result :=  AObj.Index;
 end;
 
-procedure StatusPanel_SetIndex(AObj: TStatusPanel; AValue: Integer); cdecl;
+procedure StatusPanel_SetIndex(AObj: TStatusPanel; AValue: Integer); stdcall;
 begin
   AObj.Index := AValue;
 end;
 
 
 exports
-  StatusPanel_Create {$IFNDEF MSWINDOWS}name '_StatusPanel_Create'{$ENDIF},
-  StatusPanel_Free {$IFNDEF MSWINDOWS}name '_StatusPanel_Free'{$ENDIF},
-  StatusPanel_Assign {$IFNDEF MSWINDOWS}name '_StatusPanel_Assign'{$ENDIF},
-  StatusPanel_GetNamePath {$IFNDEF MSWINDOWS}name '_StatusPanel_GetNamePath'{$ENDIF},
-  StatusPanel_ClassName {$IFNDEF MSWINDOWS}name '_StatusPanel_ClassName'{$ENDIF},
-  StatusPanel_Equals {$IFNDEF MSWINDOWS}name '_StatusPanel_Equals'{$ENDIF},
-  StatusPanel_GetHashCode {$IFNDEF MSWINDOWS}name '_StatusPanel_GetHashCode'{$ENDIF},
-  StatusPanel_ToString {$IFNDEF MSWINDOWS}name '_StatusPanel_ToString'{$ENDIF},
-  StatusPanel_GetAlignment {$IFNDEF MSWINDOWS}name '_StatusPanel_GetAlignment'{$ENDIF},
-  StatusPanel_SetAlignment {$IFNDEF MSWINDOWS}name '_StatusPanel_SetAlignment'{$ENDIF},
-  StatusPanel_GetBiDiMode {$IFNDEF MSWINDOWS}name '_StatusPanel_GetBiDiMode'{$ENDIF},
-  StatusPanel_SetBiDiMode {$IFNDEF MSWINDOWS}name '_StatusPanel_SetBiDiMode'{$ENDIF},
-  StatusPanel_GetStyle {$IFNDEF MSWINDOWS}name '_StatusPanel_GetStyle'{$ENDIF},
-  StatusPanel_SetStyle {$IFNDEF MSWINDOWS}name '_StatusPanel_SetStyle'{$ENDIF},
-  StatusPanel_GetText {$IFNDEF MSWINDOWS}name '_StatusPanel_GetText'{$ENDIF},
-  StatusPanel_SetText {$IFNDEF MSWINDOWS}name '_StatusPanel_SetText'{$ENDIF},
-  StatusPanel_GetWidth {$IFNDEF MSWINDOWS}name '_StatusPanel_GetWidth'{$ENDIF},
-  StatusPanel_SetWidth {$IFNDEF MSWINDOWS}name '_StatusPanel_SetWidth'{$ENDIF},
-  StatusPanel_GetIndex {$IFNDEF MSWINDOWS}name '_StatusPanel_GetIndex'{$ENDIF},
-  StatusPanel_SetIndex {$IFNDEF MSWINDOWS}name '_StatusPanel_SetIndex'{$ENDIF};
+  StatusPanel_Create,
+  StatusPanel_Free,
+  StatusPanel_Assign,
+  StatusPanel_GetNamePath,
+  StatusPanel_ClassName,
+  StatusPanel_Equals,
+  StatusPanel_GetHashCode,
+  StatusPanel_ToString,
+  StatusPanel_GetAlignment,
+  StatusPanel_SetAlignment,
+  StatusPanel_GetBiDiMode,
+  StatusPanel_SetBiDiMode,
+  StatusPanel_GetStyle,
+  StatusPanel_SetStyle,
+  StatusPanel_GetText,
+  StatusPanel_SetText,
+  StatusPanel_GetWidth,
+  StatusPanel_SetWidth,
+  StatusPanel_GetIndex,
+  StatusPanel_SetIndex;
 

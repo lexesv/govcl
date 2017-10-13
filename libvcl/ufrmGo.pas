@@ -22,17 +22,17 @@ var
   uGlobalFormScaled: Boolean = False;
 
 
-procedure SetGlobalFormScaled(AValue: LongBool); cdecl;
+procedure SetGlobalFormScaled(AValue: LongBool); stdcall;
 begin
   uGlobalFormScaled := AValue;
 end;
 
-procedure Form_ScaleForPPI(AObj: TGoForm; ANewPPI: Integer); cdecl;
+procedure Form_ScaleForPPI(AObj: TGoForm; ANewPPI: Integer); stdcall;
 begin
   AObj.ScaleForPPI(ANewPPI);
 end;
 
-procedure Form_ScaleControlsForDpi(AObj: TGoForm; ANewPPI: Integer); cdecl;
+procedure Form_ScaleControlsForDpi(AObj: TGoForm; ANewPPI: Integer); stdcall;
 begin
   AObj.ScaleControlsForDpi(ANewPPI);
 end;
@@ -49,9 +49,9 @@ begin
 end;
 
 exports
-   SetGlobalFormScaled {$IFNDEF MSWINDOWS}name '_SetGlobalFormScaled'{$ENDIF},
-   Form_ScaleForPPI {$IFNDEF MSWINDOWS}name '_Form_ScaleForPPI'{$ENDIF},
-   Form_ScaleControlsForDpi {$IFNDEF MSWINDOWS}name '_Form_ScaleControlsForDpi'{$ENDIF};
+   SetGlobalFormScaled,
+   Form_ScaleForPPI,
+   Form_ScaleControlsForDpi;
 
 
 

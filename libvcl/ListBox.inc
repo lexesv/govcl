@@ -5,492 +5,492 @@
 //
 //----------------------------------------
 
-function ListBox_Create(AOwner: TComponent): TListBox; cdecl;
+function ListBox_Create(AOwner: TComponent): TListBox; stdcall;
 begin
   Result :=  TListBox.Create(AOwner);
 end;
 
-procedure ListBox_Free(AObj: TListBox); cdecl;
+procedure ListBox_Free(AObj: TListBox); stdcall;
 begin
   AObj.Free;
 end;
 
-procedure ListBox_AddItem(AObj: TListBox; Item: PChar; AObject: TObject); cdecl;
+procedure ListBox_AddItem(AObj: TListBox; Item: PChar; AObject: TObject); stdcall;
 begin
   AObj.AddItem(Item, AObject);
 end;
 
-procedure ListBox_Clear(AObj: TListBox); cdecl;
+procedure ListBox_Clear(AObj: TListBox); stdcall;
 begin
   AObj.Clear;
 end;
 
-procedure ListBox_ClearSelection(AObj: TListBox); cdecl;
+procedure ListBox_ClearSelection(AObj: TListBox); stdcall;
 begin
   AObj.ClearSelection;
 end;
 
-procedure ListBox_DeleteSelected(AObj: TListBox); cdecl;
+procedure ListBox_DeleteSelected(AObj: TListBox); stdcall;
 begin
   AObj.DeleteSelected;
 end;
 
-procedure ListBox_SelectAll(AObj: TListBox); cdecl;
+procedure ListBox_SelectAll(AObj: TListBox); stdcall;
 begin
   AObj.SelectAll;
 end;
 
-function ListBox_CanFocus(AObj: TListBox): LongBool; cdecl;
+function ListBox_CanFocus(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
 end;
 
-procedure ListBox_FlipChildren(AObj: TListBox; AllLevels: LongBool); cdecl;
+procedure ListBox_FlipChildren(AObj: TListBox; AllLevels: LongBool); stdcall;
 begin
   AObj.FlipChildren(AllLevels);
 end;
 
-function ListBox_Focused(AObj: TListBox): LongBool; cdecl;
+function ListBox_Focused(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.Focused;
 end;
 
-function ListBox_HandleAllocated(AObj: TListBox): LongBool; cdecl;
+function ListBox_HandleAllocated(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.HandleAllocated;
 end;
 
-procedure ListBox_Invalidate(AObj: TListBox); cdecl;
+procedure ListBox_Invalidate(AObj: TListBox); stdcall;
 begin
   AObj.Invalidate;
 end;
 
-procedure ListBox_Realign(AObj: TListBox); cdecl;
+procedure ListBox_Realign(AObj: TListBox); stdcall;
 begin
   AObj.Realign;
 end;
 
-procedure ListBox_Repaint(AObj: TListBox); cdecl;
+procedure ListBox_Repaint(AObj: TListBox); stdcall;
 begin
   AObj.Repaint;
 end;
 
-procedure ListBox_ScaleBy(AObj: TListBox; M: Integer; D: Integer); cdecl;
+procedure ListBox_ScaleBy(AObj: TListBox; M: Integer; D: Integer); stdcall;
 begin
   AObj.ScaleBy(M, D);
 end;
 
-procedure ListBox_SetBounds(AObj: TListBox; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); cdecl;
+procedure ListBox_SetBounds(AObj: TListBox; ALeft: Integer; ATop: Integer; AWidth: Integer; AHeight: Integer); stdcall;
 begin
   AObj.SetBounds(ALeft, ATop, AWidth, AHeight);
 end;
 
-procedure ListBox_SetFocus(AObj: TListBox); cdecl;
+procedure ListBox_SetFocus(AObj: TListBox); stdcall;
 begin
   AObj.SetFocus;
 end;
 
-procedure ListBox_Update(AObj: TListBox); cdecl;
+procedure ListBox_Update(AObj: TListBox); stdcall;
 begin
   AObj.Update;
 end;
 
-procedure ListBox_BringToFront(AObj: TListBox); cdecl;
+procedure ListBox_BringToFront(AObj: TListBox); stdcall;
 begin
   AObj.BringToFront;
 end;
 
-function ListBox_HasParent(AObj: TListBox): LongBool; cdecl;
+function ListBox_HasParent(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.HasParent;
 end;
 
-procedure ListBox_Hide(AObj: TListBox); cdecl;
+procedure ListBox_Hide(AObj: TListBox); stdcall;
 begin
   AObj.Hide;
 end;
 
-function ListBox_Perform(AObj: TListBox; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; cdecl;
+function ListBox_Perform(AObj: TListBox; Msg: Cardinal; WParam: NativeUInt; LParam: NativeInt): NativeInt; stdcall;
 begin
   Result :=  AObj.Perform(Msg, WParam, LParam);
 end;
 
-procedure ListBox_Refresh(AObj: TListBox); cdecl;
+procedure ListBox_Refresh(AObj: TListBox); stdcall;
 begin
   AObj.Refresh;
 end;
 
-procedure ListBox_SendToBack(AObj: TListBox); cdecl;
+procedure ListBox_SendToBack(AObj: TListBox); stdcall;
 begin
   AObj.SendToBack;
 end;
 
-procedure ListBox_Show(AObj: TListBox); cdecl;
+procedure ListBox_Show(AObj: TListBox); stdcall;
 begin
   AObj.Show;
 end;
 
-function ListBox_GetTextBuf(AObj: TListBox; Buffer: PWideChar; BufSize: Integer): Integer; cdecl;
+function ListBox_GetTextBuf(AObj: TListBox; Buffer: PWideChar; BufSize: Integer): Integer; stdcall;
 begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
-function ListBox_FindComponent(AObj: TListBox; AName: PChar): TComponent; cdecl;
+function ListBox_FindComponent(AObj: TListBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
 end;
 
-function ListBox_GetNamePath(AObj: TListBox): PChar; cdecl;
+function ListBox_GetNamePath(AObj: TListBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.GetNamePath);
 end;
 
-procedure ListBox_Assign(AObj: TListBox; Source: TPersistent); cdecl;
+procedure ListBox_Assign(AObj: TListBox; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
 end;
 
-function ListBox_ClassName(AObj: TListBox): PChar; cdecl;
+function ListBox_ClassName(AObj: TListBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ClassName);
 end;
 
-function ListBox_Equals(AObj: TListBox; Obj: TObject): LongBool; cdecl;
+function ListBox_Equals(AObj: TListBox; Obj: TObject): LongBool; stdcall;
 begin
   Result :=  AObj.Equals(Obj);
 end;
 
-function ListBox_GetHashCode(AObj: TListBox): Integer; cdecl;
+function ListBox_GetHashCode(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.GetHashCode;
 end;
 
-function ListBox_ToString(AObj: TListBox): PChar; cdecl;
+function ListBox_ToString(AObj: TListBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.ToString);
 end;
 
-function ListBox_GetStyle(AObj: TListBox): TListBoxStyle; cdecl;
+function ListBox_GetStyle(AObj: TListBox): TListBoxStyle; stdcall;
 begin
   Result :=  AObj.Style;
 end;
 
-procedure ListBox_SetStyle(AObj: TListBox; AValue: TListBoxStyle); cdecl;
+procedure ListBox_SetStyle(AObj: TListBox; AValue: TListBoxStyle); stdcall;
 begin
   AObj.Style := AValue;
 end;
 
-function ListBox_GetAutoComplete(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetAutoComplete(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.AutoComplete;
 end;
 
-procedure ListBox_SetAutoComplete(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetAutoComplete(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.AutoComplete := AValue;
 end;
 
-function ListBox_GetAutoCompleteDelay(AObj: TListBox): Cardinal; cdecl;
+function ListBox_GetAutoCompleteDelay(AObj: TListBox): Cardinal; stdcall;
 begin
   Result :=  AObj.AutoCompleteDelay;
 end;
 
-procedure ListBox_SetAutoCompleteDelay(AObj: TListBox; AValue: Cardinal); cdecl;
+procedure ListBox_SetAutoCompleteDelay(AObj: TListBox; AValue: Cardinal); stdcall;
 begin
   AObj.AutoCompleteDelay := AValue;
 end;
 
-function ListBox_GetAlign(AObj: TListBox): TAlign; cdecl;
+function ListBox_GetAlign(AObj: TListBox): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
 end;
 
-procedure ListBox_SetAlign(AObj: TListBox; AValue: TAlign); cdecl;
+procedure ListBox_SetAlign(AObj: TListBox; AValue: TAlign); stdcall;
 begin
   AObj.Align := AValue;
 end;
 
-function ListBox_GetAnchors(AObj: TListBox): TAnchors; cdecl;
+function ListBox_GetAnchors(AObj: TListBox): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
 end;
 
-procedure ListBox_SetAnchors(AObj: TListBox; AValue: TAnchors); cdecl;
+procedure ListBox_SetAnchors(AObj: TListBox; AValue: TAnchors); stdcall;
 begin
   AObj.Anchors := AValue;
 end;
 
-function ListBox_GetBevelEdges(AObj: TListBox): TBevelEdges; cdecl;
+function ListBox_GetBevelEdges(AObj: TListBox): TBevelEdges; stdcall;
 begin
   Result :=  AObj.BevelEdges;
 end;
 
-procedure ListBox_SetBevelEdges(AObj: TListBox; AValue: TBevelEdges); cdecl;
+procedure ListBox_SetBevelEdges(AObj: TListBox; AValue: TBevelEdges); stdcall;
 begin
   AObj.BevelEdges := AValue;
 end;
 
-function ListBox_GetBevelInner(AObj: TListBox): TBevelCut; cdecl;
+function ListBox_GetBevelInner(AObj: TListBox): TBevelCut; stdcall;
 begin
   Result :=  AObj.BevelInner;
 end;
 
-procedure ListBox_SetBevelInner(AObj: TListBox; AValue: TBevelCut); cdecl;
+procedure ListBox_SetBevelInner(AObj: TListBox; AValue: TBevelCut); stdcall;
 begin
   AObj.BevelInner := AValue;
 end;
 
-function ListBox_GetBevelKind(AObj: TListBox): TBevelKind; cdecl;
+function ListBox_GetBevelKind(AObj: TListBox): TBevelKind; stdcall;
 begin
   Result :=  AObj.BevelKind;
 end;
 
-procedure ListBox_SetBevelKind(AObj: TListBox; AValue: TBevelKind); cdecl;
+procedure ListBox_SetBevelKind(AObj: TListBox; AValue: TBevelKind); stdcall;
 begin
   AObj.BevelKind := AValue;
 end;
 
-function ListBox_GetBevelOuter(AObj: TListBox): TBevelCut; cdecl;
+function ListBox_GetBevelOuter(AObj: TListBox): TBevelCut; stdcall;
 begin
   Result :=  AObj.BevelOuter;
 end;
 
-procedure ListBox_SetBevelOuter(AObj: TListBox; AValue: TBevelCut); cdecl;
+procedure ListBox_SetBevelOuter(AObj: TListBox; AValue: TBevelCut); stdcall;
 begin
   AObj.BevelOuter := AValue;
 end;
 
-function ListBox_GetBiDiMode(AObj: TListBox): TBiDiMode; cdecl;
+function ListBox_GetBiDiMode(AObj: TListBox): TBiDiMode; stdcall;
 begin
   Result :=  AObj.BiDiMode;
 end;
 
-procedure ListBox_SetBiDiMode(AObj: TListBox; AValue: TBiDiMode); cdecl;
+procedure ListBox_SetBiDiMode(AObj: TListBox; AValue: TBiDiMode); stdcall;
 begin
   AObj.BiDiMode := AValue;
 end;
 
-function ListBox_GetBorderStyle(AObj: TListBox): TBorderStyle; cdecl;
+function ListBox_GetBorderStyle(AObj: TListBox): TBorderStyle; stdcall;
 begin
   Result :=  AObj.BorderStyle;
 end;
 
-procedure ListBox_SetBorderStyle(AObj: TListBox; AValue: TBorderStyle); cdecl;
+procedure ListBox_SetBorderStyle(AObj: TListBox; AValue: TBorderStyle); stdcall;
 begin
   AObj.BorderStyle := AValue;
 end;
 
-function ListBox_GetColor(AObj: TListBox): TColor; cdecl;
+function ListBox_GetColor(AObj: TListBox): TColor; stdcall;
 begin
   Result :=  AObj.Color;
 end;
 
-procedure ListBox_SetColor(AObj: TListBox; AValue: TColor); cdecl;
+procedure ListBox_SetColor(AObj: TListBox; AValue: TColor); stdcall;
 begin
   AObj.Color := AValue;
 end;
 
-function ListBox_GetColumns(AObj: TListBox): Integer; cdecl;
+function ListBox_GetColumns(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.Columns;
 end;
 
-procedure ListBox_SetColumns(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetColumns(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.Columns := AValue;
 end;
 
-function ListBox_GetDoubleBuffered(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetDoubleBuffered(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.DoubleBuffered;
 end;
 
-procedure ListBox_SetDoubleBuffered(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetDoubleBuffered(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.DoubleBuffered := AValue;
 end;
 
-function ListBox_GetEnabled(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetEnabled(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.Enabled;
 end;
 
-procedure ListBox_SetEnabled(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetEnabled(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.Enabled := AValue;
 end;
 
-function ListBox_GetFont(AObj: TListBox): TFont; cdecl;
+function ListBox_GetFont(AObj: TListBox): TFont; stdcall;
 begin
   Result :=  AObj.Font;
 end;
 
-procedure ListBox_SetFont(AObj: TListBox; AValue: TFont); cdecl;
+procedure ListBox_SetFont(AObj: TListBox; AValue: TFont); stdcall;
 begin
   AObj.Font := AValue;
 end;
 
-function ListBox_GetItemHeight(AObj: TListBox): Integer; cdecl;
+function ListBox_GetItemHeight(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ItemHeight;
 end;
 
-procedure ListBox_SetItemHeight(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetItemHeight(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.ItemHeight := AValue;
 end;
 
-function ListBox_GetItems(AObj: TListBox): TStrings; cdecl;
+function ListBox_GetItems(AObj: TListBox): TStrings; stdcall;
 begin
   Result :=  AObj.Items;
 end;
 
-procedure ListBox_SetItems(AObj: TListBox; AValue: TStrings); cdecl;
+procedure ListBox_SetItems(AObj: TListBox; AValue: TStrings); stdcall;
 begin
   AObj.Items := AValue;
 end;
 
-function ListBox_GetMultiSelect(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetMultiSelect(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.MultiSelect;
 end;
 
-procedure ListBox_SetMultiSelect(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetMultiSelect(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.MultiSelect := AValue;
 end;
 
-function ListBox_GetParentColor(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetParentColor(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentColor;
 end;
 
-procedure ListBox_SetParentColor(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetParentColor(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentColor := AValue;
 end;
 
-function ListBox_GetParentCtl3D(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetParentCtl3D(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentCtl3D;
 end;
 
-procedure ListBox_SetParentCtl3D(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetParentCtl3D(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentCtl3D := AValue;
 end;
 
-function ListBox_GetParentDoubleBuffered(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetParentDoubleBuffered(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentDoubleBuffered;
 end;
 
-procedure ListBox_SetParentDoubleBuffered(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetParentDoubleBuffered(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentDoubleBuffered := AValue;
 end;
 
-function ListBox_GetParentFont(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetParentFont(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentFont;
 end;
 
-procedure ListBox_SetParentFont(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetParentFont(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentFont := AValue;
 end;
 
-function ListBox_GetParentShowHint(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetParentShowHint(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ParentShowHint;
 end;
 
-procedure ListBox_SetParentShowHint(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetParentShowHint(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ParentShowHint := AValue;
 end;
 
-function ListBox_GetPopupMenu(AObj: TListBox): TPopupMenu; cdecl;
+function ListBox_GetPopupMenu(AObj: TListBox): TPopupMenu; stdcall;
 begin
   Result :=  AObj.PopupMenu;
 end;
 
-procedure ListBox_SetPopupMenu(AObj: TListBox; AValue: TPopupMenu); cdecl;
+procedure ListBox_SetPopupMenu(AObj: TListBox; AValue: TPopupMenu); stdcall;
 begin
   AObj.PopupMenu := AValue;
 end;
 
-function ListBox_GetShowHint(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetShowHint(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.ShowHint;
 end;
 
-procedure ListBox_SetShowHint(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetShowHint(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
 end;
 
-function ListBox_GetSorted(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetSorted(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.Sorted;
 end;
 
-procedure ListBox_SetSorted(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetSorted(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.Sorted := AValue;
 end;
 
-function ListBox_GetTabOrder(AObj: TListBox): TTabOrder; cdecl;
+function ListBox_GetTabOrder(AObj: TListBox): TTabOrder; stdcall;
 begin
   Result :=  AObj.TabOrder;
 end;
 
-procedure ListBox_SetTabOrder(AObj: TListBox; AValue: TTabOrder); cdecl;
+procedure ListBox_SetTabOrder(AObj: TListBox; AValue: TTabOrder); stdcall;
 begin
   AObj.TabOrder := AValue;
 end;
 
-function ListBox_GetTabStop(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetTabStop(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.TabStop;
 end;
 
-procedure ListBox_SetTabStop(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetTabStop(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.TabStop := AValue;
 end;
 
-function ListBox_GetTabWidth(AObj: TListBox): Integer; cdecl;
+function ListBox_GetTabWidth(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.TabWidth;
 end;
 
-procedure ListBox_SetTabWidth(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetTabWidth(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.TabWidth := AValue;
 end;
 
-function ListBox_GetVisible(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetVisible(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.Visible;
 end;
 
-procedure ListBox_SetVisible(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetVisible(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.Visible := AValue;
 end;
 
-function ListBox_GetStyleElements(AObj: TListBox): TStyleElements; cdecl;
+function ListBox_GetStyleElements(AObj: TListBox): TStyleElements; stdcall;
 begin
   Result :=  AObj.StyleElements;
 end;
 
-procedure ListBox_SetStyleElements(AObj: TListBox; AValue: TStyleElements); cdecl;
+procedure ListBox_SetStyleElements(AObj: TListBox; AValue: TStyleElements); stdcall;
 begin
   AObj.StyleElements := AValue;
 end;
 
-procedure ListBox_SetOnClick(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnClick(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -502,7 +502,7 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
-procedure ListBox_SetOnDblClick(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnDblClick(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -514,7 +514,7 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
-procedure ListBox_SetOnEnter(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnEnter(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -526,7 +526,7 @@ begin
   TEventClass.Add(AObj, geEnter, AEventId);
 end;
 
-procedure ListBox_SetOnExit(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnExit(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -538,7 +538,7 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
-procedure ListBox_SetOnKeyDown(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnKeyDown(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -550,7 +550,7 @@ begin
   TEventClass.Add(AObj, geKeyDown, AEventId);
 end;
 
-procedure ListBox_SetOnKeyPress(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnKeyPress(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -562,7 +562,7 @@ begin
   TEventClass.Add(AObj, geKeyPress, AEventId);
 end;
 
-procedure ListBox_SetOnKeyUp(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnKeyUp(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -574,7 +574,7 @@ begin
   TEventClass.Add(AObj, geKeyUp, AEventId);
 end;
 
-procedure ListBox_SetOnMouseDown(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnMouseDown(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -586,7 +586,7 @@ begin
   TEventClass.Add(AObj, geMouseDown, AEventId);
 end;
 
-procedure ListBox_SetOnMouseEnter(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnMouseEnter(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -598,7 +598,7 @@ begin
   TEventClass.Add(AObj, geMouseEnter, AEventId);
 end;
 
-procedure ListBox_SetOnMouseLeave(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnMouseLeave(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -610,7 +610,7 @@ begin
   TEventClass.Add(AObj, geMouseLeave, AEventId);
 end;
 
-procedure ListBox_SetOnMouseMove(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnMouseMove(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -622,7 +622,7 @@ begin
   TEventClass.Add(AObj, geMouseMove, AEventId);
 end;
 
-procedure ListBox_SetOnMouseUp(AObj: TListBox; AEventId: NativeUInt); stdcall
+procedure ListBox_SetOnMouseUp(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
   begin
@@ -634,427 +634,427 @@ begin
   TEventClass.Add(AObj, geMouseUp, AEventId);
 end;
 
-function ListBox_GetCanvas(AObj: TListBox): TCanvas; cdecl;
+function ListBox_GetCanvas(AObj: TListBox): TCanvas; stdcall;
 begin
   Result :=  AObj.Canvas;
 end;
 
-function ListBox_GetSelCount(AObj: TListBox): Integer; cdecl;
+function ListBox_GetSelCount(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.SelCount;
 end;
 
-function ListBox_GetItemIndex(AObj: TListBox): Integer; cdecl;
+function ListBox_GetItemIndex(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ItemIndex;
 end;
 
-procedure ListBox_SetItemIndex(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetItemIndex(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.ItemIndex := AValue;
 end;
 
-function ListBox_GetBrush(AObj: TListBox): TBrush; cdecl;
+function ListBox_GetBrush(AObj: TListBox): TBrush; stdcall;
 begin
   Result :=  AObj.Brush;
 end;
 
-function ListBox_GetControlCount(AObj: TListBox): Integer; cdecl;
+function ListBox_GetControlCount(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ControlCount;
 end;
 
-function ListBox_GetHandle(AObj: TListBox): HWND; cdecl;
+function ListBox_GetHandle(AObj: TListBox): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
 end;
 
-function ListBox_GetParentWindow(AObj: TListBox): HWND; cdecl;
+function ListBox_GetParentWindow(AObj: TListBox): HWND; stdcall;
 begin
   Result :=  AObj.ParentWindow;
 end;
 
-procedure ListBox_SetParentWindow(AObj: TListBox; AValue: HWND); cdecl;
+procedure ListBox_SetParentWindow(AObj: TListBox; AValue: HWND); stdcall;
 begin
   AObj.ParentWindow := AValue;
 end;
 
-function ListBox_GetAction(AObj: TListBox): TBasicAction; cdecl;
+function ListBox_GetAction(AObj: TListBox): TBasicAction; stdcall;
 begin
   Result :=  AObj.Action;
 end;
 
-procedure ListBox_SetAction(AObj: TListBox; AValue: TBasicAction); cdecl;
+procedure ListBox_SetAction(AObj: TListBox; AValue: TBasicAction); stdcall;
 begin
   AObj.Action := AValue;
 end;
 
-procedure ListBox_GetBoundsRect(AObj: TListBox; var Result: TRect); cdecl;
+procedure ListBox_GetBoundsRect(AObj: TListBox; var Result: TRect); stdcall;
 begin
   Result :=  AObj.BoundsRect;
 end;
 
-procedure ListBox_SetBoundsRect(AObj: TListBox; var AValue: TRect); cdecl;
+procedure ListBox_SetBoundsRect(AObj: TListBox; var AValue: TRect); stdcall;
 begin
   AObj.BoundsRect := AValue;
 end;
 
-function ListBox_GetClientHeight(AObj: TListBox): Integer; cdecl;
+function ListBox_GetClientHeight(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ClientHeight;
 end;
 
-procedure ListBox_SetClientHeight(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetClientHeight(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.ClientHeight := AValue;
 end;
 
-procedure ListBox_GetClientRect(AObj: TListBox; var Result: TRect); cdecl;
+procedure ListBox_GetClientRect(AObj: TListBox; var Result: TRect); stdcall;
 begin
   Result :=  AObj.ClientRect;
 end;
 
-function ListBox_GetClientWidth(AObj: TListBox): Integer; cdecl;
+function ListBox_GetClientWidth(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ClientWidth;
 end;
 
-procedure ListBox_SetClientWidth(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetClientWidth(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.ClientWidth := AValue;
 end;
 
-function ListBox_GetExplicitLeft(AObj: TListBox): Integer; cdecl;
+function ListBox_GetExplicitLeft(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitLeft;
 end;
 
-function ListBox_GetExplicitTop(AObj: TListBox): Integer; cdecl;
+function ListBox_GetExplicitTop(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitTop;
 end;
 
-function ListBox_GetExplicitWidth(AObj: TListBox): Integer; cdecl;
+function ListBox_GetExplicitWidth(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitWidth;
 end;
 
-function ListBox_GetExplicitHeight(AObj: TListBox): Integer; cdecl;
+function ListBox_GetExplicitHeight(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ExplicitHeight;
 end;
 
-function ListBox_GetParent(AObj: TListBox): TWinControl; cdecl;
+function ListBox_GetParent(AObj: TListBox): TWinControl; stdcall;
 begin
   Result :=  AObj.Parent;
 end;
 
-procedure ListBox_SetParent(AObj: TListBox; AValue: TWinControl); cdecl;
+procedure ListBox_SetParent(AObj: TListBox; AValue: TWinControl); stdcall;
 begin
   AObj.Parent := AValue;
 end;
 
-function ListBox_GetAlignWithMargins(AObj: TListBox): LongBool; cdecl;
+function ListBox_GetAlignWithMargins(AObj: TListBox): LongBool; stdcall;
 begin
   Result :=  AObj.AlignWithMargins;
 end;
 
-procedure ListBox_SetAlignWithMargins(AObj: TListBox; AValue: LongBool); cdecl;
+procedure ListBox_SetAlignWithMargins(AObj: TListBox; AValue: LongBool); stdcall;
 begin
   AObj.AlignWithMargins := AValue;
 end;
 
-function ListBox_GetLeft(AObj: TListBox): Integer; cdecl;
+function ListBox_GetLeft(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.Left;
 end;
 
-procedure ListBox_SetLeft(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetLeft(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.Left := AValue;
 end;
 
-function ListBox_GetTop(AObj: TListBox): Integer; cdecl;
+function ListBox_GetTop(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.Top;
 end;
 
-procedure ListBox_SetTop(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetTop(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.Top := AValue;
 end;
 
-function ListBox_GetWidth(AObj: TListBox): Integer; cdecl;
+function ListBox_GetWidth(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.Width;
 end;
 
-procedure ListBox_SetWidth(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetWidth(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.Width := AValue;
 end;
 
-function ListBox_GetHeight(AObj: TListBox): Integer; cdecl;
+function ListBox_GetHeight(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.Height;
 end;
 
-procedure ListBox_SetHeight(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetHeight(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.Height := AValue;
 end;
 
-function ListBox_GetCursor(AObj: TListBox): TCursor; cdecl;
+function ListBox_GetCursor(AObj: TListBox): TCursor; stdcall;
 begin
   Result :=  AObj.Cursor;
 end;
 
-procedure ListBox_SetCursor(AObj: TListBox; AValue: TCursor); cdecl;
+procedure ListBox_SetCursor(AObj: TListBox; AValue: TCursor); stdcall;
 begin
   AObj.Cursor := AValue;
 end;
 
-function ListBox_GetHint(AObj: TListBox): PChar; cdecl;
+function ListBox_GetHint(AObj: TListBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Hint);
 end;
 
-procedure ListBox_SetHint(AObj: TListBox; AValue: PChar); cdecl;
+procedure ListBox_SetHint(AObj: TListBox; AValue: PChar); stdcall;
 begin
   AObj.Hint := AValue;
 end;
 
-function ListBox_GetMargins(AObj: TListBox): TMargins; cdecl;
+function ListBox_GetMargins(AObj: TListBox): TMargins; stdcall;
 begin
   Result :=  AObj.Margins;
 end;
 
-procedure ListBox_SetMargins(AObj: TListBox; AValue: TMargins); cdecl;
+procedure ListBox_SetMargins(AObj: TListBox; AValue: TMargins); stdcall;
 begin
   AObj.Margins := AValue;
 end;
 
-function ListBox_GetComponentCount(AObj: TListBox): Integer; cdecl;
+function ListBox_GetComponentCount(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
 end;
 
-function ListBox_GetComponentIndex(AObj: TListBox): Integer; cdecl;
+function ListBox_GetComponentIndex(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentIndex;
 end;
 
-procedure ListBox_SetComponentIndex(AObj: TListBox; AValue: Integer); cdecl;
+procedure ListBox_SetComponentIndex(AObj: TListBox; AValue: Integer); stdcall;
 begin
   AObj.ComponentIndex := AValue;
 end;
 
-function ListBox_GetOwner(AObj: TListBox): TComponent; cdecl;
+function ListBox_GetOwner(AObj: TListBox): TComponent; stdcall;
 begin
   Result :=  AObj.Owner;
 end;
 
-function ListBox_GetName(AObj: TListBox): PChar; cdecl;
+function ListBox_GetName(AObj: TListBox): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Name);
 end;
 
-procedure ListBox_SetName(AObj: TListBox; AValue: PChar); cdecl;
+procedure ListBox_SetName(AObj: TListBox; AValue: PChar); stdcall;
 begin
   AObj.Name := AValue;
 end;
 
-function ListBox_GetTag(AObj: TListBox): NativeInt; cdecl;
+function ListBox_GetTag(AObj: TListBox): NativeInt; stdcall;
 begin
   Result :=  AObj.Tag;
 end;
 
-procedure ListBox_SetTag(AObj: TListBox; AValue: NativeInt); cdecl;
+procedure ListBox_SetTag(AObj: TListBox; AValue: NativeInt); stdcall;
 begin
   AObj.Tag := AValue;
 end;
 
-function ListBox_GetSelected(AObj: TListBox; Index: Integer): LongBool; cdecl;
+function ListBox_GetSelected(AObj: TListBox; Index: Integer): LongBool; stdcall;
 begin
   Result :=  AObj.Selected[Index];
 end;
 
-procedure ListBox_SetSelected(AObj: TListBox; Index: Integer; AValue: LongBool); cdecl;
+procedure ListBox_SetSelected(AObj: TListBox; Index: Integer; AValue: LongBool); stdcall;
 begin
   AObj.Selected[Index] := AValue;
 end;
 
-function ListBox_GetControls(AObj: TListBox; Index: Integer): TControl; cdecl;
+function ListBox_GetControls(AObj: TListBox; Index: Integer): TControl; stdcall;
 begin
   Result :=  AObj.Controls[Index];
 end;
 
-function ListBox_GetComponents(AObj: TListBox; AIndex: Integer): TComponent; cdecl;
+function ListBox_GetComponents(AObj: TListBox; AIndex: Integer): TComponent; stdcall;
 begin
   Result :=  AObj.Components[AIndex];
 end;
 
 
 exports
-  ListBox_Create {$IFNDEF MSWINDOWS}name '_ListBox_Create'{$ENDIF},
-  ListBox_Free {$IFNDEF MSWINDOWS}name '_ListBox_Free'{$ENDIF},
-  ListBox_AddItem {$IFNDEF MSWINDOWS}name '_ListBox_AddItem'{$ENDIF},
-  ListBox_Clear {$IFNDEF MSWINDOWS}name '_ListBox_Clear'{$ENDIF},
-  ListBox_ClearSelection {$IFNDEF MSWINDOWS}name '_ListBox_ClearSelection'{$ENDIF},
-  ListBox_DeleteSelected {$IFNDEF MSWINDOWS}name '_ListBox_DeleteSelected'{$ENDIF},
-  ListBox_SelectAll {$IFNDEF MSWINDOWS}name '_ListBox_SelectAll'{$ENDIF},
-  ListBox_CanFocus {$IFNDEF MSWINDOWS}name '_ListBox_CanFocus'{$ENDIF},
-  ListBox_FlipChildren {$IFNDEF MSWINDOWS}name '_ListBox_FlipChildren'{$ENDIF},
-  ListBox_Focused {$IFNDEF MSWINDOWS}name '_ListBox_Focused'{$ENDIF},
-  ListBox_HandleAllocated {$IFNDEF MSWINDOWS}name '_ListBox_HandleAllocated'{$ENDIF},
-  ListBox_Invalidate {$IFNDEF MSWINDOWS}name '_ListBox_Invalidate'{$ENDIF},
-  ListBox_Realign {$IFNDEF MSWINDOWS}name '_ListBox_Realign'{$ENDIF},
-  ListBox_Repaint {$IFNDEF MSWINDOWS}name '_ListBox_Repaint'{$ENDIF},
-  ListBox_ScaleBy {$IFNDEF MSWINDOWS}name '_ListBox_ScaleBy'{$ENDIF},
-  ListBox_SetBounds {$IFNDEF MSWINDOWS}name '_ListBox_SetBounds'{$ENDIF},
-  ListBox_SetFocus {$IFNDEF MSWINDOWS}name '_ListBox_SetFocus'{$ENDIF},
-  ListBox_Update {$IFNDEF MSWINDOWS}name '_ListBox_Update'{$ENDIF},
-  ListBox_BringToFront {$IFNDEF MSWINDOWS}name '_ListBox_BringToFront'{$ENDIF},
-  ListBox_HasParent {$IFNDEF MSWINDOWS}name '_ListBox_HasParent'{$ENDIF},
-  ListBox_Hide {$IFNDEF MSWINDOWS}name '_ListBox_Hide'{$ENDIF},
-  ListBox_Perform {$IFNDEF MSWINDOWS}name '_ListBox_Perform'{$ENDIF},
-  ListBox_Refresh {$IFNDEF MSWINDOWS}name '_ListBox_Refresh'{$ENDIF},
-  ListBox_SendToBack {$IFNDEF MSWINDOWS}name '_ListBox_SendToBack'{$ENDIF},
-  ListBox_Show {$IFNDEF MSWINDOWS}name '_ListBox_Show'{$ENDIF},
-  ListBox_GetTextBuf {$IFNDEF MSWINDOWS}name '_ListBox_GetTextBuf'{$ENDIF},
-  ListBox_FindComponent {$IFNDEF MSWINDOWS}name '_ListBox_FindComponent'{$ENDIF},
-  ListBox_GetNamePath {$IFNDEF MSWINDOWS}name '_ListBox_GetNamePath'{$ENDIF},
-  ListBox_Assign {$IFNDEF MSWINDOWS}name '_ListBox_Assign'{$ENDIF},
-  ListBox_ClassName {$IFNDEF MSWINDOWS}name '_ListBox_ClassName'{$ENDIF},
-  ListBox_Equals {$IFNDEF MSWINDOWS}name '_ListBox_Equals'{$ENDIF},
-  ListBox_GetHashCode {$IFNDEF MSWINDOWS}name '_ListBox_GetHashCode'{$ENDIF},
-  ListBox_ToString {$IFNDEF MSWINDOWS}name '_ListBox_ToString'{$ENDIF},
-  ListBox_GetStyle {$IFNDEF MSWINDOWS}name '_ListBox_GetStyle'{$ENDIF},
-  ListBox_SetStyle {$IFNDEF MSWINDOWS}name '_ListBox_SetStyle'{$ENDIF},
-  ListBox_GetAutoComplete {$IFNDEF MSWINDOWS}name '_ListBox_GetAutoComplete'{$ENDIF},
-  ListBox_SetAutoComplete {$IFNDEF MSWINDOWS}name '_ListBox_SetAutoComplete'{$ENDIF},
-  ListBox_GetAutoCompleteDelay {$IFNDEF MSWINDOWS}name '_ListBox_GetAutoCompleteDelay'{$ENDIF},
-  ListBox_SetAutoCompleteDelay {$IFNDEF MSWINDOWS}name '_ListBox_SetAutoCompleteDelay'{$ENDIF},
-  ListBox_GetAlign {$IFNDEF MSWINDOWS}name '_ListBox_GetAlign'{$ENDIF},
-  ListBox_SetAlign {$IFNDEF MSWINDOWS}name '_ListBox_SetAlign'{$ENDIF},
-  ListBox_GetAnchors {$IFNDEF MSWINDOWS}name '_ListBox_GetAnchors'{$ENDIF},
-  ListBox_SetAnchors {$IFNDEF MSWINDOWS}name '_ListBox_SetAnchors'{$ENDIF},
-  ListBox_GetBevelEdges {$IFNDEF MSWINDOWS}name '_ListBox_GetBevelEdges'{$ENDIF},
-  ListBox_SetBevelEdges {$IFNDEF MSWINDOWS}name '_ListBox_SetBevelEdges'{$ENDIF},
-  ListBox_GetBevelInner {$IFNDEF MSWINDOWS}name '_ListBox_GetBevelInner'{$ENDIF},
-  ListBox_SetBevelInner {$IFNDEF MSWINDOWS}name '_ListBox_SetBevelInner'{$ENDIF},
-  ListBox_GetBevelKind {$IFNDEF MSWINDOWS}name '_ListBox_GetBevelKind'{$ENDIF},
-  ListBox_SetBevelKind {$IFNDEF MSWINDOWS}name '_ListBox_SetBevelKind'{$ENDIF},
-  ListBox_GetBevelOuter {$IFNDEF MSWINDOWS}name '_ListBox_GetBevelOuter'{$ENDIF},
-  ListBox_SetBevelOuter {$IFNDEF MSWINDOWS}name '_ListBox_SetBevelOuter'{$ENDIF},
-  ListBox_GetBiDiMode {$IFNDEF MSWINDOWS}name '_ListBox_GetBiDiMode'{$ENDIF},
-  ListBox_SetBiDiMode {$IFNDEF MSWINDOWS}name '_ListBox_SetBiDiMode'{$ENDIF},
-  ListBox_GetBorderStyle {$IFNDEF MSWINDOWS}name '_ListBox_GetBorderStyle'{$ENDIF},
-  ListBox_SetBorderStyle {$IFNDEF MSWINDOWS}name '_ListBox_SetBorderStyle'{$ENDIF},
-  ListBox_GetColor {$IFNDEF MSWINDOWS}name '_ListBox_GetColor'{$ENDIF},
-  ListBox_SetColor {$IFNDEF MSWINDOWS}name '_ListBox_SetColor'{$ENDIF},
-  ListBox_GetColumns {$IFNDEF MSWINDOWS}name '_ListBox_GetColumns'{$ENDIF},
-  ListBox_SetColumns {$IFNDEF MSWINDOWS}name '_ListBox_SetColumns'{$ENDIF},
-  ListBox_GetDoubleBuffered {$IFNDEF MSWINDOWS}name '_ListBox_GetDoubleBuffered'{$ENDIF},
-  ListBox_SetDoubleBuffered {$IFNDEF MSWINDOWS}name '_ListBox_SetDoubleBuffered'{$ENDIF},
-  ListBox_GetEnabled {$IFNDEF MSWINDOWS}name '_ListBox_GetEnabled'{$ENDIF},
-  ListBox_SetEnabled {$IFNDEF MSWINDOWS}name '_ListBox_SetEnabled'{$ENDIF},
-  ListBox_GetFont {$IFNDEF MSWINDOWS}name '_ListBox_GetFont'{$ENDIF},
-  ListBox_SetFont {$IFNDEF MSWINDOWS}name '_ListBox_SetFont'{$ENDIF},
-  ListBox_GetItemHeight {$IFNDEF MSWINDOWS}name '_ListBox_GetItemHeight'{$ENDIF},
-  ListBox_SetItemHeight {$IFNDEF MSWINDOWS}name '_ListBox_SetItemHeight'{$ENDIF},
-  ListBox_GetItems {$IFNDEF MSWINDOWS}name '_ListBox_GetItems'{$ENDIF},
-  ListBox_SetItems {$IFNDEF MSWINDOWS}name '_ListBox_SetItems'{$ENDIF},
-  ListBox_GetMultiSelect {$IFNDEF MSWINDOWS}name '_ListBox_GetMultiSelect'{$ENDIF},
-  ListBox_SetMultiSelect {$IFNDEF MSWINDOWS}name '_ListBox_SetMultiSelect'{$ENDIF},
-  ListBox_GetParentColor {$IFNDEF MSWINDOWS}name '_ListBox_GetParentColor'{$ENDIF},
-  ListBox_SetParentColor {$IFNDEF MSWINDOWS}name '_ListBox_SetParentColor'{$ENDIF},
-  ListBox_GetParentCtl3D {$IFNDEF MSWINDOWS}name '_ListBox_GetParentCtl3D'{$ENDIF},
-  ListBox_SetParentCtl3D {$IFNDEF MSWINDOWS}name '_ListBox_SetParentCtl3D'{$ENDIF},
-  ListBox_GetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_ListBox_GetParentDoubleBuffered'{$ENDIF},
-  ListBox_SetParentDoubleBuffered {$IFNDEF MSWINDOWS}name '_ListBox_SetParentDoubleBuffered'{$ENDIF},
-  ListBox_GetParentFont {$IFNDEF MSWINDOWS}name '_ListBox_GetParentFont'{$ENDIF},
-  ListBox_SetParentFont {$IFNDEF MSWINDOWS}name '_ListBox_SetParentFont'{$ENDIF},
-  ListBox_GetParentShowHint {$IFNDEF MSWINDOWS}name '_ListBox_GetParentShowHint'{$ENDIF},
-  ListBox_SetParentShowHint {$IFNDEF MSWINDOWS}name '_ListBox_SetParentShowHint'{$ENDIF},
-  ListBox_GetPopupMenu {$IFNDEF MSWINDOWS}name '_ListBox_GetPopupMenu'{$ENDIF},
-  ListBox_SetPopupMenu {$IFNDEF MSWINDOWS}name '_ListBox_SetPopupMenu'{$ENDIF},
-  ListBox_GetShowHint {$IFNDEF MSWINDOWS}name '_ListBox_GetShowHint'{$ENDIF},
-  ListBox_SetShowHint {$IFNDEF MSWINDOWS}name '_ListBox_SetShowHint'{$ENDIF},
-  ListBox_GetSorted {$IFNDEF MSWINDOWS}name '_ListBox_GetSorted'{$ENDIF},
-  ListBox_SetSorted {$IFNDEF MSWINDOWS}name '_ListBox_SetSorted'{$ENDIF},
-  ListBox_GetTabOrder {$IFNDEF MSWINDOWS}name '_ListBox_GetTabOrder'{$ENDIF},
-  ListBox_SetTabOrder {$IFNDEF MSWINDOWS}name '_ListBox_SetTabOrder'{$ENDIF},
-  ListBox_GetTabStop {$IFNDEF MSWINDOWS}name '_ListBox_GetTabStop'{$ENDIF},
-  ListBox_SetTabStop {$IFNDEF MSWINDOWS}name '_ListBox_SetTabStop'{$ENDIF},
-  ListBox_GetTabWidth {$IFNDEF MSWINDOWS}name '_ListBox_GetTabWidth'{$ENDIF},
-  ListBox_SetTabWidth {$IFNDEF MSWINDOWS}name '_ListBox_SetTabWidth'{$ENDIF},
-  ListBox_GetVisible {$IFNDEF MSWINDOWS}name '_ListBox_GetVisible'{$ENDIF},
-  ListBox_SetVisible {$IFNDEF MSWINDOWS}name '_ListBox_SetVisible'{$ENDIF},
-  ListBox_GetStyleElements {$IFNDEF MSWINDOWS}name '_ListBox_GetStyleElements'{$ENDIF},
-  ListBox_SetStyleElements {$IFNDEF MSWINDOWS}name '_ListBox_SetStyleElements'{$ENDIF},
-  ListBox_SetOnClick {$IFNDEF MSWINDOWS}name '_ListBox_SetOnClick'{$ENDIF},
-  ListBox_SetOnDblClick {$IFNDEF MSWINDOWS}name '_ListBox_SetOnDblClick'{$ENDIF},
-  ListBox_SetOnEnter {$IFNDEF MSWINDOWS}name '_ListBox_SetOnEnter'{$ENDIF},
-  ListBox_SetOnExit {$IFNDEF MSWINDOWS}name '_ListBox_SetOnExit'{$ENDIF},
-  ListBox_SetOnKeyDown {$IFNDEF MSWINDOWS}name '_ListBox_SetOnKeyDown'{$ENDIF},
-  ListBox_SetOnKeyPress {$IFNDEF MSWINDOWS}name '_ListBox_SetOnKeyPress'{$ENDIF},
-  ListBox_SetOnKeyUp {$IFNDEF MSWINDOWS}name '_ListBox_SetOnKeyUp'{$ENDIF},
-  ListBox_SetOnMouseDown {$IFNDEF MSWINDOWS}name '_ListBox_SetOnMouseDown'{$ENDIF},
-  ListBox_SetOnMouseEnter {$IFNDEF MSWINDOWS}name '_ListBox_SetOnMouseEnter'{$ENDIF},
-  ListBox_SetOnMouseLeave {$IFNDEF MSWINDOWS}name '_ListBox_SetOnMouseLeave'{$ENDIF},
-  ListBox_SetOnMouseMove {$IFNDEF MSWINDOWS}name '_ListBox_SetOnMouseMove'{$ENDIF},
-  ListBox_SetOnMouseUp {$IFNDEF MSWINDOWS}name '_ListBox_SetOnMouseUp'{$ENDIF},
-  ListBox_GetCanvas {$IFNDEF MSWINDOWS}name '_ListBox_GetCanvas'{$ENDIF},
-  ListBox_GetSelCount {$IFNDEF MSWINDOWS}name '_ListBox_GetSelCount'{$ENDIF},
-  ListBox_GetItemIndex {$IFNDEF MSWINDOWS}name '_ListBox_GetItemIndex'{$ENDIF},
-  ListBox_SetItemIndex {$IFNDEF MSWINDOWS}name '_ListBox_SetItemIndex'{$ENDIF},
-  ListBox_GetBrush {$IFNDEF MSWINDOWS}name '_ListBox_GetBrush'{$ENDIF},
-  ListBox_GetControlCount {$IFNDEF MSWINDOWS}name '_ListBox_GetControlCount'{$ENDIF},
-  ListBox_GetHandle {$IFNDEF MSWINDOWS}name '_ListBox_GetHandle'{$ENDIF},
-  ListBox_GetParentWindow {$IFNDEF MSWINDOWS}name '_ListBox_GetParentWindow'{$ENDIF},
-  ListBox_SetParentWindow {$IFNDEF MSWINDOWS}name '_ListBox_SetParentWindow'{$ENDIF},
-  ListBox_GetAction {$IFNDEF MSWINDOWS}name '_ListBox_GetAction'{$ENDIF},
-  ListBox_SetAction {$IFNDEF MSWINDOWS}name '_ListBox_SetAction'{$ENDIF},
-  ListBox_GetBoundsRect {$IFNDEF MSWINDOWS}name '_ListBox_GetBoundsRect'{$ENDIF},
-  ListBox_SetBoundsRect {$IFNDEF MSWINDOWS}name '_ListBox_SetBoundsRect'{$ENDIF},
-  ListBox_GetClientHeight {$IFNDEF MSWINDOWS}name '_ListBox_GetClientHeight'{$ENDIF},
-  ListBox_SetClientHeight {$IFNDEF MSWINDOWS}name '_ListBox_SetClientHeight'{$ENDIF},
-  ListBox_GetClientRect {$IFNDEF MSWINDOWS}name '_ListBox_GetClientRect'{$ENDIF},
-  ListBox_GetClientWidth {$IFNDEF MSWINDOWS}name '_ListBox_GetClientWidth'{$ENDIF},
-  ListBox_SetClientWidth {$IFNDEF MSWINDOWS}name '_ListBox_SetClientWidth'{$ENDIF},
-  ListBox_GetExplicitLeft {$IFNDEF MSWINDOWS}name '_ListBox_GetExplicitLeft'{$ENDIF},
-  ListBox_GetExplicitTop {$IFNDEF MSWINDOWS}name '_ListBox_GetExplicitTop'{$ENDIF},
-  ListBox_GetExplicitWidth {$IFNDEF MSWINDOWS}name '_ListBox_GetExplicitWidth'{$ENDIF},
-  ListBox_GetExplicitHeight {$IFNDEF MSWINDOWS}name '_ListBox_GetExplicitHeight'{$ENDIF},
-  ListBox_GetParent {$IFNDEF MSWINDOWS}name '_ListBox_GetParent'{$ENDIF},
-  ListBox_SetParent {$IFNDEF MSWINDOWS}name '_ListBox_SetParent'{$ENDIF},
-  ListBox_GetAlignWithMargins {$IFNDEF MSWINDOWS}name '_ListBox_GetAlignWithMargins'{$ENDIF},
-  ListBox_SetAlignWithMargins {$IFNDEF MSWINDOWS}name '_ListBox_SetAlignWithMargins'{$ENDIF},
-  ListBox_GetLeft {$IFNDEF MSWINDOWS}name '_ListBox_GetLeft'{$ENDIF},
-  ListBox_SetLeft {$IFNDEF MSWINDOWS}name '_ListBox_SetLeft'{$ENDIF},
-  ListBox_GetTop {$IFNDEF MSWINDOWS}name '_ListBox_GetTop'{$ENDIF},
-  ListBox_SetTop {$IFNDEF MSWINDOWS}name '_ListBox_SetTop'{$ENDIF},
-  ListBox_GetWidth {$IFNDEF MSWINDOWS}name '_ListBox_GetWidth'{$ENDIF},
-  ListBox_SetWidth {$IFNDEF MSWINDOWS}name '_ListBox_SetWidth'{$ENDIF},
-  ListBox_GetHeight {$IFNDEF MSWINDOWS}name '_ListBox_GetHeight'{$ENDIF},
-  ListBox_SetHeight {$IFNDEF MSWINDOWS}name '_ListBox_SetHeight'{$ENDIF},
-  ListBox_GetCursor {$IFNDEF MSWINDOWS}name '_ListBox_GetCursor'{$ENDIF},
-  ListBox_SetCursor {$IFNDEF MSWINDOWS}name '_ListBox_SetCursor'{$ENDIF},
-  ListBox_GetHint {$IFNDEF MSWINDOWS}name '_ListBox_GetHint'{$ENDIF},
-  ListBox_SetHint {$IFNDEF MSWINDOWS}name '_ListBox_SetHint'{$ENDIF},
-  ListBox_GetMargins {$IFNDEF MSWINDOWS}name '_ListBox_GetMargins'{$ENDIF},
-  ListBox_SetMargins {$IFNDEF MSWINDOWS}name '_ListBox_SetMargins'{$ENDIF},
-  ListBox_GetComponentCount {$IFNDEF MSWINDOWS}name '_ListBox_GetComponentCount'{$ENDIF},
-  ListBox_GetComponentIndex {$IFNDEF MSWINDOWS}name '_ListBox_GetComponentIndex'{$ENDIF},
-  ListBox_SetComponentIndex {$IFNDEF MSWINDOWS}name '_ListBox_SetComponentIndex'{$ENDIF},
-  ListBox_GetOwner {$IFNDEF MSWINDOWS}name '_ListBox_GetOwner'{$ENDIF},
-  ListBox_GetName {$IFNDEF MSWINDOWS}name '_ListBox_GetName'{$ENDIF},
-  ListBox_SetName {$IFNDEF MSWINDOWS}name '_ListBox_SetName'{$ENDIF},
-  ListBox_GetTag {$IFNDEF MSWINDOWS}name '_ListBox_GetTag'{$ENDIF},
-  ListBox_SetTag {$IFNDEF MSWINDOWS}name '_ListBox_SetTag'{$ENDIF},
-  ListBox_GetSelected {$IFNDEF MSWINDOWS}name '_ListBox_GetSelected'{$ENDIF},
-  ListBox_SetSelected {$IFNDEF MSWINDOWS}name '_ListBox_SetSelected'{$ENDIF},
-  ListBox_GetControls {$IFNDEF MSWINDOWS}name '_ListBox_GetControls'{$ENDIF},
-  ListBox_GetComponents {$IFNDEF MSWINDOWS}name '_ListBox_GetComponents'{$ENDIF};
+  ListBox_Create,
+  ListBox_Free,
+  ListBox_AddItem,
+  ListBox_Clear,
+  ListBox_ClearSelection,
+  ListBox_DeleteSelected,
+  ListBox_SelectAll,
+  ListBox_CanFocus,
+  ListBox_FlipChildren,
+  ListBox_Focused,
+  ListBox_HandleAllocated,
+  ListBox_Invalidate,
+  ListBox_Realign,
+  ListBox_Repaint,
+  ListBox_ScaleBy,
+  ListBox_SetBounds,
+  ListBox_SetFocus,
+  ListBox_Update,
+  ListBox_BringToFront,
+  ListBox_HasParent,
+  ListBox_Hide,
+  ListBox_Perform,
+  ListBox_Refresh,
+  ListBox_SendToBack,
+  ListBox_Show,
+  ListBox_GetTextBuf,
+  ListBox_FindComponent,
+  ListBox_GetNamePath,
+  ListBox_Assign,
+  ListBox_ClassName,
+  ListBox_Equals,
+  ListBox_GetHashCode,
+  ListBox_ToString,
+  ListBox_GetStyle,
+  ListBox_SetStyle,
+  ListBox_GetAutoComplete,
+  ListBox_SetAutoComplete,
+  ListBox_GetAutoCompleteDelay,
+  ListBox_SetAutoCompleteDelay,
+  ListBox_GetAlign,
+  ListBox_SetAlign,
+  ListBox_GetAnchors,
+  ListBox_SetAnchors,
+  ListBox_GetBevelEdges,
+  ListBox_SetBevelEdges,
+  ListBox_GetBevelInner,
+  ListBox_SetBevelInner,
+  ListBox_GetBevelKind,
+  ListBox_SetBevelKind,
+  ListBox_GetBevelOuter,
+  ListBox_SetBevelOuter,
+  ListBox_GetBiDiMode,
+  ListBox_SetBiDiMode,
+  ListBox_GetBorderStyle,
+  ListBox_SetBorderStyle,
+  ListBox_GetColor,
+  ListBox_SetColor,
+  ListBox_GetColumns,
+  ListBox_SetColumns,
+  ListBox_GetDoubleBuffered,
+  ListBox_SetDoubleBuffered,
+  ListBox_GetEnabled,
+  ListBox_SetEnabled,
+  ListBox_GetFont,
+  ListBox_SetFont,
+  ListBox_GetItemHeight,
+  ListBox_SetItemHeight,
+  ListBox_GetItems,
+  ListBox_SetItems,
+  ListBox_GetMultiSelect,
+  ListBox_SetMultiSelect,
+  ListBox_GetParentColor,
+  ListBox_SetParentColor,
+  ListBox_GetParentCtl3D,
+  ListBox_SetParentCtl3D,
+  ListBox_GetParentDoubleBuffered,
+  ListBox_SetParentDoubleBuffered,
+  ListBox_GetParentFont,
+  ListBox_SetParentFont,
+  ListBox_GetParentShowHint,
+  ListBox_SetParentShowHint,
+  ListBox_GetPopupMenu,
+  ListBox_SetPopupMenu,
+  ListBox_GetShowHint,
+  ListBox_SetShowHint,
+  ListBox_GetSorted,
+  ListBox_SetSorted,
+  ListBox_GetTabOrder,
+  ListBox_SetTabOrder,
+  ListBox_GetTabStop,
+  ListBox_SetTabStop,
+  ListBox_GetTabWidth,
+  ListBox_SetTabWidth,
+  ListBox_GetVisible,
+  ListBox_SetVisible,
+  ListBox_GetStyleElements,
+  ListBox_SetStyleElements,
+  ListBox_SetOnClick,
+  ListBox_SetOnDblClick,
+  ListBox_SetOnEnter,
+  ListBox_SetOnExit,
+  ListBox_SetOnKeyDown,
+  ListBox_SetOnKeyPress,
+  ListBox_SetOnKeyUp,
+  ListBox_SetOnMouseDown,
+  ListBox_SetOnMouseEnter,
+  ListBox_SetOnMouseLeave,
+  ListBox_SetOnMouseMove,
+  ListBox_SetOnMouseUp,
+  ListBox_GetCanvas,
+  ListBox_GetSelCount,
+  ListBox_GetItemIndex,
+  ListBox_SetItemIndex,
+  ListBox_GetBrush,
+  ListBox_GetControlCount,
+  ListBox_GetHandle,
+  ListBox_GetParentWindow,
+  ListBox_SetParentWindow,
+  ListBox_GetAction,
+  ListBox_SetAction,
+  ListBox_GetBoundsRect,
+  ListBox_SetBoundsRect,
+  ListBox_GetClientHeight,
+  ListBox_SetClientHeight,
+  ListBox_GetClientRect,
+  ListBox_GetClientWidth,
+  ListBox_SetClientWidth,
+  ListBox_GetExplicitLeft,
+  ListBox_GetExplicitTop,
+  ListBox_GetExplicitWidth,
+  ListBox_GetExplicitHeight,
+  ListBox_GetParent,
+  ListBox_SetParent,
+  ListBox_GetAlignWithMargins,
+  ListBox_SetAlignWithMargins,
+  ListBox_GetLeft,
+  ListBox_SetLeft,
+  ListBox_GetTop,
+  ListBox_SetTop,
+  ListBox_GetWidth,
+  ListBox_SetWidth,
+  ListBox_GetHeight,
+  ListBox_SetHeight,
+  ListBox_GetCursor,
+  ListBox_SetCursor,
+  ListBox_GetHint,
+  ListBox_SetHint,
+  ListBox_GetMargins,
+  ListBox_SetMargins,
+  ListBox_GetComponentCount,
+  ListBox_GetComponentIndex,
+  ListBox_SetComponentIndex,
+  ListBox_GetOwner,
+  ListBox_GetName,
+  ListBox_SetName,
+  ListBox_GetTag,
+  ListBox_SetTag,
+  ListBox_GetSelected,
+  ListBox_SetSelected,
+  ListBox_GetControls,
+  ListBox_GetComponents;
 

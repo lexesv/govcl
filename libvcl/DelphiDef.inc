@@ -17,31 +17,19 @@ begin
 end;
 
 // TApplication
-function Application_Instance: TApplication; cdecl;
+function Application_Instance: TApplication; stdcall;
 begin
   Result := Application;
 end;
 
-function Application_CreateForm(App: TApplication): TGoForm; cdecl;
+function Application_CreateForm(App: TApplication): TGoForm; stdcall;
 begin
   App.CreateForm(TGoForm, Result);
 end;
 
-// TControl控件补丁
-//type
-//  TComponentHelper = class helper for TComponent
-//  public
-//    procedure LoadedXX;
-//  end;
-//
-//procedure TComponentHelper.LoadedXX;
-//begin
-//  Loaded;
-//end;
-
 // TForm
 
-procedure Form_EnabledMaximize(AObj: TGoForm; AValue: Boolean); cdecl;
+procedure Form_EnabledMaximize(AObj: TGoForm; AValue: Boolean); stdcall;
 begin
   if AValue then
   begin
@@ -54,7 +42,7 @@ begin
   end;
 end;
 
-procedure Form_EnabledMinimize(AObj: TGoForm; AValue: Boolean); cdecl;
+procedure Form_EnabledMinimize(AObj: TGoForm; AValue: Boolean); stdcall;
 begin
   if AValue then
   begin
@@ -67,7 +55,7 @@ begin
   end;
 end;
 
-procedure Form_EnabledSystemMenu(AObj: TGoForm; AValue: Boolean); cdecl;
+procedure Form_EnabledSystemMenu(AObj: TGoForm; AValue: Boolean); stdcall;
 begin
   if AValue then
   begin
@@ -81,47 +69,47 @@ begin
 end;
 
 // mouse
-function Mouse_Instance: TMouse; cdecl;
+function Mouse_Instance: TMouse; stdcall;
 begin
   Result := Mouse;
 end;
 
 // screen
-function Screen_Instance: TScreen; cdecl;
+function Screen_Instance: TScreen; stdcall;
 begin
   Result := Screen;
 end;
 
-function DTextToShortCut(AText: PChar): TShortCut; cdecl;
+function DTextToShortCut(AText: PChar): TShortCut; stdcall;
 begin
   Result := TextToShortCut(AText);
 end;
 
-function DShortCutToText(AVal: TShortCut): PChar; cdecl;
+function DShortCutToText(AVal: TShortCut): PChar; stdcall;
 begin
   Result := PChar(ShortCutToText(AVal));
 end;
 
 // TClipboard
-function Clipboard_Instance: TClipboard; cdecl;
+function Clipboard_Instance: TClipboard; stdcall;
 begin
   Result := Clipboard;
 end;
 
-function Clipboard_SetClipboard(NewClipboard: TClipboard): TClipboard; cdecl;
+function Clipboard_SetClipboard(NewClipboard: TClipboard): TClipboard; stdcall;
 begin
   Result := SetClipboard(NewClipboard);
 end;
 
 // TMemoryStream
 // function Write(const Buffer; Count: Longint): Longint;
-function MemoryStream_Write(AObj: TMemoryStream; Buffer: Pointer; Count: Longint): Longint; cdecl;
+function MemoryStream_Write(AObj: TMemoryStream; Buffer: Pointer; Count: Longint): Longint; stdcall;
 begin
   Result := AObj.Write(Buffer^, Count);
 end;
 
 // function Read(var Buffer; Count: Longint): Longint;
-function MemoryStream_Read(AObj: TMemoryStream; Buffer: Pointer; Count: Longint): Longint; cdecl;
+function MemoryStream_Read(AObj: TMemoryStream; Buffer: Pointer; Count: Longint): Longint; stdcall;
 begin
   Result := AObj.Read(Buffer^, Count);
 end;
@@ -139,53 +127,53 @@ end;
 // Canvas_TextRect2
 
 procedure Canvas_BrushCopy(AObj: TCanvas; var Dest: TRect; Bitmap: TBitmap;
-      var Source: TRect; Color: TColor); cdecl;
+      var Source: TRect; Color: TColor); stdcall;
 begin
   AObj.BrushCopy(Dest, Bitmap, Source, Color);
 end;
 
 procedure Canvas_CopyRect(AObj: TCanvas; var Dest: TRect; Canvas: TCanvas;
-  var Source: TRect); cdecl;
+  var Source: TRect); stdcall;
 begin
   AObj.CopyRect(Dest, Canvas, Source);
 end;
 
-procedure Canvas_Draw1(AObj: TCanvas; X, Y: Integer; Graphic: TGraphic); cdecl;
+procedure Canvas_Draw1(AObj: TCanvas; X, Y: Integer; Graphic: TGraphic); stdcall;
 begin
   AObj.Draw(X, Y, Graphic);
 end;
 
-procedure Canvas_Draw2(AObj: TCanvas; X, Y: Integer; Graphic: TGraphic; Opacity: Byte); cdecl;
+procedure Canvas_Draw2(AObj: TCanvas; X, Y: Integer; Graphic: TGraphic; Opacity: Byte); stdcall;
 begin
   AObj.Draw(X, Y, Graphic, Opacity);
 end;
 
-procedure Canvas_DrawFocusRect(AObj: TCanvas; var ARect: TRect); cdecl;
+procedure Canvas_DrawFocusRect(AObj: TCanvas; var ARect: TRect); stdcall;
 begin
   AObj.DrawFocusRect(ARect);
 end;
 
-procedure Canvas_FillRect(AObj: TCanvas; var Rect: TRect); cdecl;
+procedure Canvas_FillRect(AObj: TCanvas; var Rect: TRect); stdcall;
 begin
   AObj.FillRect(Rect);
 end;
 
-procedure Canvas_FrameRect(AObj: TCanvas; var Rect: TRect); cdecl;
+procedure Canvas_FrameRect(AObj: TCanvas; var Rect: TRect); stdcall;
 begin
   AObj.FrameRect(Rect);
 end;
 
-procedure Canvas_StretchDraw(AObj: TCanvas; var Rect: TRect; Graphic: TGraphic); cdecl;
+procedure Canvas_StretchDraw(AObj: TCanvas; var Rect: TRect; Graphic: TGraphic); stdcall;
 begin
   AObj.StretchDraw(Rect, Graphic);
 end;
 
-procedure Canvas_TextRect1(AObj: TCanvas; var Rect: TRect; X, Y: Integer; const Text: PChar); cdecl;
+procedure Canvas_TextRect1(AObj: TCanvas; var Rect: TRect; X, Y: Integer; const Text: PChar); stdcall;
 begin
   AObj.TextRect(Rect, X, Y, Text);
 end;
 
-function Canvas_TextRect2(AObj: TCanvas; var Rect: TRect; Text: PChar; var AOutStr: PChar; TextFormat: TTextFormat): Integer; cdecl;
+function Canvas_TextRect2(AObj: TCanvas; var Rect: TRect; Text: PChar; var AOutStr: PChar; TextFormat: TTextFormat): Integer; stdcall;
 var
   S: string;
 begin
@@ -207,37 +195,37 @@ end;
 // ImageList_GetIcon1
 // ImageList_GetIcon2
 
-procedure ImageList_Draw1(AObj: TImageList; Canvas: TCanvas; X, Y, Index: Integer; Enabled: LongBool); cdecl;
+procedure ImageList_Draw1(AObj: TImageList; Canvas: TCanvas; X, Y, Index: Integer; Enabled: LongBool); stdcall;
 begin
   AObj.Draw(Canvas, X, Y, Index, Enabled);
 end;
 
 procedure ImageList_Draw2(AObj: TImageList; Canvas: TCanvas; X, Y, Index: Integer;
   ADrawingStyle: TDrawingStyle; AImageType: TImageType;
-  Enabled: LongBool); cdecl;
+  Enabled: LongBool); stdcall;
 begin
   AObj.Draw(Canvas, X, Y, Index, ADrawingStyle, AImageType, Enabled);
 end;
   
 procedure ImageList_DrawOverlay1(AObj: TImageList; Canvas: TCanvas; X, Y: Integer;
-  ImageIndex: Integer; Overlay: TOverlay; Enabled: LongBool); cdecl;
+  ImageIndex: Integer; Overlay: TOverlay; Enabled: LongBool); stdcall;
 begin
   AObj.DrawOverlay(Canvas, X, Y, ImageIndex, Overlay, Enabled);
 end;
   
 procedure ImageList_DrawOverlay2(AObj: TImageList; Canvas: TCanvas; X, Y: Integer;
   ImageIndex: Integer; Overlay: TOverlay; ADrawingStyle: TDrawingStyle;
-  AImageType: TImageType; Enabled: LongBool); cdecl;
+  AImageType: TImageType; Enabled: LongBool); stdcall;
 begin
   AObj.DrawOverlay(Canvas, X, Y, ImageIndex, Overlay, ADrawingStyle, AImageType, Enabled);
 end;
   
-procedure ImageList_GetIcon1(AObj: TImageList; Index: Integer; Image: TIcon); cdecl;
+procedure ImageList_GetIcon1(AObj: TImageList; Index: Integer; Image: TIcon); stdcall;
 begin
   AObj.GetIcon(Index, Image);
 end;
 
-procedure ImageList_GetIcon2(AObj: TImageList; Index: Integer; Image: TIcon; ADrawingStyle: TDrawingStyle; AImageType: TImageType); cdecl;
+procedure ImageList_GetIcon2(AObj: TImageList; Index: Integer; Image: TIcon; ADrawingStyle: TDrawingStyle; AImageType: TImageType); stdcall;
 begin
   AObj.GetIcon(Index, Image, ADrawingStyle, AImageType);
 end;
@@ -245,66 +233,66 @@ end;
  
 // Other
 
-procedure SetEventCallback(APtr: Pointer); cdecl;
+procedure SetEventCallback(APtr: Pointer); stdcall;
 begin
   GCallbackPtr := APtr;
 end;
 
-procedure DGetParam(Index: NativeInt; AArr: Pointer; out P: TGoParam); cdecl;
+procedure DGetParam(Index: NativeInt; AArr: Pointer; out P: TGoParam); stdcall;
 begin
   P := PGoParam(PByte(AArr) + Index * SizeOf(TGoParam))^;
 end;
 
-function DStrLen(p: PChar): NativeInt; cdecl;
+function DStrLen(p: PChar): NativeInt; stdcall;
 begin
   Result := Length(p);
 end;
 
-procedure DMove(Src, Dest: Pointer; Len: NativeInt); cdecl;
+procedure DMove(Src, Dest: Pointer; Len: NativeInt); stdcall;
 begin
   Move(Src^, Dest^, Len);
 end;
 
-function DGetClassName(Obj: TObject): PChar; cdecl;
+function DGetClassName(Obj: TObject): PChar; stdcall;
 begin
   Result := PChar(Obj.ClassName);
 end;
 
-procedure DShowMessage(AMsg: PChar); cdecl;
+procedure DShowMessage(AMsg: PChar); stdcall;
 begin
   ShowMessage(AMsg);
 end;
 
-function DGetMainInstance: HINST; cdecl;
+function DGetMainInstance: HINST; stdcall;
 begin
   Result := GetModuleHandle(nil);
 end;
 
 function DMessageDlg(const Msg: PChar; DlgType: TMsgDlgType;
-  Buttons: TMsgDlgButtons; HelpCtx: Longint): Integer; cdecl;
+  Buttons: TMsgDlgButtons; HelpCtx: Longint): Integer; stdcall;
 begin
   Result := MessageDlg(Msg, DlgType, Buttons, HelpCtx);
 end;
 
-procedure DSetReportMemoryLeaksOnShutdown(Value: Boolean); cdecl;
+procedure DSetReportMemoryLeaksOnShutdown(Value: Boolean); stdcall;
 begin
 {$IFDEF MSWINDOWS}
   ReportMemoryLeaksOnShutdown := Value;
 {$ENDIF MSWINDOWS}
 end;
 
-procedure DSysOpen(FileName: PChar); cdecl;
+procedure DSysOpen(FileName: PChar); stdcall;
 begin
   ShellExecute(0, nil, FileName, nil, nil, SW_SHOW);
 end;
 
 // 不想导入包，所以干脆用delphi的得了
-function DExtractFilePath(AFileName: PChar): PChar; cdecl;
+function DExtractFilePath(AFileName: PChar): PChar; stdcall;
 begin
   Result := PChar(ExtractFilePath(AFileName));
 end;
 
-function DFileExists(AFileName: PChar): LongBool; cdecl;
+function DFileExists(AFileName: PChar): LongBool; stdcall;
 begin
   Result := FileExists(AFileName);
 end;
@@ -330,242 +318,112 @@ begin
   TStyleManager.UnInitialize;
 end;
 
-function StyleManager_IsValidStyle(AFileName: PChar): LongBool; cdecl;
+function StyleManager_IsValidStyle(AFileName: PChar): LongBool; stdcall;
 begin
   Result := TStyleManager.IsValidStyle(AFileName);
 end;
 
-function StyleManager_LoadFromFile(AFileName: PChar): TStyleManager.TStyleServicesHandle; cdecl;
+function StyleManager_LoadFromFile(AFileName: PChar): TStyleManager.TStyleServicesHandle; stdcall;
 begin
   Result := TStyleManager.LoadFromFile(AFileName);
 end;
 
-function StyleManager_CheckSysClassName(AClassName: PChar): LongBool; cdecl;
+function StyleManager_CheckSysClassName(AClassName: PChar): LongBool; stdcall;
 begin
   Result := TStyleManager.CheckSysClassName(AClassName);
 end;
 
-function StyleManager_TrySetStyle(AName: PChar; ShowErrorDialog: LongBool): LongBool; cdecl;
+function StyleManager_TrySetStyle(AName: PChar; ShowErrorDialog: LongBool): LongBool; stdcall;
 begin
   Result := TStyleManager.TrySetStyle(AName, ShowErrorDialog);
 end;
 
-procedure StyleManager_SetStyle1(Handle: TStyleManager.TStyleServicesHandle); cdecl;
+procedure StyleManager_SetStyle1(Handle: TStyleManager.TStyleServicesHandle); stdcall;
 begin
   TStyleManager.SetStyle(Handle);
 end;
 
-procedure StyleManager_SetStyle2(AName: PChar); cdecl;
+procedure StyleManager_SetStyle2(AName: PChar); stdcall;
 begin
   TStyleManager.SetStyle(string(AName));
 end;
 
 function StyleManager_TryLoadFromResource(Instance: HINST; ResourceName: PChar;
-   ResourceType: PChar; var Handle: TStyleManager.TStyleServicesHandle): LongBool; cdecl;
+   ResourceType: PChar; var Handle: TStyleManager.TStyleServicesHandle): LongBool; stdcall;
 begin
   Result := TStyleManager.TryLoadFromResource(Instance, ResourceName, ResourceType, Handle);
 end;
 
-{$IFNDEF MSWINDOWS}
-function _Syscall0(AAddr: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  CALL AAddr
-  MOV Result, EAX
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall1(AAddr: Pointer; p1: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 4
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall2(AAddr: Pointer; p1, p2: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p2
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 8
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall3(AAddr: Pointer; p1, p2, p3: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p3
-  PUSH p2
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 12
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall4(AAddr: Pointer; p1, p2, p3, p4: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p4
-  PUSH p3
-  PUSH p2
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 16
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall5(AAddr: Pointer; p1, p2, p3, p4, p5: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p5
-  PUSH p4
-  PUSH p3
-  PUSH p2
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 20
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _Syscall6(AAddr: Pointer; p1, p2, p3, p4, p5, p6: Pointer): Pointer; cdecl;
-{$IFDEF CPUX86}
-asm
-  PUSH p6
-  PUSH p5
-  PUSH p4
-  PUSH p3
-  PUSH p2
-  PUSH p1
-  CALL AAddr
-  MOV Result, EAX
-  ADD ESP, 24
-end;
-{$ELSE}
-asm
-end;
-{$ENDIF}
-
-function _TestSyscall1(a, a2: Integer): Integer; cdecl;
-begin
-  Result := a + a2;
-end;
-
-procedure _TestSyscall2(a: Integer); cdecl;
-begin
-  Writeln('a:', a);
-end;
-
-
-
-{$ENDIF}
 
 exports
-  Application_Instance {$IFNDEF MSWINDOWS}name '_Application_Instance'{$ENDIF},
-  Application_CreateForm {$IFNDEF MSWINDOWS}name '_Application_CreateForm'{$ENDIF},
+  Application_Instance,
+  Application_CreateForm,
 
-  Form_EnabledMaximize {$IFNDEF MSWINDOWS}name '_Form_EnabledMaximize'{$ENDIF},
-  Form_EnabledMinimize {$IFNDEF MSWINDOWS}name '_Form_EnabledMinimize'{$ENDIF},
-  Form_EnabledSystemMenu {$IFNDEF MSWINDOWS}name '_Form_EnabledSystemMenu'{$ENDIF},
-
-
-  DSysOpen {$IFNDEF MSWINDOWS}name '_DSysOpen'{$ENDIF},
+  Form_EnabledMaximize,
+  Form_EnabledMinimize,
+  Form_EnabledSystemMenu,
 
 
-  Mouse_Instance {$IFNDEF MSWINDOWS}name '_Mouse_Instance'{$ENDIF},
-  Screen_Instance {$IFNDEF MSWINDOWS}name '_Screen_Instance'{$ENDIF},
-
-  SetEventCallback {$IFNDEF MSWINDOWS}name '_SetEventCallback'{$ENDIF},
-  DGetParam {$IFNDEF MSWINDOWS}name '_DGetParam'{$ENDIF},
-  DStrLen {$IFNDEF MSWINDOWS}name '_DStrLen'{$ENDIF},
-  DMove {$IFNDEF MSWINDOWS}name '_DMove'{$ENDIF},
-  DGetClassName {$IFNDEF MSWINDOWS}name '_DGetClassName'{$ENDIF},
-  DShowMessage {$IFNDEF MSWINDOWS}name '_DShowMessage'{$ENDIF},
-  DGetMainInstance {$IFNDEF MSWINDOWS}name '_DGetMainInstance'{$ENDIF},
+  DSysOpen,
 
 
-  MemoryStream_Write {$IFNDEF MSWINDOWS}name '_MemoryStream_Write'{$ENDIF},
-  MemoryStream_Read {$IFNDEF MSWINDOWS}name '_MemoryStream_Read'{$ENDIF},
+  Mouse_Instance,
+  Screen_Instance,
 
-  DTextToShortCut {$IFNDEF MSWINDOWS}name '_DTextToShortCut'{$ENDIF},
-  DShortCutToText {$IFNDEF MSWINDOWS}name '_DShortCutToText'{$ENDIF},
+  SetEventCallback,
+  DGetParam,
+  DStrLen,
+  DMove,
+  DGetClassName,
+  DShowMessage,
+  DGetMainInstance,
 
-  Clipboard_Instance {$IFNDEF MSWINDOWS}name '_Clipboard_Instance'{$ENDIF},
-  Clipboard_SetClipboard {$IFNDEF MSWINDOWS}name '_Clipboard_SetClipboard'{$ENDIF},
 
-  DMessageDlg {$IFNDEF MSWINDOWS}name '_DMessageDlg'{$ENDIF},
+  MemoryStream_Write,
+  MemoryStream_Read,
 
-  Canvas_BrushCopy {$IFNDEF MSWINDOWS}name '_Canvas_BrushCopy'{$ENDIF},
-  Canvas_CopyRect {$IFNDEF MSWINDOWS}name '_Canvas_CopyRect'{$ENDIF},
-  Canvas_Draw1 {$IFNDEF MSWINDOWS}name '_Canvas_Draw1'{$ENDIF},
-  Canvas_Draw2 {$IFNDEF MSWINDOWS}name '_Canvas_Draw2'{$ENDIF},
-  Canvas_DrawFocusRect {$IFNDEF MSWINDOWS}name '_Canvas_DrawFocusRect'{$ENDIF},
-  Canvas_FillRect {$IFNDEF MSWINDOWS}name '_Canvas_FillRect'{$ENDIF},
-  Canvas_FrameRect {$IFNDEF MSWINDOWS}name '_Canvas_FrameRect'{$ENDIF},
-  Canvas_StretchDraw {$IFNDEF MSWINDOWS}name '_Canvas_StretchDraw'{$ENDIF},
-  Canvas_TextRect1 {$IFNDEF MSWINDOWS}name '_Canvas_TextRect1'{$ENDIF},
-  Canvas_TextRect2 {$IFNDEF MSWINDOWS}name '_Canvas_TextRect2'{$ENDIF},
+  DTextToShortCut,
+  DShortCutToText,
+
+  Clipboard_Instance,
+  Clipboard_SetClipboard,
+
+  DMessageDlg,
+
+  Canvas_BrushCopy,
+  Canvas_CopyRect,
+  Canvas_Draw1,
+  Canvas_Draw2,
+  Canvas_DrawFocusRect,
+  Canvas_FillRect,
+  Canvas_FrameRect,
+  Canvas_StretchDraw,
+  Canvas_TextRect1,
+  Canvas_TextRect2,
 
   // TImageList
-  ImageList_Draw1 {$IFNDEF MSWINDOWS}name '_ImageList_Draw1'{$ENDIF},
-  ImageList_Draw2 {$IFNDEF MSWINDOWS}name '_ImageList_Draw2'{$ENDIF},
-  ImageList_DrawOverlay1 {$IFNDEF MSWINDOWS}name '_ImageList_DrawOverlay1'{$ENDIF},
-  ImageList_DrawOverlay2 {$IFNDEF MSWINDOWS}name '_ImageList_DrawOverlay2'{$ENDIF},
-  ImageList_GetIcon1 {$IFNDEF MSWINDOWS}name '_ImageList_GetIcon1'{$ENDIF},
-  ImageList_GetIcon2 {$IFNDEF MSWINDOWS}name '_ImageList_GetIcon2'{$ENDIF},
+  ImageList_Draw1,
+  ImageList_Draw2,
+  ImageList_DrawOverlay1,
+  ImageList_DrawOverlay2,
+  ImageList_GetIcon1,
+  ImageList_GetIcon2,
 
 // TStyleManager
-   StyleManager_Initialize {$IFNDEF MSWINDOWS}name '_StyleManager_Initialize'{$ENDIF},
-   StyleManager_UnInitialize {$IFNDEF MSWINDOWS}name '_StyleManager_UnInitialize'{$ENDIF},
-   StyleManager_IsValidStyle {$IFNDEF MSWINDOWS}name '_StyleManager_IsValidStyle'{$ENDIF},
-   StyleManager_LoadFromFile {$IFNDEF MSWINDOWS}name '_StyleManager_LoadFromFile'{$ENDIF},
-   StyleManager_CheckSysClassName {$IFNDEF MSWINDOWS}name '_StyleManager_CheckSysClassName'{$ENDIF},
-   StyleManager_TrySetStyle {$IFNDEF MSWINDOWS}name '_StyleManager_TrySetStyle'{$ENDIF},
-   StyleManager_SetStyle1 {$IFNDEF MSWINDOWS}name '_StyleManager_SetStyle1'{$ENDIF},
-   StyleManager_SetStyle2 {$IFNDEF MSWINDOWS}name '_StyleManager_SetStyle2'{$ENDIF},
-   StyleManager_TryLoadFromResource {$IFNDEF MSWINDOWS}name '_StyleManager_TryLoadFromResource'{$ENDIF},
+   StyleManager_Initialize,
+   StyleManager_UnInitialize,
+   StyleManager_IsValidStyle,
+   StyleManager_LoadFromFile,
+   StyleManager_CheckSysClassName,
+   StyleManager_TrySetStyle,
+   StyleManager_SetStyle1,
+   StyleManager_SetStyle2,
+   StyleManager_TryLoadFromResource,
 
 
 
-  DExtractFilePath{$IFNDEF MSWINDOWS}name '_DExtractFilePath'{$ENDIF},
-  DFileExists{$IFNDEF MSWINDOWS}name '_DFileExists'{$ENDIF},
+  DExtractFilePath,
+  DFileExists,
 
-  DSetReportMemoryLeaksOnShutdown {$IFNDEF MSWINDOWS}name '_DSetReportMemoryLeaksOnShutdown'{$ENDIF}
- 
-{$IFNDEF MSWINDOWS}
-  ,_Syscall0
-  ,_Syscall1
-  ,_Syscall2
-  ,_Syscall3
-  ,_Syscall4
-  ,_Syscall5
-  ,_Syscall6
-  ,_TestSyscall1
-  ,_TestSyscall2
-{$ENDIF}
+  DSetReportMemoryLeaksOnShutdown
   ;

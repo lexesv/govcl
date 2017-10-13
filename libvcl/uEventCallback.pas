@@ -14,7 +14,7 @@ uses
   System.Generics.Collections;
 
 var
-  GCallbackPtr: function(f: NativeUInt; args: Pointer; argcout: NativeInt): Pointer; cdecl;
+  GCallbackPtr: function(f: NativeUInt; args: Pointer; argcout: NativeInt): Pointer; stdcall;
 
 type
   TGoParam = record

@@ -5,7 +5,7 @@
 * [重要说明](#重要说明)
 * [WIKI](#WIKI)
 * [使用方法](#使用方法)
-* [图标及manifest文件集成](#图标及manifest文件集成)
+* [icon及manifest文件集成](#icon及manifest文件集成)
 * [项目中的包说明](#项目中的包说明)
 * [实例类说明](#实例类说明)
 * [支持的组件列表](#支持的组件列表)
@@ -67,37 +67,9 @@ func main() {
 
 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下  
 
-#### 图标及manifest文件集成
+#### icon及manifest文件集成
 
-需要使用rsrc工具生成syso文件    
-> go get github.com/akavel/rsrc 
-
-```bat
-rsrc -ico="your.ico" -o="your.manifest"
-```
-
-然后将生成的文件复制到你的工程目录下  
-
-> manifest文件内容  
-
-```xml  
-
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
-	<assemblyIdentity version="1.0.0.0" processorArchitecture="*" name="SomeFunkyNameHere" type="win32"/>
-	<dependency>
-		<dependentAssembly>
-			<assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*"/>
-		</dependentAssembly>
-	</dependency>
-	<asmv3:application>
-		<asmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
-			<dpiAware>true</dpiAware>
-		</asmv3:windowsSettings>
-	</asmv3:application>
-</assembly>
-
-```  
+[icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)
 
 #### 项目中的包说明
 

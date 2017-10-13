@@ -8,8 +8,11 @@ import (
 	"gitee.com/ying32/govcl/vcl/xui"
 )
 
+// 所有属性名称必须全为小写字母
 const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 <Form width="800" height="600" center="true" caption="这是一个测试" enabledmax="true">
+    <TrayIcon name="Tray1" hint="fdsfsdf" visible="true" />
+    <Action name="ActExit" caption="Action测试" onexecute="OnActExit" /> 
 	<MainMenu>
 		<MenuItem name="mn1" caption="文件">
 			<MenuItem name="mn3" caption="新建" />
@@ -18,14 +21,12 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 		</MenuItem>
 		<MenuItem name="mn2" caption="关于" />
 	</MainMenu>
-	<TrayIcon name="Tray1" hint="fdsfsdf" visible="true">
-	
-	</TrayIcon> 
 	<Button name="Btn1" caption="按钮" align="alTop" hint="提示" showhint="true" />
 	<Panel name="Pnl1" align="alClient">
 		<PageControl name="PgcMain" activeindex="0" align="alClient">
 			<TabSheet caption="第一页">
 			   <Button name="Btn2" left="10" top="10" caption="消息2" onclick="OnButtonClick" />
+               <Button name="BtnAct" action="ActExit" left="100" top="10" />
 			   <Combobox name="Cbb1" itemindex="0" top="70" left="10">
 					<TextItem text="第1项" />
 					<TextItem text="第2项" />
@@ -52,6 +53,7 @@ type TEvents struct {
 	Pnl1    *vcl.TPanel
 	Btn3    *vcl.TButton
 	PgcMain *vcl.TPageControl
+	ActExit *vcl.TAction
 }
 
 func (e *TEvents) OnButtonClick(sender vcl.IObject) {
@@ -62,6 +64,10 @@ func (e *TEvents) OnButtonClick(sender vcl.IObject) {
 
 func (e *TEvents) OnMenuExit(sender vcl.IObject) {
 	fmt.Println("e.Form:", e.Form)
+	e.Form.Close()
+}
+
+func (e *TEvents) OnActExit(sender vcl.IObject) {
 	e.Form.Close()
 }
 

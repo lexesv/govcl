@@ -17,6 +17,15 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 		<MenuItem name="mn1" caption="文件">
 			<MenuItem name="mn3" caption="新建" />
 			<MenuItem caption="-" />
+            <MenuItem caption="历史记录...">
+                <MenuItem caption="第1个" />
+                <MenuItem caption="第2个" />
+                <MenuItem caption="第3个" />
+                <MenuItem caption="第4个" />
+                <MenuItem caption="第5个" />
+                <MenuItem caption="第6个" />
+            </MenuItem>
+            <MenuItem caption="-" />
 			<MenuItem name="mn4" caption="退出" onclick="OnMenuExit" />
 		</MenuItem>
 		<MenuItem name="mn2" caption="关于" />

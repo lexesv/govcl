@@ -121,6 +121,18 @@ func (x *TXMLForm) setFiledVal(name string, v interface{}) {
 	}
 }
 
+// getFiledAction 返回一个已经存在的Action实例
+func (x *TXMLForm) getFiledAction(name string) *vcl.TAction {
+	vx := reflect.ValueOf(x.event).Elem().FieldByName(name)
+	if vx.IsValid() {
+		if v, ok := vx.Interface().(*vcl.TAction); ok {
+			return v
+		}
+		return nil
+	}
+	return nil
+}
+
 func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vcl.TMenuItem) {
 	if !node.HasChildNodes() {
 		return
@@ -174,6 +186,13 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			btn := vcl.NewButton(x.Form)
 			btn.SetParent(parent)
 			btn.SetCaption(attrs.Caption())
+			if attrs.HasAttr("action") {
+				a := x.getFiledAction(attrs.Action())
+				if a != nil {
+					btn.SetAction(a)
+				}
+			}
+
 			x.setFiledVal(attrs.Name(), btn)
 			pcontrol = btn
 			m, ok := x.getMethod(attrs.OnClick())
@@ -267,6 +286,31 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			if attrs.HasAttr("visible") {
 				tray.SetVisible(attrs.Visible())
 			}
+			pcontrol = nil
+
+		case "Action":
+
+			act := vcl.NewAction(x.Form)
+			x.setFiledVal(attrs.Name(), act)
+			if attrs.HasAttr("caption") {
+				act.SetCaption(attrs.Caption())
+			}
+			if attrs.HasAttr("checked") {
+				act.SetChecked(attrs.Checked())
+			}
+			if attrs.HasAttr("enabled") {
+				act.SetEnabled(attrs.Enabled())
+			}
+			if attrs.HasAttr("visible") {
+				act.SetVisible(attrs.Visible())
+			}
+			m, ok := x.getMethod(attrs.OnExecute())
+			if ok {
+				act.SetOnExecute(func(sender vcl.IObject) {
+					x.callMethod(m, sender)
+				})
+			}
+
 			pcontrol = nil
 
 		// 伪类名

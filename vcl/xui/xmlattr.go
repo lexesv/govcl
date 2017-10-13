@@ -95,6 +95,18 @@ func (x *TXmlAttrs) OnClick() string {
 	return x.Get("onclick")
 }
 
+func (x *TXmlAttrs) OnExecute() string {
+	return x.Get("onexecute")
+}
+
+func (x *TXmlAttrs) Action() string {
+	return x.Get("action")
+}
+
+func (x *TXmlAttrs) OnUpdate() string {
+	return x.Get("onupdate")
+}
+
 func (x *TXmlAttrs) Top() int32 {
 	return x.ToInt("top")
 }

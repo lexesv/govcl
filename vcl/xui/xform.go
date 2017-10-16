@@ -249,8 +249,27 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 		case "Checkbox":
 			chk := vcl.NewCheckBox(x.Form)
 			chk.SetParent(parent)
-			chk.SetCaption(attrs.Text())
-			chk.SetChecked(attrs.Checked())
+			if attrs.HasAttr("caption") {
+				chk.SetCaption(attrs.Caption())
+			}
+			if attrs.HasAttr("checked") {
+				chk.SetChecked(attrs.Checked())
+			}
+			if attrs.HasAttr("action") {
+				a := x.getFiledAction(attrs.Action())
+				if a != nil {
+					chk.SetAction(a)
+				}
+			}
+
+			x.setFiledVal(attrs.Name(), chk)
+
+			m, ok := x.getMethod(attrs.OnClick())
+			if ok {
+				chk.SetOnClick(func(sender vcl.IObject) {
+					x.callMethod(m, sender)
+				})
+			}
 
 			pcontrol = chk
 

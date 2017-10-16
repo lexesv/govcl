@@ -439,6 +439,10 @@ func (l *TListBox) SetOnDblClick(fn TNotifyEvent) {
     ListBox_SetOnDblClick(l.instance, fn)
 }
 
+func (l *TListBox) SetOnDrawItem(fn TDrawItemEvent) {
+    ListBox_SetOnDrawItem(l.instance, fn)
+}
+
 func (l *TListBox) SetOnEnter(fn TNotifyEvent) {
     ListBox_SetOnEnter(l.instance, fn)
 }

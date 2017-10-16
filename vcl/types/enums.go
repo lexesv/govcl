@@ -1406,3 +1406,24 @@ const (
 
 //  TAnchors = set of TAnchorKind;
 type TAnchors uint32
+
+// TOwnerDrawState = set of (odSelected, odGrayed, odDisabled, odChecked,
+//    odFocused, odDefault, odHotLight, odInactive, odNoAccel, odNoFocusRect,
+//    odReserved1, odReserved2, odComboBoxEdit);
+type TOwnerDrawState uint32
+
+const (
+	OdSelected = iota + 0
+	OdGrayed
+	OdDisabled
+	OdChecked
+	OdFocused
+	OdDefault
+	OdHotLight
+	OdInactive
+	OdNoAccel
+	OdNoFocusRect
+	OdReserved1
+	OdReserved2
+	OdComboBoxEdit
+)

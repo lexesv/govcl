@@ -459,6 +459,10 @@ func (c *TComboBox) SetOnDblClick(fn TNotifyEvent) {
     ComboBox_SetOnDblClick(c.instance, fn)
 }
 
+func (c *TComboBox) SetOnDrawItem(fn TDrawItemEvent) {
+    ComboBox_SetOnDrawItem(c.instance, fn)
+}
+
 func (c *TComboBox) SetOnEnter(fn TNotifyEvent) {
     ComboBox_SetOnEnter(c.instance, fn)
 }

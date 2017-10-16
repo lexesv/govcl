@@ -215,6 +215,10 @@ func (m *TMenuItem) SetOnClick(fn TNotifyEvent) {
     MenuItem_SetOnClick(m.instance, fn)
 }
 
+func (m *TMenuItem) SetOnDrawItem(fn TMenuDrawItemEvent) {
+    MenuItem_SetOnDrawItem(m.instance, fn)
+}
+
 func (m *TMenuItem) ComponentCount() int32 {
     return MenuItem_GetComponentCount(m.instance)
 }

@@ -6272,6 +6272,10 @@ func ListBox_SetOnDblClick(obj uintptr, fn interface{}) {
     listBox_SetOnDblClick.Call(obj, addEventToMap(fn))
 }
 
+func ListBox_SetOnDrawItem(obj uintptr, fn interface{}) {
+    listBox_SetOnDrawItem.Call(obj, addEventToMap(fn))
+}
+
 func ListBox_SetOnEnter(obj uintptr, fn interface{}) {
     listBox_SetOnEnter.Call(obj, addEventToMap(fn))
 }
@@ -7019,6 +7023,10 @@ func ComboBox_SetOnClick(obj uintptr, fn interface{}) {
 
 func ComboBox_SetOnDblClick(obj uintptr, fn interface{}) {
     comboBox_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func ComboBox_SetOnDrawItem(obj uintptr, fn interface{}) {
+    comboBox_SetOnDrawItem.Call(obj, addEventToMap(fn))
 }
 
 func ComboBox_SetOnEnter(obj uintptr, fn interface{}) {
@@ -25153,6 +25161,10 @@ func MenuItem_SetOnClick(obj uintptr, fn interface{}) {
     menuItem_SetOnClick.Call(obj, addEventToMap(fn))
 }
 
+func MenuItem_SetOnDrawItem(obj uintptr, fn interface{}) {
+    menuItem_SetOnDrawItem.Call(obj, addEventToMap(fn))
+}
+
 func MenuItem_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := menuItem_GetComponentCount.Call(obj)
     return int32(ret)
@@ -28587,6 +28599,16 @@ func Canvas_TextOut(obj uintptr, X int32, Y int32, Text string)  {
 
 func Canvas_Lock(obj uintptr)  {
     canvas_Lock.Call(obj)
+}
+
+func Canvas_TextHeight(obj uintptr, Text string) int32 {
+    ret, _, _ := canvas_TextHeight.Call(obj, GoStrToDStr(Text) )
+    return int32(ret)
+}
+
+func Canvas_TextWidth(obj uintptr, Text string) int32 {
+    ret, _, _ := canvas_TextWidth.Call(obj, GoStrToDStr(Text) )
+    return int32(ret)
 }
 
 func Canvas_Assign(obj uintptr, Source uintptr)  {

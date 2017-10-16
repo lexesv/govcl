@@ -115,6 +115,14 @@ func (c *TCanvas) Lock() {
     Canvas_Lock(c.instance)
 }
 
+func (c *TCanvas) TextHeight(Text string) int32 {
+    return Canvas_TextHeight(c.instance, Text)
+}
+
+func (c *TCanvas) TextWidth(Text string) int32 {
+    return Canvas_TextWidth(c.instance, Text)
+}
+
 func (c *TCanvas) Assign(Source IObject) {
     Canvas_Assign(c.instance, CheckPtr(Source))
 }

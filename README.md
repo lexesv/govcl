@@ -20,15 +20,8 @@
 > 只需要带上一个libvcl.dll即可。  
 
 > 2、项目现在支持VCL标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](#支持的组件列表)。  
-> 事件方面也支持部分，如下：  
-```delphi
- TGoEvent = (geClick, geClose, geFormClose, geFormCloseQuery, geChange,
-              geUpDownClick, geTreeViewChange, geListViewChange, geDblClick, gePaint,
-              geResize, geShow, geMenuChange, geEnter, geExit, gePopup, geBalloonClick,
-              geLinkClick, geExecute, geUpdate, geException, geTimer, geMinimize,
-              geRestore, geHide, geKeyDown, geKeyPress, geKeyUp, geMouseDown,
-              geMouseEnter, geMouseLeave, geMouseMove, geMouseUp, geMouseWheel);
-```
+> 事件方面也支持部分，参见：[支持的事件](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E4%BA%8B%E4%BB%B6)：  
+ 
 
 #### 重要说明
 **所有的代码只会存储在OSC的[码云](https://gitee.com/ying32/govcl)中，原因在于go包路径的问题。**  

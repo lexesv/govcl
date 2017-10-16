@@ -227,6 +227,18 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
+procedure MenuItem_SetOnDrawItem(AObj: TMenuItem; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnDrawItem := nil;
+    TEventClass.Remove(AObj, geMenuItemDrawItem);
+    Exit;
+  end;
+  AObj.OnDrawItem := TEventClass.MenuItemOnDrawItem;
+  TEventClass.Add(AObj, geMenuItemDrawItem, AEventId);
+end;
+
 function MenuItem_GetComponentCount(AObj: TMenuItem): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -322,6 +334,7 @@ exports
   MenuItem_GetVisible,
   MenuItem_SetVisible,
   MenuItem_SetOnClick,
+  MenuItem_SetOnDrawItem,
   MenuItem_GetComponentCount,
   MenuItem_GetComponentIndex,
   MenuItem_SetComponentIndex,

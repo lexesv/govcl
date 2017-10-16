@@ -8,6 +8,7 @@ uses
   Vcl.ComCtrls,
   Vcl.Menus,
   Vcl.ExtCtrls,
+  Vcl.Graphics,
   System.Classes,
   System.SysUtils,
   System.Types,
@@ -28,7 +29,8 @@ type
               geResize, geShow, geMenuChange, geEnter, geExit, gePopup, geBalloonClick,
               geLinkClick, geExecute, geUpdate, geException, geTimer, geMinimize,
               geRestore, geHide, geKeyDown, geKeyPress, geKeyUp, geMouseDown,
-              geMouseEnter, geMouseLeave, geMouseMove, geMouseUp, geMouseWheel);
+              geMouseEnter, geMouseLeave, geMouseMove, geMouseUp, geMouseWheel,
+              geListBoxDrawItem, geMenuItemDrawItem);
 
   TEventKey = packed record
     Sender: TObject;
@@ -98,6 +100,11 @@ type
     class procedure OnMouseEnter(Sender: TObject);
     class procedure OnMouseLeave(Sender: TObject);
 
+
+    class procedure ListBoxOnDrawItem(Control: TWinControl; Index: Integer;
+          ARect: TRect; State: TOwnerDrawState);
+    class procedure MenuItemOnDrawItem(Sender: TObject; ACanvas: TCanvas;
+          ARect: TRect; Selected: Boolean);
 
 
     class procedure OnLinkClick(Sender: TObject; const Link: string; LinkType: TSysLinkType);
@@ -305,6 +312,19 @@ class procedure TEventClass.Remove(AObj: TObject; AEvent: TGoEvent);
 begin
   FEvents.Remove(TEventKey.Create(AObj, AEvent));
 end;
+
+class procedure TEventClass.ListBoxOnDrawItem(Control: TWinControl; Index: Integer;
+   ARect: TRect; State: TOwnerDrawState);
+begin
+  SendEvent(Control, geListBoxDrawItem, [Control, Index, @ARect, PWord(@State)^]);
+end;
+
+class procedure TEventClass.MenuItemOnDrawItem(Sender: TObject; ACanvas: TCanvas;
+  ARect: TRect; Selected: Boolean);
+begin
+  SendEvent(Sender, geListBoxDrawItem, [Sender, ACanvas, @ARect, Selected]);
+end;
+
 
 class procedure TEventClass.SendEvent(Sender: TObject; AEvent: TGoEvent; AArgs: array of const);
 

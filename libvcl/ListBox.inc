@@ -514,6 +514,18 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
+procedure ListBox_SetOnDrawItem(AObj: TListBox; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnDrawItem := nil;
+    TEventClass.Remove(AObj, geListBoxDrawItem);
+    Exit;
+  end;
+  AObj.OnDrawItem := TEventClass.ListBoxOnDrawItem;
+  TEventClass.Add(AObj, geListBoxDrawItem, AEventId);
+end;
+
 procedure ListBox_SetOnEnter(AObj: TListBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -995,6 +1007,7 @@ exports
   ListBox_SetStyleElements,
   ListBox_SetOnClick,
   ListBox_SetOnDblClick,
+  ListBox_SetOnDrawItem,
   ListBox_SetOnEnter,
   ListBox_SetOnExit,
   ListBox_SetOnKeyDown,

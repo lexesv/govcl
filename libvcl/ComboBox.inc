@@ -546,6 +546,18 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
+procedure ComboBox_SetOnDrawItem(AObj: TComboBox; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnDrawItem := nil;
+    TEventClass.Remove(AObj, geListBoxDrawItem);
+    Exit;
+  end;
+  AObj.OnDrawItem := TEventClass.ListBoxOnDrawItem;
+  TEventClass.Add(AObj, geListBoxDrawItem, AEventId);
+end;
+
 procedure ComboBox_SetOnEnter(AObj: TComboBox; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1021,6 +1033,7 @@ exports
   ComboBox_SetOnChange,
   ComboBox_SetOnClick,
   ComboBox_SetOnDblClick,
+  ComboBox_SetOnDrawItem,
   ComboBox_SetOnEnter,
   ComboBox_SetOnExit,
   ComboBox_SetOnKeyDown,

@@ -95,6 +95,16 @@ begin
   AObj.Lock;
 end;
 
+function Canvas_TextHeight(AObj: TCanvas; Text: PChar): Integer; stdcall;
+begin
+  Result :=  AObj.TextHeight(Text);
+end;
+
+function Canvas_TextWidth(AObj: TCanvas; Text: PChar): Integer; stdcall;
+begin
+  Result :=  AObj.TextWidth(Text);
+end;
+
 procedure Canvas_Assign(AObj: TCanvas; Source: TPersistent); stdcall;
 begin
   AObj.Assign(Source);
@@ -207,6 +217,8 @@ exports
   Canvas_TextExtent,
   Canvas_TextOut,
   Canvas_Lock,
+  Canvas_TextHeight,
+  Canvas_TextWidth,
   Canvas_Assign,
   Canvas_GetNamePath,
   Canvas_ClassName,

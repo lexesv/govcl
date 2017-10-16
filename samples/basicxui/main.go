@@ -12,7 +12,7 @@ import (
 const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 <Form width="800" height="600" center="true" caption="这是一个测试" enabledmax="true">
     <TrayIcon name="Tray1" hint="fdsfsdf" visible="true" />
-    <Action name="ActExit" caption="Action测试" onexecute="OnActExit" /> 
+    <Action name="ActExit" caption="Action退出" onexecute="OnActExit" /> 
 	<MainMenu>
 		<MenuItem name="mn1" caption="文件">
 			<MenuItem name="mn3" caption="新建" />
@@ -46,6 +46,7 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 					<TextItem text="第2项" />
 			   </Memo>
 			   <Memo name="Mmo2" top="220" left="10" text="这是文本" />
+			   <Checkbox name="Chk1" top="320" left="10" caption="复选框" />
 			</TabSheet>
 			<TabSheet caption="第二页"> 
 			    <Button name="Btn4" left="100" top="50" caption="消息4" onclick="OnButtonClick" />

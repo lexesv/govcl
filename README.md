@@ -31,7 +31,10 @@
 
 #### WIKI 
 
-后面视情况慢慢补充相关VCL组件的知识，详情可以[WIKI](https://gitee.com/ying32/govcl/wikis/Home)  
+后面视情况慢慢补充相关VCL组件的知识，详情可以[WIKI](https://gitee.com/ying32/govcl/wikis/Home)   
+
+
+**govcl是以go 1.9作为基础版本开发，目前已知的是在go 1.7也可以编译，但作为以后的考虑会使用1.9中的特性，所以大家在使用的时候尽量使用go 1.9+版本**
 
 #### 使用方法
 > go get gitee.com/ying32/govcl  

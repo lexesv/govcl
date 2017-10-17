@@ -26,28 +26,28 @@ type TMenuChangeEvent func(sender IObject, source *TMenuItem, rebuild bool)
 type TTVChangedEvent func(sender IObject, node *TTreeNode)
 
 // TSysLinkEvent LinkLabel
-type TSysLinkEvent = func(sender IObject, link string, linkType TSysLinkType) // TSysLinkType
+type TSysLinkEvent func(sender IObject, link string, linkType TSysLinkType) // TSysLinkType
 
 // TExceptionEvent TApplication
 type TExceptionEvent = func(sender, e IObject)
 
 // TKeyEvent = procedure(Sender: TObject; var Key: Word; Shift: TShiftState)
-type TKeyEvent = func(sender IObject, key *Char, shift TShiftState)
+type TKeyEvent func(sender IObject, key *Char, shift TShiftState)
 
 // TKeyPressEvent = procedure(Sender: TObject; var Key: Char) of object;
-type TKeyPressEvent = func(sender IObject, key *Char)
+type TKeyPressEvent func(sender IObject, key *Char)
 
 // TMouseEvent = procedure(Sender: TObject; Button: TMouseButton;
 //     Shift: TShiftState; X, Y: Integer) of object;
-type TMouseEvent = func(sender IObject, button TMouseButton, shift TShiftState, x, y int32)
+type TMouseEvent func(sender IObject, button TMouseButton, shift TShiftState, x, y int32)
 
 // TMouseMoveEvent = procedure(Sender: TObject; Shift: TShiftState;
 //    X, Y: Integer) of object;
-type TMouseMoveEvent = func(sender IObject, shift TShiftState, x, y int32)
+type TMouseMoveEvent func(sender IObject, shift TShiftState, x, y int32)
 
 // TMouseWheelEvent = procedure(Sender: TObject; Shift: TShiftState;
 //    WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean) of object;
-type TMouseWheelEvent = func(sender IObject, shift TShiftState, wheelDelta, x, y int32, handled *bool)
+type TMouseWheelEvent func(sender IObject, shift TShiftState, wheelDelta, x, y int32, handled *bool)
 
 //  TDrawItemEvent = procedure(Control: TWinControl; Index: Integer;
 //    Rect: TRect; State: TOwnerDrawState) of object;

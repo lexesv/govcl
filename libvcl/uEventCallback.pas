@@ -264,7 +264,7 @@ end;
 class procedure TEventClass.OnMouseWheel(Sender: TObject; Shift: TShiftState;
   WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
-  SendEvent(Sender, geMouseUp, [Sender, PWord(@Shift)^, WheelDelta, MousePos.X, MousePos.Y, @Handled]);
+  SendEvent(Sender, geMouseWheel, [Sender, PWord(@Shift)^, WheelDelta, MousePos.X, MousePos.Y, @Handled]);
 end;
 
 class procedure TEventClass.OnLinkClick(Sender: TObject; const Link: string;

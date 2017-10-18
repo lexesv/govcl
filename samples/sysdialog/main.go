@@ -22,7 +22,7 @@ func main() {
 	mainForm.SetPosition(types.PoScreenCenter)
 	mainForm.EnabledMaximize(false)
 	mainForm.SetWidth(300)
-	mainForm.SetHeight(200)
+	mainForm.SetHeight(400)
 
 	dlgOpen := vcl.NewOpenDialog(mainForm)
 	dlgOpen.SetFilter("文本文件(*.txt)|*.txt|所有文件(*.*)|*.*")
@@ -66,6 +66,61 @@ func main() {
 	btn.SetOnClick(func(vcl.IObject) {
 		if dlFont.Execute(mainForm.Handle()) {
 			fmt.Println("Name: ", dlFont.Font().Name())
+		}
+	})
+
+	dlColor := vcl.NewColorDialog(mainForm)
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("Color Dialog")
+	btn.SetOnClick(func(vcl.IObject) {
+		if dlColor.Execute(mainForm.Handle()) {
+			fmt.Println("Color: ", dlColor.Color())
+		}
+	})
+
+	dlPicOpen := vcl.NewOpenPictureDialog(mainForm)
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("OpenPic Dialog")
+	btn.SetOnClick(func(vcl.IObject) {
+		if dlPicOpen.Execute(mainForm.Handle()) {
+			fmt.Println("Name: ", dlPicOpen.FileName())
+		}
+	})
+
+	dlPicSave := vcl.NewSavePictureDialog(mainForm)
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("SavePic Dialog")
+	btn.SetOnClick(func(vcl.IObject) {
+		if dlPicSave.Execute() {
+			fmt.Println("Name: ", dlPicSave.FileName())
+		}
+	})
+
+	dlTxtOpen := vcl.NewOpenTextFileDialog(mainForm)
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("Open Text Dialog")
+	btn.SetOnClick(func(vcl.IObject) {
+		if dlTxtOpen.Execute(mainForm.Handle()) {
+			fmt.Println("Name: ", dlTxtOpen.FileName())
+		}
+	})
+
+	dlTxtSave := vcl.NewSaveTextFileDialog(mainForm)
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("Save Text Dialog")
+	btn.SetOnClick(func(vcl.IObject) {
+		if dlTxtSave.Execute() {
+			fmt.Println("Name: ", dlTxtSave.FileName())
 		}
 	})
 

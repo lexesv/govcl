@@ -354,6 +354,55 @@ begin
   Result := TStyleManager.TryLoadFromResource(Instance, ResourceName, ResourceType, Handle);
 end;
 
+// StyleManager_ActiveStyle
+// StyleManager_SystemStyle
+// StyleManager_Enabled
+// StyleManager_IsCustomStyleActive
+// StyleManager_UnRegisterStyle
+// StyleManager_RegisterStyle
+// StyleManager_Style
+// StyleManager_StyleDescriptor
+function StyleManager_ActiveStyle: TCustomStyleServices; stdcall;
+begin
+  Result := TStyleManager.ActiveStyle;
+end;
+
+function StyleManager_SystemStyle: TCustomStyleServices; stdcall;
+begin
+  Result := TStyleManager.SystemStyle;
+end;
+
+function StyleManager_Enabled: LongBool; stdcall;
+begin
+  Result := TStyleManager.Enabled;
+end;
+
+function StyleManager_IsCustomStyleActive: LongBool; stdcall;
+begin
+  Result := TStyleManager.IsCustomStyleActive;
+end;
+
+procedure StyleManager_UnRegisterStyle(Style: TCustomStyleServices); stdcall;
+begin
+  TStyleManager.UnRegisterStyle(Style);
+end;
+
+procedure StyleManager_RegisterStyle(Style: TCustomStyleServices); stdcall;
+begin
+  TStyleManager.RegisterStyle(Style);
+end;
+
+function StyleManager_Style(name: PChar): TCustomStyleServices; stdcall;
+begin
+  Result := TStyleManager.Style[name];
+end;
+
+function StyleManager_StyleDescriptor(StyleName: PChar): TStyleManager.TStyleClassDescriptor; stdcall;
+begin
+  Result := TStyleManager.StyleDescriptor[StyleName];
+end;
+
+
 
 exports
   Application_Instance,
@@ -420,7 +469,14 @@ exports
    StyleManager_SetStyle2,
    StyleManager_TryLoadFromResource,
 
-
+   StyleManager_ActiveStyle,
+   StyleManager_SystemStyle,
+   StyleManager_Enabled,
+   StyleManager_IsCustomStyleActive,
+   StyleManager_UnRegisterStyle,
+   StyleManager_RegisterStyle,
+   StyleManager_Style,
+   StyleManager_StyleDescriptor,
 
   DExtractFilePath,
   DFileExists,

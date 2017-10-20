@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"time"
 
 	"io"
@@ -266,6 +267,17 @@ func main() {
 	stylelist.SetWidth(240)
 	stylelist.SetOnDblClick(func(vcl.IObject) {
 		if stylelist.ItemIndex() != -1 {
+			// 这里直接替换是因为原本文件名就是样式名，只是简单下，实际样式名要通过相关函数取得，但这里没有给出相关函数
+			styleName := strings.Replace(stylelist.Items().Strings(stylelist.ItemIndex()), ".vsf", "", 1)
+			styleHandle := vcl.StyleManager.Style(styleName)
+			fmt.Println("styleName:", styleName, ", styleHandle:", styleHandle)
+			if styleHandle != 0 {
+				if vcl.StyleManager.ActiveStyle() == styleHandle {
+					return
+				}
+				vcl.StyleManager.SetStyle2(styleName)
+				return
+			}
 			styleFileName := "..\\..\\bin\\styles\\" + stylelist.Items().Strings(stylelist.ItemIndex())
 			if rtl.FileExists(styleFileName) {
 				if vcl.StyleManager.IsValidStyle(styleFileName) {

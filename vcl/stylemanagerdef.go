@@ -55,6 +55,42 @@ func (s *TStyleManager) TryLoadFromResource(instance uintptr, resName, resType s
 	return StyleManager_TryLoadFromResource(instance, resName, resType, handle)
 }
 
+// SetStyleFromFileName
 func (s *TStyleManager) SetStyleFromFileName(filename string) {
 	StyleManager.SetStyle(StyleManager.LoadFromFile(filename))
+}
+
+// ActiveStyle
+func (s *TStyleManager) ActiveStyle() uintptr {
+	return StyleManager_ActiveStyle()
+}
+
+// SystemStyle
+func (s *TStyleManager) SystemStyle() uintptr {
+	return StyleManager_SystemStyle()
+}
+
+// Enabled
+func (s *TStyleManager) Enabled() bool {
+	return StyleManager_Enabled()
+}
+
+// IsCustomStyleActive
+func (s *TStyleManager) IsCustomStyleActive() bool {
+	return StyleManager_IsCustomStyleActive()
+}
+
+// UnRegisterStyle
+func (s *TStyleManager) UnRegisterStyle(style uintptr) {
+	StyleManager_UnRegisterStyle(style)
+}
+
+// RegisterStyle
+func (s *TStyleManager) RegisterStyle(style uintptr) {
+	StyleManager_RegisterStyle(style)
+}
+
+// Style
+func (s *TStyleManager) Style(name string) uintptr {
+	return StyleManager_Style(name)
 }

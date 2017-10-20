@@ -62,3 +62,48 @@ func StyleManager_TryLoadFromResource(instance uintptr, resName, resType string,
 	r, _, _ := styleManager_TryLoadFromResource.Call(instance, GoStrToDStr(resName), GoStrToDStr(resType), uintptr(unsafe.Pointer(handle)))
 	return r != 0
 }
+
+// StyleManager_ActiveStyle
+func StyleManager_ActiveStyle() uintptr {
+	r, _, _ := styleManager_ActiveStyle.Call()
+	return r
+}
+
+// StyleManager_SystemStyle
+func StyleManager_SystemStyle() uintptr {
+	r, _, _ := styleManager_SystemStyle.Call()
+	return r
+}
+
+// StyleManager_Enabled
+func StyleManager_Enabled() bool {
+	r, _, _ := styleManager_Enabled.Call()
+	return DBoolToGoBool(r)
+}
+
+// StyleManager_IsCustomStyleActive
+func StyleManager_IsCustomStyleActive() bool {
+	r, _, _ := styleManager_IsCustomStyleActive.Call()
+	return DBoolToGoBool(r)
+}
+
+// StyleManager_UnRegisterStyle
+func StyleManager_UnRegisterStyle(style uintptr) {
+	styleManager_UnRegisterStyle.Call(style)
+}
+
+// StyleManager_RegisterStyle
+func StyleManager_RegisterStyle(style uintptr) {
+	styleManager_RegisterStyle.Call(style)
+}
+
+// StyleManager_Style
+func StyleManager_Style(name string) uintptr {
+	r, _, _ := styleManager_Style.Call(GoStrToDStr(name))
+	return r
+}
+
+// // function StyleManager_StyleDescriptor(StyleName: PChar): TStyleManager.TStyleClassDescriptor; stdcall;
+// func StyleManager_StyleDescriptor(styleName string) uintptr {
+// styleManager_StyleDescriptor.Call(GoStrToDStr(styleName))
+// }

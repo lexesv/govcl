@@ -6,6 +6,7 @@
 * [WIKI](#WIKI)
 * [使用方法](#使用方法)
 * [icon及manifest文件集成](#icon及manifest文件集成)
+* [关于跨平台问题] (#关于跨平台问题)  
 * [项目中的包说明](#项目中的包说明)
 * [实例类说明](#实例类说明)
 * [支持的组件列表](#支持的组件列表)
@@ -68,7 +69,11 @@ func main() {
 
 #### icon及manifest文件集成
 
-[icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)
+[icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)  
+
+#### 关于跨平台问题  
+
+[关于跨平台问题](https://gitee.com/ying32/govcl/wikis/%E5%85%B3%E4%BA%8EUI%E5%BA%93%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%97%AE%E9%A2%98?parent=FQA)   
 
 #### 项目中的包说明
 

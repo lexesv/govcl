@@ -298,6 +298,9 @@ func main() {
 	dtp.SetParent(mainForm)
 	dtp.SetBounds(left, top, 167, 25)
 	dtp.SetFormat("yyyy-MM-dd HH:mm:ss")
+	// 在xp下应用了style需要解除一个样式属性，应该是冲突引起的
+	style := types.TStyleElements(rtl.Include(0, types.SeFont))
+	dtp.SetStyleElements(style)
 
 	top += dtp.Height() + 10
 

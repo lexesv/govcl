@@ -2,7 +2,7 @@ package rtl
 
 import (
 	"gitee.com/ying32/govcl/vcl/api"
-	. "gitee.com/ying32/govcl/vcl/types"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 // Move Delphi中的内存操作，不过这里传入的是指针
@@ -64,12 +64,12 @@ func SetReportMemoryLeaksOnShutdown(v bool) {
 }
 
 // TextToShortCut 将字符串转为ShortCut类型
-func TextToShortCut(val string) TShortCut {
+func TextToShortCut(val string) types.TShortCut {
 	return api.DTextToShortCut(val)
 }
 
 // ShortCutToText 将ShortCut类型转为字符串
-func ShortCutToText(val TShortCut) string {
+func ShortCutToText(val types.TShortCut) string {
 	return api.DShortCutToText(val)
 }
 

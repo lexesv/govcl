@@ -15,6 +15,11 @@ var (
 )
 
 func init() {
+	defer func() {
+		if err := recover(); err != nil {
+			MessageBoxW(0, err.(error).Error(), "Error", 0x00000010)
+		}
+	}()
 	// 设置事件的回调函数，因go中callback数量有限，只好折中处理
 	SetEventCallback(callbackStdcall)
 

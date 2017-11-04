@@ -28,6 +28,8 @@ func main() {
 		}
 	}()
 
+	fmt.Println("IsWow64:", win.IsWow64())
+
 	fmt.Println("main")
 	icon := vcl.NewIcon()
 	//icon.LoadFromFile(".\\imgs\\0.ico")

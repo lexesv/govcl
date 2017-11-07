@@ -680,6 +680,30 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
+procedure TreeView_SetOnGetImageIndex(AObj: TTreeView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnGetImageIndex := nil;
+    TEventClass.Remove(AObj, geTreeViewGetImageIndex);
+    Exit;
+  end;
+  AObj.OnGetImageIndex := TEventClass.TreeViewOnGetImageIndex;
+  TEventClass.Add(AObj, geTreeViewGetImageIndex, AEventId);
+end;
+
+procedure TreeView_SetOnGetSelectedIndex(AObj: TTreeView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnGetSelectedIndex := nil;
+    TEventClass.Remove(AObj, geTreeViewGetSelectedIndex);
+    Exit;
+  end;
+  AObj.OnGetSelectedIndex := TEventClass.TreeViewOnGetSelectedIndex;
+  TEventClass.Add(AObj, geTreeViewGetSelectedIndex, AEventId);
+end;
+
 procedure TreeView_SetOnKeyDown(AObj: TTreeView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1191,6 +1215,8 @@ exports
   TreeView_SetOnDblClick,
   TreeView_SetOnEnter,
   TreeView_SetOnExit,
+  TreeView_SetOnGetImageIndex,
+  TreeView_SetOnGetSelectedIndex,
   TreeView_SetOnKeyDown,
   TreeView_SetOnKeyPress,
   TreeView_SetOnKeyUp,

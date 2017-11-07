@@ -436,6 +436,18 @@ begin
   TEventClass.Add(AObj, geExit, AEventId);
 end;
 
+procedure PageControl_SetOnGetImageIndex(AObj: TPageControl; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnGetImageIndex := nil;
+    TEventClass.Remove(AObj, gePageControlGetImageIndex);
+    Exit;
+  end;
+  AObj.OnGetImageIndex := TEventClass.PageControlOnGetImageIndex;
+  TEventClass.Add(AObj, gePageControlGetImageIndex, AEventId);
+end;
+
 procedure PageControl_SetOnMouseDown(AObj: TPageControl; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -832,6 +844,7 @@ exports
   PageControl_SetOnChange,
   PageControl_SetOnEnter,
   PageControl_SetOnExit,
+  PageControl_SetOnGetImageIndex,
   PageControl_SetOnMouseDown,
   PageControl_SetOnMouseEnter,
   PageControl_SetOnMouseLeave,

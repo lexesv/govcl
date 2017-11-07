@@ -704,6 +704,30 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
+procedure ListView_SetOnColumnClick(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnColumnClick := nil;
+    TEventClass.Remove(AObj, geListViewColumnClick);
+    Exit;
+  end;
+  AObj.OnColumnClick := TEventClass.ListViewOnColumnClick;
+  TEventClass.Add(AObj, geListViewColumnClick, AEventId);
+end;
+
+procedure ListView_SetOnColumnRightClick(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnColumnRightClick := nil;
+    TEventClass.Remove(AObj, geListViewColumnRightClick);
+    Exit;
+  end;
+  AObj.OnColumnRightClick := TEventClass.ListViewOnColumnRightClick;
+  TEventClass.Add(AObj, geListViewColumnRightClick, AEventId);
+end;
+
 procedure ListView_SetOnDblClick(AObj: TListView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -738,6 +762,18 @@ begin
   end;
   AObj.OnExit := TEventClass.OnExit;
   TEventClass.Add(AObj, geExit, AEventId);
+end;
+
+procedure ListView_SetOnGetImageIndex(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnGetImageIndex := nil;
+    TEventClass.Remove(AObj, geListViewGetImageIndex);
+    Exit;
+  end;
+  AObj.OnGetImageIndex := TEventClass.ListViewOnGetImageIndex;
+  TEventClass.Add(AObj, geListViewGetImageIndex, AEventId);
 end;
 
 procedure ListView_SetOnKeyDown(AObj: TListView; AEventId: NativeUInt); stdcall;
@@ -846,6 +882,30 @@ begin
   end;
   AObj.OnResize := TEventClass.OnResize;
   TEventClass.Add(AObj, geResize, AEventId);
+end;
+
+procedure ListView_SetOnSelectItem(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnSelectItem := nil;
+    TEventClass.Remove(AObj, geListViewSelectItem);
+    Exit;
+  end;
+  AObj.OnSelectItem := TEventClass.ListViewOnSelectItem;
+  TEventClass.Add(AObj, geListViewSelectItem, AEventId);
+end;
+
+procedure ListView_SetOnItemChecked(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnItemChecked := nil;
+    TEventClass.Remove(AObj, geListViewItemChecked);
+    Exit;
+  end;
+  AObj.OnItemChecked := TEventClass.ListViewOnItemChecked;
+  TEventClass.Add(AObj, geListViewItemChecked, AEventId);
 end;
 
 function ListView_GetCanvas(AObj: TListView): TCanvas; stdcall;
@@ -1272,9 +1332,12 @@ exports
   ListView_SetVisible,
   ListView_SetOnChange,
   ListView_SetOnClick,
+  ListView_SetOnColumnClick,
+  ListView_SetOnColumnRightClick,
   ListView_SetOnDblClick,
   ListView_SetOnEnter,
   ListView_SetOnExit,
+  ListView_SetOnGetImageIndex,
   ListView_SetOnKeyDown,
   ListView_SetOnKeyPress,
   ListView_SetOnKeyUp,
@@ -1284,6 +1347,8 @@ exports
   ListView_SetOnMouseMove,
   ListView_SetOnMouseUp,
   ListView_SetOnResize,
+  ListView_SetOnSelectItem,
+  ListView_SetOnItemChecked,
   ListView_GetCanvas,
   ListView_GetDropTarget,
   ListView_SetDropTarget,

@@ -30,7 +30,10 @@ type
               geLinkClick, geExecute, geUpdate, geException, geTimer, geMinimize,
               geRestore, geHide, geKeyDown, geKeyPress, geKeyUp, geMouseDown,
               geMouseEnter, geMouseLeave, geMouseMove, geMouseUp, geMouseWheel,
-              geListBoxDrawItem, geMenuItemDrawItem);
+              geListBoxDrawItem, geMenuItemDrawItem, geListViewColumnClick,
+              geListViewColumnRightClick, geListViewGetImageIndex, geListViewSelectItem,
+              geListViewItemChecked, geTreeViewGetSelectedIndex, geTreeViewGetImageIndex,
+              gePageControlGetImageIndex);
 
   TEventKey = packed record
     Sender: TObject;
@@ -61,7 +64,30 @@ type
     class procedure UpDownOnClick(Sender: TObject; Button: TUDBtnType);
 
     class procedure TreeViewOnChange(Sender: TObject; ANode: TTreeNode);
+    class procedure TreeViewOnGetImageIndex(Sender: TObject; Node: TTreeNode);
+    class procedure TreeViewOnGetSelectedIndex(Sender: TObject; Node: TTreeNode);
+
+
     class procedure ListViewOnChange(Sender: TObject; AItem: TListItem; Change: TItemChange);
+    class procedure ListViewOnColumnClick(Sender: TObject; Column: TListColumn);
+    class procedure ListViewOnColumnRightClick(Sender: TObject; Column: TListColumn; Point: TPoint);
+    class procedure ListViewOnGetImageIndex(Sender: TObject; Item: TListItem);
+    class procedure ListViewOnSelectItem(Sender: TObject; Item: TListItem; Selected: Boolean);
+    class procedure ListViewOnItemChecked(Sender: TObject; Item: TListItem);
+
+    class procedure PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
+
+
+{
+TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
+TLVColumnClickEvent = procedure(Sender: TObject; Column: TListColumn) of object;
+TLVColumnRClickEvent = procedure(Sender: TObject; Column: TListColumn; Point: TPoint) of object;
+TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
+TLVSelectItemEvent = procedure(Sender: TObject; Item: TListItem;  Selected: Boolean) of object;
+TLVCheckedItemEvent = procedure(Sender: TObject; Item: TListItem) of object;
+TTabGetImageEvent = procedure(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer) of object;
+TTVExpandedEvent = procedure(Sender: TObject; Node: TTreeNode) of object;
+}
 
     class procedure OnDblClick(Sender: TObject);
 
@@ -162,6 +188,36 @@ end;
 class procedure TEventClass.ListViewOnChange(Sender: TObject; AItem: TListItem; Change: TItemChange);
 begin
   SendEvent(Sender, geListViewChange, [Sender, AItem, Ord(Change)]);
+end;
+
+class procedure TEventClass.ListViewOnColumnClick(Sender: TObject; Column: TListColumn);
+begin
+  SendEvent(Sender, geListViewColumnClick, [Sender, Column]);
+end;
+
+class procedure TEventClass.ListViewOnColumnRightClick(Sender: TObject; Column: TListColumn; Point: TPoint);
+begin
+  SendEvent(Sender, geListViewColumnRightClick, [Sender, Column, Point.X, Point.Y]);
+end;
+
+class procedure TEventClass.ListViewOnGetImageIndex(Sender: TObject; Item: TListItem);
+begin
+  SendEvent(Sender, geListViewGetImageIndex, [Sender, Item]);
+end;
+
+class procedure TEventClass.ListViewOnSelectItem(Sender: TObject; Item: TListItem; Selected: Boolean);
+begin
+  SendEvent(Sender, geListViewSelectItem, [Sender, Item, Selected]);
+end;
+
+class procedure TEventClass.ListViewOnItemChecked(Sender: TObject; Item: TListItem);
+begin
+  SendEvent(Sender, geListViewItemChecked, [Sender, Item]);
+end;
+
+class procedure TEventClass.PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
+begin
+  SendEvent(Sender, gePageControlGetImageIndex, [Sender, TabIndex, @ImageIndex]);
 end;
 
 class procedure TEventClass.MenuOnChange(Sender: TObject; Source: TMenuItem;
@@ -383,6 +439,16 @@ end;
 class procedure TEventClass.TreeViewOnChange(Sender: TObject; ANode: TTreeNode);
 begin
   SendEvent(Sender, geTreeViewChange, [Sender, ANode]);
+end;
+
+class procedure TEventClass.TreeViewOnGetImageIndex(Sender: TObject; Node: TTreeNode);
+begin
+  SendEvent(Sender, geTreeViewGetImageIndex, [Sender, Node]);
+end;
+
+class procedure TEventClass.TreeViewOnGetSelectedIndex(Sender: TObject; Node: TTreeNode);
+begin
+  SendEvent(Sender, geTreeViewGetSelectedIndex, [Sender, Node]);
 end;
 
 class procedure TEventClass.UpDownOnClick(Sender: TObject; Button: TUDBtnType);

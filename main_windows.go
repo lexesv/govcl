@@ -286,5 +286,13 @@ func main() {
 	fmt.Println("Compoment Count:", mainForm.ComponentCount())
 	//	mainForm.ScreenCenter()
 
+	lbl := vcl.NewLabel(mainForm)
+	lbl.SetCaption("标签")
+	lbl.SetAlign(types.AlBottom)
+	fmt.Println("InheritsFromControl:", rtl.InheritsFromControl(mainForm.Instance()))
+	fmt.Println("InheritsFromWinControl:", rtl.InheritsFromWinControl(mainForm.Instance()))
+	fmt.Println("InheritsFromComponent:", rtl.InheritsFromComponent(tv1.Instance()))
+	fmt.Println("InheritsFromWinControl:", rtl.InheritsFromWinControl(lbl.Instance()))
+
 	vcl.Application.Run()
 }

@@ -60,6 +60,10 @@ var (
 	dExtractFilePath = libvcl.NewProc("DExtractFilePath")
 	dFileExists      = libvcl.NewProc("DFileExists")
 
+	dInheritsFromControl    = libvcl.NewProc("DInheritsFromControl")
+	dInheritsFromWinControl = libvcl.NewProc("DInheritsFromWinControl")
+	dInheritsFromComponent  = libvcl.NewProc("DInheritsFromComponent")
+
 	// TForm相关设置
 	setGlobalFormScaled      = libvcl.NewProc("SetGlobalFormScaled")
 	form_ScaleForPPI         = libvcl.NewProc("Form_ScaleForPPI")
@@ -77,7 +81,7 @@ var (
 	styleManager_TryLoadFromResource = libvcl.NewProc("StyleManager_TryLoadFromResource")
 
 	styleManager_ActiveStyle         = libvcl.NewProc("StyleManager_ActiveStyle")
-	styleManager_SystemStyle         = libvcl.NewProc("StyleManager_SystemStyle") 
+	styleManager_SystemStyle         = libvcl.NewProc("StyleManager_SystemStyle")
 	styleManager_Enabled             = libvcl.NewProc("StyleManager_Enabled")
 	styleManager_IsCustomStyleActive = libvcl.NewProc("StyleManager_IsCustomStyleActive")
 	styleManager_UnRegisterStyle     = libvcl.NewProc("StyleManager_UnRegisterStyle")

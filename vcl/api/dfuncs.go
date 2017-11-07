@@ -96,3 +96,18 @@ func DFileExists(filename string) bool {
 	r, _, _ := dFileExists.Call(GoStrToDStr(filename))
 	return DBoolToGoBool(r)
 }
+
+func DInheritsFromControl(obj uintptr) bool {
+	r, _, _ := dInheritsFromControl.Call(obj)
+	return r != 0
+}
+
+func DInheritsFromWinControl(obj uintptr) bool {
+	r, _, _ := dInheritsFromWinControl.Call(obj)
+	return r != 0
+}
+
+func DInheritsFromComponent(obj uintptr) bool {
+	r, _, _ := dInheritsFromComponent.Call(obj)
+	return r != 0
+}

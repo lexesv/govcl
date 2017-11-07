@@ -56,3 +56,24 @@ type TDrawItemEvent func(control IControl, index int32, aRect TRect, state TOwne
 //  TMenuDrawItemEvent = procedure (Sender: TObject; ACanvas: TCanvas;
 //    ARect: TRect; Selected: Boolean) of object;
 type TMenuDrawItemEvent func(sender IObject, aCanvas *TCanvas, aRect TRect, selected bool)
+
+// TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
+type TLVNotifyEvent func(sender IObject, item *TListItem)
+
+// TLVColumnClickEvent = procedure(Sender: TObject; Column: TListColumn) of object;
+type TLVColumnClickEvent func(sender IObject, column *TListColumn)
+
+// TLVColumnRClickEvent = procedure(Sender: TObject; Column: TListColumn; Point: TPoint) of object;
+type TLVColumnRClickEvent func(sender IObject, column *TListColumn, point TPoint)
+
+// TLVSelectItemEvent = procedure(Sender: TObject; Item: TListItem;  Selected: Boolean) of object;
+type TLVSelectItemEvent func(sender IObject, item *TListItem, selected bool)
+
+// TLVCheckedItemEvent = procedure(Sender: TObject; Item: TListItem) of object;
+type TLVCheckedItemEvent func(sender IObject, item *TListItem)
+
+// TTabGetImageEvent = procedure(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer) of object;
+type TTabGetImageEvent func(sender IObject, tabIndex int32, imageIndex *int32)
+
+// TTVExpandedEvent = procedure(Sender: TObject; Node: TTreeNode) of object;
+type TTVExpandedEvent func(sender IObject, node *TTreeNode)

@@ -371,6 +371,10 @@ func (p *TPageControl) SetOnExit(fn TNotifyEvent) {
     PageControl_SetOnExit(p.instance, fn)
 }
 
+func (p *TPageControl) SetOnGetImageIndex(fn TTabGetImageEvent) {
+    PageControl_SetOnGetImageIndex(p.instance, fn)
+}
+
 func (p *TPageControl) SetOnMouseDown(fn TMouseEvent) {
     PageControl_SetOnMouseDown(p.instance, fn)
 }

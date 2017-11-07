@@ -555,6 +555,14 @@ func (t *TTreeView) SetOnExit(fn TNotifyEvent) {
     TreeView_SetOnExit(t.instance, fn)
 }
 
+func (t *TTreeView) SetOnGetImageIndex(fn TTVExpandedEvent) {
+    TreeView_SetOnGetImageIndex(t.instance, fn)
+}
+
+func (t *TTreeView) SetOnGetSelectedIndex(fn TTVExpandedEvent) {
+    TreeView_SetOnGetSelectedIndex(t.instance, fn)
+}
+
 func (t *TTreeView) SetOnKeyDown(fn TKeyEvent) {
     TreeView_SetOnKeyDown(t.instance, fn)
 }

@@ -95,6 +95,41 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 				CanvasFromInst(getVal(1)), *(*TRect)(unsafe.Pointer(getVal(2))),
 				DBoolToGoBool(getVal(3)))
 
+			// // TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
+			// type TLVNotifyEvent func(sender IObject, item *TListItem)
+		case TLVNotifyEvent:
+			v.(TLVNotifyEvent)(ObjectFromInst(getVal(0)), ListItemFromInst(getVal(1)))
+
+			// // TLVColumnClickEvent = procedure(Sender: TObject; Column: TListColumn) of object;
+			// type TLVColumnClickEvent func(sender IObject, column *TListColumn)
+		case TLVColumnClickEvent:
+			v.(TLVColumnClickEvent)(ObjectFromInst(getVal(0)), ListColumnFromInst(getVal(1)))
+
+			// // TLVColumnRClickEvent = procedure(Sender: TObject; Column: TListColumn; Point: TPoint) of object;
+			// type TLVColumnRClickEvent func(sender IObject, column *TListColumn, point TPoint)
+		case TLVColumnRClickEvent:
+			v.(TLVColumnRClickEvent)(ObjectFromInst(getVal(0)), ListColumnFromInst(getVal(1)), TPoint{X: int32(getVal(2)), Y: int32(getVal(3))})
+
+			// // TLVSelectItemEvent = procedure(Sender: TObject; Item: TListItem;  Selected: Boolean) of object;
+			// type TLVSelectItemEvent func(sender IObject, item *TListItem, selected bool)
+		case TLVSelectItemEvent:
+			v.(TLVSelectItemEvent)(ObjectFromInst(getVal(0)), ListItemFromInst(getVal(1)), DBoolToGoBool(getVal(2)))
+
+			// // TLVCheckedItemEvent = procedure(Sender: TObject; Item: TListItem) of object;
+			// type TLVCheckedItemEvent func(sender IObject, item *TListItem)
+		case TLVCheckedItemEvent:
+			v.(TLVCheckedItemEvent)(ObjectFromInst(getVal(0)), ListItemFromInst(getVal(1)))
+
+			// // TTabGetImageEvent = procedure(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer) of object;
+			// type TTabGetImageEvent func(sender IObject, tabIndex int32, imageIndex *int32)
+		case TTabGetImageEvent:
+			v.(TTabGetImageEvent)(ObjectFromInst(getVal(0)), int32(getVal(1)), (*int32)(unsafe.Pointer(getVal(2))))
+
+			// // TTVExpandedEvent = procedure(Sender: TObject; Node: TTreeNode) of object;
+			// type TTVExpandedEvent func(sender IObject, node *TTreeNode)
+		case TTVExpandedEvent:
+			v.(TTVExpandedEvent)(ObjectFromInst(getVal(0)), TreeNodeFromInst(getVal(1)))
+
 		default:
 		}
 	}

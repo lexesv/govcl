@@ -591,6 +591,14 @@ func (l *TListView) SetOnClick(fn TNotifyEvent) {
     ListView_SetOnClick(l.instance, fn)
 }
 
+func (l *TListView) SetOnColumnClick(fn TLVColumnClickEvent) {
+    ListView_SetOnColumnClick(l.instance, fn)
+}
+
+func (l *TListView) SetOnColumnRightClick(fn TLVColumnRClickEvent) {
+    ListView_SetOnColumnRightClick(l.instance, fn)
+}
+
 func (l *TListView) SetOnDblClick(fn TNotifyEvent) {
     ListView_SetOnDblClick(l.instance, fn)
 }
@@ -601,6 +609,10 @@ func (l *TListView) SetOnEnter(fn TNotifyEvent) {
 
 func (l *TListView) SetOnExit(fn TNotifyEvent) {
     ListView_SetOnExit(l.instance, fn)
+}
+
+func (l *TListView) SetOnGetImageIndex(fn TLVNotifyEvent) {
+    ListView_SetOnGetImageIndex(l.instance, fn)
 }
 
 func (l *TListView) SetOnKeyDown(fn TKeyEvent) {
@@ -637,6 +649,14 @@ func (l *TListView) SetOnMouseUp(fn TMouseEvent) {
 
 func (l *TListView) SetOnResize(fn TNotifyEvent) {
     ListView_SetOnResize(l.instance, fn)
+}
+
+func (l *TListView) SetOnSelectItem(fn TLVSelectItemEvent) {
+    ListView_SetOnSelectItem(l.instance, fn)
+}
+
+func (l *TListView) SetOnItemChecked(fn TLVCheckedItemEvent) {
+    ListView_SetOnItemChecked(l.instance, fn)
 }
 
 func (l *TListView) Canvas() *TCanvas {

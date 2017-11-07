@@ -21321,6 +21321,14 @@ func ListView_SetOnClick(obj uintptr, fn interface{}) {
     listView_SetOnClick.Call(obj, addEventToMap(fn))
 }
 
+func ListView_SetOnColumnClick(obj uintptr, fn interface{}) {
+    listView_SetOnColumnClick.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnColumnRightClick(obj uintptr, fn interface{}) {
+    listView_SetOnColumnRightClick.Call(obj, addEventToMap(fn))
+}
+
 func ListView_SetOnDblClick(obj uintptr, fn interface{}) {
     listView_SetOnDblClick.Call(obj, addEventToMap(fn))
 }
@@ -21331,6 +21339,10 @@ func ListView_SetOnEnter(obj uintptr, fn interface{}) {
 
 func ListView_SetOnExit(obj uintptr, fn interface{}) {
     listView_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnGetImageIndex(obj uintptr, fn interface{}) {
+    listView_SetOnGetImageIndex.Call(obj, addEventToMap(fn))
 }
 
 func ListView_SetOnKeyDown(obj uintptr, fn interface{}) {
@@ -21367,6 +21379,14 @@ func ListView_SetOnMouseUp(obj uintptr, fn interface{}) {
 
 func ListView_SetOnResize(obj uintptr, fn interface{}) {
     listView_SetOnResize.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnSelectItem(obj uintptr, fn interface{}) {
+    listView_SetOnSelectItem.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnItemChecked(obj uintptr, fn interface{}) {
+    listView_SetOnItemChecked.Call(obj, addEventToMap(fn))
 }
 
 func ListView_GetCanvas(obj uintptr) uintptr {
@@ -22207,6 +22227,14 @@ func TreeView_SetOnEnter(obj uintptr, fn interface{}) {
 
 func TreeView_SetOnExit(obj uintptr, fn interface{}) {
     treeView_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func TreeView_SetOnGetImageIndex(obj uintptr, fn interface{}) {
+    treeView_SetOnGetImageIndex.Call(obj, addEventToMap(fn))
+}
+
+func TreeView_SetOnGetSelectedIndex(obj uintptr, fn interface{}) {
+    treeView_SetOnGetSelectedIndex.Call(obj, addEventToMap(fn))
 }
 
 func TreeView_SetOnKeyDown(obj uintptr, fn interface{}) {
@@ -26570,6 +26598,10 @@ func PageControl_SetOnEnter(obj uintptr, fn interface{}) {
 
 func PageControl_SetOnExit(obj uintptr, fn interface{}) {
     pageControl_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func PageControl_SetOnGetImageIndex(obj uintptr, fn interface{}) {
+    pageControl_SetOnGetImageIndex.Call(obj, addEventToMap(fn))
 }
 
 func PageControl_SetOnMouseDown(obj uintptr, fn interface{}) {

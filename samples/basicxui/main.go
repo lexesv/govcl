@@ -30,6 +30,9 @@ const uiXML = `<?xml encoding="utf-8" version="1.0" ?>
 		</MenuItem>
 		<MenuItem name="mn2" caption="关于" />
 	</MainMenu>
+	<PopupMenu name="Pm1">
+	    <MenuItem name="Mn5" caption="测试" /> 
+	</PopupMenu>
 	<Button name="Btn1" caption="按钮" align="alTop" hint="提示" showhint="true" />
 	<Panel name="Pnl1" align="alClient">
 		<PageControl name="PgcMain" activeindex="0" align="alClient">
@@ -64,6 +67,7 @@ type TEvents struct {
 	Btn3    *vcl.TButton
 	PgcMain *vcl.TPageControl
 	ActExit *vcl.TAction
+	Pm1     *vcl.TPopupMenu
 }
 
 func (e *TEvents) OnButtonClick(sender vcl.IObject) {
@@ -95,6 +99,11 @@ func main() {
 	if err != nil {
 		return
 	}
+	events.Btn1.SetOnClick(func(sender vcl.IObject) {
+		p := vcl.Mouse.CursorPos()
+		events.Pm1.Popup(p.X, p.Y)
+	})
+
 	fmt.Println("m:", m)
 	fmt.Println("m.btn1", events.Btn3.Left(), events.Btn3.Top(),
 		events.Btn3.Height(), events.Btn3.Width(),

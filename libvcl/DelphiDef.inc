@@ -297,6 +297,23 @@ begin
   Result := FileExists(AFileName);
 end;
 
+function DInheritsFromControl(AObj: TObject): LongBool; stdcall;
+begin
+  Result := AObj.InheritsFrom(TControl);
+end;
+
+function DInheritsFromWinControl(AObj: TObject): LongBool; stdcall;
+begin
+  Result := AObj.InheritsFrom(TWinControl);
+end;
+
+function DInheritsFromComponent(AObj: TObject): LongBool; stdcall;
+begin
+  Result := AObj.InheritsFrom(TComponent);
+end;
+
+
+
 // TStyleManager
 // StyleManager_Initialize
 // StyleManager_UnInitialize
@@ -480,6 +497,10 @@ exports
 
   DExtractFilePath,
   DFileExists,
+
+  DInheritsFromControl,
+  DInheritsFromWinControl,
+  DInheritsFromComponent,
 
   DSetReportMemoryLeaksOnShutdown
   ;

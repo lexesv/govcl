@@ -158,6 +158,14 @@ func (x *TXMLForm) buildControls(node xmldom.Node, parent vcl.IControl, menu *vc
 			mmenu.SetName(attrs.Name())
 			pcontrol = nil
 			x.buildControls(subnode, nil, mmenu.Items())
+			x.setFiledVal(attrs.Name(), mmenu)
+
+		case "PopupMenu":
+			pmenu := vcl.NewPopupMenu(x.Form)
+			pmenu.SetName(attrs.Name())
+			pcontrol = nil
+			x.buildControls(subnode, nil, pmenu.Items())
+			x.setFiledVal(attrs.Name(), pmenu)
 
 		case "MenuItem":
 

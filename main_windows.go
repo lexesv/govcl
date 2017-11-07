@@ -262,16 +262,49 @@ func main() {
 	sheet.SetCaption("第二页")
 	sheet.SetPageControl(page)
 
+	// -----------TreeView 不同Node弹出不同菜单，两个右键例程不同使用
+
+	tvpm1 := vcl.NewPopupMenu(mainForm)
+	mItem := vcl.NewMenuItem(mainForm)
+	mItem.SetCaption("第一种")
+	tvpm1.Items().Add(mItem)
+
+	tvpm2 := vcl.NewPopupMenu(mainForm)
+	mItem = vcl.NewMenuItem(mainForm)
+	mItem.SetCaption("第二种")
+	tvpm2.Items().Add(mItem)
+
 	tv1 := vcl.NewTreeView(mainForm)
 	tv1.SetAutoExpand(true)
 	tv1.SetParent(sheet)
 	tv1.SetAlign(types.AlClient)
+	//	tv1.SetRightClickSelect(true)
 	tv1.SetOnClick(func(vcl.IObject) {
 		if tv1.SelectionCount() > 0 {
 			node := tv1.Selected()
 			fmt.Println("text:", node.Text(), ", index:", node.Index())
 		}
 	})
+
+	tv1.SetOnMouseDown(func(sender vcl.IObject, button types.TMouseButton, shift types.TShiftState, x, y int32) {
+		if button == types.MbRight {
+			node := tv1.GetNodeAt(x, y)
+			if node != nil && node.IsValid() {
+				// 自由决择是否选中
+				node.SetSelected(true)
+				// 根据Level来判断，这里只是做演示
+				p := vcl.Mouse.CursorPos()
+				switch node.Level() {
+				case 0:
+					tvpm1.Popup(p.X, p.Y)
+				case 1:
+					tvpm2.Popup(p.X, p.Y)
+				}
+				fmt.Println("node.Level():", node.Level(), ", text:", node.Text())
+			}
+		}
+	})
+
 	tv1.Items().BeginUpdate()
 	node := tv1.Items().AddChild(nil, "首个")
 	for i := 1; i <= 50; i++ {

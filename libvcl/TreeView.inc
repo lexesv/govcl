@@ -80,6 +80,11 @@ begin
   Result :=  AObj.FindNextToSelect;
 end;
 
+function TreeView_CustomSort(AObj: TTreeView; SortProc: PFNTVCOMPARE; Data: NativeInt; ARecurse: LongBool): LongBool; stdcall;
+begin
+  Result :=  AObj.CustomSort(SortProc, Data, ARecurse);
+end;
+
 function TreeView_CanFocus(AObj: TTreeView): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
@@ -644,6 +649,18 @@ begin
   TEventClass.Add(AObj, geClick, AEventId);
 end;
 
+procedure TreeView_SetOnCompare(AObj: TTreeView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnCompare := nil;
+    TEventClass.Remove(AObj, geTreeViewCompare);
+    Exit;
+  end;
+  AObj.OnCompare := TEventClass.TreeViewOnCompare;
+  TEventClass.Add(AObj, geTreeViewCompare, AEventId);
+end;
+
 procedure TreeView_SetOnDblClick(AObj: TTreeView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1102,6 +1119,7 @@ exports
   TreeView_Subselect,
   TreeView_ClearSelection,
   TreeView_FindNextToSelect,
+  TreeView_CustomSort,
   TreeView_CanFocus,
   TreeView_FlipChildren,
   TreeView_Focused,
@@ -1212,6 +1230,7 @@ exports
   TreeView_SetStyleElements,
   TreeView_SetOnChange,
   TreeView_SetOnClick,
+  TreeView_SetOnCompare,
   TreeView_SetOnDblClick,
   TreeView_SetOnEnter,
   TreeView_SetOnExit,

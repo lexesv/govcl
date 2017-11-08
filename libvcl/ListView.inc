@@ -60,6 +60,11 @@ begin
   AObj.Scroll(DX, DY);
 end;
 
+function ListView_CustomSort(AObj: TListView; SortProc: PFNLVCOMPARE; lParam: NativeInt): LongBool; stdcall;
+begin
+  Result :=  AObj.CustomSort(SortProc, lParam);
+end;
+
 function ListView_CanFocus(AObj: TListView): LongBool; stdcall;
 begin
   Result :=  AObj.CanFocus;
@@ -728,6 +733,18 @@ begin
   TEventClass.Add(AObj, geListViewColumnRightClick, AEventId);
 end;
 
+procedure ListView_SetOnCompare(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnCompare := nil;
+    TEventClass.Remove(AObj, geListViewCompare);
+    Exit;
+  end;
+  AObj.OnCompare := TEventClass.ListViewOnCompare;
+  TEventClass.Add(AObj, geListViewCompare, AEventId);
+end;
+
 procedure ListView_SetOnDblClick(AObj: TListView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1206,6 +1223,7 @@ exports
   ListView_IsEditing,
   ListView_SelectAll,
   ListView_Scroll,
+  ListView_CustomSort,
   ListView_CanFocus,
   ListView_FlipChildren,
   ListView_Focused,
@@ -1334,6 +1352,7 @@ exports
   ListView_SetOnClick,
   ListView_SetOnColumnClick,
   ListView_SetOnColumnRightClick,
+  ListView_SetOnCompare,
   ListView_SetOnDblClick,
   ListView_SetOnEnter,
   ListView_SetOnExit,

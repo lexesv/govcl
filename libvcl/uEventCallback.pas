@@ -33,7 +33,7 @@ type
               geListBoxDrawItem, geMenuItemDrawItem, geListViewColumnClick,
               geListViewColumnRightClick, geListViewGetImageIndex, geListViewSelectItem,
               geListViewItemChecked, geTreeViewGetSelectedIndex, geTreeViewGetImageIndex,
-              gePageControlGetImageIndex);
+              gePageControlGetImageIndex, geListViewCompare, geTreeViewCompare);
 
   TEventKey = packed record
     Sender: TObject;
@@ -66,6 +66,7 @@ type
     class procedure TreeViewOnChange(Sender: TObject; ANode: TTreeNode);
     class procedure TreeViewOnGetImageIndex(Sender: TObject; Node: TTreeNode);
     class procedure TreeViewOnGetSelectedIndex(Sender: TObject; Node: TTreeNode);
+    class procedure TreeViewOnCompare(Sender: TObject; Node1, Node2: TTreeNode; Data: Integer; var Compare: Integer);
 
 
     class procedure ListViewOnChange(Sender: TObject; AItem: TListItem; Change: TItemChange);
@@ -74,6 +75,7 @@ type
     class procedure ListViewOnGetImageIndex(Sender: TObject; Item: TListItem);
     class procedure ListViewOnSelectItem(Sender: TObject; Item: TListItem; Selected: Boolean);
     class procedure ListViewOnItemChecked(Sender: TObject; Item: TListItem);
+    class procedure ListViewOnCompare(Sender: TObject; Item1, Item2: TListItem; Data: Integer; var Compare: Integer);
 
     class procedure PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
 
@@ -213,6 +215,11 @@ end;
 class procedure TEventClass.ListViewOnItemChecked(Sender: TObject; Item: TListItem);
 begin
   SendEvent(Sender, geListViewItemChecked, [Sender, Item]);
+end;
+
+class procedure TEventClass.ListViewOnCompare(Sender: TObject; Item1, Item2: TListItem; Data: Integer; var Compare: Integer);
+begin
+  SendEvent(Sender, geListViewCompare, [Sender, Item1, Item2, Data, @Compare]);
 end;
 
 class procedure TEventClass.PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
@@ -449,6 +456,11 @@ end;
 class procedure TEventClass.TreeViewOnGetSelectedIndex(Sender: TObject; Node: TTreeNode);
 begin
   SendEvent(Sender, geTreeViewGetSelectedIndex, [Sender, Node]);
+end;
+
+class procedure TEventClass.TreeViewOnCompare(Sender: TObject; Node1, Node2: TTreeNode; Data: Integer; var Compare: Integer);
+begin
+  SendEvent(Sender, geTreeViewCompare, [Sender, Node1, Node2, Data, @Compare]);
 end;
 
 class procedure TEventClass.UpDownOnClick(Sender: TObject; Button: TUDBtnType);

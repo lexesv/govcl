@@ -103,6 +103,10 @@ func (t *TTreeView) FindNextToSelect() *TTreeNode {
     return TreeNodeFromInst(TreeView_FindNextToSelect(t.instance))
 }
 
+func (t *TTreeView) CustomSort(SortProc PFNTVCOMPARE, Data int, ARecurse bool) bool {
+    return TreeView_CustomSort(t.instance, SortProc , Data , ARecurse)
+}
+
 func (t *TTreeView) CanFocus() bool {
     return TreeView_CanFocus(t.instance)
 }
@@ -541,6 +545,10 @@ func (t *TTreeView) SetOnChange(fn TTVChangedEvent) {
 
 func (t *TTreeView) SetOnClick(fn TNotifyEvent) {
     TreeView_SetOnClick(t.instance, fn)
+}
+
+func (t *TTreeView) SetOnCompare(fn TTVCompareEvent) {
+    TreeView_SetOnCompare(t.instance, fn)
 }
 
 func (t *TTreeView) SetOnDblClick(fn TNotifyEvent) {

@@ -20756,6 +20756,11 @@ func ListView_Scroll(obj uintptr, DX int32, DY int32)  {
     listView_Scroll.Call(obj, uintptr(DX) , uintptr(DY) )
 }
 
+func ListView_CustomSort(obj uintptr, SortProc PFNLVCOMPARE, lParam int) bool {
+    ret, _, _ := listView_CustomSort.Call(obj, uintptr(SortProc) , uintptr(lParam) )
+    return DBoolToGoBool(ret)
+}
+
 func ListView_CanFocus(obj uintptr) bool {
     ret, _, _ := listView_CanFocus.Call(obj)
     return DBoolToGoBool(ret)
@@ -21329,6 +21334,10 @@ func ListView_SetOnColumnRightClick(obj uintptr, fn interface{}) {
     listView_SetOnColumnRightClick.Call(obj, addEventToMap(fn))
 }
 
+func ListView_SetOnCompare(obj uintptr, fn interface{}) {
+    listView_SetOnCompare.Call(obj, addEventToMap(fn))
+}
+
 func ListView_SetOnDblClick(obj uintptr, fn interface{}) {
     listView_SetOnDblClick.Call(obj, addEventToMap(fn))
 }
@@ -21722,6 +21731,11 @@ func TreeView_ClearSelection(obj uintptr, KeepPrimary bool)  {
 func TreeView_FindNextToSelect(obj uintptr) uintptr {
     ret, _, _ := treeView_FindNextToSelect.Call(obj)
     return ret
+}
+
+func TreeView_CustomSort(obj uintptr, SortProc PFNTVCOMPARE, Data int, ARecurse bool) bool {
+    ret, _, _ := treeView_CustomSort.Call(obj, uintptr(SortProc) , uintptr(Data) , GoBoolToDBool(ARecurse) )
+    return DBoolToGoBool(ret)
 }
 
 func TreeView_CanFocus(obj uintptr) bool {
@@ -22215,6 +22229,10 @@ func TreeView_SetOnChange(obj uintptr, fn interface{}) {
 
 func TreeView_SetOnClick(obj uintptr, fn interface{}) {
     treeView_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func TreeView_SetOnCompare(obj uintptr, fn interface{}) {
+    treeView_SetOnCompare.Call(obj, addEventToMap(fn))
 }
 
 func TreeView_SetOnDblClick(obj uintptr, fn interface{}) {

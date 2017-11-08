@@ -41,3 +41,7 @@ type HKEY uintptr
 type HMONITOR uintptr
 
 type Char uint16
+
+type PFNLVCOMPARE uintptr
+
+type PFNTVCOMPARE uintptr

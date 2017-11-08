@@ -130,6 +130,20 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 		case TTVExpandedEvent:
 			v.(TTVExpandedEvent)(ObjectFromInst(getVal(0)), TreeNodeFromInst(getVal(1)))
 
+		// TLVCompareEvent = procedure(Sender: TObject; Item1, Item2: TListItem;
+		// 	Data: Integer; var Compare: Integer) of object;
+		//type TLVCompareEvent func(sender IObject, item1, item2 *TListItem, data int32, compare *int32)
+		case TLVCompareEvent:
+			v.(TLVCompareEvent)(ObjectFromInst(getVal(0)), ListItemFromInst(getVal(1)), ListItemFromInst(getVal(2)),
+				int32(getVal(3)), (*int32)(unsafe.Pointer(getVal(4))))
+
+		// TTVCompareEvent = procedure(Sender: TObject; Node1, Node2: TTreeNode;
+		// 	Data: Integer; var Compare: Integer) of object;
+		//type TTVCompareEvent func(sender IObject, node1, node2 *TTreeNode, data int32, compare *int32)
+		case TTVCompareEvent:
+			v.(TTVCompareEvent)(ObjectFromInst(getVal(0)), TreeNodeFromInst(getVal(1)), TreeNodeFromInst(getVal(2)),
+				int32(getVal(3)), (*int32)(unsafe.Pointer(getVal(4))))
+
 		default:
 		}
 	}

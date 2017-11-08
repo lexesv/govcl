@@ -77,3 +77,11 @@ type TTabGetImageEvent func(sender IObject, tabIndex int32, imageIndex *int32)
 
 // TTVExpandedEvent = procedure(Sender: TObject; Node: TTreeNode) of object;
 type TTVExpandedEvent func(sender IObject, node *TTreeNode)
+
+// TLVCompareEvent = procedure(Sender: TObject; Item1, Item2: TListItem;
+// 	Data: Integer; var Compare: Integer) of object;
+type TLVCompareEvent func(sender IObject, item1, item2 *TListItem, data int32, compare *int32)
+
+// TTVCompareEvent = procedure(Sender: TObject; Node1, Node2: TTreeNode;
+// 	Data: Integer; var Compare: Integer) of object;
+type TTVCompareEvent func(sender IObject, node1, node2 *TTreeNode, data int32, compare *int32)

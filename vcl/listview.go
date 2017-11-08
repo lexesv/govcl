@@ -87,6 +87,10 @@ func (l *TListView) Scroll(DX int32, DY int32) {
     ListView_Scroll(l.instance, DX , DY)
 }
 
+func (l *TListView) CustomSort(SortProc PFNLVCOMPARE, lParam int) bool {
+    return ListView_CustomSort(l.instance, SortProc , lParam)
+}
+
 func (l *TListView) CanFocus() bool {
     return ListView_CanFocus(l.instance)
 }
@@ -597,6 +601,10 @@ func (l *TListView) SetOnColumnClick(fn TLVColumnClickEvent) {
 
 func (l *TListView) SetOnColumnRightClick(fn TLVColumnRClickEvent) {
     ListView_SetOnColumnRightClick(l.instance, fn)
+}
+
+func (l *TListView) SetOnCompare(fn TLVCompareEvent) {
+    ListView_SetOnCompare(l.instance, fn)
 }
 
 func (l *TListView) SetOnDblClick(fn TNotifyEvent) {

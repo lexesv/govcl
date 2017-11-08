@@ -25,6 +25,13 @@ func main() {
 	mainForm.SetWidth(600)
 	mainForm.SetHeight(500)
 
+	imglist := vcl.NewImageList(mainForm)
+	imglist.AddIcon(icon)
+	ico2 := vcl.NewIcon()
+	ico2.LoadFromFile("brown.ico")
+	imglist.AddIcon(ico2)
+	ico2.Free()
+
 	// -----------TreeView 不同Node弹出不同菜单，两个右键例程不同使用
 
 	tvpm1 := vcl.NewPopupMenu(mainForm)
@@ -40,6 +47,9 @@ func main() {
 	tv := vcl.NewTreeView(mainForm)
 	tv.SetParent(mainForm)
 	tv.SetAlign(types.AlClient)
+
+	tv.SetImages(imglist)
+	tv.SetStateImages(imglist)
 
 	// 自动展开
 	//tv.SetAutoExpand(true)
@@ -77,7 +87,17 @@ func main() {
 	// 批量添加最好使用BeginUpdate与EndUpdate组合
 	tv.Items().BeginUpdate()
 	for i := 0; i < 30; i++ {
-		tv.Items().AddChild(node, fmt.Sprintf("Node%d", i))
+		subnode := tv.Items().AddChild(node, fmt.Sprintf("Node%d", i))
+		// 设置相关imagelist中的图标索引
+		// 默认图标索引
+		subnode.SetImageIndex(1)
+		// 鼠标选中时索引
+		subnode.SetSelectedIndex(1)
+		// 节点展开时索引
+		//subnode.SetExpandedImageIndex(1)
+		// 状态图标索引
+		//subnode.SetStateIndex(1)
+
 	}
 	tv.Items().EndUpdate()
 	// 展开

@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"strings"
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
@@ -35,7 +37,7 @@ func main() {
 	lv1.SetReadOnly(true)
 	lv1.SetViewStyle(types.VsReport)
 	lv1.SetGridLines(true)
-	lv1.SetColumnClick(false)
+	//lv1.SetColumnClick(false)
 
 	col := lv1.Columns().Add()
 	col.SetCaption("序号")
@@ -52,13 +54,27 @@ func main() {
 		}
 	})
 
+	lv1.SetOnColumnClick(func(sender vcl.IObject, column *vcl.TListColumn) {
+		// 按柱头索引排序
+		lv1.CustomSort(0, int(column.Index()))
+	})
+
+	// 排序事件
+	lv1.SetOnCompare(func(sender vcl.IObject, item1, item2 *vcl.TListItem, data int32, compare *int32) {
+		if data == 0 {
+			*compare = int32(strings.Compare(item1.Caption(), item2.Caption()))
+		} else {
+			*compare = int32(strings.Compare(item1.SubItems().Strings(data-1), item2.SubItems().Strings(data-1)))
+		}
+	})
+
 	//	lv1.Clear()
 	lv1.Items().BeginUpdate()
 	for i := 1; i <= 100; i++ {
 		item := lv1.Items().Add()
 		// 第一列为Caption属性所管理
-		item.SetCaption(fmt.Sprintf("%d", i))
-		item.SubItems().Add(fmt.Sprintf("值：%d", i))
+		item.SetCaption(fmt.Sprintf("%d", i+rand.Int()))
+		item.SubItems().Add(fmt.Sprintf("值：%d", i+rand.Int()))
 	}
 	lv1.Items().EndUpdate()
 

@@ -21,7 +21,7 @@ type TProgressBar struct {
 
 func NewProgressBar(owner IComponent) *TProgressBar {
     p := new(TProgressBar)
-    p.instance = ProgressBar_Create(owner.Instance())
+    p.instance = ProgressBar_Create(CheckPtr(owner))
     return p
 }
 

@@ -20,7 +20,7 @@ type TComponent struct {
 
 func NewComponent(owner IComponent) *TComponent {
     c := new(TComponent)
-    c.instance = Component_Create(owner.Instance())
+    c.instance = Component_Create(CheckPtr(owner))
     return c
 }
 

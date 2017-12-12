@@ -21,7 +21,7 @@ type TSaveDialog struct {
 
 func NewSaveDialog(owner IComponent) *TSaveDialog {
     s := new(TSaveDialog)
-    s.instance = SaveDialog_Create(owner.Instance())
+    s.instance = SaveDialog_Create(CheckPtr(owner))
     return s
 }
 

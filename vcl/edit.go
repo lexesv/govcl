@@ -21,7 +21,7 @@ type TEdit struct {
 
 func NewEdit(owner IComponent) *TEdit {
     e := new(TEdit)
-    e.instance = Edit_Create(owner.Instance())
+    e.instance = Edit_Create(CheckPtr(owner))
     return e
 }
 

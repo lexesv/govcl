@@ -21,7 +21,7 @@ type TBalloonHint struct {
 
 func NewBalloonHint(owner IComponent) *TBalloonHint {
     b := new(TBalloonHint)
-    b.instance = BalloonHint_Create(owner.Instance())
+    b.instance = BalloonHint_Create(CheckPtr(owner))
     return b
 }
 

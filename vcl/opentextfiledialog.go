@@ -21,7 +21,7 @@ type TOpenTextFileDialog struct {
 
 func NewOpenTextFileDialog(owner IComponent) *TOpenTextFileDialog {
     o := new(TOpenTextFileDialog)
-    o.instance = OpenTextFileDialog_Create(owner.Instance())
+    o.instance = OpenTextFileDialog_Create(CheckPtr(owner))
     return o
 }
 

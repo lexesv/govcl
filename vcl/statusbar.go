@@ -21,7 +21,7 @@ type TStatusBar struct {
 
 func NewStatusBar(owner IComponent) *TStatusBar {
     s := new(TStatusBar)
-    s.instance = StatusBar_Create(owner.Instance())
+    s.instance = StatusBar_Create(CheckPtr(owner))
     return s
 }
 

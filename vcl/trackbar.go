@@ -21,7 +21,7 @@ type TTrackBar struct {
 
 func NewTrackBar(owner IComponent) *TTrackBar {
     t := new(TTrackBar)
-    t.instance = TrackBar_Create(owner.Instance())
+    t.instance = TrackBar_Create(CheckPtr(owner))
     return t
 }
 

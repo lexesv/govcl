@@ -21,7 +21,7 @@ type TPageControl struct {
 
 func NewPageControl(owner IComponent) *TPageControl {
     p := new(TPageControl)
-    p.instance = PageControl_Create(owner.Instance())
+    p.instance = PageControl_Create(CheckPtr(owner))
     return p
 }
 

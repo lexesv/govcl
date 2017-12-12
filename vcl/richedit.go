@@ -21,7 +21,7 @@ type TRichEdit struct {
 
 func NewRichEdit(owner IComponent) *TRichEdit {
     r := new(TRichEdit)
-    r.instance = RichEdit_Create(owner.Instance())
+    r.instance = RichEdit_Create(CheckPtr(owner))
     return r
 }
 

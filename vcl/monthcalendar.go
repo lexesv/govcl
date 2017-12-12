@@ -22,7 +22,7 @@ type TMonthCalendar struct {
 
 func NewMonthCalendar(owner IComponent) *TMonthCalendar {
     m := new(TMonthCalendar)
-    m.instance = MonthCalendar_Create(owner.Instance())
+    m.instance = MonthCalendar_Create(CheckPtr(owner))
     return m
 }
 

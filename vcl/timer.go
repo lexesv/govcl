@@ -20,7 +20,7 @@ type TTimer struct {
 
 func NewTimer(owner IComponent) *TTimer {
     t := new(TTimer)
-    t.instance = Timer_Create(owner.Instance())
+    t.instance = Timer_Create(CheckPtr(owner))
     return t
 }
 

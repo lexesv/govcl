@@ -21,7 +21,7 @@ type TMenuItem struct {
 
 func NewMenuItem(owner IComponent) *TMenuItem {
     m := new(TMenuItem)
-    m.instance = MenuItem_Create(owner.Instance())
+    m.instance = MenuItem_Create(CheckPtr(owner))
     return m
 }
 

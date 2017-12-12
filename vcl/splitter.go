@@ -21,7 +21,7 @@ type TSplitter struct {
 
 func NewSplitter(owner IComponent) *TSplitter {
     s := new(TSplitter)
-    s.instance = Splitter_Create(owner.Instance())
+    s.instance = Splitter_Create(CheckPtr(owner))
     return s
 }
 

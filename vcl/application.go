@@ -21,7 +21,7 @@ type TApplication struct {
 
 func NewApplication(owner IComponent) *TApplication {
     a := new(TApplication)
-    a.instance = Application_Create(owner.Instance())
+    a.instance = Application_Create(CheckPtr(owner))
     return a
 }
 

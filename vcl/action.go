@@ -21,7 +21,7 @@ type TAction struct {
 
 func NewAction(owner IComponent) *TAction {
     a := new(TAction)
-    a.instance = Action_Create(owner.Instance())
+    a.instance = Action_Create(CheckPtr(owner))
     return a
 }
 

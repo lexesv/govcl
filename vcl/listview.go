@@ -21,7 +21,7 @@ type TListView struct {
 
 func NewListView(owner IComponent) *TListView {
     l := new(TListView)
-    l.instance = ListView_Create(owner.Instance())
+    l.instance = ListView_Create(CheckPtr(owner))
     return l
 }
 

@@ -21,7 +21,7 @@ type TImageList struct {
 
 func NewImageList(owner IComponent) *TImageList {
     i := new(TImageList)
-    i.instance = ImageList_Create(owner.Instance())
+    i.instance = ImageList_Create(CheckPtr(owner))
     return i
 }
 

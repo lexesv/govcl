@@ -21,7 +21,7 @@ type TLinkLabel struct {
 
 func NewLinkLabel(owner IComponent) *TLinkLabel {
     l := new(TLinkLabel)
-    l.instance = LinkLabel_Create(owner.Instance())
+    l.instance = LinkLabel_Create(CheckPtr(owner))
     return l
 }
 

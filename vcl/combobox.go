@@ -21,7 +21,7 @@ type TComboBox struct {
 
 func NewComboBox(owner IComponent) *TComboBox {
     c := new(TComboBox)
-    c.instance = ComboBox_Create(owner.Instance())
+    c.instance = ComboBox_Create(CheckPtr(owner))
     return c
 }
 

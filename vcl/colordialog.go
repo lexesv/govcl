@@ -21,7 +21,7 @@ type TColorDialog struct {
 
 func NewColorDialog(owner IComponent) *TColorDialog {
     c := new(TColorDialog)
-    c.instance = ColorDialog_Create(owner.Instance())
+    c.instance = ColorDialog_Create(CheckPtr(owner))
     return c
 }
 

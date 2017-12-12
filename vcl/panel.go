@@ -21,7 +21,7 @@ type TPanel struct {
 
 func NewPanel(owner IComponent) *TPanel {
     p := new(TPanel)
-    p.instance = Panel_Create(owner.Instance())
+    p.instance = Panel_Create(CheckPtr(owner))
     return p
 }
 

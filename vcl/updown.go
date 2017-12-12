@@ -21,7 +21,7 @@ type TUpDown struct {
 
 func NewUpDown(owner IComponent) *TUpDown {
     u := new(TUpDown)
-    u.instance = UpDown_Create(owner.Instance())
+    u.instance = UpDown_Create(CheckPtr(owner))
     return u
 }
 

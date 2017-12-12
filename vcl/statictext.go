@@ -21,7 +21,7 @@ type TStaticText struct {
 
 func NewStaticText(owner IComponent) *TStaticText {
     s := new(TStaticText)
-    s.instance = StaticText_Create(owner.Instance())
+    s.instance = StaticText_Create(CheckPtr(owner))
     return s
 }
 

@@ -21,7 +21,7 @@ type TFontDialog struct {
 
 func NewFontDialog(owner IComponent) *TFontDialog {
     f := new(TFontDialog)
-    f.instance = FontDialog_Create(owner.Instance())
+    f.instance = FontDialog_Create(CheckPtr(owner))
     return f
 }
 

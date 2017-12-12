@@ -21,7 +21,7 @@ type TMemo struct {
 
 func NewMemo(owner IComponent) *TMemo {
     m := new(TMemo)
-    m.instance = Memo_Create(owner.Instance())
+    m.instance = Memo_Create(CheckPtr(owner))
     return m
 }
 

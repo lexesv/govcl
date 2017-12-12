@@ -21,7 +21,7 @@ type TRadioButton struct {
 
 func NewRadioButton(owner IComponent) *TRadioButton {
     r := new(TRadioButton)
-    r.instance = RadioButton_Create(owner.Instance())
+    r.instance = RadioButton_Create(CheckPtr(owner))
     return r
 }
 

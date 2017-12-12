@@ -21,7 +21,7 @@ type TTabSheet struct {
 
 func NewTabSheet(owner IComponent) *TTabSheet {
     t := new(TTabSheet)
-    t.instance = TabSheet_Create(owner.Instance())
+    t.instance = TabSheet_Create(CheckPtr(owner))
     return t
 }
 

@@ -21,7 +21,7 @@ type TActionList struct {
 
 func NewActionList(owner IComponent) *TActionList {
     a := new(TActionList)
-    a.instance = ActionList_Create(owner.Instance())
+    a.instance = ActionList_Create(CheckPtr(owner))
     return a
 }
 

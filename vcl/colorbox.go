@@ -21,7 +21,7 @@ type TColorBox struct {
 
 func NewColorBox(owner IComponent) *TColorBox {
     c := new(TColorBox)
-    c.instance = ColorBox_Create(owner.Instance())
+    c.instance = ColorBox_Create(CheckPtr(owner))
     return c
 }
 

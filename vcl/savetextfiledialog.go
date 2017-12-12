@@ -21,7 +21,7 @@ type TSaveTextFileDialog struct {
 
 func NewSaveTextFileDialog(owner IComponent) *TSaveTextFileDialog {
     s := new(TSaveTextFileDialog)
-    s.instance = SaveTextFileDialog_Create(owner.Instance())
+    s.instance = SaveTextFileDialog_Create(CheckPtr(owner))
     return s
 }
 

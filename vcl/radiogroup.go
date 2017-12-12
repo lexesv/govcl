@@ -21,7 +21,7 @@ type TRadioGroup struct {
 
 func NewRadioGroup(owner IComponent) *TRadioGroup {
     r := new(TRadioGroup)
-    r.instance = RadioGroup_Create(owner.Instance())
+    r.instance = RadioGroup_Create(CheckPtr(owner))
     return r
 }
 

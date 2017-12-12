@@ -21,7 +21,7 @@ type THotKey struct {
 
 func NewHotKey(owner IComponent) *THotKey {
     h := new(THotKey)
-    h.instance = HotKey_Create(owner.Instance())
+    h.instance = HotKey_Create(CheckPtr(owner))
     return h
 }
 

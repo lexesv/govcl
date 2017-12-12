@@ -21,7 +21,7 @@ type TImage struct {
 
 func NewImage(owner IComponent) *TImage {
     i := new(TImage)
-    i.instance = Image_Create(owner.Instance())
+    i.instance = Image_Create(CheckPtr(owner))
     return i
 }
 

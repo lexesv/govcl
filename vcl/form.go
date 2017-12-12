@@ -21,7 +21,7 @@ type TForm struct {
 
 func NewForm(owner IComponent) *TForm {
     f := new(TForm)
-    f.instance = Form_Create(owner.Instance())
+    f.instance = Form_Create(CheckPtr(owner))
     return f
 }
 

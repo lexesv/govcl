@@ -21,7 +21,7 @@ type TControl struct {
 
 func NewControl(owner IComponent) *TControl {
     c := new(TControl)
-    c.instance = Control_Create(owner.Instance())
+    c.instance = Control_Create(CheckPtr(owner))
     return c
 }
 

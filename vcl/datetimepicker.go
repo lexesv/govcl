@@ -22,7 +22,7 @@ type TDateTimePicker struct {
 
 func NewDateTimePicker(owner IComponent) *TDateTimePicker {
     d := new(TDateTimePicker)
-    d.instance = DateTimePicker_Create(owner.Instance())
+    d.instance = DateTimePicker_Create(CheckPtr(owner))
     return d
 }
 

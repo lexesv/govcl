@@ -21,7 +21,7 @@ type TPaintBox struct {
 
 func NewPaintBox(owner IComponent) *TPaintBox {
     p := new(TPaintBox)
-    p.instance = PaintBox_Create(owner.Instance())
+    p.instance = PaintBox_Create(CheckPtr(owner))
     return p
 }
 

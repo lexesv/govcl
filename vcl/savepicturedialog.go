@@ -21,7 +21,7 @@ type TSavePictureDialog struct {
 
 func NewSavePictureDialog(owner IComponent) *TSavePictureDialog {
     s := new(TSavePictureDialog)
-    s.instance = SavePictureDialog_Create(owner.Instance())
+    s.instance = SavePictureDialog_Create(CheckPtr(owner))
     return s
 }
 

@@ -21,7 +21,7 @@ type TToolBar struct {
 
 func NewToolBar(owner IComponent) *TToolBar {
     t := new(TToolBar)
-    t.instance = ToolBar_Create(owner.Instance())
+    t.instance = ToolBar_Create(CheckPtr(owner))
     return t
 }
 

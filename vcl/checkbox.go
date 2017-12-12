@@ -21,7 +21,7 @@ type TCheckBox struct {
 
 func NewCheckBox(owner IComponent) *TCheckBox {
     c := new(TCheckBox)
-    c.instance = CheckBox_Create(owner.Instance())
+    c.instance = CheckBox_Create(CheckPtr(owner))
     return c
 }
 

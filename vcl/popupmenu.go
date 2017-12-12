@@ -21,7 +21,7 @@ type TPopupMenu struct {
 
 func NewPopupMenu(owner IComponent) *TPopupMenu {
     p := new(TPopupMenu)
-    p.instance = PopupMenu_Create(owner.Instance())
+    p.instance = PopupMenu_Create(CheckPtr(owner))
     return p
 }
 

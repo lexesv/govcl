@@ -21,7 +21,7 @@ type TMainMenu struct {
 
 func NewMainMenu(owner IComponent) *TMainMenu {
     m := new(TMainMenu)
-    m.instance = MainMenu_Create(owner.Instance())
+    m.instance = MainMenu_Create(CheckPtr(owner))
     return m
 }
 

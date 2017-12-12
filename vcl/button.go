@@ -21,7 +21,7 @@ type TButton struct {
 
 func NewButton(owner IComponent) *TButton {
     b := new(TButton)
-    b.instance = Button_Create(owner.Instance())
+    b.instance = Button_Create(CheckPtr(owner))
     return b
 }
 

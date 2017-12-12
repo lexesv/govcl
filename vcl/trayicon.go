@@ -21,7 +21,7 @@ type TTrayIcon struct {
 
 func NewTrayIcon(owner IComponent) *TTrayIcon {
     t := new(TTrayIcon)
-    t.instance = TrayIcon_Create(owner.Instance())
+    t.instance = TrayIcon_Create(CheckPtr(owner))
     return t
 }
 

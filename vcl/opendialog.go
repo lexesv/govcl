@@ -21,7 +21,7 @@ type TOpenDialog struct {
 
 func NewOpenDialog(owner IComponent) *TOpenDialog {
     o := new(TOpenDialog)
-    o.instance = OpenDialog_Create(owner.Instance())
+    o.instance = OpenDialog_Create(CheckPtr(owner))
     return o
 }
 

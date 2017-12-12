@@ -21,7 +21,7 @@ type TTreeView struct {
 
 func NewTreeView(owner IComponent) *TTreeView {
     t := new(TTreeView)
-    t.instance = TreeView_Create(owner.Instance())
+    t.instance = TreeView_Create(CheckPtr(owner))
     return t
 }
 

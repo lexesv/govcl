@@ -21,7 +21,7 @@ type TSpeedButton struct {
 
 func NewSpeedButton(owner IComponent) *TSpeedButton {
     s := new(TSpeedButton)
-    s.instance = SpeedButton_Create(owner.Instance())
+    s.instance = SpeedButton_Create(CheckPtr(owner))
     return s
 }
 

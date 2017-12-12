@@ -21,7 +21,7 @@ type TLabel struct {
 
 func NewLabel(owner IComponent) *TLabel {
     l := new(TLabel)
-    l.instance = Label_Create(owner.Instance())
+    l.instance = Label_Create(CheckPtr(owner))
     return l
 }
 

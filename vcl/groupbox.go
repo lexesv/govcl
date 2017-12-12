@@ -21,7 +21,7 @@ type TGroupBox struct {
 
 func NewGroupBox(owner IComponent) *TGroupBox {
     g := new(TGroupBox)
-    g.instance = GroupBox_Create(owner.Instance())
+    g.instance = GroupBox_Create(CheckPtr(owner))
     return g
 }
 

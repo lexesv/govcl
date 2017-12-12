@@ -21,7 +21,7 @@ type TScreen struct {
 
 func NewScreen(owner IComponent) *TScreen {
     s := new(TScreen)
-    s.instance = Screen_Create(owner.Instance())
+    s.instance = Screen_Create(CheckPtr(owner))
     return s
 }
 

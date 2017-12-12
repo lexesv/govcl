@@ -21,7 +21,7 @@ type TCategoryPanelGroup struct {
 
 func NewCategoryPanelGroup(owner IComponent) *TCategoryPanelGroup {
     c := new(TCategoryPanelGroup)
-    c.instance = CategoryPanelGroup_Create(owner.Instance())
+    c.instance = CategoryPanelGroup_Create(CheckPtr(owner))
     return c
 }
 

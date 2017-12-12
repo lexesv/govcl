@@ -21,7 +21,7 @@ type TPrintDialog struct {
 
 func NewPrintDialog(owner IComponent) *TPrintDialog {
     p := new(TPrintDialog)
-    p.instance = PrintDialog_Create(owner.Instance())
+    p.instance = PrintDialog_Create(CheckPtr(owner))
     return p
 }
 

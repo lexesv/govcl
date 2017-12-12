@@ -21,7 +21,7 @@ type TListBox struct {
 
 func NewListBox(owner IComponent) *TListBox {
     l := new(TListBox)
-    l.instance = ListBox_Create(owner.Instance())
+    l.instance = ListBox_Create(CheckPtr(owner))
     return l
 }
 

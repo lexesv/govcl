@@ -3,13 +3,14 @@
 #### 目录
 * [项目介绍](#项目介绍)
 * [重要说明](#重要说明)
-* [WIKI](#WIKI)
+* [UI设计器](https://gitee.com/ying32/govcl/wikis/UI%E8%AE%BE%E8%AE%A1%E5%99%A8)
+* [WIKI](https://gitee.com/ying32/govcl/wikis/Home)
 * [使用方法](#使用方法)
-* [icon及manifest文件集成](#icon及manifest文件集成)
-* [关于跨平台问题](#关于跨平台问题)  
+* [icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)
+* [关于跨平台问题](https://gitee.com/ying32/govcl/wikis/%E5%85%B3%E4%BA%8EUI%E5%BA%93%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%97%AE%E9%A2%98?parent=FQA)  
 * [项目中的包说明](#项目中的包说明)
 * [实例类说明](#实例类说明)
-* [支持的组件列表](#支持的组件列表)
+* [支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
 * [截图](#截图)
 * [备注](#备注)
 * [作者信息](#作者信息)
@@ -20,7 +21,7 @@
 > Delphi有些许多优秀的VCL组件，不拿来使用太可惜了。所以就索性做了一套。目前支持Win32跟Win64，  
 > 只需要带上一个libvcl.dll即可。  
 
-> 2、项目现在支持VCL标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](#支持的组件列表)。  
+> 2、项目现在支持VCL标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)。  
 > 事件方面也支持部分，参见：[支持的事件](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E4%BA%8B%E4%BB%B6)：  
  
 
@@ -34,12 +35,6 @@
 **govcl是以go 1.9作为基础版本开发，目前已知的是在go 1.7也可以编译，但作为以后的考虑会使用1.9中的特性，所以大家在使用的时候尽量使用go 1.9+版本**  
 
 **希望大家有问题的话通过Issues来进行反馈，反馈错误的话最好能带有相关错误的截图之类的， 而不是通过评论来提问。wiki也可关注下，有些问题在会里面作解答。**  
-
-#### WIKI 
-
-后面视情况慢慢补充相关VCL组件的知识，详情可以[WIKI](https://gitee.com/ying32/govcl/wikis/Home)   
-
-
 
 
 #### 使用方法
@@ -69,14 +64,6 @@ func main() {
 
 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下  
 
-#### icon及manifest文件集成
-
-[icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)  
-
-#### 关于跨平台问题  
-
-[关于跨平台问题](https://gitee.com/ying32/govcl/wikis/%E5%85%B3%E4%BA%8EUI%E5%BA%93%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%97%AE%E9%A2%98?parent=FQA)   
-
 #### 项目中的包说明
 
 * vcl  
@@ -98,10 +85,7 @@ func main() {
 > 按照Delphi中的Application、 Screen、 Mouse、Clipboard四个类实例是可以直接访问的，不需要释放  
 其实组件带有Owner参数的一般指定当前组件对应的TForm就好了，这样就不需要手动释放，反之Owner填   
 写nil则需要手动调用Free，就像其它非组件类的。  
-
-#### 支持的组件列表
-
-[现支持组件和非组件类列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)  
+ 
 
 #### 截图
 
@@ -112,6 +96,8 @@ func main() {
 ![RichEdit](https://gitee.com/ying32/govcl/raw/master/Screenshot/richedit.png)  
 ![标准控件](https://gitee.com/ying32/govcl/raw/master/Screenshot/std.png)  
 ![样式](https://gitee.com/ying32/govcl/raw/master/Screenshot/style.png)  
+
+
 #### 备注
 **文件名后面带有def的为手动编写**   
 

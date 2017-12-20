@@ -69,3 +69,5 @@ __recovery/
 /vcllib/Win64
 /genvcllib/Win32
 /vcllib/Win32
+/.vscode
+/.idea

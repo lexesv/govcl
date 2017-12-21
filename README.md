@@ -13,6 +13,7 @@
 * [支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
 * [截图](#截图)
 * [备注](#备注)
+* [点击链接加入群【govcl交流】](https://jq.qq.com/?_wv=1027&k=5Sv7Qiq)
 * [作者信息](#作者信息)
 
 #### 项目介绍

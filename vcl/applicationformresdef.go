@@ -36,9 +36,10 @@ import (
 	"fmt"
 	"reflect"
 
+	"unsafe"
+
 	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/rtl"
-	"unsafe"
 )
 
 func (a *TApplication) setFiledVal(name string, instance uintptr, v reflect.Value) {
@@ -94,6 +95,17 @@ func (a *TApplication) CreateFormFromFile(filename string, out interface{}) {
 func (a *TApplication) CreateFormFromStream(stream IObject, out interface{}) {
 	f := a.CreateForm()
 	api.ResFormLoadFromStream(CheckPtr(stream), CheckPtr(f))
+	a.fullFiledVal(f, out)
+}
+
+func (a *TApplication) CreateFormFromBytes(inBytes []byte, out interface{}) {
+	if len(inBytes) == 0 {
+		panic("CreateFormFromBytes失败，无效的窗口资源数据。")
+	}
+	f := a.CreateForm()
+	mem := NewMemoryStreamFromBytes(inBytes)
+	defer mem.Free()
+	api.ResFormLoadFromStream(CheckPtr(mem), CheckPtr(f))
 	a.fullFiledVal(f, out)
 }
 

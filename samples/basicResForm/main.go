@@ -18,6 +18,7 @@ func main() {
 	vcl.Application.SetIcon(icon)
 
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
+	//Form1.SetMenu(Form1.MainMenu1)
 	fmt.Println(Form1.Button1)
 	Form1.Button1.SetOnClick(func(sender vcl.IObject) {
 		vcl.ShowMessage("Hello!")

@@ -19,9 +19,17 @@ type TForm1 struct {
     ListView1    *vcl.TListView
     StatusBar1   *vcl.TStatusBar
     PageControl1 *vcl.TPageControl
+    TabSheet1    *vcl.TTabSheet
+    Button6      *vcl.TButton
+    Panel2       *vcl.TPanel
+    TabSheet2    *vcl.TTabSheet
+    TabSheet3    *vcl.TTabSheet
+    TabSheet4    *vcl.TTabSheet
     Panel1       *vcl.TPanel
     Button3      *vcl.TButton
     Button4      *vcl.TButton
+    Button5      *vcl.TButton
+    Button7      *vcl.TButton
     MainMenu1    *vcl.TMainMenu
     MenuItem13   *vcl.TMenuItem
     MenuItem14   *vcl.TMenuItem
@@ -52,12 +60,16 @@ type TForm1 struct {
     MenuItem34   *vcl.TMenuItem
     OpenDialog1  *vcl.TOpenDialog
     ActionList1  *vcl.TActionList
+    Action1      *vcl.TAction
+    Action2      *vcl.TAction
     ImageList1   *vcl.TImageList
     PopupMenu1   *vcl.TPopupMenu
     MenuItem1    *vcl.TMenuItem
+    MenuItem40   *vcl.TMenuItem
     MenuItem2    *vcl.TMenuItem
     MenuItem10   *vcl.TMenuItem
     MenuItem11   *vcl.TMenuItem
+    MenuItem42   *vcl.TMenuItem
     MenuItem12   *vcl.TMenuItem
     MenuItem3    *vcl.TMenuItem
     MenuItem4    *vcl.TMenuItem
@@ -66,7 +78,9 @@ type TForm1 struct {
     MenuItem7    *vcl.TMenuItem
     MenuItem8    *vcl.TMenuItem
     MenuItem9    *vcl.TMenuItem
-    Button5      *vcl.TButton
+    FontDialog1  *vcl.TFontDialog
+    ColorDialog1 *vcl.TColorDialog
+    Button8      *vcl.TButton
 }
 
 var Form1 *TForm1

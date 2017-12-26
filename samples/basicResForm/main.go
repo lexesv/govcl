@@ -19,8 +19,11 @@ func main() {
 	vcl.Application.SetIcon(icon)
 
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
-	vcl.Application.CreateFormFromFile("Form2.gfm", &Form2)
-	//Form1.SetMenu(Form1.MainMenu1)
+	// 文件加载方式
+	//vcl.Application.CreateFormFromFile("Form2.gfm", &Form2)
+	// 字节加载方式
+	vcl.Application.CreateFormFromBytes(form2Bytes, &Form2)
+
 	fmt.Println(Form1.Button1)
 	Form1.Button1.SetOnClick(func(sender vcl.IObject) {
 		vcl.ShowMessage("Hello!")

@@ -4,18 +4,14 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/rtl"
+
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
-	icon := vcl.NewIcon()
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-	defer icon.Free()
-
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(icon)
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
@@ -29,7 +25,7 @@ func main() {
 	pm.Items().Add(item)
 
 	trayicon := vcl.NewTrayIcon(mainForm)
-	trayicon.SetIcon(icon)
+	//trayicon.SetIcon(icon) 不设置则使用Application.Icon现有的
 	trayicon.SetHint(mainForm.Caption())
 	trayicon.SetVisible(true)
 	trayicon.SetOnDblClick(func(vcl.IObject) {

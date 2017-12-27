@@ -10,13 +10,9 @@ import (
 
 func main() {
 
-	icon := vcl.NewIcon()
-	defer icon.Free()
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(icon)
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
@@ -24,6 +20,10 @@ func main() {
 	mainForm.EnabledMaximize(false)
 	mainForm.SetWidth(600)
 	mainForm.SetHeight(500)
+
+	icon := vcl.NewIcon()
+	defer icon.Free()
+	icon.LoadFromResourceID(rtl.MainInstance(), 3)
 
 	imglist := vcl.NewImageList(mainForm)
 	imglist.AddIcon(icon)

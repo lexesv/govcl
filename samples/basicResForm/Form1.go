@@ -66,6 +66,7 @@ type TForm1 struct {
     Action1      *vcl.TAction
     Action2      *vcl.TAction
     ActFileNew   *vcl.TAction
+    ActExit      *vcl.TAction
     ImageList1   *vcl.TImageList
     PopupMenu1   *vcl.TPopupMenu
     MenuItem1    *vcl.TMenuItem
@@ -91,4 +92,6 @@ var Form1 *TForm1
 
 
 
+// 以文件形式加载
+// Loaded as a file.
 // vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/rtl"
+
 	"gitee.com/ying32/govcl/vcl/xui"
 )
 
@@ -86,13 +86,9 @@ func (e *TEvents) OnActExit(sender vcl.IObject) {
 }
 
 func main() {
-	icon := vcl.NewIcon()
-	defer icon.Free()
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(icon)
 
 	events := new(TEvents)
 	m, err := xui.NewFormBytes([]byte(uiXML), events)

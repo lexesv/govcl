@@ -4,19 +4,16 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
-
-	icon := vcl.NewIcon()
-	defer icon.Free()
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(icon)
+	vcl.Application.SetOnException(func(sender, e vcl.IObject) {
+		fmt.Println("异常了：" + vcl.ExceptionFromObj(e).Message())
+	})
 
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
 	// 文件加载方式
@@ -51,6 +48,10 @@ func main() {
 			vcl.ShowMessage("Form2返回了Cancel")
 		}
 	})
+	Form1.ActExit.SetOnExecute(func(vcl.IObject) {
+		vcl.Application.Terminate()
+	})
 
 	vcl.Application.Run()
+
 }

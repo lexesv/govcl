@@ -9,13 +9,9 @@ import (
 // 简单介绍下Delphi中控件的布局方式
 func main() {
 
-	icon := vcl.NewIcon()
-	defer icon.Free()
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(icon)
 
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")

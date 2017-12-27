@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/rtl"
 )
 
 const (
@@ -14,12 +13,10 @@ const (
 
 func main() {
 	//defer except()
-	ico := vcl.NewIcon()
-	defer ico.Free()
-	ico.LoadFromResourceID(rtl.MainInstance(), 3)
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetIcon(ico)
+
 	vcl.Application.SetTitle(appTitle)
 	vcl.Application.SetFormScaled(true)
 	vcl.Application.SetOnMinimize(func(vcl.IObject) {

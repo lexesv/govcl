@@ -29,14 +29,8 @@ func MessageBoxW(hWnd uintptr, lpText, lpCaption string, uType uint32) int32 {
 }
 
 // LoadIconW 从实例资源中加载icon
-func LoadIconW(hInstance uintptr, lpIconName string) types.HICON {
-	r, _, _ := loadIconW.Call(hInstance, api.GoStrToDStr(lpIconName))
-	return types.HICON(r)
-}
-
-// LoadIconW 从实例资源中加载icon
-func LoadIconId(hInstance uintptr, id int) types.HICON {
-	r, _, _ := loadIconW.Call(hInstance, uintptr(id))
+func LoadIconW(hInstance uintptr, lpIconName int) types.HICON {
+	r, _, _ := loadIconW.Call(hInstance, uintptr(lpIconName))
 	return types.HICON(r)
 }
 

@@ -17,5 +17,5 @@ func (a *TApplication) SetFormScaled(val bool) {
 
 // SetIconResId 从资源中置图标的id
 func (a *TApplication) SetIconResId(id int) {
-	a.Icon().SetHandle(win.LoadIconId(win.GetSelfModuleHandle(), id))
+	a.Icon().SetHandle(win.LoadIconW(win.GetSelfModuleHandle(), id))
 }

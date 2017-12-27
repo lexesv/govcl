@@ -7,10 +7,6 @@ import (
 type TStyleManager struct {
 }
 
-func NewStyleManager() *TStyleManager {
-	return new(TStyleManager)
-}
-
 // StyleManager_IsValidStyle
 func (s *TStyleManager) IsValidStyle(filename string) bool {
 	return StyleManager_IsValidStyle(filename)

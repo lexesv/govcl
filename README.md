@@ -6,7 +6,7 @@
 * [UI设计器](https://gitee.com/ying32/govcl/wikis/UI%E8%AE%BE%E8%AE%A1%E5%99%A8)
 * [WIKI](https://gitee.com/ying32/govcl/wikis/Home)
 * [使用方法](#使用方法)
-* [icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Windows%E4%B8%8BIcon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)
+* [icon及manifest文件集成](https://gitee.com/ying32/govcl/wikis/Icon%E5%8F%8Amanifest%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90)
 * [关于跨平台问题](https://gitee.com/ying32/govcl/wikis/%E5%85%B3%E4%BA%8EUI%E5%BA%93%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%97%AE%E9%A2%98?parent=FQA)  
 * [项目中的包说明](#项目中的包说明)
 * [实例类说明](#实例类说明)

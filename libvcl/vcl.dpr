@@ -148,6 +148,6 @@ uses
 {$I ParaAttributes.inc}
 {$I TextAttributes.inc}
 {$I IconOptions.inc}
-
+{$I Exception.inc}
 begin
 end.

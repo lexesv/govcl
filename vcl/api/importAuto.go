@@ -6269,6 +6269,7 @@ var (
     screen_GetWorkAreaTop = libvcl.NewProc("Screen_GetWorkAreaTop")
     screen_GetWorkAreaWidth = libvcl.NewProc("Screen_GetWorkAreaWidth")
     screen_GetFonts = libvcl.NewProc("Screen_GetFonts")
+    screen_GetFormCount = libvcl.NewProc("Screen_GetFormCount")
     screen_GetImes = libvcl.NewProc("Screen_GetImes")
     screen_GetDefaultIme = libvcl.NewProc("Screen_GetDefaultIme")
     screen_GetHeight = libvcl.NewProc("Screen_GetHeight")

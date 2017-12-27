@@ -27953,6 +27953,11 @@ func Screen_GetFonts(obj uintptr) uintptr {
     return ret
 }
 
+func Screen_GetFormCount(obj uintptr) int32 {
+    ret, _, _ := screen_GetFormCount.Call(obj)
+    return int32(ret)
+}
+
 func Screen_GetImes(obj uintptr) uintptr {
     ret, _, _ := screen_GetImes.Call(obj)
     return ret

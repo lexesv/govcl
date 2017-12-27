@@ -11,15 +11,6 @@ func NewStyleManager() *TStyleManager {
 	return new(TStyleManager)
 }
 
-func (s *TStyleManager) Initialize() {
-	StyleManager_Initialize()
-}
-
-// StyleManager_UnInitialize
-func (s *TStyleManager) UnInitialize() {
-	StyleManager_UnInitialize()
-}
-
 // StyleManager_IsValidStyle
 func (s *TStyleManager) IsValidStyle(filename string) bool {
 	return StyleManager_IsValidStyle(filename)

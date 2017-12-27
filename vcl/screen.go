@@ -163,6 +163,10 @@ func (s *TScreen) Fonts() *TStrings {
     return StringsFromInst(Screen_GetFonts(s.instance))
 }
 
+func (s *TScreen) FormCount() int32 {
+    return Screen_GetFormCount(s.instance)
+}
+
 func (s *TScreen) Imes() *TStrings {
     return StringsFromInst(Screen_GetImes(s.instance))
 }

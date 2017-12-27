@@ -70,8 +70,6 @@ var (
 	form_ScaleControlsForDpi = libvcl.NewProc("Form_ScaleControlsForDpi")
 
 	// TStyleManager
-	styleManager_Initialize          = libvcl.NewProc("StyleManager_Initialize")
-	styleManager_UnInitialize        = libvcl.NewProc("StyleManager_UnInitialize")
 	styleManager_IsValidStyle        = libvcl.NewProc("StyleManager_IsValidStyle")
 	styleManager_LoadFromFile        = libvcl.NewProc("StyleManager_LoadFromFile")
 	styleManager_CheckSysClassName   = libvcl.NewProc("StyleManager_CheckSysClassName")

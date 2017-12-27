@@ -13,16 +13,6 @@ import (
 // styleManager_SetStyle            = libvcl.NewProc("StyleManager_SetStyle")
 // styleManager_TryLoadFromResource = libvcl.NewProc("StyleManager_TryLoadFromResource")
 
-// StyleManager_Initialize
-func StyleManager_Initialize() {
-	styleManager_Initialize.Call()
-}
-
-// StyleManager_UnInitialize
-func StyleManager_UnInitialize() {
-	styleManager_UnInitialize.Call()
-}
-
 // StyleManager_IsValidStyle
 func StyleManager_IsValidStyle(filename string) bool {
 	r, _, _ := styleManager_IsValidStyle.Call(GoStrToDStr(filename))

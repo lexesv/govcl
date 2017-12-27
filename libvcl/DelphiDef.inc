@@ -325,16 +325,6 @@ end;
 // StyleManager_SetStyle2
 // StyleManager_TryLoadFromResource
 
-procedure StyleManager_Initialize; cdecl
-begin
-  TStyleManager.Initialize;
-end;
-
-procedure StyleManager_UnInitialize; cdecl
-begin
-  TStyleManager.UnInitialize;
-end;
-
 function StyleManager_IsValidStyle(AFileName: PChar): LongBool; stdcall;
 begin
   Result := TStyleManager.IsValidStyle(AFileName);
@@ -476,8 +466,6 @@ exports
   ImageList_GetIcon2,
 
 // TStyleManager
-   StyleManager_Initialize,
-   StyleManager_UnInitialize,
    StyleManager_IsValidStyle,
    StyleManager_LoadFromFile,
    StyleManager_CheckSysClassName,

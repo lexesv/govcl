@@ -31,17 +31,13 @@ func main() {
 	fmt.Println("IsWow64:", win.IsWow64())
 
 	fmt.Println("main")
-	icon := vcl.NewIcon()
-	//icon.LoadFromFile(".\\imgs\\0.ico")
-	icon.LoadFromResourceID(rtl.MainInstance(), 3)
-	defer icon.Free()
+	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 
 	vcl.Application.SetOnException(func(vcl.IObject, vcl.IObject) {
 		fmt.Println("exception.")
 	})
 
-	vcl.Application.SetIcon(icon)
 	vcl.Application.SetTitle("Hello World!")
 	vcl.Application.SetMainFormOnTaskBar(true)
 	// 窗口自动根据系统绽放，默认为true
@@ -106,7 +102,7 @@ func main() {
 	btn.SetAction(action)
 
 	trayicon = vcl.NewTrayIcon(mainForm)
-	trayicon.SetIcon(icon)
+	//	trayicon.SetIcon(icon) //不设置会自动使用Application.Icon
 	trayicon.SetHint(mainForm.Caption())
 	trayicon.SetVisible(true)
 	trayicon.SetOnClick(func(vcl.IObject) {

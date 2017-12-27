@@ -32087,3 +32087,55 @@ func IconOptions_SetAutoArrange(obj uintptr, value bool) {
    iconOptions_SetAutoArrange.Call(obj, GoBoolToDBool(value))
 }
 
+
+//--------------------------- Exception ---------------------------
+
+func Exception_ToString(obj uintptr) string {
+    ret, _, _ := exception_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Exception_ClassName(obj uintptr) string {
+    ret, _, _ := exception_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Exception_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := exception_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func Exception_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := exception_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func Exception_GetBaseException(obj uintptr) uintptr {
+    ret, _, _ := exception_GetBaseException.Call(obj)
+    return ret
+}
+
+func Exception_GetInnerException(obj uintptr) uintptr {
+    ret, _, _ := exception_GetInnerException.Call(obj)
+    return ret
+}
+
+func Exception_GetMessage(obj uintptr) string {
+    ret, _, _ := exception_GetMessage.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Exception_SetMessage(obj uintptr, value string) {
+   exception_SetMessage.Call(obj, GoStrToDStr(value))
+}
+
+func Exception_GetStackTrace(obj uintptr) string {
+    ret, _, _ := exception_GetStackTrace.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Exception_GetStackInfo(obj uintptr) uintptr {
+    ret, _, _ := exception_GetStackInfo.Call(obj)
+    return ret
+}
+

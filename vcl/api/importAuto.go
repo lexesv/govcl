@@ -7208,4 +7208,16 @@ var (
     iconOptions_GetAutoArrange = libvcl.NewProc("IconOptions_GetAutoArrange")
     iconOptions_SetAutoArrange = libvcl.NewProc("IconOptions_SetAutoArrange")
 
+    // Exception
+    exception_ToString = libvcl.NewProc("Exception_ToString")
+    exception_ClassName = libvcl.NewProc("Exception_ClassName")
+    exception_Equals = libvcl.NewProc("Exception_Equals")
+    exception_GetHashCode = libvcl.NewProc("Exception_GetHashCode")
+    exception_GetBaseException = libvcl.NewProc("Exception_GetBaseException")
+    exception_GetInnerException = libvcl.NewProc("Exception_GetInnerException")
+    exception_GetMessage = libvcl.NewProc("Exception_GetMessage")
+    exception_SetMessage = libvcl.NewProc("Exception_SetMessage")
+    exception_GetStackTrace = libvcl.NewProc("Exception_GetStackTrace")
+    exception_GetStackInfo = libvcl.NewProc("Exception_GetStackInfo")
+
 )

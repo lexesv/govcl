@@ -162,6 +162,7 @@ uses
 {$I IconOptions.inc}
 {$I Exception.inc}
 {$I ScrollBar.inc}
+{$I CustomHint.inc}
 {$I Shape.inc}
 {$I Bevel.inc}
 {$I ScrollBox.inc}

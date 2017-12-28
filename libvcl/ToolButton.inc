@@ -85,6 +85,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ToolButton_GetTextLen(AObj: TToolButton): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ToolButton_FindComponent(AObj: TToolButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -625,6 +630,7 @@ exports
   ToolButton_Show,
   ToolButton_Update,
   ToolButton_GetTextBuf,
+  ToolButton_GetTextLen,
   ToolButton_FindComponent,
   ToolButton_GetNamePath,
   ToolButton_Assign,

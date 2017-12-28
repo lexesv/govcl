@@ -75,6 +75,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Splitter_GetTextLen(AObj: TSplitter): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Splitter_FindComponent(AObj: TSplitter; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -433,6 +438,7 @@ exports
   Splitter_Show,
   Splitter_Update,
   Splitter_GetTextBuf,
+  Splitter_GetTextLen,
   Splitter_FindComponent,
   Splitter_GetNamePath,
   Splitter_Assign,

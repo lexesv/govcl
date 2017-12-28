@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function UpDown_GetTextLen(AObj: TUpDown): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function UpDown_FindComponent(AObj: TUpDown; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -674,6 +679,7 @@ exports
   UpDown_SendToBack,
   UpDown_Show,
   UpDown_GetTextBuf,
+  UpDown_GetTextLen,
   UpDown_FindComponent,
   UpDown_GetNamePath,
   UpDown_Assign,

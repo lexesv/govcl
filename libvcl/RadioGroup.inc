@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function RadioGroup_GetTextLen(AObj: TRadioGroup): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function RadioGroup_FindComponent(AObj: TRadioGroup; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -679,6 +684,7 @@ exports
   RadioGroup_SendToBack,
   RadioGroup_Show,
   RadioGroup_GetTextBuf,
+  RadioGroup_GetTextLen,
   RadioGroup_FindComponent,
   RadioGroup_GetNamePath,
   RadioGroup_Assign,

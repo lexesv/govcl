@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ToolBar_GetTextLen(AObj: TToolBar): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ToolBar_FindComponent(AObj: TToolBar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -928,6 +933,7 @@ exports
   ToolBar_SendToBack,
   ToolBar_Show,
   ToolBar_GetTextBuf,
+  ToolBar_GetTextLen,
   ToolBar_FindComponent,
   ToolBar_GetNamePath,
   ToolBar_Assign,

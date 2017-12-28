@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function MonthCalendar_GetTextLen(AObj: TMonthCalendar): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function MonthCalendar_FindComponent(AObj: TMonthCalendar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -776,6 +781,7 @@ exports
   MonthCalendar_SendToBack,
   MonthCalendar_Show,
   MonthCalendar_GetTextBuf,
+  MonthCalendar_GetTextLen,
   MonthCalendar_FindComponent,
   MonthCalendar_GetNamePath,
   MonthCalendar_Assign,

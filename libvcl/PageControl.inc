@@ -120,6 +120,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function PageControl_GetTextLen(AObj: TPageControl): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function PageControl_FindComponent(AObj: TPageControl; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -785,6 +790,7 @@ exports
   PageControl_SendToBack,
   PageControl_Show,
   PageControl_GetTextBuf,
+  PageControl_GetTextLen,
   PageControl_FindComponent,
   PageControl_GetNamePath,
   PageControl_Assign,

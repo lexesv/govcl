@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function LinkLabel_GetTextLen(AObj: TLinkLabel): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function LinkLabel_FindComponent(AObj: TLinkLabel; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -744,6 +749,7 @@ exports
   LinkLabel_SendToBack,
   LinkLabel_Show,
   LinkLabel_GetTextBuf,
+  LinkLabel_GetTextLen,
   LinkLabel_FindComponent,
   LinkLabel_GetNamePath,
   LinkLabel_Assign,

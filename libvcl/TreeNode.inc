@@ -35,6 +35,11 @@ begin
   AObj.Delete;
 end;
 
+function TreeNode_EditText(AObj: TTreeNode): LongBool; stdcall;
+begin
+  Result :=  AObj.EditText;
+end;
+
 procedure TreeNode_Expand(AObj: TTreeNode; Recurse: LongBool); stdcall;
 begin
   AObj.Expand(Recurse);
@@ -283,6 +288,7 @@ exports
   TreeNode_Assign,
   TreeNode_Collapse,
   TreeNode_Delete,
+  TreeNode_EditText,
   TreeNode_Expand,
   TreeNode_IndexOf,
   TreeNode_MakeVisible,

@@ -120,6 +120,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function CategoryPanelGroup_GetTextLen(AObj: TCategoryPanelGroup): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function CategoryPanelGroup_FindComponent(AObj: TCategoryPanelGroup; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -897,6 +902,7 @@ exports
   CategoryPanelGroup_SendToBack,
   CategoryPanelGroup_Show,
   CategoryPanelGroup_GetTextBuf,
+  CategoryPanelGroup_GetTextLen,
   CategoryPanelGroup_FindComponent,
   CategoryPanelGroup_GetNamePath,
   CategoryPanelGroup_Assign,

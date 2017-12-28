@@ -145,6 +145,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Memo_GetTextLen(AObj: TMemo): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Memo_FindComponent(AObj: TMemo; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -986,6 +991,7 @@ exports
   Memo_SendToBack,
   Memo_Show,
   Memo_GetTextBuf,
+  Memo_GetTextLen,
   Memo_FindComponent,
   Memo_GetNamePath,
   Memo_Assign,

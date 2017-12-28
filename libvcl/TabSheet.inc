@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function TabSheet_GetTextLen(AObj: TTabSheet): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function TabSheet_FindComponent(AObj: TTabSheet; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -743,6 +748,7 @@ exports
   TabSheet_SendToBack,
   TabSheet_Show,
   TabSheet_GetTextBuf,
+  TabSheet_GetTextLen,
   TabSheet_FindComponent,
   TabSheet_GetNamePath,
   TabSheet_Assign,

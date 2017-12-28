@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function CheckBox_GetTextLen(AObj: TCheckBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function CheckBox_FindComponent(AObj: TCheckBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -760,6 +765,7 @@ exports
   CheckBox_SendToBack,
   CheckBox_Show,
   CheckBox_GetTextBuf,
+  CheckBox_GetTextLen,
   CheckBox_FindComponent,
   CheckBox_GetNamePath,
   CheckBox_Assign,

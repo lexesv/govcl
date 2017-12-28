@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function DateTimePicker_GetTextLen(AObj: TDateTimePicker): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function DateTimePicker_FindComponent(AObj: TDateTimePicker; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -851,6 +856,7 @@ exports
   DateTimePicker_SendToBack,
   DateTimePicker_Show,
   DateTimePicker_GetTextBuf,
+  DateTimePicker_GetTextLen,
   DateTimePicker_FindComponent,
   DateTimePicker_GetNamePath,
   DateTimePicker_Assign,

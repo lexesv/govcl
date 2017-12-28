@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function GroupBox_GetTextLen(AObj: TGroupBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function GroupBox_FindComponent(AObj: TGroupBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -706,6 +711,7 @@ exports
   GroupBox_SendToBack,
   GroupBox_Show,
   GroupBox_GetTextBuf,
+  GroupBox_GetTextLen,
   GroupBox_FindComponent,
   GroupBox_GetNamePath,
   GroupBox_Assign,

@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Panel_GetTextLen(AObj: TPanel): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Panel_FindComponent(AObj: TPanel; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -828,6 +833,7 @@ exports
   Panel_SendToBack,
   Panel_Show,
   Panel_GetTextBuf,
+  Panel_GetTextLen,
   Panel_FindComponent,
   Panel_GetNamePath,
   Panel_Assign,

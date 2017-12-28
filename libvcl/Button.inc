@@ -115,6 +115,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Button_GetTextLen(AObj: TButton): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Button_FindComponent(AObj: TButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -846,6 +851,7 @@ exports
   Button_SendToBack,
   Button_Show,
   Button_GetTextBuf,
+  Button_GetTextLen,
   Button_FindComponent,
   Button_GetNamePath,
   Button_Assign,

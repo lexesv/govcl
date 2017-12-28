@@ -135,6 +135,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ComboBox_GetTextLen(AObj: TComboBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ComboBox_FindComponent(AObj: TComboBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -955,6 +960,7 @@ exports
   ComboBox_SendToBack,
   ComboBox_Show,
   ComboBox_GetTextBuf,
+  ComboBox_GetTextLen,
   ComboBox_FindComponent,
   ComboBox_GetNamePath,
   ComboBox_Assign,

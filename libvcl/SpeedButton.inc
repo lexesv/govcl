@@ -80,6 +80,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function SpeedButton_GetTextLen(AObj: TSpeedButton): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function SpeedButton_FindComponent(AObj: TSpeedButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -225,6 +230,16 @@ begin
   AObj.Font := AValue;
 end;
 
+function SpeedButton_GetGlyph(AObj: TSpeedButton): TBitmap; stdcall;
+begin
+  Result :=  AObj.Glyph;
+end;
+
+procedure SpeedButton_SetGlyph(AObj: TSpeedButton; AValue: TBitmap); stdcall;
+begin
+  AObj.Glyph := AValue;
+end;
+
 function SpeedButton_GetLayout(AObj: TSpeedButton): TButtonLayout; stdcall;
 begin
   Result :=  AObj.Layout;
@@ -233,6 +248,16 @@ end;
 procedure SpeedButton_SetLayout(AObj: TSpeedButton; AValue: TButtonLayout); stdcall;
 begin
   AObj.Layout := AValue;
+end;
+
+function SpeedButton_GetNumGlyphs(AObj: TSpeedButton): TNumGlyphs; stdcall;
+begin
+  Result :=  AObj.NumGlyphs;
+end;
+
+procedure SpeedButton_SetNumGlyphs(AObj: TSpeedButton; AValue: TNumGlyphs); stdcall;
+begin
+  AObj.NumGlyphs := AValue;
 end;
 
 function SpeedButton_GetParentFont(AObj: TSpeedButton): LongBool; stdcall;
@@ -273,6 +298,16 @@ end;
 procedure SpeedButton_SetShowHint(AObj: TSpeedButton; AValue: LongBool); stdcall;
 begin
   AObj.ShowHint := AValue;
+end;
+
+function SpeedButton_GetSpacing(AObj: TSpeedButton): Integer; stdcall;
+begin
+  Result :=  AObj.Spacing;
+end;
+
+procedure SpeedButton_SetSpacing(AObj: TSpeedButton; AValue: Integer); stdcall;
+begin
+  AObj.Spacing := AValue;
 end;
 
 function SpeedButton_GetTransparent(AObj: TSpeedButton): LongBool; stdcall;
@@ -596,6 +631,7 @@ exports
   SpeedButton_Show,
   SpeedButton_Update,
   SpeedButton_GetTextBuf,
+  SpeedButton_GetTextLen,
   SpeedButton_FindComponent,
   SpeedButton_GetNamePath,
   SpeedButton_Assign,
@@ -625,8 +661,12 @@ exports
   SpeedButton_SetFlat,
   SpeedButton_GetFont,
   SpeedButton_SetFont,
+  SpeedButton_GetGlyph,
+  SpeedButton_SetGlyph,
   SpeedButton_GetLayout,
   SpeedButton_SetLayout,
+  SpeedButton_GetNumGlyphs,
+  SpeedButton_SetNumGlyphs,
   SpeedButton_GetParentFont,
   SpeedButton_SetParentFont,
   SpeedButton_GetParentShowHint,
@@ -635,6 +675,8 @@ exports
   SpeedButton_SetPopupMenu,
   SpeedButton_GetShowHint,
   SpeedButton_SetShowHint,
+  SpeedButton_GetSpacing,
+  SpeedButton_SetSpacing,
   SpeedButton_GetTransparent,
   SpeedButton_SetTransparent,
   SpeedButton_GetVisible,

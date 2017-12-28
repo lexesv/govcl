@@ -75,6 +75,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Label_GetTextLen(AObj: TLabel): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Label_FindComponent(AObj: TLabel; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -635,6 +640,7 @@ exports
   Label_Show,
   Label_Update,
   Label_GetTextBuf,
+  Label_GetTextLen,
   Label_FindComponent,
   Label_GetNamePath,
   Label_Assign,

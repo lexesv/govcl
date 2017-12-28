@@ -75,6 +75,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Image_GetTextLen(AObj: TImage): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Image_FindComponent(AObj: TImage; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -575,6 +580,7 @@ exports
   Image_Show,
   Image_Update,
   Image_GetTextBuf,
+  Image_GetTextLen,
   Image_FindComponent,
   Image_GetNamePath,
   Image_Assign,

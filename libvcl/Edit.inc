@@ -145,6 +145,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Edit_GetTextLen(AObj: TEdit): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Edit_FindComponent(AObj: TEdit; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -966,6 +971,7 @@ exports
   Edit_SendToBack,
   Edit_Show,
   Edit_GetTextBuf,
+  Edit_GetTextLen,
   Edit_FindComponent,
   Edit_GetNamePath,
   Edit_Assign,

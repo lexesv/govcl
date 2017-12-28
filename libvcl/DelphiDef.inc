@@ -16,7 +16,9 @@ begin
   Result := UnixToDateTime(ADateTime, False);
 end;
 
+
 // TApplication
+
 function Application_Instance: TApplication; stdcall;
 begin
   Result := Application;
@@ -26,6 +28,7 @@ function Application_CreateForm(App: TApplication): TGoForm; stdcall;
 begin
   App.CreateForm(TGoForm, Result);
 end;
+
 
 // TForm
 

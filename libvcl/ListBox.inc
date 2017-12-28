@@ -135,6 +135,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ListBox_GetTextLen(AObj: TListBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ListBox_FindComponent(AObj: TListBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -934,6 +939,7 @@ exports
   ListBox_SendToBack,
   ListBox_Show,
   ListBox_GetTextBuf,
+  ListBox_GetTextLen,
   ListBox_FindComponent,
   ListBox_GetNamePath,
   ListBox_Assign,

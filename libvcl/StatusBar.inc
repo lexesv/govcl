@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function StatusBar_GetTextLen(AObj: TStatusBar): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function StatusBar_FindComponent(AObj: TStatusBar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -739,6 +744,7 @@ exports
   StatusBar_SendToBack,
   StatusBar_Show,
   StatusBar_GetTextBuf,
+  StatusBar_GetTextLen,
   StatusBar_FindComponent,
   StatusBar_GetNamePath,
   StatusBar_Assign,

@@ -115,6 +115,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function TrackBar_GetTextLen(AObj: TTrackBar): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function TrackBar_FindComponent(AObj: TTrackBar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -776,6 +781,7 @@ exports
   TrackBar_SendToBack,
   TrackBar_Show,
   TrackBar_GetTextBuf,
+  TrackBar_GetTextLen,
   TrackBar_FindComponent,
   TrackBar_GetNamePath,
   TrackBar_Assign,

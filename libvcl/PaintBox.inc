@@ -75,6 +75,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function PaintBox_GetTextLen(AObj: TPaintBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function PaintBox_FindComponent(AObj: TPaintBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -557,6 +562,7 @@ exports
   PaintBox_Show,
   PaintBox_Update,
   PaintBox_GetTextBuf,
+  PaintBox_GetTextLen,
   PaintBox_FindComponent,
   PaintBox_GetNamePath,
   PaintBox_Assign,

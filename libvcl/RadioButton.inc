@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function RadioButton_GetTextLen(AObj: TRadioButton): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function RadioButton_FindComponent(AObj: TRadioButton; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -762,6 +767,7 @@ exports
   RadioButton_SendToBack,
   RadioButton_Show,
   RadioButton_GetTextBuf,
+  RadioButton_GetTextLen,
   RadioButton_FindComponent,
   RadioButton_GetNamePath,
   RadioButton_Assign,

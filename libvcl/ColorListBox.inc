@@ -135,6 +135,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ColorListBox_GetTextLen(AObj: TColorListBox): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ColorListBox_FindComponent(AObj: TColorListBox; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -912,6 +917,7 @@ exports
   ColorListBox_SendToBack,
   ColorListBox_Show,
   ColorListBox_GetTextBuf,
+  ColorListBox_GetTextLen,
   ColorListBox_FindComponent,
   ColorListBox_GetNamePath,
   ColorListBox_Assign,

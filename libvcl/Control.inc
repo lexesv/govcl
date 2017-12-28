@@ -75,6 +75,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function Control_GetTextLen(AObj: TControl): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function Control_FindComponent(AObj: TControl; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -396,6 +401,7 @@ exports
   Control_Show,
   Control_Update,
   Control_GetTextBuf,
+  Control_GetTextLen,
   Control_FindComponent,
   Control_GetNamePath,
   Control_Assign,

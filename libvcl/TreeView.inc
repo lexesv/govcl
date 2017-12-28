@@ -180,6 +180,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function TreeView_GetTextLen(AObj: TTreeView): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function TreeView_FindComponent(AObj: TTreeView; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -1139,6 +1144,7 @@ exports
   TreeView_SendToBack,
   TreeView_Show,
   TreeView_GetTextBuf,
+  TreeView_GetTextLen,
   TreeView_FindComponent,
   TreeView_GetNamePath,
   TreeView_Assign,

@@ -160,6 +160,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ListView_GetTextLen(AObj: TListView): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ListView_FindComponent(AObj: TListView; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -1243,6 +1248,7 @@ exports
   ListView_SendToBack,
   ListView_Show,
   ListView_GetTextBuf,
+  ListView_GetTextLen,
   ListView_FindComponent,
   ListView_GetNamePath,
   ListView_Assign,

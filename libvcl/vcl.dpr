@@ -43,10 +43,12 @@ uses
   Vcl.Clipbrd,
   Vcl.Themes,
   Vcl.Styles,
+  Vcl.Mask,
   uEventCallback in 'uEventCallback.pas',
   ufrmGo in 'ufrmGo.pas' {GoForm};
 
 {$R *.res}
+
 
 
 
@@ -99,6 +101,8 @@ uses
 {$I TreeView.inc}
 {$I StatusBar.inc}
 {$I ToolBar.inc}
+{$I MaskEdit.inc}
+{$I BitBtn.inc}
 {$I Icon.inc}
 {$I Bitmap.inc}
 {$I MemoryStream.inc}
@@ -149,5 +153,6 @@ uses
 {$I TextAttributes.inc}
 {$I IconOptions.inc}
 {$I Exception.inc}
+
 begin
 end.

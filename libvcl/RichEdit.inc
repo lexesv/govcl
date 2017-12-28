@@ -155,6 +155,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function RichEdit_GetTextLen(AObj: TRichEdit): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function RichEdit_FindComponent(AObj: TRichEdit; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -1090,6 +1095,7 @@ exports
   RichEdit_SendToBack,
   RichEdit_Show,
   RichEdit_GetTextBuf,
+  RichEdit_GetTextLen,
   RichEdit_FindComponent,
   RichEdit_GetNamePath,
   RichEdit_Assign,

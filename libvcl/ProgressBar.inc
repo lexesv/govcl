@@ -120,6 +120,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function ProgressBar_GetTextLen(AObj: TProgressBar): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function ProgressBar_FindComponent(AObj: TProgressBar; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -754,6 +759,7 @@ exports
   ProgressBar_SendToBack,
   ProgressBar_Show,
   ProgressBar_GetTextBuf,
+  ProgressBar_GetTextLen,
   ProgressBar_FindComponent,
   ProgressBar_GetNamePath,
   ProgressBar_Assign,

@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function StaticText_GetTextLen(AObj: TStaticText): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function StaticText_FindComponent(AObj: TStaticText; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -752,6 +757,7 @@ exports
   StaticText_SendToBack,
   StaticText_Show,
   StaticText_GetTextBuf,
+  StaticText_GetTextLen,
   StaticText_FindComponent,
   StaticText_GetNamePath,
   StaticText_Assign,

@@ -110,6 +110,11 @@ begin
   Result :=  AObj.GetTextBuf(Buffer, BufSize);
 end;
 
+function HotKey_GetTextLen(AObj: THotKey): Integer; stdcall;
+begin
+  Result :=  AObj.GetTextLen;
+end;
+
 function HotKey_FindComponent(AObj: THotKey; AName: PChar): TComponent; stdcall;
 begin
   Result :=  AObj.FindComponent(AName);
@@ -634,6 +639,7 @@ exports
   HotKey_SendToBack,
   HotKey_Show,
   HotKey_GetTextBuf,
+  HotKey_GetTextLen,
   HotKey_FindComponent,
   HotKey_GetNamePath,
   HotKey_Assign,

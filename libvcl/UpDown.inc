@@ -606,6 +606,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function UpDown_GetCustomHint(AObj: TUpDown): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure UpDown_SetCustomHint(AObj: TUpDown; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function UpDown_GetComponentCount(AObj: TUpDown): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -767,6 +777,8 @@ exports
   UpDown_SetCursor,
   UpDown_GetMargins,
   UpDown_SetMargins,
+  UpDown_GetCustomHint,
+  UpDown_SetCustomHint,
   UpDown_GetComponentCount,
   UpDown_GetComponentIndex,
   UpDown_SetComponentIndex,

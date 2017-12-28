@@ -858,6 +858,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ColorBox_GetCustomHint(AObj: TColorBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ColorBox_SetCustomHint(AObj: TColorBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ColorBox_GetComponentCount(AObj: TColorBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1078,6 +1088,8 @@ exports
   ColorBox_SetHint,
   ColorBox_GetMargins,
   ColorBox_SetMargins,
+  ColorBox_GetCustomHint,
+  ColorBox_SetCustomHint,
   ColorBox_GetComponentCount,
   ColorBox_GetComponentIndex,
   ColorBox_SetComponentIndex,

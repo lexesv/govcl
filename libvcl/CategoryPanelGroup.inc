@@ -827,6 +827,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function CategoryPanelGroup_GetCustomHint(AObj: TCategoryPanelGroup): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure CategoryPanelGroup_SetCustomHint(AObj: TCategoryPanelGroup; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function CategoryPanelGroup_GetComponentCount(AObj: TCategoryPanelGroup): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1028,6 +1038,8 @@ exports
   CategoryPanelGroup_SetHint,
   CategoryPanelGroup_GetMargins,
   CategoryPanelGroup_SetMargins,
+  CategoryPanelGroup_GetCustomHint,
+  CategoryPanelGroup_SetCustomHint,
   CategoryPanelGroup_GetComponentCount,
   CategoryPanelGroup_GetComponentIndex,
   CategoryPanelGroup_SetComponentIndex,

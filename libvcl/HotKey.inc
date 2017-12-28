@@ -566,6 +566,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function HotKey_GetCustomHint(AObj: THotKey): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure HotKey_SetCustomHint(AObj: THotKey; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function HotKey_GetComponentCount(AObj: THotKey): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -719,6 +729,8 @@ exports
   HotKey_SetCursor,
   HotKey_GetMargins,
   HotKey_SetMargins,
+  HotKey_GetCustomHint,
+  HotKey_SetCustomHint,
   HotKey_GetComponentCount,
   HotKey_GetComponentIndex,
   HotKey_SetComponentIndex,

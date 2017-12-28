@@ -707,6 +707,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function TrackBar_GetCustomHint(AObj: TTrackBar): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure TrackBar_SetCustomHint(AObj: TTrackBar; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function TrackBar_GetComponentCount(AObj: TTrackBar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -891,6 +901,8 @@ exports
   TrackBar_SetHint,
   TrackBar_GetMargins,
   TrackBar_SetMargins,
+  TrackBar_GetCustomHint,
+  TrackBar_SetCustomHint,
   TrackBar_GetComponentCount,
   TrackBar_GetComponentIndex,
   TrackBar_SetComponentIndex,

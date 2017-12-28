@@ -1013,6 +1013,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function RichEdit_GetCustomHint(AObj: TRichEdit): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure RichEdit_SetCustomHint(AObj: TRichEdit; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function RichEdit_GetComponentCount(AObj: TRichEdit): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1247,6 +1257,8 @@ exports
   RichEdit_SetHint,
   RichEdit_GetMargins,
   RichEdit_SetMargins,
+  RichEdit_GetCustomHint,
+  RichEdit_SetCustomHint,
   RichEdit_GetComponentCount,
   RichEdit_GetComponentIndex,
   RichEdit_SetComponentIndex,

@@ -1160,6 +1160,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ListView_GetCustomHint(AObj: TListView): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ListView_SetCustomHint(AObj: TListView; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ListView_GetComponentCount(AObj: TListView): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1420,6 +1430,8 @@ exports
   ListView_SetHint,
   ListView_GetMargins,
   ListView_SetMargins,
+  ListView_GetCustomHint,
+  ListView_SetCustomHint,
   ListView_GetComponentCount,
   ListView_GetComponentIndex,
   ListView_SetComponentIndex,

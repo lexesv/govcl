@@ -65,6 +65,11 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function BalloonHint_GetShowingHint(AObj: TBalloonHint): LongBool; stdcall;
+begin
+  Result :=  AObj.ShowingHint;
+end;
+
 function BalloonHint_GetTitle(AObj: TBalloonHint): PChar; stdcall;
 begin
   Result :=  PChar(AObj.Title);
@@ -194,6 +199,7 @@ exports
   BalloonHint_Equals,
   BalloonHint_GetHashCode,
   BalloonHint_ToString,
+  BalloonHint_GetShowingHint,
   BalloonHint_GetTitle,
   BalloonHint_SetTitle,
   BalloonHint_GetDescription,

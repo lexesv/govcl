@@ -684,6 +684,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function StaticText_GetCustomHint(AObj: TStaticText): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure StaticText_SetCustomHint(AObj: TStaticText; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function StaticText_GetComponentCount(AObj: TStaticText): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -862,6 +872,8 @@ exports
   StaticText_SetHint,
   StaticText_GetMargins,
   StaticText_SetMargins,
+  StaticText_GetCustomHint,
+  StaticText_SetCustomHint,
   StaticText_GetComponentCount,
   StaticText_GetComponentIndex,
   StaticText_SetComponentIndex,

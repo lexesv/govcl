@@ -891,6 +891,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function MaskEdit_GetCustomHint(AObj: TMaskEdit): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure MaskEdit_SetCustomHint(AObj: TMaskEdit; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function MaskEdit_GetComponentCount(AObj: TMaskEdit): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1102,6 +1112,8 @@ exports
   MaskEdit_SetHint,
   MaskEdit_GetMargins,
   MaskEdit_SetMargins,
+  MaskEdit_GetCustomHint,
+  MaskEdit_SetCustomHint,
   MaskEdit_GetComponentCount,
   MaskEdit_GetComponentIndex,
   MaskEdit_SetComponentIndex,

@@ -180,6 +180,16 @@ begin
   AObj.Alignment := AValue;
 end;
 
+function CheckBox_GetAllowGrayed(AObj: TCheckBox): LongBool; stdcall;
+begin
+  Result :=  AObj.AllowGrayed;
+end;
+
+procedure CheckBox_SetAllowGrayed(AObj: TCheckBox; AValue: LongBool); stdcall;
+begin
+  AObj.AllowGrayed := AValue;
+end;
+
 function CheckBox_GetAnchors(AObj: TCheckBox): TAnchors; stdcall;
 begin
   Result :=  AObj.Anchors;
@@ -692,6 +702,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function CheckBox_GetCustomHint(AObj: TCheckBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure CheckBox_SetCustomHint(AObj: TCheckBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function CheckBox_GetComponentCount(AObj: TCheckBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -779,6 +799,8 @@ exports
   CheckBox_SetAlign,
   CheckBox_GetAlignment,
   CheckBox_SetAlignment,
+  CheckBox_GetAllowGrayed,
+  CheckBox_SetAllowGrayed,
   CheckBox_GetAnchors,
   CheckBox_SetAnchors,
   CheckBox_GetBiDiMode,
@@ -866,6 +888,8 @@ exports
   CheckBox_SetHint,
   CheckBox_GetMargins,
   CheckBox_SetMargins,
+  CheckBox_GetCustomHint,
+  CheckBox_SetCustomHint,
   CheckBox_GetComponentCount,
   CheckBox_GetComponentIndex,
   CheckBox_SetComponentIndex,

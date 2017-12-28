@@ -45,6 +45,16 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function MonthCalColors_GetBackColor(AObj: TMonthCalColors): TColor; stdcall;
+begin
+  Result :=  AObj.BackColor;
+end;
+
+procedure MonthCalColors_SetBackColor(AObj: TMonthCalColors; AValue: TColor); stdcall;
+begin
+  AObj.BackColor := AValue;
+end;
+
 
 exports
   MonthCalColors_Create,
@@ -54,5 +64,7 @@ exports
   MonthCalColors_ClassName,
   MonthCalColors_Equals,
   MonthCalColors_GetHashCode,
-  MonthCalColors_ToString;
+  MonthCalColors_ToString,
+  MonthCalColors_GetBackColor,
+  MonthCalColors_SetBackColor;
 

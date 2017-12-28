@@ -891,6 +891,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Edit_GetCustomHint(AObj: TEdit): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Edit_SetCustomHint(AObj: TEdit; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Edit_GetComponentCount(AObj: TEdit): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1102,6 +1112,8 @@ exports
   Edit_SetHint,
   Edit_GetMargins,
   Edit_SetMargins,
+  Edit_GetCustomHint,
+  Edit_SetCustomHint,
   Edit_GetComponentCount,
   Edit_GetComponentIndex,
   Edit_SetComponentIndex,

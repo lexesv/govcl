@@ -340,6 +340,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Control_GetCustomHint(AObj: TControl): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Control_SetCustomHint(AObj: TControl; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Control_GetComponentCount(AObj: TControl): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -454,6 +464,8 @@ exports
   Control_SetHint,
   Control_GetMargins,
   Control_SetMargins,
+  Control_GetCustomHint,
+  Control_SetCustomHint,
   Control_GetComponentCount,
   Control_GetComponentIndex,
   Control_SetComponentIndex,

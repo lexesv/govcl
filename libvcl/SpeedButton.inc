@@ -569,6 +569,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function SpeedButton_GetCustomHint(AObj: TSpeedButton): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure SpeedButton_SetCustomHint(AObj: TSpeedButton; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function SpeedButton_GetComponentCount(AObj: TSpeedButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -719,6 +729,8 @@ exports
   SpeedButton_SetHint,
   SpeedButton_GetMargins,
   SpeedButton_SetMargins,
+  SpeedButton_GetCustomHint,
+  SpeedButton_SetCustomHint,
   SpeedButton_GetComponentCount,
   SpeedButton_GetComponentIndex,
   SpeedButton_SetComponentIndex,

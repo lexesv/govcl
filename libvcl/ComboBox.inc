@@ -882,6 +882,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ComboBox_GetCustomHint(AObj: TComboBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ComboBox_SetCustomHint(AObj: TComboBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ComboBox_GetComponentCount(AObj: TComboBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1094,6 +1104,8 @@ exports
   ComboBox_SetHint,
   ComboBox_GetMargins,
   ComboBox_SetMargins,
+  ComboBox_GetCustomHint,
+  ComboBox_SetCustomHint,
   ComboBox_GetComponentCount,
   ComboBox_GetComponentIndex,
   ComboBox_SetComponentIndex,

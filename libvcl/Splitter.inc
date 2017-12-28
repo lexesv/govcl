@@ -377,6 +377,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Splitter_GetCustomHint(AObj: TSplitter): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Splitter_SetCustomHint(AObj: TSplitter; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Splitter_GetComponentCount(AObj: TSplitter): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -497,6 +507,8 @@ exports
   Splitter_SetHint,
   Splitter_GetMargins,
   Splitter_SetMargins,
+  Splitter_GetCustomHint,
+  Splitter_SetCustomHint,
   Splitter_GetComponentCount,
   Splitter_GetComponentIndex,
   Splitter_SetComponentIndex,

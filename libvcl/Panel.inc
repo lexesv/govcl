@@ -760,6 +760,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Panel_GetCustomHint(AObj: TPanel): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Panel_SetCustomHint(AObj: TPanel; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Panel_GetComponentCount(AObj: TPanel): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -949,6 +959,8 @@ exports
   Panel_SetHint,
   Panel_GetMargins,
   Panel_SetMargins,
+  Panel_GetCustomHint,
+  Panel_SetCustomHint,
   Panel_GetComponentCount,
   Panel_GetComponentIndex,
   Panel_SetComponentIndex,

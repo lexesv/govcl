@@ -684,6 +684,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ProgressBar_GetCustomHint(AObj: TProgressBar): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ProgressBar_SetCustomHint(AObj: TProgressBar; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ProgressBar_GetComponentCount(AObj: TProgressBar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -862,6 +872,8 @@ exports
   ProgressBar_SetCursor,
   ProgressBar_GetMargins,
   ProgressBar_SetMargins,
+  ProgressBar_GetCustomHint,
+  ProgressBar_SetCustomHint,
   ProgressBar_GetComponentCount,
   ProgressBar_GetComponentIndex,
   ProgressBar_SetComponentIndex,

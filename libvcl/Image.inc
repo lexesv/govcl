@@ -519,6 +519,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Image_GetCustomHint(AObj: TImage): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Image_SetCustomHint(AObj: TImage; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Image_GetComponentCount(AObj: TImage): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -659,6 +669,8 @@ exports
   Image_SetHint,
   Image_GetMargins,
   Image_SetMargins,
+  Image_GetCustomHint,
+  Image_SetCustomHint,
   Image_GetComponentCount,
   Image_GetComponentIndex,
   Image_SetComponentIndex,

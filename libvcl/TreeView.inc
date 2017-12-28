@@ -1052,6 +1052,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function TreeView_GetCustomHint(AObj: TTreeView): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure TreeView_SetCustomHint(AObj: TTreeView; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function TreeView_GetComponentCount(AObj: TTreeView): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1296,6 +1306,8 @@ exports
   TreeView_SetHint,
   TreeView_GetMargins,
   TreeView_SetMargins,
+  TreeView_GetCustomHint,
+  TreeView_SetCustomHint,
   TreeView_GetComponentCount,
   TreeView_GetComponentIndex,
   TreeView_SetComponentIndex,

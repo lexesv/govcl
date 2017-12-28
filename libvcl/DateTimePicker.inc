@@ -783,6 +783,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function DateTimePicker_GetCustomHint(AObj: TDateTimePicker): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure DateTimePicker_SetCustomHint(AObj: TDateTimePicker; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function DateTimePicker_GetComponentCount(AObj: TDateTimePicker): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -978,6 +988,8 @@ exports
   DateTimePicker_SetHint,
   DateTimePicker_GetMargins,
   DateTimePicker_SetMargins,
+  DateTimePicker_GetCustomHint,
+  DateTimePicker_SetCustomHint,
   DateTimePicker_GetComponentCount,
   DateTimePicker_GetComponentIndex,
   DateTimePicker_SetComponentIndex,

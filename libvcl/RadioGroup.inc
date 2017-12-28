@@ -606,6 +606,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function RadioGroup_GetCustomHint(AObj: TRadioGroup): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure RadioGroup_SetCustomHint(AObj: TRadioGroup; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function RadioGroup_GetComponentCount(AObj: TRadioGroup): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -779,6 +789,8 @@ exports
   RadioGroup_SetHint,
   RadioGroup_GetMargins,
   RadioGroup_SetMargins,
+  RadioGroup_GetCustomHint,
+  RadioGroup_SetCustomHint,
   RadioGroup_GetComponentCount,
   RadioGroup_GetComponentIndex,
   RadioGroup_SetComponentIndex,

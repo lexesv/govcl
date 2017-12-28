@@ -911,6 +911,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Memo_GetCustomHint(AObj: TMemo): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Memo_SetCustomHint(AObj: TMemo; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Memo_GetComponentCount(AObj: TMemo): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1126,6 +1136,8 @@ exports
   Memo_SetHint,
   Memo_GetMargins,
   Memo_SetMargins,
+  Memo_GetCustomHint,
+  Memo_SetCustomHint,
   Memo_GetComponentCount,
   Memo_GetComponentIndex,
   Memo_SetComponentIndex,

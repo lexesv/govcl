@@ -710,6 +710,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function PageControl_GetCustomHint(AObj: TPageControl): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure PageControl_SetCustomHint(AObj: TPageControl; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function PageControl_GetComponentCount(AObj: TPageControl): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -894,6 +904,8 @@ exports
   PageControl_SetHint,
   PageControl_GetMargins,
   PageControl_SetMargins,
+  PageControl_GetCustomHint,
+  PageControl_SetCustomHint,
   PageControl_GetComponentCount,
   PageControl_GetComponentIndex,
   PageControl_SetComponentIndex,

@@ -676,6 +676,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function LinkLabel_GetCustomHint(AObj: TLinkLabel): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure LinkLabel_SetCustomHint(AObj: TLinkLabel; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function LinkLabel_GetComponentCount(AObj: TLinkLabel): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -851,6 +861,8 @@ exports
   LinkLabel_SetHint,
   LinkLabel_GetMargins,
   LinkLabel_SetMargins,
+  LinkLabel_GetCustomHint,
+  LinkLabel_SetCustomHint,
   LinkLabel_GetComponentCount,
   LinkLabel_GetComponentIndex,
   LinkLabel_SetComponentIndex,

@@ -579,6 +579,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function Label_GetCustomHint(AObj: TLabel): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure Label_SetCustomHint(AObj: TLabel; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function Label_GetComponentCount(AObj: TLabel): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -731,6 +741,8 @@ exports
   Label_SetHint,
   Label_GetMargins,
   Label_SetMargins,
+  Label_GetCustomHint,
+  Label_SetCustomHint,
   Label_GetComponentCount,
   Label_GetComponentIndex,
   Label_SetComponentIndex,

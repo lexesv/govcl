@@ -567,6 +567,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ToolButton_GetCustomHint(AObj: TToolButton): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ToolButton_SetCustomHint(AObj: TToolButton; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ToolButton_GetComponentCount(AObj: TToolButton): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -718,6 +728,8 @@ exports
   ToolButton_SetHint,
   ToolButton_GetMargins,
   ToolButton_SetMargins,
+  ToolButton_GetCustomHint,
+  ToolButton_SetCustomHint,
   ToolButton_GetComponentCount,
   ToolButton_GetComponentIndex,
   ToolButton_SetComponentIndex,

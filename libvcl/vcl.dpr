@@ -44,13 +44,20 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   Vcl.Mask,
+  Vcl.CheckLst,
+  Vcl.Samples.Gauges,
   uEventCallback in 'uEventCallback.pas',
-  ufrmGo in 'ufrmGo.pas' {GoForm};
+  ufrmGo in 'ufrmGo.pas' {GoForm},
+  {$IFDEF LIBVCL}uFormDesignerFile{$ENDIF};
 
 {$R *.res}
 
 
 
+// 这个不开源的
+{$IFDEF LIBVCL}
+  {$I DelphiResForm.inc}
+{$ENDIF}
 
 {$I DelphiDef.inc}
 
@@ -153,6 +160,12 @@ uses
 {$I TextAttributes.inc}
 {$I IconOptions.inc}
 {$I Exception.inc}
+{$I ScrollBar.inc}
+{$I Shape.inc}
+{$I Bevel.inc}
+{$I ScrollBox.inc}
+{$I CheckListBox.inc}
+{$I Gauge.inc}
 
 begin
 end.

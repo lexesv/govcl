@@ -675,6 +675,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function TabSheet_GetCustomHint(AObj: TTabSheet): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure TabSheet_SetCustomHint(AObj: TTabSheet; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function TabSheet_GetComponentCount(AObj: TTabSheet): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -847,6 +857,8 @@ exports
   TabSheet_SetHint,
   TabSheet_GetMargins,
   TabSheet_SetMargins,
+  TabSheet_GetCustomHint,
+  TabSheet_SetCustomHint,
   TabSheet_GetComponentCount,
   TabSheet_GetComponentIndex,
   TabSheet_SetComponentIndex,

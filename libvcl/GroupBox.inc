@@ -638,6 +638,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function GroupBox_GetCustomHint(AObj: TGroupBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure GroupBox_SetCustomHint(AObj: TGroupBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function GroupBox_GetComponentCount(AObj: TGroupBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -804,6 +814,8 @@ exports
   GroupBox_SetHint,
   GroupBox_GetMargins,
   GroupBox_SetMargins,
+  GroupBox_GetCustomHint,
+  GroupBox_SetCustomHint,
   GroupBox_GetComponentCount,
   GroupBox_GetComponentIndex,
   GroupBox_SetComponentIndex,

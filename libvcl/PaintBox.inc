@@ -501,6 +501,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function PaintBox_GetCustomHint(AObj: TPaintBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure PaintBox_SetCustomHint(AObj: TPaintBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function PaintBox_GetComponentCount(AObj: TPaintBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -636,6 +646,8 @@ exports
   PaintBox_SetHint,
   PaintBox_GetMargins,
   PaintBox_SetMargins,
+  PaintBox_GetCustomHint,
+  PaintBox_SetCustomHint,
   PaintBox_GetComponentCount,
   PaintBox_GetComponentIndex,
   PaintBox_SetComponentIndex,

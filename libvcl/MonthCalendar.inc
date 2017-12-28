@@ -708,6 +708,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function MonthCalendar_GetCustomHint(AObj: TMonthCalendar): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure MonthCalendar_SetCustomHint(AObj: TMonthCalendar; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function MonthCalendar_GetComponentCount(AObj: TMonthCalendar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -888,6 +898,8 @@ exports
   MonthCalendar_SetHint,
   MonthCalendar_GetMargins,
   MonthCalendar_SetMargins,
+  MonthCalendar_GetCustomHint,
+  MonthCalendar_SetCustomHint,
   MonthCalendar_GetComponentCount,
   MonthCalendar_GetComponentIndex,
   MonthCalendar_SetComponentIndex,

@@ -851,6 +851,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function ListBox_GetCustomHint(AObj: TListBox): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure ListBox_SetCustomHint(AObj: TListBox; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function ListBox_GetComponentCount(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1064,6 +1074,8 @@ exports
   ListBox_SetHint,
   ListBox_GetMargins,
   ListBox_SetMargins,
+  ListBox_GetCustomHint,
+  ListBox_SetCustomHint,
   ListBox_GetComponentCount,
   ListBox_GetComponentIndex,
   ListBox_SetComponentIndex,

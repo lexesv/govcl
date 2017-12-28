@@ -827,6 +827,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function BitBtn_GetCustomHint(AObj: TBitBtn): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure BitBtn_SetCustomHint(AObj: TBitBtn; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function BitBtn_GetComponentCount(AObj: TBitBtn): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -1028,6 +1038,8 @@ exports
   BitBtn_SetHint,
   BitBtn_GetMargins,
   BitBtn_SetMargins,
+  BitBtn_GetCustomHint,
+  BitBtn_SetCustomHint,
   BitBtn_GetComponentCount,
   BitBtn_GetComponentIndex,
   BitBtn_SetComponentIndex,

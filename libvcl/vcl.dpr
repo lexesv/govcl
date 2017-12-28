@@ -23,6 +23,7 @@ uses
   System.IniFiles,
   System.Win.Registry,
   System.Actions,
+  System.Generics.Collections,
   Vcl.Forms,
   Vcl.StdCtrls,
   Vcl.Dialogs,

@@ -679,6 +679,14 @@ func (m *TMaskEdit) SetMargins(value *TMargins) {
     MaskEdit_SetMargins(m.instance, CheckPtr(value))
 }
 
+func (m *TMaskEdit) CustomHint() *TCustomHint {
+    return CustomHintFromInst(MaskEdit_GetCustomHint(m.instance))
+}
+
+func (m *TMaskEdit) SetCustomHint(value IComponent) {
+    MaskEdit_SetCustomHint(m.instance, CheckPtr(value))
+}
+
 func (m *TMaskEdit) ComponentCount() int32 {
     return MaskEdit_GetComponentCount(m.instance)
 }

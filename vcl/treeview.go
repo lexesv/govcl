@@ -791,6 +791,14 @@ func (t *TTreeView) SetMargins(value *TMargins) {
     TreeView_SetMargins(t.instance, CheckPtr(value))
 }
 
+func (t *TTreeView) CustomHint() *TCustomHint {
+    return CustomHintFromInst(TreeView_GetCustomHint(t.instance))
+}
+
+func (t *TTreeView) SetCustomHint(value IComponent) {
+    TreeView_SetCustomHint(t.instance, CheckPtr(value))
+}
+
 func (t *TTreeView) ComponentCount() int32 {
     return TreeView_GetComponentCount(t.instance)
 }

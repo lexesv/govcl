@@ -599,6 +599,14 @@ func (b *TButton) SetMargins(value *TMargins) {
     Button_SetMargins(b.instance, CheckPtr(value))
 }
 
+func (b *TButton) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Button_GetCustomHint(b.instance))
+}
+
+func (b *TButton) SetCustomHint(value IComponent) {
+    Button_SetCustomHint(b.instance, CheckPtr(value))
+}
+
 func (b *TButton) ComponentCount() int32 {
     return Button_GetComponentCount(b.instance)
 }

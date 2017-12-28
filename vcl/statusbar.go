@@ -531,6 +531,14 @@ func (s *TStatusBar) SetMargins(value *TMargins) {
     StatusBar_SetMargins(s.instance, CheckPtr(value))
 }
 
+func (s *TStatusBar) CustomHint() *TCustomHint {
+    return CustomHintFromInst(StatusBar_GetCustomHint(s.instance))
+}
+
+func (s *TStatusBar) SetCustomHint(value IComponent) {
+    StatusBar_SetCustomHint(s.instance, CheckPtr(value))
+}
+
 func (s *TStatusBar) ComponentCount() int32 {
     return StatusBar_GetComponentCount(s.instance)
 }

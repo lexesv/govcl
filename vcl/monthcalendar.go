@@ -556,6 +556,14 @@ func (m *TMonthCalendar) SetMargins(value *TMargins) {
     MonthCalendar_SetMargins(m.instance, CheckPtr(value))
 }
 
+func (m *TMonthCalendar) CustomHint() *TCustomHint {
+    return CustomHintFromInst(MonthCalendar_GetCustomHint(m.instance))
+}
+
+func (m *TMonthCalendar) SetCustomHint(value IComponent) {
+    MonthCalendar_SetCustomHint(m.instance, CheckPtr(value))
+}
+
 func (m *TMonthCalendar) ComponentCount() int32 {
     return MonthCalendar_GetComponentCount(m.instance)
 }

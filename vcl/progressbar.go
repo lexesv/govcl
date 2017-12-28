@@ -547,6 +547,14 @@ func (p *TProgressBar) SetMargins(value *TMargins) {
     ProgressBar_SetMargins(p.instance, CheckPtr(value))
 }
 
+func (p *TProgressBar) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ProgressBar_GetCustomHint(p.instance))
+}
+
+func (p *TProgressBar) SetCustomHint(value IComponent) {
+    ProgressBar_SetCustomHint(p.instance, CheckPtr(value))
+}
+
 func (p *TProgressBar) ComponentCount() int32 {
     return ProgressBar_GetComponentCount(p.instance)
 }

@@ -499,6 +499,14 @@ func (g *TGroupBox) SetMargins(value *TMargins) {
     GroupBox_SetMargins(g.instance, CheckPtr(value))
 }
 
+func (g *TGroupBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(GroupBox_GetCustomHint(g.instance))
+}
+
+func (g *TGroupBox) SetCustomHint(value IComponent) {
+    GroupBox_SetCustomHint(g.instance, CheckPtr(value))
+}
+
 func (g *TGroupBox) ComponentCount() int32 {
     return GroupBox_GetComponentCount(g.instance)
 }

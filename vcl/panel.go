@@ -591,6 +591,14 @@ func (p *TPanel) SetMargins(value *TMargins) {
     Panel_SetMargins(p.instance, CheckPtr(value))
 }
 
+func (p *TPanel) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Panel_GetCustomHint(p.instance))
+}
+
+func (p *TPanel) SetCustomHint(value IComponent) {
+    Panel_SetCustomHint(p.instance, CheckPtr(value))
+}
+
 func (p *TPanel) ComponentCount() int32 {
     return Panel_GetComponentCount(p.instance)
 }

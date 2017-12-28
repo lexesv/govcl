@@ -659,6 +659,14 @@ func (f *TForm) SetMargins(value *TMargins) {
     Form_SetMargins(f.instance, CheckPtr(value))
 }
 
+func (f *TForm) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Form_GetCustomHint(f.instance))
+}
+
+func (f *TForm) SetCustomHint(value IComponent) {
+    Form_SetCustomHint(f.instance, CheckPtr(value))
+}
+
 func (f *TForm) ComponentCount() int32 {
     return Form_GetComponentCount(f.instance)
 }

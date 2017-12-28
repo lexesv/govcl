@@ -616,6 +616,14 @@ func (d *TDateTimePicker) SetMargins(value *TMargins) {
     DateTimePicker_SetMargins(d.instance, CheckPtr(value))
 }
 
+func (d *TDateTimePicker) CustomHint() *TCustomHint {
+    return CustomHintFromInst(DateTimePicker_GetCustomHint(d.instance))
+}
+
+func (d *TDateTimePicker) SetCustomHint(value IComponent) {
+    DateTimePicker_SetCustomHint(d.instance, CheckPtr(value))
+}
+
 func (d *TDateTimePicker) ComponentCount() int32 {
     return DateTimePicker_GetComponentCount(d.instance)
 }

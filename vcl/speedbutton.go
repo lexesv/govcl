@@ -455,6 +455,14 @@ func (s *TSpeedButton) SetMargins(value *TMargins) {
     SpeedButton_SetMargins(s.instance, CheckPtr(value))
 }
 
+func (s *TSpeedButton) CustomHint() *TCustomHint {
+    return CustomHintFromInst(SpeedButton_GetCustomHint(s.instance))
+}
+
+func (s *TSpeedButton) SetCustomHint(value IComponent) {
+    SpeedButton_SetCustomHint(s.instance, CheckPtr(value))
+}
+
 func (s *TSpeedButton) ComponentCount() int32 {
     return SpeedButton_GetComponentCount(s.instance)
 }

@@ -91,6 +91,10 @@ func (b *TBalloonHint) ToString() string {
     return BalloonHint_ToString(b.instance)
 }
 
+func (b *TBalloonHint) ShowingHint() bool {
+    return BalloonHint_GetShowingHint(b.instance)
+}
+
 func (b *TBalloonHint) Title() string {
     return BalloonHint_GetTitle(b.instance)
 }

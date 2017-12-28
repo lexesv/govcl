@@ -459,6 +459,14 @@ func (t *TToolButton) SetMargins(value *TMargins) {
     ToolButton_SetMargins(t.instance, CheckPtr(value))
 }
 
+func (t *TToolButton) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ToolButton_GetCustomHint(t.instance))
+}
+
+func (t *TToolButton) SetCustomHint(value IComponent) {
+    ToolButton_SetCustomHint(t.instance, CheckPtr(value))
+}
+
 func (t *TToolButton) ComponentCount() int32 {
     return ToolButton_GetComponentCount(t.instance)
 }

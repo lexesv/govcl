@@ -667,6 +667,14 @@ func (t *TToolBar) SetMargins(value *TMargins) {
     ToolBar_SetMargins(t.instance, CheckPtr(value))
 }
 
+func (t *TToolBar) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ToolBar_GetCustomHint(t.instance))
+}
+
+func (t *TToolBar) SetCustomHint(value IComponent) {
+    ToolBar_SetCustomHint(t.instance, CheckPtr(value))
+}
+
 func (t *TToolBar) ComponentCount() int32 {
     return ToolBar_GetComponentCount(t.instance)
 }

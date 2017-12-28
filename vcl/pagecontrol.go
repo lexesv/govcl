@@ -551,6 +551,14 @@ func (p *TPageControl) SetMargins(value *TMargins) {
     PageControl_SetMargins(p.instance, CheckPtr(value))
 }
 
+func (p *TPageControl) CustomHint() *TCustomHint {
+    return CustomHintFromInst(PageControl_GetCustomHint(p.instance))
+}
+
+func (p *TPageControl) SetCustomHint(value IComponent) {
+    PageControl_SetCustomHint(p.instance, CheckPtr(value))
+}
+
 func (p *TPageControl) ComponentCount() int32 {
     return PageControl_GetComponentCount(p.instance)
 }

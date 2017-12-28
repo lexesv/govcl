@@ -647,6 +647,14 @@ func (l *TListBox) SetMargins(value *TMargins) {
     ListBox_SetMargins(l.instance, CheckPtr(value))
 }
 
+func (l *TListBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ListBox_GetCustomHint(l.instance))
+}
+
+func (l *TListBox) SetCustomHint(value IComponent) {
+    ListBox_SetCustomHint(l.instance, CheckPtr(value))
+}
+
 func (l *TListBox) ComponentCount() int32 {
     return ListBox_GetComponentCount(l.instance)
 }

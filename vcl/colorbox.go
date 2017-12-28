@@ -675,6 +675,14 @@ func (c *TColorBox) SetMargins(value *TMargins) {
     ColorBox_SetMargins(c.instance, CheckPtr(value))
 }
 
+func (c *TColorBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ColorBox_GetCustomHint(c.instance))
+}
+
+func (c *TColorBox) SetCustomHint(value IComponent) {
+    ColorBox_SetCustomHint(c.instance, CheckPtr(value))
+}
+
 func (c *TColorBox) ComponentCount() int32 {
     return ColorBox_GetComponentCount(c.instance)
 }

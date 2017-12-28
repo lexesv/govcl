@@ -479,6 +479,14 @@ func (u *TUpDown) SetMargins(value *TMargins) {
     UpDown_SetMargins(u.instance, CheckPtr(value))
 }
 
+func (u *TUpDown) CustomHint() *TCustomHint {
+    return CustomHintFromInst(UpDown_GetCustomHint(u.instance))
+}
+
+func (u *TUpDown) SetCustomHint(value IComponent) {
+    UpDown_SetCustomHint(u.instance, CheckPtr(value))
+}
+
 func (u *TUpDown) ComponentCount() int32 {
     return UpDown_GetComponentCount(u.instance)
 }

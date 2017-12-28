@@ -523,6 +523,14 @@ func (t *TTabSheet) SetMargins(value *TMargins) {
     TabSheet_SetMargins(t.instance, CheckPtr(value))
 }
 
+func (t *TTabSheet) CustomHint() *TCustomHint {
+    return CustomHintFromInst(TabSheet_GetCustomHint(t.instance))
+}
+
+func (t *TTabSheet) SetCustomHint(value IComponent) {
+    TabSheet_SetCustomHint(t.instance, CheckPtr(value))
+}
+
 func (t *TTabSheet) ComponentCount() int32 {
     return TabSheet_GetComponentCount(t.instance)
 }

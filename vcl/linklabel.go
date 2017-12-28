@@ -535,6 +535,14 @@ func (l *TLinkLabel) SetMargins(value *TMargins) {
     LinkLabel_SetMargins(l.instance, CheckPtr(value))
 }
 
+func (l *TLinkLabel) CustomHint() *TCustomHint {
+    return CustomHintFromInst(LinkLabel_GetCustomHint(l.instance))
+}
+
+func (l *TLinkLabel) SetCustomHint(value IComponent) {
+    LinkLabel_SetCustomHint(l.instance, CheckPtr(value))
+}
+
 func (l *TLinkLabel) ComponentCount() int32 {
     return LinkLabel_GetComponentCount(l.instance)
 }

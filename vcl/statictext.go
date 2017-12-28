@@ -547,6 +547,14 @@ func (s *TStaticText) SetMargins(value *TMargins) {
     StaticText_SetMargins(s.instance, CheckPtr(value))
 }
 
+func (s *TStaticText) CustomHint() *TCustomHint {
+    return CustomHintFromInst(StaticText_GetCustomHint(s.instance))
+}
+
+func (s *TStaticText) SetCustomHint(value IComponent) {
+    StaticText_SetCustomHint(s.instance, CheckPtr(value))
+}
+
 func (s *TStaticText) ComponentCount() int32 {
     return StaticText_GetComponentCount(s.instance)
 }

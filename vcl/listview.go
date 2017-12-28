@@ -855,6 +855,14 @@ func (l *TListView) SetMargins(value *TMargins) {
     ListView_SetMargins(l.instance, CheckPtr(value))
 }
 
+func (l *TListView) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ListView_GetCustomHint(l.instance))
+}
+
+func (l *TListView) SetCustomHint(value IComponent) {
+    ListView_SetCustomHint(l.instance, CheckPtr(value))
+}
+
 func (l *TListView) ComponentCount() int32 {
     return ListView_GetComponentCount(l.instance)
 }

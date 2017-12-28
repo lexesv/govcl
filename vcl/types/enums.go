@@ -1445,3 +1445,69 @@ const (
 	BkIgnore
 	BkAll
 )
+
+// TScrollBarKind = (sbHorizontal, sbVertical);
+type TScrollBarKind int32
+
+const (
+	SbHorizontal = iota + 0
+	SbVertical
+)
+
+// TScrollBarInc = 1..32767;
+type TScrollBarInc int16
+
+// TScrollBarStyle = (ssRegular, ssFlat, ssHotTrack);
+type TScrollBarStyle int32
+
+const (
+	SsRegular = iota + 0
+	SsFlat
+	ssHotTrack
+)
+
+// TShapeType = (stRectangle, stSquare, stRoundRect, stRoundSquare,
+// stEllipse, stCircle);
+type TShapeType int32
+
+const (
+	StRectangle = iota + 0
+	StSquare
+	StRoundRect
+	StRoundSquare
+	StEllipse
+	StCircle
+)
+
+// TBevelStyle = (bsLowered, bsRaised);
+type TBevelStyle int32
+
+const (
+	BsLowered = iota + 0
+	BsRaised
+)
+
+// TBevelShape = (bsBox, bsFrame, bsTopLine, bsBottomLine, bsLeftLine,
+// bsRightLine, bsSpacer);
+type TBevelShape int32
+
+const (
+	BsBox = iota + 0
+	BsFrame
+	BsTopLine
+	BsBottomLine
+	BsLeftLine
+	BsRightLine
+	BsSpacer
+)
+
+// TGaugeKind = (gkText, gkHorizontalBar, gkVerticalBar, gkPie, gkNeedle);
+type TGaugeKind int32
+
+const (
+	GkText = iota + 0
+	GkHorizontalBar
+	GkVerticalBar
+	GkPie
+	GkNeedle
+)

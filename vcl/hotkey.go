@@ -447,6 +447,14 @@ func (h *THotKey) SetMargins(value *TMargins) {
     HotKey_SetMargins(h.instance, CheckPtr(value))
 }
 
+func (h *THotKey) CustomHint() *TCustomHint {
+    return CustomHintFromInst(HotKey_GetCustomHint(h.instance))
+}
+
+func (h *THotKey) SetCustomHint(value IComponent) {
+    HotKey_SetCustomHint(h.instance, CheckPtr(value))
+}
+
 func (h *THotKey) ComponentCount() int32 {
     return HotKey_GetComponentCount(h.instance)
 }

@@ -635,6 +635,14 @@ func (c *TColorListBox) SetMargins(value *TMargins) {
     ColorListBox_SetMargins(c.instance, CheckPtr(value))
 }
 
+func (c *TColorListBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ColorListBox_GetCustomHint(c.instance))
+}
+
+func (c *TColorListBox) SetCustomHint(value IComponent) {
+    ColorListBox_SetCustomHint(c.instance, CheckPtr(value))
+}
+
 func (c *TColorListBox) ComponentCount() int32 {
     return ColorListBox_GetComponentCount(c.instance)
 }

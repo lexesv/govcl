@@ -683,6 +683,14 @@ func (c *TComboBox) SetMargins(value *TMargins) {
     ComboBox_SetMargins(c.instance, CheckPtr(value))
 }
 
+func (c *TComboBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(ComboBox_GetCustomHint(c.instance))
+}
+
+func (c *TComboBox) SetCustomHint(value IComponent) {
+    ComboBox_SetCustomHint(c.instance, CheckPtr(value))
+}
+
 func (c *TComboBox) ComponentCount() int32 {
     return ComboBox_GetComponentCount(c.instance)
 }

@@ -679,6 +679,14 @@ func (e *TEdit) SetMargins(value *TMargins) {
     Edit_SetMargins(e.instance, CheckPtr(value))
 }
 
+func (e *TEdit) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Edit_GetCustomHint(e.instance))
+}
+
+func (e *TEdit) SetCustomHint(value IComponent) {
+    Edit_SetCustomHint(e.instance, CheckPtr(value))
+}
+
 func (e *TEdit) ComponentCount() int32 {
     return Edit_GetComponentCount(e.instance)
 }

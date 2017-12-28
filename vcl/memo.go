@@ -695,6 +695,14 @@ func (m *TMemo) SetMargins(value *TMargins) {
     Memo_SetMargins(m.instance, CheckPtr(value))
 }
 
+func (m *TMemo) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Memo_GetCustomHint(m.instance))
+}
+
+func (m *TMemo) SetCustomHint(value IComponent) {
+    Memo_SetCustomHint(m.instance, CheckPtr(value))
+}
+
 func (m *TMemo) ComponentCount() int32 {
     return Memo_GetComponentCount(m.instance)
 }

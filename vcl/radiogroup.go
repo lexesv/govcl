@@ -507,6 +507,14 @@ func (r *TRadioGroup) SetMargins(value *TMargins) {
     RadioGroup_SetMargins(r.instance, CheckPtr(value))
 }
 
+func (r *TRadioGroup) CustomHint() *TCustomHint {
+    return CustomHintFromInst(RadioGroup_GetCustomHint(r.instance))
+}
+
+func (r *TRadioGroup) SetCustomHint(value IComponent) {
+    RadioGroup_SetCustomHint(r.instance, CheckPtr(value))
+}
+
 func (r *TRadioGroup) ComponentCount() int32 {
     return RadioGroup_GetComponentCount(r.instance)
 }

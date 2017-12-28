@@ -571,6 +571,14 @@ func (t *TTrackBar) SetMargins(value *TMargins) {
     TrackBar_SetMargins(t.instance, CheckPtr(value))
 }
 
+func (t *TTrackBar) CustomHint() *TCustomHint {
+    return CustomHintFromInst(TrackBar_GetCustomHint(t.instance))
+}
+
+func (t *TTrackBar) SetCustomHint(value IComponent) {
+    TrackBar_SetCustomHint(t.instance, CheckPtr(value))
+}
+
 func (t *TTrackBar) ComponentCount() int32 {
     return TrackBar_GetComponentCount(t.instance)
 }

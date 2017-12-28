@@ -311,6 +311,14 @@ func (c *TControl) SetMargins(value *TMargins) {
     Control_SetMargins(c.instance, CheckPtr(value))
 }
 
+func (c *TControl) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Control_GetCustomHint(c.instance))
+}
+
+func (c *TControl) SetCustomHint(value IComponent) {
+    Control_SetCustomHint(c.instance, CheckPtr(value))
+}
+
 func (c *TControl) ComponentCount() int32 {
     return Control_GetComponentCount(c.instance)
 }

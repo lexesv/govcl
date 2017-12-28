@@ -527,6 +527,14 @@ func (r *TRadioButton) SetMargins(value *TMargins) {
     RadioButton_SetMargins(r.instance, CheckPtr(value))
 }
 
+func (r *TRadioButton) CustomHint() *TCustomHint {
+    return CustomHintFromInst(RadioButton_GetCustomHint(r.instance))
+}
+
+func (r *TRadioButton) SetCustomHint(value IComponent) {
+    RadioButton_SetCustomHint(r.instance, CheckPtr(value))
+}
+
 func (r *TRadioButton) ComponentCount() int32 {
     return RadioButton_GetComponentCount(r.instance)
 }

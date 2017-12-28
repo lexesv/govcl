@@ -463,6 +463,14 @@ func (l *TLabel) SetMargins(value *TMargins) {
     Label_SetMargins(l.instance, CheckPtr(value))
 }
 
+func (l *TLabel) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Label_GetCustomHint(l.instance))
+}
+
+func (l *TLabel) SetCustomHint(value IComponent) {
+    Label_SetCustomHint(l.instance, CheckPtr(value))
+}
+
 func (l *TLabel) ComponentCount() int32 {
     return Label_GetComponentCount(l.instance)
 }

@@ -335,6 +335,14 @@ func (s *TSplitter) SetMargins(value *TMargins) {
     Splitter_SetMargins(s.instance, CheckPtr(value))
 }
 
+func (s *TSplitter) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Splitter_GetCustomHint(s.instance))
+}
+
+func (s *TSplitter) SetCustomHint(value IComponent) {
+    Splitter_SetCustomHint(s.instance, CheckPtr(value))
+}
+
 func (s *TSplitter) ComponentCount() int32 {
     return Splitter_GetComponentCount(s.instance)
 }

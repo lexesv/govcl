@@ -639,6 +639,14 @@ func (c *TCategoryPanelGroup) SetMargins(value *TMargins) {
     CategoryPanelGroup_SetMargins(c.instance, CheckPtr(value))
 }
 
+func (c *TCategoryPanelGroup) CustomHint() *TCustomHint {
+    return CustomHintFromInst(CategoryPanelGroup_GetCustomHint(c.instance))
+}
+
+func (c *TCategoryPanelGroup) SetCustomHint(value IComponent) {
+    CategoryPanelGroup_SetCustomHint(c.instance, CheckPtr(value))
+}
+
 func (c *TCategoryPanelGroup) ComponentCount() int32 {
     return CategoryPanelGroup_GetComponentCount(c.instance)
 }

@@ -771,6 +771,14 @@ func (r *TRichEdit) SetMargins(value *TMargins) {
     RichEdit_SetMargins(r.instance, CheckPtr(value))
 }
 
+func (r *TRichEdit) CustomHint() *TCustomHint {
+    return CustomHintFromInst(RichEdit_GetCustomHint(r.instance))
+}
+
+func (r *TRichEdit) SetCustomHint(value IComponent) {
+    RichEdit_SetCustomHint(r.instance, CheckPtr(value))
+}
+
 func (r *TRichEdit) ComponentCount() int32 {
     return RichEdit_GetComponentCount(r.instance)
 }

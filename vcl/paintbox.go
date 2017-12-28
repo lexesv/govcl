@@ -395,6 +395,14 @@ func (p *TPaintBox) SetMargins(value *TMargins) {
     PaintBox_SetMargins(p.instance, CheckPtr(value))
 }
 
+func (p *TPaintBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(PaintBox_GetCustomHint(p.instance))
+}
+
+func (p *TPaintBox) SetCustomHint(value IComponent) {
+    PaintBox_SetCustomHint(p.instance, CheckPtr(value))
+}
+
 func (p *TPaintBox) ComponentCount() int32 {
     return PaintBox_GetComponentCount(p.instance)
 }

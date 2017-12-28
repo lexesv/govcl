@@ -639,6 +639,14 @@ func (b *TBitBtn) SetMargins(value *TMargins) {
     BitBtn_SetMargins(b.instance, CheckPtr(value))
 }
 
+func (b *TBitBtn) CustomHint() *TCustomHint {
+    return CustomHintFromInst(BitBtn_GetCustomHint(b.instance))
+}
+
+func (b *TBitBtn) SetCustomHint(value IComponent) {
+    BitBtn_SetCustomHint(b.instance, CheckPtr(value))
+}
+
 func (b *TBitBtn) ComponentCount() int32 {
     return BitBtn_GetComponentCount(b.instance)
 }

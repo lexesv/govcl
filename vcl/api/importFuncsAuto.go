@@ -1020,6 +1020,15 @@ func Form_SetMargins(obj uintptr, value uintptr) {
    form_SetMargins.Call(obj, value)
 }
 
+func Form_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := form_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Form_SetCustomHint(obj uintptr, value uintptr) {
+   form_SetCustomHint.Call(obj, value)
+}
+
 func Form_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := form_GetComponentCount.Call(obj)
     return int32(ret)
@@ -1693,6 +1702,15 @@ func Button_GetMargins(obj uintptr) uintptr {
 
 func Button_SetMargins(obj uintptr, value uintptr) {
    button_SetMargins.Call(obj, value)
+}
+
+func Button_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := button_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Button_SetCustomHint(obj uintptr, value uintptr) {
+   button_SetCustomHint.Call(obj, value)
 }
 
 func Button_GetComponentCount(obj uintptr) int32 {
@@ -2455,6 +2473,15 @@ func Edit_GetMargins(obj uintptr) uintptr {
 
 func Edit_SetMargins(obj uintptr, value uintptr) {
    edit_SetMargins.Call(obj, value)
+}
+
+func Edit_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := edit_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Edit_SetCustomHint(obj uintptr, value uintptr) {
+   edit_SetCustomHint.Call(obj, value)
 }
 
 func Edit_GetComponentCount(obj uintptr) int32 {
@@ -3545,6 +3572,15 @@ func Memo_SetMargins(obj uintptr, value uintptr) {
    memo_SetMargins.Call(obj, value)
 }
 
+func Memo_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := memo_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Memo_SetCustomHint(obj uintptr, value uintptr) {
+   memo_SetCustomHint.Call(obj, value)
+}
+
 func Memo_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := memo_GetComponentCount.Call(obj)
     return int32(ret)
@@ -3750,6 +3786,15 @@ func CheckBox_GetAlignment(obj uintptr) TLeftRight {
 
 func CheckBox_SetAlignment(obj uintptr, value TLeftRight) {
    checkBox_SetAlignment.Call(obj, uintptr(value))
+}
+
+func CheckBox_GetAllowGrayed(obj uintptr) bool {
+    ret, _, _ := checkBox_GetAllowGrayed.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckBox_SetAllowGrayed(obj uintptr, value bool) {
+   checkBox_SetAllowGrayed.Call(obj, GoBoolToDBool(value))
 }
 
 func CheckBox_GetAnchors(obj uintptr) TAnchors {
@@ -4142,6 +4187,15 @@ func CheckBox_GetMargins(obj uintptr) uintptr {
 
 func CheckBox_SetMargins(obj uintptr, value uintptr) {
    checkBox_SetMargins.Call(obj, value)
+}
+
+func CheckBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := checkBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func CheckBox_SetCustomHint(obj uintptr, value uintptr) {
+   checkBox_SetCustomHint.Call(obj, value)
 }
 
 func CheckBox_GetComponentCount(obj uintptr) int32 {
@@ -4738,6 +4792,15 @@ func RadioButton_SetMargins(obj uintptr, value uintptr) {
    radioButton_SetMargins.Call(obj, value)
 }
 
+func RadioButton_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := radioButton_GetCustomHint.Call(obj)
+    return ret
+}
+
+func RadioButton_SetCustomHint(obj uintptr, value uintptr) {
+   radioButton_SetCustomHint.Call(obj, value)
+}
+
 func RadioButton_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := radioButton_GetComponentCount.Call(obj)
     return int32(ret)
@@ -5302,6 +5365,15 @@ func GroupBox_SetMargins(obj uintptr, value uintptr) {
    groupBox_SetMargins.Call(obj, value)
 }
 
+func GroupBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := groupBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func GroupBox_SetCustomHint(obj uintptr, value uintptr) {
+   groupBox_SetCustomHint.Call(obj, value)
+}
+
 func GroupBox_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := groupBox_GetComponentCount.Call(obj)
     return int32(ret)
@@ -5824,6 +5896,15 @@ func Label_GetMargins(obj uintptr) uintptr {
 
 func Label_SetMargins(obj uintptr, value uintptr) {
    label_SetMargins.Call(obj, value)
+}
+
+func Label_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := label_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Label_SetCustomHint(obj uintptr, value uintptr) {
+   label_SetCustomHint.Call(obj, value)
 }
 
 func Label_GetComponentCount(obj uintptr) int32 {
@@ -6546,6 +6627,15 @@ func ListBox_GetMargins(obj uintptr) uintptr {
 
 func ListBox_SetMargins(obj uintptr, value uintptr) {
    listBox_SetMargins.Call(obj, value)
+}
+
+func ListBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := listBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ListBox_SetCustomHint(obj uintptr, value uintptr) {
+   listBox_SetCustomHint.Call(obj, value)
 }
 
 func ListBox_GetComponentCount(obj uintptr) int32 {
@@ -7325,6 +7415,15 @@ func ComboBox_SetMargins(obj uintptr, value uintptr) {
    comboBox_SetMargins.Call(obj, value)
 }
 
+func ComboBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := comboBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ComboBox_SetCustomHint(obj uintptr, value uintptr) {
+   comboBox_SetCustomHint.Call(obj, value)
+}
+
 func ComboBox_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := comboBox_GetComponentCount.Call(obj)
     return int32(ret)
@@ -7992,6 +8091,15 @@ func Panel_SetMargins(obj uintptr, value uintptr) {
    panel_SetMargins.Call(obj, value)
 }
 
+func Panel_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := panel_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Panel_SetCustomHint(obj uintptr, value uintptr) {
+   panel_SetCustomHint.Call(obj, value)
+}
+
 func Panel_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := panel_GetComponentCount.Call(obj)
     return int32(ret)
@@ -8460,6 +8568,15 @@ func Image_GetMargins(obj uintptr) uintptr {
 
 func Image_SetMargins(obj uintptr, value uintptr) {
    image_SetMargins.Call(obj, value)
+}
+
+func Image_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := image_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Image_SetCustomHint(obj uintptr, value uintptr) {
+   image_SetCustomHint.Call(obj, value)
 }
 
 func Image_GetComponentCount(obj uintptr) int32 {
@@ -9062,6 +9179,15 @@ func LinkLabel_SetMargins(obj uintptr, value uintptr) {
    linkLabel_SetMargins.Call(obj, value)
 }
 
+func LinkLabel_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := linkLabel_GetCustomHint.Call(obj)
+    return ret
+}
+
+func LinkLabel_SetCustomHint(obj uintptr, value uintptr) {
+   linkLabel_SetCustomHint.Call(obj, value)
+}
+
 func LinkLabel_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := linkLabel_GetComponentCount.Call(obj)
     return int32(ret)
@@ -9576,6 +9702,15 @@ func SpeedButton_SetMargins(obj uintptr, value uintptr) {
    speedButton_SetMargins.Call(obj, value)
 }
 
+func SpeedButton_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := speedButton_GetCustomHint.Call(obj)
+    return ret
+}
+
+func SpeedButton_SetCustomHint(obj uintptr, value uintptr) {
+   speedButton_SetCustomHint.Call(obj, value)
+}
+
 func SpeedButton_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := speedButton_GetComponentCount.Call(obj)
     return int32(ret)
@@ -9952,6 +10087,15 @@ func Splitter_GetMargins(obj uintptr) uintptr {
 
 func Splitter_SetMargins(obj uintptr, value uintptr) {
    splitter_SetMargins.Call(obj, value)
+}
+
+func Splitter_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := splitter_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Splitter_SetCustomHint(obj uintptr, value uintptr) {
+   splitter_SetCustomHint.Call(obj, value)
 }
 
 func Splitter_GetComponentCount(obj uintptr) int32 {
@@ -10523,6 +10667,15 @@ func RadioGroup_GetMargins(obj uintptr) uintptr {
 
 func RadioGroup_SetMargins(obj uintptr, value uintptr) {
    radioGroup_SetMargins.Call(obj, value)
+}
+
+func RadioGroup_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := radioGroup_GetCustomHint.Call(obj)
+    return ret
+}
+
+func RadioGroup_SetCustomHint(obj uintptr, value uintptr) {
+   radioGroup_SetCustomHint.Call(obj, value)
 }
 
 func RadioGroup_GetComponentCount(obj uintptr) int32 {
@@ -11147,6 +11300,15 @@ func StaticText_GetMargins(obj uintptr) uintptr {
 
 func StaticText_SetMargins(obj uintptr, value uintptr) {
    staticText_SetMargins.Call(obj, value)
+}
+
+func StaticText_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := staticText_GetCustomHint.Call(obj)
+    return ret
+}
+
+func StaticText_SetCustomHint(obj uintptr, value uintptr) {
+   staticText_SetCustomHint.Call(obj, value)
 }
 
 func StaticText_GetComponentCount(obj uintptr) int32 {
@@ -11909,6 +12071,15 @@ func ColorBox_SetMargins(obj uintptr, value uintptr) {
    colorBox_SetMargins.Call(obj, value)
 }
 
+func ColorBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := colorBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ColorBox_SetCustomHint(obj uintptr, value uintptr) {
+   colorBox_SetCustomHint.Call(obj, value)
+}
+
 func ColorBox_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := colorBox_GetComponentCount.Call(obj)
     return int32(ret)
@@ -12633,6 +12804,15 @@ func ColorListBox_SetMargins(obj uintptr, value uintptr) {
    colorListBox_SetMargins.Call(obj, value)
 }
 
+func ColorListBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := colorListBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ColorListBox_SetCustomHint(obj uintptr, value uintptr) {
+   colorListBox_SetCustomHint.Call(obj, value)
+}
+
 func ColorListBox_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := colorListBox_GetComponentCount.Call(obj)
     return int32(ret)
@@ -12975,6 +13155,11 @@ func BalloonHint_GetHashCode(obj uintptr) int32 {
 func BalloonHint_ToString(obj uintptr) string {
     ret, _, _ := balloonHint_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+func BalloonHint_GetShowingHint(obj uintptr) bool {
+    ret, _, _ := balloonHint_GetShowingHint.Call(obj)
+    return DBoolToGoBool(ret)
 }
 
 func BalloonHint_GetTitle(obj uintptr) string {
@@ -13755,6 +13940,15 @@ func CategoryPanelGroup_SetMargins(obj uintptr, value uintptr) {
    categoryPanelGroup_SetMargins.Call(obj, value)
 }
 
+func CategoryPanelGroup_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := categoryPanelGroup_GetCustomHint.Call(obj)
+    return ret
+}
+
+func CategoryPanelGroup_SetCustomHint(obj uintptr, value uintptr) {
+   categoryPanelGroup_SetCustomHint.Call(obj, value)
+}
+
 func CategoryPanelGroup_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := categoryPanelGroup_GetComponentCount.Call(obj)
     return int32(ret)
@@ -14415,6 +14609,15 @@ func CategoryPanel_GetMargins(obj uintptr) uintptr {
 
 func CategoryPanel_SetMargins(obj uintptr, value uintptr) {
    categoryPanel_SetMargins.Call(obj, value)
+}
+
+func CategoryPanel_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := categoryPanel_GetCustomHint.Call(obj)
+    return ret
+}
+
+func CategoryPanel_SetCustomHint(obj uintptr, value uintptr) {
+   categoryPanel_SetCustomHint.Call(obj, value)
 }
 
 func CategoryPanel_GetComponentCount(obj uintptr) int32 {
@@ -16863,6 +17066,15 @@ func RichEdit_SetMargins(obj uintptr, value uintptr) {
    richEdit_SetMargins.Call(obj, value)
 }
 
+func RichEdit_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := richEdit_GetCustomHint.Call(obj)
+    return ret
+}
+
+func RichEdit_SetCustomHint(obj uintptr, value uintptr) {
+   richEdit_SetCustomHint.Call(obj, value)
+}
+
 func RichEdit_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := richEdit_GetComponentCount.Call(obj)
     return int32(ret)
@@ -17507,6 +17719,15 @@ func TrackBar_GetMargins(obj uintptr) uintptr {
 
 func TrackBar_SetMargins(obj uintptr, value uintptr) {
    trackBar_SetMargins.Call(obj, value)
+}
+
+func TrackBar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := trackBar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func TrackBar_SetCustomHint(obj uintptr, value uintptr) {
+   trackBar_SetCustomHint.Call(obj, value)
 }
 
 func TrackBar_GetComponentCount(obj uintptr) int32 {
@@ -18379,6 +18600,15 @@ func UpDown_SetMargins(obj uintptr, value uintptr) {
    upDown_SetMargins.Call(obj, value)
 }
 
+func UpDown_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := upDown_GetCustomHint.Call(obj)
+    return ret
+}
+
+func UpDown_SetCustomHint(obj uintptr, value uintptr) {
+   upDown_SetCustomHint.Call(obj, value)
+}
+
 func UpDown_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := upDown_GetComponentCount.Call(obj)
     return int32(ret)
@@ -18997,6 +19227,15 @@ func ProgressBar_SetMargins(obj uintptr, value uintptr) {
    progressBar_SetMargins.Call(obj, value)
 }
 
+func ProgressBar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := progressBar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ProgressBar_SetCustomHint(obj uintptr, value uintptr) {
+   progressBar_SetCustomHint.Call(obj, value)
+}
+
 func ProgressBar_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := progressBar_GetComponentCount.Call(obj)
     return int32(ret)
@@ -19501,6 +19740,15 @@ func HotKey_GetMargins(obj uintptr) uintptr {
 
 func HotKey_SetMargins(obj uintptr, value uintptr) {
    hotKey_SetMargins.Call(obj, value)
+}
+
+func HotKey_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := hotKey_GetCustomHint.Call(obj)
+    return ret
+}
+
+func HotKey_SetCustomHint(obj uintptr, value uintptr) {
+   hotKey_SetCustomHint.Call(obj, value)
 }
 
 func HotKey_GetComponentCount(obj uintptr) int32 {
@@ -20198,6 +20446,15 @@ func DateTimePicker_SetMargins(obj uintptr, value uintptr) {
    dateTimePicker_SetMargins.Call(obj, value)
 }
 
+func DateTimePicker_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := dateTimePicker_GetCustomHint.Call(obj)
+    return ret
+}
+
+func DateTimePicker_SetCustomHint(obj uintptr, value uintptr) {
+   dateTimePicker_SetCustomHint.Call(obj, value)
+}
+
 func DateTimePicker_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := dateTimePicker_GetComponentCount.Call(obj)
     return int32(ret)
@@ -20823,6 +21080,15 @@ func MonthCalendar_GetMargins(obj uintptr) uintptr {
 
 func MonthCalendar_SetMargins(obj uintptr, value uintptr) {
    monthCalendar_SetMargins.Call(obj, value)
+}
+
+func MonthCalendar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := monthCalendar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func MonthCalendar_SetCustomHint(obj uintptr, value uintptr) {
+   monthCalendar_SetCustomHint.Call(obj, value)
 }
 
 func MonthCalendar_GetComponentCount(obj uintptr) int32 {
@@ -21785,6 +22051,15 @@ func ListView_SetMargins(obj uintptr, value uintptr) {
    listView_SetMargins.Call(obj, value)
 }
 
+func ListView_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := listView_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ListView_SetCustomHint(obj uintptr, value uintptr) {
+   listView_SetCustomHint.Call(obj, value)
+}
+
 func ListView_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := listView_GetComponentCount.Call(obj)
     return int32(ret)
@@ -22678,6 +22953,15 @@ func TreeView_SetMargins(obj uintptr, value uintptr) {
    treeView_SetMargins.Call(obj, value)
 }
 
+func TreeView_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := treeView_GetCustomHint.Call(obj)
+    return ret
+}
+
+func TreeView_SetCustomHint(obj uintptr, value uintptr) {
+   treeView_SetCustomHint.Call(obj, value)
+}
+
 func TreeView_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := treeView_GetComponentCount.Call(obj)
     return int32(ret)
@@ -23282,6 +23566,15 @@ func StatusBar_GetMargins(obj uintptr) uintptr {
 
 func StatusBar_SetMargins(obj uintptr, value uintptr) {
    statusBar_SetMargins.Call(obj, value)
+}
+
+func StatusBar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := statusBar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func StatusBar_SetCustomHint(obj uintptr, value uintptr) {
+   statusBar_SetCustomHint.Call(obj, value)
 }
 
 func StatusBar_GetComponentCount(obj uintptr) int32 {
@@ -24036,6 +24329,15 @@ func ToolBar_GetMargins(obj uintptr) uintptr {
 
 func ToolBar_SetMargins(obj uintptr, value uintptr) {
    toolBar_SetMargins.Call(obj, value)
+}
+
+func ToolBar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := toolBar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ToolBar_SetCustomHint(obj uintptr, value uintptr) {
+   toolBar_SetCustomHint.Call(obj, value)
 }
 
 func ToolBar_GetComponentCount(obj uintptr) int32 {
@@ -24805,6 +25107,15 @@ func MaskEdit_SetMargins(obj uintptr, value uintptr) {
    maskEdit_SetMargins.Call(obj, value)
 }
 
+func MaskEdit_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetCustomHint.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetCustomHint(obj uintptr, value uintptr) {
+   maskEdit_SetCustomHint.Call(obj, value)
+}
+
 func MaskEdit_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := maskEdit_GetComponentCount.Call(obj)
     return int32(ret)
@@ -25523,6 +25834,15 @@ func BitBtn_GetMargins(obj uintptr) uintptr {
 
 func BitBtn_SetMargins(obj uintptr, value uintptr) {
    bitBtn_SetMargins.Call(obj, value)
+}
+
+func BitBtn_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetCustomHint.Call(obj)
+    return ret
+}
+
+func BitBtn_SetCustomHint(obj uintptr, value uintptr) {
+   bitBtn_SetCustomHint.Call(obj, value)
 }
 
 func BitBtn_GetComponentCount(obj uintptr) int32 {
@@ -28498,6 +28818,15 @@ func PageControl_SetMargins(obj uintptr, value uintptr) {
    pageControl_SetMargins.Call(obj, value)
 }
 
+func PageControl_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := pageControl_GetCustomHint.Call(obj)
+    return ret
+}
+
+func PageControl_SetCustomHint(obj uintptr, value uintptr) {
+   pageControl_SetCustomHint.Call(obj, value)
+}
+
 func PageControl_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := pageControl_GetComponentCount.Call(obj)
     return int32(ret)
@@ -29094,6 +29423,15 @@ func TabSheet_SetMargins(obj uintptr, value uintptr) {
    tabSheet_SetMargins.Call(obj, value)
 }
 
+func TabSheet_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := tabSheet_GetCustomHint.Call(obj)
+    return ret
+}
+
+func TabSheet_SetCustomHint(obj uintptr, value uintptr) {
+   tabSheet_SetCustomHint.Call(obj, value)
+}
+
 func TabSheet_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := tabSheet_GetComponentCount.Call(obj)
     return int32(ret)
@@ -29448,6 +29786,15 @@ func Control_GetMargins(obj uintptr) uintptr {
 
 func Control_SetMargins(obj uintptr, value uintptr) {
    control_SetMargins.Call(obj, value)
+}
+
+func Control_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := control_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Control_SetCustomHint(obj uintptr, value uintptr) {
+   control_SetCustomHint.Call(obj, value)
 }
 
 func Control_GetComponentCount(obj uintptr) int32 {
@@ -31938,6 +32285,15 @@ func ToolButton_SetMargins(obj uintptr, value uintptr) {
    toolButton_SetMargins.Call(obj, value)
 }
 
+func ToolButton_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := toolButton_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ToolButton_SetCustomHint(obj uintptr, value uintptr) {
+   toolButton_SetCustomHint.Call(obj, value)
+}
+
 func ToolButton_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := toolButton_GetComponentCount.Call(obj)
     return int32(ret)
@@ -33049,6 +33405,15 @@ func PaintBox_SetMargins(obj uintptr, value uintptr) {
    paintBox_SetMargins.Call(obj, value)
 }
 
+func PaintBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := paintBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func PaintBox_SetCustomHint(obj uintptr, value uintptr) {
+   paintBox_SetCustomHint.Call(obj, value)
+}
+
 func PaintBox_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := paintBox_GetComponentCount.Call(obj)
     return int32(ret)
@@ -33532,6 +33897,15 @@ func MonthCalColors_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func MonthCalColors_GetBackColor(obj uintptr) TColor {
+    ret, _, _ := monthCalColors_GetBackColor.Call(obj)
+    return TColor(ret)
+}
+
+func MonthCalColors_SetBackColor(obj uintptr, value TColor) {
+   monthCalColors_SetBackColor.Call(obj, uintptr(value))
+}
+
 
 //--------------------------- TParaAttributes ---------------------------
 
@@ -33835,6 +34209,3498 @@ func Exception_GetStackTrace(obj uintptr) string {
 
 func Exception_GetStackInfo(obj uintptr) uintptr {
     ret, _, _ := exception_GetStackInfo.Call(obj)
+    return ret
+}
+
+
+//--------------------------- TScrollBar ---------------------------
+
+func ScrollBar_Create(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_Create.Call(obj)
+    return ret
+}
+
+func ScrollBar_Free(obj uintptr) {
+    scrollBar_Free.Call(obj)
+}
+
+func ScrollBar_SetParams(obj uintptr, APosition int32, AMin int32, AMax int32)  {
+    scrollBar_SetParams.Call(obj, uintptr(APosition) , uintptr(AMin) , uintptr(AMax) )
+}
+
+func ScrollBar_CanFocus(obj uintptr) bool {
+    ret, _, _ := scrollBar_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_FlipChildren(obj uintptr, AllLevels bool)  {
+    scrollBar_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func ScrollBar_Focused(obj uintptr) bool {
+    ret, _, _ := scrollBar_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := scrollBar_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_Invalidate(obj uintptr)  {
+    scrollBar_Invalidate.Call(obj)
+}
+
+func ScrollBar_Realign(obj uintptr)  {
+    scrollBar_Realign.Call(obj)
+}
+
+func ScrollBar_Repaint(obj uintptr)  {
+    scrollBar_Repaint.Call(obj)
+}
+
+func ScrollBar_ScaleBy(obj uintptr, M int32, D int32)  {
+    scrollBar_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func ScrollBar_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    scrollBar_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func ScrollBar_SetFocus(obj uintptr)  {
+    scrollBar_SetFocus.Call(obj)
+}
+
+func ScrollBar_Update(obj uintptr)  {
+    scrollBar_Update.Call(obj)
+}
+
+func ScrollBar_BringToFront(obj uintptr)  {
+    scrollBar_BringToFront.Call(obj)
+}
+
+func ScrollBar_HasParent(obj uintptr) bool {
+    ret, _, _ := scrollBar_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_Hide(obj uintptr)  {
+    scrollBar_Hide.Call(obj)
+}
+
+func ScrollBar_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := scrollBar_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func ScrollBar_Refresh(obj uintptr)  {
+    scrollBar_Refresh.Call(obj)
+}
+
+func ScrollBar_SendToBack(obj uintptr)  {
+    scrollBar_SendToBack.Call(obj)
+}
+
+func ScrollBar_Show(obj uintptr)  {
+    scrollBar_Show.Call(obj)
+}
+
+func ScrollBar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := scrollBar_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ScrollBar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := scrollBar_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func ScrollBar_GetNamePath(obj uintptr) string {
+    ret, _, _ := scrollBar_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBar_Assign(obj uintptr, Source uintptr)  {
+    scrollBar_Assign.Call(obj, Source )
+}
+
+func ScrollBar_ClassName(obj uintptr) string {
+    ret, _, _ := scrollBar_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBar_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := scrollBar_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_ToString(obj uintptr) string {
+    ret, _, _ := scrollBar_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBar_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := scrollBar_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func ScrollBar_SetAlign(obj uintptr, value TAlign) {
+   scrollBar_SetAlign.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := scrollBar_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func ScrollBar_SetAnchors(obj uintptr, value TAnchors) {
+   scrollBar_SetAnchors.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := scrollBar_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ScrollBar_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   scrollBar_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetDoubleBuffered(obj uintptr, value bool) {
+   scrollBar_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetEnabled(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetEnabled(obj uintptr, value bool) {
+   scrollBar_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetKind(obj uintptr) TScrollBarKind {
+    ret, _, _ := scrollBar_GetKind.Call(obj)
+    return TScrollBarKind(ret)
+}
+
+func ScrollBar_SetKind(obj uintptr, value TScrollBarKind) {
+   scrollBar_SetKind.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetLargeChange(obj uintptr) TScrollBarInc {
+    ret, _, _ := scrollBar_GetLargeChange.Call(obj)
+    return TScrollBarInc(ret)
+}
+
+func ScrollBar_SetLargeChange(obj uintptr, value TScrollBarInc) {
+   scrollBar_SetLargeChange.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetMax(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetMax.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetMax(obj uintptr, value int32) {
+   scrollBar_SetMax.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetMin(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetMin.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetMin(obj uintptr, value int32) {
+   scrollBar_SetMin.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetPageSize(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetPageSize.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetPageSize(obj uintptr, value int32) {
+   scrollBar_SetPageSize.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetParentCtl3D(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetParentCtl3D.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetParentCtl3D(obj uintptr, value bool) {
+   scrollBar_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetParentDoubleBuffered(obj uintptr, value bool) {
+   scrollBar_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetParentShowHint(obj uintptr, value bool) {
+   scrollBar_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func ScrollBar_SetPopupMenu(obj uintptr, value uintptr) {
+   scrollBar_SetPopupMenu.Call(obj, value)
+}
+
+func ScrollBar_GetPosition(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetPosition.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetPosition(obj uintptr, value int32) {
+   scrollBar_SetPosition.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetShowHint(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetShowHint(obj uintptr, value bool) {
+   scrollBar_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetSmallChange(obj uintptr) TScrollBarInc {
+    ret, _, _ := scrollBar_GetSmallChange.Call(obj)
+    return TScrollBarInc(ret)
+}
+
+func ScrollBar_SetSmallChange(obj uintptr, value TScrollBarInc) {
+   scrollBar_SetSmallChange.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := scrollBar_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func ScrollBar_SetTabOrder(obj uintptr, value uint16) {
+   scrollBar_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetTabStop(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetTabStop(obj uintptr, value bool) {
+   scrollBar_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetVisible(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetVisible(obj uintptr, value bool) {
+   scrollBar_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := scrollBar_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ScrollBar_SetStyleElements(obj uintptr, value TStyleElements) {
+   scrollBar_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func ScrollBar_SetOnChange(obj uintptr, fn interface{}) {
+    scrollBar_SetOnChange.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnEnter(obj uintptr, fn interface{}) {
+    scrollBar_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnExit(obj uintptr, fn interface{}) {
+    scrollBar_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnKeyDown(obj uintptr, fn interface{}) {
+    scrollBar_SetOnKeyDown.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnKeyPress(obj uintptr, fn interface{}) {
+    scrollBar_SetOnKeyPress.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnKeyUp(obj uintptr, fn interface{}) {
+    scrollBar_SetOnKeyUp.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    scrollBar_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    scrollBar_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBar_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetBrush.Call(obj)
+    return ret
+}
+
+func ScrollBar_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetHandle(obj uintptr) HWND {
+    ret, _, _ := scrollBar_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func ScrollBar_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := scrollBar_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ScrollBar_SetParentWindow(obj uintptr, value HWND) {
+   scrollBar_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetAction(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetAction.Call(obj)
+    return ret
+}
+
+func ScrollBar_SetAction(obj uintptr, value uintptr) {
+   scrollBar_SetAction.Call(obj, value)
+}
+
+func ScrollBar_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    scrollBar_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ScrollBar_SetBoundsRect(obj uintptr, value TRect) {
+   scrollBar_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func ScrollBar_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetClientHeight(obj uintptr, value int32) {
+   scrollBar_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    scrollBar_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ScrollBar_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetClientWidth(obj uintptr, value int32) {
+   scrollBar_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetParent(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetParent.Call(obj)
+    return ret
+}
+
+func ScrollBar_SetParent(obj uintptr, value uintptr) {
+   scrollBar_SetParent.Call(obj, value)
+}
+
+func ScrollBar_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := scrollBar_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBar_SetAlignWithMargins(obj uintptr, value bool) {
+   scrollBar_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBar_GetLeft(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetLeft(obj uintptr, value int32) {
+   scrollBar_SetLeft.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetTop(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetTop(obj uintptr, value int32) {
+   scrollBar_SetTop.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetWidth(obj uintptr, value int32) {
+   scrollBar_SetWidth.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetHeight(obj uintptr, value int32) {
+   scrollBar_SetHeight.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := scrollBar_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func ScrollBar_SetCursor(obj uintptr, value TCursor) {
+   scrollBar_SetCursor.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetHint(obj uintptr) string {
+    ret, _, _ := scrollBar_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBar_SetHint(obj uintptr, value string) {
+   scrollBar_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func ScrollBar_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetMargins.Call(obj)
+    return ret
+}
+
+func ScrollBar_SetMargins(obj uintptr, value uintptr) {
+   scrollBar_SetMargins.Call(obj, value)
+}
+
+func ScrollBar_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ScrollBar_SetCustomHint(obj uintptr, value uintptr) {
+   scrollBar_SetCustomHint.Call(obj, value)
+}
+
+func ScrollBar_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := scrollBar_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBar_SetComponentIndex(obj uintptr, value int32) {
+   scrollBar_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := scrollBar_GetOwner.Call(obj)
+    return ret
+}
+
+func ScrollBar_GetName(obj uintptr) string {
+    ret, _, _ := scrollBar_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBar_SetName(obj uintptr, value string) {
+   scrollBar_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func ScrollBar_GetTag(obj uintptr) int {
+    ret, _, _ := scrollBar_GetTag.Call(obj)
+    return int(ret)
+}
+
+func ScrollBar_SetTag(obj uintptr, value int) {
+   scrollBar_SetTag.Call(obj, uintptr(value))
+}
+
+func ScrollBar_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := scrollBar_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func ScrollBar_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := scrollBar_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TCustomHint ---------------------------
+
+func CustomHint_Create(obj uintptr) uintptr {
+    ret, _, _ := customHint_Create.Call(obj)
+    return ret
+}
+
+func CustomHint_Free(obj uintptr) {
+    customHint_Free.Call(obj)
+}
+
+func CustomHint_ShowHint(obj uintptr)  {
+    customHint_ShowHint.Call(obj)
+}
+
+func CustomHint_HideHint(obj uintptr)  {
+    customHint_HideHint.Call(obj)
+}
+
+func CustomHint_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := customHint_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func CustomHint_GetNamePath(obj uintptr) string {
+    ret, _, _ := customHint_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_HasParent(obj uintptr) bool {
+    ret, _, _ := customHint_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CustomHint_Assign(obj uintptr, Source uintptr)  {
+    customHint_Assign.Call(obj, Source )
+}
+
+func CustomHint_ClassName(obj uintptr) string {
+    ret, _, _ := customHint_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := customHint_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func CustomHint_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := customHint_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func CustomHint_ToString(obj uintptr) string {
+    ret, _, _ := customHint_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_GetShowingHint(obj uintptr) bool {
+    ret, _, _ := customHint_GetShowingHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CustomHint_GetTitle(obj uintptr) string {
+    ret, _, _ := customHint_GetTitle.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_SetTitle(obj uintptr, value string) {
+   customHint_SetTitle.Call(obj, GoStrToDStr(value))
+}
+
+func CustomHint_GetDescription(obj uintptr) string {
+    ret, _, _ := customHint_GetDescription.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_SetDescription(obj uintptr, value string) {
+   customHint_SetDescription.Call(obj, GoStrToDStr(value))
+}
+
+func CustomHint_GetImageIndex(obj uintptr) int32 {
+    ret, _, _ := customHint_GetImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func CustomHint_SetImageIndex(obj uintptr, value int32) {
+   customHint_SetImageIndex.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetImages(obj uintptr) uintptr {
+    ret, _, _ := customHint_GetImages.Call(obj)
+    return ret
+}
+
+func CustomHint_SetImages(obj uintptr, value uintptr) {
+   customHint_SetImages.Call(obj, value)
+}
+
+func CustomHint_GetStyle(obj uintptr) TBalloonHintStyle {
+    ret, _, _ := customHint_GetStyle.Call(obj)
+    return TBalloonHintStyle(ret)
+}
+
+func CustomHint_SetStyle(obj uintptr, value TBalloonHintStyle) {
+   customHint_SetStyle.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetDelay(obj uintptr) uint32 {
+    ret, _, _ := customHint_GetDelay.Call(obj)
+    return uint32(ret)
+}
+
+func CustomHint_SetDelay(obj uintptr, value uint32) {
+   customHint_SetDelay.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetHideAfter(obj uintptr) int32 {
+    ret, _, _ := customHint_GetHideAfter.Call(obj)
+    return int32(ret)
+}
+
+func CustomHint_SetHideAfter(obj uintptr, value int32) {
+   customHint_SetHideAfter.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := customHint_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func CustomHint_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := customHint_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func CustomHint_SetComponentIndex(obj uintptr, value int32) {
+   customHint_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := customHint_GetOwner.Call(obj)
+    return ret
+}
+
+func CustomHint_GetName(obj uintptr) string {
+    ret, _, _ := customHint_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CustomHint_SetName(obj uintptr, value string) {
+   customHint_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func CustomHint_GetTag(obj uintptr) int {
+    ret, _, _ := customHint_GetTag.Call(obj)
+    return int(ret)
+}
+
+func CustomHint_SetTag(obj uintptr, value int) {
+   customHint_SetTag.Call(obj, uintptr(value))
+}
+
+func CustomHint_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := customHint_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TShape ---------------------------
+
+func Shape_Create(obj uintptr) uintptr {
+    ret, _, _ := shape_Create.Call(obj)
+    return ret
+}
+
+func Shape_Free(obj uintptr) {
+    shape_Free.Call(obj)
+}
+
+func Shape_BringToFront(obj uintptr)  {
+    shape_BringToFront.Call(obj)
+}
+
+func Shape_HasParent(obj uintptr) bool {
+    ret, _, _ := shape_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_Hide(obj uintptr)  {
+    shape_Hide.Call(obj)
+}
+
+func Shape_Invalidate(obj uintptr)  {
+    shape_Invalidate.Call(obj)
+}
+
+func Shape_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := shape_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func Shape_Refresh(obj uintptr)  {
+    shape_Refresh.Call(obj)
+}
+
+func Shape_Repaint(obj uintptr)  {
+    shape_Repaint.Call(obj)
+}
+
+func Shape_SendToBack(obj uintptr)  {
+    shape_SendToBack.Call(obj)
+}
+
+func Shape_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    shape_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func Shape_Show(obj uintptr)  {
+    shape_Show.Call(obj)
+}
+
+func Shape_Update(obj uintptr)  {
+    shape_Update.Call(obj)
+}
+
+func Shape_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := shape_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Shape_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := shape_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func Shape_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := shape_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func Shape_GetNamePath(obj uintptr) string {
+    ret, _, _ := shape_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Shape_Assign(obj uintptr, Source uintptr)  {
+    shape_Assign.Call(obj, Source )
+}
+
+func Shape_ClassName(obj uintptr) string {
+    ret, _, _ := shape_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Shape_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := shape_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func Shape_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := shape_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func Shape_ToString(obj uintptr) string {
+    ret, _, _ := shape_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Shape_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := shape_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func Shape_SetAlign(obj uintptr, value TAlign) {
+   shape_SetAlign.Call(obj, uintptr(value))
+}
+
+func Shape_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := shape_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func Shape_SetAnchors(obj uintptr, value TAnchors) {
+   shape_SetAnchors.Call(obj, uintptr(value))
+}
+
+func Shape_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := shape_GetBrush.Call(obj)
+    return ret
+}
+
+func Shape_SetBrush(obj uintptr, value uintptr) {
+   shape_SetBrush.Call(obj, value)
+}
+
+func Shape_GetEnabled(obj uintptr) bool {
+    ret, _, _ := shape_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_SetEnabled(obj uintptr, value bool) {
+   shape_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func Shape_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := shape_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_SetParentShowHint(obj uintptr, value bool) {
+   shape_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Shape_GetPen(obj uintptr) uintptr {
+    ret, _, _ := shape_GetPen.Call(obj)
+    return ret
+}
+
+func Shape_SetPen(obj uintptr, value uintptr) {
+   shape_SetPen.Call(obj, value)
+}
+
+func Shape_GetShape(obj uintptr) TShapeType {
+    ret, _, _ := shape_GetShape.Call(obj)
+    return TShapeType(ret)
+}
+
+func Shape_SetShape(obj uintptr, value TShapeType) {
+   shape_SetShape.Call(obj, uintptr(value))
+}
+
+func Shape_GetShowHint(obj uintptr) bool {
+    ret, _, _ := shape_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_SetShowHint(obj uintptr, value bool) {
+   shape_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Shape_GetVisible(obj uintptr) bool {
+    ret, _, _ := shape_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_SetVisible(obj uintptr, value bool) {
+   shape_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func Shape_SetOnMouseDown(obj uintptr, fn interface{}) {
+    shape_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func Shape_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    shape_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func Shape_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    shape_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func Shape_SetOnMouseMove(obj uintptr, fn interface{}) {
+    shape_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func Shape_SetOnMouseUp(obj uintptr, fn interface{}) {
+    shape_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func Shape_GetAction(obj uintptr) uintptr {
+    ret, _, _ := shape_GetAction.Call(obj)
+    return ret
+}
+
+func Shape_SetAction(obj uintptr, value uintptr) {
+   shape_SetAction.Call(obj, value)
+}
+
+func Shape_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := shape_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Shape_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   shape_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func Shape_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    shape_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Shape_SetBoundsRect(obj uintptr, value TRect) {
+   shape_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func Shape_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := shape_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetClientHeight(obj uintptr, value int32) {
+   shape_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func Shape_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    shape_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Shape_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := shape_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetClientWidth(obj uintptr, value int32) {
+   shape_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func Shape_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := shape_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func Shape_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := shape_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func Shape_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := shape_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func Shape_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := shape_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func Shape_GetParent(obj uintptr) uintptr {
+    ret, _, _ := shape_GetParent.Call(obj)
+    return ret
+}
+
+func Shape_SetParent(obj uintptr, value uintptr) {
+   shape_SetParent.Call(obj, value)
+}
+
+func Shape_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := shape_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Shape_SetStyleElements(obj uintptr, value TStyleElements) {
+   shape_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func Shape_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := shape_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Shape_SetAlignWithMargins(obj uintptr, value bool) {
+   shape_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func Shape_GetLeft(obj uintptr) int32 {
+    ret, _, _ := shape_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetLeft(obj uintptr, value int32) {
+   shape_SetLeft.Call(obj, uintptr(value))
+}
+
+func Shape_GetTop(obj uintptr) int32 {
+    ret, _, _ := shape_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetTop(obj uintptr, value int32) {
+   shape_SetTop.Call(obj, uintptr(value))
+}
+
+func Shape_GetWidth(obj uintptr) int32 {
+    ret, _, _ := shape_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetWidth(obj uintptr, value int32) {
+   shape_SetWidth.Call(obj, uintptr(value))
+}
+
+func Shape_GetHeight(obj uintptr) int32 {
+    ret, _, _ := shape_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetHeight(obj uintptr, value int32) {
+   shape_SetHeight.Call(obj, uintptr(value))
+}
+
+func Shape_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := shape_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func Shape_SetCursor(obj uintptr, value TCursor) {
+   shape_SetCursor.Call(obj, uintptr(value))
+}
+
+func Shape_GetHint(obj uintptr) string {
+    ret, _, _ := shape_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Shape_SetHint(obj uintptr, value string) {
+   shape_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func Shape_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := shape_GetMargins.Call(obj)
+    return ret
+}
+
+func Shape_SetMargins(obj uintptr, value uintptr) {
+   shape_SetMargins.Call(obj, value)
+}
+
+func Shape_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := shape_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Shape_SetCustomHint(obj uintptr, value uintptr) {
+   shape_SetCustomHint.Call(obj, value)
+}
+
+func Shape_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := shape_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func Shape_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := shape_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func Shape_SetComponentIndex(obj uintptr, value int32) {
+   shape_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func Shape_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := shape_GetOwner.Call(obj)
+    return ret
+}
+
+func Shape_GetName(obj uintptr) string {
+    ret, _, _ := shape_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Shape_SetName(obj uintptr, value string) {
+   shape_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func Shape_GetTag(obj uintptr) int {
+    ret, _, _ := shape_GetTag.Call(obj)
+    return int(ret)
+}
+
+func Shape_SetTag(obj uintptr, value int) {
+   shape_SetTag.Call(obj, uintptr(value))
+}
+
+func Shape_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := shape_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TBevel ---------------------------
+
+func Bevel_Create(obj uintptr) uintptr {
+    ret, _, _ := bevel_Create.Call(obj)
+    return ret
+}
+
+func Bevel_Free(obj uintptr) {
+    bevel_Free.Call(obj)
+}
+
+func Bevel_BringToFront(obj uintptr)  {
+    bevel_BringToFront.Call(obj)
+}
+
+func Bevel_HasParent(obj uintptr) bool {
+    ret, _, _ := bevel_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_Hide(obj uintptr)  {
+    bevel_Hide.Call(obj)
+}
+
+func Bevel_Invalidate(obj uintptr)  {
+    bevel_Invalidate.Call(obj)
+}
+
+func Bevel_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := bevel_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func Bevel_Refresh(obj uintptr)  {
+    bevel_Refresh.Call(obj)
+}
+
+func Bevel_Repaint(obj uintptr)  {
+    bevel_Repaint.Call(obj)
+}
+
+func Bevel_SendToBack(obj uintptr)  {
+    bevel_SendToBack.Call(obj)
+}
+
+func Bevel_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    bevel_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func Bevel_Show(obj uintptr)  {
+    bevel_Show.Call(obj)
+}
+
+func Bevel_Update(obj uintptr)  {
+    bevel_Update.Call(obj)
+}
+
+func Bevel_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := bevel_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Bevel_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := bevel_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := bevel_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func Bevel_GetNamePath(obj uintptr) string {
+    ret, _, _ := bevel_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Bevel_Assign(obj uintptr, Source uintptr)  {
+    bevel_Assign.Call(obj, Source )
+}
+
+func Bevel_ClassName(obj uintptr) string {
+    ret, _, _ := bevel_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Bevel_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := bevel_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := bevel_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_ToString(obj uintptr) string {
+    ret, _, _ := bevel_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Bevel_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := bevel_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func Bevel_SetAlign(obj uintptr, value TAlign) {
+   bevel_SetAlign.Call(obj, uintptr(value))
+}
+
+func Bevel_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := bevel_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func Bevel_SetAnchors(obj uintptr, value TAnchors) {
+   bevel_SetAnchors.Call(obj, uintptr(value))
+}
+
+func Bevel_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := bevel_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_SetParentShowHint(obj uintptr, value bool) {
+   bevel_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Bevel_GetShape(obj uintptr) TBevelShape {
+    ret, _, _ := bevel_GetShape.Call(obj)
+    return TBevelShape(ret)
+}
+
+func Bevel_SetShape(obj uintptr, value TBevelShape) {
+   bevel_SetShape.Call(obj, uintptr(value))
+}
+
+func Bevel_GetShowHint(obj uintptr) bool {
+    ret, _, _ := bevel_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_SetShowHint(obj uintptr, value bool) {
+   bevel_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Bevel_GetStyle(obj uintptr) TBevelStyle {
+    ret, _, _ := bevel_GetStyle.Call(obj)
+    return TBevelStyle(ret)
+}
+
+func Bevel_SetStyle(obj uintptr, value TBevelStyle) {
+   bevel_SetStyle.Call(obj, uintptr(value))
+}
+
+func Bevel_GetVisible(obj uintptr) bool {
+    ret, _, _ := bevel_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_SetVisible(obj uintptr, value bool) {
+   bevel_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func Bevel_GetEnabled(obj uintptr) bool {
+    ret, _, _ := bevel_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_SetEnabled(obj uintptr, value bool) {
+   bevel_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func Bevel_GetAction(obj uintptr) uintptr {
+    ret, _, _ := bevel_GetAction.Call(obj)
+    return ret
+}
+
+func Bevel_SetAction(obj uintptr, value uintptr) {
+   bevel_SetAction.Call(obj, value)
+}
+
+func Bevel_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := bevel_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Bevel_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   bevel_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func Bevel_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    bevel_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Bevel_SetBoundsRect(obj uintptr, value TRect) {
+   bevel_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func Bevel_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := bevel_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetClientHeight(obj uintptr, value int32) {
+   bevel_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func Bevel_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    bevel_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Bevel_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := bevel_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetClientWidth(obj uintptr, value int32) {
+   bevel_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func Bevel_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := bevel_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := bevel_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := bevel_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := bevel_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_GetParent(obj uintptr) uintptr {
+    ret, _, _ := bevel_GetParent.Call(obj)
+    return ret
+}
+
+func Bevel_SetParent(obj uintptr, value uintptr) {
+   bevel_SetParent.Call(obj, value)
+}
+
+func Bevel_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := bevel_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Bevel_SetStyleElements(obj uintptr, value TStyleElements) {
+   bevel_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func Bevel_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := bevel_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Bevel_SetAlignWithMargins(obj uintptr, value bool) {
+   bevel_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func Bevel_GetLeft(obj uintptr) int32 {
+    ret, _, _ := bevel_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetLeft(obj uintptr, value int32) {
+   bevel_SetLeft.Call(obj, uintptr(value))
+}
+
+func Bevel_GetTop(obj uintptr) int32 {
+    ret, _, _ := bevel_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetTop(obj uintptr, value int32) {
+   bevel_SetTop.Call(obj, uintptr(value))
+}
+
+func Bevel_GetWidth(obj uintptr) int32 {
+    ret, _, _ := bevel_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetWidth(obj uintptr, value int32) {
+   bevel_SetWidth.Call(obj, uintptr(value))
+}
+
+func Bevel_GetHeight(obj uintptr) int32 {
+    ret, _, _ := bevel_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetHeight(obj uintptr, value int32) {
+   bevel_SetHeight.Call(obj, uintptr(value))
+}
+
+func Bevel_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := bevel_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func Bevel_SetCursor(obj uintptr, value TCursor) {
+   bevel_SetCursor.Call(obj, uintptr(value))
+}
+
+func Bevel_GetHint(obj uintptr) string {
+    ret, _, _ := bevel_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Bevel_SetHint(obj uintptr, value string) {
+   bevel_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func Bevel_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := bevel_GetMargins.Call(obj)
+    return ret
+}
+
+func Bevel_SetMargins(obj uintptr, value uintptr) {
+   bevel_SetMargins.Call(obj, value)
+}
+
+func Bevel_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := bevel_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Bevel_SetCustomHint(obj uintptr, value uintptr) {
+   bevel_SetCustomHint.Call(obj, value)
+}
+
+func Bevel_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := bevel_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := bevel_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func Bevel_SetComponentIndex(obj uintptr, value int32) {
+   bevel_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func Bevel_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := bevel_GetOwner.Call(obj)
+    return ret
+}
+
+func Bevel_GetName(obj uintptr) string {
+    ret, _, _ := bevel_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Bevel_SetName(obj uintptr, value string) {
+   bevel_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func Bevel_GetTag(obj uintptr) int {
+    ret, _, _ := bevel_GetTag.Call(obj)
+    return int(ret)
+}
+
+func Bevel_SetTag(obj uintptr, value int) {
+   bevel_SetTag.Call(obj, uintptr(value))
+}
+
+func Bevel_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := bevel_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TScrollBox ---------------------------
+
+func ScrollBox_Create(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_Create.Call(obj)
+    return ret
+}
+
+func ScrollBox_Free(obj uintptr) {
+    scrollBox_Free.Call(obj)
+}
+
+func ScrollBox_CanFocus(obj uintptr) bool {
+    ret, _, _ := scrollBox_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_FlipChildren(obj uintptr, AllLevels bool)  {
+    scrollBox_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func ScrollBox_Focused(obj uintptr) bool {
+    ret, _, _ := scrollBox_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := scrollBox_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_Invalidate(obj uintptr)  {
+    scrollBox_Invalidate.Call(obj)
+}
+
+func ScrollBox_Realign(obj uintptr)  {
+    scrollBox_Realign.Call(obj)
+}
+
+func ScrollBox_Repaint(obj uintptr)  {
+    scrollBox_Repaint.Call(obj)
+}
+
+func ScrollBox_ScaleBy(obj uintptr, M int32, D int32)  {
+    scrollBox_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func ScrollBox_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    scrollBox_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func ScrollBox_SetFocus(obj uintptr)  {
+    scrollBox_SetFocus.Call(obj)
+}
+
+func ScrollBox_Update(obj uintptr)  {
+    scrollBox_Update.Call(obj)
+}
+
+func ScrollBox_BringToFront(obj uintptr)  {
+    scrollBox_BringToFront.Call(obj)
+}
+
+func ScrollBox_HasParent(obj uintptr) bool {
+    ret, _, _ := scrollBox_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_Hide(obj uintptr)  {
+    scrollBox_Hide.Call(obj)
+}
+
+func ScrollBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := scrollBox_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func ScrollBox_Refresh(obj uintptr)  {
+    scrollBox_Refresh.Call(obj)
+}
+
+func ScrollBox_SendToBack(obj uintptr)  {
+    scrollBox_SendToBack.Call(obj)
+}
+
+func ScrollBox_Show(obj uintptr)  {
+    scrollBox_Show.Call(obj)
+}
+
+func ScrollBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := scrollBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ScrollBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := scrollBox_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func ScrollBox_GetNamePath(obj uintptr) string {
+    ret, _, _ := scrollBox_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBox_Assign(obj uintptr, Source uintptr)  {
+    scrollBox_Assign.Call(obj, Source )
+}
+
+func ScrollBox_ClassName(obj uintptr) string {
+    ret, _, _ := scrollBox_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBox_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := scrollBox_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_ToString(obj uintptr) string {
+    ret, _, _ := scrollBox_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBox_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := scrollBox_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func ScrollBox_SetAlign(obj uintptr, value TAlign) {
+   scrollBox_SetAlign.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := scrollBox_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func ScrollBox_SetAnchors(obj uintptr, value TAnchors) {
+   scrollBox_SetAnchors.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetAutoSize(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetAutoSize.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetAutoSize(obj uintptr, value bool) {
+   scrollBox_SetAutoSize.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := scrollBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func ScrollBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   scrollBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := scrollBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ScrollBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   scrollBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := scrollBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func ScrollBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   scrollBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := scrollBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func ScrollBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   scrollBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := scrollBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ScrollBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   scrollBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetBorderStyle(obj uintptr) TBorderStyle {
+    ret, _, _ := scrollBox_GetBorderStyle.Call(obj)
+    return TBorderStyle(ret)
+}
+
+func ScrollBox_SetBorderStyle(obj uintptr, value TBorderStyle) {
+   scrollBox_SetBorderStyle.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetDoubleBuffered(obj uintptr, value bool) {
+   scrollBox_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetEnabled(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetEnabled(obj uintptr, value bool) {
+   scrollBox_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetColor(obj uintptr) TColor {
+    ret, _, _ := scrollBox_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func ScrollBox_SetColor(obj uintptr, value TColor) {
+   scrollBox_SetColor.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetFont(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetFont.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetFont(obj uintptr, value uintptr) {
+   scrollBox_SetFont.Call(obj, value)
+}
+
+func ScrollBox_GetParentBackground(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentBackground.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentBackground(obj uintptr, value bool) {
+   scrollBox_SetParentBackground.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetParentColor(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentColor.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentColor(obj uintptr, value bool) {
+   scrollBox_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetParentCtl3D(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentCtl3D.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentCtl3D(obj uintptr, value bool) {
+   scrollBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   scrollBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetParentFont(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentFont(obj uintptr, value bool) {
+   scrollBox_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetParentShowHint(obj uintptr, value bool) {
+   scrollBox_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetPopupMenu(obj uintptr, value uintptr) {
+   scrollBox_SetPopupMenu.Call(obj, value)
+}
+
+func ScrollBox_GetShowHint(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetShowHint(obj uintptr, value bool) {
+   scrollBox_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := scrollBox_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func ScrollBox_SetTabOrder(obj uintptr, value uint16) {
+   scrollBox_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetTabStop(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetTabStop(obj uintptr, value bool) {
+   scrollBox_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetVisible(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetVisible(obj uintptr, value bool) {
+   scrollBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := scrollBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ScrollBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   scrollBox_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func ScrollBox_SetOnClick(obj uintptr, fn interface{}) {
+    scrollBox_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnDblClick(obj uintptr, fn interface{}) {
+    scrollBox_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnEnter(obj uintptr, fn interface{}) {
+    scrollBox_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnExit(obj uintptr, fn interface{}) {
+    scrollBox_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseDown(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseMove(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseUp(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnMouseWheel(obj uintptr, fn interface{}) {
+    scrollBox_SetOnMouseWheel.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_SetOnResize(obj uintptr, fn interface{}) {
+    scrollBox_SetOnResize.Call(obj, addEventToMap(fn))
+}
+
+func ScrollBox_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetBrush.Call(obj)
+    return ret
+}
+
+func ScrollBox_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetHandle(obj uintptr) HWND {
+    ret, _, _ := scrollBox_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func ScrollBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := scrollBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func ScrollBox_SetParentWindow(obj uintptr, value HWND) {
+   scrollBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetAction(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetAction.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetAction(obj uintptr, value uintptr) {
+   scrollBox_SetAction.Call(obj, value)
+}
+
+func ScrollBox_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    scrollBox_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ScrollBox_SetBoundsRect(obj uintptr, value TRect) {
+   scrollBox_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func ScrollBox_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetClientHeight(obj uintptr, value int32) {
+   scrollBox_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    scrollBox_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ScrollBox_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetClientWidth(obj uintptr, value int32) {
+   scrollBox_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetParent(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetParent.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetParent(obj uintptr, value uintptr) {
+   scrollBox_SetParent.Call(obj, value)
+}
+
+func ScrollBox_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := scrollBox_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ScrollBox_SetAlignWithMargins(obj uintptr, value bool) {
+   scrollBox_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func ScrollBox_GetLeft(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetLeft(obj uintptr, value int32) {
+   scrollBox_SetLeft.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetTop(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetTop(obj uintptr, value int32) {
+   scrollBox_SetTop.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetWidth(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetWidth(obj uintptr, value int32) {
+   scrollBox_SetWidth.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetHeight(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetHeight(obj uintptr, value int32) {
+   scrollBox_SetHeight.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := scrollBox_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func ScrollBox_SetCursor(obj uintptr, value TCursor) {
+   scrollBox_SetCursor.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetHint(obj uintptr) string {
+    ret, _, _ := scrollBox_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBox_SetHint(obj uintptr, value string) {
+   scrollBox_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func ScrollBox_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetMargins.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetMargins(obj uintptr, value uintptr) {
+   scrollBox_SetMargins.Call(obj, value)
+}
+
+func ScrollBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ScrollBox_SetCustomHint(obj uintptr, value uintptr) {
+   scrollBox_SetCustomHint.Call(obj, value)
+}
+
+func ScrollBox_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := scrollBox_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func ScrollBox_SetComponentIndex(obj uintptr, value int32) {
+   scrollBox_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := scrollBox_GetOwner.Call(obj)
+    return ret
+}
+
+func ScrollBox_GetName(obj uintptr) string {
+    ret, _, _ := scrollBox_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ScrollBox_SetName(obj uintptr, value string) {
+   scrollBox_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func ScrollBox_GetTag(obj uintptr) int {
+    ret, _, _ := scrollBox_GetTag.Call(obj)
+    return int(ret)
+}
+
+func ScrollBox_SetTag(obj uintptr, value int) {
+   scrollBox_SetTag.Call(obj, uintptr(value))
+}
+
+func ScrollBox_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := scrollBox_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func ScrollBox_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := scrollBox_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TCheckListBox ---------------------------
+
+func CheckListBox_Create(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_Create.Call(obj)
+    return ret
+}
+
+func CheckListBox_Free(obj uintptr) {
+    checkListBox_Free.Call(obj)
+}
+
+func CheckListBox_CheckAll(obj uintptr, AState TCheckBoxState, AllowGrayed bool, AllowDisabled bool)  {
+    checkListBox_CheckAll.Call(obj, uintptr(AState) , GoBoolToDBool(AllowGrayed) , GoBoolToDBool(AllowDisabled) )
+}
+
+func CheckListBox_AddItem(obj uintptr, Item string, AObject uintptr)  {
+    checkListBox_AddItem.Call(obj, GoStrToDStr(Item) , AObject )
+}
+
+func CheckListBox_Clear(obj uintptr)  {
+    checkListBox_Clear.Call(obj)
+}
+
+func CheckListBox_ClearSelection(obj uintptr)  {
+    checkListBox_ClearSelection.Call(obj)
+}
+
+func CheckListBox_DeleteSelected(obj uintptr)  {
+    checkListBox_DeleteSelected.Call(obj)
+}
+
+func CheckListBox_SelectAll(obj uintptr)  {
+    checkListBox_SelectAll.Call(obj)
+}
+
+func CheckListBox_CanFocus(obj uintptr) bool {
+    ret, _, _ := checkListBox_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_FlipChildren(obj uintptr, AllLevels bool)  {
+    checkListBox_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func CheckListBox_Focused(obj uintptr) bool {
+    ret, _, _ := checkListBox_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := checkListBox_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_Invalidate(obj uintptr)  {
+    checkListBox_Invalidate.Call(obj)
+}
+
+func CheckListBox_Realign(obj uintptr)  {
+    checkListBox_Realign.Call(obj)
+}
+
+func CheckListBox_Repaint(obj uintptr)  {
+    checkListBox_Repaint.Call(obj)
+}
+
+func CheckListBox_ScaleBy(obj uintptr, M int32, D int32)  {
+    checkListBox_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func CheckListBox_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    checkListBox_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func CheckListBox_SetFocus(obj uintptr)  {
+    checkListBox_SetFocus.Call(obj)
+}
+
+func CheckListBox_Update(obj uintptr)  {
+    checkListBox_Update.Call(obj)
+}
+
+func CheckListBox_BringToFront(obj uintptr)  {
+    checkListBox_BringToFront.Call(obj)
+}
+
+func CheckListBox_HasParent(obj uintptr) bool {
+    ret, _, _ := checkListBox_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_Hide(obj uintptr)  {
+    checkListBox_Hide.Call(obj)
+}
+
+func CheckListBox_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := checkListBox_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func CheckListBox_Refresh(obj uintptr)  {
+    checkListBox_Refresh.Call(obj)
+}
+
+func CheckListBox_SendToBack(obj uintptr)  {
+    checkListBox_SendToBack.Call(obj)
+}
+
+func CheckListBox_Show(obj uintptr)  {
+    checkListBox_Show.Call(obj)
+}
+
+func CheckListBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := checkListBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func CheckListBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := checkListBox_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func CheckListBox_GetNamePath(obj uintptr) string {
+    ret, _, _ := checkListBox_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CheckListBox_Assign(obj uintptr, Source uintptr)  {
+    checkListBox_Assign.Call(obj, Source )
+}
+
+func CheckListBox_ClassName(obj uintptr) string {
+    ret, _, _ := checkListBox_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CheckListBox_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := checkListBox_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_ToString(obj uintptr) string {
+    ret, _, _ := checkListBox_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CheckListBox_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := checkListBox_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func CheckListBox_SetAlign(obj uintptr, value TAlign) {
+   checkListBox_SetAlign.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetAllowGrayed(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetAllowGrayed.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetAllowGrayed(obj uintptr, value bool) {
+   checkListBox_SetAllowGrayed.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := checkListBox_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func CheckListBox_SetAnchors(obj uintptr, value TAnchors) {
+   checkListBox_SetAnchors.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetAutoComplete(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetAutoComplete.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetAutoComplete(obj uintptr, value bool) {
+   checkListBox_SetAutoComplete.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := checkListBox_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func CheckListBox_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   checkListBox_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := checkListBox_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func CheckListBox_SetBevelInner(obj uintptr, value TBevelCut) {
+   checkListBox_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := checkListBox_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func CheckListBox_SetBevelOuter(obj uintptr, value TBevelCut) {
+   checkListBox_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := checkListBox_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func CheckListBox_SetBevelKind(obj uintptr, value TBevelKind) {
+   checkListBox_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := checkListBox_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func CheckListBox_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   checkListBox_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBorderStyle(obj uintptr) TBorderStyle {
+    ret, _, _ := checkListBox_GetBorderStyle.Call(obj)
+    return TBorderStyle(ret)
+}
+
+func CheckListBox_SetBorderStyle(obj uintptr, value TBorderStyle) {
+   checkListBox_SetBorderStyle.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetColor(obj uintptr) TColor {
+    ret, _, _ := checkListBox_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func CheckListBox_SetColor(obj uintptr, value TColor) {
+   checkListBox_SetColor.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetColumns(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetColumns.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetColumns(obj uintptr, value int32) {
+   checkListBox_SetColumns.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetDoubleBuffered(obj uintptr, value bool) {
+   checkListBox_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetEnabled(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetEnabled(obj uintptr, value bool) {
+   checkListBox_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetFlat(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetFlat.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetFlat(obj uintptr, value bool) {
+   checkListBox_SetFlat.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetFont(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetFont.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetFont(obj uintptr, value uintptr) {
+   checkListBox_SetFont.Call(obj, value)
+}
+
+func CheckListBox_GetHeaderColor(obj uintptr) TColor {
+    ret, _, _ := checkListBox_GetHeaderColor.Call(obj)
+    return TColor(ret)
+}
+
+func CheckListBox_SetHeaderColor(obj uintptr, value TColor) {
+   checkListBox_SetHeaderColor.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetHeaderBackgroundColor(obj uintptr) TColor {
+    ret, _, _ := checkListBox_GetHeaderBackgroundColor.Call(obj)
+    return TColor(ret)
+}
+
+func CheckListBox_SetHeaderBackgroundColor(obj uintptr, value TColor) {
+   checkListBox_SetHeaderBackgroundColor.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetItemHeight(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetItemHeight.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetItemHeight(obj uintptr, value int32) {
+   checkListBox_SetItemHeight.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetItems(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetItems.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetItems(obj uintptr, value uintptr) {
+   checkListBox_SetItems.Call(obj, value)
+}
+
+func CheckListBox_GetParentColor(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetParentColor.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetParentColor(obj uintptr, value bool) {
+   checkListBox_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetParentCtl3D(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetParentCtl3D.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetParentCtl3D(obj uintptr, value bool) {
+   checkListBox_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetParentDoubleBuffered(obj uintptr, value bool) {
+   checkListBox_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetParentFont(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetParentFont(obj uintptr, value bool) {
+   checkListBox_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetParentShowHint(obj uintptr, value bool) {
+   checkListBox_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetPopupMenu(obj uintptr, value uintptr) {
+   checkListBox_SetPopupMenu.Call(obj, value)
+}
+
+func CheckListBox_GetShowHint(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetShowHint(obj uintptr, value bool) {
+   checkListBox_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetSorted(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetSorted.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetSorted(obj uintptr, value bool) {
+   checkListBox_SetSorted.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetStyle(obj uintptr) TListBoxStyle {
+    ret, _, _ := checkListBox_GetStyle.Call(obj)
+    return TListBoxStyle(ret)
+}
+
+func CheckListBox_SetStyle(obj uintptr, value TListBoxStyle) {
+   checkListBox_SetStyle.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := checkListBox_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func CheckListBox_SetTabOrder(obj uintptr, value uint16) {
+   checkListBox_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetTabStop(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetTabStop(obj uintptr, value bool) {
+   checkListBox_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetTabWidth(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetTabWidth.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetTabWidth(obj uintptr, value int32) {
+   checkListBox_SetTabWidth.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetVisible(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetVisible(obj uintptr, value bool) {
+   checkListBox_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := checkListBox_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func CheckListBox_SetStyleElements(obj uintptr, value TStyleElements) {
+   checkListBox_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func CheckListBox_SetOnClick(obj uintptr, fn interface{}) {
+    checkListBox_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnDblClick(obj uintptr, fn interface{}) {
+    checkListBox_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnEnter(obj uintptr, fn interface{}) {
+    checkListBox_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnExit(obj uintptr, fn interface{}) {
+    checkListBox_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnKeyDown(obj uintptr, fn interface{}) {
+    checkListBox_SetOnKeyDown.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnKeyPress(obj uintptr, fn interface{}) {
+    checkListBox_SetOnKeyPress.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnKeyUp(obj uintptr, fn interface{}) {
+    checkListBox_SetOnKeyUp.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnMouseDown(obj uintptr, fn interface{}) {
+    checkListBox_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    checkListBox_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    checkListBox_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnMouseMove(obj uintptr, fn interface{}) {
+    checkListBox_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_SetOnMouseUp(obj uintptr, fn interface{}) {
+    checkListBox_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func CheckListBox_GetAutoCompleteDelay(obj uintptr) uint32 {
+    ret, _, _ := checkListBox_GetAutoCompleteDelay.Call(obj)
+    return uint32(ret)
+}
+
+func CheckListBox_SetAutoCompleteDelay(obj uintptr, value uint32) {
+   checkListBox_SetAutoCompleteDelay.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetCanvas(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetCanvas.Call(obj)
+    return ret
+}
+
+func CheckListBox_GetMultiSelect(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetMultiSelect.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetMultiSelect(obj uintptr, value bool) {
+   checkListBox_SetMultiSelect.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetSelCount(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetSelCount.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetItemIndex(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetItemIndex.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetItemIndex(obj uintptr, value int32) {
+   checkListBox_SetItemIndex.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetBrush.Call(obj)
+    return ret
+}
+
+func CheckListBox_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetHandle(obj uintptr) HWND {
+    ret, _, _ := checkListBox_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func CheckListBox_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := checkListBox_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func CheckListBox_SetParentWindow(obj uintptr, value HWND) {
+   checkListBox_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetAction(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetAction.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetAction(obj uintptr, value uintptr) {
+   checkListBox_SetAction.Call(obj, value)
+}
+
+func CheckListBox_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    checkListBox_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func CheckListBox_SetBoundsRect(obj uintptr, value TRect) {
+   checkListBox_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func CheckListBox_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetClientHeight(obj uintptr, value int32) {
+   checkListBox_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    checkListBox_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func CheckListBox_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetClientWidth(obj uintptr, value int32) {
+   checkListBox_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetParent(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetParent.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetParent(obj uintptr, value uintptr) {
+   checkListBox_SetParent.Call(obj, value)
+}
+
+func CheckListBox_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := checkListBox_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetAlignWithMargins(obj uintptr, value bool) {
+   checkListBox_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func CheckListBox_GetLeft(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetLeft(obj uintptr, value int32) {
+   checkListBox_SetLeft.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetTop(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetTop(obj uintptr, value int32) {
+   checkListBox_SetTop.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetWidth(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetWidth(obj uintptr, value int32) {
+   checkListBox_SetWidth.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetHeight(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetHeight(obj uintptr, value int32) {
+   checkListBox_SetHeight.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := checkListBox_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func CheckListBox_SetCursor(obj uintptr, value TCursor) {
+   checkListBox_SetCursor.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetHint(obj uintptr) string {
+    ret, _, _ := checkListBox_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CheckListBox_SetHint(obj uintptr, value string) {
+   checkListBox_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func CheckListBox_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetMargins.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetMargins(obj uintptr, value uintptr) {
+   checkListBox_SetMargins.Call(obj, value)
+}
+
+func CheckListBox_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetCustomHint.Call(obj)
+    return ret
+}
+
+func CheckListBox_SetCustomHint(obj uintptr, value uintptr) {
+   checkListBox_SetCustomHint.Call(obj, value)
+}
+
+func CheckListBox_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetComponentIndex(obj uintptr, value int32) {
+   checkListBox_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := checkListBox_GetOwner.Call(obj)
+    return ret
+}
+
+func CheckListBox_GetName(obj uintptr) string {
+    ret, _, _ := checkListBox_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func CheckListBox_SetName(obj uintptr, value string) {
+   checkListBox_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func CheckListBox_GetTag(obj uintptr) int {
+    ret, _, _ := checkListBox_GetTag.Call(obj)
+    return int(ret)
+}
+
+func CheckListBox_SetTag(obj uintptr, value int) {
+   checkListBox_SetTag.Call(obj, uintptr(value))
+}
+
+func CheckListBox_GetChecked(obj uintptr, Index int32) bool {
+    ret, _, _ := checkListBox_GetChecked.Call(obj, uintptr(Index))
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetChecked(obj uintptr, Index int32, value bool) {
+   checkListBox_SetChecked.Call(obj, uintptr(Index), GoBoolToDBool(value))
+}
+
+func CheckListBox_GetItemEnabled(obj uintptr, Index int32) bool {
+    ret, _, _ := checkListBox_GetItemEnabled.Call(obj, uintptr(Index))
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetItemEnabled(obj uintptr, Index int32, value bool) {
+   checkListBox_SetItemEnabled.Call(obj, uintptr(Index), GoBoolToDBool(value))
+}
+
+func CheckListBox_GetState(obj uintptr, Index int32) TCheckBoxState {
+    ret, _, _ := checkListBox_GetState.Call(obj, uintptr(Index))
+    return TCheckBoxState(ret)
+}
+
+func CheckListBox_SetState(obj uintptr, Index int32, value TCheckBoxState) {
+   checkListBox_SetState.Call(obj, uintptr(Index), uintptr(value))
+}
+
+func CheckListBox_GetHeader(obj uintptr, Index int32) bool {
+    ret, _, _ := checkListBox_GetHeader.Call(obj, uintptr(Index))
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetHeader(obj uintptr, Index int32, value bool) {
+   checkListBox_SetHeader.Call(obj, uintptr(Index), GoBoolToDBool(value))
+}
+
+func CheckListBox_GetSelected(obj uintptr, Index int32) bool {
+    ret, _, _ := checkListBox_GetSelected.Call(obj, uintptr(Index))
+    return DBoolToGoBool(ret)
+}
+
+func CheckListBox_SetSelected(obj uintptr, Index int32, value bool) {
+   checkListBox_SetSelected.Call(obj, uintptr(Index), GoBoolToDBool(value))
+}
+
+func CheckListBox_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := checkListBox_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func CheckListBox_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := checkListBox_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TGauge ---------------------------
+
+func Gauge_Create(obj uintptr) uintptr {
+    ret, _, _ := gauge_Create.Call(obj)
+    return ret
+}
+
+func Gauge_Free(obj uintptr) {
+    gauge_Free.Call(obj)
+}
+
+func Gauge_AddProgress(obj uintptr, Value int32)  {
+    gauge_AddProgress.Call(obj, uintptr(Value) )
+}
+
+func Gauge_BringToFront(obj uintptr)  {
+    gauge_BringToFront.Call(obj)
+}
+
+func Gauge_HasParent(obj uintptr) bool {
+    ret, _, _ := gauge_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_Hide(obj uintptr)  {
+    gauge_Hide.Call(obj)
+}
+
+func Gauge_Invalidate(obj uintptr)  {
+    gauge_Invalidate.Call(obj)
+}
+
+func Gauge_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := gauge_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func Gauge_Refresh(obj uintptr)  {
+    gauge_Refresh.Call(obj)
+}
+
+func Gauge_Repaint(obj uintptr)  {
+    gauge_Repaint.Call(obj)
+}
+
+func Gauge_SendToBack(obj uintptr)  {
+    gauge_SendToBack.Call(obj)
+}
+
+func Gauge_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    gauge_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func Gauge_Show(obj uintptr)  {
+    gauge_Show.Call(obj)
+}
+
+func Gauge_Update(obj uintptr)  {
+    gauge_Update.Call(obj)
+}
+
+func Gauge_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := gauge_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Gauge_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := gauge_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := gauge_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func Gauge_GetNamePath(obj uintptr) string {
+    ret, _, _ := gauge_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Gauge_Assign(obj uintptr, Source uintptr)  {
+    gauge_Assign.Call(obj, Source )
+}
+
+func Gauge_ClassName(obj uintptr) string {
+    ret, _, _ := gauge_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Gauge_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := gauge_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := gauge_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_ToString(obj uintptr) string {
+    ret, _, _ := gauge_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Gauge_GetPercentDone(obj uintptr) int32 {
+    ret, _, _ := gauge_GetPercentDone.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := gauge_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func Gauge_SetAlign(obj uintptr, value TAlign) {
+   gauge_SetAlign.Call(obj, uintptr(value))
+}
+
+func Gauge_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := gauge_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func Gauge_SetAnchors(obj uintptr, value TAnchors) {
+   gauge_SetAnchors.Call(obj, uintptr(value))
+}
+
+func Gauge_GetBackColor(obj uintptr) TColor {
+    ret, _, _ := gauge_GetBackColor.Call(obj)
+    return TColor(ret)
+}
+
+func Gauge_SetBackColor(obj uintptr, value TColor) {
+   gauge_SetBackColor.Call(obj, uintptr(value))
+}
+
+func Gauge_GetBorderStyle(obj uintptr) TBorderStyle {
+    ret, _, _ := gauge_GetBorderStyle.Call(obj)
+    return TBorderStyle(ret)
+}
+
+func Gauge_SetBorderStyle(obj uintptr, value TBorderStyle) {
+   gauge_SetBorderStyle.Call(obj, uintptr(value))
+}
+
+func Gauge_GetColor(obj uintptr) TColor {
+    ret, _, _ := gauge_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func Gauge_SetColor(obj uintptr, value TColor) {
+   gauge_SetColor.Call(obj, uintptr(value))
+}
+
+func Gauge_GetEnabled(obj uintptr) bool {
+    ret, _, _ := gauge_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetEnabled(obj uintptr, value bool) {
+   gauge_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetForeColor(obj uintptr) TColor {
+    ret, _, _ := gauge_GetForeColor.Call(obj)
+    return TColor(ret)
+}
+
+func Gauge_SetForeColor(obj uintptr, value TColor) {
+   gauge_SetForeColor.Call(obj, uintptr(value))
+}
+
+func Gauge_GetFont(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetFont.Call(obj)
+    return ret
+}
+
+func Gauge_SetFont(obj uintptr, value uintptr) {
+   gauge_SetFont.Call(obj, value)
+}
+
+func Gauge_GetKind(obj uintptr) TGaugeKind {
+    ret, _, _ := gauge_GetKind.Call(obj)
+    return TGaugeKind(ret)
+}
+
+func Gauge_SetKind(obj uintptr, value TGaugeKind) {
+   gauge_SetKind.Call(obj, uintptr(value))
+}
+
+func Gauge_GetMinValue(obj uintptr) int32 {
+    ret, _, _ := gauge_GetMinValue.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetMinValue(obj uintptr, value int32) {
+   gauge_SetMinValue.Call(obj, uintptr(value))
+}
+
+func Gauge_GetMaxValue(obj uintptr) int32 {
+    ret, _, _ := gauge_GetMaxValue.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetMaxValue(obj uintptr, value int32) {
+   gauge_SetMaxValue.Call(obj, uintptr(value))
+}
+
+func Gauge_GetParentColor(obj uintptr) bool {
+    ret, _, _ := gauge_GetParentColor.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetParentColor(obj uintptr, value bool) {
+   gauge_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetParentFont(obj uintptr) bool {
+    ret, _, _ := gauge_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetParentFont(obj uintptr, value bool) {
+   gauge_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := gauge_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetParentShowHint(obj uintptr, value bool) {
+   gauge_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func Gauge_SetPopupMenu(obj uintptr, value uintptr) {
+   gauge_SetPopupMenu.Call(obj, value)
+}
+
+func Gauge_GetProgress(obj uintptr) int32 {
+    ret, _, _ := gauge_GetProgress.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetProgress(obj uintptr, value int32) {
+   gauge_SetProgress.Call(obj, uintptr(value))
+}
+
+func Gauge_GetShowHint(obj uintptr) bool {
+    ret, _, _ := gauge_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetShowHint(obj uintptr, value bool) {
+   gauge_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetShowText(obj uintptr) bool {
+    ret, _, _ := gauge_GetShowText.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetShowText(obj uintptr, value bool) {
+   gauge_SetShowText.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetVisible(obj uintptr) bool {
+    ret, _, _ := gauge_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetVisible(obj uintptr, value bool) {
+   gauge_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetAction(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetAction.Call(obj)
+    return ret
+}
+
+func Gauge_SetAction(obj uintptr, value uintptr) {
+   gauge_SetAction.Call(obj, value)
+}
+
+func Gauge_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := gauge_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func Gauge_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   gauge_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func Gauge_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    gauge_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Gauge_SetBoundsRect(obj uintptr, value TRect) {
+   gauge_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func Gauge_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := gauge_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetClientHeight(obj uintptr, value int32) {
+   gauge_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func Gauge_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    gauge_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func Gauge_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := gauge_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetClientWidth(obj uintptr, value int32) {
+   gauge_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func Gauge_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := gauge_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := gauge_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := gauge_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := gauge_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetParent(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetParent.Call(obj)
+    return ret
+}
+
+func Gauge_SetParent(obj uintptr, value uintptr) {
+   gauge_SetParent.Call(obj, value)
+}
+
+func Gauge_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := gauge_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func Gauge_SetStyleElements(obj uintptr, value TStyleElements) {
+   gauge_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func Gauge_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := gauge_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func Gauge_SetAlignWithMargins(obj uintptr, value bool) {
+   gauge_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func Gauge_GetLeft(obj uintptr) int32 {
+    ret, _, _ := gauge_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetLeft(obj uintptr, value int32) {
+   gauge_SetLeft.Call(obj, uintptr(value))
+}
+
+func Gauge_GetTop(obj uintptr) int32 {
+    ret, _, _ := gauge_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetTop(obj uintptr, value int32) {
+   gauge_SetTop.Call(obj, uintptr(value))
+}
+
+func Gauge_GetWidth(obj uintptr) int32 {
+    ret, _, _ := gauge_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetWidth(obj uintptr, value int32) {
+   gauge_SetWidth.Call(obj, uintptr(value))
+}
+
+func Gauge_GetHeight(obj uintptr) int32 {
+    ret, _, _ := gauge_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetHeight(obj uintptr, value int32) {
+   gauge_SetHeight.Call(obj, uintptr(value))
+}
+
+func Gauge_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := gauge_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func Gauge_SetCursor(obj uintptr, value TCursor) {
+   gauge_SetCursor.Call(obj, uintptr(value))
+}
+
+func Gauge_GetHint(obj uintptr) string {
+    ret, _, _ := gauge_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Gauge_SetHint(obj uintptr, value string) {
+   gauge_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func Gauge_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetMargins.Call(obj)
+    return ret
+}
+
+func Gauge_SetMargins(obj uintptr, value uintptr) {
+   gauge_SetMargins.Call(obj, value)
+}
+
+func Gauge_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetCustomHint.Call(obj)
+    return ret
+}
+
+func Gauge_SetCustomHint(obj uintptr, value uintptr) {
+   gauge_SetCustomHint.Call(obj, value)
+}
+
+func Gauge_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := gauge_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := gauge_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func Gauge_SetComponentIndex(obj uintptr, value int32) {
+   gauge_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func Gauge_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := gauge_GetOwner.Call(obj)
+    return ret
+}
+
+func Gauge_GetName(obj uintptr) string {
+    ret, _, _ := gauge_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func Gauge_SetName(obj uintptr, value string) {
+   gauge_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func Gauge_GetTag(obj uintptr) int {
+    ret, _, _ := gauge_GetTag.Call(obj)
+    return int(ret)
+}
+
+func Gauge_SetTag(obj uintptr, value int) {
+   gauge_SetTag.Call(obj, uintptr(value))
+}
+
+func Gauge_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := gauge_GetComponents.Call(obj, uintptr(AIndex))
     return ret
 }
 

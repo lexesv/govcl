@@ -183,6 +183,14 @@ func (c *TCheckBox) SetAlignment(value TLeftRight) {
     CheckBox_SetAlignment(c.instance, value)
 }
 
+func (c *TCheckBox) AllowGrayed() bool {
+    return CheckBox_GetAllowGrayed(c.instance)
+}
+
+func (c *TCheckBox) SetAllowGrayed(value bool) {
+    CheckBox_SetAllowGrayed(c.instance, value)
+}
+
 func (c *TCheckBox) Anchors() TAnchors {
     return CheckBox_GetAnchors(c.instance)
 }
@@ -529,6 +537,14 @@ func (c *TCheckBox) Margins() *TMargins {
 
 func (c *TCheckBox) SetMargins(value *TMargins) {
     CheckBox_SetMargins(c.instance, CheckPtr(value))
+}
+
+func (c *TCheckBox) CustomHint() *TCustomHint {
+    return CustomHintFromInst(CheckBox_GetCustomHint(c.instance))
+}
+
+func (c *TCheckBox) SetCustomHint(value IComponent) {
+    CheckBox_SetCustomHint(c.instance, CheckPtr(value))
 }
 
 func (c *TCheckBox) ComponentCount() int32 {

@@ -415,6 +415,14 @@ func (i *TImage) SetMargins(value *TMargins) {
     Image_SetMargins(i.instance, CheckPtr(value))
 }
 
+func (i *TImage) CustomHint() *TCustomHint {
+    return CustomHintFromInst(Image_GetCustomHint(i.instance))
+}
+
+func (i *TImage) SetCustomHint(value IComponent) {
+    Image_SetCustomHint(i.instance, CheckPtr(value))
+}
+
 func (i *TImage) ComponentCount() int32 {
     return Image_GetComponentCount(i.instance)
 }

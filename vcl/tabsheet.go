@@ -127,6 +127,10 @@ func (t *TTabSheet) GetTextBuf(Buffer string, BufSize int32) int32 {
     return TabSheet_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
+func (t *TTabSheet) GetTextLen() int32 {
+    return TabSheet_GetTextLen(t.instance)
+}
+
 func (t *TTabSheet) FindComponent(AName string) *TComponent {
     return ComponentFromInst(TabSheet_FindComponent(t.instance, AName))
 }

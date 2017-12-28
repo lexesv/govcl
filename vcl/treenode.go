@@ -67,6 +67,10 @@ func (t *TTreeNode) Delete() {
     TreeNode_Delete(t.instance)
 }
 
+func (t *TTreeNode) EditText() bool {
+    return TreeNode_EditText(t.instance)
+}
+
 func (t *TTreeNode) Expand(Recurse bool) {
     TreeNode_Expand(t.instance, Recurse)
 }

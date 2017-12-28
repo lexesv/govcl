@@ -139,6 +139,10 @@ func (f *TForm) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Form_GetTextBuf(f.instance, Buffer , BufSize)
 }
 
+func (f *TForm) GetTextLen() int32 {
+    return Form_GetTextLen(f.instance)
+}
+
 func (f *TForm) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Form_FindComponent(f.instance, AName))
 }

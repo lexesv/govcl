@@ -147,6 +147,10 @@ func (c *TComboBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ComboBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
+func (c *TComboBox) GetTextLen() int32 {
+    return ComboBox_GetTextLen(c.instance)
+}
+
 func (c *TComboBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ComboBox_FindComponent(c.instance, AName))
 }

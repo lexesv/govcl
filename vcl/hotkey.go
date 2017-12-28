@@ -127,6 +127,10 @@ func (h *THotKey) GetTextBuf(Buffer string, BufSize int32) int32 {
     return HotKey_GetTextBuf(h.instance, Buffer , BufSize)
 }
 
+func (h *THotKey) GetTextLen() int32 {
+    return HotKey_GetTextLen(h.instance)
+}
+
 func (h *THotKey) FindComponent(AName string) *TComponent {
     return ComponentFromInst(HotKey_FindComponent(h.instance, AName))
 }

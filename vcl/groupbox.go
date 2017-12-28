@@ -127,6 +127,10 @@ func (g *TGroupBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return GroupBox_GetTextBuf(g.instance, Buffer , BufSize)
 }
 
+func (g *TGroupBox) GetTextLen() int32 {
+    return GroupBox_GetTextLen(g.instance)
+}
+
 func (g *TGroupBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(GroupBox_FindComponent(g.instance, AName))
 }

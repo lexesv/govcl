@@ -107,6 +107,10 @@ func (t *TToolButton) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ToolButton_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
+func (t *TToolButton) GetTextLen() int32 {
+    return ToolButton_GetTextLen(t.instance)
+}
+
 func (t *TToolButton) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ToolButton_FindComponent(t.instance, AName))
 }

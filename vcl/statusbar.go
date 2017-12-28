@@ -127,6 +127,10 @@ func (s *TStatusBar) GetTextBuf(Buffer string, BufSize int32) int32 {
     return StatusBar_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
+func (s *TStatusBar) GetTextLen() int32 {
+    return StatusBar_GetTextLen(s.instance)
+}
+
 func (s *TStatusBar) FindComponent(AName string) *TComponent {
     return ComponentFromInst(StatusBar_FindComponent(s.instance, AName))
 }

@@ -131,6 +131,10 @@ func (t *TTrackBar) GetTextBuf(Buffer string, BufSize int32) int32 {
     return TrackBar_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
+func (t *TTrackBar) GetTextLen() int32 {
+    return TrackBar_GetTextLen(t.instance)
+}
+
 func (t *TTrackBar) FindComponent(AName string) *TComponent {
     return ComponentFromInst(TrackBar_FindComponent(t.instance, AName))
 }

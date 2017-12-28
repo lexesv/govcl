@@ -155,6 +155,10 @@ func (m *TMemo) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Memo_GetTextBuf(m.instance, Buffer , BufSize)
 }
 
+func (m *TMemo) GetTextLen() int32 {
+    return Memo_GetTextLen(m.instance)
+}
+
 func (m *TMemo) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Memo_FindComponent(m.instance, AName))
 }

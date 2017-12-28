@@ -155,6 +155,10 @@ func (e *TEdit) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Edit_GetTextBuf(e.instance, Buffer , BufSize)
 }
 
+func (e *TEdit) GetTextLen() int32 {
+    return Edit_GetTextLen(e.instance)
+}
+
 func (e *TEdit) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Edit_FindComponent(e.instance, AName))
 }

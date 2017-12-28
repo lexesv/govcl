@@ -127,6 +127,10 @@ func (l *TLinkLabel) GetTextBuf(Buffer string, BufSize int32) int32 {
     return LinkLabel_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
+func (l *TLinkLabel) GetTextLen() int32 {
+    return LinkLabel_GetTextLen(l.instance)
+}
+
 func (l *TLinkLabel) FindComponent(AName string) *TComponent {
     return ComponentFromInst(LinkLabel_FindComponent(l.instance, AName))
 }

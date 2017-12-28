@@ -135,6 +135,10 @@ func (p *TProgressBar) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ProgressBar_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
+func (p *TProgressBar) GetTextLen() int32 {
+    return ProgressBar_GetTextLen(p.instance)
+}
+
 func (p *TProgressBar) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ProgressBar_FindComponent(p.instance, AName))
 }

@@ -99,6 +99,10 @@ func (p *TPaintBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return PaintBox_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
+func (p *TPaintBox) GetTextLen() int32 {
+    return PaintBox_GetTextLen(p.instance)
+}
+
 func (p *TPaintBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(PaintBox_FindComponent(p.instance, AName))
 }

@@ -147,6 +147,10 @@ func (c *TColorBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ColorBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
+func (c *TColorBox) GetTextLen() int32 {
+    return ColorBox_GetTextLen(c.instance)
+}
+
 func (c *TColorBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ColorBox_FindComponent(c.instance, AName))
 }

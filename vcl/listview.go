@@ -167,6 +167,10 @@ func (l *TListView) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ListView_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
+func (l *TListView) GetTextLen() int32 {
+    return ListView_GetTextLen(l.instance)
+}
+
 func (l *TListView) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ListView_FindComponent(l.instance, AName))
 }

@@ -434,6 +434,11 @@ func Form_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func Form_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := form_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func Form_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := form_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -1160,6 +1165,11 @@ func Button_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func Button_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := button_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func Button_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := button_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -1852,6 +1862,11 @@ func Edit_Show(obj uintptr)  {
 
 func Edit_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := edit_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Edit_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := edit_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -2919,6 +2934,11 @@ func Memo_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func Memo_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := memo_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func Memo_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := memo_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -3666,6 +3686,11 @@ func CheckBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func CheckBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := checkBox_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func CheckBox_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := checkBox_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -4260,6 +4285,11 @@ func RadioButton_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func RadioButton_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := radioButton_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func RadioButton_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := radioButton_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -4849,6 +4879,11 @@ func GroupBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func GroupBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := groupBox_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func GroupBox_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := groupBox_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -5374,6 +5409,11 @@ func Label_Update(obj uintptr)  {
 
 func Label_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := label_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Label_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := label_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -5939,6 +5979,11 @@ func ListBox_Show(obj uintptr)  {
 
 func ListBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := listBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ListBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := listBox_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -6670,6 +6715,11 @@ func ComboBox_Show(obj uintptr)  {
 
 func ComboBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := comboBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ComboBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := comboBox_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -7416,6 +7466,11 @@ func Panel_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func Panel_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := panel_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func Panel_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := panel_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -8047,6 +8102,11 @@ func Image_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func Image_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := image_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func Image_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := image_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -8535,6 +8595,11 @@ func LinkLabel_Show(obj uintptr)  {
 
 func LinkLabel_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := linkLabel_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func LinkLabel_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := linkLabel_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -9111,6 +9176,11 @@ func SpeedButton_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func SpeedButton_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := speedButton_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func SpeedButton_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := speedButton_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -9244,6 +9314,15 @@ func SpeedButton_SetFont(obj uintptr, value uintptr) {
    speedButton_SetFont.Call(obj, value)
 }
 
+func SpeedButton_GetGlyph(obj uintptr) uintptr {
+    ret, _, _ := speedButton_GetGlyph.Call(obj)
+    return ret
+}
+
+func SpeedButton_SetGlyph(obj uintptr, value uintptr) {
+   speedButton_SetGlyph.Call(obj, value)
+}
+
 func SpeedButton_GetLayout(obj uintptr) TButtonLayout {
     ret, _, _ := speedButton_GetLayout.Call(obj)
     return TButtonLayout(ret)
@@ -9251,6 +9330,15 @@ func SpeedButton_GetLayout(obj uintptr) TButtonLayout {
 
 func SpeedButton_SetLayout(obj uintptr, value TButtonLayout) {
    speedButton_SetLayout.Call(obj, uintptr(value))
+}
+
+func SpeedButton_GetNumGlyphs(obj uintptr) TNumGlyphs {
+    ret, _, _ := speedButton_GetNumGlyphs.Call(obj)
+    return TNumGlyphs(ret)
+}
+
+func SpeedButton_SetNumGlyphs(obj uintptr, value TNumGlyphs) {
+   speedButton_SetNumGlyphs.Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetParentFont(obj uintptr) bool {
@@ -9287,6 +9375,15 @@ func SpeedButton_GetShowHint(obj uintptr) bool {
 
 func SpeedButton_SetShowHint(obj uintptr, value bool) {
    speedButton_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func SpeedButton_GetSpacing(obj uintptr) int32 {
+    ret, _, _ := speedButton_GetSpacing.Call(obj)
+    return int32(ret)
+}
+
+func SpeedButton_SetSpacing(obj uintptr, value int32) {
+   speedButton_SetSpacing.Call(obj, uintptr(value))
 }
 
 func SpeedButton_GetTransparent(obj uintptr) bool {
@@ -9581,6 +9678,11 @@ func Splitter_Update(obj uintptr)  {
 
 func Splitter_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := splitter_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Splitter_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := splitter_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -9985,6 +10087,11 @@ func RadioGroup_Show(obj uintptr)  {
 
 func RadioGroup_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := radioGroup_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func RadioGroup_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := radioGroup_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -10561,6 +10668,11 @@ func StaticText_Show(obj uintptr)  {
 
 func StaticText_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := staticText_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func StaticText_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := staticText_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -11195,6 +11307,11 @@ func ColorBox_Show(obj uintptr)  {
 
 func ColorBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := colorBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ColorBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := colorBox_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -11960,6 +12077,11 @@ func ColorListBox_Show(obj uintptr)  {
 
 func ColorListBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := colorListBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ColorListBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := colorListBox_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -13062,6 +13184,11 @@ func CategoryPanelGroup_GetTextBuf(obj uintptr, Buffer string, BufSize int32) in
     return int32(ret)
 }
 
+func CategoryPanelGroup_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := categoryPanelGroup_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func CategoryPanelGroup_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := categoryPanelGroup_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -13774,6 +13901,11 @@ func CategoryPanel_Show(obj uintptr)  {
 
 func CategoryPanel_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := categoryPanel_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func CategoryPanel_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := categoryPanel_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -16042,6 +16174,11 @@ func RichEdit_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func RichEdit_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := richEdit_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func RichEdit_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := richEdit_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -16868,6 +17005,11 @@ func TrackBar_Show(obj uintptr)  {
 
 func TrackBar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := trackBar_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func TrackBar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := trackBar_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -17836,6 +17978,11 @@ func UpDown_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func UpDown_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := upDown_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func UpDown_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := upDown_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -18378,6 +18525,11 @@ func ProgressBar_Show(obj uintptr)  {
 
 func ProgressBar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := progressBar_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ProgressBar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := progressBar_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -18986,6 +19138,11 @@ func HotKey_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func HotKey_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := hotKey_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func HotKey_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := hotKey_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -19484,6 +19641,11 @@ func DateTimePicker_Show(obj uintptr)  {
 
 func DateTimePicker_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := dateTimePicker_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func DateTimePicker_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := dateTimePicker_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -20177,6 +20339,11 @@ func MonthCalendar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func MonthCalendar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := monthCalendar_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func MonthCalendar_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := monthCalendar_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -20840,6 +21007,11 @@ func ListView_Show(obj uintptr)  {
 
 func ListView_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := listView_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ListView_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := listView_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -21820,6 +21992,11 @@ func TreeView_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func TreeView_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := treeView_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func TreeView_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := treeView_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -22647,6 +22824,11 @@ func StatusBar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func StatusBar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := statusBar_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func StatusBar_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := statusBar_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -23240,6 +23422,11 @@ func ToolBar_Show(obj uintptr)  {
 
 func ToolBar_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := toolBar_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ToolBar_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := toolBar_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -23900,6 +24087,1488 @@ func ToolBar_GetControls(obj uintptr, Index int32) uintptr {
 
 func ToolBar_GetComponents(obj uintptr, AIndex int32) uintptr {
     ret, _, _ := toolBar_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TMaskEdit ---------------------------
+
+func MaskEdit_Create(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_Create.Call(obj)
+    return ret
+}
+
+func MaskEdit_Free(obj uintptr) {
+    maskEdit_Free.Call(obj)
+}
+
+func MaskEdit_ValidateEdit(obj uintptr)  {
+    maskEdit_ValidateEdit.Call(obj)
+}
+
+func MaskEdit_Clear(obj uintptr)  {
+    maskEdit_Clear.Call(obj)
+}
+
+func MaskEdit_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_ClearSelection(obj uintptr)  {
+    maskEdit_ClearSelection.Call(obj)
+}
+
+func MaskEdit_CopyToClipboard(obj uintptr)  {
+    maskEdit_CopyToClipboard.Call(obj)
+}
+
+func MaskEdit_CutToClipboard(obj uintptr)  {
+    maskEdit_CutToClipboard.Call(obj)
+}
+
+func MaskEdit_PasteFromClipboard(obj uintptr)  {
+    maskEdit_PasteFromClipboard.Call(obj)
+}
+
+func MaskEdit_SelectAll(obj uintptr)  {
+    maskEdit_SelectAll.Call(obj)
+}
+
+func MaskEdit_GetSelTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := maskEdit_GetSelTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func MaskEdit_CanFocus(obj uintptr) bool {
+    ret, _, _ := maskEdit_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_FlipChildren(obj uintptr, AllLevels bool)  {
+    maskEdit_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func MaskEdit_Focused(obj uintptr) bool {
+    ret, _, _ := maskEdit_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := maskEdit_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_Invalidate(obj uintptr)  {
+    maskEdit_Invalidate.Call(obj)
+}
+
+func MaskEdit_Realign(obj uintptr)  {
+    maskEdit_Realign.Call(obj)
+}
+
+func MaskEdit_Repaint(obj uintptr)  {
+    maskEdit_Repaint.Call(obj)
+}
+
+func MaskEdit_ScaleBy(obj uintptr, M int32, D int32)  {
+    maskEdit_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func MaskEdit_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    maskEdit_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func MaskEdit_SetFocus(obj uintptr)  {
+    maskEdit_SetFocus.Call(obj)
+}
+
+func MaskEdit_Update(obj uintptr)  {
+    maskEdit_Update.Call(obj)
+}
+
+func MaskEdit_BringToFront(obj uintptr)  {
+    maskEdit_BringToFront.Call(obj)
+}
+
+func MaskEdit_HasParent(obj uintptr) bool {
+    ret, _, _ := maskEdit_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_Hide(obj uintptr)  {
+    maskEdit_Hide.Call(obj)
+}
+
+func MaskEdit_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := maskEdit_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func MaskEdit_Refresh(obj uintptr)  {
+    maskEdit_Refresh.Call(obj)
+}
+
+func MaskEdit_SendToBack(obj uintptr)  {
+    maskEdit_SendToBack.Call(obj)
+}
+
+func MaskEdit_Show(obj uintptr)  {
+    maskEdit_Show.Call(obj)
+}
+
+func MaskEdit_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := maskEdit_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func MaskEdit_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := maskEdit_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func MaskEdit_GetNamePath(obj uintptr) string {
+    ret, _, _ := maskEdit_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_Assign(obj uintptr, Source uintptr)  {
+    maskEdit_Assign.Call(obj, Source )
+}
+
+func MaskEdit_ClassName(obj uintptr) string {
+    ret, _, _ := maskEdit_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := maskEdit_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_ToString(obj uintptr) string {
+    ret, _, _ := maskEdit_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := maskEdit_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func MaskEdit_SetAlign(obj uintptr, value TAlign) {
+   maskEdit_SetAlign.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetAlignment(obj uintptr) TAlignment {
+    ret, _, _ := maskEdit_GetAlignment.Call(obj)
+    return TAlignment(ret)
+}
+
+func MaskEdit_SetAlignment(obj uintptr, value TAlignment) {
+   maskEdit_SetAlignment.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := maskEdit_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func MaskEdit_SetAnchors(obj uintptr, value TAnchors) {
+   maskEdit_SetAnchors.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetAutoSelect(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetAutoSelect.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetAutoSelect(obj uintptr, value bool) {
+   maskEdit_SetAutoSelect.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetAutoSize(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetAutoSize.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetAutoSize(obj uintptr, value bool) {
+   maskEdit_SetAutoSize.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetBevelEdges(obj uintptr) TBevelEdges {
+    ret, _, _ := maskEdit_GetBevelEdges.Call(obj)
+    return TBevelEdges(ret)
+}
+
+func MaskEdit_SetBevelEdges(obj uintptr, value TBevelEdges) {
+   maskEdit_SetBevelEdges.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetBevelInner(obj uintptr) TBevelCut {
+    ret, _, _ := maskEdit_GetBevelInner.Call(obj)
+    return TBevelCut(ret)
+}
+
+func MaskEdit_SetBevelInner(obj uintptr, value TBevelCut) {
+   maskEdit_SetBevelInner.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetBevelOuter(obj uintptr) TBevelCut {
+    ret, _, _ := maskEdit_GetBevelOuter.Call(obj)
+    return TBevelCut(ret)
+}
+
+func MaskEdit_SetBevelOuter(obj uintptr, value TBevelCut) {
+   maskEdit_SetBevelOuter.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetBevelKind(obj uintptr) TBevelKind {
+    ret, _, _ := maskEdit_GetBevelKind.Call(obj)
+    return TBevelKind(ret)
+}
+
+func MaskEdit_SetBevelKind(obj uintptr, value TBevelKind) {
+   maskEdit_SetBevelKind.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := maskEdit_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func MaskEdit_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   maskEdit_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetBorderStyle(obj uintptr) TBorderStyle {
+    ret, _, _ := maskEdit_GetBorderStyle.Call(obj)
+    return TBorderStyle(ret)
+}
+
+func MaskEdit_SetBorderStyle(obj uintptr, value TBorderStyle) {
+   maskEdit_SetBorderStyle.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetColor(obj uintptr) TColor {
+    ret, _, _ := maskEdit_GetColor.Call(obj)
+    return TColor(ret)
+}
+
+func MaskEdit_SetColor(obj uintptr, value TColor) {
+   maskEdit_SetColor.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetDoubleBuffered(obj uintptr, value bool) {
+   maskEdit_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetEnabled(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetEnabled(obj uintptr, value bool) {
+   maskEdit_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetFont(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetFont.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetFont(obj uintptr, value uintptr) {
+   maskEdit_SetFont.Call(obj, value)
+}
+
+func MaskEdit_GetMaxLength(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetMaxLength.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetMaxLength(obj uintptr, value int32) {
+   maskEdit_SetMaxLength.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetParentColor(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetParentColor.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetParentColor(obj uintptr, value bool) {
+   maskEdit_SetParentColor.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetParentCtl3D(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetParentCtl3D.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetParentCtl3D(obj uintptr, value bool) {
+   maskEdit_SetParentCtl3D.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetParentDoubleBuffered(obj uintptr, value bool) {
+   maskEdit_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetParentFont(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetParentFont(obj uintptr, value bool) {
+   maskEdit_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetParentShowHint(obj uintptr, value bool) {
+   maskEdit_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetPasswordChar(obj uintptr) uint16 {
+    ret, _, _ := maskEdit_GetPasswordChar.Call(obj)
+    return uint16(ret)
+}
+
+func MaskEdit_SetPasswordChar(obj uintptr, value uint16) {
+   maskEdit_SetPasswordChar.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetPopupMenu(obj uintptr, value uintptr) {
+   maskEdit_SetPopupMenu.Call(obj, value)
+}
+
+func MaskEdit_GetReadOnly(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetReadOnly.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetReadOnly(obj uintptr, value bool) {
+   maskEdit_SetReadOnly.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetShowHint(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetShowHint(obj uintptr, value bool) {
+   maskEdit_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := maskEdit_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func MaskEdit_SetTabOrder(obj uintptr, value uint16) {
+   maskEdit_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetTabStop(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetTabStop(obj uintptr, value bool) {
+   maskEdit_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetText(obj uintptr) string {
+    ret, _, _ := maskEdit_GetText.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetText(obj uintptr, value string) {
+   maskEdit_SetText.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetTextHint(obj uintptr) string {
+    ret, _, _ := maskEdit_GetTextHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetTextHint(obj uintptr, value string) {
+   maskEdit_SetTextHint.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetVisible(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetVisible(obj uintptr, value bool) {
+   maskEdit_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := maskEdit_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func MaskEdit_SetStyleElements(obj uintptr, value TStyleElements) {
+   maskEdit_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func MaskEdit_SetOnChange(obj uintptr, fn interface{}) {
+    maskEdit_SetOnChange.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnClick(obj uintptr, fn interface{}) {
+    maskEdit_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnDblClick(obj uintptr, fn interface{}) {
+    maskEdit_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnEnter(obj uintptr, fn interface{}) {
+    maskEdit_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnExit(obj uintptr, fn interface{}) {
+    maskEdit_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnKeyDown(obj uintptr, fn interface{}) {
+    maskEdit_SetOnKeyDown.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnKeyPress(obj uintptr, fn interface{}) {
+    maskEdit_SetOnKeyPress.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnKeyUp(obj uintptr, fn interface{}) {
+    maskEdit_SetOnKeyUp.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnMouseDown(obj uintptr, fn interface{}) {
+    maskEdit_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    maskEdit_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    maskEdit_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnMouseMove(obj uintptr, fn interface{}) {
+    maskEdit_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_SetOnMouseUp(obj uintptr, fn interface{}) {
+    maskEdit_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func MaskEdit_GetIsMasked(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetIsMasked.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_GetEditText(obj uintptr) string {
+    ret, _, _ := maskEdit_GetEditText.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetEditText(obj uintptr, value string) {
+   maskEdit_SetEditText.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetModified(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetModified.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetModified(obj uintptr, value bool) {
+   maskEdit_SetModified.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetSelLength(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetSelLength.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetSelLength(obj uintptr, value int32) {
+   maskEdit_SetSelLength.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetSelStart(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetSelStart.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetSelStart(obj uintptr, value int32) {
+   maskEdit_SetSelStart.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetSelText(obj uintptr) string {
+    ret, _, _ := maskEdit_GetSelText.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetSelText(obj uintptr, value string) {
+   maskEdit_SetSelText.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetBrush.Call(obj)
+    return ret
+}
+
+func MaskEdit_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetHandle(obj uintptr) HWND {
+    ret, _, _ := maskEdit_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func MaskEdit_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := maskEdit_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func MaskEdit_SetParentWindow(obj uintptr, value HWND) {
+   maskEdit_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetAction(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetAction.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetAction(obj uintptr, value uintptr) {
+   maskEdit_SetAction.Call(obj, value)
+}
+
+func MaskEdit_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    maskEdit_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func MaskEdit_SetBoundsRect(obj uintptr, value TRect) {
+   maskEdit_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func MaskEdit_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetClientHeight(obj uintptr, value int32) {
+   maskEdit_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    maskEdit_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func MaskEdit_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetClientWidth(obj uintptr, value int32) {
+   maskEdit_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetParent(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetParent.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetParent(obj uintptr, value uintptr) {
+   maskEdit_SetParent.Call(obj, value)
+}
+
+func MaskEdit_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := maskEdit_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func MaskEdit_SetAlignWithMargins(obj uintptr, value bool) {
+   maskEdit_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func MaskEdit_GetLeft(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetLeft(obj uintptr, value int32) {
+   maskEdit_SetLeft.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetTop(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetTop(obj uintptr, value int32) {
+   maskEdit_SetTop.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetWidth(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetWidth(obj uintptr, value int32) {
+   maskEdit_SetWidth.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetHeight(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetHeight(obj uintptr, value int32) {
+   maskEdit_SetHeight.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := maskEdit_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func MaskEdit_SetCursor(obj uintptr, value TCursor) {
+   maskEdit_SetCursor.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetHint(obj uintptr) string {
+    ret, _, _ := maskEdit_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetHint(obj uintptr, value string) {
+   maskEdit_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetMargins.Call(obj)
+    return ret
+}
+
+func MaskEdit_SetMargins(obj uintptr, value uintptr) {
+   maskEdit_SetMargins.Call(obj, value)
+}
+
+func MaskEdit_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := maskEdit_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func MaskEdit_SetComponentIndex(obj uintptr, value int32) {
+   maskEdit_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := maskEdit_GetOwner.Call(obj)
+    return ret
+}
+
+func MaskEdit_GetName(obj uintptr) string {
+    ret, _, _ := maskEdit_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func MaskEdit_SetName(obj uintptr, value string) {
+   maskEdit_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func MaskEdit_GetTag(obj uintptr) int {
+    ret, _, _ := maskEdit_GetTag.Call(obj)
+    return int(ret)
+}
+
+func MaskEdit_SetTag(obj uintptr, value int) {
+   maskEdit_SetTag.Call(obj, uintptr(value))
+}
+
+func MaskEdit_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := maskEdit_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func MaskEdit_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := maskEdit_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+
+
+//--------------------------- TBitBtn ---------------------------
+
+func BitBtn_Create(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_Create.Call(obj)
+    return ret
+}
+
+func BitBtn_Free(obj uintptr) {
+    bitBtn_Free.Call(obj)
+}
+
+func BitBtn_Click(obj uintptr)  {
+    bitBtn_Click.Call(obj)
+}
+
+func BitBtn_CanFocus(obj uintptr) bool {
+    ret, _, _ := bitBtn_CanFocus.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_FlipChildren(obj uintptr, AllLevels bool)  {
+    bitBtn_FlipChildren.Call(obj, GoBoolToDBool(AllLevels) )
+}
+
+func BitBtn_Focused(obj uintptr) bool {
+    ret, _, _ := bitBtn_Focused.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_HandleAllocated(obj uintptr) bool {
+    ret, _, _ := bitBtn_HandleAllocated.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_Invalidate(obj uintptr)  {
+    bitBtn_Invalidate.Call(obj)
+}
+
+func BitBtn_Realign(obj uintptr)  {
+    bitBtn_Realign.Call(obj)
+}
+
+func BitBtn_Repaint(obj uintptr)  {
+    bitBtn_Repaint.Call(obj)
+}
+
+func BitBtn_ScaleBy(obj uintptr, M int32, D int32)  {
+    bitBtn_ScaleBy.Call(obj, uintptr(M) , uintptr(D) )
+}
+
+func BitBtn_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    bitBtn_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func BitBtn_SetFocus(obj uintptr)  {
+    bitBtn_SetFocus.Call(obj)
+}
+
+func BitBtn_Update(obj uintptr)  {
+    bitBtn_Update.Call(obj)
+}
+
+func BitBtn_BringToFront(obj uintptr)  {
+    bitBtn_BringToFront.Call(obj)
+}
+
+func BitBtn_HasParent(obj uintptr) bool {
+    ret, _, _ := bitBtn_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_Hide(obj uintptr)  {
+    bitBtn_Hide.Call(obj)
+}
+
+func BitBtn_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := bitBtn_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func BitBtn_Refresh(obj uintptr)  {
+    bitBtn_Refresh.Call(obj)
+}
+
+func BitBtn_SendToBack(obj uintptr)  {
+    bitBtn_SendToBack.Call(obj)
+}
+
+func BitBtn_Show(obj uintptr)  {
+    bitBtn_Show.Call(obj)
+}
+
+func BitBtn_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := bitBtn_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func BitBtn_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := bitBtn_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func BitBtn_GetNamePath(obj uintptr) string {
+    ret, _, _ := bitBtn_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_Assign(obj uintptr, Source uintptr)  {
+    bitBtn_Assign.Call(obj, Source )
+}
+
+func BitBtn_ClassName(obj uintptr) string {
+    ret, _, _ := bitBtn_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := bitBtn_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_ToString(obj uintptr) string {
+    ret, _, _ := bitBtn_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_GetAction(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetAction.Call(obj)
+    return ret
+}
+
+func BitBtn_SetAction(obj uintptr, value uintptr) {
+   bitBtn_SetAction.Call(obj, value)
+}
+
+func BitBtn_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := bitBtn_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func BitBtn_SetAlign(obj uintptr, value TAlign) {
+   bitBtn_SetAlign.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := bitBtn_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func BitBtn_SetAnchors(obj uintptr, value TAnchors) {
+   bitBtn_SetAnchors.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := bitBtn_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func BitBtn_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   bitBtn_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetCancel(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetCancel.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetCancel(obj uintptr, value bool) {
+   bitBtn_SetCancel.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetCaption(obj uintptr) string {
+    ret, _, _ := bitBtn_GetCaption.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_SetCaption(obj uintptr, value string) {
+   bitBtn_SetCaption.Call(obj, GoStrToDStr(value))
+}
+
+func BitBtn_GetDefault(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetDefault.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetDefault(obj uintptr, value bool) {
+   bitBtn_SetDefault.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetDoubleBuffered(obj uintptr, value bool) {
+   bitBtn_SetDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetEnabled(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetEnabled(obj uintptr, value bool) {
+   bitBtn_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetFont(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetFont.Call(obj)
+    return ret
+}
+
+func BitBtn_SetFont(obj uintptr, value uintptr) {
+   bitBtn_SetFont.Call(obj, value)
+}
+
+func BitBtn_GetGlyph(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetGlyph.Call(obj)
+    return ret
+}
+
+func BitBtn_SetGlyph(obj uintptr, value uintptr) {
+   bitBtn_SetGlyph.Call(obj, value)
+}
+
+func BitBtn_GetKind(obj uintptr) TBitBtnKind {
+    ret, _, _ := bitBtn_GetKind.Call(obj)
+    return TBitBtnKind(ret)
+}
+
+func BitBtn_SetKind(obj uintptr, value TBitBtnKind) {
+   bitBtn_SetKind.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetLayout(obj uintptr) TButtonLayout {
+    ret, _, _ := bitBtn_GetLayout.Call(obj)
+    return TButtonLayout(ret)
+}
+
+func BitBtn_SetLayout(obj uintptr, value TButtonLayout) {
+   bitBtn_SetLayout.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetModalResult(obj uintptr) TModalResult {
+    ret, _, _ := bitBtn_GetModalResult.Call(obj)
+    return TModalResult(ret)
+}
+
+func BitBtn_SetModalResult(obj uintptr, value TModalResult) {
+   bitBtn_SetModalResult.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetNumGlyphs(obj uintptr) TNumGlyphs {
+    ret, _, _ := bitBtn_GetNumGlyphs.Call(obj)
+    return TNumGlyphs(ret)
+}
+
+func BitBtn_SetNumGlyphs(obj uintptr, value TNumGlyphs) {
+   bitBtn_SetNumGlyphs.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetParentDoubleBuffered(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetParentDoubleBuffered.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetParentDoubleBuffered(obj uintptr, value bool) {
+   bitBtn_SetParentDoubleBuffered.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetParentFont(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetParentFont(obj uintptr, value bool) {
+   bitBtn_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetParentShowHint(obj uintptr, value bool) {
+   bitBtn_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func BitBtn_SetPopupMenu(obj uintptr, value uintptr) {
+   bitBtn_SetPopupMenu.Call(obj, value)
+}
+
+func BitBtn_GetShowHint(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetShowHint(obj uintptr, value bool) {
+   bitBtn_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetStyle(obj uintptr) TButtonStyle {
+    ret, _, _ := bitBtn_GetStyle.Call(obj)
+    return TButtonStyle(ret)
+}
+
+func BitBtn_SetStyle(obj uintptr, value TButtonStyle) {
+   bitBtn_SetStyle.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetSpacing(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetSpacing.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetSpacing(obj uintptr, value int32) {
+   bitBtn_SetSpacing.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetTabOrder(obj uintptr) uint16 {
+    ret, _, _ := bitBtn_GetTabOrder.Call(obj)
+    return uint16(ret)
+}
+
+func BitBtn_SetTabOrder(obj uintptr, value uint16) {
+   bitBtn_SetTabOrder.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetTabStop(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetTabStop.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetTabStop(obj uintptr, value bool) {
+   bitBtn_SetTabStop.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetVisible(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetVisible(obj uintptr, value bool) {
+   bitBtn_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetWordWrap(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetWordWrap.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetWordWrap(obj uintptr, value bool) {
+   bitBtn_SetWordWrap.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := bitBtn_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func BitBtn_SetStyleElements(obj uintptr, value TStyleElements) {
+   bitBtn_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func BitBtn_SetOnClick(obj uintptr, fn interface{}) {
+    bitBtn_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnEnter(obj uintptr, fn interface{}) {
+    bitBtn_SetOnEnter.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnExit(obj uintptr, fn interface{}) {
+    bitBtn_SetOnExit.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnKeyDown(obj uintptr, fn interface{}) {
+    bitBtn_SetOnKeyDown.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnKeyPress(obj uintptr, fn interface{}) {
+    bitBtn_SetOnKeyPress.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnKeyUp(obj uintptr, fn interface{}) {
+    bitBtn_SetOnKeyUp.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnMouseDown(obj uintptr, fn interface{}) {
+    bitBtn_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    bitBtn_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    bitBtn_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnMouseMove(obj uintptr, fn interface{}) {
+    bitBtn_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_SetOnMouseUp(obj uintptr, fn interface{}) {
+    bitBtn_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func BitBtn_GetCommandLinkHint(obj uintptr) string {
+    ret, _, _ := bitBtn_GetCommandLinkHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_SetCommandLinkHint(obj uintptr, value string) {
+   bitBtn_SetCommandLinkHint.Call(obj, GoStrToDStr(value))
+}
+
+func BitBtn_GetDisabledImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetDisabledImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetDisabledImageIndex(obj uintptr, value int32) {
+   bitBtn_SetDisabledImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetElevationRequired(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetElevationRequired.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetElevationRequired(obj uintptr, value bool) {
+   bitBtn_SetElevationRequired.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetHotImageIndex(obj uintptr, value int32) {
+   bitBtn_SetHotImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetImages(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetImages.Call(obj)
+    return ret
+}
+
+func BitBtn_SetImages(obj uintptr, value uintptr) {
+   bitBtn_SetImages.Call(obj, value)
+}
+
+func BitBtn_GetImageAlignment(obj uintptr) TImageAlignment {
+    ret, _, _ := bitBtn_GetImageAlignment.Call(obj)
+    return TImageAlignment(ret)
+}
+
+func BitBtn_SetImageAlignment(obj uintptr, value TImageAlignment) {
+   bitBtn_SetImageAlignment.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetImageIndex(obj uintptr, value int32) {
+   bitBtn_SetImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetPressedImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetPressedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetPressedImageIndex(obj uintptr, value int32) {
+   bitBtn_SetPressedImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetSelectedImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetSelectedImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetSelectedImageIndex(obj uintptr, value int32) {
+   bitBtn_SetSelectedImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetStylusHotImageIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetStylusHotImageIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetStylusHotImageIndex(obj uintptr, value int32) {
+   bitBtn_SetStylusHotImageIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetBrush(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetBrush.Call(obj)
+    return ret
+}
+
+func BitBtn_GetControlCount(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetControlCount.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetHandle(obj uintptr) HWND {
+    ret, _, _ := bitBtn_GetHandle.Call(obj)
+    return HWND(ret)
+}
+
+func BitBtn_GetParentWindow(obj uintptr) HWND {
+    ret, _, _ := bitBtn_GetParentWindow.Call(obj)
+    return HWND(ret)
+}
+
+func BitBtn_SetParentWindow(obj uintptr, value HWND) {
+   bitBtn_SetParentWindow.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    bitBtn_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func BitBtn_SetBoundsRect(obj uintptr, value TRect) {
+   bitBtn_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func BitBtn_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetClientHeight(obj uintptr, value int32) {
+   bitBtn_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    bitBtn_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func BitBtn_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetClientWidth(obj uintptr, value int32) {
+   bitBtn_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetParent(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetParent.Call(obj)
+    return ret
+}
+
+func BitBtn_SetParent(obj uintptr, value uintptr) {
+   bitBtn_SetParent.Call(obj, value)
+}
+
+func BitBtn_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := bitBtn_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func BitBtn_SetAlignWithMargins(obj uintptr, value bool) {
+   bitBtn_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func BitBtn_GetLeft(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetLeft(obj uintptr, value int32) {
+   bitBtn_SetLeft.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetTop(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetTop(obj uintptr, value int32) {
+   bitBtn_SetTop.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetWidth(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetWidth(obj uintptr, value int32) {
+   bitBtn_SetWidth.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetHeight(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetHeight(obj uintptr, value int32) {
+   bitBtn_SetHeight.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := bitBtn_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func BitBtn_SetCursor(obj uintptr, value TCursor) {
+   bitBtn_SetCursor.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetHint(obj uintptr) string {
+    ret, _, _ := bitBtn_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_SetHint(obj uintptr, value string) {
+   bitBtn_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func BitBtn_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetMargins.Call(obj)
+    return ret
+}
+
+func BitBtn_SetMargins(obj uintptr, value uintptr) {
+   bitBtn_SetMargins.Call(obj, value)
+}
+
+func BitBtn_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := bitBtn_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func BitBtn_SetComponentIndex(obj uintptr, value int32) {
+   bitBtn_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := bitBtn_GetOwner.Call(obj)
+    return ret
+}
+
+func BitBtn_GetName(obj uintptr) string {
+    ret, _, _ := bitBtn_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func BitBtn_SetName(obj uintptr, value string) {
+   bitBtn_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func BitBtn_GetTag(obj uintptr) int {
+    ret, _, _ := bitBtn_GetTag.Call(obj)
+    return int(ret)
+}
+
+func BitBtn_SetTag(obj uintptr, value int) {
+   bitBtn_SetTag.Call(obj, uintptr(value))
+}
+
+func BitBtn_GetControls(obj uintptr, Index int32) uintptr {
+    ret, _, _ := bitBtn_GetControls.Call(obj, uintptr(Index))
+    return ret
+}
+
+func BitBtn_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := bitBtn_GetComponents.Call(obj, uintptr(AIndex))
     return ret
 }
 
@@ -26026,6 +27695,11 @@ func TreeNode_Delete(obj uintptr)  {
     treeNode_Delete.Call(obj)
 }
 
+func TreeNode_EditText(obj uintptr) bool {
+    ret, _, _ := treeNode_EditText.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
 func TreeNode_Expand(obj uintptr, Recurse bool)  {
     treeNode_Expand.Call(obj, GoBoolToDBool(Recurse) )
 }
@@ -26348,6 +28022,11 @@ func PageControl_Show(obj uintptr)  {
 
 func PageControl_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := pageControl_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func PageControl_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := pageControl_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -26965,6 +28644,11 @@ func TabSheet_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func TabSheet_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := tabSheet_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func TabSheet_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := tabSheet_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -27517,6 +29201,11 @@ func Control_Update(obj uintptr)  {
 
 func Control_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := control_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func Control_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := control_GetTextLen.Call(obj)
     return int32(ret)
 }
 
@@ -29848,6 +31537,11 @@ func ToolButton_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     return int32(ret)
 }
 
+func ToolButton_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := toolButton_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
 func ToolButton_FindComponent(obj uintptr, AName string) uintptr {
     ret, _, _ := toolButton_FindComponent.Call(obj, GoStrToDStr(AName) )
     return ret
@@ -31015,6 +32709,11 @@ func PaintBox_Update(obj uintptr)  {
 
 func PaintBox_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
     ret, _, _ := paintBox_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func PaintBox_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := paintBox_GetTextLen.Call(obj)
     return int32(ret)
 }
 

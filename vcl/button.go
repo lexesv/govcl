@@ -131,6 +131,10 @@ func (b *TButton) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Button_GetTextBuf(b.instance, Buffer , BufSize)
 }
 
+func (b *TButton) GetTextLen() int32 {
+    return Button_GetTextLen(b.instance)
+}
+
 func (b *TButton) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Button_FindComponent(b.instance, AName))
 }

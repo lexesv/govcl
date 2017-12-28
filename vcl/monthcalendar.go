@@ -128,6 +128,10 @@ func (m *TMonthCalendar) GetTextBuf(Buffer string, BufSize int32) int32 {
     return MonthCalendar_GetTextBuf(m.instance, Buffer , BufSize)
 }
 
+func (m *TMonthCalendar) GetTextLen() int32 {
+    return MonthCalendar_GetTextLen(m.instance)
+}
+
 func (m *TMonthCalendar) FindComponent(AName string) *TComponent {
     return ComponentFromInst(MonthCalendar_FindComponent(m.instance, AName))
 }

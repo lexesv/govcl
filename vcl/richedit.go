@@ -163,6 +163,10 @@ func (r *TRichEdit) GetTextBuf(Buffer string, BufSize int32) int32 {
     return RichEdit_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
+func (r *TRichEdit) GetTextLen() int32 {
+    return RichEdit_GetTextLen(r.instance)
+}
+
 func (r *TRichEdit) FindComponent(AName string) *TComponent {
     return ComponentFromInst(RichEdit_FindComponent(r.instance, AName))
 }

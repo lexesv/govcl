@@ -127,6 +127,10 @@ func (t *TToolBar) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ToolBar_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
+func (t *TToolBar) GetTextLen() int32 {
+    return ToolBar_GetTextLen(t.instance)
+}
+
 func (t *TToolBar) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ToolBar_FindComponent(t.instance, AName))
 }

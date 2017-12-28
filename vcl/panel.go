@@ -127,6 +127,10 @@ func (p *TPanel) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Panel_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
+func (p *TPanel) GetTextLen() int32 {
+    return Panel_GetTextLen(p.instance)
+}
+
 func (p *TPanel) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Panel_FindComponent(p.instance, AName))
 }

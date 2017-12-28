@@ -1427,3 +1427,21 @@ const (
 	OdReserved2
 	OdComboBoxEdit
 )
+
+//   TBitBtnKind = (bkCustom, bkOK, bkCancel, bkHelp, bkYes, bkNo, bkClose,
+// bkAbort, bkRetry, bkIgnore, bkAll);
+type TBitBtnKind int32
+
+const (
+	BkCustom = iota + 0
+	BkOK
+	BkCancel
+	BkHelp
+	BkYes
+	BkNo
+	BkClose
+	BkAbort
+	BkRetry
+	BkIgnore
+	BkAll
+)

@@ -99,6 +99,10 @@ func (i *TImage) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Image_GetTextBuf(i.instance, Buffer , BufSize)
 }
 
+func (i *TImage) GetTextLen() int32 {
+    return Image_GetTextLen(i.instance)
+}
+
 func (i *TImage) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Image_FindComponent(i.instance, AName))
 }

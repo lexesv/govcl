@@ -128,6 +128,10 @@ func (d *TDateTimePicker) GetTextBuf(Buffer string, BufSize int32) int32 {
     return DateTimePicker_GetTextBuf(d.instance, Buffer , BufSize)
 }
 
+func (d *TDateTimePicker) GetTextLen() int32 {
+    return DateTimePicker_GetTextLen(d.instance)
+}
+
 func (d *TDateTimePicker) FindComponent(AName string) *TComponent {
     return ComponentFromInst(DateTimePicker_FindComponent(d.instance, AName))
 }

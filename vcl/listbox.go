@@ -147,6 +147,10 @@ func (l *TListBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return ListBox_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
+func (l *TListBox) GetTextLen() int32 {
+    return ListBox_GetTextLen(l.instance)
+}
+
 func (l *TListBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(ListBox_FindComponent(l.instance, AName))
 }

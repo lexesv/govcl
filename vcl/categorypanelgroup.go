@@ -135,6 +135,10 @@ func (c *TCategoryPanelGroup) GetTextBuf(Buffer string, BufSize int32) int32 {
     return CategoryPanelGroup_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
+func (c *TCategoryPanelGroup) GetTextLen() int32 {
+    return CategoryPanelGroup_GetTextLen(c.instance)
+}
+
 func (c *TCategoryPanelGroup) FindComponent(AName string) *TComponent {
     return ComponentFromInst(CategoryPanelGroup_FindComponent(c.instance, AName))
 }

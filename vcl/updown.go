@@ -127,6 +127,10 @@ func (u *TUpDown) GetTextBuf(Buffer string, BufSize int32) int32 {
     return UpDown_GetTextBuf(u.instance, Buffer , BufSize)
 }
 
+func (u *TUpDown) GetTextLen() int32 {
+    return UpDown_GetTextLen(u.instance)
+}
+
 func (u *TUpDown) FindComponent(AName string) *TComponent {
     return ComponentFromInst(UpDown_FindComponent(u.instance, AName))
 }

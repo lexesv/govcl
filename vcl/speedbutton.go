@@ -103,6 +103,10 @@ func (s *TSpeedButton) GetTextBuf(Buffer string, BufSize int32) int32 {
     return SpeedButton_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
+func (s *TSpeedButton) GetTextLen() int32 {
+    return SpeedButton_GetTextLen(s.instance)
+}
+
 func (s *TSpeedButton) FindComponent(AName string) *TComponent {
     return ComponentFromInst(SpeedButton_FindComponent(s.instance, AName))
 }
@@ -219,12 +223,28 @@ func (s *TSpeedButton) SetFont(value *TFont) {
     SpeedButton_SetFont(s.instance, CheckPtr(value))
 }
 
+func (s *TSpeedButton) Glyph() *TBitmap {
+    return BitmapFromInst(SpeedButton_GetGlyph(s.instance))
+}
+
+func (s *TSpeedButton) SetGlyph(value *TBitmap) {
+    SpeedButton_SetGlyph(s.instance, CheckPtr(value))
+}
+
 func (s *TSpeedButton) Layout() TButtonLayout {
     return SpeedButton_GetLayout(s.instance)
 }
 
 func (s *TSpeedButton) SetLayout(value TButtonLayout) {
     SpeedButton_SetLayout(s.instance, value)
+}
+
+func (s *TSpeedButton) NumGlyphs() TNumGlyphs {
+    return SpeedButton_GetNumGlyphs(s.instance)
+}
+
+func (s *TSpeedButton) SetNumGlyphs(value TNumGlyphs) {
+    SpeedButton_SetNumGlyphs(s.instance, value)
 }
 
 func (s *TSpeedButton) ParentFont() bool {
@@ -257,6 +277,14 @@ func (s *TSpeedButton) ShowHint() bool {
 
 func (s *TSpeedButton) SetShowHint(value bool) {
     SpeedButton_SetShowHint(s.instance, value)
+}
+
+func (s *TSpeedButton) Spacing() int32 {
+    return SpeedButton_GetSpacing(s.instance)
+}
+
+func (s *TSpeedButton) SetSpacing(value int32) {
+    SpeedButton_SetSpacing(s.instance, value)
 }
 
 func (s *TSpeedButton) Transparent() bool {

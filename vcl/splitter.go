@@ -99,6 +99,10 @@ func (s *TSplitter) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Splitter_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
+func (s *TSplitter) GetTextLen() int32 {
+    return Splitter_GetTextLen(s.instance)
+}
+
 func (s *TSplitter) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Splitter_FindComponent(s.instance, AName))
 }

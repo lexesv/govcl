@@ -127,6 +127,10 @@ func (r *TRadioGroup) GetTextBuf(Buffer string, BufSize int32) int32 {
     return RadioGroup_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
+func (r *TRadioGroup) GetTextLen() int32 {
+    return RadioGroup_GetTextLen(r.instance)
+}
+
 func (r *TRadioGroup) FindComponent(AName string) *TComponent {
     return ComponentFromInst(RadioGroup_FindComponent(r.instance, AName))
 }

@@ -99,6 +99,10 @@ func (l *TLabel) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Label_GetTextBuf(l.instance, Buffer , BufSize)
 }
 
+func (l *TLabel) GetTextLen() int32 {
+    return Label_GetTextLen(l.instance)
+}
+
 func (l *TLabel) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Label_FindComponent(l.instance, AName))
 }

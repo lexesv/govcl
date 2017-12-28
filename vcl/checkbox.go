@@ -127,6 +127,10 @@ func (c *TCheckBox) GetTextBuf(Buffer string, BufSize int32) int32 {
     return CheckBox_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
+func (c *TCheckBox) GetTextLen() int32 {
+    return CheckBox_GetTextLen(c.instance)
+}
+
 func (c *TCheckBox) FindComponent(AName string) *TComponent {
     return ComponentFromInst(CheckBox_FindComponent(c.instance, AName))
 }

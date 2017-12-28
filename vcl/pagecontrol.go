@@ -135,6 +135,10 @@ func (p *TPageControl) GetTextBuf(Buffer string, BufSize int32) int32 {
     return PageControl_GetTextBuf(p.instance, Buffer , BufSize)
 }
 
+func (p *TPageControl) GetTextLen() int32 {
+    return PageControl_GetTextLen(p.instance)
+}
+
 func (p *TPageControl) FindComponent(AName string) *TComponent {
     return ComponentFromInst(PageControl_FindComponent(p.instance, AName))
 }

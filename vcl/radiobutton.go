@@ -127,6 +127,10 @@ func (r *TRadioButton) GetTextBuf(Buffer string, BufSize int32) int32 {
     return RadioButton_GetTextBuf(r.instance, Buffer , BufSize)
 }
 
+func (r *TRadioButton) GetTextLen() int32 {
+    return RadioButton_GetTextLen(r.instance)
+}
+
 func (r *TRadioButton) FindComponent(AName string) *TComponent {
     return ComponentFromInst(RadioButton_FindComponent(r.instance, AName))
 }

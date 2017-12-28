@@ -127,6 +127,10 @@ func (s *TStaticText) GetTextBuf(Buffer string, BufSize int32) int32 {
     return StaticText_GetTextBuf(s.instance, Buffer , BufSize)
 }
 
+func (s *TStaticText) GetTextLen() int32 {
+    return StaticText_GetTextLen(s.instance)
+}
+
 func (s *TStaticText) FindComponent(AName string) *TComponent {
     return ComponentFromInst(StaticText_FindComponent(s.instance, AName))
 }

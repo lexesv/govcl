@@ -183,6 +183,10 @@ func (t *TTreeView) GetTextBuf(Buffer string, BufSize int32) int32 {
     return TreeView_GetTextBuf(t.instance, Buffer , BufSize)
 }
 
+func (t *TTreeView) GetTextLen() int32 {
+    return TreeView_GetTextLen(t.instance)
+}
+
 func (t *TTreeView) FindComponent(AName string) *TComponent {
     return ComponentFromInst(TreeView_FindComponent(t.instance, AName))
 }

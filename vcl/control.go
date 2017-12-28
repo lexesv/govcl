@@ -99,6 +99,10 @@ func (c *TControl) GetTextBuf(Buffer string, BufSize int32) int32 {
     return Control_GetTextBuf(c.instance, Buffer , BufSize)
 }
 
+func (c *TControl) GetTextLen() int32 {
+    return Control_GetTextLen(c.instance)
+}
+
 func (c *TControl) FindComponent(AName string) *TComponent {
     return ComponentFromInst(Control_FindComponent(c.instance, AName))
 }

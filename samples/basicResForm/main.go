@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	"gitee.com/ying32/golcl/lcl/types"
 	"gitee.com/ying32/govcl/vcl"
-	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
 	vcl.Application.SetOnException(func(sender, e vcl.IObject) {
-		fmt.Println("异常了：" + vcl.ExceptionFromObj(e).Message())
+		vcl.ShowMessage(vcl.ExceptionFromObj(e).Message())
 	})
 
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
@@ -22,9 +22,12 @@ func main() {
 	// 字节加载方式
 	vcl.Application.CreateFormFromBytes(form2Bytes, &Form2)
 
-	fmt.Println(Form1.Button1)
+	fmt.Println(Form1.Caption())
 	Form1.Button1.SetOnClick(func(sender vcl.IObject) {
-		vcl.ShowMessage("Hello!")
+		//vcl.ShowMessage("Hello!")
+		jpg := vcl.NewJPEGImage()
+		defer jpg.Free()
+		jpg.LoadFromFile("a.jpg")
 	})
 
 	Form1.CheckBox1.SetOnClick(func(sender vcl.IObject) {

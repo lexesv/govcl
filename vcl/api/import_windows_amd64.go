@@ -1,7 +1,3 @@
 package api
 
-import (
-	"syscall"
-)
-
-var libvcl = syscall.NewLazyDLL("libvclx64.dll")
+var libvcl = NewLazyDLL("libvclx64.dll")

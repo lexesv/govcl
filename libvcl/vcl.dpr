@@ -48,8 +48,8 @@ uses
   Vcl.CheckLst,
   Vcl.Samples.Gauges,
   uEventCallback in 'uEventCallback.pas',
-  ufrmGo in 'ufrmGo.pas' {GoForm},
-  {$IFDEF LIBVCL}uFormDesignerFile{$ENDIF};
+  ufrmGo in 'ufrmGo.pas' {GoForm}
+  {$IFDEF LIBVCL},uFormDesignerFile{$ENDIF};
 
 {$R *.res}
 

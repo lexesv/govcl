@@ -17,6 +17,9 @@ func NewLazyDLL(name string) *LazyDLL {
 	l.LazyDLL = syscall.NewLazyDLL(name)
 	// 导入调用的
 	l.mySyscall = l.LazyDLL.NewProc("MySyscall")
+	if l.mySyscall.Find() != nil {
+		l.mySyscall = nil
+	}
 	return l
 }
 

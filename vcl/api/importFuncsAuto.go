@@ -268,6 +268,10 @@ func Application_SetOnException(obj uintptr, fn interface{}) {
     application_SetOnException.Call(obj, addEventToMap(fn))
 }
 
+func Application_SetOnHint(obj uintptr, fn interface{}) {
+    application_SetOnHint.Call(obj, addEventToMap(fn))
+}
+
 func Application_SetOnMinimize(obj uintptr, fn interface{}) {
     application_SetOnMinimize.Call(obj, addEventToMap(fn))
 }
@@ -6447,6 +6451,15 @@ func ListBox_GetCanvas(obj uintptr) uintptr {
     return ret
 }
 
+func ListBox_GetCount(obj uintptr) int32 {
+    ret, _, _ := listBox_GetCount.Call(obj)
+    return int32(ret)
+}
+
+func ListBox_SetCount(obj uintptr, value int32) {
+   listBox_SetCount.Call(obj, uintptr(value))
+}
+
 func ListBox_GetSelCount(obj uintptr) int32 {
     ret, _, _ := listBox_GetSelCount.Call(obj)
     return int32(ret)
@@ -12604,6 +12617,15 @@ func ColorListBox_GetCanvas(obj uintptr) uintptr {
     return ret
 }
 
+func ColorListBox_GetCount(obj uintptr) int32 {
+    ret, _, _ := colorListBox_GetCount.Call(obj)
+    return int32(ret)
+}
+
+func ColorListBox_SetCount(obj uintptr, value int32) {
+   colorListBox_SetCount.Call(obj, uintptr(value))
+}
+
 func ColorListBox_GetItems(obj uintptr) uintptr {
     ret, _, _ := colorListBox_GetItems.Call(obj)
     return ret
@@ -18063,6 +18085,11 @@ func ImageList_SetHandle(obj uintptr, value uintptr) {
    imageList_SetHandle.Call(obj, value)
 }
 
+func ImageList_GetCount(obj uintptr) int32 {
+    ret, _, _ := imageList_GetCount.Call(obj)
+    return int32(ret)
+}
+
 func ImageList_GetComponentCount(obj uintptr) int32 {
     ret, _, _ := imageList_GetComponentCount.Call(obj)
     return int32(ret)
@@ -23382,6 +23409,10 @@ func StatusBar_SetOnDblClick(obj uintptr, fn interface{}) {
     statusBar_SetOnDblClick.Call(obj, addEventToMap(fn))
 }
 
+func StatusBar_SetOnHint(obj uintptr, fn interface{}) {
+    statusBar_SetOnHint.Call(obj, addEventToMap(fn))
+}
+
 func StatusBar_SetOnMouseDown(obj uintptr, fn interface{}) {
     statusBar_SetOnMouseDown.Call(obj, addEventToMap(fn))
 }
@@ -26574,6 +26605,15 @@ func Strings_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func Strings_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := strings_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func Strings_SetCapacity(obj uintptr, value int32) {
+   strings_SetCapacity.Call(obj, uintptr(value))
+}
+
 func Strings_GetCommaText(obj uintptr) string {
     ret, _, _ := strings_GetCommaText.Call(obj)
     return DStrToGoStr(ret)
@@ -26581,6 +26621,11 @@ func Strings_GetCommaText(obj uintptr) string {
 
 func Strings_SetCommaText(obj uintptr, value string) {
    strings_SetCommaText.Call(obj, GoStrToDStr(value))
+}
+
+func Strings_GetCount(obj uintptr) int32 {
+    ret, _, _ := strings_GetCount.Call(obj)
+    return int32(ret)
 }
 
 func Strings_GetDelimiter(obj uintptr) uint16 {
@@ -26773,6 +26818,15 @@ func StringList_SetOnChange(obj uintptr, fn interface{}) {
     stringList_SetOnChange.Call(obj, addEventToMap(fn))
 }
 
+func StringList_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := stringList_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func StringList_SetCapacity(obj uintptr, value int32) {
+   stringList_SetCapacity.Call(obj, uintptr(value))
+}
+
 func StringList_GetCommaText(obj uintptr) string {
     ret, _, _ := stringList_GetCommaText.Call(obj)
     return DStrToGoStr(ret)
@@ -26780,6 +26834,11 @@ func StringList_GetCommaText(obj uintptr) string {
 
 func StringList_SetCommaText(obj uintptr, value string) {
    stringList_SetCommaText.Call(obj, GoStrToDStr(value))
+}
+
+func StringList_GetCount(obj uintptr) int32 {
+    ret, _, _ := stringList_GetCount.Call(obj)
+    return int32(ret)
 }
 
 func StringList_GetDelimiter(obj uintptr) uint16 {
@@ -27107,6 +27166,11 @@ func MenuItem_GetHandle(obj uintptr) HMENU {
     return HMENU(ret)
 }
 
+func MenuItem_GetCount(obj uintptr) int32 {
+    ret, _, _ := menuItem_GetCount.Call(obj)
+    return int32(ret)
+}
+
 func MenuItem_GetParent(obj uintptr) uintptr {
     ret, _, _ := menuItem_GetParent.Call(obj)
     return ret
@@ -27347,6 +27411,20 @@ func ListGroups_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func ListGroups_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := listGroups_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func ListGroups_SetCapacity(obj uintptr, value int32) {
+   listGroups_SetCapacity.Call(obj, uintptr(value))
+}
+
+func ListGroups_GetCount(obj uintptr) int32 {
+    ret, _, _ := listGroups_GetCount.Call(obj)
+    return int32(ret)
+}
+
 func ListGroups_GetItems(obj uintptr, Index int32) uintptr {
     ret, _, _ := listGroups_GetItems.Call(obj, uintptr(Index))
     return ret
@@ -27526,6 +27604,20 @@ func ListColumns_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func ListColumns_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := listColumns_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func ListColumns_SetCapacity(obj uintptr, value int32) {
+   listColumns_SetCapacity.Call(obj, uintptr(value))
+}
+
+func ListColumns_GetCount(obj uintptr) int32 {
+    ret, _, _ := listColumns_GetCount.Call(obj)
+    return int32(ret)
+}
+
 func ListColumns_GetItems(obj uintptr, Index int32) uintptr {
     ret, _, _ := listColumns_GetItems.Call(obj, uintptr(Index))
     return ret
@@ -27610,6 +27702,15 @@ func ListItems_GetHashCode(obj uintptr) int32 {
 func ListItems_ToString(obj uintptr) string {
     ret, _, _ := listItems_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+func ListItems_GetCount(obj uintptr) int32 {
+    ret, _, _ := listItems_GetCount.Call(obj)
+    return int32(ret)
+}
+
+func ListItems_SetCount(obj uintptr, value int32) {
+   listItems_SetCount.Call(obj, uintptr(value))
 }
 
 func ListItems_GetHandle(obj uintptr) HWND {
@@ -27756,6 +27857,11 @@ func TreeNodes_GetHashCode(obj uintptr) int32 {
 func TreeNodes_ToString(obj uintptr) string {
     ret, _, _ := treeNodes_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+func TreeNodes_GetCount(obj uintptr) int32 {
+    ret, _, _ := treeNodes_GetCount.Call(obj)
+    return int32(ret)
 }
 
 func TreeNodes_GetHandle(obj uintptr) HWND {
@@ -28104,6 +28210,11 @@ func TreeNode_ToString(obj uintptr) string {
 
 func TreeNode_GetAbsoluteIndex(obj uintptr) int32 {
     ret, _, _ := treeNode_GetAbsoluteIndex.Call(obj)
+    return int32(ret)
+}
+
+func TreeNode_GetCount(obj uintptr) int32 {
+    ret, _, _ := treeNode_GetCount.Call(obj)
     return int32(ret)
 }
 
@@ -30547,6 +30658,20 @@ func StatusPanels_GetHashCode(obj uintptr) int32 {
 func StatusPanels_ToString(obj uintptr) string {
     ret, _, _ := statusPanels_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+func StatusPanels_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := statusPanels_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func StatusPanels_SetCapacity(obj uintptr, value int32) {
+   statusPanels_SetCapacity.Call(obj, uintptr(value))
+}
+
+func StatusPanels_GetCount(obj uintptr) int32 {
+    ret, _, _ := statusPanels_GetCount.Call(obj)
+    return int32(ret)
 }
 
 func StatusPanels_GetItems(obj uintptr, Index int32) uintptr {
@@ -33672,6 +33797,24 @@ func List_GetHashCode(obj uintptr) int32 {
 func List_ToString(obj uintptr) string {
     ret, _, _ := list_ToString.Call(obj)
     return DStrToGoStr(ret)
+}
+
+func List_GetCapacity(obj uintptr) int32 {
+    ret, _, _ := list_GetCapacity.Call(obj)
+    return int32(ret)
+}
+
+func List_SetCapacity(obj uintptr, value int32) {
+   list_SetCapacity.Call(obj, uintptr(value))
+}
+
+func List_GetCount(obj uintptr) int32 {
+    ret, _, _ := list_GetCount.Call(obj)
+    return int32(ret)
+}
+
+func List_SetCount(obj uintptr, value int32) {
+   list_SetCount.Call(obj, uintptr(value))
 }
 
 func List_GetList(obj uintptr) uintptr {
@@ -36955,6 +37098,15 @@ func CheckListBox_SetAutoCompleteDelay(obj uintptr, value uint32) {
 func CheckListBox_GetCanvas(obj uintptr) uintptr {
     ret, _, _ := checkListBox_GetCanvas.Call(obj)
     return ret
+}
+
+func CheckListBox_GetCount(obj uintptr) int32 {
+    ret, _, _ := checkListBox_GetCount.Call(obj)
+    return int32(ret)
+}
+
+func CheckListBox_SetCount(obj uintptr, value int32) {
+   checkListBox_SetCount.Call(obj, uintptr(value))
 }
 
 func CheckListBox_GetMultiSelect(obj uintptr) bool {

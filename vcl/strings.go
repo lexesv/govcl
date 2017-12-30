@@ -143,12 +143,24 @@ func (s *TStrings) ToString() string {
     return Strings_ToString(s.instance)
 }
 
+func (s *TStrings) Capacity() int32 {
+    return Strings_GetCapacity(s.instance)
+}
+
+func (s *TStrings) SetCapacity(value int32) {
+    Strings_SetCapacity(s.instance, value)
+}
+
 func (s *TStrings) CommaText() string {
     return Strings_GetCommaText(s.instance)
 }
 
 func (s *TStrings) SetCommaText(value string) {
     Strings_SetCommaText(s.instance, value)
+}
+
+func (s *TStrings) Count() int32 {
+    return Strings_GetCount(s.instance)
 }
 
 func (s *TStrings) Delimiter() uint16 {

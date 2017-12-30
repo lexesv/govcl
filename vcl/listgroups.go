@@ -102,6 +102,18 @@ func (l *TListGroups) ToString() string {
     return ListGroups_ToString(l.instance)
 }
 
+func (l *TListGroups) Capacity() int32 {
+    return ListGroups_GetCapacity(l.instance)
+}
+
+func (l *TListGroups) SetCapacity(value int32) {
+    ListGroups_SetCapacity(l.instance, value)
+}
+
+func (l *TListGroups) Count() int32 {
+    return ListGroups_GetCount(l.instance)
+}
+
 func (l *TListGroups) Items(Index int32) *TListGroup {
     return ListGroupFromInst(ListGroups_GetItems(l.instance, Index))
 }

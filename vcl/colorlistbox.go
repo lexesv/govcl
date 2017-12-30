@@ -463,6 +463,14 @@ func (c *TColorListBox) Canvas() *TCanvas {
     return CanvasFromInst(ColorListBox_GetCanvas(c.instance))
 }
 
+func (c *TColorListBox) Count() int32 {
+    return ColorListBox_GetCount(c.instance)
+}
+
+func (c *TColorListBox) SetCount(value int32) {
+    ColorListBox_SetCount(c.instance, value)
+}
+
 func (c *TColorListBox) Items() *TStrings {
     return StringsFromInst(ColorListBox_GetItems(c.instance))
 }

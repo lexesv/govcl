@@ -115,6 +115,10 @@ func (t *TTreeNode) AbsoluteIndex() int32 {
     return TreeNode_GetAbsoluteIndex(t.instance)
 }
 
+func (t *TTreeNode) Count() int32 {
+    return TreeNode_GetCount(t.instance)
+}
+
 func (t *TTreeNode) Cut() bool {
     return TreeNode_GetCut(t.instance)
 }

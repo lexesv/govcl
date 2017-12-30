@@ -147,6 +147,10 @@ func (t *TTreeNodes) ToString() string {
     return TreeNodes_ToString(t.instance)
 }
 
+func (t *TTreeNodes) Count() int32 {
+    return TreeNodes_GetCount(t.instance)
+}
+
 func (t *TTreeNodes) Handle() HWND {
     return TreeNodes_GetHandle(t.instance)
 }

@@ -106,6 +106,18 @@ func (s *TStatusPanels) ToString() string {
     return StatusPanels_ToString(s.instance)
 }
 
+func (s *TStatusPanels) Capacity() int32 {
+    return StatusPanels_GetCapacity(s.instance)
+}
+
+func (s *TStatusPanels) SetCapacity(value int32) {
+    StatusPanels_SetCapacity(s.instance, value)
+}
+
+func (s *TStatusPanels) Count() int32 {
+    return StatusPanels_GetCount(s.instance)
+}
+
 func (s *TStatusPanels) Items(Index int32) *TStatusPanel {
     return StatusPanelFromInst(StatusPanels_GetItems(s.instance, Index))
 }

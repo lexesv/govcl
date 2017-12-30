@@ -275,6 +275,10 @@ func (a *TApplication) SetOnException(fn TExceptionEvent) {
     Application_SetOnException(a.instance, fn)
 }
 
+func (a *TApplication) SetOnHint(fn TNotifyEvent) {
+    Application_SetOnHint(a.instance, fn)
+}
+
 func (a *TApplication) SetOnMinimize(fn TNotifyEvent) {
     Application_SetOnMinimize(a.instance, fn)
 }

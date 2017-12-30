@@ -351,6 +351,10 @@ func (s *TStatusBar) SetOnDblClick(fn TNotifyEvent) {
     StatusBar_SetOnDblClick(s.instance, fn)
 }
 
+func (s *TStatusBar) SetOnHint(fn TNotifyEvent) {
+    StatusBar_SetOnHint(s.instance, fn)
+}
+
 func (s *TStatusBar) SetOnMouseDown(fn TMouseEvent) {
     StatusBar_SetOnMouseDown(s.instance, fn)
 }

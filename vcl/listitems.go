@@ -107,6 +107,14 @@ func (l *TListItems) ToString() string {
     return ListItems_ToString(l.instance)
 }
 
+func (l *TListItems) Count() int32 {
+    return ListItems_GetCount(l.instance)
+}
+
+func (l *TListItems) SetCount(value int32) {
+    ListItems_SetCount(l.instance, value)
+}
+
 func (l *TListItems) Handle() HWND {
     return ListItems_GetHandle(l.instance)
 }

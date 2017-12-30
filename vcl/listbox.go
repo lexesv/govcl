@@ -491,6 +491,14 @@ func (l *TListBox) Canvas() *TCanvas {
     return CanvasFromInst(ListBox_GetCanvas(l.instance))
 }
 
+func (l *TListBox) Count() int32 {
+    return ListBox_GetCount(l.instance)
+}
+
+func (l *TListBox) SetCount(value int32) {
+    ListBox_SetCount(l.instance, value)
+}
+
 func (l *TListBox) SelCount() int32 {
     return ListBox_GetSelCount(l.instance)
 }

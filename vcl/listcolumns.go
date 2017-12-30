@@ -102,6 +102,18 @@ func (l *TListColumns) ToString() string {
     return ListColumns_ToString(l.instance)
 }
 
+func (l *TListColumns) Capacity() int32 {
+    return ListColumns_GetCapacity(l.instance)
+}
+
+func (l *TListColumns) SetCapacity(value int32) {
+    ListColumns_SetCapacity(l.instance, value)
+}
+
+func (l *TListColumns) Count() int32 {
+    return ListColumns_GetCount(l.instance)
+}
+
 func (l *TListColumns) Items(Index int32) *TListColumn {
     return ListColumnFromInst(ListColumns_GetItems(l.instance, Index))
 }

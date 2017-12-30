@@ -155,12 +155,24 @@ func (s *TStringList) SetOnChange(fn TNotifyEvent) {
     StringList_SetOnChange(s.instance, fn)
 }
 
+func (s *TStringList) Capacity() int32 {
+    return StringList_GetCapacity(s.instance)
+}
+
+func (s *TStringList) SetCapacity(value int32) {
+    StringList_SetCapacity(s.instance, value)
+}
+
 func (s *TStringList) CommaText() string {
     return StringList_GetCommaText(s.instance)
 }
 
 func (s *TStringList) SetCommaText(value string) {
     StringList_SetCommaText(s.instance, value)
+}
+
+func (s *TStringList) Count() int32 {
+    return StringList_GetCount(s.instance)
 }
 
 func (s *TStringList) Delimiter() uint16 {

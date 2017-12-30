@@ -515,6 +515,14 @@ func (c *TCheckListBox) Canvas() *TCanvas {
     return CanvasFromInst(CheckListBox_GetCanvas(c.instance))
 }
 
+func (c *TCheckListBox) Count() int32 {
+    return CheckListBox_GetCount(c.instance)
+}
+
+func (c *TCheckListBox) SetCount(value int32) {
+    CheckListBox_SetCount(c.instance, value)
+}
+
 func (c *TCheckListBox) MultiSelect() bool {
     return CheckListBox_GetMultiSelect(c.instance)
 }

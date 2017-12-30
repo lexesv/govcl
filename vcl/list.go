@@ -94,6 +94,22 @@ func (l *TList) ToString() string {
     return List_ToString(l.instance)
 }
 
+func (l *TList) Capacity() int32 {
+    return List_GetCapacity(l.instance)
+}
+
+func (l *TList) SetCapacity(value int32) {
+    List_SetCapacity(l.instance, value)
+}
+
+func (l *TList) Count() int32 {
+    return List_GetCount(l.instance)
+}
+
+func (l *TList) SetCount(value int32) {
+    List_SetCount(l.instance, value)
+}
+
 func (l *TList) List() uintptr {
     return List_GetList(l.instance)
 }

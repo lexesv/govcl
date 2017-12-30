@@ -111,6 +111,10 @@ func (m *TMenuItem) Handle() HMENU {
     return MenuItem_GetHandle(m.instance)
 }
 
+func (m *TMenuItem) Count() int32 {
+    return MenuItem_GetCount(m.instance)
+}
+
 func (m *TMenuItem) Parent() *TMenuItem {
     return MenuItemFromInst(MenuItem_GetParent(m.instance))
 }

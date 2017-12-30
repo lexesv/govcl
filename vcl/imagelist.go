@@ -291,6 +291,10 @@ func (i *TImageList) SetHandle(value uintptr) {
     ImageList_SetHandle(i.instance, value)
 }
 
+func (i *TImageList) Count() int32 {
+    return ImageList_GetCount(i.instance)
+}
+
 func (i *TImageList) ComponentCount() int32 {
     return ImageList_GetComponentCount(i.instance)
 }

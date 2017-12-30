@@ -21756,6 +21756,18 @@ func ListView_SetVisible(obj uintptr, value bool) {
    listView_SetVisible.Call(obj, GoBoolToDBool(value))
 }
 
+func ListView_SetOnAdvancedCustomDraw(obj uintptr, fn interface{}) {
+    listView_SetOnAdvancedCustomDraw.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnAdvancedCustomDrawItem(obj uintptr, fn interface{}) {
+    listView_SetOnAdvancedCustomDrawItem.Call(obj, addEventToMap(fn))
+}
+
+func ListView_SetOnAdvancedCustomDrawSubItem(obj uintptr, fn interface{}) {
+    listView_SetOnAdvancedCustomDrawSubItem.Call(obj, addEventToMap(fn))
+}
+
 func ListView_SetOnChange(obj uintptr, fn interface{}) {
     listView_SetOnChange.Call(obj, addEventToMap(fn))
 }
@@ -22673,6 +22685,14 @@ func TreeView_GetStyleElements(obj uintptr) TStyleElements {
 
 func TreeView_SetStyleElements(obj uintptr, value TStyleElements) {
    treeView_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func TreeView_SetOnAdvancedCustomDraw(obj uintptr, fn interface{}) {
+    treeView_SetOnAdvancedCustomDraw.Call(obj, addEventToMap(fn))
+}
+
+func TreeView_SetOnAdvancedCustomDrawItem(obj uintptr, fn interface{}) {
+    treeView_SetOnAdvancedCustomDrawItem.Call(obj, addEventToMap(fn))
 }
 
 func TreeView_SetOnChange(obj uintptr, fn interface{}) {
@@ -24121,6 +24141,14 @@ func ToolBar_GetWrapable(obj uintptr) bool {
 
 func ToolBar_SetWrapable(obj uintptr, value bool) {
    toolBar_SetWrapable.Call(obj, GoBoolToDBool(value))
+}
+
+func ToolBar_SetOnAdvancedCustomDraw(obj uintptr, fn interface{}) {
+    toolBar_SetOnAdvancedCustomDraw.Call(obj, addEventToMap(fn))
+}
+
+func ToolBar_SetOnAdvancedCustomDrawButton(obj uintptr, fn interface{}) {
+    toolBar_SetOnAdvancedCustomDrawButton.Call(obj, addEventToMap(fn))
 }
 
 func ToolBar_SetOnClick(obj uintptr, fn interface{}) {

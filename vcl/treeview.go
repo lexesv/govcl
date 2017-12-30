@@ -543,6 +543,14 @@ func (t *TTreeView) SetStyleElements(value TStyleElements) {
     TreeView_SetStyleElements(t.instance, value)
 }
 
+func (t *TTreeView) SetOnAdvancedCustomDraw(fn TTVAdvancedCustomDrawEvent) {
+    TreeView_SetOnAdvancedCustomDraw(t.instance, fn)
+}
+
+func (t *TTreeView) SetOnAdvancedCustomDrawItem(fn TTVAdvancedCustomDrawItemEvent) {
+    TreeView_SetOnAdvancedCustomDrawItem(t.instance, fn)
+}
+
 func (t *TTreeView) SetOnChange(fn TTVChangedEvent) {
     TreeView_SetOnChange(t.instance, fn)
 }

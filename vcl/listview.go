@@ -591,6 +591,18 @@ func (l *TListView) SetVisible(value bool) {
     ListView_SetVisible(l.instance, value)
 }
 
+func (l *TListView) SetOnAdvancedCustomDraw(fn TLVAdvancedCustomDrawEvent) {
+    ListView_SetOnAdvancedCustomDraw(l.instance, fn)
+}
+
+func (l *TListView) SetOnAdvancedCustomDrawItem(fn TLVAdvancedCustomDrawItemEvent) {
+    ListView_SetOnAdvancedCustomDrawItem(l.instance, fn)
+}
+
+func (l *TListView) SetOnAdvancedCustomDrawSubItem(fn TLVAdvancedCustomDrawSubItemEvent) {
+    ListView_SetOnAdvancedCustomDrawSubItem(l.instance, fn)
+}
+
 func (l *TListView) SetOnChange(fn TLVChangeEvent) {
     ListView_SetOnChange(l.instance, fn)
 }

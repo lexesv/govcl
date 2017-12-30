@@ -483,6 +483,14 @@ func (t *TToolBar) SetWrapable(value bool) {
     ToolBar_SetWrapable(t.instance, value)
 }
 
+func (t *TToolBar) SetOnAdvancedCustomDraw(fn TTBAdvancedCustomDrawEvent) {
+    ToolBar_SetOnAdvancedCustomDraw(t.instance, fn)
+}
+
+func (t *TToolBar) SetOnAdvancedCustomDrawButton(fn TTBAdvancedCustomDrawBtnEvent) {
+    ToolBar_SetOnAdvancedCustomDrawButton(t.instance, fn)
+}
+
 func (t *TToolBar) SetOnClick(fn TNotifyEvent) {
     ToolBar_SetOnClick(t.instance, fn)
 }

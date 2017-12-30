@@ -1511,3 +1511,55 @@ const (
 	GkPie
 	GkNeedle
 )
+
+//TCustomDrawTarget = (dtControl, dtItem, dtSubItem);
+type TCustomDrawTarget int32
+
+const (
+	DtControl = iota + 0
+	DtItem
+	DtSubItem
+)
+
+//TCustomDrawStage = (cdPrePaint, cdPostPaint, cdPreErase, cdPostErase);
+type TCustomDrawStage int32
+
+const (
+	CdPrePaint = iota + 0
+	CdPostPaint
+	CdPreErase
+	cdPostErase
+)
+
+//TCustomDrawState = set of (cdsSelected, cdsGrayed, cdsDisabled, cdsChecked,
+//  cdsFocused, cdsDefault, cdsHot, cdsMarked, cdsIndeterminate,
+//  cdsShowKeyboardCues, cdsNearHot, cdsOtherSideHot, cdsDropHilited);
+type TCustomDrawState uint32
+
+const (
+	CdsSelected = iota + 0
+	CdsGrayed
+	CdsDisabled
+	CdsChecked
+	CdsFocused
+	CdsDefault
+	CdsHot
+	CdsMarked
+	CdsIndeterminate
+	CdsShowKeyboardCues
+	CdsNearHot
+	CdsOtherSideHot
+	CdsDropHilited
+)
+
+//TTBCustomDrawFlags = set of (tbNoEdges, tbHiliteHotTrack, tbNoOffset,
+//  tbNoMark, tbNoEtchedEffect);
+type TTBCustomDrawFlags uint32
+
+const (
+	TbNoEdges = iota + 0
+	TbHiliteHotTrack
+	TbNoOffset
+	TbNoMark
+	TbNoEtchedEffect
+)

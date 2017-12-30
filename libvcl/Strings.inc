@@ -130,6 +130,16 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function Strings_GetCapacity(AObj: TStrings): Integer; stdcall;
+begin
+  Result :=  AObj.Capacity;
+end;
+
+procedure Strings_SetCapacity(AObj: TStrings; AValue: Integer); stdcall;
+begin
+  AObj.Capacity := AValue;
+end;
+
 function Strings_GetCommaText(AObj: TStrings): PChar; stdcall;
 begin
   Result :=  PChar(AObj.CommaText);
@@ -138,6 +148,11 @@ end;
 procedure Strings_SetCommaText(AObj: TStrings; AValue: PChar); stdcall;
 begin
   AObj.CommaText := AValue;
+end;
+
+function Strings_GetCount(AObj: TStrings): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
 end;
 
 function Strings_GetDelimiter(AObj: TStrings): Char; stdcall;
@@ -237,8 +252,11 @@ exports
   Strings_ClassName,
   Strings_GetHashCode,
   Strings_ToString,
+  Strings_GetCapacity,
+  Strings_SetCapacity,
   Strings_GetCommaText,
   Strings_SetCommaText,
+  Strings_GetCount,
   Strings_GetDelimiter,
   Strings_SetDelimiter,
   Strings_GetText,

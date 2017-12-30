@@ -152,6 +152,16 @@ begin
   TEventClass.Add(AObj, geChange, AEventId);
 end;
 
+function StringList_GetCapacity(AObj: TStringList): Integer; stdcall;
+begin
+  Result :=  AObj.Capacity;
+end;
+
+procedure StringList_SetCapacity(AObj: TStringList; AValue: Integer); stdcall;
+begin
+  AObj.Capacity := AValue;
+end;
+
 function StringList_GetCommaText(AObj: TStringList): PChar; stdcall;
 begin
   Result :=  PChar(AObj.CommaText);
@@ -160,6 +170,11 @@ end;
 procedure StringList_SetCommaText(AObj: TStringList; AValue: PChar); stdcall;
 begin
   AObj.CommaText := AValue;
+end;
+
+function StringList_GetCount(AObj: TStringList): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
 end;
 
 function StringList_GetDelimiter(AObj: TStringList): Char; stdcall;
@@ -262,8 +277,11 @@ exports
   StringList_GetSorted,
   StringList_SetSorted,
   StringList_SetOnChange,
+  StringList_GetCapacity,
+  StringList_SetCapacity,
   StringList_GetCommaText,
   StringList_SetCommaText,
+  StringList_GetCount,
   StringList_GetDelimiter,
   StringList_SetDelimiter,
   StringList_GetText,

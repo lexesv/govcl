@@ -90,6 +90,11 @@ begin
   Result :=  AObj.Handle;
 end;
 
+function MenuItem_GetCount(AObj: TMenuItem): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function MenuItem_GetParent(AObj: TMenuItem): TMenuItem; stdcall;
 begin
   Result :=  AObj.Parent;
@@ -308,6 +313,7 @@ exports
   MenuItem_GetHashCode,
   MenuItem_ToString,
   MenuItem_GetHandle,
+  MenuItem_GetCount,
   MenuItem_GetParent,
   MenuItem_GetAction,
   MenuItem_SetAction,

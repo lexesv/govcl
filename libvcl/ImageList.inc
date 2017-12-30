@@ -322,6 +322,11 @@ begin
   AObj.Handle := AValue;
 end;
 
+function ImageList_GetCount(AObj: TImageList): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function ImageList_GetComponentCount(AObj: TImageList): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -431,6 +436,7 @@ exports
   ImageList_SetWidth,
   ImageList_GetHandle,
   ImageList_SetHandle,
+  ImageList_GetCount,
   ImageList_GetComponentCount,
   ImageList_GetComponentIndex,
   ImageList_SetComponentIndex,

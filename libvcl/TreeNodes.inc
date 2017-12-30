@@ -135,6 +135,11 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function TreeNodes_GetCount(AObj: TTreeNodes): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function TreeNodes_GetHandle(AObj: TTreeNodes): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
@@ -178,6 +183,7 @@ exports
   TreeNodes_Equals,
   TreeNodes_GetHashCode,
   TreeNodes_ToString,
+  TreeNodes_GetCount,
   TreeNodes_GetHandle,
   TreeNodes_GetOwner,
   TreeNodes_GetItem;

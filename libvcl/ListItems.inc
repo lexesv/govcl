@@ -85,6 +85,16 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function ListItems_GetCount(AObj: TListItems): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
+procedure ListItems_SetCount(AObj: TListItems; AValue: Integer); stdcall;
+begin
+  AObj.Count := AValue;
+end;
+
 function ListItems_GetHandle(AObj: TListItems): HWND; stdcall;
 begin
   Result :=  AObj.Handle;
@@ -123,6 +133,8 @@ exports
   ListItems_Equals,
   ListItems_GetHashCode,
   ListItems_ToString,
+  ListItems_GetCount,
+  ListItems_SetCount,
   ListItems_GetHandle,
   ListItems_GetOwner,
   ListItems_GetItem,

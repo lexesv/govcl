@@ -80,6 +80,21 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function ListGroups_GetCapacity(AObj: TListGroups): Integer; stdcall;
+begin
+  Result :=  AObj.Capacity;
+end;
+
+procedure ListGroups_SetCapacity(AObj: TListGroups; AValue: Integer); stdcall;
+begin
+  AObj.Capacity := AValue;
+end;
+
+function ListGroups_GetCount(AObj: TListGroups): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function ListGroups_GetItems(AObj: TListGroups; Index: Integer): TListGroup; stdcall;
 begin
   Result :=  AObj.Items[Index];
@@ -107,6 +122,9 @@ exports
   ListGroups_Equals,
   ListGroups_GetHashCode,
   ListGroups_ToString,
+  ListGroups_GetCapacity,
+  ListGroups_SetCapacity,
+  ListGroups_GetCount,
   ListGroups_GetItems,
   ListGroups_SetItems;
 

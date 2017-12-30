@@ -95,6 +95,11 @@ begin
   Result :=  AObj.AbsoluteIndex;
 end;
 
+function TreeNode_GetCount(AObj: TTreeNode): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function TreeNode_GetCut(AObj: TTreeNode): LongBool; stdcall;
 begin
   Result :=  AObj.Cut;
@@ -305,6 +310,7 @@ exports
   TreeNode_GetHashCode,
   TreeNode_ToString,
   TreeNode_GetAbsoluteIndex,
+  TreeNode_GetCount,
   TreeNode_GetCut,
   TreeNode_SetCut,
   TreeNode_GetData,

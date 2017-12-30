@@ -404,6 +404,18 @@ begin
   TEventClass.Add(AObj, geDblClick, AEventId);
 end;
 
+procedure StatusBar_SetOnHint(AObj: TStatusBar; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnHint := nil;
+    TEventClass.Remove(AObj, geHint);
+    Exit;
+  end;
+  AObj.OnHint := TEventClass.OnHint;
+  TEventClass.Add(AObj, geHint, AEventId);
+end;
+
 procedure StatusBar_SetOnMouseDown(AObj: TStatusBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -810,6 +822,7 @@ exports
   StatusBar_SetStyleElements,
   StatusBar_SetOnClick,
   StatusBar_SetOnDblClick,
+  StatusBar_SetOnHint,
   StatusBar_SetOnMouseDown,
   StatusBar_SetOnMouseEnter,
   StatusBar_SetOnMouseLeave,

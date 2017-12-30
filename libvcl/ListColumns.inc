@@ -80,6 +80,21 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function ListColumns_GetCapacity(AObj: TListColumns): Integer; stdcall;
+begin
+  Result :=  AObj.Capacity;
+end;
+
+procedure ListColumns_SetCapacity(AObj: TListColumns; AValue: Integer); stdcall;
+begin
+  AObj.Capacity := AValue;
+end;
+
+function ListColumns_GetCount(AObj: TListColumns): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
 function ListColumns_GetItems(AObj: TListColumns; Index: Integer): TListColumn; stdcall;
 begin
   Result :=  AObj.Items[Index];
@@ -107,6 +122,9 @@ exports
   ListColumns_Equals,
   ListColumns_GetHashCode,
   ListColumns_ToString,
+  ListColumns_GetCapacity,
+  ListColumns_SetCapacity,
+  ListColumns_GetCount,
   ListColumns_GetItems,
   ListColumns_SetItems;
 

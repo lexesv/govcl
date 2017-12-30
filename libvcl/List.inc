@@ -70,6 +70,26 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+function List_GetCapacity(AObj: TList): Integer; stdcall;
+begin
+  Result :=  AObj.Capacity;
+end;
+
+procedure List_SetCapacity(AObj: TList; AValue: Integer); stdcall;
+begin
+  AObj.Capacity := AValue;
+end;
+
+function List_GetCount(AObj: TList): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
+procedure List_SetCount(AObj: TList; AValue: Integer); stdcall;
+begin
+  AObj.Count := AValue;
+end;
+
 function List_GetList(AObj: TList): TPointerList; stdcall;
 begin
   Result :=  AObj.List;
@@ -100,6 +120,10 @@ exports
   List_Equals,
   List_GetHashCode,
   List_ToString,
+  List_GetCapacity,
+  List_SetCapacity,
+  List_GetCount,
+  List_SetCount,
   List_GetList,
   List_GetItems,
   List_SetItems;

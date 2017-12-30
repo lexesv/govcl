@@ -656,6 +656,16 @@ begin
   Result :=  AObj.Canvas;
 end;
 
+function ListBox_GetCount(AObj: TListBox): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
+procedure ListBox_SetCount(AObj: TListBox; AValue: Integer); stdcall;
+begin
+  AObj.Count := AValue;
+end;
+
 function ListBox_GetSelCount(AObj: TListBox): Integer; stdcall;
 begin
   Result :=  AObj.SelCount;
@@ -1035,6 +1045,8 @@ exports
   ListBox_SetOnMouseMove,
   ListBox_SetOnMouseUp,
   ListBox_GetCanvas,
+  ListBox_GetCount,
+  ListBox_SetCount,
   ListBox_GetSelCount,
   ListBox_GetItemIndex,
   ListBox_SetItemIndex,

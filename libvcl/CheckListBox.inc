@@ -679,6 +679,16 @@ begin
   Result :=  AObj.Canvas;
 end;
 
+function CheckListBox_GetCount(AObj: TCheckListBox): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
+procedure CheckListBox_SetCount(AObj: TCheckListBox; AValue: Integer); stdcall;
+begin
+  AObj.Count := AValue;
+end;
+
 function CheckListBox_GetMultiSelect(AObj: TCheckListBox): LongBool; stdcall;
 begin
   Result :=  AObj.MultiSelect;
@@ -1114,6 +1124,8 @@ exports
   CheckListBox_GetAutoCompleteDelay,
   CheckListBox_SetAutoCompleteDelay,
   CheckListBox_GetCanvas,
+  CheckListBox_GetCount,
+  CheckListBox_SetCount,
   CheckListBox_GetMultiSelect,
   CheckListBox_SetMultiSelect,
   CheckListBox_GetSelCount,

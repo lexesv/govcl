@@ -37,7 +37,8 @@ type
               geListViewAdvancedCustomDraw, geListViewAdvancedCustomDrawItem,
               geListViewAdvancedCustomDrawSubItem,
               geTreeViewAdvancedCustomDraw, geTreeViewAdvancedCustomDrawItem,
-              geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton);
+              geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton,
+              geHint);
 
   TEventKey = packed record
     Sender: TObject;
@@ -112,6 +113,7 @@ type
     class procedure OnEnter(Sender: TObject);
     class procedure OnExit(Sender: TObject);
     class procedure OnPopup(Sender: TObject);
+    class procedure OnHint(Sender: TObject);
 
     class procedure OnExecute(Sender: TObject);
     class procedure OnUpdate(Sender: TObject);
@@ -315,6 +317,11 @@ end;
 class procedure TEventClass.OnHide(Sender: TObject);
 begin
   SendEvent(Sender, geHide, [Sender]);
+end;
+
+class procedure TEventClass.OnHint(Sender: TObject);
+begin
+   SendEvent(Sender, geHint, [Sender]);
 end;
 
 class procedure TEventClass.OnKeyDown(Sender: TObject; var Key: Word;

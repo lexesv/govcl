@@ -614,6 +614,16 @@ begin
   Result :=  AObj.Canvas;
 end;
 
+function ColorListBox_GetCount(AObj: TColorListBox): Integer; stdcall;
+begin
+  Result :=  AObj.Count;
+end;
+
+procedure ColorListBox_SetCount(AObj: TColorListBox; AValue: Integer); stdcall;
+begin
+  AObj.Count := AValue;
+end;
+
 function ColorListBox_GetItems(AObj: TColorListBox): TStrings; stdcall;
 begin
   Result :=  AObj.Items;
@@ -1006,6 +1016,8 @@ exports
   ColorListBox_GetAutoCompleteDelay,
   ColorListBox_SetAutoCompleteDelay,
   ColorListBox_GetCanvas,
+  ColorListBox_GetCount,
+  ColorListBox_SetCount,
   ColorListBox_GetItems,
   ColorListBox_SetItems,
   ColorListBox_GetMultiSelect,

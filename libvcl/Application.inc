@@ -302,6 +302,18 @@ begin
   TEventClass.Add(AObj, geException, AEventId);
 end;
 
+procedure Application_SetOnHint(AObj: TApplication; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnHint := nil;
+    TEventClass.Remove(AObj, geHint);
+    Exit;
+  end;
+  AObj.OnHint := TEventClass.OnHint;
+  TEventClass.Add(AObj, geHint, AEventId);
+end;
+
 procedure Application_SetOnMinimize(AObj: TApplication; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -441,6 +453,7 @@ exports
   Application_GetTitle,
   Application_SetTitle,
   Application_SetOnException,
+  Application_SetOnHint,
   Application_SetOnMinimize,
   Application_SetOnRestore,
   Application_GetHandle,

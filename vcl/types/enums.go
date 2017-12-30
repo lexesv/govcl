@@ -1563,3 +1563,13 @@ const (
 	TbNoMark
 	TbNoEtchedEffect
 )
+
+//  TDisplayCode = (drBounds, drIcon, drLabel, drSelectBounds);
+type TDisplayCode int32
+
+const (
+	DrBounds = iota + 0
+	DrIcon
+	DrLabel
+	DrSelectBounds
+)

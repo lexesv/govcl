@@ -67,6 +67,10 @@ func (t *TTreeNode) Delete() {
     TreeNode_Delete(t.instance)
 }
 
+func (t *TTreeNode) DisplayRect(TextOnly bool) TRect {
+    return TreeNode_DisplayRect(t.instance, TextOnly)
+}
+
 func (t *TTreeNode) EditText() bool {
     return TreeNode_EditText(t.instance)
 }

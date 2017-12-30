@@ -63,6 +63,10 @@ func (l *TListItem) Delete() {
     ListItem_Delete(l.instance)
 }
 
+func (l *TListItem) DisplayRect(Code TDisplayCode) TRect {
+    return ListItem_DisplayRect(l.instance, Code)
+}
+
 func (l *TListItem) EditCaption() bool {
     return ListItem_EditCaption(l.instance)
 }

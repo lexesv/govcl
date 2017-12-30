@@ -27797,6 +27797,12 @@ func ListItem_Delete(obj uintptr)  {
     listItem_Delete.Call(obj)
 }
 
+func ListItem_DisplayRect(obj uintptr, Code TDisplayCode) TRect {
+    var ret TRect
+    listItem_DisplayRect.Call(obj, uintptr(Code) , uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
 func ListItem_EditCaption(obj uintptr) bool {
     ret, _, _ := listItem_EditCaption.Call(obj)
     return DBoolToGoBool(ret)
@@ -28041,6 +28047,12 @@ func TreeNode_Collapse(obj uintptr, Recurse bool)  {
 
 func TreeNode_Delete(obj uintptr)  {
     treeNode_Delete.Call(obj)
+}
+
+func TreeNode_DisplayRect(obj uintptr, TextOnly bool) TRect {
+    var ret TRect
+    treeNode_DisplayRect.Call(obj, GoBoolToDBool(TextOnly) , uintptr(unsafe.Pointer(&ret)))
+    return ret
 }
 
 func TreeNode_EditText(obj uintptr) bool {

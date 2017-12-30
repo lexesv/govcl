@@ -23,7 +23,7 @@ type TMenuChangeEvent func(sender IObject, source *TMenuItem, rebuild bool)
 type TSysLinkEvent func(sender IObject, link string, linkType TSysLinkType) // TSysLinkType
 
 // TExceptionEvent TApplication
-type TExceptionEvent func(sender, e IObject)
+type TExceptionEvent func(sender IObject, e *Exception)
 
 // TKeyEvent = procedure(Sender: TObject; var Key: Word; Shift: TShiftState)
 type TKeyEvent func(sender IObject, key *Char, shift TShiftState)

@@ -71,7 +71,7 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 		case TExceptionEvent:
 			v.(TExceptionEvent)(
 				ObjectFromInst(getVal(0)),
-				ObjectFromInst(getVal(1)))
+				ExceptionFromInst(getVal(1)))
 
 		// func(sender IObject, key *Char, shift TShiftState)
 		case TKeyEvent:

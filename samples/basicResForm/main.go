@@ -12,8 +12,8 @@ func main() {
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
-	vcl.Application.SetOnException(func(sender, e vcl.IObject) {
-		vcl.ShowMessage(vcl.ExceptionFromObj(e).Message())
+	vcl.Application.SetOnException(func(sender vcl.IObject, e *vcl.Exception) {
+		vcl.ShowMessage(e.Message())
 	})
 
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)

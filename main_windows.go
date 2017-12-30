@@ -34,7 +34,7 @@ func main() {
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 
-	vcl.Application.SetOnException(func(vcl.IObject, vcl.IObject) {
+	vcl.Application.SetOnException(func(sender vcl.IObject, e *vcl.Exception) {
 		fmt.Println("exception.")
 	})
 

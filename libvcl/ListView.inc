@@ -690,6 +690,42 @@ begin
   AObj.Visible := AValue;
 end;
 
+procedure ListView_SetOnAdvancedCustomDraw(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDraw := nil;
+    TEventClass.Remove(AObj, geListViewAdvancedCustomDraw);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDraw := TEventClass.ListViewOnAdvancedCustomDraw;
+  TEventClass.Add(AObj, geListViewAdvancedCustomDraw, AEventId);
+end;
+
+procedure ListView_SetOnAdvancedCustomDrawItem(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDrawItem := nil;
+    TEventClass.Remove(AObj, geListViewAdvancedCustomDrawItem);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDrawItem := TEventClass.ListViewOnAdvancedCustomDrawItem;
+  TEventClass.Add(AObj, geListViewAdvancedCustomDrawItem, AEventId);
+end;
+
+procedure ListView_SetOnAdvancedCustomDrawSubItem(AObj: TListView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDrawSubItem := nil;
+    TEventClass.Remove(AObj, geListViewAdvancedCustomDrawSubItem);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDrawSubItem := TEventClass.ListViewOnAdvancedCustomDrawSubItem;
+  TEventClass.Add(AObj, geListViewAdvancedCustomDrawSubItem, AEventId);
+end;
+
 procedure ListView_SetOnChange(AObj: TListView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1364,6 +1400,9 @@ exports
   ListView_SetViewStyle,
   ListView_GetVisible,
   ListView_SetVisible,
+  ListView_SetOnAdvancedCustomDraw,
+  ListView_SetOnAdvancedCustomDrawItem,
+  ListView_SetOnAdvancedCustomDrawSubItem,
   ListView_SetOnChange,
   ListView_SetOnClick,
   ListView_SetOnColumnClick,

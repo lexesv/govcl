@@ -35,6 +35,11 @@ begin
   AObj.Delete;
 end;
 
+procedure TreeNode_DisplayRect(AObj: TTreeNode; TextOnly: LongBool; var Result: TRect); stdcall;
+begin
+  Result :=  AObj.DisplayRect(TextOnly);
+end;
+
 function TreeNode_EditText(AObj: TTreeNode): LongBool; stdcall;
 begin
   Result :=  AObj.EditText;
@@ -288,6 +293,7 @@ exports
   TreeNode_Assign,
   TreeNode_Collapse,
   TreeNode_Delete,
+  TreeNode_DisplayRect,
   TreeNode_EditText,
   TreeNode_Expand,
   TreeNode_IndexOf,

@@ -30,6 +30,11 @@ begin
   AObj.Delete;
 end;
 
+procedure ListItem_DisplayRect(AObj: TListItem; Code: TDisplayCode; var Result: TRect); stdcall;
+begin
+  Result :=  AObj.DisplayRect(Code);
+end;
+
 function ListItem_EditCaption(AObj: TListItem): LongBool; stdcall;
 begin
   Result :=  AObj.EditCaption;
@@ -272,6 +277,7 @@ exports
   ListItem_Assign,
   ListItem_CancelEdit,
   ListItem_Delete,
+  ListItem_DisplayRect,
   ListItem_EditCaption,
   ListItem_MakeVisible,
   ListItem_Update,

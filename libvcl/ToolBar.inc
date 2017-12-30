@@ -555,6 +555,30 @@ begin
   AObj.Wrapable := AValue;
 end;
 
+procedure ToolBar_SetOnAdvancedCustomDraw(AObj: TToolBar; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDraw := nil;
+    TEventClass.Remove(AObj, geToolBarAdvancedCustomDraw);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDraw := TEventClass.ToolBarOnAdvancedCustomDraw;
+  TEventClass.Add(AObj, geToolBarAdvancedCustomDraw, AEventId);
+end;
+
+procedure ToolBar_SetOnAdvancedCustomDrawButton(AObj: TToolBar; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDrawButton := nil;
+    TEventClass.Remove(AObj, geToolBarAdvancedCustomDrawButton);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDrawButton := TEventClass.ToolBarOnAdvancedCustomDrawButton;
+  TEventClass.Add(AObj, geToolBarAdvancedCustomDrawButton, AEventId);
+end;
+
 procedure ToolBar_SetOnClick(AObj: TToolBar; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1032,6 +1056,8 @@ exports
   ToolBar_SetStyleElements,
   ToolBar_GetWrapable,
   ToolBar_SetWrapable,
+  ToolBar_SetOnAdvancedCustomDraw,
+  ToolBar_SetOnAdvancedCustomDrawButton,
   ToolBar_SetOnClick,
   ToolBar_SetOnDblClick,
   ToolBar_SetOnEnter,

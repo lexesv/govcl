@@ -33,7 +33,11 @@ type
               geListBoxDrawItem, geMenuItemDrawItem, geListViewColumnClick,
               geListViewColumnRightClick, geListViewGetImageIndex, geListViewSelectItem,
               geListViewItemChecked, geTreeViewGetSelectedIndex, geTreeViewGetImageIndex,
-              gePageControlGetImageIndex, geListViewCompare, geTreeViewCompare);
+              gePageControlGetImageIndex, geListViewCompare, geTreeViewCompare,
+              geListViewAdvancedCustomDraw, geListViewAdvancedCustomDrawItem,
+              geListViewAdvancedCustomDrawSubItem,
+              geTreeViewAdvancedCustomDraw, geTreeViewAdvancedCustomDrawItem,
+              geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton);
 
   TEventKey = packed record
     Sender: TObject;
@@ -67,6 +71,11 @@ type
     class procedure TreeViewOnGetImageIndex(Sender: TObject; Node: TTreeNode);
     class procedure TreeViewOnGetSelectedIndex(Sender: TObject; Node: TTreeNode);
     class procedure TreeViewOnCompare(Sender: TObject; Node1, Node2: TTreeNode; Data: Integer; var Compare: Integer);
+    class procedure TreeViewOnAdvancedCustomDraw(Sender: TCustomTreeView;
+      const ARect: TRect; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+    class procedure TreeViewOnAdvancedCustomDrawItem(Sender: TCustomTreeView;
+      Node: TTreeNode; State: TCustomDrawState; Stage: TCustomDrawStage;
+      var PaintImages, DefaultDraw: Boolean);
 
 
     class procedure ListViewOnChange(Sender: TObject; AItem: TListItem; Change: TItemChange);
@@ -76,20 +85,24 @@ type
     class procedure ListViewOnSelectItem(Sender: TObject; Item: TListItem; Selected: Boolean);
     class procedure ListViewOnItemChecked(Sender: TObject; Item: TListItem);
     class procedure ListViewOnCompare(Sender: TObject; Item1, Item2: TListItem; Data: Integer; var Compare: Integer);
+    class procedure ListViewOnAdvancedCustomDraw(Sender: TCustomListView;
+       const ARect: TRect; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+    class procedure ListViewOnAdvancedCustomDrawItem(Sender: TCustomListView;
+      Item: TListItem; State: TCustomDrawState; Stage: TCustomDrawStage;
+      var DefaultDraw: Boolean);
+    class procedure ListViewOnAdvancedCustomDrawSubItem(Sender: TCustomListView;
+      Item: TListItem; SubItem: Integer; State: TCustomDrawState;
+      Stage: TCustomDrawStage; var DefaultDraw: Boolean);
 
     class procedure PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
 
 
-{
-TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
-TLVColumnClickEvent = procedure(Sender: TObject; Column: TListColumn) of object;
-TLVColumnRClickEvent = procedure(Sender: TObject; Column: TListColumn; Point: TPoint) of object;
-TLVNotifyEvent = procedure(Sender: TObject; Item: TListItem) of object;
-TLVSelectItemEvent = procedure(Sender: TObject; Item: TListItem;  Selected: Boolean) of object;
-TLVCheckedItemEvent = procedure(Sender: TObject; Item: TListItem) of object;
-TTabGetImageEvent = procedure(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer) of object;
-TTVExpandedEvent = procedure(Sender: TObject; Node: TTreeNode) of object;
-}
+    class procedure ToolBarOnAdvancedCustomDraw(Sender: TToolBar;
+       const ARect: TRect; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+    class procedure ToolBarOnAdvancedCustomDrawButton(Sender: TToolBar;
+      Button: TToolButton; State: TCustomDrawState; Stage: TCustomDrawStage;
+      var Flags: TTBCustomDrawFlags; var DefaultDraw: Boolean);
+
 
     class procedure OnDblClick(Sender: TObject);
 
@@ -187,6 +200,8 @@ begin
   SendEvent(Sender, geFormClose, [Sender, @Action]);
 end;
 
+//----------------------- TListView
+
 class procedure TEventClass.ListViewOnChange(Sender: TObject; AItem: TListItem; Change: TItemChange);
 begin
   SendEvent(Sender, geListViewChange, [Sender, AItem, Ord(Change)]);
@@ -221,6 +236,34 @@ class procedure TEventClass.ListViewOnCompare(Sender: TObject; Item1, Item2: TLi
 begin
   SendEvent(Sender, geListViewCompare, [Sender, Item1, Item2, Data, @Compare]);
 end;
+
+class procedure TEventClass.ListViewOnAdvancedCustomDraw(Sender: TCustomListView;
+  const ARect: TRect; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geListViewAdvancedCustomDraw, [
+    Sender, @ARect, Ord(Stage), @DefaultDraw
+  ]);
+end;
+
+class procedure TEventClass.ListViewOnAdvancedCustomDrawItem(
+  Sender: TCustomListView; Item: TListItem; State: TCustomDrawState;
+  Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geListViewAdvancedCustomDrawItem, [
+    Sender, Item, PWord(@State)^, Ord(Stage), @DefaultDraw
+  ]);
+end;
+
+class procedure TEventClass.ListViewOnAdvancedCustomDrawSubItem(
+  Sender: TCustomListView; Item: TListItem; SubItem: Integer;
+  State: TCustomDrawState; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geListViewAdvancedCustomDrawSubItem, [
+    Sender, Item, SubItem, PWord(@State)^, Ord(Stage), @DefaultDraw
+  ]);
+end;
+
+//----------------------------------------- TPageControl
 
 class procedure TEventClass.PageControlOnGetImageIndex(Sender: TObject; TabIndex: Integer; var ImageIndex: Integer);
 begin
@@ -443,6 +486,25 @@ begin
     SendEventSrc(LEventId, AArgs);
 end;
 
+
+// ---------------------- TTreeView
+
+class procedure TEventClass.TreeViewOnAdvancedCustomDraw(
+  Sender: TCustomTreeView; const ARect: TRect; Stage: TCustomDrawStage;
+  var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geTreeViewAdvancedCustomDraw,
+    [Sender, @ARect, Ord(Stage), DefaultDraw]);
+end;
+
+class procedure TEventClass.TreeViewOnAdvancedCustomDrawItem(
+  Sender: TCustomTreeView; Node: TTreeNode; State: TCustomDrawState;
+  Stage: TCustomDrawStage; var PaintImages, DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geTreeViewAdvancedCustomDrawItem,
+    [Sender, Node, PWord(@State)^, Ord(Stage), @PaintImages, DefaultDraw]);
+end;
+
 class procedure TEventClass.TreeViewOnChange(Sender: TObject; ANode: TTreeNode);
 begin
   SendEvent(Sender, geTreeViewChange, [Sender, ANode]);
@@ -461,6 +523,23 @@ end;
 class procedure TEventClass.TreeViewOnCompare(Sender: TObject; Node1, Node2: TTreeNode; Data: Integer; var Compare: Integer);
 begin
   SendEvent(Sender, geTreeViewCompare, [Sender, Node1, Node2, Data, @Compare]);
+end;
+
+
+//----------- TToolBar
+class procedure TEventClass.ToolBarOnAdvancedCustomDraw(Sender: TToolBar;
+  const ARect: TRect; Stage: TCustomDrawStage; var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geToolBarAdvancedCustomDraw,
+    [Sender, @ARect, Ord(Stage), @DefaultDraw]);
+end;
+
+class procedure TEventClass.ToolBarOnAdvancedCustomDrawButton(Sender: TToolBar;
+  Button: TToolButton; State: TCustomDrawState; Stage: TCustomDrawStage;
+  var Flags: TTBCustomDrawFlags; var DefaultDraw: Boolean);
+begin
+  SendEvent(Sender, geToolBarAdvancedCustomDrawButton,
+    [Sender, Button, PWord(@State)^, Ord(Stage), PWord(@Flags), @DefaultDraw]);
 end;
 
 class procedure TEventClass.UpDownOnClick(Sender: TObject; Button: TUDBtnType);

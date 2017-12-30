@@ -630,6 +630,30 @@ begin
   AObj.StyleElements := AValue;
 end;
 
+procedure TreeView_SetOnAdvancedCustomDraw(AObj: TTreeView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDraw := nil;
+    TEventClass.Remove(AObj, geTreeViewAdvancedCustomDraw);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDraw := TEventClass.TreeViewOnAdvancedCustomDraw;
+  TEventClass.Add(AObj, geTreeViewAdvancedCustomDraw, AEventId);
+end;
+
+procedure TreeView_SetOnAdvancedCustomDrawItem(AObj: TTreeView; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnAdvancedCustomDrawItem := nil;
+    TEventClass.Remove(AObj, geTreeViewAdvancedCustomDrawItem);
+    Exit;
+  end;
+  AObj.OnAdvancedCustomDrawItem := TEventClass.TreeViewOnAdvancedCustomDrawItem;
+  TEventClass.Add(AObj, geTreeViewAdvancedCustomDrawItem, AEventId);
+end;
+
 procedure TreeView_SetOnChange(AObj: TTreeView; AEventId: NativeUInt); stdcall;
 begin
   if AEventId = 0 then
@@ -1244,6 +1268,8 @@ exports
   TreeView_SetVisible,
   TreeView_GetStyleElements,
   TreeView_SetStyleElements,
+  TreeView_SetOnAdvancedCustomDraw,
+  TreeView_SetOnAdvancedCustomDrawItem,
   TreeView_SetOnChange,
   TreeView_SetOnClick,
   TreeView_SetOnCompare,

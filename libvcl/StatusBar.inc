@@ -671,6 +671,16 @@ begin
   AObj.Margins := AValue;
 end;
 
+function StatusBar_GetCustomHint(AObj: TStatusBar): TCustomHint; stdcall;
+begin
+  Result :=  AObj.CustomHint;
+end;
+
+procedure StatusBar_SetCustomHint(AObj: TStatusBar; AValue: TCustomHint); stdcall;
+begin
+  AObj.CustomHint := AValue;
+end;
+
 function StatusBar_GetComponentCount(AObj: TStatusBar): Integer; stdcall;
 begin
   Result :=  AObj.ComponentCount;
@@ -845,6 +855,8 @@ exports
   StatusBar_SetHint,
   StatusBar_GetMargins,
   StatusBar_SetMargins,
+  StatusBar_GetCustomHint,
+  StatusBar_SetCustomHint,
   StatusBar_GetComponentCount,
   StatusBar_GetComponentIndex,
   StatusBar_SetComponentIndex,

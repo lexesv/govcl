@@ -155,6 +155,11 @@ begin
   Result :=  AObj.Fonts;
 end;
 
+function Screen_GetFormCount(AObj: TScreen): Integer; stdcall;
+begin
+  Result :=  AObj.FormCount;
+end;
+
 function Screen_GetImes(AObj: TScreen): TStrings; stdcall;
 begin
   Result :=  AObj.Imes;
@@ -282,6 +287,7 @@ exports
   Screen_GetWorkAreaTop,
   Screen_GetWorkAreaWidth,
   Screen_GetFonts,
+  Screen_GetFormCount,
   Screen_GetImes,
   Screen_GetDefaultIme,
   Screen_GetHeight,

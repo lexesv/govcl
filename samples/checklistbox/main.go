@@ -17,6 +17,10 @@ func main() {
 	chkListBox := vcl.NewCheckListBox(mainForm)
 	chkListBox.SetParent(mainForm)
 	chkListBox.SetAlign(types.AlClient)
+	chkListBox.SetOnClickCheck(func(sender vcl.IObject) {
+		fmt.Println("check单击。")
+	})
+
 	for i := 1; i < 100; i++ {
 		chkListBox.Items().Add(fmt.Sprintf("第%d个项目", i))
 	}
@@ -28,6 +32,7 @@ func main() {
 		//fmt.Println("选中数：", chkListBox.Checked())
 		chkListBox.SetItemEnabled(0, !chkListBox.ItemEnabled(0))
 	})
+
 	// 获取/设置项目启用
 	//chkListBox.SetItemEnabled()
 	//chkListBox.ItemEnabled()

@@ -36732,6 +36732,10 @@ func CheckListBox_ToString(obj uintptr) string {
     return DStrToGoStr(ret)
 }
 
+func CheckListBox_SetOnClickCheck(obj uintptr, fn interface{}) {
+    checkListBox_SetOnClickCheck.Call(obj, addEventToMap(fn))
+}
+
 func CheckListBox_GetAlign(obj uintptr) TAlign {
     ret, _, _ := checkListBox_GetAlign.Call(obj)
     return TAlign(ret)

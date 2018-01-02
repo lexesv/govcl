@@ -8242,6 +8242,7 @@ var (
     checkListBox_Equals = libvcl.NewProc("CheckListBox_Equals")
     checkListBox_GetHashCode = libvcl.NewProc("CheckListBox_GetHashCode")
     checkListBox_ToString = libvcl.NewProc("CheckListBox_ToString")
+    checkListBox_SetOnClickCheck = libvcl.NewProc("CheckListBox_SetOnClickCheck")
     checkListBox_GetAlign = libvcl.NewProc("CheckListBox_GetAlign")
     checkListBox_SetAlign = libvcl.NewProc("CheckListBox_SetAlign")
     checkListBox_GetAllowGrayed = libvcl.NewProc("CheckListBox_GetAllowGrayed")

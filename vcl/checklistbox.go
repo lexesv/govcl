@@ -183,6 +183,10 @@ func (c *TCheckListBox) ToString() string {
     return CheckListBox_ToString(c.instance)
 }
 
+func (c *TCheckListBox) SetOnClickCheck(fn TNotifyEvent) {
+    CheckListBox_SetOnClickCheck(c.instance, fn)
+}
+
 func (c *TCheckListBox) Align() TAlign {
     return CheckListBox_GetAlign(c.instance)
 }

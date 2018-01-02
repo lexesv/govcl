@@ -38,7 +38,7 @@ type
               geListViewAdvancedCustomDrawSubItem,
               geTreeViewAdvancedCustomDraw, geTreeViewAdvancedCustomDrawItem,
               geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton,
-              geHint);
+              geHint, geClickCheck);
 
   TEventKey = packed record
     Sender: TObject;
@@ -114,6 +114,7 @@ type
     class procedure OnExit(Sender: TObject);
     class procedure OnPopup(Sender: TObject);
     class procedure OnHint(Sender: TObject);
+    class procedure OnClickCheck(Sender: TObject);
 
     class procedure OnExecute(Sender: TObject);
     class procedure OnUpdate(Sender: TObject);
@@ -195,6 +196,11 @@ end;
 class procedure TEventClass.OnClick(Sender: TObject);
 begin
   SendEvent(Sender, geClick, [Sender]);
+end;
+
+class procedure TEventClass.OnClickCheck(Sender: TObject);
+begin
+  SendEvent(Sender, geClickCheck, [Sender]);
 end;
 
 class procedure TEventClass.FormOnClose(Sender: TObject; var Action: TCloseAction);

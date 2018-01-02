@@ -180,6 +180,18 @@ begin
   Result :=  PChar(AObj.ToString);
 end;
 
+procedure CheckListBox_SetOnClickCheck(AObj: TCheckListBox; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnClickCheck := nil;
+    TEventClass.Remove(AObj, geClickCheck);
+    Exit;
+  end;
+  AObj.OnClickCheck := TEventClass.OnClickCheck;
+  TEventClass.Add(AObj, geClickCheck, AEventId);
+end;
+
 function CheckListBox_GetAlign(AObj: TCheckListBox): TAlign; stdcall;
 begin
   Result :=  AObj.Align;
@@ -1041,6 +1053,7 @@ exports
   CheckListBox_Equals,
   CheckListBox_GetHashCode,
   CheckListBox_ToString,
+  CheckListBox_SetOnClickCheck,
   CheckListBox_GetAlign,
   CheckListBox_SetAlign,
   CheckListBox_GetAllowGrayed,

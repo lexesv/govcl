@@ -19,10 +19,10 @@
 #### 项目介绍
 
 > 1、由于现有第三方的Go UI库不是太庞大就是用的不习惯，或者组件太少。就萌生了自己写一个UI库的想法  
-> Delphi有些许多优秀的VCL组件，不拿来使用太可惜了。所以就索性做了一套。目前支持Win32跟Win64，  
-> 只需要带上一个libvcl.dll即可。  
-
-> 2、项目现在支持VCL标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)。  
+> Delphi(Lazarus)有些许多优秀的VCL(LCL)组件，不拿来使用太可惜了。所以就索性做了一套。  
+> 目前支持Win32、Win64、Linux64、MacOS32(对于Linux64、MacOS32提供有限的组件、属性及函数方法的支持)。      
+ 
+> 2、项目现在支持VCL(LCL)标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)。  
 > 事件方面也支持部分，参见：[支持的事件](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E4%BA%8B%E4%BB%B6)：  
  
 
@@ -30,8 +30,6 @@
 **所有的代码只会存储在OSC的[码云](https://gitee.com/ying32/govcl)中，原因在于go包路径的问题。**  
 **至于github上会建一个同名的项目[govcl](https://github.com/ying32/govcl)，但不会提交任何代码**  
 **xui包目前还未完成，但不影响正常使用**   
-
-> **govcl是一个不需要经常更新的项目，因为原本vcl就是个成熟的产品，这里也只是做了相关的桥接，相对是稳定的，但也不排除某些环境下的问题。**  
 
 **govcl是以go 1.9作为基础版本开发，目前已知的是在go 1.7也可以编译，但作为以后的考虑会使用1.9中的特性，所以大家在使用的时候尽量使用go 1.9+版本**  
 
@@ -64,12 +62,15 @@ func main() {
 
 ```  
 
-复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下  
+* Windows: 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下
+* Linux: 复制"bin\linux64\liblcl.so"可执行文件目录下
+* MacOS: 复制"bin\MacOS32\liblcl.dylib"可执行文件目录下  
+
 
 #### 项目中的包说明
 
 * vcl  
-  包含Delphi标准组件中的大部分    
+  包含Delphi(Lazarus)标准组件中的大部分
 * api  
   DLL函数申明与重新包装  
 * rtl  
@@ -84,7 +85,7 @@ func main() {
 
 #### 实例类说明
 
-> 按照Delphi中的Application、 Screen、 Mouse、Clipboard四个类实例是可以直接访问的，不需要释放  
+> 按照Delphi(Lazarus)中的Application、 Screen、 Mouse、Clipboard四个类实例是可以直接访问的，不需要释放  
 其实组件带有Owner参数的一般指定当前组件对应的TForm就好了，这样就不需要手动释放，反之Owner填   
 写nil则需要手动调用Free，就像其它非组件类的。  
  

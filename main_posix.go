@@ -1,5 +1,4 @@
-// +build linux
-// +build darwin
+// +build linux,!cgo darwin,!cgo
 
 // govcl project main.go
 // go.exe build -i -ldflags="-H windowsgui"

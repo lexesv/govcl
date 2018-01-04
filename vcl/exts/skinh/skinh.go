@@ -1,3 +1,5 @@
+// +build windows
+
 /*
   skinsharp皮肤扩展接口
   http://www.skinsharp.com/htdocs/index.htm

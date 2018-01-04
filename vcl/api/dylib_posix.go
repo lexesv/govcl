@@ -96,6 +96,7 @@ import "C"
 import (
 	"fmt"
 
+	"errors"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -137,7 +138,7 @@ func NewLazyDLL(name string) *LazyDLL {
 
 	// 导入默认call原
 	m.mySyscall = m.NewProc("MySyscall")
-	if m.mySyscall.p == 0 {
+	if m.mySyscall.Find() != nil {
 		m.mySyscall = nil
 	}
 
@@ -152,9 +153,6 @@ func (l *LazyDLL) currentPath() string {
 func (l *LazyDLL) NewProc(name string) *LazyProc {
 	p := new(LazyProc)
 	p.Name = name
-	cRelName := C.CString(name)
-	defer C.free(unsafe.Pointer(cRelName))
-	p.p = uintptr(C.pluginLookup(l.handle, cRelName))
 	p.lzdll = l
 	return p
 }
@@ -215,6 +213,19 @@ func (p *LazyProc) Addr() uintptr {
 	return p.p
 }
 
+func (p *LazyProc) Find() error {
+	if p.p == 0 {
+		cRelName := C.CString(p.Name)
+		defer C.free(unsafe.Pointer(cRelName))
+		p.p = uintptr(C.pluginLookup(p.lzdll.handle, cRelName))
+		// 这里不管了
+	}
+	if p.p == 0 {
+		return errors.New("proc\"" + p.Name + "\" not find.")
+	}
+	return nil
+}
+
 func toPtr(a uintptr) unsafe.Pointer {
 	return unsafe.Pointer(a)
 }
@@ -225,6 +236,7 @@ func (p *LazyProc) Call(a ...uintptr) (uintptr, uintptr, error) {
 
 func (p *LazyProc) CallOriginal(a ...uintptr) (r1, r2 uintptr, lastErr error) {
 	//fmt.Println("name:", p.Name, ", p.p=", p.p, ", args: ", a)
+	p.Find()
 
 	if p.p == 0 {
 		return 0, 0, syscall.EINVAL

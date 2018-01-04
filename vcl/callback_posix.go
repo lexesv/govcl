@@ -1,6 +1,6 @@
 // +build linux !cgo, darwin !cgo
 
-package lcl
+package vcl
 
 // extern void* doCallbackProc(void* f, void* args, long argcount);
 // static void* doGetAddr() {

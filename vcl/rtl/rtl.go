@@ -3,17 +3,11 @@ package rtl
 import (
 	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/types"
-	"gitee.com/ying32/govcl/vcl/win"
 )
 
 // Move Delphi中的内存操作，不过这里传入的是指针
 func Move(src, dest uintptr, llen int) {
 	api.DMove(src, dest, llen)
-}
-
-// MainInstance EXE自身的实例
-func MainInstance() uintptr {
-	return win.GetSelfModuleHandle()
 }
 
 // Include Delphi集合加法，val...中存储为位的索引，下标为0

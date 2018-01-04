@@ -100,6 +100,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 	"strconv"
 	"sync"
 	"syscall"
@@ -124,7 +125,7 @@ func NewLazyDLL(name string) *LazyDLL {
 	cPath := (*C.char)(C.malloc(C.PATH_MAX + 1))
 	defer C.free(unsafe.Pointer(cPath))
 
-	cRelName := C.CString(m.currentPath() + "/" + name)
+	cRelName := C.CString(m.currentPath() + name)
 	defer C.free(unsafe.Pointer(cRelName))
 
 	if C.realpath(cRelName, cPath) == nil {
@@ -146,8 +147,11 @@ func NewLazyDLL(name string) *LazyDLL {
 }
 
 func (l *LazyDLL) currentPath() string {
-	file, _ := exec.LookPath(os.Args[0])
-	return filepath.Dir(file)
+	if runtime.GOOS == "darwin" {
+		file, _ := exec.LookPath(os.Args[0])
+		return filepath.Dir(file) + "/"
+	}
+	return ""
 }
 
 func (l *LazyDLL) NewProc(name string) *LazyProc {

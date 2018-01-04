@@ -42,7 +42,7 @@ func Canvas_TextRect2(obj uintptr, aRect *TRect, text *string, textFormat TTextF
 	var pstr uintptr
 	r, _, _ := canvas_TextRect2.Call(obj, uintptr(unsafe.Pointer(aRect)), GoStrToDStr(*text), uintptr(unsafe.Pointer(&pstr)), uintptr(textFormat))
 	if r == 1 {
-        *text = DStrToGoStr(pstr)
+		*text = DStrToGoStr(pstr)
 	}
 }
 

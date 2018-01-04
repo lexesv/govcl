@@ -31,11 +31,9 @@ func main() {
 	}()
 
 	fmt.Println("main")
-	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
-
 	vcl.Application.SetOnException(func(sender vcl.IObject, e *vcl.Exception) {
-		fmt.Println("exception.")
+		fmt.Println("exception:", e.Message())
 	})
 
 	vcl.Application.SetTitle("Hello World!")
@@ -117,7 +115,7 @@ func main() {
 	img := vcl.NewImage(mainForm)
 	img.SetBounds(132, 30, 156, 97)
 	img.SetParent(mainForm)
-	img.Picture().LoadFromFile("./imgs/1.jpg")
+	img.Picture().LoadFromFile("./imgs/12.jpg")
 	//img.SetStretch(true)
 	img.SetProportional(true)
 

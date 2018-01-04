@@ -1,5 +1,5 @@
 package api
 
 var (
-	liblcl = NewLazyDLL("liblcl.so")
+	libvcl = NewLazyDLL("liblcl.so")
 )

@@ -250,13 +250,13 @@ func (p *LazyProc) CallOriginal(a ...uintptr) (r1, r2 uintptr, lastErr error) {
 	case 8:
 		ret = C.Syscall8(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]))
 	case 9:
-		ret = C.Syscall8(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]))
+		ret = C.Syscall9(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]))
 	case 10:
-		ret = C.Syscall8(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]))
+		ret = C.Syscall10(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]))
 	case 11:
-		ret = C.Syscall8(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]), toPtr(a[10]))
+		ret = C.Syscall11(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]), toPtr(a[10]))
 	case 12:
-		ret = C.Syscall8(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]), toPtr(a[10]), toPtr(a[11]))
+		ret = C.Syscall12(toPtr(p.p), toPtr(a[0]), toPtr(a[1]), toPtr(a[2]), toPtr(a[3]), toPtr(a[4]), toPtr(a[5]), toPtr(a[6]), toPtr(a[7]), toPtr(a[8]), toPtr(a[9]), toPtr(a[10]), toPtr(a[11]))
 
 	default:
 		panic("Call " + p.Name + " with too many arguments " + strconv.Itoa(len(a)) + ".")

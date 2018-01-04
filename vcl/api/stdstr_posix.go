@@ -1,4 +1,4 @@
-// +build linux, darwin
+// +build linux !cgo, darwin !cgo
 
 package api
 

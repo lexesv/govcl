@@ -28,8 +28,6 @@ func main() {
 		}
 	}()
 
-	fmt.Println("IsWow64:", win.IsWow64())
-
 	fmt.Println("main")
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()

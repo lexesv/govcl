@@ -1,7 +1,6 @@
 package vcl
 
 import (
-	. "gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/win"
 )
 

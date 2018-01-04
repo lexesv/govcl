@@ -53,11 +53,6 @@ func InSets(r, s uint32) bool {
 //	*(*uint16)(unsafe.Pointer(p)) = val
 //}
 
-// SetReportMemoryLeaksOnShutdown 程序结束时报告内存泄露，总有2-4字节的未知泄露位置
-func SetReportMemoryLeaksOnShutdown(v bool) {
-	api.DSetReportMemoryLeaksOnShutdown(v)
-}
-
 // TextToShortCut 将字符串转为ShortCut类型
 func TextToShortCut(val string) types.TShortCut {
 	return api.DTextToShortCut(val)

@@ -210,6 +210,7 @@ type LazyProc struct {
 }
 
 func (p *LazyProc) Addr() uintptr {
+	p.Find()
 	return p.p
 }
 
@@ -235,7 +236,6 @@ func (p *LazyProc) Call(a ...uintptr) (uintptr, uintptr, error) {
 }
 
 func (p *LazyProc) CallOriginal(a ...uintptr) (r1, r2 uintptr, lastErr error) {
-	//fmt.Println("name:", p.Name, ", p.p=", p.p, ", args: ", a)
 	p.Find()
 
 	if p.p == 0 {

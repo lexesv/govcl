@@ -1,9 +1,6 @@
 package vcl
 
-import (
-	. "gitee.com/ying32/govcl/vcl/api"
-	"gitee.com/ying32/govcl/vcl/win"
-)
+import . "gitee.com/ying32/govcl/vcl/api"
 
 // CreateForm 一般不建议使用 NewForm，而优先使用CreateForm
 func (a *TApplication) CreateForm() *TForm {
@@ -13,9 +10,4 @@ func (a *TApplication) CreateForm() *TForm {
 // SetFormScaled 设置全局窗口的Scaled
 func (a *TApplication) SetFormScaled(val bool) {
 	SetGlobalFormScaled(val)
-}
-
-// SetIconResId 从资源中置图标的id
-func (a *TApplication) SetIconResId(id int) {
-	a.Icon().SetHandle(win.LoadIconW(win.GetSelfModuleHandle(), id))
 }

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/ying32/golcl/lcl/types"
 	"gitee.com/ying32/govcl/vcl"
+	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {

@@ -38,8 +38,8 @@ import (
 
 	"unsafe"
 
-	"gitee.com/ying32/golcl/lcl/rtl"
 	"gitee.com/ying32/govcl/vcl/api"
+	"gitee.com/ying32/govcl/vcl/rtl"
 )
 
 func (a *TApplication) setFiledVal(name string, instance uintptr, v reflect.Value) {

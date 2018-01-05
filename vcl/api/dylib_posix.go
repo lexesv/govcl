@@ -125,7 +125,7 @@ func NewLazyDLL(name string) *LazyDLL {
 	cPath := (*C.char)(C.malloc(C.PATH_MAX + 1))
 	defer C.free(unsafe.Pointer(cPath))
 
-	cRelName := C.CString(m.currentPath() + name)
+	cRelName := C.CString(m.libFullPath(name))
 	defer C.free(unsafe.Pointer(cRelName))
 
 	if C.realpath(cRelName, cPath) == nil {
@@ -146,12 +146,31 @@ func NewLazyDLL(name string) *LazyDLL {
 	return m
 }
 
-func (l *LazyDLL) currentPath() string {
+func fileExists(path string) bool {
+	_, err := os.Stat(path)
+	if err == nil {
+		return true
+	}
+	if os.IsNotExist(err) {
+		return false
+	}
+	return false
+}
+
+func (l *LazyDLL) libFullPath(name string) string {
 	if runtime.GOOS == "darwin" {
 		file, _ := exec.LookPath(os.Args[0])
-		return filepath.Dir(file) + "/"
+		return filepath.Dir(file) + "/" + name
 	}
-	return ""
+	if fileExists(name) {
+		return name
+	} else {
+		path := "/usr/lib/" + name
+		if fileExists(path) {
+			return path
+		}
+	}
+	return name
 }
 
 func (l *LazyDLL) NewProc(name string) *LazyProc {

@@ -5,19 +5,30 @@ import (
 	"unsafe"
 )
 
+// ----------------------------------- 共用的
 func DStrToGoStr(ustr uintptr) string {
 	l := DStrLen(ustr)
 	if l == 0 {
 		return ""
 	}
-	str := make([]uint16, l)
-	DMove(ustr, uintptr(unsafe.Pointer(&str[0])), l*2)
-	return syscall.UTF16ToString(str)
+	if isloadedLcl {
+		str := make([]uint8, l)
+		DMove(ustr, uintptr(unsafe.Pointer(&str[0])), l)
+		return string(str)
+	} else {
+		str := make([]uint16, l)
+		DMove(ustr, uintptr(unsafe.Pointer(&str[0])), l*2)
+		return syscall.UTF16ToString(str)
+	}
 }
 
 func GoStrToDStr(s string) uintptr {
 	if s == "" {
 		return 0
 	}
-	return uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(s)))
+	if isloadedLcl {
+		return uintptr(unsafe.Pointer(&([]byte(s)[0])))
+	} else {
+		return uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(s)))
+	}
 }

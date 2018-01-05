@@ -2,6 +2,7 @@
 package api
 
 import (
+	"fmt"
 	"strconv"
 	"syscall"
 )
@@ -12,9 +13,19 @@ type LazyDLL struct {
 	mySyscall *syscall.LazyProc
 }
 
+// 因为lcl中在windows下与原vcl中使用的字符编码不一致，当加载了lcl库后会有乱码的
+var isloadedLcl = false
+
 func NewLazyDLL(name string) *LazyDLL {
 	l := new(LazyDLL)
 	l.LazyDLL = syscall.NewLazyDLL(name)
+	// 这里做个判断，当libvcl.dll或者libvclx64.dll加载失败时尝试加载liblcl.dll
+	// 这样做主要为以后考虑，对于某些人来说怕什么的来说，可以使用非Delphi的组件
+	if l.Load() != nil {
+		fmt.Println(fmt.Sprintf("\"%s\" does not exist, trying to load liblcl.dll.", name))
+		l.LazyDLL = syscall.NewLazyDLL("liblcl.dll")
+		isloadedLcl = true
+	}
 	// 导入调用的
 	l.mySyscall = l.LazyDLL.NewProc("MySyscall")
 	if l.mySyscall.Find() != nil {
@@ -40,6 +51,11 @@ func (d *LazyDLL) call(proc *LazyProc, a ...uintptr) (r1, r2 uintptr, lastErr er
 	// 没到找到我封装的那个系统函数，就使用原始的
 	if d.mySyscall == nil {
 		return proc.CallOriginal(a...)
+	}
+	err := proc.Find()
+	if err != nil {
+		fmt.Println("proc\"" + proc.lzProc.Name + "\" not find.")
+		return 0, 0, syscall.EINVAL
 	}
 	addr := proc.Addr()
 	if addr != 0 {
@@ -80,6 +96,10 @@ func (d *LazyDLL) call(proc *LazyProc, a ...uintptr) (r1, r2 uintptr, lastErr er
 
 func (p *LazyProc) Addr() uintptr {
 	return p.lzProc.Addr()
+}
+
+func (p *LazyProc) Find() error {
+	return p.lzProc.Find()
 }
 
 func (p *LazyProc) Call(a ...uintptr) (r1, r2 uintptr, lastErr error) {

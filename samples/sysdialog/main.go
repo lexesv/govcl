@@ -33,7 +33,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("Open Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlgOpen.Execute(mainForm.Handle()) {
+		if dlgOpen.Execute() {
 			fmt.Println("filename: ", dlgOpen.FileName())
 		}
 	})
@@ -48,7 +48,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("Save Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlSave.Execute(mainForm.Handle()) {
+		if dlSave.Execute() {
 			fmt.Println("filename: ", dlSave.FileName())
 		}
 	})
@@ -60,7 +60,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("Font Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlFont.Execute(mainForm.Handle()) {
+		if dlFont.Execute() {
 			fmt.Println("Name: ", dlFont.Font().Name())
 		}
 	})
@@ -71,7 +71,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("Color Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlColor.Execute(mainForm.Handle()) {
+		if dlColor.Execute() {
 			fmt.Println("Color: ", dlColor.Color())
 		}
 	})
@@ -82,7 +82,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("OpenPic Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlPicOpen.Execute(mainForm.Handle()) {
+		if dlPicOpen.Execute() {
 			fmt.Println("Name: ", dlPicOpen.FileName())
 		}
 	})
@@ -104,7 +104,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetCaption("Open Text Dialog")
 	btn.SetOnClick(func(vcl.IObject) {
-		if dlTxtOpen.Execute(mainForm.Handle()) {
+		if dlTxtOpen.Execute() {
 			fmt.Println("Name: ", dlTxtOpen.FileName())
 		}
 	})

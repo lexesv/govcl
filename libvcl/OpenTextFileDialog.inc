@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function OpenTextFileDialog_Execute(AObj: TOpenTextFileDialog; ParentWnd: HWND): LongBool; stdcall;
+function OpenTextFileDialog_Execute(AObj: TOpenTextFileDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function OpenTextFileDialog_FindComponent(AObj: TOpenTextFileDialog; AName: PChar): TComponent; stdcall;

@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function OpenDialog_Execute(AObj: TOpenDialog; ParentWnd: HWND): LongBool; stdcall;
+function OpenDialog_Execute(AObj: TOpenDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function OpenDialog_FindComponent(AObj: TOpenDialog; AName: PChar): TComponent; stdcall;

@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function ColorDialog_Execute(AObj: TColorDialog; ParentWnd: HWND): LongBool; stdcall;
+function ColorDialog_Execute(AObj: TColorDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function ColorDialog_FindComponent(AObj: TColorDialog; AName: PChar): TComponent; stdcall;

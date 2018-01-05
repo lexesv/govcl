@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function SaveDialog_Execute(AObj: TSaveDialog; ParentWnd: HWND): LongBool; stdcall;
+function SaveDialog_Execute(AObj: TSaveDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function SaveDialog_FindComponent(AObj: TSaveDialog; AName: PChar): TComponent; stdcall;

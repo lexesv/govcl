@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function PrintDialog_Execute(AObj: TPrintDialog; ParentWnd: HWND): LongBool; stdcall;
+function PrintDialog_Execute(AObj: TPrintDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function PrintDialog_FindComponent(AObj: TPrintDialog; AName: PChar): TComponent; stdcall;

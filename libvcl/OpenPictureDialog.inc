@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function OpenPictureDialog_Execute(AObj: TOpenPictureDialog; ParentWnd: HWND): LongBool; stdcall;
+function OpenPictureDialog_Execute(AObj: TOpenPictureDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function OpenPictureDialog_FindComponent(AObj: TOpenPictureDialog; AName: PChar): TComponent; stdcall;

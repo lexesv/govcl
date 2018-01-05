@@ -15,9 +15,9 @@ begin
   AObj.Free;
 end;
 
-function FontDialog_Execute(AObj: TFontDialog; ParentWnd: HWND): LongBool; stdcall;
+function FontDialog_Execute(AObj: TFontDialog): LongBool; stdcall;
 begin
-  Result :=  AObj.Execute(ParentWnd);
+  Result :=  AObj.Execute;
 end;
 
 function FontDialog_FindComponent(AObj: TFontDialog; AName: PChar): TComponent; stdcall;

@@ -62,7 +62,7 @@ func main() {
 
 ```  
 
-* Windows: 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下
+* Windows: 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"(如果不想使用Delphi的二进制可到“bin\liblcl.dll\”目录下复制对应的lcl库二进制。注：使用lcl在组件，事件，属性及方法上会受到限制)到当前exe目录或系统环境路径下
 * Linux: 复制"bin\linux64\liblcl.so"可执行文件目录下
 * MacOS: 复制"bin\MacOS32\liblcl.dylib"可执行文件目录下（MacOS下注意：需要自行创建info.plist文件）  
 

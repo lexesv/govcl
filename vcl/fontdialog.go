@@ -51,8 +51,8 @@ func (f *TFontDialog) IsValid() bool {
     return f.instance != 0
 }
 
-func (f *TFontDialog) Execute(ParentWnd HWND) bool {
-    return FontDialog_Execute(f.instance, ParentWnd)
+func (f *TFontDialog) Execute() bool {
+    return FontDialog_Execute(f.instance)
 }
 
 func (f *TFontDialog) FindComponent(AName string) *TComponent {

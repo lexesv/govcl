@@ -51,8 +51,8 @@ func (p *TPrintDialog) IsValid() bool {
     return p.instance != 0
 }
 
-func (p *TPrintDialog) Execute(ParentWnd HWND) bool {
-    return PrintDialog_Execute(p.instance, ParentWnd)
+func (p *TPrintDialog) Execute() bool {
+    return PrintDialog_Execute(p.instance)
 }
 
 func (p *TPrintDialog) FindComponent(AName string) *TComponent {

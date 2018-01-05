@@ -51,8 +51,8 @@ func (s *TSaveDialog) IsValid() bool {
     return s.instance != 0
 }
 
-func (s *TSaveDialog) Execute(ParentWnd HWND) bool {
-    return SaveDialog_Execute(s.instance, ParentWnd)
+func (s *TSaveDialog) Execute() bool {
+    return SaveDialog_Execute(s.instance)
 }
 
 func (s *TSaveDialog) FindComponent(AName string) *TComponent {

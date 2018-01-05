@@ -51,8 +51,8 @@ func (o *TOpenTextFileDialog) IsValid() bool {
     return o.instance != 0
 }
 
-func (o *TOpenTextFileDialog) Execute(ParentWnd HWND) bool {
-    return OpenTextFileDialog_Execute(o.instance, ParentWnd)
+func (o *TOpenTextFileDialog) Execute() bool {
+    return OpenTextFileDialog_Execute(o.instance)
 }
 
 func (o *TOpenTextFileDialog) FindComponent(AName string) *TComponent {

@@ -51,8 +51,8 @@ func (c *TColorDialog) IsValid() bool {
     return c.instance != 0
 }
 
-func (c *TColorDialog) Execute(ParentWnd HWND) bool {
-    return ColorDialog_Execute(c.instance, ParentWnd)
+func (c *TColorDialog) Execute() bool {
+    return ColorDialog_Execute(c.instance)
 }
 
 func (c *TColorDialog) FindComponent(AName string) *TComponent {

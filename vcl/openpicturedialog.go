@@ -51,8 +51,8 @@ func (o *TOpenPictureDialog) IsValid() bool {
     return o.instance != 0
 }
 
-func (o *TOpenPictureDialog) Execute(ParentWnd HWND) bool {
-    return OpenPictureDialog_Execute(o.instance, ParentWnd)
+func (o *TOpenPictureDialog) Execute() bool {
+    return OpenPictureDialog_Execute(o.instance)
 }
 
 func (o *TOpenPictureDialog) FindComponent(AName string) *TComponent {

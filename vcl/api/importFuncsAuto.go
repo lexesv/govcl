@@ -14701,8 +14701,8 @@ func OpenDialog_Free(obj uintptr) {
     openDialog_Free.Call(obj)
 }
 
-func OpenDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := openDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func OpenDialog_Execute(obj uintptr) bool {
+    ret, _, _ := openDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -14889,8 +14889,8 @@ func SaveDialog_Free(obj uintptr) {
     saveDialog_Free.Call(obj)
 }
 
-func SaveDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := saveDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func SaveDialog_Execute(obj uintptr) bool {
+    ret, _, _ := saveDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -15077,8 +15077,8 @@ func ColorDialog_Free(obj uintptr) {
     colorDialog_Free.Call(obj)
 }
 
-func ColorDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := colorDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func ColorDialog_Execute(obj uintptr) bool {
+    ret, _, _ := colorDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -15206,8 +15206,8 @@ func FontDialog_Free(obj uintptr) {
     fontDialog_Free.Call(obj)
 }
 
-func FontDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := fontDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func FontDialog_Execute(obj uintptr) bool {
+    ret, _, _ := fontDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -15335,8 +15335,8 @@ func PrintDialog_Free(obj uintptr) {
     printDialog_Free.Call(obj)
 }
 
-func PrintDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := printDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func PrintDialog_Execute(obj uintptr) bool {
+    ret, _, _ := printDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -15527,8 +15527,8 @@ func OpenPictureDialog_Free(obj uintptr) {
     openPictureDialog_Free.Call(obj)
 }
 
-func OpenPictureDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := openPictureDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func OpenPictureDialog_Execute(obj uintptr) bool {
+    ret, _, _ := openPictureDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 
@@ -16091,8 +16091,8 @@ func OpenTextFileDialog_Free(obj uintptr) {
     openTextFileDialog_Free.Call(obj)
 }
 
-func OpenTextFileDialog_Execute(obj uintptr, ParentWnd HWND) bool {
-    ret, _, _ := openTextFileDialog_Execute.Call(obj, uintptr(ParentWnd) )
+func OpenTextFileDialog_Execute(obj uintptr) bool {
+    ret, _, _ := openTextFileDialog_Execute.Call(obj)
     return DBoolToGoBool(ret)
 }
 

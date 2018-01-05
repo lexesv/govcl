@@ -51,8 +51,8 @@ func (o *TOpenDialog) IsValid() bool {
     return o.instance != 0
 }
 
-func (o *TOpenDialog) Execute(ParentWnd HWND) bool {
-    return OpenDialog_Execute(o.instance, ParentWnd)
+func (o *TOpenDialog) Execute() bool {
+    return OpenDialog_Execute(o.instance)
 }
 
 func (o *TOpenDialog) FindComponent(AName string) *TComponent {

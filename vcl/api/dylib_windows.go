@@ -54,7 +54,7 @@ func (d *LazyDLL) call(proc *LazyProc, a ...uintptr) (r1, r2 uintptr, lastErr er
 	}
 	err := proc.Find()
 	if err != nil {
-		fmt.Println("proc\"" + proc.lzProc.Name + "\" not find.")
+		fmt.Println("proc \"" + proc.lzProc.Name + "\" not find.")
 		return 0, 0, syscall.EINVAL
 	}
 	addr := proc.Addr()

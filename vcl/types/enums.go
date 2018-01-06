@@ -332,6 +332,10 @@ const (
 	SsHorizontal
 	SsVertical
 	SsBoth
+	// lcl
+	SsAutoHorizontal
+	SsAutoVertical
+	SsAutoBoth
 )
 
 //TSortType = (stNone, stData, stText, stBoth);

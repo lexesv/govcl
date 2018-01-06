@@ -21,6 +21,10 @@ func main() {
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)
 
+	jpgimg := vcl.NewJPEGImage()
+	defer jpgimg.Free()
+	jpgimg.LoadFromFile("..//../imgs/1.jpg")
+
 	mainForm := vcl.Application.CreateForm()
 	mainForm.SetCaption("Hello")
 	mainForm.SetPosition(types.PoScreenCenter)
@@ -71,10 +75,6 @@ func main() {
 		//fmt.Println("format: ", textFmt)
 		//		canvas.TextRect(r, 0, 0, s)
 		canvas.TextRect2(&r, &s, types.TTextFormat(textFmt))
-
-		jpgimg := vcl.NewJPEGImage()
-		defer jpgimg.Free()
-		jpgimg.LoadFromFile("..\\..\\imgs\\1.jpg")
 
 		canvas.Draw(0, 80, jpgimg)
 		//canvas.Draw2(0, 200, jpgimg, 10)

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"time"
 
 	"gitee.com/ying32/govcl/vcl"
@@ -76,18 +77,20 @@ func main() {
 		fmt.Println("checked: ", chk.Checked())
 	})
 
-	// TStatusBar
-	stat := vcl.NewStatusBar(mainForm)
-	stat.SetParent(mainForm)
-	//stat.SetSizeGrip(false) // 右解是否有可调的
-	spnl := stat.Panels().Add()
-	spnl.SetText("第一个")
-	spnl.SetWidth(80)
+	// windows下这个在lazarus1.8下面有问题
+	if runtime.GOOS != "windows" {
+		// TStatusBar
+		stat := vcl.NewStatusBar(mainForm)
+		stat.SetParent(mainForm)
+		//stat.SetSizeGrip(false) // 右解是否有可调的
+		spnl := stat.Panels().Add()
+		spnl.SetText("第一个")
+		spnl.SetWidth(80)
 
-	spnl = stat.Panels().Add()
-	spnl.SetText("第二个")
-	spnl.SetWidth(80)
-
+		spnl = stat.Panels().Add()
+		spnl.SetText("第二个")
+		spnl.SetWidth(80)
+	}
 	// TToolBar
 	tlbar := vcl.NewToolBar(mainForm)
 	tlbar.SetParent(mainForm)

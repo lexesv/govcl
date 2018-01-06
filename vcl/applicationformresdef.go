@@ -39,7 +39,6 @@ import (
 	"unsafe"
 
 	"gitee.com/ying32/govcl/vcl/api"
-	"gitee.com/ying32/govcl/vcl/rtl"
 )
 
 func (a *TApplication) setFiledVal(name string, instance uintptr, v reflect.Value) {
@@ -106,12 +105,5 @@ func (a *TApplication) CreateFormFromBytes(inBytes []byte, out interface{}) {
 	mem := NewMemoryStreamFromBytes(inBytes)
 	defer mem.Free()
 	api.ResFormLoadFromStream(CheckPtr(mem), CheckPtr(f))
-	a.fullFiledVal(f, out)
-}
-
-// CreateFormFromResourceName 资源类型为 RT_RCDATA
-func (a *TApplication) CreateFormFromResourceName(resName string, out interface{}) {
-	f := a.CreateForm()
-	api.ResFormLoadFromResourceName(rtl.MainInstance(), resName, CheckPtr(f))
 	a.fullFiledVal(f, out)
 }

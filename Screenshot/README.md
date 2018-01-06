@@ -18,10 +18,10 @@
 ### Ubuntu 16.04
 
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/1_linux.png)  
-![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/2_linux.png)  
-![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/3_linux.png)  
-![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/4_linux.png)  
-![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/5_linux.png)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/2_linux.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/3_linux.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/4_linux.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/5_linux.jpg)  
 
 
 ---

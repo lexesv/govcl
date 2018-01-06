@@ -115,7 +115,7 @@ func main() {
 	img := vcl.NewImage(mainForm)
 	img.SetBounds(132, 30, 156, 97)
 	img.SetParent(mainForm)
-	img.Picture().LoadFromFile(".\\imgs\\1.jpg")
+	img.Picture().LoadFromFile("./imgs/1.jpg")
 	//img.SetStretch(true)
 	img.SetProportional(true)
 

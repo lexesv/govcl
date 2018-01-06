@@ -26,4 +26,9 @@
 
 ---
 ## MacOS
-![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/1_macOS.png) 
+
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/1_macOS.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/2_macOS.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/3_macOS.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/4_macOS.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/5_macOS.jpg)  

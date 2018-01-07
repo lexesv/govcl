@@ -59,7 +59,7 @@ func main() {
 		lv1.CustomSort(0, int(column.Index()))
 	})
 
-	// 排序事件
+	// 排序事件, lcl自动的，vcl才需要
 	if !api.IsloadedLcl {
 		lv1.SetOnCompare(func(sender vcl.IObject, item1, item2 *vcl.TListItem, data int32, compare *int32) {
 			// lcl data 无效

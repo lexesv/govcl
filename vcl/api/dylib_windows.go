@@ -14,7 +14,7 @@ type LazyDLL struct {
 }
 
 // 因为lcl中在windows下与原vcl中使用的字符编码不一致，当加载了lcl库后会有乱码的
-var isloadedLcl = false
+var IsloadedLcl = false
 
 func NewLazyDLL(name string) *LazyDLL {
 	l := new(LazyDLL)
@@ -24,7 +24,7 @@ func NewLazyDLL(name string) *LazyDLL {
 	if l.Load() != nil {
 		fmt.Println(fmt.Sprintf("\"%s\" does not exist, trying to load liblcl.dll.", name))
 		l.LazyDLL = syscall.NewLazyDLL("liblcl.dll")
-		isloadedLcl = true
+		IsloadedLcl = true
 	}
 	// 导入调用的
 	l.mySyscall = l.LazyDLL.NewProc("MySyscall")
@@ -54,7 +54,7 @@ func (d *LazyDLL) call(proc *LazyProc, a ...uintptr) (r1, r2 uintptr, lastErr er
 	}
 	err := proc.Find()
 	if err != nil {
-		fmt.Println("proc\"" + proc.lzProc.Name + "\" not find.")
+		fmt.Println("proc \"" + proc.lzProc.Name + "\" not find.")
 		return 0, 0, syscall.EINVAL
 	}
 	addr := proc.Addr()

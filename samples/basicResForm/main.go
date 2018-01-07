@@ -15,10 +15,10 @@ func main() {
 	vcl.Application.SetOnException(func(sender vcl.IObject, e *vcl.Exception) {
 		vcl.ShowMessage(e.Message())
 	})
-
+	//   Form1.gfm
 	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
 	// 文件加载方式
-	//vcl.Application.CreateFormFromFile("Form2.gfm", &Form2)
+	//	vcl.Application.CreateFormFromFile("Form2.gfm", &Form2)
 	// 字节加载方式
 	vcl.Application.CreateFormFromBytes(form2Bytes, &Form2)
 

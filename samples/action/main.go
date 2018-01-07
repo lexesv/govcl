@@ -48,14 +48,14 @@ func main() {
 	btn := vcl.NewButton(mainForm)
 	btn.SetParent(mainForm)
 	btn.SetLeft(80)
-	btn.SetTop(40)
+	btn.SetTop(tlbar.Top() + tlbar.Height() + 10)
 	btn.SetImages(imgList)
 
 	chk := vcl.NewCheckBox(mainForm)
 	chk.SetParent(mainForm)
 	chk.SetCaption("action状态演示")
 	chk.SetLeft(btn.Left())
-	chk.SetTop(btn.Top() - chk.Height() - 10)
+	chk.SetTop(btn.Top() + btn.Height() + 10)
 	chk.SetChecked(true)
 
 	// action

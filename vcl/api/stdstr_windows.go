@@ -11,7 +11,7 @@ func DStrToGoStr(ustr uintptr) string {
 	if l == 0 {
 		return ""
 	}
-	if isloadedLcl {
+	if IsloadedLcl {
 		str := make([]uint8, l)
 		DMove(ustr, uintptr(unsafe.Pointer(&str[0])), l)
 		return string(str)
@@ -26,7 +26,7 @@ func GoStrToDStr(s string) uintptr {
 	if s == "" {
 		return 0
 	}
-	if isloadedLcl {
+	if IsloadedLcl {
 		return uintptr(unsafe.Pointer(&([]byte(s)[0])))
 	} else {
 		return uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(s)))

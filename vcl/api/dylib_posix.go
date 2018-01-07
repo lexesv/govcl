@@ -107,6 +107,8 @@ import (
 	"unsafe"
 )
 
+var IsloadedLcl = true
+
 type LazyDLL struct {
 	mu     sync.Mutex
 	handle C.uintptr_t

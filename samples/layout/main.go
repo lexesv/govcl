@@ -2,12 +2,15 @@ package main
 
 import (
 	"gitee.com/ying32/govcl/vcl"
+	"gitee.com/ying32/govcl/vcl/exts/tools"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
 // 简单介绍下Delphi中控件的布局方式
 func main() {
+	// mac下发布时去掉，只在测试时使用
+	tools.RunWithMacOSApp()
 
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()

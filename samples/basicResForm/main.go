@@ -4,10 +4,13 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
+	"gitee.com/ying32/govcl/vcl/exts/tools"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
 func main() {
+	// mac下发布时去掉，只在测试时使用
+	tools.RunWithMacOSApp()
 
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()

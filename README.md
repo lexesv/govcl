@@ -3,10 +3,10 @@
 ## 目录
 * [项目介绍](#项目介绍)
 * [重要说明](#重要说明)
-* [UI设计器](https://gitee.com/ying32/govcl/wikis/UI%E8%AE%BE%E8%AE%A1%E5%99%A8)
-* [FQA](https://gitee.com/ying32/govcl/wikis/Home)
+* [UI设计器](https://gitee.com/ying32/govcl/wikis/pages?title=UI%E8%AE%BE%E8%AE%A1%E5%99%A8&parent=)
+* [FQA](https://gitee.com/ying32/govcl/wikis/pages)
 * [使用方法](#使用方法)
-* [支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
+* [支持的组件列表](https://gitee.com/ying32/govcl/wikis/pages?title=%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8&parent=)
 * [截图预览](https://gitee.com/ying32/govcl/tree/master/Screenshot)
 * [点击链接加入群【govcl交流】](https://jq.qq.com/?_wv=1027&k=5Sv7Qiq) 群号：263106281
 
@@ -17,8 +17,8 @@
      Delphi(Lazarus)有些许多优秀的VCL(LCL)组件，不拿来使用太可惜了。所以就索性做了一套。  
      目前支持`Win32`、`Win64`、`Linux64`、`MacOS32`(对于`Linux64`、`MacOS32`提供**有限的组件、属性及函数方法**的支持)。      
  
-* 2、项目现在支持VCL(LCL)标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)。  
-     事件方面也支持部分，参见：[支持的事件](https://gitee.com/ying32/govcl/wikis/%E6%94%AF%E6%8C%81%E7%9A%84%E4%BA%8B%E4%BB%B6)    
+* 2、项目现在支持VCL(LCL)标准控件中的大部分，足以满足日常操作了，具体见[支持的组件列表](https://gitee.com/ying32/govcl/wikis/pages?title=%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8&parent=)。  
+     事件方面也支持部分，参见：[支持的事件](https://gitee.com/ying32/govcl/wikis/pages?title=%E6%94%AF%E6%8C%81%E7%9A%84%E4%BA%8B%E4%BB%B6&parent=)    
  
 ---
 ### 重要说明

@@ -19,7 +19,7 @@ var (
 
 func main() {
 
-	// mac下面太特殊了，调试的话得想个办法
+	// mac下记录发布时去掉
 	tools.RunWithMacOSApp()
 	// 异常捕获
 	defer func() {

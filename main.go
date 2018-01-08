@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"gitee.com/ying32/govcl/vcl"
-
+	"gitee.com/ying32/govcl/vcl/exts/tools"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 	"gitee.com/ying32/govcl/vcl/win"
@@ -19,6 +19,8 @@ var (
 
 func main() {
 
+	// mac下面太特殊了，调试的话得想个办法
+	tools.RunWithMacOSApp()
 	// 异常捕获
 	defer func() {
 		err := recover()

@@ -60,8 +60,11 @@ const (
     <key>NSHumanReadableCopyright</key>
 	<string>copyright 2017-2018 ying32.com</string>
 </dict>
-</plist>
-`
+</plist>`
+)
+
+var (
+    pkgInfo = []byte{0x41, 0x50, 0x50, 0x4C, 0x3F, 0x3F, 0x3F, 0x3F, 0x0D, 0x0A} 
 )
 
 func copyFile(src, dest string) error {
@@ -141,28 +144,37 @@ func RunWithMacOSApp() error {
 	if runtime.GOOS == "darwin" {
 		if len(os.Args) == 1 {
 			if strings.Contains(os.Args[0], "Contents/MacOS") {
-				//				exec.Command("open", "http://www.baidu.com").Run()
 				return fmt.Errorf("_")
 			}
 
 			execName := os.Args[0][strings.LastIndex(os.Args[0], "/")+1:]
 			macContentsDir := os.Args[0] + ".app/Contents"
 			macOSDir := macContentsDir + "/MacOS"
+			macResources := macContentsDir + "/Resources"
 			execFile := macOSDir + "/" + execName
 			if !fileExists(macOSDir) {
 				if err := os.MkdirAll(macOSDir, 0755); err != nil {
 					return err
 				}
 			}
-
+			
+			if !fileExists(macResources) {
+				os.MkdirAll(macResources, 0755)
+			}
+			
 			liblclFileName := macOSDir + "/liblcl.dylib"
 			if !fileExists(liblclFileName) {
 				extractdylib(getdylibzip(), liblclFileName)
 			}
-
+			
 			plistFileName := macContentsDir + "/Info.plist"
 			if !fileExists(plistFileName) {
 				ioutil.WriteFile(plistFileName, []byte(fmt.Sprintf(infoplist, execName, execName, execName, execName)), 0666)
+			}
+	
+			pkgInfoFileName := macContentsDir + "PkgInfo"
+			if !fileExists(pkgInfoFileName) {
+				ioutil.WriteFile(pkgInfoFileName, pkgInfo, 0666)
 			}
 
 			if copyFile(os.Args[0], execFile) == nil {

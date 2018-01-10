@@ -19,7 +19,7 @@ var (
 
 func main() {
 
-	// mac下记录发布时去掉
+	// mac下记得发布时去掉
 	tools.RunWithMacOSApp()
 	// 异常捕获
 	defer func() {

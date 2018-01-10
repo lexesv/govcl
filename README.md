@@ -22,12 +22,13 @@
  
 ---
 ### 重要说明
-**所有的代码只会存储在OSC的[码云](https://gitee.com/ying32/govcl)中，原因在于go包路径的问题。**  
-**至于github上会建一个同名的项目[govcl](https://github.com/ying32/govcl)，但不会提交任何代码**  
- 
-**govcl是以go 1.9作为基础版本开发，目前已知的是在go 1.7也可以编译，但作为以后的考虑会使用1.9中的特性，所以大家在使用的时候尽量使用go 1.9+版本**  
+* 所有的代码暂时只会存储在OSC的[码云](https://gitee.com/ying32/govcl)上，原因有二：1、在于go包路径的问题；2、github访问实在是太慢了。  
 
-**希望大家有问题的话通过Issues来进行反馈，反馈错误的话最好能带有相关错误的截图之类的， 而不是通过评论来提问。wiki也可关注下，有些问题在会里面作解答。**  
+* 至于github上会建一个同名的项目[govcl](https://github.com/ying32/govcl)，暂时不会提交任何代码，之后可能会考虑提交一个备份。    
+ 
+* 当前govcl是以go 1.9作为基础版本开发，目前已知的是在go 1.7也可以编译，但作为以后的考虑会使用1.9中的特性，所以大家在使用的时候尽量使用go 1.9+版本。  
+
+* 希望大家有问题的话通过Issues来进行反馈，反馈错误的话最好能带有相关错误的截图之类的， 而不是通过评论来提问。wiki也可关注下，有些问题在会里面作解答。  
 
 ---
 ### 使用方法
@@ -56,8 +57,11 @@ func main() {
 
 ```  
 
-* Windows: 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"(如果不想使用Delphi的二进制可到“bin\liblcl.dll\”目录下复制对应的lcl库二进制。注：使用lcl在组件，事件，属性及方法上会受到限制)到当前exe目录或系统环境路径下
-* Linux: 复制"bin\linux64\liblcl.so"可执行文件目录下
-* MacOS: 复制"bin\MacOS32\liblcl.dylib"可执行文件目录下（MacOS下注意：需要自行创建info.plist文件）  
+* Windows: 复制"bin\win32\libvcl.dll"或者"bin\win64\libvclx64.dll"到当前exe目录或系统环境路径下(如果不想使用Delphi的二进制可到“bin\liblcl.dll\”目录下复制对应的lcl库二进制。注：使用lcl在组件，事件，属性及方法上会受到限制)  
+
+* Linux: 复制"bin\linux64\liblcl.so"可执行文件目录下(也可复制liblcl.so到`/usr/lib/`目录中，作为公共库使用)。  
+
+* MacOS: 复制"bin\MacOS32\liblcl.dylib"可执行文件目录下（MacOS下注意：需要自行创建info.plist文件），或者参考：[MacOS上应用打包](https://gitee.com/ying32/govcl/wikis/pages?title=MacOS%E4%B8%8A%E5%BA%94%E7%94%A8%E6%89%93%E5%8C%85&parent=FQA) 
+
 
  

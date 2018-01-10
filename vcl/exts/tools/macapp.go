@@ -64,7 +64,7 @@ const (
 )
 
 var (
-    pkgInfo = []byte{0x41, 0x50, 0x50, 0x4C, 0x3F, 0x3F, 0x3F, 0x3F, 0x0D, 0x0A} 
+	pkgInfo = []byte{0x41, 0x50, 0x50, 0x4C, 0x3F, 0x3F, 0x3F, 0x3F, 0x0D, 0x0A}
 )
 
 func copyFile(src, dest string) error {
@@ -157,22 +157,22 @@ func RunWithMacOSApp() error {
 					return err
 				}
 			}
-			
+
 			if !fileExists(macResources) {
 				os.MkdirAll(macResources, 0755)
 			}
-			
+
 			liblclFileName := macOSDir + "/liblcl.dylib"
 			if !fileExists(liblclFileName) {
 				extractdylib(getdylibzip(), liblclFileName)
 			}
-			
+
 			plistFileName := macContentsDir + "/Info.plist"
 			if !fileExists(plistFileName) {
 				ioutil.WriteFile(plistFileName, []byte(fmt.Sprintf(infoplist, execName, execName, execName, execName)), 0666)
 			}
-	
-			pkgInfoFileName := macContentsDir + "PkgInfo"
+
+			pkgInfoFileName := macContentsDir + "/PkgInfo"
 			if !fileExists(pkgInfoFileName) {
 				ioutil.WriteFile(pkgInfoFileName, pkgInfo, 0666)
 			}

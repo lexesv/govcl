@@ -5,6 +5,7 @@ import (
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/exts/tools"
+	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
@@ -19,7 +20,7 @@ func main() {
 		vcl.ShowMessage(e.Message())
 	})
 	//   Form1.gfm
-	vcl.Application.CreateFormFromFile("Form1.gfm", &Form1)
+	vcl.Application.CreateFormFromFile(rtl.ExtractFilePath(vcl.Application.ExeName())+"Form1.gfm", &Form1)
 	// 文件加载方式
 	//	vcl.Application.CreateFormFromFile("Form2.gfm", &Form2)
 	// 字节加载方式

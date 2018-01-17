@@ -230,6 +230,9 @@ func main() {
 	col := lv1.Columns().Add()
 	col.SetCaption("序号")
 	col.SetWidth(100)
+	// 强制柱头宽，即使被调整也会被还原
+	col.SetMaxWidth(100)
+	col.SetMinWidth(100)
 	col = lv1.Columns().Add()
 	col.SetCaption("名称")
 	col.SetWidth(200)

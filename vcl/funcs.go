@@ -25,3 +25,13 @@ func CheckPtr(value IObject) uintptr {
 	}
 	return value.Instance()
 }
+
+// SelectDirectory1 选择目录
+func SelectDirectory1(options TSelectDirOpts) (bool, string) {
+	return api.DSelectDirectory1(options)
+}
+
+// SelectDirectory2 选择目录，一般 options默认是SdNewUI，parent默认为nil
+func SelectDirectory2(caption, root string, options TSelectDirExtOpts, parent IObject) (bool, string) {
+	return api.DSelectDirectory2(caption, root, options, CheckPtr(parent))
+}

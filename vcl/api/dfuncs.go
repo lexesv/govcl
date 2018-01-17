@@ -111,3 +111,24 @@ func DInheritsFromComponent(obj uintptr) bool {
 	r, _, _ := dInheritsFromComponent.Call(obj)
 	return r != 0
 }
+
+func DSelectDirectory1(options TSelectDirOpts) (bool, string) {
+	var ptr uintptr
+	r, _, _ := dSelectDirectory1.Call(uintptr(unsafe.Pointer(&ptr)), uintptr(options), 0)
+	v := DBoolToGoBool(r)
+	if v {
+		return true, DStrToGoStr(ptr)
+	}
+	return false, ""
+}
+
+func DSelectDirectory2(caption, root string, options TSelectDirExtOpts, parent uintptr) (bool, string) {
+	var ptr uintptr
+	r, _, _ := dSelectDirectory2.Call(GoStrToDStr(caption), GoStrToDStr(root), uintptr(unsafe.Pointer(&ptr)),
+		uintptr(options), parent)
+	v := DBoolToGoBool(r)
+	if v {
+		return true, DStrToGoStr(ptr)
+	}
+	return false, ""
+}

@@ -64,6 +64,9 @@ var (
 	dInheritsFromWinControl = libvcl.NewProc("DInheritsFromWinControl")
 	dInheritsFromComponent  = libvcl.NewProc("DInheritsFromComponent")
 
+	dSelectDirectory1 = libvcl.NewProc("DSelectDirectory1")
+	dSelectDirectory2 = libvcl.NewProc("DSelectDirectory2")
+
 	// TForm相关设置
 	setGlobalFormScaled      = libvcl.NewProc("SetGlobalFormScaled")
 	form_ScaleForPPI         = libvcl.NewProc("Form_ScaleForPPI")

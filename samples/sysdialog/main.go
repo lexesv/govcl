@@ -120,5 +120,26 @@ func main() {
 		}
 	})
 
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("SelectDirectory1")
+	btn.SetOnClick(func(vcl.IObject) {
+		if ok, dir := vcl.SelectDirectory1(0); ok {
+			fmt.Println("选择的目录为：", dir)
+		}
+	})
+
+	btn = vcl.NewButton(mainForm)
+	btn.SetAlign(types.AlTop)
+	btn.SetParent(mainForm)
+	btn.SetCaption("SelectDirectory2")
+	btn.SetOnClick(func(vcl.IObject) {
+		options := types.TSelectDirExtOpts(rtl.Include(0, types.SdNewFolder, types.SdShowEdit, types.SdNewUI))
+		if ok, dir := vcl.SelectDirectory2("标题了", "C:/", options, nil); ok {
+			fmt.Println("选择的目录为：", dir)
+		}
+	})
+
 	vcl.Application.Run()
 }

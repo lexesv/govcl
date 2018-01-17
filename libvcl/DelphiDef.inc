@@ -316,6 +316,26 @@ begin
 end;
 
 
+function DSelectDirectory1(var Directory: PChar;
+  Options: TSelectDirOpts; HelpCtx: Longint): LongBool; stdcall;
+var
+  LDir: string;
+begin
+  Result := SelectDirectory(LDir, Options, HelpCtx);
+  if Result then
+    Directory := PChar(LDir);
+end;
+
+function DSelectDirectory2(Caption, Root: PChar;
+  var Directory: PChar; Options: TSelectDirExtOpts; Parent: TWinControl): LongBool;  stdcall;
+var
+  LDir: string;
+begin
+  Result := SelectDirectory(Caption, Root, LDir, Options, Parent);
+  if Result then
+    Directory := PChar(LDir);
+end;
+
 
 // TStyleManager
 // StyleManager_Initialize
@@ -549,6 +569,9 @@ exports
   DInheritsFromControl,
   DInheritsFromWinControl,
   DInheritsFromComponent,
+
+  DSelectDirectory1,
+  DSelectDirectory2,
 
   DSetReportMemoryLeaksOnShutdown
   ;

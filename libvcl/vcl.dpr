@@ -47,9 +47,10 @@ uses
   Vcl.Mask,
   Vcl.CheckLst,
   Vcl.Samples.Gauges,
+  Vcl.FileCtrl,
+  {$IFDEF LIBVCL}uFormDesignerFile,{$ENDIF}
   uEventCallback in 'uEventCallback.pas',
-  ufrmGo in 'ufrmGo.pas' {GoForm}
-  {$IFDEF LIBVCL},uFormDesignerFile{$ENDIF};
+  ufrmGo in 'ufrmGo.pas' {GoForm};
 
 {$R *.res}
 

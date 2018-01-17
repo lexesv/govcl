@@ -85,6 +85,26 @@ begin
   AObj.ImageIndex := AValue;
 end;
 
+function ListColumn_GetMaxWidth(AObj: TListColumn): TWidth; stdcall;
+begin
+  Result :=  AObj.MaxWidth;
+end;
+
+procedure ListColumn_SetMaxWidth(AObj: TListColumn; AValue: TWidth); stdcall;
+begin
+  AObj.MaxWidth := AValue;
+end;
+
+function ListColumn_GetMinWidth(AObj: TListColumn): TWidth; stdcall;
+begin
+  Result :=  AObj.MinWidth;
+end;
+
+procedure ListColumn_SetMinWidth(AObj: TListColumn; AValue: TWidth); stdcall;
+begin
+  AObj.MinWidth := AValue;
+end;
+
 function ListColumn_GetTag(AObj: TListColumn): Integer; stdcall;
 begin
   Result :=  AObj.Tag;
@@ -133,6 +153,10 @@ exports
   ListColumn_SetCaption,
   ListColumn_GetImageIndex,
   ListColumn_SetImageIndex,
+  ListColumn_GetMaxWidth,
+  ListColumn_SetMaxWidth,
+  ListColumn_GetMinWidth,
+  ListColumn_SetMinWidth,
   ListColumn_GetTag,
   ListColumn_SetTag,
   ListColumn_GetWidth,

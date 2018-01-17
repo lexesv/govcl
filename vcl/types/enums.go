@@ -1577,3 +1577,31 @@ const (
 	DrLabel
 	DrSelectBounds
 )
+
+//TSelectDirOpt = (sdAllowCreate, sdPerformCreate, sdPrompt);
+type TSelectDirOpt int32
+
+const (
+	SdAllowCreate = iota + 0
+	SdPerformCreate
+	SdPrompt
+)
+
+//TSelectDirOpts = set of TSelectDirOpt;
+type TSelectDirOpts uint32
+
+//TSelectDirExtOpt = (sdNewFolder, sdShowEdit, sdShowShares, sdNewUI, sdShowFiles,
+//sdValidateDir);
+type TSelectDirExtOpt int32
+
+const (
+	SdNewFolder = iota + 0
+	SdShowEdit
+	SdShowShares
+	SdNewUI
+	SdShowFiles
+	SdValidateDir
+)
+
+//TSelectDirExtOpts = set of TSelectDirExtOpt;
+type TSelectDirExtOpts uint32

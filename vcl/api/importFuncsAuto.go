@@ -30506,6 +30506,24 @@ func ListColumn_SetImageIndex(obj uintptr, value int32) {
    listColumn_SetImageIndex.Call(obj, uintptr(value))
 }
 
+func ListColumn_GetMaxWidth(obj uintptr) int32 {
+    ret, _, _ := listColumn_GetMaxWidth.Call(obj)
+    return int32(ret)
+}
+
+func ListColumn_SetMaxWidth(obj uintptr, value int32) {
+   listColumn_SetMaxWidth.Call(obj, uintptr(value))
+}
+
+func ListColumn_GetMinWidth(obj uintptr) int32 {
+    ret, _, _ := listColumn_GetMinWidth.Call(obj)
+    return int32(ret)
+}
+
+func ListColumn_SetMinWidth(obj uintptr, value int32) {
+   listColumn_SetMinWidth.Call(obj, uintptr(value))
+}
+
 func ListColumn_GetTag(obj uintptr) int32 {
     ret, _, _ := listColumn_GetTag.Call(obj)
     return int32(ret)

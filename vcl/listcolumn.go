@@ -107,6 +107,22 @@ func (l *TListColumn) SetImageIndex(value int32) {
     ListColumn_SetImageIndex(l.instance, value)
 }
 
+func (l *TListColumn) MaxWidth() int32 {
+    return ListColumn_GetMaxWidth(l.instance)
+}
+
+func (l *TListColumn) SetMaxWidth(value int32) {
+    ListColumn_SetMaxWidth(l.instance, value)
+}
+
+func (l *TListColumn) MinWidth() int32 {
+    return ListColumn_GetMinWidth(l.instance)
+}
+
+func (l *TListColumn) SetMinWidth(value int32) {
+    ListColumn_SetMinWidth(l.instance, value)
+}
+
 func (l *TListColumn) Tag() int32 {
     return ListColumn_GetTag(l.instance)
 }

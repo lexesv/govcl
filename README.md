@@ -4,7 +4,7 @@
 * [项目介绍](#项目介绍)
 * [重要说明](#重要说明)
 * [UI设计器](https://gitee.com/ying32/govcl/wikis/pages?title=%E5%89%8D%E8%A8%80&parent=%E8%AE%BE%E8%AE%A1%E5%99%A8%E5%B8%AE%E5%8A%A9)
-* [FQA](https://gitee.com/ying32/govcl/wikis/pages)
+* [FAQ](https://gitee.com/ying32/govcl/wikis/pages)
 * [使用方法](#使用方法)
 * [支持的组件列表](https://gitee.com/ying32/govcl/wikis/pages?title=%E6%94%AF%E6%8C%81%E7%9A%84%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8&parent=)
 * [截图预览](https://gitee.com/ying32/govcl/tree/master/Screenshot)

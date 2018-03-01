@@ -337,6 +337,7 @@ begin
 end;
 
 
+
 // TStyleManager
 // StyleManager_Initialize
 // StyleManager_UnInitialize
@@ -430,6 +431,22 @@ end;
 function StyleManager_StyleDescriptor(StyleName: PChar): TStyleManager.TStyleClassDescriptor; stdcall;
 begin
   Result := TStyleManager.StyleDescriptor[StyleName];
+end;
+
+// StyleNames
+//function StyleManager_StyleNamesPtr: Pointer; stdcall;
+//begin
+//  Result := Pointer(@TStyleManager.StyleNames[0]);
+//end;
+//
+function StyleManager_StyleNamesOf(AIndex: Integer): PChar; stdcall;
+var
+  LArr: TArray<string>;
+begin
+  Result := nil;
+  LArr := TStyleManager.StyleNames;
+  if (Length(LArr) > 0) and (AIndex >= 0) and (AIndex < Length(LArr)) then
+    Result := PChar(LArr[AIndex]);
 end;
 
 // dylib
@@ -562,6 +579,7 @@ exports
    StyleManager_RegisterStyle,
    StyleManager_Style,
    StyleManager_StyleDescriptor,
+   StyleManager_StyleNamesOf,
 
   DExtractFilePath,
   DFileExists,

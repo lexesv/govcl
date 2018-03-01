@@ -32,9 +32,11 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetLeft(10)
 	btn.SetTop(top)
-	btn.SetCaption("按钮1")
+	btn.SetWidth(150)
+	btn.SetCaption("打印已注册的样式")
 	btn.SetOnClick(func(vcl.IObject) {
 		fmt.Println("按钮1单击")
+		fmt.Println("已注册样式：", vcl.StyleManager.StyleNames())
 	})
 
 	top += btn.Height() + 5

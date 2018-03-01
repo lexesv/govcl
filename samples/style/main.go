@@ -36,7 +36,11 @@ func main() {
 	btn.SetCaption("打印已注册的样式")
 	btn.SetOnClick(func(vcl.IObject) {
 		fmt.Println("按钮1单击")
-		fmt.Println("已注册样式：", vcl.StyleManager.StyleNames())
+		styleNames := vcl.StyleManager.StyleNames()
+		fmt.Println("len:", len(styleNames))
+		for _, s := range styleNames {
+			fmt.Println("已注册样式：", s)
+		}
 	})
 
 	top += btn.Height() + 5

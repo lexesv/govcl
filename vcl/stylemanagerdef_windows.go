@@ -81,3 +81,17 @@ func (s *TStyleManager) RegisterStyle(style uintptr) {
 func (s *TStyleManager) Style(name string) uintptr {
 	return StyleManager_Style(name)
 }
+
+// StyleNames
+func (s *TStyleManager) StyleNames() (arr []string) {
+	var i int32
+	for {
+		s := StyleManager_StyleNamesOf(i)
+		if s == "" {
+			return
+		}
+		arr = append(arr, s)
+		i++
+	}
+	return
+}

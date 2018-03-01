@@ -23,6 +23,7 @@ var (
 	styleManager_RegisterStyle       = libvcl.NewProc("StyleManager_RegisterStyle")
 	styleManager_Style               = libvcl.NewProc("StyleManager_Style")
 	styleManager_StyleDescriptor     = libvcl.NewProc("StyleManager_StyleDescriptor")
+	styleManager_StyleNamesOf        = libvcl.NewProc("StyleManager_StyleNamesOf")
 )
 
 // StyleManager_IsValidStyle
@@ -109,3 +110,8 @@ func StyleManager_Style(name string) uintptr {
 // func StyleManager_StyleDescriptor(styleName string) uintptr {
 // styleManager_StyleDescriptor.Call(GoStrToDStr(styleName))
 // }
+
+func StyleManager_StyleNamesOf(index int32) string {
+	r, _, _ := styleManager_StyleNamesOf.Call(uintptr(index))
+	return DStrToGoStr(r)
+}

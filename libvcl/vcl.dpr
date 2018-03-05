@@ -48,9 +48,10 @@ uses
   Vcl.CheckLst,
   Vcl.Samples.Gauges,
   Vcl.FileCtrl,
-  {$IFDEF LIBVCL}uFormDesignerFile,{$ENDIF}
+  {$IFDEF LIBVCL}uFormDesignerFile{$ENDIF},
   uEventCallback in 'uEventCallback.pas',
-  ufrmGo in 'ufrmGo.pas' {GoForm};
+  ufrmGo in 'ufrmGo.pas' {GoForm},
+  ImageButton in 'ImageButton.pas';
 
 {$R *.res}
 
@@ -169,6 +170,7 @@ uses
 {$I ScrollBox.inc}
 {$I CheckListBox.inc}
 {$I Gauge.inc}
+{$I ImageButton.inc}
 
 begin
 end.

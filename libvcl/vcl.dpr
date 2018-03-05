@@ -48,7 +48,7 @@ uses
   Vcl.CheckLst,
   Vcl.Samples.Gauges,
   Vcl.FileCtrl,
-  {$IFDEF LIBVCL}uFormDesignerFile{$ENDIF},
+  {$IFDEF LIBVCL}uFormDesignerFile,{$ENDIF}
   uEventCallback in 'uEventCallback.pas',
   ufrmGo in 'ufrmGo.pas' {GoForm},
   ImageButton in 'ImageButton.pas';

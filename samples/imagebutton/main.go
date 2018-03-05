@@ -20,6 +20,8 @@ func main() {
 	mainForm.SetWidth(300)
 	mainForm.SetHeight(400)
 
+	mainForm.SetShowHint(true)
+
 	btnClose := vcl.NewImageButton(mainForm)
 	btnClose.SetParent(mainForm)
 
@@ -27,6 +29,7 @@ func main() {
 	btnClose.SetAutoSize(true)
 	btnClose.Picture().LoadFromFile("./btn_close.png")
 	btnClose.SetLeft(mainForm.ClientWidth() - btnClose.Width() - 3)
+	btnClose.SetHint("关闭")
 
 	btnClose.SetOnClick(func(vcl.IObject) {
 		vcl.ShowMessage("close")
@@ -38,6 +41,7 @@ func main() {
 	btnMax.SetAutoSize(true)
 	btnMax.Picture().LoadFromFile("./btn_max.png")
 	btnMax.SetLeft(btnClose.Left() - btnMax.Width())
+	btnMax.SetHint("最大化")
 
 	btnMin := vcl.NewImageButton(mainForm)
 	btnMin.SetParent(mainForm)
@@ -45,6 +49,7 @@ func main() {
 	btnMin.SetAutoSize(true)
 	btnMin.Picture().LoadFromFile("./btn_min.png")
 	btnMin.SetLeft(btnMax.Left() - btnMin.Width())
+	btnMin.SetHint("最小化")
 
 	btnSkin := vcl.NewImageButton(mainForm)
 	btnSkin.SetParent(mainForm)
@@ -52,6 +57,7 @@ func main() {
 	btnSkin.SetAutoSize(true)
 	btnSkin.Picture().LoadFromFile("./btn_skin.png")
 	btnSkin.SetLeft(btnMin.Left() - btnSkin.Width())
+	btnSkin.SetHint("皮肤")
 
 	btnScan := vcl.NewImageButton(mainForm)
 	btnScan.SetParent(mainForm)
@@ -60,6 +66,7 @@ func main() {
 	btnScan.Picture().LoadFromFile("./btn_scan.png")
 	btnScan.SetTop((mainForm.ClientHeight() - btnScan.Height()) / 2)
 	btnScan.SetLeft((mainForm.ClientWidth() - btnScan.Width()) / 2)
+	btnScan.SetHint("全盘扫描")
 
 	vcl.Application.Run()
 }

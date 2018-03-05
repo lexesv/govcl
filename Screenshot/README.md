@@ -12,6 +12,8 @@
 ![RichEdit](https://gitee.com/ying32/govcl/raw/dev/Screenshot/richedit.png)  
 ![标准控件](https://gitee.com/ying32/govcl/raw/dev/Screenshot/std.png)  
 ![样式](https://gitee.com/ying32/govcl/raw/dev/Screenshot/style.png)  
+![图像按钮](https://gitee.com/ying32/govcl/raw/dev/Screenshot/imagebutton.jpg)  
+
 
 ---
 ## Linux 
@@ -32,3 +34,4 @@
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/3_macOS.jpg)  
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/4_macOS.jpg)  
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/5_macOS.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/6_macOS.jpg)  

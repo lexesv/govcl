@@ -40,6 +40,7 @@ func PanelFromObj(obj IObject) *TPanel {
 func (p *TPanel) Free() {
     if p.instance != 0 {
         Panel_Free(p.instance)
+        p.instance = 0
     }
 }
 

@@ -39,6 +39,7 @@ func ListGroupsFromObj(obj IObject) *TListGroups {
 func (l *TListGroups) Free() {
     if l.instance != 0 {
         ListGroups_Free(l.instance)
+        l.instance = 0
     }
 }
 

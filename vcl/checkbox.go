@@ -40,6 +40,7 @@ func CheckBoxFromObj(obj IObject) *TCheckBox {
 func (c *TCheckBox) Free() {
     if c.instance != 0 {
         CheckBox_Free(c.instance)
+        c.instance = 0
     }
 }
 

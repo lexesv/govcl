@@ -40,6 +40,7 @@ func StringListFromObj(obj IObject) *TStringList {
 func (s *TStringList) Free() {
     if s.instance != 0 {
         StringList_Free(s.instance)
+        s.instance = 0
     }
 }
 

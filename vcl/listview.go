@@ -40,6 +40,7 @@ func ListViewFromObj(obj IObject) *TListView {
 func (l *TListView) Free() {
     if l.instance != 0 {
         ListView_Free(l.instance)
+        l.instance = 0
     }
 }
 

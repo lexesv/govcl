@@ -40,6 +40,7 @@ func MemoFromObj(obj IObject) *TMemo {
 func (m *TMemo) Free() {
     if m.instance != 0 {
         Memo_Free(m.instance)
+        m.instance = 0
     }
 }
 

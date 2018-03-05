@@ -40,6 +40,7 @@ func IniFileFromObj(obj IObject) *TIniFile {
 func (i *TIniFile) Free() {
     if i.instance != 0 {
         IniFile_Free(i.instance)
+        i.instance = 0
     }
 }
 

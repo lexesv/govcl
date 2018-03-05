@@ -40,6 +40,7 @@ func ComboBoxFromObj(obj IObject) *TComboBox {
 func (c *TComboBox) Free() {
     if c.instance != 0 {
         ComboBox_Free(c.instance)
+        c.instance = 0
     }
 }
 

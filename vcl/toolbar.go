@@ -40,6 +40,7 @@ func ToolBarFromObj(obj IObject) *TToolBar {
 func (t *TToolBar) Free() {
     if t.instance != 0 {
         ToolBar_Free(t.instance)
+        t.instance = 0
     }
 }
 

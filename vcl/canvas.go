@@ -40,6 +40,7 @@ func CanvasFromObj(obj IObject) *TCanvas {
 func (c *TCanvas) Free() {
     if c.instance != 0 {
         Canvas_Free(c.instance)
+        c.instance = 0
     }
 }
 

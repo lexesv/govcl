@@ -40,6 +40,7 @@ func ColorDialogFromObj(obj IObject) *TColorDialog {
 func (c *TColorDialog) Free() {
     if c.instance != 0 {
         ColorDialog_Free(c.instance)
+        c.instance = 0
     }
 }
 

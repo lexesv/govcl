@@ -40,6 +40,7 @@ func GIFImageFromObj(obj IObject) *TGIFImage {
 func (g *TGIFImage) Free() {
     if g.instance != 0 {
         GIFImage_Free(g.instance)
+        g.instance = 0
     }
 }
 

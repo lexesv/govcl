@@ -40,6 +40,7 @@ func StatusPanelFromObj(obj IObject) *TStatusPanel {
 func (s *TStatusPanel) Free() {
     if s.instance != 0 {
         StatusPanel_Free(s.instance)
+        s.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func SaveDialogFromObj(obj IObject) *TSaveDialog {
 func (s *TSaveDialog) Free() {
     if s.instance != 0 {
         SaveDialog_Free(s.instance)
+        s.instance = 0
     }
 }
 

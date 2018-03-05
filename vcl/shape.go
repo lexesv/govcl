@@ -40,6 +40,7 @@ func ShapeFromObj(obj IObject) *TShape {
 func (s *TShape) Free() {
     if s.instance != 0 {
         Shape_Free(s.instance)
+        s.instance = 0
     }
 }
 

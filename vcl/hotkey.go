@@ -40,6 +40,7 @@ func HotKeyFromObj(obj IObject) *THotKey {
 func (h *THotKey) Free() {
     if h.instance != 0 {
         HotKey_Free(h.instance)
+        h.instance = 0
     }
 }
 

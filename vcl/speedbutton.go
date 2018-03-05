@@ -40,6 +40,7 @@ func SpeedButtonFromObj(obj IObject) *TSpeedButton {
 func (s *TSpeedButton) Free() {
     if s.instance != 0 {
         SpeedButton_Free(s.instance)
+        s.instance = 0
     }
 }
 

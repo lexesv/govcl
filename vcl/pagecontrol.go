@@ -40,6 +40,7 @@ func PageControlFromObj(obj IObject) *TPageControl {
 func (p *TPageControl) Free() {
     if p.instance != 0 {
         PageControl_Free(p.instance)
+        p.instance = 0
     }
 }
 

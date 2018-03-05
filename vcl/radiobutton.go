@@ -40,6 +40,7 @@ func RadioButtonFromObj(obj IObject) *TRadioButton {
 func (r *TRadioButton) Free() {
     if r.instance != 0 {
         RadioButton_Free(r.instance)
+        r.instance = 0
     }
 }
 

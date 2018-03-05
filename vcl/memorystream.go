@@ -40,6 +40,7 @@ func MemoryStreamFromObj(obj IObject) *TMemoryStream {
 func (m *TMemoryStream) Free() {
     if m.instance != 0 {
         MemoryStream_Free(m.instance)
+        m.instance = 0
     }
 }
 

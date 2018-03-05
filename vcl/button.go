@@ -40,6 +40,7 @@ func ButtonFromObj(obj IObject) *TButton {
 func (b *TButton) Free() {
     if b.instance != 0 {
         Button_Free(b.instance)
+        b.instance = 0
     }
 }
 

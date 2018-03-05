@@ -40,6 +40,7 @@ func ToolButtonFromObj(obj IObject) *TToolButton {
 func (t *TToolButton) Free() {
     if t.instance != 0 {
         ToolButton_Free(t.instance)
+        t.instance = 0
     }
 }
 

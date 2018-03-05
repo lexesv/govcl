@@ -40,6 +40,7 @@ func PrintDialogFromObj(obj IObject) *TPrintDialog {
 func (p *TPrintDialog) Free() {
     if p.instance != 0 {
         PrintDialog_Free(p.instance)
+        p.instance = 0
     }
 }
 

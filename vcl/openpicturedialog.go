@@ -40,6 +40,7 @@ func OpenPictureDialogFromObj(obj IObject) *TOpenPictureDialog {
 func (o *TOpenPictureDialog) Free() {
     if o.instance != 0 {
         OpenPictureDialog_Free(o.instance)
+        o.instance = 0
     }
 }
 

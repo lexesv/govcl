@@ -40,6 +40,7 @@ func PngImageFromObj(obj IObject) *TPngImage {
 func (p *TPngImage) Free() {
     if p.instance != 0 {
         PngImage_Free(p.instance)
+        p.instance = 0
     }
 }
 

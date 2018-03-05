@@ -40,6 +40,7 @@ func BitBtnFromObj(obj IObject) *TBitBtn {
 func (b *TBitBtn) Free() {
     if b.instance != 0 {
         BitBtn_Free(b.instance)
+        b.instance = 0
     }
 }
 

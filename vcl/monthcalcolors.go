@@ -40,6 +40,7 @@ func MonthCalColorsFromObj(obj IObject) *TMonthCalColors {
 func (m *TMonthCalColors) Free() {
     if m.instance != 0 {
         MonthCalColors_Free(m.instance)
+        m.instance = 0
     }
 }
 

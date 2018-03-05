@@ -39,6 +39,7 @@ func ListColumnsFromObj(obj IObject) *TListColumns {
 func (l *TListColumns) Free() {
     if l.instance != 0 {
         ListColumns_Free(l.instance)
+        l.instance = 0
     }
 }
 

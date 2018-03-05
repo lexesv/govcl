@@ -40,6 +40,7 @@ func JPEGImageFromObj(obj IObject) *TJPEGImage {
 func (j *TJPEGImage) Free() {
     if j.instance != 0 {
         JPEGImage_Free(j.instance)
+        j.instance = 0
     }
 }
 

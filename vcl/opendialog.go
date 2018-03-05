@@ -40,6 +40,7 @@ func OpenDialogFromObj(obj IObject) *TOpenDialog {
 func (o *TOpenDialog) Free() {
     if o.instance != 0 {
         OpenDialog_Free(o.instance)
+        o.instance = 0
     }
 }
 

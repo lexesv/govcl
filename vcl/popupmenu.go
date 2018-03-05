@@ -40,6 +40,7 @@ func PopupMenuFromObj(obj IObject) *TPopupMenu {
 func (p *TPopupMenu) Free() {
     if p.instance != 0 {
         PopupMenu_Free(p.instance)
+        p.instance = 0
     }
 }
 

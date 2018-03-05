@@ -40,6 +40,7 @@ func FontFromObj(obj IObject) *TFont {
 func (f *TFont) Free() {
     if f.instance != 0 {
         Font_Free(f.instance)
+        f.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func StringsFromObj(obj IObject) *TStrings {
 func (s *TStrings) Free() {
     if s.instance != 0 {
         Strings_Free(s.instance)
+        s.instance = 0
     }
 }
 

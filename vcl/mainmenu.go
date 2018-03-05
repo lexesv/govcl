@@ -40,6 +40,7 @@ func MainMenuFromObj(obj IObject) *TMainMenu {
 func (m *TMainMenu) Free() {
     if m.instance != 0 {
         MainMenu_Free(m.instance)
+        m.instance = 0
     }
 }
 

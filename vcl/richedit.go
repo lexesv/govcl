@@ -40,6 +40,7 @@ func RichEditFromObj(obj IObject) *TRichEdit {
 func (r *TRichEdit) Free() {
     if r.instance != 0 {
         RichEdit_Free(r.instance)
+        r.instance = 0
     }
 }
 

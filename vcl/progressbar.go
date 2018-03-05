@@ -40,6 +40,7 @@ func ProgressBarFromObj(obj IObject) *TProgressBar {
 func (p *TProgressBar) Free() {
     if p.instance != 0 {
         ProgressBar_Free(p.instance)
+        p.instance = 0
     }
 }
 

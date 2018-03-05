@@ -39,6 +39,7 @@ func MarginsFromObj(obj IObject) *TMargins {
 func (m *TMargins) Free() {
     if m.instance != 0 {
         Margins_Free(m.instance)
+        m.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func ActionListFromObj(obj IObject) *TActionList {
 func (a *TActionList) Free() {
     if a.instance != 0 {
         ActionList_Free(a.instance)
+        a.instance = 0
     }
 }
 

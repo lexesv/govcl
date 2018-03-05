@@ -40,6 +40,7 @@ func ImageFromObj(obj IObject) *TImage {
 func (i *TImage) Free() {
     if i.instance != 0 {
         Image_Free(i.instance)
+        i.instance = 0
     }
 }
 

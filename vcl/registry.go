@@ -41,6 +41,7 @@ func RegistryFromObj(obj IObject) *TRegistry {
 func (r *TRegistry) Free() {
     if r.instance != 0 {
         Registry_Free(r.instance)
+        r.instance = 0
     }
 }
 

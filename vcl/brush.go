@@ -40,6 +40,7 @@ func BrushFromObj(obj IObject) *TBrush {
 func (b *TBrush) Free() {
     if b.instance != 0 {
         Brush_Free(b.instance)
+        b.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func GIFFrameFromObj(obj IObject) *TGIFFrame {
 func (g *TGIFFrame) Free() {
     if g.instance != 0 {
         GIFFrame_Free(g.instance)
+        g.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func SavePictureDialogFromObj(obj IObject) *TSavePictureDialog {
 func (s *TSavePictureDialog) Free() {
     if s.instance != 0 {
         SavePictureDialog_Free(s.instance)
+        s.instance = 0
     }
 }
 

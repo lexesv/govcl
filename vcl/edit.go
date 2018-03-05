@@ -40,6 +40,7 @@ func EditFromObj(obj IObject) *TEdit {
 func (e *TEdit) Free() {
     if e.instance != 0 {
         Edit_Free(e.instance)
+        e.instance = 0
     }
 }
 

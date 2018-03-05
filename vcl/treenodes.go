@@ -40,6 +40,7 @@ func TreeNodesFromObj(obj IObject) *TTreeNodes {
 func (t *TTreeNodes) Free() {
     if t.instance != 0 {
         TreeNodes_Free(t.instance)
+        t.instance = 0
     }
 }
 

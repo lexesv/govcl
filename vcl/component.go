@@ -39,6 +39,7 @@ func ComponentFromObj(obj IObject) *TComponent {
 func (c *TComponent) Free() {
     if c.instance != 0 {
         Component_Free(c.instance)
+        c.instance = 0
     }
 }
 

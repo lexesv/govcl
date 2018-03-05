@@ -40,6 +40,7 @@ func SplitterFromObj(obj IObject) *TSplitter {
 func (s *TSplitter) Free() {
     if s.instance != 0 {
         Splitter_Free(s.instance)
+        s.instance = 0
     }
 }
 

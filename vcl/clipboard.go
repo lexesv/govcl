@@ -39,6 +39,7 @@ func ClipboardFromObj(obj IObject) *TClipboard {
 func (c *TClipboard) Free() {
     if c.instance != 0 {
         Clipboard_Free(c.instance)
+        c.instance = 0
     }
 }
 

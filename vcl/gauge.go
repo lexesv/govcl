@@ -40,6 +40,7 @@ func GaugeFromObj(obj IObject) *TGauge {
 func (g *TGauge) Free() {
     if g.instance != 0 {
         Gauge_Free(g.instance)
+        g.instance = 0
     }
 }
 

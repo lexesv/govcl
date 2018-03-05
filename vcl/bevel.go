@@ -40,6 +40,7 @@ func BevelFromObj(obj IObject) *TBevel {
 func (b *TBevel) Free() {
     if b.instance != 0 {
         Bevel_Free(b.instance)
+        b.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func ControlFromObj(obj IObject) *TControl {
 func (c *TControl) Free() {
     if c.instance != 0 {
         Control_Free(c.instance)
+        c.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func FontDialogFromObj(obj IObject) *TFontDialog {
 func (f *TFontDialog) Free() {
     if f.instance != 0 {
         FontDialog_Free(f.instance)
+        f.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func ScreenFromObj(obj IObject) *TScreen {
 func (s *TScreen) Free() {
     if s.instance != 0 {
         Screen_Free(s.instance)
+        s.instance = 0
     }
 }
 

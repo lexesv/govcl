@@ -40,6 +40,7 @@ func ImageListFromObj(obj IObject) *TImageList {
 func (i *TImageList) Free() {
     if i.instance != 0 {
         ImageList_Free(i.instance)
+        i.instance = 0
     }
 }
 

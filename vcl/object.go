@@ -39,6 +39,7 @@ func ObjectFromObj(obj IObject) *TObject {
 func (o *TObject) Free() {
     if o.instance != 0 {
         Object_Free(o.instance)
+        o.instance = 0
     }
 }
 

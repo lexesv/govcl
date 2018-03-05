@@ -39,6 +39,7 @@ func CollectionItemFromObj(obj IObject) *TCollectionItem {
 func (c *TCollectionItem) Free() {
     if c.instance != 0 {
         CollectionItem_Free(c.instance)
+        c.instance = 0
     }
 }
 

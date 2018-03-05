@@ -41,6 +41,7 @@ func DateTimePickerFromObj(obj IObject) *TDateTimePicker {
 func (d *TDateTimePicker) Free() {
     if d.instance != 0 {
         DateTimePicker_Free(d.instance)
+        d.instance = 0
     }
 }
 

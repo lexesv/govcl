@@ -40,6 +40,7 @@ func GroupBoxFromObj(obj IObject) *TGroupBox {
 func (g *TGroupBox) Free() {
     if g.instance != 0 {
         GroupBox_Free(g.instance)
+        g.instance = 0
     }
 }
 

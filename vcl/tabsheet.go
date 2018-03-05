@@ -40,6 +40,7 @@ func TabSheetFromObj(obj IObject) *TTabSheet {
 func (t *TTabSheet) Free() {
     if t.instance != 0 {
         TabSheet_Free(t.instance)
+        t.instance = 0
     }
 }
 

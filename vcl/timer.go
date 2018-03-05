@@ -39,6 +39,7 @@ func TimerFromObj(obj IObject) *TTimer {
 func (t *TTimer) Free() {
     if t.instance != 0 {
         Timer_Free(t.instance)
+        t.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func OpenTextFileDialogFromObj(obj IObject) *TOpenTextFileDialog {
 func (o *TOpenTextFileDialog) Free() {
     if o.instance != 0 {
         OpenTextFileDialog_Free(o.instance)
+        o.instance = 0
     }
 }
 

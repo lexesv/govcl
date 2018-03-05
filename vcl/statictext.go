@@ -40,6 +40,7 @@ func StaticTextFromObj(obj IObject) *TStaticText {
 func (s *TStaticText) Free() {
     if s.instance != 0 {
         StaticText_Free(s.instance)
+        s.instance = 0
     }
 }
 

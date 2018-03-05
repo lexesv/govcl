@@ -40,6 +40,7 @@ func CategoryPanelFromObj(obj IObject) *TCategoryPanel {
 func (c *TCategoryPanel) Free() {
     if c.instance != 0 {
         CategoryPanel_Free(c.instance)
+        c.instance = 0
     }
 }
 

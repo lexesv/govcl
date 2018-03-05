@@ -40,6 +40,7 @@ func TrayIconFromObj(obj IObject) *TTrayIcon {
 func (t *TTrayIcon) Free() {
     if t.instance != 0 {
         TrayIcon_Free(t.instance)
+        t.instance = 0
     }
 }
 

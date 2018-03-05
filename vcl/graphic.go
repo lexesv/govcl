@@ -39,6 +39,7 @@ func GraphicFromObj(obj IObject) *TGraphic {
 func (g *TGraphic) Free() {
     if g.instance != 0 {
         Graphic_Free(g.instance)
+        g.instance = 0
     }
 }
 

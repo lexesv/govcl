@@ -40,6 +40,7 @@ func RadioGroupFromObj(obj IObject) *TRadioGroup {
 func (r *TRadioGroup) Free() {
     if r.instance != 0 {
         RadioGroup_Free(r.instance)
+        r.instance = 0
     }
 }
 

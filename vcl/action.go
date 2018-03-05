@@ -40,6 +40,7 @@ func ActionFromObj(obj IObject) *TAction {
 func (a *TAction) Free() {
     if a.instance != 0 {
         Action_Free(a.instance)
+        a.instance = 0
     }
 }
 

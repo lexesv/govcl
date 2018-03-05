@@ -40,6 +40,7 @@ func PenFromObj(obj IObject) *TPen {
 func (p *TPen) Free() {
     if p.instance != 0 {
         Pen_Free(p.instance)
+        p.instance = 0
     }
 }
 

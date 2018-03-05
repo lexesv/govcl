@@ -40,6 +40,7 @@ func LabelFromObj(obj IObject) *TLabel {
 func (l *TLabel) Free() {
     if l.instance != 0 {
         Label_Free(l.instance)
+        l.instance = 0
     }
 }
 

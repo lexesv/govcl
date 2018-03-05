@@ -40,6 +40,7 @@ func UpDownFromObj(obj IObject) *TUpDown {
 func (u *TUpDown) Free() {
     if u.instance != 0 {
         UpDown_Free(u.instance)
+        u.instance = 0
     }
 }
 

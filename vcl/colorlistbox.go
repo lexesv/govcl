@@ -40,6 +40,7 @@ func ColorListBoxFromObj(obj IObject) *TColorListBox {
 func (c *TColorListBox) Free() {
     if c.instance != 0 {
         ColorListBox_Free(c.instance)
+        c.instance = 0
     }
 }
 

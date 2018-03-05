@@ -40,6 +40,7 @@ func StatusBarFromObj(obj IObject) *TStatusBar {
 func (s *TStatusBar) Free() {
     if s.instance != 0 {
         StatusBar_Free(s.instance)
+        s.instance = 0
     }
 }
 

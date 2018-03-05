@@ -40,6 +40,7 @@ func TrackBarFromObj(obj IObject) *TTrackBar {
 func (t *TTrackBar) Free() {
     if t.instance != 0 {
         TrackBar_Free(t.instance)
+        t.instance = 0
     }
 }
 

@@ -41,6 +41,7 @@ func MonthCalendarFromObj(obj IObject) *TMonthCalendar {
 func (m *TMonthCalendar) Free() {
     if m.instance != 0 {
         MonthCalendar_Free(m.instance)
+        m.instance = 0
     }
 }
 

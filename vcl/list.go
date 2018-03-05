@@ -39,6 +39,7 @@ func ListFromObj(obj IObject) *TList {
 func (l *TList) Free() {
     if l.instance != 0 {
         List_Free(l.instance)
+        l.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func ScrollBarFromObj(obj IObject) *TScrollBar {
 func (s *TScrollBar) Free() {
     if s.instance != 0 {
         ScrollBar_Free(s.instance)
+        s.instance = 0
     }
 }
 

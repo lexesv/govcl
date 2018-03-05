@@ -40,6 +40,7 @@ func ListItemsFromObj(obj IObject) *TListItems {
 func (l *TListItems) Free() {
     if l.instance != 0 {
         ListItems_Free(l.instance)
+        l.instance = 0
     }
 }
 

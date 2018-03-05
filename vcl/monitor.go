@@ -40,6 +40,7 @@ func MonitorFromObj(obj IObject) *TMonitor {
 func (m *TMonitor) Free() {
     if m.instance != 0 {
         Monitor_Free(m.instance)
+        m.instance = 0
     }
 }
 

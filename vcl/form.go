@@ -40,6 +40,7 @@ func FormFromObj(obj IObject) *TForm {
 func (f *TForm) Free() {
     if f.instance != 0 {
         Form_Free(f.instance)
+        f.instance = 0
     }
 }
 

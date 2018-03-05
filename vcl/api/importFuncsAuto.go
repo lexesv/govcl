@@ -37918,3 +37918,485 @@ func Gauge_GetComponents(obj uintptr, AIndex int32) uintptr {
     return ret
 }
 
+
+//--------------------------- TImageButton ---------------------------
+
+func ImageButton_Create(obj uintptr) uintptr {
+    ret, _, _ := imageButton_Create.Call(obj)
+    return ret
+}
+
+func ImageButton_Free(obj uintptr) {
+    imageButton_Free.Call(obj)
+}
+
+func ImageButton_Click(obj uintptr)  {
+    imageButton_Click.Call(obj)
+}
+
+func ImageButton_BringToFront(obj uintptr)  {
+    imageButton_BringToFront.Call(obj)
+}
+
+func ImageButton_HasParent(obj uintptr) bool {
+    ret, _, _ := imageButton_HasParent.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_Hide(obj uintptr)  {
+    imageButton_Hide.Call(obj)
+}
+
+func ImageButton_Invalidate(obj uintptr)  {
+    imageButton_Invalidate.Call(obj)
+}
+
+func ImageButton_Perform(obj uintptr, Msg uint32, WParam uintptr, LParam int) int {
+    ret, _, _ := imageButton_Perform.Call(obj, uintptr(Msg) , WParam , uintptr(LParam) )
+    return int(ret)
+}
+
+func ImageButton_Refresh(obj uintptr)  {
+    imageButton_Refresh.Call(obj)
+}
+
+func ImageButton_Repaint(obj uintptr)  {
+    imageButton_Repaint.Call(obj)
+}
+
+func ImageButton_SendToBack(obj uintptr)  {
+    imageButton_SendToBack.Call(obj)
+}
+
+func ImageButton_SetBounds(obj uintptr, ALeft int32, ATop int32, AWidth int32, AHeight int32)  {
+    imageButton_SetBounds.Call(obj, uintptr(ALeft) , uintptr(ATop) , uintptr(AWidth) , uintptr(AHeight) )
+}
+
+func ImageButton_Show(obj uintptr)  {
+    imageButton_Show.Call(obj)
+}
+
+func ImageButton_Update(obj uintptr)  {
+    imageButton_Update.Call(obj)
+}
+
+func ImageButton_GetTextBuf(obj uintptr, Buffer string, BufSize int32) int32 {
+    ret, _, _ := imageButton_GetTextBuf.Call(obj, GoStrToDStr(Buffer) , uintptr(BufSize) )
+    return int32(ret)
+}
+
+func ImageButton_GetTextLen(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetTextLen.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_FindComponent(obj uintptr, AName string) uintptr {
+    ret, _, _ := imageButton_FindComponent.Call(obj, GoStrToDStr(AName) )
+    return ret
+}
+
+func ImageButton_GetNamePath(obj uintptr) string {
+    ret, _, _ := imageButton_GetNamePath.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_Assign(obj uintptr, Source uintptr)  {
+    imageButton_Assign.Call(obj, Source )
+}
+
+func ImageButton_ClassName(obj uintptr) string {
+    ret, _, _ := imageButton_ClassName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_Equals(obj uintptr, Obj uintptr) bool {
+    ret, _, _ := imageButton_Equals.Call(obj, Obj )
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_GetHashCode(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetHashCode.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_ToString(obj uintptr) string {
+    ret, _, _ := imageButton_ToString.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_GetAction(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetAction.Call(obj)
+    return ret
+}
+
+func ImageButton_SetAction(obj uintptr, value uintptr) {
+   imageButton_SetAction.Call(obj, value)
+}
+
+func ImageButton_GetAlign(obj uintptr) TAlign {
+    ret, _, _ := imageButton_GetAlign.Call(obj)
+    return TAlign(ret)
+}
+
+func ImageButton_SetAlign(obj uintptr, value TAlign) {
+   imageButton_SetAlign.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetAnchors(obj uintptr) TAnchors {
+    ret, _, _ := imageButton_GetAnchors.Call(obj)
+    return TAnchors(ret)
+}
+
+func ImageButton_SetAnchors(obj uintptr, value TAnchors) {
+   imageButton_SetAnchors.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetAutoSize(obj uintptr) bool {
+    ret, _, _ := imageButton_GetAutoSize.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetAutoSize(obj uintptr, value bool) {
+   imageButton_SetAutoSize.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetCaption(obj uintptr) string {
+    ret, _, _ := imageButton_GetCaption.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_SetCaption(obj uintptr, value string) {
+   imageButton_SetCaption.Call(obj, GoStrToDStr(value))
+}
+
+func ImageButton_GetEnabled(obj uintptr) bool {
+    ret, _, _ := imageButton_GetEnabled.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetEnabled(obj uintptr, value bool) {
+   imageButton_SetEnabled.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetFont(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetFont.Call(obj)
+    return ret
+}
+
+func ImageButton_SetFont(obj uintptr, value uintptr) {
+   imageButton_SetFont.Call(obj, value)
+}
+
+func ImageButton_GetImageCount(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetImageCount.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetImageCount(obj uintptr, value int32) {
+   imageButton_SetImageCount.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetModalResult(obj uintptr) TModalResult {
+    ret, _, _ := imageButton_GetModalResult.Call(obj)
+    return TModalResult(ret)
+}
+
+func ImageButton_SetModalResult(obj uintptr, value TModalResult) {
+   imageButton_SetModalResult.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetParentShowHint(obj uintptr) bool {
+    ret, _, _ := imageButton_GetParentShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetParentShowHint(obj uintptr, value bool) {
+   imageButton_SetParentShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetParentFont(obj uintptr) bool {
+    ret, _, _ := imageButton_GetParentFont.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetParentFont(obj uintptr, value bool) {
+   imageButton_SetParentFont.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetPicture(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetPicture.Call(obj)
+    return ret
+}
+
+func ImageButton_SetPicture(obj uintptr, value uintptr) {
+   imageButton_SetPicture.Call(obj, value)
+}
+
+func ImageButton_GetPopupMenu(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetPopupMenu.Call(obj)
+    return ret
+}
+
+func ImageButton_SetPopupMenu(obj uintptr, value uintptr) {
+   imageButton_SetPopupMenu.Call(obj, value)
+}
+
+func ImageButton_GetShowHint(obj uintptr) bool {
+    ret, _, _ := imageButton_GetShowHint.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetShowHint(obj uintptr, value bool) {
+   imageButton_SetShowHint.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetShowCaption(obj uintptr) bool {
+    ret, _, _ := imageButton_GetShowCaption.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetShowCaption(obj uintptr, value bool) {
+   imageButton_SetShowCaption.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetVisible(obj uintptr) bool {
+    ret, _, _ := imageButton_GetVisible.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetVisible(obj uintptr, value bool) {
+   imageButton_SetVisible.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_SetOnClick(obj uintptr, fn interface{}) {
+    imageButton_SetOnClick.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnDblClick(obj uintptr, fn interface{}) {
+    imageButton_SetOnDblClick.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnMouseDown(obj uintptr, fn interface{}) {
+    imageButton_SetOnMouseDown.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnMouseEnter(obj uintptr, fn interface{}) {
+    imageButton_SetOnMouseEnter.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnMouseLeave(obj uintptr, fn interface{}) {
+    imageButton_SetOnMouseLeave.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnMouseMove(obj uintptr, fn interface{}) {
+    imageButton_SetOnMouseMove.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_SetOnMouseUp(obj uintptr, fn interface{}) {
+    imageButton_SetOnMouseUp.Call(obj, addEventToMap(fn))
+}
+
+func ImageButton_GetBiDiMode(obj uintptr) TBiDiMode {
+    ret, _, _ := imageButton_GetBiDiMode.Call(obj)
+    return TBiDiMode(ret)
+}
+
+func ImageButton_SetBiDiMode(obj uintptr, value TBiDiMode) {
+   imageButton_SetBiDiMode.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetBoundsRect(obj uintptr) TRect {
+    var ret TRect
+    imageButton_GetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ImageButton_SetBoundsRect(obj uintptr, value TRect) {
+   imageButton_SetBoundsRect.Call(obj, uintptr(unsafe.Pointer(&value)))
+}
+
+func ImageButton_GetClientHeight(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetClientHeight.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetClientHeight(obj uintptr, value int32) {
+   imageButton_SetClientHeight.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetClientRect(obj uintptr) TRect {
+    var ret TRect
+    imageButton_GetClientRect.Call(obj, uintptr(unsafe.Pointer(&ret)))
+    return ret
+}
+
+func ImageButton_GetClientWidth(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetClientWidth.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetClientWidth(obj uintptr, value int32) {
+   imageButton_SetClientWidth.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetExplicitLeft(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetExplicitLeft.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_GetExplicitTop(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetExplicitTop.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_GetExplicitWidth(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetExplicitWidth.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_GetExplicitHeight(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetExplicitHeight.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_GetParent(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetParent.Call(obj)
+    return ret
+}
+
+func ImageButton_SetParent(obj uintptr, value uintptr) {
+   imageButton_SetParent.Call(obj, value)
+}
+
+func ImageButton_GetStyleElements(obj uintptr) TStyleElements {
+    ret, _, _ := imageButton_GetStyleElements.Call(obj)
+    return TStyleElements(ret)
+}
+
+func ImageButton_SetStyleElements(obj uintptr, value TStyleElements) {
+   imageButton_SetStyleElements.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetAlignWithMargins(obj uintptr) bool {
+    ret, _, _ := imageButton_GetAlignWithMargins.Call(obj)
+    return DBoolToGoBool(ret)
+}
+
+func ImageButton_SetAlignWithMargins(obj uintptr, value bool) {
+   imageButton_SetAlignWithMargins.Call(obj, GoBoolToDBool(value))
+}
+
+func ImageButton_GetLeft(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetLeft.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetLeft(obj uintptr, value int32) {
+   imageButton_SetLeft.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetTop(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetTop.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetTop(obj uintptr, value int32) {
+   imageButton_SetTop.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetWidth(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetWidth.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetWidth(obj uintptr, value int32) {
+   imageButton_SetWidth.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetHeight(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetHeight.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetHeight(obj uintptr, value int32) {
+   imageButton_SetHeight.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetCursor(obj uintptr) TCursor {
+    ret, _, _ := imageButton_GetCursor.Call(obj)
+    return TCursor(ret)
+}
+
+func ImageButton_SetCursor(obj uintptr, value TCursor) {
+   imageButton_SetCursor.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetHint(obj uintptr) string {
+    ret, _, _ := imageButton_GetHint.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_SetHint(obj uintptr, value string) {
+   imageButton_SetHint.Call(obj, GoStrToDStr(value))
+}
+
+func ImageButton_GetMargins(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetMargins.Call(obj)
+    return ret
+}
+
+func ImageButton_SetMargins(obj uintptr, value uintptr) {
+   imageButton_SetMargins.Call(obj, value)
+}
+
+func ImageButton_GetCustomHint(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetCustomHint.Call(obj)
+    return ret
+}
+
+func ImageButton_SetCustomHint(obj uintptr, value uintptr) {
+   imageButton_SetCustomHint.Call(obj, value)
+}
+
+func ImageButton_GetComponentCount(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetComponentCount.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_GetComponentIndex(obj uintptr) int32 {
+    ret, _, _ := imageButton_GetComponentIndex.Call(obj)
+    return int32(ret)
+}
+
+func ImageButton_SetComponentIndex(obj uintptr, value int32) {
+   imageButton_SetComponentIndex.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetOwner(obj uintptr) uintptr {
+    ret, _, _ := imageButton_GetOwner.Call(obj)
+    return ret
+}
+
+func ImageButton_GetName(obj uintptr) string {
+    ret, _, _ := imageButton_GetName.Call(obj)
+    return DStrToGoStr(ret)
+}
+
+func ImageButton_SetName(obj uintptr, value string) {
+   imageButton_SetName.Call(obj, GoStrToDStr(value))
+}
+
+func ImageButton_GetTag(obj uintptr) int {
+    ret, _, _ := imageButton_GetTag.Call(obj)
+    return int(ret)
+}
+
+func ImageButton_SetTag(obj uintptr, value int) {
+   imageButton_SetTag.Call(obj, uintptr(value))
+}
+
+func ImageButton_GetComponents(obj uintptr, AIndex int32) uintptr {
+    ret, _, _ := imageButton_GetComponents.Call(obj, uintptr(AIndex))
+    return ret
+}
+

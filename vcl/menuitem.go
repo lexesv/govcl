@@ -40,6 +40,7 @@ func MenuItemFromObj(obj IObject) *TMenuItem {
 func (m *TMenuItem) Free() {
     if m.instance != 0 {
         MenuItem_Free(m.instance)
+        m.instance = 0
     }
 }
 

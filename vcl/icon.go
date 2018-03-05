@@ -40,6 +40,7 @@ func IconFromObj(obj IObject) *TIcon {
 func (i *TIcon) Free() {
     if i.instance != 0 {
         Icon_Free(i.instance)
+        i.instance = 0
     }
 }
 

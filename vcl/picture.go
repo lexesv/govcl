@@ -39,6 +39,7 @@ func PictureFromObj(obj IObject) *TPicture {
 func (p *TPicture) Free() {
     if p.instance != 0 {
         Picture_Free(p.instance)
+        p.instance = 0
     }
 }
 

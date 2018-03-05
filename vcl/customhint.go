@@ -40,6 +40,7 @@ func CustomHintFromObj(obj IObject) *TCustomHint {
 func (c *TCustomHint) Free() {
     if c.instance != 0 {
         CustomHint_Free(c.instance)
+        c.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func PaintBoxFromObj(obj IObject) *TPaintBox {
 func (p *TPaintBox) Free() {
     if p.instance != 0 {
         PaintBox_Free(p.instance)
+        p.instance = 0
     }
 }
 

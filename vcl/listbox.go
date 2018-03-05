@@ -40,6 +40,7 @@ func ListBoxFromObj(obj IObject) *TListBox {
 func (l *TListBox) Free() {
     if l.instance != 0 {
         ListBox_Free(l.instance)
+        l.instance = 0
     }
 }
 

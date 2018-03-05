@@ -40,6 +40,7 @@ func LinkLabelFromObj(obj IObject) *TLinkLabel {
 func (l *TLinkLabel) Free() {
     if l.instance != 0 {
         LinkLabel_Free(l.instance)
+        l.instance = 0
     }
 }
 

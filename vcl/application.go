@@ -40,6 +40,7 @@ func ApplicationFromObj(obj IObject) *TApplication {
 func (a *TApplication) Free() {
     if a.instance != 0 {
         Application_Free(a.instance)
+        a.instance = 0
     }
 }
 

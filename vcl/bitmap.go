@@ -40,6 +40,7 @@ func BitmapFromObj(obj IObject) *TBitmap {
 func (b *TBitmap) Free() {
     if b.instance != 0 {
         Bitmap_Free(b.instance)
+        b.instance = 0
     }
 }
 

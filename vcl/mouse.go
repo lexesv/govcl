@@ -40,6 +40,7 @@ func MouseFromObj(obj IObject) *TMouse {
 func (m *TMouse) Free() {
     if m.instance != 0 {
         Mouse_Free(m.instance)
+        m.instance = 0
     }
 }
 

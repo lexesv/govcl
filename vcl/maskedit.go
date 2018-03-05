@@ -40,6 +40,7 @@ func MaskEditFromObj(obj IObject) *TMaskEdit {
 func (m *TMaskEdit) Free() {
     if m.instance != 0 {
         MaskEdit_Free(m.instance)
+        m.instance = 0
     }
 }
 

@@ -40,6 +40,7 @@ func BalloonHintFromObj(obj IObject) *TBalloonHint {
 func (b *TBalloonHint) Free() {
     if b.instance != 0 {
         BalloonHint_Free(b.instance)
+        b.instance = 0
     }
 }
 

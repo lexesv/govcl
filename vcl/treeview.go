@@ -40,6 +40,7 @@ func TreeViewFromObj(obj IObject) *TTreeView {
 func (t *TTreeView) Free() {
     if t.instance != 0 {
         TreeView_Free(t.instance)
+        t.instance = 0
     }
 }
 

@@ -24,6 +24,7 @@
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/3_linux.jpg)  
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/4_linux.jpg)  
 ![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/5_linux.jpg)  
+![截图1](https://gitee.com/ying32/govcl/raw/dev/Screenshot/6_linux.jpg)  
 
 
 ---

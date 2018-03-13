@@ -4,14 +4,28 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	//"runtime"
+	"syscall"
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
-func main() {
+var (
+	kernel32            = syscall.NewLazyDLL("kernel32.dll")
+	_GetCurrentThreadId = kernel32.NewProc("GetCurrentThreadId")
+)
 
+func GetCurrentThreadId() uintptr {
+	r, _, _ := _GetCurrentThreadId.Call()
+	return r
+}
+
+func main() {
+	//runtime.GOMAXPROCS(6)
+	//runtime.LockOSThread()
+	fmt.Println("main:currentThreadId:", GetCurrentThreadId())
 	icon := vcl.NewIcon()
 	defer icon.Free()
 	icon.LoadFromResourceID(rtl.MainInstance(), 3)
@@ -39,18 +53,25 @@ func main() {
 	img2.SetParent(mainForm)
 	img2.SetTop(img.Height() + 10)
 	img2.SetAutoSize(true)
-	// 清除memory
-	mem.Clear()
-	// 异步加载，不知道这里会有啥，一般来说不要在非线程中访问UI组件
+
+	// 异步加载，一般来说不要在非主线程中访问UI组件,需要在线请中访问ui组件请使用 vcl.ThreadSync
 	go func() {
+		fmt.Println("main:currentThreadId2:", GetCurrentThreadId())
 		resp, err := http.Get("http://ww2.sinaimg.cn/large/df780e95jw1egxm06uxerj20cs05hjs8.jpg")
 		if err == nil {
 			defer resp.Body.Close()
 			bs, err := ioutil.ReadAll(resp.Body)
 			if err == nil {
+				mem := vcl.NewMemoryStream()
+				defer mem.Free()
 				mem.Write(bs)
 				mem.SetPosition(0)
-				img2.Picture().LoadFromStream(mem)
+				// 让以下代码运行中主线程中
+				vcl.ThreadSync(func() {
+					fmt.Println("main:currentThreadId3:", GetCurrentThreadId())
+					img2.Picture().LoadFromStream(mem)
+				})
+				fmt.Println("测试运行到此。")
 			} else {
 				fmt.Println(err)
 			}

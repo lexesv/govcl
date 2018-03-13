@@ -35,3 +35,8 @@ func SelectDirectory1(options TSelectDirOpts) (bool, string) {
 func SelectDirectory2(caption, root string, options TSelectDirExtOpts, parent IObject) (bool, string) {
 	return api.DSelectDirectory2(caption, root, options, CheckPtr(parent))
 }
+
+// ThreadSync 主线程中执行
+func ThreadSync(fn TThreadProc) {
+	api.DSynchronize(fn)
+}

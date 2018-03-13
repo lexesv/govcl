@@ -259,6 +259,9 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 				(*TTBCustomDrawFlags)(unsafe.Pointer(getVal(4))),
 				(*bool)(unsafe.Pointer(getVal(5))))
 
+		// TThreadProc
+		case TThreadProc:
+			v.(TThreadProc)()
 		default:
 		}
 	}

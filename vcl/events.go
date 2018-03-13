@@ -120,3 +120,6 @@ type TTBAdvancedCustomDrawEvent func(sender *TToolBar, aRect TRect, stage TCusto
 //  State: TCustomDrawState; Stage: TCustomDrawStage;
 //  var Flags: TTBCustomDrawFlags; var DefaultDraw: Boolean) of object;
 type TTBAdvancedCustomDrawBtnEvent func(sender *TToolBar, button *TToolButton, state TCustomDrawState, stage TCustomDrawStage, flags *TTBCustomDrawFlags, defaultDraw *bool)
+
+// TThreadProc
+type TThreadProc func()

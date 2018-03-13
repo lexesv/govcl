@@ -132,3 +132,7 @@ func DSelectDirectory2(caption, root string, options TSelectDirExtOpts, parent u
 	}
 	return false, ""
 }
+
+func DSynchronize(fn interface{}) {
+	dSynchronize.Call(addEventToMap(fn))
+}

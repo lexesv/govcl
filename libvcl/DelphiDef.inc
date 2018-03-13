@@ -284,6 +284,17 @@ begin
 {$ENDIF MSWINDOWS}
 end;
 
+
+// 在主线程中运行
+procedure DSynchronize(AId: NativeUInt); stdcall;
+begin
+  TThread.Synchronize(nil,
+    procedure
+    begin
+      GCallbackPtr(AId, nil, 0);
+    end);
+end;
+
 procedure DSysOpen(FileName: PChar); stdcall;
 begin
   ShellExecute(0, nil, FileName, nil, nil, SW_SHOW);
@@ -591,5 +602,6 @@ exports
   DSelectDirectory1,
   DSelectDirectory2,
 
-  DSetReportMemoryLeaksOnShutdown
+  DSetReportMemoryLeaksOnShutdown,
+  DSynchronize
   ;

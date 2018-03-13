@@ -4,27 +4,26 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	//"runtime"
-	"syscall"
+	//	"syscall"
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
-var (
-	kernel32            = syscall.NewLazyDLL("kernel32.dll")
-	_GetCurrentThreadId = kernel32.NewProc("GetCurrentThreadId")
-)
+//var (
+//	kernel32            = syscall.NewLazyDLL("kernel32.dll")
+//	_GetCurrentThreadId = kernel32.NewProc("GetCurrentThreadId")
+//)
 
 func GetCurrentThreadId() uintptr {
-	r, _, _ := _GetCurrentThreadId.Call()
-	return r
+	//r, _, _ := _GetCurrentThreadId.Call()
+	//return r
+	return 0
 }
 
 func main() {
-	//runtime.GOMAXPROCS(6)
-	//runtime.LockOSThread()
+
 	fmt.Println("main:currentThreadId:", GetCurrentThreadId())
 	icon := vcl.NewIcon()
 	defer icon.Free()

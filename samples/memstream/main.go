@@ -65,7 +65,7 @@ func main() {
 				defer mem.Free()
 				mem.Write(bs)
 				mem.SetPosition(0)
-				// 让以下代码运行中主线程中
+				// 让以下代码运行在主线程中
 				vcl.ThreadSync(func() {
 					fmt.Println("main:currentThreadId3:", GetCurrentThreadId())
 					img2.Picture().LoadFromStream(mem)

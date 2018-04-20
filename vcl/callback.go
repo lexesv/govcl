@@ -262,6 +262,19 @@ func callbackProc(f uintptr, args uintptr, argcount int) uintptr {
 		// TThreadProc
 		case TThreadProc:
 			v.(TThreadProc)()
+
+		// TDropFilesEvent
+		case TDropFilesEvent:
+			nLen := int(getVal(2))
+			tempArr := make([]string, nLen)
+			p := getVal(1)
+			for i := 0; i < nLen; i++ {
+				tempArr[i] = DGetStringArrOf(p, i)
+			}
+			v.(TDropFilesEvent)(
+				ObjectFromInst(getVal(0)),
+				tempArr)
+
 		default:
 		}
 	}

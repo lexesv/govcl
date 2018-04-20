@@ -12,6 +12,19 @@ func Form_EnabledSystemMenu(obj uintptr, val bool) {
 	form_EnabledSystemMenu.Call(obj, GoBoolToDBool(val))
 }
 
+func Form_SetAllowDropFiles(obj uintptr, val bool) {
+	form_SetAllowDropFiles.Call(obj, GoBoolToDBool(val))
+}
+
+func Form_GetAllowDropFiles(obj uintptr) bool {
+	r, _, _ := form_GetAllowDropFiles.Call(obj)
+	return DBoolToGoBool(r)
+}
+
+func Form_SetOnDropFiles(obj uintptr, fn interface{}) {
+	form_SetOnDropFiles.Call(obj, addEventToMap(fn))
+}
+
 // 下面两个函数放在Application下面吧，直接调用实例类
 
 func SetGlobalFormScaled(val bool) {

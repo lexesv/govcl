@@ -123,3 +123,6 @@ type TTBAdvancedCustomDrawBtnEvent func(sender *TToolBar, button *TToolButton, s
 
 // TThreadProc
 type TThreadProc func()
+
+// TDropFilesEvent
+type TDropFilesEvent func(sender *TObject, aFileNames []string)

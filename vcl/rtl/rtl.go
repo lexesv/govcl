@@ -34,6 +34,11 @@ func InSets(r, s uint32) bool {
 	return false
 }
 
+// GetStringArrOf 从一个Delphi字符串数组获取成员
+func GetStringArrOf(p uintptr, index int) string {
+	return api.DGetStringArrOf(p, index)
+}
+
 // SetFormCanClose 窗口的TCloseQuery事件
 //func SetFormCanClose(p uintptr, val bool) {
 //	a := (*int32)(unsafe.Pointer(p))

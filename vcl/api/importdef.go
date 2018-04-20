@@ -7,9 +7,13 @@ var (
 	form_EnabledMaximize   = libvcl.NewProc("Form_EnabledMaximize")
 	form_EnabledMinimize   = libvcl.NewProc("Form_EnabledMinimize")
 	form_EnabledSystemMenu = libvcl.NewProc("Form_EnabledSystemMenu")
+	form_SetAllowDropFiles = libvcl.NewProc("Form_SetAllowDropFiles")
+	form_GetAllowDropFiles = libvcl.NewProc("Form_GetAllowDropFiles")
+	form_SetOnDropFiles    = libvcl.NewProc("Form_SetOnDropFiles")
 
 	setEventCallback = libvcl.NewProc("SetEventCallback")
 	dGetParam        = libvcl.NewProc("DGetParam")
+	dGetStringArrOf  = libvcl.NewProc("DGetStringArrOf")
 	dStrLen          = libvcl.NewProc("DStrLen")
 	dMove            = libvcl.NewProc("DMove")
 

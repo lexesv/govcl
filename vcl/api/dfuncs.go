@@ -46,6 +46,11 @@ func DGetParam(index int, ptr uintptr) TGoParam {
 	return p
 }
 
+func DGetStringArrOf(p uintptr, index int) string {
+	r, _, _ := dGetStringArrOf.Call(p, uintptr(index))
+	return DStrToGoStr(r)
+}
+
 func DStrLen(p uintptr) int {
 	ret, _, _ := dStrLen.Call(p)
 	return int(ret)

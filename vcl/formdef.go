@@ -29,3 +29,14 @@ func (f *TForm) ScaleControlsForDpi(val int32) {
 	Form_ScaleControlsForDpi(f.instance, val)
 }
 
+func (f *TForm) SetAllowDropFiles(val bool) {
+	Form_SetAllowDropFiles(f.instance, val)
+}
+
+func (f *TForm) AllowDropFiles() bool {
+	return Form_GetAllowDropFiles(f.instance)
+}
+
+func (f *TForm) SetOnDropFiles(fn TDropFilesEvent) {
+	Form_SetOnDropFiles(f.instance, fn)
+}

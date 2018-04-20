@@ -21,7 +21,7 @@ func main() {
 	mainForm.SetWidth(300)
 	mainForm.SetHeight(200)
 
-	// 注意这事件，当在Windows上使用是如果使用了UAC，则无法收到消息
+	// 注意，当在Windows上使用时如果使用了UAC，则无法收到消息
 	// 需要使用未公开的winapi   ChangeWindowMessageFilter 或 ChangeWindowMessageFilterEx 根据系统版本不同使用其中的，然后添加
 	// ChangeWindowMessageFilterEx(pnl_Drag.Handle, WM_DROPFILES, MSGFLT_ALLOW, LChangeFilterStruct);消息
 

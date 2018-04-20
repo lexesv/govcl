@@ -33,11 +33,7 @@ func main() {
 			  begin
 				@ChangeWindowMessageFilter := GetProcAddress(GetModuleHandle(user32), 'ChangeWindowMessageFilter');
 				if Assigned(ChangeWindowMessageFilter) then
-				begin
 				  ChangeWindowMessageFilter(WM_DROPFILES, MSGFLT_ADD);
-				  ChangeWindowMessageFilter(WM_COPYDATA, MSGFLT_ADD);
-				  ChangeWindowMessageFilter(WM_COPYGLOBALDATA , MSGFLT_ADD);
-				end;
 			  end else
 			  // 大于等于6.1为Win7及以上版本
 			  if (TOSVersion.Major = 6) and (TOSVersion.Minor >= 1) then

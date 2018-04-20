@@ -38,7 +38,7 @@ type
               geListViewAdvancedCustomDrawSubItem,
               geTreeViewAdvancedCustomDraw, geTreeViewAdvancedCustomDrawItem,
               geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton,
-              geHint, geClickCheck);
+              geHint, geClickCheck, geDropFiles);
 
   TEventKey = packed record
     Sender: TObject;
@@ -61,6 +61,7 @@ type
 
     class procedure FormOnClose(Sender: TObject; var Action: TCloseAction);
     class procedure FormOnCloseQuery(Sender: TObject; var CanClose: Boolean);
+    class procedure FormOnDropFiles(Sender: TObject; const AFileNames: array of string);
 
     class procedure OnClose(Sender: TObject);
 
@@ -293,6 +294,12 @@ class procedure TEventClass.FormOnCloseQuery(Sender: TObject;
   var CanClose: Boolean);
 begin
   SendEvent(Sender, geFormCloseQuery, [Sender, @CanClose]);
+end;
+
+class procedure TEventClass.FormOnDropFiles(Sender: TObject;
+  const AFileNames: array of string);
+begin
+  SendEvent(Sender, geDropFiles, [Sender, @AFileNames[0], Length(AFileNames)]);
 end;
 
 class procedure TEventClass.OnDblClick(Sender: TObject);

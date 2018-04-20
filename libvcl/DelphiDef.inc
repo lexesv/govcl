@@ -32,7 +32,7 @@ end;
 
 // TForm
 
-procedure Form_EnabledMaximize(AObj: TGoForm; AValue: Boolean); stdcall;
+procedure Form_EnabledMaximize(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   if AValue then
   begin
@@ -45,7 +45,7 @@ begin
   end;
 end;
 
-procedure Form_EnabledMinimize(AObj: TGoForm; AValue: Boolean); stdcall;
+procedure Form_EnabledMinimize(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   if AValue then
   begin
@@ -58,7 +58,7 @@ begin
   end;
 end;
 
-procedure Form_EnabledSystemMenu(AObj: TGoForm; AValue: Boolean); stdcall;
+procedure Form_EnabledSystemMenu(AObj: TGoForm; AValue: LongBool); stdcall;
 begin
   if AValue then
   begin
@@ -69,6 +69,28 @@ begin
     if biSystemMenu in AObj.BorderIcons then
       AObj.BorderIcons := AObj.BorderIcons - [biSystemMenu]
   end;
+end;
+
+procedure Form_SetAllowDropFiles(AObj: TGoForm; AValue: LongBool); stdcall;
+begin
+  AObj.AllowDropFiles := AValue;
+end;
+
+function Form_GetAllowDropFiles(AObj: TGoForm): LongBool; stdcall;
+begin
+  Result := AObj.AllowDropFiles;
+end;
+
+procedure Form_SetOnDropFiles(AObj: TGoForm; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnDropFiles := nil;
+    TEventClass.Remove(AObj, geDropFiles);
+    Exit;
+  end;
+  AObj.OnDropFiles := TEventClass.FormOnDropFiles;
+  TEventClass.Add(AObj, geDropFiles, AEventId);
 end;
 
 // mouse
@@ -244,6 +266,12 @@ end;
 procedure DGetParam(Index: NativeInt; AArr: Pointer; out P: TGoParam); stdcall;
 begin
   P := PGoParam(PByte(AArr) + Index * SizeOf(TGoParam))^;
+end;
+
+// 从string数组中获取成员
+function DGetStringArrOf(P: Pointer; AIndex: NativeInt): PChar; stdcall;
+begin
+  Result := PChar(PString(PByte(P) + AIndex * SizeOf(string))^);
 end;
 
 function DStrLen(p: PChar): NativeInt; stdcall;
@@ -526,6 +554,9 @@ exports
   Form_EnabledMaximize,
   Form_EnabledMinimize,
   Form_EnabledSystemMenu,
+  Form_SetAllowDropFiles,
+  Form_GetAllowDropFiles,
+  Form_SetOnDropFiles,
 
 
   DSysOpen,
@@ -536,6 +567,7 @@ exports
 
   SetEventCallback,
   DGetParam,
+  DGetStringArrOf,
   DStrLen,
   DMove,
   DGetClassName,

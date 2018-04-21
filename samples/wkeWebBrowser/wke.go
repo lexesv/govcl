@@ -136,6 +136,7 @@ func wkeNavigationCallback(webView, param uintptr, navigationType wkeNavigationT
 
 	case WKE_NAVIGATION_TYPE_OTHER:
 		// 不知道啥类型了
+		vcl.StatusBarFromInst(param).SetSimpleText("正在载入：" + wkeGetStringW(url))
 	}
 
 	return 1

@@ -24,7 +24,9 @@ func NewLazyDLL(name string) *LazyDLL {
 	if l.Load() != nil {
 		fmt.Println(fmt.Sprintf("\"%s\" does not exist, trying to load liblcl.dll.", name))
 		l.LazyDLL = syscall.NewLazyDLL("liblcl.dll")
-		IsloadedLcl = true
+		if l.Load() == nil {
+			IsloadedLcl = true
+		}
 	}
 	// 导入调用的
 	l.mySyscall = l.LazyDLL.NewProc("MySyscall")

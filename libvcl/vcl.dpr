@@ -48,19 +48,13 @@ uses
   Vcl.CheckLst,
   Vcl.Samples.Gauges,
   Vcl.FileCtrl,
-  {$IFDEF LIBVCL}uFormDesignerFile,{$ENDIF}
+  uFormDesignerFile,
   uEventCallback in 'uEventCallback.pas',
   ufrmGo in 'ufrmGo.pas' {GoForm},
   ImageButton in 'ImageButton.pas';
 
 {$R *.res}
 
-
-
-// 这个不开源的
-{$IFDEF LIBVCL}
-  {$I DelphiResForm.inc}
-{$ENDIF}
 
 {$I DelphiDef.inc}
 

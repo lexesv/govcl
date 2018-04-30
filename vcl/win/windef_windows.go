@@ -11,9 +11,10 @@ import (
 // winapi 非libvcl的
 var (
 	// user32.dll
-	user32dll   = syscall.NewLazyDLL("user32.dll")
-	messageBoxW = user32dll.NewProc("MessageBoxW")
-	loadIconW   = user32dll.NewProc("LoadIconW")
+	user32dll     = syscall.NewLazyDLL("user32.dll")
+	messageBoxW   = user32dll.NewProc("MessageBoxW")
+	loadIconW     = user32dll.NewProc("LoadIconW")
+	getClientRect = user32dll.NewProc("GetClientRect")
 
 	// kernel32.dll
 	kernel32dll       = syscall.NewLazyDLL("kernel32.dll")
@@ -68,4 +69,11 @@ func GetCurrentProcess() uintptr {
 // IsWow64 判断当前进程是否运行在64上
 func IsWow64() bool {
 	return IsWow64Process(GetCurrentProcess())
+}
+
+// GetClientRect 获取指定句柄客户区矩形
+func GetClientRect(hWnd types.HWND) types.TRect {
+	r := types.TRect{}
+	getClientRect.Call(uintptr(hWnd), uintptr(unsafe.Pointer(&r)))
+	return r
 }

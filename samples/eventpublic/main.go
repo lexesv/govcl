@@ -27,7 +27,7 @@ func main() {
 	btn.SetParent(mainForm)
 	btn.SetName("btn1")
 	btn.SetCaption("按钮1")
-
+	btn.SetTag(1)
 	btn.SetLeft(10)
 	btn.SetTop(50)
 	btn.SetOnClick(buttonOnClick)
@@ -36,6 +36,7 @@ func main() {
 	btn2.SetParent(mainForm)
 	btn2.SetName("btn2")
 	btn2.SetCaption("按钮2")
+	btn2.SetTag(2)
 	btn2.SetLeft(10)
 	btn2.SetTop(90)
 	btn2.SetOnClick(buttonOnClick)
@@ -70,8 +71,13 @@ func main() {
 // 两个按钮使用同一个事件回调,Delphi里称为方法(method)
 func buttonOnClick(sender vcl.IObject) {
 	// 这里就可以根据sender去做选择了
-
 	btn := vcl.ButtonFromObj(sender)
+	switch btn.Tag() {
+	case 1:
+		fmt.Println("按钮1的")
+	case 2:
+		fmt.Println("按钮2的")
+	}
 	vcl.ShowMessage("消息，Caption：" + btn.Caption() + ", Name：" + btn.Name())
 }
 

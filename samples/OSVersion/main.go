@@ -12,7 +12,7 @@ func main() {
 	fmt.Println(rtl.OSVersion.Minor)
 	fmt.Println(rtl.OSVersion.Name)
 	fmt.Println(rtl.OSVersion.ToString())
-	if rtl.OSVersion.Check1(10) {
+	if rtl.OSVersion.CheckMajor(10) {
 		fmt.Println("当前为Windows10")
 	} else {
 		fmt.Println("当前不是Windows10")

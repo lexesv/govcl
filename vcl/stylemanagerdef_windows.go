@@ -12,6 +12,11 @@ func (s *TStyleManager) IsValidStyle(filename string) bool {
 	return StyleManager_IsValidStyle(filename)
 }
 
+// StyleManager_IsValidStyle2
+func (s *TStyleManager) IsValidStyle2(filename string) (bool, string) {
+	return StyleManager_IsValidStyle2(filename)
+}
+
 // StyleManager_LoadFromFile
 func (s *TStyleManager) LoadFromFile(filename string) uintptr {
 	return StyleManager_LoadFromFile(filename)

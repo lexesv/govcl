@@ -7,7 +7,9 @@ import (
 var (
 
 	// TStyleManager
-	styleManager_IsValidStyle        = libvcl.NewProc("StyleManager_IsValidStyle")
+	styleManager_IsValidStyle  = libvcl.NewProc("StyleManager_IsValidStyle")
+	styleManager_IsValidStyle2 = libvcl.NewProc("StyleManager_IsValidStyle2")
+
 	styleManager_LoadFromFile        = libvcl.NewProc("StyleManager_LoadFromFile")
 	styleManager_CheckSysClassName   = libvcl.NewProc("StyleManager_CheckSysClassName")
 	styleManager_TrySetStyle         = libvcl.NewProc("StyleManager_TrySetStyle")
@@ -30,6 +32,12 @@ var (
 func StyleManager_IsValidStyle(filename string) bool {
 	r, _, _ := styleManager_IsValidStyle.Call(GoStrToDStr(filename))
 	return r != 0
+}
+
+func StyleManager_IsValidStyle2(filename string) (bool, string) {
+	var pstr uintptr
+	r, _, _ := styleManager_IsValidStyle2.Call(GoStrToDStr(filename), uintptr(unsafe.Pointer(&pstr)))
+	return r != 0, DStrToGoStr(pstr)
 }
 
 // StyleManager_LoadFromFile

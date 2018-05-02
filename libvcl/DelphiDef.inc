@@ -393,6 +393,16 @@ begin
   Result := TStyleManager.IsValidStyle(AFileName);
 end;
 
+function StyleManager_IsValidStyle2(const AFileName: PChar; var AName: PChar): LongBool; stdcall;
+var
+  LStyleInfo: TStyleInfo;
+begin
+  Result := TStyleManager.IsValidStyle(AFileName, LStyleInfo);
+  if Result then
+    AName := PChar(LStyleInfo.Name);
+end;
+
+
 function StyleManager_LoadFromFile(AFileName: PChar): TStyleManager.TStyleServicesHandle; stdcall;
 begin
   Result := TStyleManager.LoadFromFile(AFileName);
@@ -607,6 +617,7 @@ exports
 
 // TStyleManager
    StyleManager_IsValidStyle,
+   StyleManager_IsValidStyle2,
    StyleManager_LoadFromFile,
    StyleManager_CheckSysClassName,
    StyleManager_TrySetStyle,

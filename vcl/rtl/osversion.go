@@ -29,7 +29,7 @@ type TOSVersion struct {
 	ServicePackMinor int
 	Architecture     TArchitecture
 	Platform         TPlatform
-	ToString         string
+	fmtVerString     string
 }
 
 var OSVersion TOSVersion
@@ -45,4 +45,8 @@ func (v *TOSVersion) Check2(AMajor, AMinor int) bool {
 func (v *TOSVersion) Check3(AMajor, AMinor, AServicePackMajor int) bool {
 	return v.Major > AMajor || (v.Major == AMajor && v.Minor > AMinor) ||
 		((v.Major == AMajor && v.Minor == AMinor) && (v.ServicePackMajor >= AServicePackMajor))
+}
+
+func (v *TOSVersion) ToString() string {
+	return v.fmtVerString
 }

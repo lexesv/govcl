@@ -176,11 +176,11 @@ func initOSVersion() {
 	}
 
 	if OSVersion.ServicePackMinor != 0 {
-		OSVersion.ToString = fmt.Sprintf(sSPVersionStr,
+		OSVersion.fmtVerString = fmt.Sprintf(sSPVersionStr,
 			OSVersion.Name, OSVersion.Major, OSVersion.Minor, OSVersion.Build, OSVersion.ServicePackMinor,
 			iifStr(OSVersion.Architecture == ArIntelX64, sVersion64, sVersion32))
 	} else {
-		OSVersion.ToString = fmt.Sprintf(sVersionStr,
+		OSVersion.fmtVerString = fmt.Sprintf(sVersionStr,
 			OSVersion.Name, OSVersion.Major, OSVersion.Minor, OSVersion.Build,
 			iifStr(OSVersion.Architecture == ArIntelX64, sVersion64, sVersion32))
 	}

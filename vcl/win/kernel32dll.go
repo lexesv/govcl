@@ -19,6 +19,8 @@ var (
 	getModuleHandleW    = kernel32dll.NewProc("GetModuleHandleW")
 	getVersionExW       = kernel32dll.NewProc("GetVersionExW")
 	getNativeSystemInfo = kernel32dll.NewProc("GetNativeSystemInfo")
+	verSetConditionMask = kernel32dll.NewProc("VerSetConditionMask")
+	verifyVersionInfoW  = kernel32dll.NewProc("VerifyVersionInfoW")
 )
 
 // GetModuleHandleW 获取当前是实例句柄，可传空
@@ -69,5 +71,17 @@ func GetVersionExW(lpVersionInformation *TOSVersionInfoExW) bool {
 // GetNativeSystemInfo
 func GetNativeSystemInfo(lpSystemInformation *TSystemInfo) bool {
 	r, _, _ := getNativeSystemInfo.Call(uintptr(unsafe.Pointer(lpSystemInformation)))
+	return r != 0
+}
+
+// VerSetConditionMask
+func VerSetConditionMask(dwlConditionMask uint64, dwTypeBitMask uint32, dwConditionMask uint8) uint64 {
+	r, _, _ := verSetConditionMask.Call(uintptr(dwlConditionMask), uintptr(dwTypeBitMask), uintptr(dwConditionMask))
+	return uint64(r)
+}
+
+// VerifyVersionInfo
+func VerifyVersionInfoW(lpVersionInformation *TOSVersionInfoExW, dwTypeMask uint32, dwlConditionMask uint64) bool {
+	r, _, _ := verifyVersionInfoW.Call(uintptr(unsafe.Pointer(lpVersionInformation)), uintptr(dwTypeMask), uintptr(dwlConditionMask))
 	return r != 0
 }

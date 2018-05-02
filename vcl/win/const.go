@@ -106,4 +106,6 @@ const (
 	PROCESSOR_ARCHITECTURE_AMD64 = 9
 	VER_NT_WORKSTATION           = 0x0000001
 	SM_SERVERR2                  = 89
+	VER_PRODUCT_TYPE             = 0x00000080
+	VER_EQUAL                    = 1
 )

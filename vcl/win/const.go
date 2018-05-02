@@ -109,3 +109,49 @@ const (
 	VER_PRODUCT_TYPE             = 0x00000080
 	VER_EQUAL                    = 1
 )
+
+// SetWindowLongPtr GetWindowLongPtr
+const (
+	GWL_WNDPROC    = -4
+	GWL_HINSTANCE  = -6
+	GWL_HWNDPARENT = -8
+	GWL_STYLE      = -16
+	GWL_EXSTYLE    = -20
+	GWL_USERDATA   = -21
+	GWL_ID         = -12
+)
+
+// Windows Messages
+const (
+	WM_SYSCOMMAND = 0x0112
+)
+
+const (
+	// System Menu Command Values
+	SC_SIZE         = 61440
+	SC_MOVE         = 61456
+	SC_MINIMIZE     = 61472
+	SC_MAXIMIZE     = 61488
+	SC_NEXTWINDOW   = 61504
+	SC_PREVWINDOW   = 61520
+	SC_CLOSE        = 61536
+	SC_VSCROLL      = 61552
+	SC_HSCROLL      = 61568
+	SC_MOUSEMENU    = 61584
+	SC_KEYMENU      = 61696
+	SC_ARRANGE      = 61712
+	SC_RESTORE      = 61728
+	SC_TASKLIST     = 61744
+	SC_SCREENSAVE   = 61760
+	SC_HOTKEY       = 61776
+	SC_DEFAULT      = 61792
+	SC_MONITORPOWER = 61808
+	SC_CONTEXTHELP  = 61824
+	SC_SEPARATOR    = 61455
+
+	SCF_ISSECURE = 0x00000001
+
+	// Obsolete names
+	SC_ICON = SC_MINIMIZE
+	SC_ZOOM = SC_MAXIMIZE
+)

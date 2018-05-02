@@ -17,6 +17,8 @@ var (
 	loadIconW        = user32dll.NewProc("LoadIconW")
 	getClientRect    = user32dll.NewProc("GetClientRect")
 	getSystemMetrics = user32dll.NewProc("GetSystemMetrics")
+
+	_CallWindowProcW = user32dll.NewProc("CallWindowProcW")
 )
 
 // MessageBoxW 消息框
@@ -42,4 +44,22 @@ func GetClientRect(hWnd types.HWND) types.TRect {
 func GetSystemMetrics(nIndex int32) int32 {
 	r, _, _ := getSystemMetrics.Call(uintptr(nIndex))
 	return int32(r)
+}
+
+// GetWindowLongPtr
+func GetWindowLongPtrW(hWnd types.HWND, nIndex int32) int {
+	r, _, _ := _GetWindowLongPtrW.Call(uintptr(hWnd), uintptr(nIndex))
+	return int(r)
+}
+
+// SetWindowLongPtr
+func SetWindowLongPtrW(hWnd types.HWND, nIndex int32, dwNewLong uintptr) uintptr {
+	r, _, _ := _SetWindowLongPtrW.Call(uintptr(hWnd), uintptr(nIndex), dwNewLong)
+	return r
+}
+
+// CallWindowProcW
+func CallWindowProcW(lpPrevWndFunc uintptr, hWnd types.HWND, Msg uint32, wParam, lParam uintptr) uintptr {
+	r, _, _ := _CallWindowProcW.Call(lpPrevWndFunc, uintptr(hWnd), uintptr(Msg), wParam, lParam)
+	return r
 }

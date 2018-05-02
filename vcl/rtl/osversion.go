@@ -34,15 +34,15 @@ type TOSVersion struct {
 
 var OSVersion TOSVersion
 
-func (v *TOSVersion) Check1(AMajor int) bool {
+func (v *TOSVersion) CheckMajor(AMajor int) bool {
 	return v.Major >= AMajor
 }
 
-func (v *TOSVersion) Check2(AMajor, AMinor int) bool {
+func (v *TOSVersion) CheckMajorMinor(AMajor, AMinor int) bool {
 	return v.Major > AMajor || (v.Major == AMajor && v.Minor >= AMinor)
 }
 
-func (v *TOSVersion) Check3(AMajor, AMinor, AServicePackMajor int) bool {
+func (v *TOSVersion) CheckMajorMinorServicePackMajor(AMajor, AMinor, AServicePackMajor int) bool {
 	return v.Major > AMajor || (v.Major == AMajor && v.Minor > AMinor) ||
 		((v.Major == AMajor && v.Minor == AMinor) && (v.ServicePackMajor >= AServicePackMajor))
 }

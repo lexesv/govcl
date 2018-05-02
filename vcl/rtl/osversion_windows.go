@@ -93,7 +93,7 @@ func initOSVersion() {
 	OSVersion.ServicePackMinor = int(verInfo.ServicePackMinor)
 
 	var sysInfo win.TSystemInfo
-	if OSVersion.Check2(5, 1) {
+	if OSVersion.CheckMajorMinor(5, 1) {
 		win.GetNativeSystemInfo(&sysInfo)
 	} // GetNativeSystemInfo not supported on Windows 2000
 

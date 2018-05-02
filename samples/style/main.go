@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 	"time"
 
 	"io"
@@ -12,6 +11,8 @@ import (
 	"gitee.com/ying32/govcl/vcl/rtl"
 	"gitee.com/ying32/govcl/vcl/types"
 )
+
+var styleNames = make(map[string]string, 0)
 
 func main() {
 	vcl.Application.SetIconResId(3)
@@ -268,21 +269,20 @@ func main() {
 	stylelist.SetHeight(prgbar.Height())
 	stylelist.SetWidth(240)
 	stylelist.SetOnDblClick(func(vcl.IObject) {
-		if stylelist.ItemIndex() != -1 {
+		index := stylelist.ItemIndex()
+		if index != -1 {
 			// 这里直接替换是因为原本文件名就是样式名，只是简单下，实际样式名要通过相关函数取得，但这里没有给出相关函数
-			styleName := strings.Replace(stylelist.Items().Strings(stylelist.ItemIndex()), ".vsf", "", 1)
-			styleHandle := vcl.StyleManager.Style(styleName)
-			fmt.Println("styleName:", styleName, ", styleHandle:", styleHandle)
-			if styleHandle != 0 {
-				if vcl.StyleManager.ActiveStyle() == styleHandle {
-					return
-				}
-				vcl.StyleManager.SetStyle2(styleName)
+			//styleName := strings.Replace(stylelist.Items().Strings(stylelist.ItemIndex()), ".vsf", "", 1)
+			//styleHandle := vcl.StyleManager.Style(styleName)
+			text := stylelist.Items().Strings(index)
+			if name, ok := styleNames[text]; ok {
+				vcl.StyleManager.SetStyle2(name)
 				return
 			}
-			styleFileName := "..\\..\\bin\\styles\\" + stylelist.Items().Strings(stylelist.ItemIndex())
+			styleFileName := "..\\..\\bin\\styles\\" + text
 			if rtl.FileExists(styleFileName) {
-				if vcl.StyleManager.IsValidStyle(styleFileName) {
+				if ok, name := vcl.StyleManager.IsValidStyle2(styleFileName); ok {
+					styleNames[text] = name
 					vcl.StyleManager.SetStyleFromFileName(styleFileName)
 				} else {
 					fmt.Println("样式无效")

@@ -41,7 +41,14 @@ func iifStr(b bool, aTrue, aFalse string) string {
 }
 
 func IsWindowsServer() bool {
-	return false
+
+	var osvi win.TOSVersionInfoExW
+	osvi.ProductType = win.VER_NT_WORKSTATION
+
+	var dwlConditionMask uint64
+
+	dwlConditionMask = win.VerSetConditionMask(0, win.VER_PRODUCT_TYPE, win.VER_EQUAL)
+	return win.VerifyVersionInfoW(&osvi, win.VER_PRODUCT_TYPE, dwlConditionMask) == false
 }
 
 func GetProductVersion(AFileName string, AMajor, AMinor, ABuild *uint32) bool {

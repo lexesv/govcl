@@ -85,11 +85,6 @@ begin
   AObj.RestoreTopMosts;
 end;
 
-procedure Application_Run(AObj: TApplication); stdcall;
-begin
-  AObj.Run;
-end;
-
 procedure Application_Terminate(AObj: TApplication); stdcall;
 begin
   AObj.Terminate;
@@ -411,7 +406,6 @@ exports
   Application_ProcessMessages,
   Application_Restore,
   Application_RestoreTopMosts,
-  Application_Run,
   Application_Terminate,
   Application_MessageBox,
   Application_FindComponent,

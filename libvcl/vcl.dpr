@@ -56,6 +56,10 @@ uses
 {$R *.res}
 
 
+{$IFNDEF DEBUG}
+  {$WARNINGS OFF}
+{$ENDIF}
+
 {$I DelphiDef.inc}
 
 {$I Application.inc}

@@ -38,7 +38,7 @@ type
               geListViewAdvancedCustomDrawSubItem,
               geTreeViewAdvancedCustomDraw, geTreeViewAdvancedCustomDrawItem,
               geToolBarAdvancedCustomDraw, geToolBarAdvancedCustomDrawButton,
-              geHint, geClickCheck, geDropFiles);
+              geHint, geClickCheck, geDropFiles, geDestroy);
 
   TEventKey = packed record
     Sender: TObject;
@@ -129,6 +129,8 @@ type
     class procedure OnRestore(Sender: TObject);
     class procedure OnHide(Sender: TObject);
 
+    class procedure OnDestroy(Sender: TObject);
+
 
     class procedure OnKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     class procedure OnKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -181,7 +183,7 @@ end;
 
 class destructor TEventClass.Destroy;
 begin
-  FEvents.Free;
+  FreeAndNil(FEvents);
 end;
 
 class procedure TEventClass.OnBalloonClick(Sender: TObject);
@@ -305,6 +307,11 @@ end;
 class procedure TEventClass.OnDblClick(Sender: TObject);
 begin
   SendEvent(Sender, geDblClick, [Sender]);
+end;
+
+class procedure TEventClass.OnDestroy(Sender: TObject);
+begin
+  SendEvent(Sender, geDestroy, [Sender]);
 end;
 
 class procedure TEventClass.OnEnter(Sender: TObject);
@@ -502,8 +509,9 @@ class procedure TEventClass.SendEvent(Sender: TObject; AEvent: TGoEvent; AArgs: 
 var
   LEventId: NativeUInt;
 begin
-  if FEvents.TryGetValue(TEventKey.Create(Sender, AEvent), LEventId) then
-    SendEventSrc(LEventId, AArgs);
+  if FEvents <> nil then
+    if FEvents.TryGetValue(TEventKey.Create(Sender, AEvent), LEventId) then
+      SendEventSrc(LEventId, AArgs);
 end;
 
 

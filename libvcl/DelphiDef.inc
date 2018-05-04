@@ -29,6 +29,25 @@ begin
   App.CreateForm(TGoForm, Result);
 end;
 
+procedure RemoveAllForms;
+var
+  C: TComponent;
+  I: Integer;
+begin
+  for I := Application.ComponentCount - 1 downto 0 do
+  begin
+    C := Application.Components[I];
+    if C is TCustomForm then
+      C.Free;
+  end;
+end;
+
+procedure Application_Run(AObj: TApplication); stdcall;
+begin
+  AObj.Run;
+  // 在Run结束后手动释放Application中的Form，主要是考虑在非Delphi运行环境中造成的一些资源清理问题
+  RemoveAllForms;
+end;
 
 // TForm
 
@@ -91,6 +110,18 @@ begin
   end;
   AObj.OnDropFiles := TEventClass.FormOnDropFiles;
   TEventClass.Add(AObj, geDropFiles, AEventId);
+end;
+
+procedure Form_SetOnDestroy(AObj: TGoForm; AEventId: NativeUInt); stdcall;
+begin
+  if AEventId = 0 then
+  begin
+    AObj.OnDestroy := nil;
+    TEventClass.Remove(AObj, geDestroy);
+    Exit;
+  end;
+  AObj.OnDestroy := TEventClass.OnDestroy;
+  TEventClass.Add(AObj, geDestroy, AEventId);
 end;
 
 // mouse
@@ -560,6 +591,7 @@ exports
 
   Application_Instance,
   Application_CreateForm,
+  Application_Run,
 
   Form_EnabledMaximize,
   Form_EnabledMinimize,
@@ -567,6 +599,7 @@ exports
   Form_SetAllowDropFiles,
   Form_GetAllowDropFiles,
   Form_SetOnDropFiles,
+  Form_SetOnDestroy,
 
 
   DSysOpen,

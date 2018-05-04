@@ -40,3 +40,7 @@ func (f *TForm) AllowDropFiles() bool {
 func (f *TForm) SetOnDropFiles(fn TDropFilesEvent) {
 	Form_SetOnDropFiles(f.instance, fn)
 }
+
+func (f *TForm) SetOnDestroy(fn TNotifyEvent) {
+	Form_SetOnDestroy(f.instance, fn)
+}

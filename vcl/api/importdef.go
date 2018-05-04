@@ -10,6 +10,7 @@ var (
 	form_SetAllowDropFiles = libvcl.NewProc("Form_SetAllowDropFiles")
 	form_GetAllowDropFiles = libvcl.NewProc("Form_GetAllowDropFiles")
 	form_SetOnDropFiles    = libvcl.NewProc("Form_SetOnDropFiles")
+	form_SetOnDestroy      = libvcl.NewProc("Form_SetOnDestroy")
 
 	setEventCallback = libvcl.NewProc("SetEventCallback")
 	dGetParam        = libvcl.NewProc("DGetParam")

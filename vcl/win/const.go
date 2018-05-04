@@ -155,3 +155,27 @@ const (
 	SC_ICON = SC_MINIMIZE
 	SC_ZOOM = SC_MAXIMIZE
 )
+
+const MAX_PATH = 260
+
+// The th32ProcessID argument is only used if TH32CS_SNAPHEAPLIST or
+// TH32CS_SNAPMODULE is specified. th32ProcessID == 0 means the current
+// process.
+//
+// NOTE that all of the snapshots are global except for the heap and module
+//  lists which are process specific. To enumerate the heap or module
+//  state for all WIN32 processes call with TH32CS_SNAPALL and the
+//  current process. Then for each process in the TH32CS_SNAPPROCESS
+//  list that isn't the current process, do a call with just
+//  TH32CS_SNAPHEAPLIST and/or TH32CS_SNAPMODULE.
+//
+// dwFlags
+//
+const (
+	TH32CS_SNAPHEAPLIST = 0x00000001
+	TH32CS_SNAPPROCESS  = 0x00000002
+	TH32CS_SNAPTHREAD   = 0x00000004
+	TH32CS_SNAPMODULE   = 0x00000008
+	TH32CS_SNAPALL      = TH32CS_SNAPHEAPLIST | TH32CS_SNAPPROCESS | TH32CS_SNAPTHREAD | TH32CS_SNAPMODULE
+	TH32CS_INHERIT      = 0x80000000
+)

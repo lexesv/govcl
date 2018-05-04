@@ -49,3 +49,17 @@ type TVSFixedFileInfo struct {
 	FileDateMS       uint32 // e.g. 0
 	FileDateLS       uint32 // e.g. 0
 }
+
+type TProcessEntry32W struct {
+	DwSize              uint32
+	CntUsage            uint32
+	Th32ProcessID       uint32 // this process
+	Th2DefaultHeapID    uintptr
+	Th32ModuleID        uint32 // associated exe
+	CntThreads          uint32
+	Th32ParentProcessID uint32 // this process's parent process
+	PcPriClassBase      uint32 // Base priority of process's threads
+	DwFlags             uint32
+	SzExeFile           [MAX_PATH]uint16 // Path
+
+}

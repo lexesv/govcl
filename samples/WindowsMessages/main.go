@@ -1,9 +1,9 @@
 package main
 
 import (
-	"syscall"
-
 	"fmt"
+
+	"syscall"
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/types"
@@ -28,6 +28,12 @@ func main() {
 
 	newWndProc := syscall.NewCallback(WndProc)
 
+	mainForm.SetOnDestroy(func(sender vcl.IObject) {
+		fmt.Println("FormOnDestroy")
+		// 完成后要恢复的, 先不管了
+		win.SetWindowLongPtrW(mainForm.Handle(), win.GWL_WNDPROC, oldWndPrc)
+	})
+
 	oldWndPrc = win.SetWindowLongPtrW(mainForm.Handle(), win.GWL_WNDPROC, newWndProc)
 	fmt.Println("newWndProc:", newWndProc)
 	fmt.Println("oldWndPro:", oldWndPrc)
@@ -39,9 +45,6 @@ func main() {
 	btn.SetTop(50)
 
 	vcl.Application.Run()
-
-	// 完成后要恢复的, 先不管了
-	win.SetWindowLongPtrW(mainForm.Handle(), win.GWL_WNDPROC, oldWndPrc)
 
 }
 

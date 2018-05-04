@@ -33,3 +33,4 @@
 | wkeWebBrowser | windows下wke浏览器嵌入演示  |
 | xunleidownloader | 迅雷下载引擎演示    |
 | OSVersion | 系统版本信息获取    |
+| WindowsMessages | Windows下消息捕获    |

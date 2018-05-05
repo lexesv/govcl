@@ -82,6 +82,7 @@ func IsAdministrator() bool {
 				}
 			}
 		}
+		return false
 	}
 	return true
 }

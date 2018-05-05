@@ -23,6 +23,8 @@ var (
 	_VerifyVersionInfo   = kernel32dll.NewProc("VerifyVersionInfoW")
 
 	_CloseHandle = kernel32dll.NewProc("CloseHandle")
+
+	_OpenProcess = kernel32dll.NewProc("OpenProcess")
 )
 
 // GetModuleHandle 获取当前是实例句柄，可传空
@@ -92,4 +94,10 @@ func VerifyVersionInfo(lpVersionInformation *TOSVersionInfoEx, dwTypeMask uint32
 func CloseHandle(hObject uintptr) bool {
 	r, _, _ := _CloseHandle.Call(hObject)
 	return r != 0
+}
+
+// OpenProcess
+func OpenProcess(dwDesiredAccess uint32, bInheritHandle bool, dwProcessId uint32) uintptr {
+	r, _, _ := _OpenProcess.Call(uintptr(dwDesiredAccess), uintptr(api.GoBoolToDBool(bInheritHandle)), uintptr(dwProcessId))
+	return r
 }

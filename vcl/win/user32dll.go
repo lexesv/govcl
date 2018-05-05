@@ -19,6 +19,12 @@ var (
 	_GetSystemMetrics = user32dll.NewProc("GetSystemMetrics")
 
 	_CallWindowProc = user32dll.NewProc("CallWindowProcW")
+
+	// 两个未公开的api
+	// _ChangeWindowMessageFilter 适合于 Win Vista 系统，Win7及以上系统并使用下
+	_ChangeWindowMessageFilter = user32dll.NewProc("ChangeWindowMessageFilter")
+	// ChangeWindowMessageFilterEx 适合于 Win7 及以上系统, Vista 无此函数
+	_ChangeWindowMessageFilterEx = user32dll.NewProc("ChangeWindowMessageFilterEx")
 )
 
 // MessageBox 消息框
@@ -62,4 +68,41 @@ func SetWindowLongPtr(hWnd types.HWND, nIndex int32, dwNewLong uintptr) uintptr 
 func CallWindowProc(lpPrevWndFunc uintptr, hWnd types.HWND, Msg uint32, wParam, lParam uintptr) uintptr {
 	r, _, _ := _CallWindowProc.Call(lpPrevWndFunc, uintptr(hWnd), uintptr(Msg), wParam, lParam)
 	return r
+}
+
+// 两个Windows未公开函数
+
+const (
+	// ChangeWindowMessageFilter  的常量
+	MSGFLT_ADD    = 1
+	MSGFLT_REMOVE = 2
+
+	// ChangeWindowMessageFilterEx的常量
+	MSGFLT_RESET    = 0
+	MSGFLT_ALLOW    = 1
+	MSGFLT_DISALLOW = 2
+
+	//
+	WM_COPYGLOBALDATA = 0x0049
+)
+
+// 消息过滤的传入结构
+type TChangeFilterStruct struct {
+	CbSize    uint32
+	ExtStatus uint32
+}
+
+// ChangeWindowMessageFilter
+func ChangeWindowMessageFilter(message, flags uint32) bool {
+	r, _, _ := _ChangeWindowMessageFilter.Call(uintptr(message), uintptr(flags))
+	return r != 0
+}
+
+// ChangeWindowMessageFilterEx
+func ChangeWindowMessageFilterEx(hWd types.HWND, message, action uint32, pChangeFilterStruct *TChangeFilterStruct) bool {
+	if _ChangeWindowMessageFilterEx.Find() != nil {
+		return false
+	}
+	r, _, _ := _ChangeWindowMessageFilterEx.Call(uintptr(hWd), uintptr(message), uintptr(action), uintptr(unsafe.Pointer(pChangeFilterStruct)))
+	return r != 0
 }

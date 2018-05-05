@@ -153,3 +153,58 @@ const (
 )
 
 const MAX_PATH = 260
+
+const (
+	// Scroll Bar Constants
+	SB_HORZ = 0
+	SB_VERT = 1
+	SB_CTL  = 2
+	SB_BOTH = 3
+
+	// Scroll Bar Commands
+	SB_LINEUP        = 0
+	SB_LINELEFT      = 0
+	SB_LINEDOWN      = 1
+	SB_LINERIGHT     = 1
+	SB_PAGEUP        = 2
+	SB_PAGELEFT      = 2
+	SB_PAGEDOWN      = 3
+	SB_PAGERIGHT     = 3
+	SB_THUMBPOSITION = 4
+	SB_THUMBTRACK    = 5
+	SB_TOP           = 6
+	SB_LEFT          = 6
+	SB_BOTTOM        = 7
+	SB_RIGHT         = 7
+	SB_ENDSCROLL     = 8
+
+	// ShowWindow() Commands
+	SW_HIDE            = 0
+	SW_SHOWNORMAL      = 1
+	SW_NORMAL          = 1
+	SW_SHOWMINIMIZED   = 2
+	SW_SHOWMAXIMIZED   = 3
+	SW_MAXIMIZE        = 3
+	SW_SHOWNOACTIVATE  = 4
+	SW_SHOW            = 5
+	SW_MINIMIZE        = 6
+	SW_SHOWMINNOACTIVE = 7
+	SW_SHOWNA          = 8
+	SW_RESTORE         = 9
+	SW_SHOWDEFAULT     = 10
+	SW_FORCEMINIMIZE   = 11
+	SW_MAX             = 11
+
+	// Old ShowWindow() Commands
+	HIDE_WINDOW         = 0
+	SHOW_OPENWINDOW     = 1
+	SHOW_ICONWINDOW     = 2
+	SHOW_FULLSCREEN     = 3
+	SHOW_OPENNOACTIVATE = 4
+
+	// Identifiers for the WM_SHOWWINDOW message
+	SW_PARENTCLOSING = 1
+	SW_OTHERZOOM     = 2
+	SW_PARENTOPENING = 3
+	SW_OTHERUNZOOM   = 4
+)

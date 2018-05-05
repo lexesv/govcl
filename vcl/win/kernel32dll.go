@@ -5,11 +5,8 @@ package win
 import (
 	"syscall"
 	"unsafe"
-
-	"gitee.com/ying32/govcl/vcl/api"
 )
 
-// winapi 非libvcl的
 var (
 
 	// kernel32.dll
@@ -29,7 +26,7 @@ var (
 
 // GetModuleHandle 获取当前是实例句柄，可传空
 func GetModuleHandle(lpModuleName string) uintptr {
-	r, _, _ := _GetModuleHandle.Call(api.GoStrToDStr(lpModuleName))
+	r, _, _ := _GetModuleHandle.Call(CStr(lpModuleName))
 	return r
 }
 
@@ -59,6 +56,7 @@ func GetCurrentProcess() uintptr {
 }
 
 // IsWow64 判断当前进程是否运行在64上
+// 注：只有当exe为Win32并在64位系统上运行时才返回true, 否则都会返回false
 func IsWow64() bool {
 	return IsWow64Process(GetCurrentProcess())
 }
@@ -98,6 +96,6 @@ func CloseHandle(hObject uintptr) bool {
 
 // OpenProcess
 func OpenProcess(dwDesiredAccess uint32, bInheritHandle bool, dwProcessId uint32) uintptr {
-	r, _, _ := _OpenProcess.Call(uintptr(dwDesiredAccess), uintptr(api.GoBoolToDBool(bInheritHandle)), uintptr(dwProcessId))
+	r, _, _ := _OpenProcess.Call(uintptr(dwDesiredAccess), uintptr(CBool(bInheritHandle)), uintptr(dwProcessId))
 	return r
 }

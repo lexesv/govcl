@@ -90,14 +90,14 @@ const (
 
 // GetFileVersionInfoSize
 func GetFileVersionInfoSize(lptstrFileName string, lpdwhandle *uint32) uint32 {
-	r, _, _ := _GetFileVersionInfoSize.Call(uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(lptstrFileName))),
+	r, _, _ := _GetFileVersionInfoSize.Call(CStr(lptstrFileName),
 		uintptr(unsafe.Pointer(lpdwhandle)))
 	return uint32(r)
 }
 
 // GetFileVersionInfo
 func GetFileVersionInfo(lptstrFilename string, dwHandle, dwLen uint32, lpData uintptr) bool {
-	r, _, _ := _GetFileVersionInfo.Call(uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(lptstrFilename))),
+	r, _, _ := _GetFileVersionInfo.Call(CStr(lptstrFilename),
 		uintptr(dwHandle), uintptr(dwLen), lpData)
 	return r != 0
 }
@@ -105,7 +105,7 @@ func GetFileVersionInfo(lptstrFilename string, dwHandle, dwLen uint32, lpData ui
 // VerQueryValue
 func VerQueryValue(pBlock uintptr, lpSubBlock string, lplpBuffer *uintptr, puLen *uint32) bool {
 	r, _, _ := _VerQueryValue.Call(uintptr(pBlock),
-		uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(lpSubBlock))),
+		uintptr(unsafe.Pointer(CStr(lpSubBlock))),
 		uintptr(unsafe.Pointer(lplpBuffer)), uintptr(unsafe.Pointer(puLen)))
 	return r != 0
 }

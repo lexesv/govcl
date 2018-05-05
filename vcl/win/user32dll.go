@@ -6,7 +6,6 @@ import (
 	"syscall"
 	"unsafe"
 
-	"gitee.com/ying32/govcl/vcl/api"
 	"gitee.com/ying32/govcl/vcl/types"
 )
 
@@ -29,7 +28,7 @@ var (
 
 // MessageBox 消息框
 func MessageBox(hWnd uintptr, lpText, lpCaption string, uType uint32) int32 {
-	r, _, _ := _MessageBox.Call(hWnd, api.GoStrToDStr(lpText), api.GoStrToDStr(lpCaption), uintptr(uType))
+	r, _, _ := _MessageBox.Call(hWnd, CStr(lpText), CStr(lpCaption), uintptr(uType))
 	return int32(r)
 }
 

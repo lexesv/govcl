@@ -2,8 +2,6 @@
 
 package win
 
-import "syscall"
-
 var (
 	Win32MajorVersion int
 	Win32MinorVersion int
@@ -36,6 +34,6 @@ func initPlatformId() {
 		} else {
 			Win32BuildNumber = int(OSVersionInfo.BuildNumber)
 		}
-		Win32CSDVersion = syscall.UTF16ToString(OSVersionInfo.CSDVersion[:])
+		Win32CSDVersion = GoStr(OSVersionInfo.CSDVersion[:])
 	}
 }

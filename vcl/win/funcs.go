@@ -2,7 +2,12 @@
 
 package win
 
-import "unsafe"
+import (
+	"unsafe"
+
+	"fmt"
+	"syscall"
+)
 
 const MAX_VERS = 20
 
@@ -85,4 +90,37 @@ func IsAdministrator() bool {
 		return false
 	}
 	return true
+}
+
+// OpenInExplorer
+func OpenInExplorer(aFileName string) {
+	ShellExecute(0, "OPEN", "Explorer.exe",
+		fmt.Sprintf("/e, /select, \"%s\"", aFileName), "", SW_SHOW)
+}
+
+// 内部两个
+// GoStrToCStr
+func CStr(str string) uintptr {
+	return uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(str)))
+}
+
+// CStrToGoStr
+func GoStr(str []uint16) string {
+	return syscall.UTF16ToString(str)
+}
+
+// GoBoolToCBool
+func CBool(b bool) uintptr {
+	if b {
+		return 1
+	}
+	return 0
+}
+
+// CBoolToGoBool
+func GoBool(b uintptr) bool {
+	if b != 0 {
+		return true
+	}
+	return false
 }

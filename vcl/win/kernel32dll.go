@@ -10,7 +10,11 @@ import (
 var (
 
 	// kernel32.dll
-	kernel32dll          = syscall.NewLazyDLL("kernel32.dll")
+	kernel32dll = syscall.NewLazyDLL("kernel32.dll")
+
+	_GetLastError = kernel32dll.NewProc("GetLastError")
+	_SetLastError = kernel32dll.NewProc("SetLastError")
+
 	_IsWow64Process      = kernel32dll.NewProc("IsWow64Process")
 	_GetCurrentProcess   = kernel32dll.NewProc("GetCurrentProcess")
 	_GetModuleHandle     = kernel32dll.NewProc("GetModuleHandleW")
@@ -26,6 +30,17 @@ var (
 	_CreateMutex  = kernel32dll.NewProc("CreateMutexW")
 	_ReleaseMutex = kernel32dll.NewProc("ReleaseMutex")
 )
+
+// GetLastError
+func GetLastError() uint32 {
+	r, _, _ := _GetLastError.Call()
+	return uint32(r)
+}
+
+// SetLastError
+func SetLastError(dwErrCode uint32) {
+	_SetLastError.Call(uintptr(dwErrCode))
+}
 
 // GetModuleHandle 获取当前是实例句柄，可传空
 func GetModuleHandle(lpModuleName string) uintptr {
@@ -104,8 +119,8 @@ func OpenProcess(dwDesiredAccess uint32, bInheritHandle bool, dwProcessId uint32
 }
 
 // CreateMutex
-func CreateMutex(lpMutexAttributes *TSecurityAttributes, bInitialOwner int32, lpName string) uintptr {
-	r, _, _ := _CreateMutex.Call(uintptr(unsafe.Pointer(lpMutexAttributes)), uintptr(bInitialOwner), CStr(lpName))
+func CreateMutex(lpMutexAttributes *TSecurityAttributes, bInitialOwner bool, lpName string) uintptr {
+	r, _, _ := _CreateMutex.Call(uintptr(unsafe.Pointer(lpMutexAttributes)), CBool(bInitialOwner), CStr(lpName))
 	return r
 }
 

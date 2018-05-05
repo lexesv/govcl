@@ -22,6 +22,9 @@ var (
 	_CloseHandle = kernel32dll.NewProc("CloseHandle")
 
 	_OpenProcess = kernel32dll.NewProc("OpenProcess")
+
+	_CreateMutex  = kernel32dll.NewProc("CreateMutexW")
+	_ReleaseMutex = kernel32dll.NewProc("ReleaseMutex")
 )
 
 // GetModuleHandle 获取当前是实例句柄，可传空
@@ -98,4 +101,16 @@ func CloseHandle(hObject uintptr) bool {
 func OpenProcess(dwDesiredAccess uint32, bInheritHandle bool, dwProcessId uint32) uintptr {
 	r, _, _ := _OpenProcess.Call(uintptr(dwDesiredAccess), uintptr(CBool(bInheritHandle)), uintptr(dwProcessId))
 	return r
+}
+
+// CreateMutex
+func CreateMutex(lpMutexAttributes *TSecurityAttributes, bInitialOwner int32, lpName string) uintptr {
+	r, _, _ := _CreateMutex.Call(uintptr(unsafe.Pointer(lpMutexAttributes)), uintptr(bInitialOwner), CStr(lpName))
+	return r
+}
+
+// ReleaseMutex
+func ReleaseMutex(hMutex uintptr) bool {
+	r, _, _ := _ReleaseMutex.Call(hMutex)
+	return r != 0
 }

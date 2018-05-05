@@ -19,3 +19,9 @@ type TSystemInfo struct {
 	ProcessorLevel            uint16
 	ProcessorRevision         uint16
 }
+
+type TSecurityAttributes struct {
+	nLength              uint32
+	lpSecurityDescriptor uintptr
+	bInheritHandle       bool // BOOL
+}

@@ -18,6 +18,8 @@ import (
 
 func main() {
 
+	fmt.Println("IsAdministrator:", win.IsAdministrator())
+
 	vcl.Application.SetIconResId(3)
 	vcl.Application.Initialize()
 	vcl.Application.SetMainFormOnTaskBar(true)

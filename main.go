@@ -50,6 +50,10 @@ func main() {
 		fmt.Println("close")
 	})
 
+	mainForm.SetOnDestroy(func(sender vcl.IObject) {
+		fmt.Println("Form Destroy.")
+	})
+
 	fmt.Println("MainForm ClientRect: ", mainForm.ClientRect())
 	filename := vcl.Application.ExeName()
 	fmt.Println("application.ExeName: ", filename)

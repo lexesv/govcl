@@ -29,6 +29,7 @@ var (
 
 	_CreateMutex  = kernel32dll.NewProc("CreateMutexW")
 	_ReleaseMutex = kernel32dll.NewProc("ReleaseMutex")
+	_OpenMutex    = kernel32dll.NewProc("OpenMutexW")
 )
 
 // GetLastError
@@ -128,4 +129,10 @@ func CreateMutex(lpMutexAttributes *TSecurityAttributes, bInitialOwner bool, lpN
 func ReleaseMutex(hMutex uintptr) bool {
 	r, _, _ := _ReleaseMutex.Call(hMutex)
 	return r != 0
+}
+
+// OpenMutex
+func OpenMutex(dwDesiredAccess uint32, bInheritHandle bool, lpName string) uintptr {
+	r, _, _ := _OpenMutex.Call(uintptr(dwDesiredAccess), CBool(bInheritHandle), CStr(lpName))
+	return r
 }

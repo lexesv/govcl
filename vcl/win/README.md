@@ -1,0 +1,1 @@
+**win包中的winapi以UNICODE为准。**

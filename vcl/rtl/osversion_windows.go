@@ -42,25 +42,25 @@ func iifStr(b bool, aTrue, aFalse string) string {
 
 func IsWindowsServer() bool {
 
-	var osvi win.TOSVersionInfoExW
+	var osvi win.TOSVersionInfoEx
 	osvi.ProductType = win.VER_NT_WORKSTATION
 
 	var dwlConditionMask uint64
 
 	dwlConditionMask = win.VerSetConditionMask(0, win.VER_PRODUCT_TYPE, win.VER_EQUAL)
-	return win.VerifyVersionInfoW(&osvi, win.VER_PRODUCT_TYPE, dwlConditionMask) == false
+	return win.VerifyVersionInfo(&osvi, win.VER_PRODUCT_TYPE, dwlConditionMask) == false
 }
 
 func GetProductVersion(AFileName string, AMajor, AMinor, ABuild *uint32) bool {
 	var wnd uint32
-	infoSize := win.GetFileVersionInfoSizeW(AFileName, &wnd)
+	infoSize := win.GetFileVersionInfoSize(AFileName, &wnd)
 	if infoSize != 0 {
 		verBuf := make([]byte, infoSize)
 		bufPtr := uintptr(unsafe.Pointer(&verBuf[0]))
-		if win.GetFileVersionInfoW(AFileName, wnd, infoSize, bufPtr) {
+		if win.GetFileVersionInfo(AFileName, wnd, infoSize, bufPtr) {
 			var verSize uint32
 			var fI *win.TVSFixedFileInfo
-			if win.VerQueryValueW(bufPtr, "\\", (*uintptr)(unsafe.Pointer(&fI)), &verSize) {
+			if win.VerQueryValue(bufPtr, "\\", (*uintptr)(unsafe.Pointer(&fI)), &verSize) {
 				*AMajor = fI.ProductVersionMS >> 16
 				*AMinor = uint32(uint16(fI.ProductVersionMS))
 				*ABuild = fI.ProductVersionLS >> 16
@@ -89,8 +89,8 @@ func GetNetWkstaMajorMinor(MajorVersion, MinorVersion *uint32) bool {
 }
 
 func initOSVersion() {
-	var verInfo win.TOSVersionInfoExW
-	win.GetVersionExW(&verInfo)
+	var verInfo win.TOSVersionInfoEx
+	win.GetVersionEx(&verInfo)
 
 	OSVersion.Platform = PfWindows
 	OSVersion.Major = int(verInfo.MajorVersion)

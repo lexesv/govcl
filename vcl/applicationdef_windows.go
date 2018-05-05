@@ -6,5 +6,5 @@ import (
 
 // SetIconResId 从资源中置图标的id
 func (a *TApplication) SetIconResId(id int) {
-	a.Icon().SetHandle(win.LoadIconW(win.GetSelfModuleHandle(), id))
+	a.Icon().SetHandle(win.LoadIcon(win.GetSelfModuleHandle(), id))
 }

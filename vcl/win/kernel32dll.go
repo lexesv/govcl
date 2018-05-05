@@ -13,37 +13,37 @@ import (
 var (
 
 	// kernel32.dll
-	kernel32dll         = syscall.NewLazyDLL("kernel32.dll")
-	isWow64Process      = kernel32dll.NewProc("IsWow64Process")
-	getCurrentProcess   = kernel32dll.NewProc("GetCurrentProcess")
-	getModuleHandleW    = kernel32dll.NewProc("GetModuleHandleW")
-	getVersionExW       = kernel32dll.NewProc("GetVersionExW")
-	getNativeSystemInfo = kernel32dll.NewProc("GetNativeSystemInfo")
-	verSetConditionMask = kernel32dll.NewProc("VerSetConditionMask")
-	verifyVersionInfoW  = kernel32dll.NewProc("VerifyVersionInfoW")
+	kernel32dll          = syscall.NewLazyDLL("kernel32.dll")
+	_IsWow64Process      = kernel32dll.NewProc("IsWow64Process")
+	_GetCurrentProcess   = kernel32dll.NewProc("GetCurrentProcess")
+	_GetModuleHandle     = kernel32dll.NewProc("GetModuleHandleW")
+	_GetVersionEx        = kernel32dll.NewProc("GetVersionExW")
+	_GetNativeSystemInfo = kernel32dll.NewProc("GetNativeSystemInfo")
+	_VerSetConditionMask = kernel32dll.NewProc("VerSetConditionMask")
+	_VerifyVersionInfo   = kernel32dll.NewProc("VerifyVersionInfoW")
 
 	_CloseHandle = kernel32dll.NewProc("CloseHandle")
 )
 
-// GetModuleHandleW 获取当前是实例句柄，可传空
-func GetModuleHandleW(lpModuleName string) uintptr {
-	r, _, _ := getModuleHandleW.Call(api.GoStrToDStr(lpModuleName))
+// GetModuleHandle 获取当前是实例句柄，可传空
+func GetModuleHandle(lpModuleName string) uintptr {
+	r, _, _ := _GetModuleHandle.Call(api.GoStrToDStr(lpModuleName))
 	return r
 }
 
 // GetSelfModuleHandle 获取自身模块实例句柄
 func GetSelfModuleHandle() uintptr {
-	r, _, _ := getModuleHandleW.Call(0)
+	r, _, _ := _GetModuleHandle.Call(0)
 	return r
 }
 
 // IsWow64Process 检测进程是否运行在64位下
 func IsWow64Process(hProcess uintptr) bool {
-	if isWow64Process.Find() != nil {
+	if _IsWow64Process.Find() != nil {
 		return false
 	}
 	var wow64Process int32
-	r, _, _ := isWow64Process.Call(hProcess, uintptr(unsafe.Pointer(&wow64Process)))
+	r, _, _ := _IsWow64Process.Call(hProcess, uintptr(unsafe.Pointer(&wow64Process)))
 	if r != 0 && wow64Process != 0 {
 		return true
 	}
@@ -52,7 +52,7 @@ func IsWow64Process(hProcess uintptr) bool {
 
 // GetCurrentProcess 返回当前进程伪句柄
 func GetCurrentProcess() uintptr {
-	r, _, _ := getCurrentProcess.Call()
+	r, _, _ := _GetCurrentProcess.Call()
 	return r
 }
 
@@ -62,29 +62,29 @@ func IsWow64() bool {
 }
 
 // 获取系统版本信息
-func GetVersionExW(lpVersionInformation *TOSVersionInfoExW) bool {
+func GetVersionEx(lpVersionInformation *TOSVersionInfoEx) bool {
 	if lpVersionInformation != nil {
 		lpVersionInformation.OSVersionInfoSize = uint32(unsafe.Sizeof(*lpVersionInformation))
 	}
-	r, _, _ := getVersionExW.Call(uintptr(unsafe.Pointer(lpVersionInformation)))
+	r, _, _ := _GetVersionEx.Call(uintptr(unsafe.Pointer(lpVersionInformation)))
 	return r != 0
 }
 
 // GetNativeSystemInfo
 func GetNativeSystemInfo(lpSystemInformation *TSystemInfo) bool {
-	r, _, _ := getNativeSystemInfo.Call(uintptr(unsafe.Pointer(lpSystemInformation)))
+	r, _, _ := _GetNativeSystemInfo.Call(uintptr(unsafe.Pointer(lpSystemInformation)))
 	return r != 0
 }
 
 // VerSetConditionMask
 func VerSetConditionMask(dwlConditionMask uint64, dwTypeBitMask uint32, dwConditionMask uint8) uint64 {
-	r, _, _ := verSetConditionMask.Call(uintptr(dwlConditionMask), uintptr(dwTypeBitMask), uintptr(dwConditionMask))
+	r, _, _ := _VerSetConditionMask.Call(uintptr(dwlConditionMask), uintptr(dwTypeBitMask), uintptr(dwConditionMask))
 	return uint64(r)
 }
 
 // VerifyVersionInfo
-func VerifyVersionInfoW(lpVersionInformation *TOSVersionInfoExW, dwTypeMask uint32, dwlConditionMask uint64) bool {
-	r, _, _ := verifyVersionInfoW.Call(uintptr(unsafe.Pointer(lpVersionInformation)), uintptr(dwTypeMask), uintptr(dwlConditionMask))
+func VerifyVersionInfo(lpVersionInformation *TOSVersionInfoEx, dwTypeMask uint32, dwlConditionMask uint64) bool {
+	r, _, _ := _VerifyVersionInfo.Call(uintptr(unsafe.Pointer(lpVersionInformation)), uintptr(dwTypeMask), uintptr(dwlConditionMask))
 	return r != 0
 }
 

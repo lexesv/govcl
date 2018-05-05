@@ -24,7 +24,7 @@ const (
 	TH32CS_INHERIT      = 0x80000000
 )
 
-type TProcessEntry32W struct {
+type TProcessEntry32 struct {
 	DwSize              uint32
 	CntUsage            uint32
 	Th32ProcessID       uint32 // this process
@@ -40,8 +40,8 @@ type TProcessEntry32W struct {
 
 var (
 	_CreateToolhelp32Snapshot = kernel32dll.NewProc("CreateToolhelp32Snapshot")
-	_Process32FirstW          = kernel32dll.NewProc("Process32FirstW")
-	_Process32NextW           = kernel32dll.NewProc("Process32NextW")
+	_Process32First           = kernel32dll.NewProc("Process32FirstW")
+	_Process32Next            = kernel32dll.NewProc("Process32NextW")
 )
 
 // CreateToolhelp32SnapShot
@@ -50,14 +50,14 @@ func CreateToolhelp32SnapShot(dwFlags, th32ProcessID uint32) uintptr {
 	return r
 }
 
-// Process32FirstW
-func Process32FirstW(hSnapshot uintptr, lppe *TProcessEntry32W) bool {
-	r, _, _ := _Process32FirstW.Call(hSnapshot, uintptr(unsafe.Pointer(lppe)))
+// Process32First
+func Process32First(hSnapshot uintptr, lppe *TProcessEntry32) bool {
+	r, _, _ := _Process32First.Call(hSnapshot, uintptr(unsafe.Pointer(lppe)))
 	return r != 0
 }
 
-// Process32NextW
-func Process32NextW(hSnapshot uintptr, lppe *TProcessEntry32W) bool {
-	r, _, _ := _Process32NextW.Call(hSnapshot, uintptr(unsafe.Pointer(lppe)))
+// Process32Next
+func Process32Next(hSnapshot uintptr, lppe *TProcessEntry32) bool {
+	r, _, _ := _Process32Next.Call(hSnapshot, uintptr(unsafe.Pointer(lppe)))
 	return r != 0
 }

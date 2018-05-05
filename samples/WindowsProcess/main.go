@@ -1,3 +1,5 @@
+// +build windows
+
 package main
 
 import (
@@ -52,18 +54,18 @@ func main() {
 }
 
 func fullListView(lv *vcl.TListView) {
-	var fProcessEntry32 win.TProcessEntry32W
+	var fProcessEntry32 win.TProcessEntry32
 	fProcessEntry32.DwSize = uint32(unsafe.Sizeof(fProcessEntry32))
 
 	fSnapShotHandle := win.CreateToolhelp32SnapShot(win.TH32CS_SNAPPROCESS, 0)
-	continueLoop := win.Process32FirstW(fSnapShotHandle, &fProcessEntry32)
+	continueLoop := win.Process32First(fSnapShotHandle, &fProcessEntry32)
 	lv.Items().BeginUpdate()
 	defer lv.Items().EndUpdate()
 	for continueLoop {
 		item := lv.Items().Add()
 		item.SetCaption(filepath.Base(syscall.UTF16ToString(fProcessEntry32.SzExeFile[:])))
 		item.SubItems().Add(fmt.Sprintf("%.4X", fProcessEntry32.Th32ProcessID))
-		continueLoop = win.Process32NextW(fSnapShotHandle, &fProcessEntry32)
+		continueLoop = win.Process32Next(fSnapShotHandle, &fProcessEntry32)
 	}
 	if fSnapShotHandle != 0 {
 		win.CloseHandle(fSnapShotHandle)

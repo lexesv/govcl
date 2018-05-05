@@ -3,6 +3,6 @@
 package win
 
 var (
-	_GetWindowLongPtrW = user32dll.NewProc("GetWindowLongW")
-	_SetWindowLongPtrW = user32dll.NewProc("SetWindowLongW")
+	_GetWindowLongPtr = user32dll.NewProc("GetWindowLongW")
+	_SetWindowLongPtr = user32dll.NewProc("SetWindowLongW")
 )

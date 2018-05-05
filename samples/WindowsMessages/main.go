@@ -30,11 +30,11 @@ func main() {
 
 	mainForm.SetOnDestroy(func(sender vcl.IObject) {
 		fmt.Println("FormOnDestroy")
-		// 完成后要恢复的, 先不管了
-		win.SetWindowLongPtrW(mainForm.Handle(), win.GWL_WNDPROC, oldWndPrc)
+		// 完成后要恢复的
+		win.SetWindowLongPtr(mainForm.Handle(), win.GWL_WNDPROC, oldWndPrc)
 	})
 
-	oldWndPrc = win.SetWindowLongPtrW(mainForm.Handle(), win.GWL_WNDPROC, newWndProc)
+	oldWndPrc = win.SetWindowLongPtr(mainForm.Handle(), win.GWL_WNDPROC, newWndProc)
 	fmt.Println("newWndProc:", newWndProc)
 	fmt.Println("oldWndPro:", oldWndPrc)
 
@@ -62,5 +62,5 @@ func WndProc(hWnd uintptr, message uint32, wParam, lParam uintptr) uintptr {
 			fmt.Println("关闭")
 		}
 	}
-	return win.CallWindowProcW(oldWndPrc, types.HWND(hWnd), message, wParam, lParam)
+	return win.CallWindowProc(oldWndPrc, types.HWND(hWnd), message, wParam, lParam)
 }

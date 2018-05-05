@@ -10,5 +10,5 @@ var (
 )
 
 func showError(err interface{}) {
-	MessageBoxW(0, err.(error).Error(), "Error", MB_ICONERROR)
+	MessageBox(0, err.(error).Error(), "Error", MB_ICONERROR)
 }

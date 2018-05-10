@@ -19,6 +19,8 @@ var (
 
 	_CallWindowProc = user32dll.NewProc("CallWindowProcW")
 
+	_PostMessage = user32dll.NewProc("PostMessageW")
+
 	// 两个未公开的api
 	// _ChangeWindowMessageFilter 适合于 Win Vista 系统，Win7及以上系统并使用下
 	_ChangeWindowMessageFilter = user32dll.NewProc("ChangeWindowMessageFilter")
@@ -68,6 +70,13 @@ func CallWindowProc(lpPrevWndFunc uintptr, hWnd types.HWND, Msg uint32, wParam, 
 	r, _, _ := _CallWindowProc.Call(lpPrevWndFunc, uintptr(hWnd), uintptr(Msg), wParam, lParam)
 	return r
 }
+
+// PostMessage
+func PostMessage(hWd types.HWND, msg uint32, wParam, lParam uintptr) uintptr  {
+   r, _, _ := _PostMessage.Call(uintptr(hWd), uintptr(msg), wParam, lParam)
+   return r
+}
+
 
 // 两个Windows未公开函数
 

@@ -16,7 +16,11 @@ var (
 	_SetLastError = kernel32dll.NewProc("SetLastError")
 
 	_IsWow64Process      = kernel32dll.NewProc("IsWow64Process")
+	_GetCurrentProcessId = kernel32dll.NewProc("GetCurrentProcessId")
 	_GetCurrentProcess   = kernel32dll.NewProc("GetCurrentProcess")
+	_GetCurrentThreadId  = kernel32dll.NewProc("GetCurrentThreadId")
+	_GetCurrentThread    = kernel32dll.NewProc("GetCurrentThread")
+
 	_GetModuleHandle     = kernel32dll.NewProc("GetModuleHandleW")
 	_GetVersionEx        = kernel32dll.NewProc("GetVersionExW")
 	_GetNativeSystemInfo = kernel32dll.NewProc("GetNativeSystemInfo")
@@ -71,6 +75,24 @@ func IsWow64Process(hProcess uintptr) bool {
 // GetCurrentProcess 返回当前进程伪句柄
 func GetCurrentProcess() uintptr {
 	r, _, _ := _GetCurrentProcess.Call()
+	return r
+}
+
+// GetCurrentProcessId 返回当前进程伪句柄
+func GetCurrentProcessId() uintptr {
+	r, _, _ := _GetCurrentProcessId.Call()
+	return r
+}
+
+// GetCurrentThreadId
+func GetCurrentThreadId() uintptr {
+	r, _, _ := _GetCurrentThreadId.Call()
+	return r
+}
+
+// GetCurrentThread
+func GetCurrentThread() uintptr {
+	r, _, _ := _GetCurrentThread.Call()
 	return r
 }
 

@@ -13,10 +13,15 @@ import (
 
 	"gitee.com/ying32/govcl/vcl"
 	"gitee.com/ying32/govcl/vcl/rtl"
+	"gitee.com/ying32/govcl/vcl/types"
+	"gitee.com/ying32/govcl/vcl/win"
 	"github.com/ying32/xldl"
 )
 
-var dloader *xldl.XLDownloader
+var (
+	dloader     *xldl.XLDownloader
+	mainFormhWd types.HWND
+)
 
 func main() {
 
@@ -35,6 +40,7 @@ func main() {
 	vcl.Application.SetMainFormOnTaskBar(true)
 	vcl.Application.CreateFormFromBytes(mainFormBytes, &MainForm)
 
+	mainFormhWd = MainForm.Handle()
 	MainForm.EditdlURL.SetText("http://sw.bos.baidu.com/sw-search-sp/software/19de58890ffb8/QQ_8.6.18804.0_setup.exe")
 	MainForm.BtnAdd.SetOnClick(func(vcl.IObject) {
 		if !indexOfItem(MainForm.EditdlURL.Text()) {
@@ -106,23 +112,28 @@ func startTask(dlURL string, item *vcl.TListItem) {
 			for {
 				info, ret := task.Info()
 				if ret {
-					item.SubItems().SetStrings(1, fmt.Sprintf("%.2fM", float64(info.TotalSize)/1024.0/1024.0))
-					item.SubItems().SetStrings(2, fmt.Sprintf("%.2f%%", info.Percent))
-					item.SubItems().SetStrings(3, fmt.Sprintf("%dKB/s", info.Speed/1024))
-					switch info.Stat {
-					case xldl.TSC_ERROR:
-						item.SubItems().SetStrings(4, "错误")
-					case xldl.TSC_PAUSE:
-						item.SubItems().SetStrings(4, "暂停")
-					case xldl.TSC_DOWNLOAD:
-						item.SubItems().SetStrings(4, "下载中")
-					case xldl.TSC_COMPLETE:
-						item.SubItems().SetStrings(4, "下载完成")
-					case xldl.TSC_STARTPENDING:
+					//MainForm.Perform(0, 0, 0)
+					// windows下临时解决办法，原因暂不明。
+					win.PostMessage(mainFormhWd, 0, 0, 0)
+					vcl.ThreadSync(func() {
+						item.SubItems().SetStrings(1, fmt.Sprintf("%.2fM", float64(info.TotalSize)/1024.0/1024.0))
+						item.SubItems().SetStrings(2, fmt.Sprintf("%.2f%%", info.Percent*100))
+						item.SubItems().SetStrings(3, fmt.Sprintf("%dKB/s", info.Speed/1024))
+						switch info.Stat {
+						case xldl.TSC_ERROR:
+							item.SubItems().SetStrings(4, "错误")
+						case xldl.TSC_PAUSE:
+							item.SubItems().SetStrings(4, "暂停")
+						case xldl.TSC_DOWNLOAD:
+							item.SubItems().SetStrings(4, "下载中")
+						case xldl.TSC_COMPLETE:
+							item.SubItems().SetStrings(4, "下载完成")
+						case xldl.TSC_STARTPENDING:
 
-					case xldl.TSC_STOPPENDING:
+						case xldl.TSC_STOPPENDING:
 
-					}
+						}
+					})
 				}
 				time.Sleep(time.Millisecond * 500)
 			}

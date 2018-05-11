@@ -53,7 +53,7 @@ func main() {
 	img2.SetTop(img.Height() + 10)
 	img2.SetAutoSize(true)
 
-	// 异步加载，一般来说不要在非主线程中访问UI组件,需要在线请中访问ui组件请使用 vcl.ThreadSync
+	// 异步加载，一般来说不要在非主线程中访问UI组件,需要在线程中访问ui组件请使用 vcl.ThreadSync
 	go func() {
 		fmt.Println("main:currentThreadId2:", GetCurrentThreadId())
 		resp, err := http.Get("http://ww2.sinaimg.cn/large/df780e95jw1egxm06uxerj20cs05hjs8.jpg")

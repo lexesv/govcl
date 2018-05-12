@@ -32,7 +32,7 @@
 | wingif | windows下gif图片播放演示  | 部分限Windows |
 | wkeWebBrowser | windows下wke浏览器嵌入演示  | Windows 32bit |
 | xunleidownloader | 迅雷下载引擎演示    | Windows 32bit |
-| OSVersion | 系统版本信息获取    | 暂限Windows |
+| OSVersion | 系统版本信息获取    |  |
 | WindowsMessages | Windows下消息捕获    | Windows |
 | WindowsProcess | Windows进程列表    | Windows |
 | WindowsTest | Windows下的一些测试    | Windows |

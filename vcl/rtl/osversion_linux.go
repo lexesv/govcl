@@ -1,4 +1,4 @@
-// Delphi
+// 移植来自Delphi
 
 package rtl
 
@@ -114,7 +114,7 @@ func parseOSRelease() {
 		}
 		// Example: 'PRETTY_NAME="Ubuntu 16.04.1 LTS"'
 		if strings.HasPrefix(line, prettyName) {
-			OSVersion.PrettyName = strings.Replace(line[strings.Index(line, "=")+1:], "\"", "", -1)
+			OSVersion.PrettyName = line[strings.Index(line, "=")+2 : strings.LastIndex(line, "\"")]
 			break
 		}
 	}

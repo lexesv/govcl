@@ -29,7 +29,13 @@ type TOSVersion struct {
 	ServicePackMinor int
 	Architecture     TArchitecture
 	Platform         TPlatform
-	fmtVerString     string
+
+	// linux: PrettyName, LibCVersionMajor, LibCVersionMinor
+	PrettyName       string
+	LibCVersionMajor int
+	LibCVersionMinor int
+
+	fmtVerString string
 }
 
 var OSVersion TOSVersion

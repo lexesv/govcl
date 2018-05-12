@@ -94,13 +94,6 @@ const (
 )
 
 func parseOSRelease() {
-	_, err := os.Stat(osReleaseFileName)
-	if err != nil {
-		return
-	}
-	if os.IsExist(err) {
-		return
-	}
 	f, err := os.Open(osReleaseFileName)
 	if err != nil {
 		return

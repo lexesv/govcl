@@ -38,14 +38,14 @@ func main() {
 		fmt.Println("exception.")
 	})
 
-	vcl.Application.SetTitle("Hello World!")
+	vcl.Application.SetTitle("Hello World! 系统信息：" + rtl.OSVersion.ToString())
 	vcl.Application.SetMainFormOnTaskBar(true)
 	// 窗口自动根据系统绽放，默认为true
 	//vcl.Application.SetFormScaled(false)
 
 	mainForm = vcl.Application.CreateForm()
-	mainForm.SetWidth(600)
-	mainForm.SetHeight(400)
+	mainForm.SetWidth(800)
+	mainForm.SetHeight(600)
 	mainForm.SetOnClose(func(Sender vcl.IObject, Action *types.TCloseAction) {
 		fmt.Println("close")
 	})

@@ -66,8 +66,6 @@ func initOSVersion() {
 					break
 				}
 			}
-		} else {
-			fmt.Println("err:", err)
 		}
 	}
 	switch runtime.GOARCH {

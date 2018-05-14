@@ -34,7 +34,7 @@ liblcl 基于Lazarus 1.8.0版本 FPC 3.0.4
 
 * 1、安装好Lazarus 1.8.0 64bit版本及i386扩展包   
 * 2、双击lcl.lpi  
-* 3、菜单->Project->Project Options -> Build modes 切换相关编环模式，当前有效模式为以下4种：   
+* 3、菜单->Project->Project Options -> Compiler Options -> Build modes 切换相关编环模式，当前有效模式为以下4种：   
   * ReleaseWindows64  
   * ReleaseWindows32  
   * ReleaseLinux64  

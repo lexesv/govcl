@@ -68,3 +68,5 @@ __recovery/
 *.stat
 /.vscode
 /.idea
+/UILibSources/liblcl/lib
+/UILibSources/liblcl/backup

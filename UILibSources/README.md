@@ -45,6 +45,6 @@ liblcl 基于Lazarus 1.8.0版本 FPC 3.0.4
 
 > Windows: `"..\..\..\..\..\bin\liblcl"`     
 > Linux: `"../bin/liblcl"`  
-> MacOS: `"../../../../../bin\liblcl"`
+> MacOS: `"../../../../../bin/liblcl"`
 
 **注：源码无第三方依赖库，安装好相关版本Lazarus后直接编译即可。**

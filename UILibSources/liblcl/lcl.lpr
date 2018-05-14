@@ -161,5 +161,4 @@ uses
 
 
 begin
-  Application.Scaled:=True;
 end.

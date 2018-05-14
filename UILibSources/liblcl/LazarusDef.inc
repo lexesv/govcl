@@ -40,7 +40,7 @@ begin
   end;
 end;
 
-procedure Application_Run(AObj: TApplication); stdcall;
+procedure Application_Run(AObj: TApplication); extdecl;
 begin
   AObj.Run;
   // 在Run结束后手动释放Application中的Form，主要是考虑在非Delphi运行环境中造成的一些资源清理问题
@@ -650,4 +650,10 @@ exports
   DInheritsFromComponent,
 
   DSelectDirectory1,
-  DSelectDirectory2;
+  DSelectDirectory2,
+         
+  // Form uFormDesignerFile.pas
+  ResFormLoadFromStream,
+  ResFormLoadFromFile,
+  ResFormLoadFromResourceName
+;
